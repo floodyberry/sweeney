@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/202
+http://lambda-the-ultimate.org/node/202#comment-1482
+1048778
+Error handling strategies
+Wheat
+<p>Wheat's approach sounds very useful and implementable.  I evaluate expressions that may contain failure by (conceptually) evaluating them as if they were comprehensions in something like Haskell's "Maybe" monad.  It would be straightforward to combine this with error codes by evaluating them in a order-dependent monad that looks something like "Perhaps t = Really t | Error string".
+</p><p>I have a similar operator syntax "a||b" which evaluates to a if a doesn't fail, and evaluates to b otherwise.  This ends up working almost exactly like C's || operator (including evaluation order for imperative terms), but it propagates the original terms (rather than just a boolean true/false value).  Because of the way the failure propagates, a||b is literally translated to "if(x:=a)x else b".
+</p><p>Using these failure semantics, it so happens that no explicit boolean operators are needed: the array-former (a,b) acts as a boolean conjunction, this (a||b) operates as a disjunction, and "!a" negation translates to "if(x:=a) fail else {}".
+</p><p>The operators support variable bindings, so an expression of the form "if(x:=a||b,y:=c).." executes the ".." part if ((a doesn't fail or b doesn't fail) and c doesn't fail), sequences any imperative effects there, and lets you access "x" and "y" with knowledge of their type.  For example, if a and b evaluate to integers (or fail), you can use x as if it's an integer.</p>

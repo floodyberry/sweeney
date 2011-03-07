@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2566
+http://lambda-the-ultimate.org/node/2566#comment-38604
+1051142
+A Growable Language Manifesto
+Nice Manifesto
+<p>But be careful with expectations of extensible types features, metareflection, and dynamic typing.  They conspire globally against counter type soundness and universal properties that are desirable for program verification and concurrency.
+</p><p>Taken to their logical conclusion, you get things like LISP, SmallTalk, C# with LINQ and lose sight of the extensional meaning of your code as it's intractable intertwined its metareflective representation, pointer identities, the uncheckable exceptions it might throw, the interact with macros and syntax extensions which may transform it into something entirely different, etc.</p>

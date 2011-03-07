@@ -1,0 +1,45 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/5052cd7f5788f790/06765c7d5d8684f9?lnk=st&rnum=28&hl=en#06765c7d5d8684f9
+[comp.lang.functional] Re: local variables don't cause side effects
+[blockquote][blockquote]For one example, in an implicitly parallelizing compiler, a call to a purely functional function can be handed off to another thread; if many such calls exist in a region of code with no intermingled side-effects, then N calls can be handed off to N independent CPU's ...[/blockquote]
+
+I find this possibility fascinating.
+
+[blockquote]Don't hold your breath: home users have little if any use for that. Unless they are heavily into gaming, in which case the CPU load is most likely split between mainboard and graphics card, which is a scenario that's quite the opposite of parallelizing function calls.[/blockquote][/blockquote]
+
+Lots of bulk data processing operations besides low-level rendering are highly parallelizable.  Examples from game development: video codecs, audio codecs (a significant CPU hit when you're playing 20 simultaneous MP3/OGG-format ambient sound and special effects streams), physics solvers, collision detection algorithms, scene traversal algorithms.  Many of these algorithms are scalable to the extent that if we had significantly more CPU power, we could make games that are significantly more interesting and impressive.
+
+[blockquote]That's just a side note. The *real* problem is that handing off computations to a different processor often entails more work than just stacking the call. Compilers may try to predict which calls should be parallelized and which shouldn't, but mispredictions in that area will quickly eat up the advantages gained here.[/blockquote]
+
+Agreed.  On current popular architectures, the overhead of thread communication is such that you can only benefit from handing off 10,000+ CPU cycle operations to threads.  In this case, some form of explicit parallelism is certainly needed because it's surprisingly hard to write a code generator that can guess, from looking at a piece of code, how much time it is likely to take, even within several orders of magnitude.  Whereas, a reasonably experienced programmer is far better at judging such things.
+
+That pratical parallelism has to be explicit for the time being doesn't negate the merits of this approach though.  In C++, to split up a complex algorithm into multiple threads, I not only have to explicitly create those threads, I have to write and debug a complex algorithm that is free of deadlocks and sharing violations, which is terribly difficult and error-prone in the presence of the kind of nondeterminism present in typical multithreaded C++ code.
+
+On the other hand, consider a language where one can specify that a particular function is globally side-effect free and have the typecheck verify that it really is.  Then when you annotate the text program with parallelism hints, the compiler can verify that those hints can be safely applied.  Thus that a program is deadlock-free can be mechanically verified in the same way that a typechecker verifies that a program is type-mismatch-free.
+
+[blockquote]Besides, you usually don't have N processors, you have at most two. Maybe four, in the next five years or so - but I wouldn't bet on that. Besides, even with SMP, if two processors share the same memory bus, memory latencies tend to eat up another gob of the performance advantage.
+
+In principle, it's all a great idea. In practice, there are so many little hurdles that take away a percent here, a percent there that it's not so great anymore.[/blockquote]
+
+In 1999, this was unquestionably true.  In 2003, this is basically true as far as practical consumer software deployment goes.  By 2005, it will be mostly false thanks to symmetric multithreading, and by 2007 it will be rendered a complete lie :-) by multicore CPU's with very large caches.
+
+[blockquote][blockquote]But allowing both functional and imperative approaches to be mixed, in the local-vs-global approach you suggest, gives you the best of both worlds.[/blockquote]
+
+The one thing that I've been missing for two years now is that nobody has yet shown a convincing example of this:
+How to write code that
+a) is (possibly heavily) imperative
+b) has a purely functional interface
+c) allows the compiler to infer (b) even in the presence of (a).
+
+For example, I'd like to use imperative data structures to build functional containers. No way, even though I'm prepared to annotate all the loops with loop invariants to help the compiler along...[/blockquote]
+
+I've solved the much more modest problem of checking side-effect-free function declarations which do imperative things internally, by using something along the lines of "region types" for local mutable objects, and requiring some explicit source annotations of pointer regions and scopes of effects.  This approach works and is relatively easy because whatever imperative stuff happens inside your function invocation is guaranteed to have vanished when your function returns, i.e. by disallowing closure-capture and so on.
+
+Regarding example here, that's a great example and a much harder problem, which might serve as a torture test of a language claiming to fully mix functional and imperative programming safely.
+
+Perhaps if you could prove (in the Curry-Howard sense) that your module is observationally equivalant (in the Leibniz equality sense) to a purely functional module type satisfying the same identities, then the compiler could accept it as being an instance of that purely functional module.  A bunch of issues immediately come to mind:
+
+- From an operational point of view, this approach has got to be regarded as a coercion that introduces things such as synchronization primitives into the module's function.  Just going through and proving that each function in the module satisfies its invariants invokes a bunch of hidden assumptions, such as that the code is executed in a single-threaded manner.
+
+- But proving that it's deadlock-free, deadlocks being another manifestation of _|_, would seem to impose additional restrictions on what is allowed in the module.  If each invocation of a functional-datatype-with-imperative-implementation requires single-threaded invocation, then any sort of polymorphic behaviour in such datatypes could lead to deadlocks that are impossible to detect at compile time.
+
+Overall, this sounds promising, but whether or not it becomes practical will depend on the severity of the restrictions, because functional-modules-implemented-imperatively wouldn't likely be accepted if it introduced undetectable deadlocks in code.

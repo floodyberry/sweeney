@@ -1,0 +1,48 @@
+http://www.digitalmars.com/d/archives/32.html#N342
+[D] printf
+Argh, no!  Printf and scanf are ugly remnants of C's limitations.  Printf made sense in the ANSI C days, but it and its terribly potential for runtime crashes and subtle bugs have no place in a modern language.
+
+C#'s solution is an interesting good compromise, something like:
+
+[code]print("{1} picked up {2} {3}s",person,count,item);[/code]
+The HUGE advantages are:
+
+1. It is typesafe. The parameters must be convertable to strings, and their type isn't (redundently or incorrectly) specified in the format string."
+
+2. It's easily localizable to other human languages because arguments can be reordered.  This is really critical for shipping software internationally, where the order of nouns, verbs, etc., vary.
+
+An even slightly better approach is to have a new "concatenate with formatting" operator which takes a formatting string and a variant and returns a new string.  For example:
+
+[code]"{1} picked up {2} {3}s" $ person $ count$item[/code]
+The $ operator has the following effects:
+
+[code]"{1} picked up {2} {3}s" $ "tim" = "Tim picked up {1} {2}s"
+"Tim picked up {1} {2}s" $ 12 = "Tim picked up 12 {12}'s"
+"Tim picked up 12 {1}s" $ "marble" = "Tim picked up 12 marbles"[/code]
+Therefore
+
+[code]"{1} picked up {2} {3}s" $ "tim" $ 12 $ "marbles" = "Tim picked up 12 marbles"[/code]
+This is very general, and could be extended with other appropriate natural language features useful to localization such as pluralization.
+
+-Tim
+
+"Richard Krehbiel" <rich kastle.com> wrote in message news:9lgkos$251p$1 digitaldaemon.com...
+[blockquote]For goodness' sake, don't take printf from C verbatim.
+
+The programmer himself must match the format specifier to the data type.
+The programmer himself must align the number of the format specifiers to number of arguments.
+The programmer himself must align the positions of the format specifiers the positions of arguments.
+
+Make a printf where the format specifier is adjacent to the variable.
+
+I have a function that works this way:
+
+[code]my_printf("a=%d", (int)a, " b=%d", (int)b, (char *)NULL);[/code]
+i.e. it takes a format strng containing *one* argument; the arguments(s) following are for that format specifier; multiple pairs of format/argument can be supplied.
+
+Perhaps in D, the end of the variable argument list to Dprintf can be rather than having the programmer be diligent to add the NULL at the end every time.  Actually, if you add Real Macros, printf can be a macro which knows the number and data types of the arguments:
+
+[code]Dprintf("a=", a, " b=", b, "\n");[/code]
+--
+Richard Krehbiel, Arlington, VA, USA
+rich kastle.com (work) or krehbiel3 home.com (personal)[/blockquote]

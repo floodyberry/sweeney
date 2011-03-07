@@ -1,0 +1,19 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/cfb1d2d023e415ee/809c8809bd032b4c?lnk=st&rnum=16&hl=en#809c8809bd032b4c
+[sci.math] Universal set theory and three-valued logic
+One apparent way of avoiding the paradoxes of naive set theory is to turn set-defining characteristic functions into partial functions from sets to the three-valued logic {T,F,bot}.  This three-valued logic extends classical logic in the obvious way with and(T,bot)=or(F,bot)=bot, and(F,x)=F, or(T,x)=T, not(bot)=bot, so that every truth function has a fixed point.
+
+Obviously the law of excluded middle does not hold: or(a,not(a)) only implies that a is T or bot.  This gives the logic a constructive character.
+
+In my formulation, I identify each set with its characteristic function from sets to {T,F,bot}.  Thus given s:set, the membership of an element x can be tested with s(x).  In the general case, this is a partial function, returning bot for some values.  I call such sets "partial sets", and sets whose characteristic function is in {T,F} "total sets".  Every set of ZF and NF is a total set, with this theory admitting a strictly larger class of sets than either.
+
+Russell's set R={s:set|not(s(s))} is then a partial set.  All ZF sets are elements of R, while some elements of NF are not elements of R, while some new sets such as R itself are of undecidable membership.
+
+I've translated the ZF axioms to this set theory, rephrasing them in terms of characteristic functions and new for-all and there-exists logic operators performing logical conjunction and disjunctions across all elements of a characteristic functions.  Everything appears to be sound and avoids known paradoxes.
+
+With the new axioms, it is easy to construct a bijection from the universal set to its power set.  Cantor's proof that |P(x)|>|x| for all non-empty sets x proceeds by constructing C={a:x|not(P(x)(a)} and using the law of excluded middle to derive a contradiction on its membership in P(x).  This goes away for lack of excluded middle, leaving C a partial set which appears not to be constructively contradictory.
+
+The one worrying aspect of this approach is that it identifies sets with characteristic functions from sets to logic values: Set=Set->{T,F,bot}.  I have only been able to develop an intuition of such sets in a purely constructive way, by writing down a finite list of possibly self-referential equations defining sets, and convincing myself that a unique solution exists.  This is much in the style of NF's axiom that every (possibly cyclic) graph corresponds to a set, but I allow unlimited comprehension.
+
+Are there any known problems with this approach to set theory?  Any pointers to research on the topic?
+
+Tim Sweeney 

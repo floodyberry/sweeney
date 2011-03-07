@@ -1,0 +1,16 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/11133ea1107d70a4/2a1af10e9dc5f5e3?lnk=st&rnum=8&hl=en#2a1af10e9dc5f5e3
+[comp.lang.functional] Re: Combining lazy and eager evaluation of terms
+[blockquote]Do you want to say that
+replicate x = let xs = Cons x xs in xs
+is terminating but not equivalent to
+replicate x = Cons x (replicate x)?[/blockquote]
+
+Yes, though this looks disturbing as written.  The distinction is clearer if we write the recursive binders explicitly using the lambda/mu notation.  We can say this is terminating:
+
+   lambda(x).mu(xs).Cons(x,xs)
+
+but this is non-terminating:
+
+   mu(f).lambda(x).Cons(x,f(x))
+
+If I understand all of the ramifications correctly, one could say that, in this evaluation scheme, "Data structures may safely be self-referential, but all calling sequences must be finite."  I would love to hear any feedback on the soundness of this approach. 

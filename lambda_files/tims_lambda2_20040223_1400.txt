@@ -1,0 +1,10 @@
+http://lambda-the-ultimate.org/classic/message11326.html
+http://lambda-the-ultimate.org/classic/message11326.html#11331
+0535614
+Python 'for' as Scheme 'let'
+Re: Python 'for' as Scheme 'let'
+<p>Pardon the spam, but here are some more notes:</p><p>
+
+The TypeMonad described above also can be extended with a new "meet" operating (taking typewise intersection) and "infinity" object ("the type of all types" if it exists and is nonparadoxical in a given type system) as its idempotnent.  This structure can then be seen as a lattice or a topos or a model of set theory depending on what you want from it. However, TypeMonad can't be sensibly composed with IO, because elements in a set are inherently ordered, in contrast to elements of a list of array.</p><p>
+
+Finally, there is a concept of a monad with a fixed-point operation (see <a href="http://www.cse.ogi.edu/PacSoft/projects/rmb/mdoTalk.pdf">http://www.cse.ogi.edu/PacSoft/projects/rmb/mdoTalk.pdf</a>), which leads to the interesting possibility of accessing the previous results of a list comprehension while constructing subsequent elements.</p>

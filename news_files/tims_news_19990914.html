@@ -1,0 +1,37 @@
+<h4>Unreal Tournament demo schedule</h4>
+
+<p>To quote <a href="http://www.voodooextreme.com/">Voodoo Extreme</a>
+quoting me :), here's the Unreal Tournament demo release plan: </p>
+
+<ul>
+  <li>Windows 3dfx demo this week.</li>
+  <li>Windows Direct3D/OpenGL next week.</li>
+
+  <li>Linux Glide/OpenGL soon after.</li>
+  <li>Mac timing not figured out yet.</li>
+</ul>
+
+<h4>DirectX7</h4>
+
+<p>Microsoft's new DirectX7 API will be released soon.&nbsp; I've already ported Unreal
+Tournament's Direct3D code to DirectX7 and have noticed a nice speedup on the TNT2 and
+GeForce256, primarily due to improved texture management.</p>
+
+<p>The API's simplicity has also improved, which is something you don't often see: usually
+code just gets more complex as it evolves.&nbsp; Porting Unreal Tournament's code from
+DirectX6 to DirectX7 only took 3.5 hours, and mostly consisted of deleting now-redundant
+code and changing function calls and interfaces.&nbsp; I'm very glad to see the
+IDirect3DTexture, IDirect3DViewport, and IDirect3DLight interfaces gone, and replaced by
+much simpler state-setting code.&nbsp; Direct3D's abuses of object-oriented programming
+are now gone.</p>
+
+<p>With DirectX7, Microsoft did something I welcome, and would like to see more of: they
+designed the new Direct3D interfaces to <i>not</i> be backwards-compatible with the old
+ones.&nbsp; This enabled them to remove from view a bunch of the old baggage that
+obfuscated Direct3D: execute buffers are gone, unnecessary intermediate objects are gone,
+and much less weird COM QueryInterface stuff is necessary.</p>
+
+<p>Ripping out old code and replacing it with new, better designed code is a great
+practice which too many software developers are afraid of.</p>
+
+<p>-Tim Sweeney</p>

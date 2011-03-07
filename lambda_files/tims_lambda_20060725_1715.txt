@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1633
+http://lambda-the-ultimate.org/node/1633#comment-20060
+1050209
+Cost of provably-correct code
+Big Theorems
+<p>With correctness proofs, you often run into the problem that the theorem you aspire to prove is approximately as lengthy and complicated as a well-written but unproven implementation of the program itself.
+</p><p>For example, imagine the sort of theorem that a word processor would need to obey -- there would be sub-theorems concerning how input, display, printing, formatting, etc need to be handled.
+</p><p>If your theorem is as complicated as a simple but unproven implementation of a program, then the former is no better than the later, because you can just as easily have bugs in your theorem (e.g. causing the wrong things to be proven) as bugs in your program (causing unexpected runtime behavior).</p>

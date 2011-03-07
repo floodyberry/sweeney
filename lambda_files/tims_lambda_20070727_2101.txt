@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/2366
+http://lambda-the-ultimate.org/node/2366#comment-35325
+1050942
+Comprehensions with "Order by" and "Group by"
+Is there a better way?
+<p>To me, the major benefit of comprehensions is that they enable us to express frequent programming patterns by referring to simple things with variables, rather than combining higher-order functions.
+</p><p>Philip and Simon's new extensions further enable us to express frequent programming patterns pointfully.  Still, this scheme feels a bit arbitrary.  I wonder if there is a nicer generalization, perhaps less directly mapped to SQL.
+</p><p>Sjoerd gets to the core of the issue, that records make for cleaner comprehensions than pattern-matched algebraic data types.  With idiomatic Haskell ADTs, you frequently must invent redundent local names for tupled elements in an ADT.</p>

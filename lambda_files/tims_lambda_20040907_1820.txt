@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/243
+http://lambda-the-ultimate.org/node/243#comment-1792
+1048819
+Combining lazy and eager evaluation of terms
+Y, etc.
+<p>Dominic: That approach to Y works under lenient evaluation, and is actually the literal translation I use to evaluate recursive terms.
+</p><p>The only terms that behave differently between lenient and lazy schemes are terms with subterms which would not terminate if evaluated, such as "let x=x in 7".  In a normal-order lazy language, such such subterms only cause divergence if their evaluation is actually demanded by the program's final result.  In a lenient language, all subterms are always evaluated to ground values "eventually", even when their values are not demanded.  So, this example evaluates to 7 in a lazy language, and diverges in a lenient one.
+</p><p>The "eventually" part is what enables lenient evaluation to succeed for more programs than strict evaluation.  For example in "x=Pair(3,First(x))", the First(x) term may begin evaluation before x has been fully reduced to a ground value.
+</p><p>David: I'm not sure if pH (Parallel Haskell) uses a true lenient evaluation scheme like Id90.  The reference I have on it ("Implicit Parallel Programming in pH", a book by Nikhil &amp; Arvind) is somewhat unclear on this.</p>

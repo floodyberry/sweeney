@@ -1,0 +1,13 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/cb60f407f62c8ab0/c18aa3a0a9200c87?lnk=st&rnum=45&hl=en#c18aa3a0a9200c87
+[comp.lang.functional] Re: Y combinator
+[blockquote]I have a question: At least in my implementation, the base function is transformed to take an extra argument which of course will be the function itself. This is fine for when the function is appiled solely within the body of the function itself because I'll transform every use of the function to pass in the extra argument. The problem is this: What should happen if the function is passed to some other function not expecting the extra argument? What if the recursive function returns itself?[/blockquote]
+
+This should all work automatically if you're managing your environments/closures properly.
+
+If you are looking into a purely runtime solution, look for information on closures (a combination of a function, and an "outer environment" - a binding of values to all of the variables in outer function contexts).  In an ordinary language, at runtime, all variables in lambdas "outside" the current lambda are guaranteed to have well-defined values when it comes time to apply the current lambda.
+
+If you're looking for a compile-time solution, check out Luca Cardelli's paper on "Explicit Substitutions".  This is a compile-time mechanism for keeping track of bindings, and scales well to complex situations of functions calling functions recursively with functions as parameters.  See http://www.pps.jussieu.fr/~curien/ExplicitSub.pdf.  If this is too big a leap (the presentation is very technical) do a Google search for "de Bruijn indices" for background.
+
+Personally, I find it easiest to represent recursive functions without the Y combinator approach (i.e. without passing a function "to itself").  Instead, I use to distinct sets of de Bruijn indices: "parameter indices" referring to the parameter passed to the function, and "self indices" referring to the function itself.  This approach is a bit more compact, but more importantly, there tend to be different compile-time evaluation semantics associated with self indices and with parameter indices: you can't try to eagerly resolve self indices or else you run into infinite loops.  With the Y-combinator approach it's not obvious whether a given parameter may be so recursive.  This probably doesn't matter in simple evaluations situations, but becomes important in recursive dependent type systems.
+
+-Tim 

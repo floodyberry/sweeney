@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/2555
+http://lambda-the-ultimate.org/node/2555#comment-38491
+1051131
+Parametric datatype-genericity
+Genericity
+<p>Translating this stuff into category theory isn't essential.  It's sufficient to enumerate the coherence that laws folds are guaranteed to obey in a particular type system.  The later approach is preferable, as abstract category theory presentations of these topics tend to obscure the results from programmers who could otherwise put them into practice.
+</p><p>To me, the paper's key point is that the Generic Haskell approach is ad hoc (resulting in fewer universal properties), whereas the Algebra of Programming approach is more lawful.
+</p><p>I realized a while ago that "zip" ought to be called "transpose", as the underlying operation is to translate a value of F(G(t)) to G(F(t)) using the underlying join.  For example, you can naturally zip an array of dictionaries into a dictionary of arrays, where the resulting dictionary contains, for every index in the original dictionaries, the ordered concatenation of all values under that index from all of the sources.
+</p><p>Everyone has a fairly good understanding of functors and monads nowadays, but I feel like we're just scratching the surface of the generalizations that are possible regarding transformations between them.  </p>

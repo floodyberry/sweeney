@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Is &quot;post OO&quot; just over? | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1741" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Is &quot;post OO&quot; just over?</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >While studying the conference program of the upcoming <a href="http://www.oopsla.org/2006/">OOPSLA 2006</a> I discovered under the category "essay" an author who has quite something critical to <a href="http://www.oopsla.org/2006/submission/essays/the_paradoxical_success_of_aspect-oriented_programming.html">say</a> about AOP:</p>
+<blockquote ><p >Aspect-oriented programming is discussed as a promising new technology. Like object-oriented programming, it is beginning to pervade all areas of software engineering. With its growing popularity, practitioners and academics alike are beginning to wonder whether they should start looking into or it, or otherwise risk having missed an important development. The author of this essay finds that much of aspect-oriented programming's success seems to be based on the conception that it improves both modularity and the structure of code, while in fact, it actually works against the primary purposes of the two, namely independent development and understandability of programs. Not seeing any way of fixing this situation, he thinks the success of aspect-oriented programming to be paradoxical.</p></blockquote>
+<p >This is not just another internet rant about the latest PL hype but the author, Friedrich Steimann, had done interesting work about AOP before. In particular his latest paper about typed AOP:</p>
+<p ><a href="http://www.fernuni-hagen.de/ps/forschung/publikationen/publikation_20284.shtml">AOP and the antinomy of the liar</a></p>
+<p >but also his award winning former critical AOP review:</p>
+<p ><a href="http://www.fernuni-hagen.de/ps/forschung/publikationen/publikation_04925.shtml">Domain models are aspect free</a></p> </div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at 09/24/2006 - 10:50 | <a href="taxonomy/term/4">Critiques</a> | <a href="taxonomy/term/15">Meta-Programming</a> | <a href="taxonomy/term/14">OOP</a> | <a href="taxonomy/term/10">Paradigms</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1741" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2047 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1741" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1741" />
+<a id="comment-21220"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1741#comment-21220" class="active">AOP is only successful in</a></h3>
+ <div class="content"><p >AOP is only successful in that many researchers have received funding to investigate it.  In the real world, AOP is entirely unsuccessful: No mainstream programming language has integrated major AOP features.  And this is the correct state of affairs because, as the author more eloquently states, the techniques that are unique to AOP are a collection of dangerous hacks.</p>
+<p >Fortunately, many of the original goals of AOP (implementing features that cross-cut data types and programs) are more soundly satisfied by the latest work on generic programming, Haskell typeclasses, etc.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Sun, 09/24/2006 - 20:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21222"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1741#comment-21222" class="active">I&#039;m tempted to object to this...</a></h3>
+ <div class="content"><p >but only because I think you're praising AOP with faint damns.  </p></div>
+ <div class="links">By <a href="user/1503" title="View user profile.">Dave Griffith</a> at Sun, 09/24/2006 - 21:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21225"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1741#comment-21225" class="active">AOP vs Concerns</a></h3>
+ <div class="content"><p >I think the most fundamental mistake is to confuse AOP (especially as embodied in <a href="http://www.eclipse.org/aspectj/">AspectJ</a>) and Dijkstra's <a href="http://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a>, and Parnas' <a href="http://en.wikipedia.org/wiki/Information_hiding">information hiding</a>, which seems to be commonly done, especially in AOP propaganda.  As both Dijkstra and Parnas have emphasized in their writings, separation of concerns and information hiding are fundamentally <i >design-time</i> concepts.  Only <a href="http://www.cas.mcmaster.ca/~carette/metamonads/index.html">crude approximations</a> can (currently) be done in any programming languages using safe, organized way of programming.</p>
+<p >Another issue is one of anti-modularity of many AOP features; because advice depends on <em >implementation details</em> of a particular routine (method, etc), those implementations details are effectively leaked (breaks information hiding) and de facto become part of the routine's interface (otherwise a change would break the aspect).  But worst probably is that to understand what any particular routine does (at least in AspectJ), you have to understand all the advice that is applied to that routine, in other words, local reasoning does not help understanding.  Granted, without aspects, the same routine would be huge and as difficult to understand, but at least the reasoning would be local!</p>
+<p >This is not to say that AOP is value-less, by any means.  AspectJ is as good and as bad as many breakthrough languages, with features that are both useful and astoundingly dangerous.  LISP did have <code >setq</code> and dynamic scoping, <code >goto</code> was ubiquitous, etc.  Just as I personally consider ML and Haskell to be ``tamed'' versions of Scheme, we are still several years away from having a similar understanding of aspects (though the research has clearly started, as witnessed by <a href="http://www.cs.princeton.edu/sip/projects/aspectml/">AspectML</a>,  and the <a href="http://www.google.ca/search?q=typed+aspect+oriented+language">myriad</a> other systems).  In my not-at-all-humble opinion, the current systems take the basic ideas of advice and pointcut much too literally, and seem to have forgotten the wise words of Dijkstra and Parnas.  But that's a common symptom in computer science -- any paper more than 5 years old can't possibly say something useful, can it?</p></div>
+ <div class="links">By <a href="user/1094" title="View user profile.">Jacques Carette</a> at Mon, 09/25/2006 - 01:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21221"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1741#comment-21221" class="active">emacs lisp</a></h3>
+ <div class="content"><p >I don't know if you would call emacs lisp mainstream, but it has aspect  oriented features that have been in use for years.  I do recall (from reading comp.emacs.devel) that RMS isn't very happy with it and is looking to rewrite many apps/libs that use aspects to improve code quality.</p>
+<p >I think aspects are interesting, but they could really hinder understandability.  Using them to allow for slight modifications in libraries *might* be ok, but for overall development I don't think I could wrap my head around them enough to find them more useful than more understandable methods (which I would consider possibly hook<br >
+functions, or something of the sort).</p>
+<p >--<br >
+<a href="http://www.myspace.com/kruhft">kruhft</a></p></div>
+ <div class="links">By <a href="user/1622" title="View user profile.">kruhft</a> at Sun, 09/24/2006 - 21:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21224"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1741#comment-21224" class="active">PILOT</a></h3>
+ <div class="content"><p >The first mention of AOP features, i.e. the notion of advice, is Warren Teitelman's PhD thesis from 1966 - see ftp://publications.ai.mit.edu/ai-publications/pdf/AITR-221.pdf This itself seems to have been influenced by John McCarthy's advice taker, but I am not sure whether that's actually true. Warren Teitelman's notion of advice became part of Xerox PARC's Interlisp, apparently found its way to MacLisp, then Flavors, LOOPS and finally CLOS. Gregor Kiczales was involved in the CLOS specification, so that's where he probably got this ingredient of AOP from. MacLisp was also a precursor of emacs lisp.</p>
+<p >Dylan was mostly derived from CLOS but left out a number of features that were apparently deemed too complex and/or confusing, among them the CLOS notion of method combinations, that is, before/after/around advice. That's probably an early example of a rejection of (some elements of) AOP.</p></div>
+ <div class="links">By <a href="user/878" title="View user profile.">Pascal Costanza</a> at Sun, 09/24/2006 - 23:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21228"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1741#comment-21228" class="active">(AOP &lt;= HOF)?</a></h3>
+ <div class="content"><p >Is it just me, or is AOP an example of something that would be so much easier to implement merely by using "wrapper" higher-order functions, if only the language supported them? I admit I don't comprehend it in depth.</p></div>
+ <div class="links">By <a href="user/3245" title="View user profile.">Julian Morrison</a> at Mon, 09/25/2006 - 04:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21229"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1741#comment-21229" class="active">Pretty much</a></h3>
+ <div class="content"><p >except that those higher-order wrappers need to be able to be created <i >after</i> the wrapping function, and applied independently without altering the call sites.  That's the crux of it, and what makes AOP so easy to abuse.</p></div>
+ <div class="links">By <a href="user/1503" title="View user profile.">Dave Griffith</a> at Mon, 09/25/2006 - 10:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/08/26" title="Previous month">«</a> September 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/9/1" title="1 post">1</a></td>
+  <td class="day-link"><a href="archive/2006/9/2" title="2 posts">2</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/9/3" title="2 posts">3</a></td>
+  <td class="day-normal">4</td>
+  <td class="day-normal">5</td>
+  <td class="day-normal">6</td>
+  <td class="day-normal">7</td>
+  <td class="day-link"><a href="archive/2006/9/8" title="1 post">8</a></td>
+  <td class="day-link"><a href="archive/2006/9/9" title="4 posts">9</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/9/10" title="1 post">10</a></td>
+  <td class="day-link"><a href="archive/2006/9/11" title="3 posts">11</a></td>
+  <td class="day-link"><a href="archive/2006/9/12" title="3 posts">12</a></td>
+  <td class="day-normal">13</td>
+  <td class="day-link"><a href="archive/2006/9/14" title="2 posts">14</a></td>
+  <td class="day-link"><a href="archive/2006/9/15" title="1 post">15</a></td>
+  <td class="day-link"><a href="archive/2006/9/16" title="2 posts">16</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/9/17" title="1 post">17</a></td>
+  <td class="day-link"><a href="archive/2006/9/18" title="3 posts">18</a></td>
+  <td class="day-normal">19</td>
+  <td class="day-link"><a href="archive/2006/9/20" title="1 post">20</a></td>
+  <td class="day-link"><a href="archive/2006/9/21" title="1 post">21</a></td>
+  <td class="day-link"><a href="archive/2006/9/22" title="1 post">22</a></td>
+  <td class="day-link"><a href="archive/2006/9/23" title="3 posts">23</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/9/24" title="2 posts">24</a></td>
+  <td class="day-normal">25</td>
+  <td class="day-today">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+ </tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1740" title="11 comments">Designing a Programming Textbook</a></li><li><a href="node/1720" title="6 comments">muSE - an embeddable scheme dialect</a></li><li><a href="node/1738" title="10 comments">SSA + Type Inference = &quot;Compile time&quot; dynamic typing, &quot;runtime&quot; static typing?</a></li><li><a href="node/1733" title="33 comments">Why Johnny can&#039;t code</a></li><li><a href="node/1742" title="5 comments">What Makes Erlang Processes Tick?</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1742" title="5 comments">What Makes Erlang Processes Tick?</a></li><li><a href="node/1740" title="11 comments">Designing a Programming Textbook</a></li><li><a href="node/1738" title="10 comments">SSA + Type Inference = &quot;Compile time&quot; dynamic typing, &quot;runtime&quot; static typing?</a></li><li><a href="node/1735" title="6 comments">Lectures on the Curry-Howard Isomorphism</a></li><li><a href="node/1734" title="4 comments">PeakStream - a multi-core stream processing model</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

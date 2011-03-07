@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Generics for the masses | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F256" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Generics for the masses</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<small>Ralf Hinze. <a href="http://www.informatik.uni-bonn.de/~ralf/publications/ICFP04.pdf">Generics for the masses</a>. In Kathleen Fisher, editor, Proceedings of ICFP'04, Snowbird, Utah, September 19-22, 2004.</small><p>
+<a href="http://lambda-the-ultimate.org/classic/message11372.html#11425">Mentioned</a> (with no link) on LtU1.<p>
+Hinze shows how to program generically in Haskell 98, making extensive use of type classes.<p>
+Those interested in generic programming should make sure they are familiar with references cited in section 5 (many of which were discussed here in the past). </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 09/13/2004 - 19:22 | <a href="taxonomy/term/11">Functional</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/256" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 1626 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="256" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="256" />
+<a id="comment-1874"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/256#comment-1874" class="active">There must be a better way</a></h3>
+ <div class="content">It feels like there must be a better way to do this.  I've been thinking about this for a while but a comprehensive solution isn't clear.  But a few things do seem obvious:<P>
+
+First of all, function-overloading provides a more straightforward means of expressing this than typeclasses.  This is even more so when one may abstract over the domain of an overloaded function.  For example, given a reference "f" to a possibly-overloaded function, you want to be able to extract the type of f's domain using a syntax like "f.dom".  This way, for a contrived example, you can write a generic function to take the sum of certain kinds of elements over certain data structures:
+
+<pre>
+// The sum of a single integer is that integer.
+sum(x:int):=x
+
+// The sum of a character is zero.
+sum(x:char):=0
+
+// To generate the sum of a list of
+// elements compatible with
+// summation, we add up the sum of
+// each element.
+sum(x:list(sum.dom)):=
+   if(x=nil) 0
+   else sum(x.head)+sum(x.tail)
+</pre>
+
+This way, we can say sum({})=0, sum(1,2,3)=6, sum({3,4},{5,{},7},"Hello")=19, etc.  (Here, strings are arrays of characters.)  A more useful example would be a generic framework for printing elements of generic types, including both values and containers like arrays and finite sets.<P>
+
+Second, this approach only works well in a closed-world environment.  For example, to use a module containing generic printing functions for certain data types, and to use it in combination with your own generic printing functions, you would need to pass your own expanded printing functions in to the container's printing functions, so that it may recursively call both your sum functions and its own.<P>
+
+It appears that Haskell's type classes solve this problem by automatically generating implicit parameters for typeclass instances at their use site.  Thus, identical typeclass invocations on identical data types may behave differently depending on their local context.  And this is often desirable!  This phenomenon is described in http://www.mail-archive.com/haskell@haskell.org/msg15080.html.<P>
+
+I think an optimal solution (given the requirements of a strongly-typed language, etc) is a combination of two orthogonal features: support for general overloading of functions (though perhaps with restrictions, like: the domain of the overloads must be disjoint), and support for lexically-scoped implicit parameters.  Overloading is a convenience that avoids the need for all the manual plumbing in this paper, while implicit parameters would make generic types work in an open-world environment.  Given these two features, plus dependent types, I don't think typeclasses would be needed in a language at all.</div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 09/14/2004 - 02:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1878"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/256#comment-1878" class="active">Re: There must be a better way</a></h3>
+ <div class="content"><blockquote ><p >For example, given a reference "f" to a possibly-overloaded function, you want to be able to extract the type of f's domain using a syntax like "f.dom".</p></blockquote>
+<p >We don't need a <code >f.dom</code> feature if we define <code >sum</code> using a coalgebraic specification. If we can say <code >x : {sum : self -&gt; int}</code> and read it as "x has type of something that can be applied to a sum operation giving an int" then the example don't need to use <code >sum.dom</code>:</p>
+<pre>sum (xs :: list {sum :: self -&gt; int}) = ...;</pre><p >This way we can write down the type of <code >sum</code> (i.e.<code >{sum :: self -&gt; int}</code>) in this case and have overloaded <code >sum</code> functions with different arities in other situations.</p>
+<blockquote ><p >Given these two features, plus dependent types, I don't think typeclasses would be needed in a language at all.</p></blockquote>
+<p >How could this be used to define a monad? In Haskell we can be sure that <code >(&gt;&gt;=)</code> won't work outside the defined monad (i.e. we can't write <code >print 1 &gt;&gt;= \_ -&gt; Just "Hello World"</code> because <code >Maybe</code> and <code >IO</code> are different monad instances). I don't see how can we have this just using overloaded functions.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Tue, 09/14/2004 - 15:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1913"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/256#comment-1913" class="active">Re: There must be a better way</a></h3>
+ <div class="content"><p >This sounds promising.  I'd love to see any references you have on this approach.  For example, is "self" context-independent or does it need to be qualified when nested several levels deep in definitions where its meaning is ambiguous? (Or am I misunderstanding?)</p>
+<p >That monad example will fail to typecheck because, though "&gt;&gt;=" is overloaded, "print 1 &gt;&gt;= _" is of type "(t-&gt;IO t)-&gt;IO t", and is incompatible with the argument of type "t-&gt;Maybe String".</p>
+<p >The other issue with replacing typeclasses with overloading and implicit parameters is illustrated by the monad "return" operation.  "return" is of type "t-&gt;M t", so there is no way to overload it for different monads.  If one needs to operate on monads generically, one stills has to bundle all of the operations for each monad into a data structure, in order to pass it around (either explicitly or implicitly).  A record or typle would do just fine.  This improves expressiveness: whereas there is no way in Haskell to operate on a typeclass instance as a first-class value or to have multiple instances of the same typeclass, explicit typeclasses make this possible.  Cayenne (http://www.cs.chalmers.se/~augustss/cayenne/) is a Haskell-style language that supports this.</p>
+<p >This highlights the strange multi-faceted role of typeclasses as a means of overloading by type, supporting implicit parameters, and bundling up of related overloaded things into data structures.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 09/16/2004 - 01:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1919"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/256#comment-1919" class="active">Re: There must be a better way</a></h3>
+ <div class="content"><blockquote ><p >This sounds promising. I'd love to see any references you have on this approach.</p></blockquote>
+<p >Sorry I can't think of any references right now on this specific subject. The main references for this idea are Bart Jacobs papers on Coalgebra and some OO concepts/languages (e.g. multi-methods, O'Caml-like type inference for objects, <a href='http://www.erights.org/elib/capability/ode/ode-objects.html'>E's lambda-based objects</a>).</p>
+<blockquote ><p >For example, is "self" context-independent or does it need to be qualified when nested several levels deep in definitions where its meaning is ambiguous?</p></blockquote>
+<p >AFAICS you can have it either way, using a regular type variable or making it context dependent:</p>
+<pre>-- using Haskell-like @
+foo (xs :: {bar :: a@self -&gt; {baz :: a -&gt; b@self -&gt; c} -&gt; c})
+-- or self is a regular type variable
+foo (xs :: {bar :: a -&gt; {baz :: a -&gt; b -&gt; c} -&gt; c})
+</pre><blockquote >That monad example will fail to typecheck because, though "&gt;&gt;=" is overloaded, "print 1 &gt;&gt;= _" is of type "(t-&gt;IO t)-&gt;IO t", and is incompatible with the argument of type "t-&gt;Maybe String".</p></blockquote>
+<p >But what mechanism forbids the programmer to write <code >(m :: IO a) &gt;&gt;= (f :: () -&gt; b) = f ()</code>?<br >
+<blockquote >This sounds promising. I'd love to see any references you have on this approach.</p></blockquote>
+<p >Sorry I can't think of any references right now on this specific subject. The main references for this idea are Bart Jacobs papers on Coalgebra and some OO concepts/languages (e.g. multi-methods, O'Caml-like type inference for objects and <a href='http://www.erights.org/elib/capability/ode/ode-objects.html'>E's lambda-based objects</a>).</p>
+<blockquote ><p >For example, is "self" context-independent or does it need to be qualified when nested several levels deep in definitions where its meaning is ambiguous?</p></blockquote>
+<p >AFAICS you can have it either way, using a regular type variable or making it context dependent:</p>
+<pre>-- using Haskell-like @
+foo (xs :: {bar :: a@self -&gt; {baz :: a -&gt; b@self -&gt; c} -&gt; c})
+-- or self is a regular type variable
+foo (xs :: {bar :: a -&gt; {baz :: a -&gt; b -&gt; c} -&gt; c})
+</pre><p >The type inference mechanism could work on a closed or open world assumption, depending on how generic you want your operations to be.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Thu, 09/16/2004 - 14:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

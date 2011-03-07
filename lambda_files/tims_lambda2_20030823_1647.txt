@@ -1,0 +1,38 @@
+http://lambda-the-ultimate.org/classic/message8378.html
+http://lambda-the-ultimate.org/classic/message8378.html#8444
+0532666
+Closures and mutability
+Re: Closures and mutability
+<p>Vesa:</p><p>
+
+In the new language I've been building, there are two main areas where annotations are needed, compared to traditional C-family languages: that a variable is mutable (really that it's a reference to a mutable heap-allocated cell of a particular type), and that a function may have side effects (including heap writing and IO operations).</p><p>
+
+This is all set up such that, given a piece of simple source code mixing imperative and functional features, it would be relatively straightforward to translate it to either C (where everything is imperative) or Haskell + IO + ST (where everything is functional except the behind-the-scenes work performed by IO).</p><p>
+
+This works well in my context, but the typical programming style ends up being quite different than in C-family languages.  I definitely wouldn't advocate this just as an extension to C.  But it can be attractive as you try to merge functional, imperative, and higher-level type system concepts.</p><p>
+
+Paul:</p><p>
+
+Given something like C#, Java, or UnrealScript as a starting point, this protocol/auditors approach is a natural and attractive direction.</p><p>
+
+I actually spent a year of occasional late nights and weekends implementing something along these lines.  It seemed really elegant at the time.  There were all kinds of attributes you could apply to variables and functions to control their scope and interactions.  For one example, there were "visitor references" to objects (as opposed to ordinary references) where you could access variables and functions through the reference, but couldn't capture it or assign it to a non-local variable.  There were all kinds of access overrides allow things like inner classes whose variables could be accessed by outer subclasses but not the external environment in general.</p><p>
+
+As its complexity grew, though, it started to feel very arbitrary.  I was also learning about type theory: dependent types, monads, the Curry-Howard isomorphism, and so on, and was starting to feel that these problems could be solved in a more general way.  So I started over and have been proceeding on the basis of a dependent-typed functional language with an imperative superset, with various combinations of nominal and structural typing supporting open- and closed-world programming.  Highfalutin features aside, though, it's pretty similar in syntax to the C/Pascal family, as opposed to the LISP or ML/Haskell families.</p><p>
+
+But that's been such a big metaproject that I haven't gotten around to implementing any advanced scoping and security constructs. :-)</p><p>
+
+General opinions:</p><p>
+
+- I would like to see issues like "is this variable mutable" addressed at the type system level, independent of security.</p><p>
+
+- I want any language-level security features to be statically verifyable, not relying on runtime checks. The one exception to this is computing resources (stack size, heap allocations, infinite loops) which unfortunately require a bunch of twiddle factors, because type-based verification of resource bounds is currently intractable for real-world programs.</p><p>
+
+- I would only hope for language-level security in languages based on intermediate code, run with either JIT or a VM, with something like a bytecode verifier or proof carrying code checker standing between the code and the machine.</p><p>
+
+- I like the idea of code signing as an optional, security-enabling feature.  For example, I would like to be able to release several (Java-style) packages which work independently, but are granted special access privelages with respect to each other.</p><p>
+
+- I am becoming a big fan of region typing (the ability to have multiple heaps, and segregate access to heaps), as a way of enabling patterns like purely functional functions which can use a local heap internally, but are still guaranteed to have no observable side-effects; and big complex imperative functions which can be executed in parallel because they're guaranteed to be operating on different heaps. (Example: two game levels running on a game server.)</p><p>
+
+- I think type system based security guarantees can solve all problems with distributed untrusted code.</p><p>
+
+The question of distributed mutable objects is a different matter.  Two observations: Implementing this, even naively and arbitrarily (as Unreal does for game objects), can lead to a really expressive and powerful way of programming.  But doing this in a theoretically sound and fully general way seems much tricker, bringing up problems such as transactioning and distributed garbage collection.  I can't envision what a general solution to this problem would look like, but it's certainly a great topic for active R&amp;D.</p>

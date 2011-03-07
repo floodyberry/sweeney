@@ -1,0 +1,68 @@
+<h4>More Hardware Troubleshooting</h4>
+
+<ul>
+  <li><p>We received some more confirmations of Unreal working better on TNT's with the Creative
+    Labs unified drivers using Glide than Direct3D.&nbsp; If you have a Creative Labs TNT card
+    and have having performance problems, try that. Especially if you have under 128 megs of
+    RAM.</p>
+  </li>
+  <li><p>Lots of reports of slowdowns from users with Monster Sound's who have enabled the
+    &quot;Advanced Options / Audio / Use3DHardware&quot;.&nbsp; If you're having this
+    slowdown, disable Use3DHardware and try again.&nbsp; Then please email <a
+    href="mailto:utbugs@epicgames.com">utbugs@epicgames.com</a> and let us know whether that
+    helped.&nbsp; I've seen three confirmations from users that their problems (huge slow
+    down) went away after disabling this.</p>
+
+  </li>
+  <li><p>Jack and I have been tracking down the performance problems with the TNT on 64-meg (and
+    lower) machines.&nbsp; To our great surprise, it appears that the TNT is keeping duplicate
+    system memory copies of all our textures--we saw system memory grow and shrink in almost
+    exact proportion to our &quot;supposed&quot; video memory texture allocations.&nbsp; Thus
+    the game uses an extra 12-26 megabytes of system memory--a very inefficient allocation of
+    resources. This is a big surprise, because the NVidia guys has always told us this isn't
+    the case.</p>
+    
+    <p>
+    Problem in <a href="http://unreal.epicgames.com/files/Direct3D7.cpp">my code</a>?&nbsp; I don't think so, but I'd love
+    to be proven wrong.&nbsp; I'll follow up with our henchmen at NVidia and Microsoft and see
+    if we can track this down...</p></li>
+
+</ul>
+
+<h4>Direct3D Anomalies</h4>
+
+<p>We've been looking at the feedback on Direct3D performance and investigating some
+strange reports.&nbsp; Recently, we've mainly been testing on 96-meg and 128-meg machines
+(I have a Celeron 400, Jack Porter has a K6-2 450).&nbsp; On these machines, TNT1
+performance is good -- average 28 fps at 648x480, 25 fps at 800x600.&nbsp; The TNT2
+performance is significantly better.</p>
+
+<p>However, upon removing some RAM and testing Direct3D on a 64-meg K6-2, the
+&quot;precache&quot; time increased by about 5X, and performance dropped to a few frames
+per second.&nbsp; These performance drops don't occur in the software renderer, and don't
+occur in Glide.&nbsp; Something is going wrong between Unreal, Direct3D, and the TNT's
+Direct3D driver, and we're investigating.</p>
+
+<p>Overall, the feedback indicates a very wide variance in performance among TNT users,
+much more so than with any other card.&nbsp; Our internal testing has indicated this too;
+for example, we've found (and worked around) a lot of driver bugs that only happen on one
+machine, and not others with otherwise similar configurations.</p>
+
+<p>Don't Try This At Home Dept.: Some TNT users have reported that tweaking their BIOS's
+&quot;AGP Aperture Size&quot; improves performance on 64-meg machines.&nbsp; We have tried
+this and couldn't find any differences on our 64-meg test machine.&nbsp; Others report
+that the Creative Labs unified drivers (with TNT Glide support) outperform Direct3D on
+their cards.&nbsp; If anybody finds definite improvements or workarounds, or has insight
+into what's happening, please email <a href="mailto:utbugs@epicgames.com">utbugs@epicgames.com</a>
+
+and let us know.</p>
+
+<p>Thanks.</p>
+
+<h4>Athlon In The House</h4>
+
+<p>Mark Rein walked into Best Buy and picked up a 650 MHz Athlon off the shelf -- an IBM
+Aptiva with a TNT2 Ultra bundled in.&nbsp; Fastest off-the-shelf machine we've ever
+seen!&nbsp; Click <a href="http://unreal.epicgames.com/Kickass.wav">here</a> for our in-depth Athlon review.</p>
+
+<p>-Tim</p>

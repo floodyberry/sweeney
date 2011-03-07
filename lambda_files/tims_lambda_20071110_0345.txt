@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/2527
+http://lambda-the-ultimate.org/node/2527#comment-38058
+1051103
+Universal Type System
+Turning complete type systems
+<p>Note that Turing-complete type systems (while good and useful) don't guarantee the programmer the ability to extend the language's type system naturally with new features or constructs.
+</p><p>While they enable a programmer to write a typechecker for a more powerful type system, and run it at compile-time in the source language, you would need the source compiler to expose some meta-representation of the program at compile-time, with some sort of compositional semantics, in order to actually extend the base type system usefully.  This can be done, but isn't automatic.  For example, in C++, templates make the type system Turning-complete, but the language lacks the ability to, e.g., define templates taking template abstractions as parameters, so exposing certain abstractions requires the user to manually create metadata containers to describe types, rather than just using them directly.
+</p><p>And, even if the compiler did expose a meta-representation of the language to its Turing-complete typechecker, naive introspection of that representation would break various theoretical properties of the unextended language -- such as subsumption and parametricity.
+</p><p>This isn't an argument against Turing complete type systems, rather just a claim that they aren't the total solution for type system extension.</p>

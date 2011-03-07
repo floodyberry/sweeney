@@ -1,0 +1,381 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Theorems for free!</b></font><br>
+<font color="white" size="-1">started 7/31/2003; 4:23:19 AM - last post 8/4/2003; 5:10:47 AM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Theorems for free! <a name="8055">&nbsp;</a><a href='#8055' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">7/31/2003; 4:23:19 AM (reads: 2036, responses: 7)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a8055"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://www.research.avayalabs.com/user/wadler/topics/parametricity.html#free">Theorems for free!</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			<small>Philip Wadler. <i>Theorems for free!</i> 4'th International Conference on Functional Programming and Computer Architecture, London, September 1989.</small><p>
+<font color="blue"><i>From the type of a polymorphic function we can derive a theorem that it satisfies. Every function of the same type satisfies the same theorem. This provides a free source of useful theorems, courtesy of Reynolds' abstraction theorem for the polymorphic lambda calculus. </i></font><p>
+I see that this useful paper wasn't mentioned here before, so I here goes.<p>
+The paper formally proves an important meta-theorem for derving theorems about algebraic properties of functions, based solely on their types!<p>
+Example: Suppose a polymorphic function r with type forall a.[a]->[a], then r statisfies the following theorem: for all types A and A', and every total function a:A->A', we have <i>map a . r_A = r_A' . map a. </i><p><p><p>
+
+	<blockquote>The intuitive explanation of this result is that r must
+work on lists of X for any type X. Since r is provided
+with no operations on values of type X all it can do is
+rearrange such lists independent of the values contained
+in them. Thus applying a to each element of a list and
+then rearranging yields the same result as rearranging
+and then applying a to each element.</blockquote><p><br>
+			<font size="-2"><b>Posted to <a href='theory.html'>theory</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 7/31/03; 4:24:52 AM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#8055'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Theorems for free! <a name="8070">&nbsp;</a><a href='#8070' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/1/2003; 8:15:29 AM (reads: 913, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+This is a very famous paper, which gives the lie to claims that static typing only guarantees trivial program properties.<p>
+
+BTW, in categorical terms, the theorem about r above says precisely that r is a natural transformation (from and to the list functor []).
+<p></p>
+<p><a href='#8070'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Theorems for free! <a name="8074">&nbsp;</a><a href='#8074' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/1/2003; 2:23:32 PM (reads: 865, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Keep in mind that this "free theorem" business isn't universal, but depends on the particular type theory used.  In particular, that the type theory doesn't admit types as terms and doesn't provide any operations on types besides sum, product, and exponential.  Haskell is one of the few practical language where it holds.<p>
+
+For example, if your type theory exposed a function inhabited :: type -> bool which returned true if the type were inhabited and false if empty, then not every universal quantification would have such a free theorem.  For example, forall a.[a]->[bool] would exist but wouldn't be invertible.<p>
+
+In my view, the reorganization of type theory into category theory has been very harmful to the subject.  It has reinforced the separation of types and terms, leaving few researchers to ponder systems combining the two or to even consider the possibility that such systems might be valid and useful.  Why?  Category theory's focus on isomorphism (instead of equality) doesn't scale.  John Baez's writings on things such as "the category of all categories" and "the category of all categories of all ..." illustrate the near-hopeless complexity of isomorphisms-of-categories perfectly.  As a result, simple notions like "the type of the type of all inhabited subtypes of the type of natural numbers" seem incomprehensibly difficult in category theory and hence in type theory.<p>
+
+Category theory brought useful advances to topology.  No surprise here, because topology is precisely the study of isomorphisms between geometric objects.  Type theory, as it applies to any sort of actual programming system, just needs to answer the question, "which values are allowed in this context?" and there is no benefit to dragging isomorphism into this picture.<p>
+
+The state of type theory today seems to me to like a set theory where most refuse to acknowledge the possibility that sets might themselves contain sets, or the existence of functions from sets to sets, from values to sets, or from sets to values.  Sure, the current approach brings some simplifications to reasoning about types, but only at the expense of a wealth of new tools for expressing, refining, and reasoning about types.<p>
+
+This conclude's today's rant. :-)
+<p></p>
+<p><a href='#8074'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Theorems for free! <a name="8081">&nbsp;</a><a href='#8081' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/2/2003; 7:08:23 AM (reads: 803, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>In particular, [it requires] that the type theory doesn't admit types as terms and doesn't provide any operations on types besides sum, product, and exponential.</em><p>
+
+That's not true.<p>
+
+<em>For example, if your type theory exposed a function inhabited :: type -> bool which returned true if the type were inhabited and false if empty, then not every universal quantification would have such a free theorem.</em><p>
+
+That sounds possible, but I don't see a counterexample off the top of my head. Do you?<p>
+
+The naturality property does not depend on parametricity, BTW; rather it's the other way round, as there are some natural transformations which are not parametric. So being able to distinguish forall'd types is not necessarily enough to break the theorem.<p>
+
+Also, don't you think conversely that, if some feature of a type system breaks the naturality property, that that might reasonably be construed as an argument against adopting such a feature? After all, it charges a cost for a theorem one would otherwise get for free. :)<p>
+
+<em>For example, forall a.[a]->[bool] would exist but wouldn't be invertible.</em><p>
+
+What does invertibility have to do with it? In the example above r is not assumed to be invertible. Indeed, I can't think of any functions with that type which are invertible.<p>
+
+<em>In my view, the reorganization of type theory into category theory has been very harmful to the subject.  It has reinforced the separation of types and terms, leaving few researchers to ponder systems combining the two or to even consider the possibility that such systems might be valid and useful.</em><p>
+
+Hm, that's a fascinating point of view. It's a bit like saying microscopes have reinforced the separation of man and bacteria.<p>
+
+Did you know that there are perfectly good categorical models of dependently typed languages? Or that the fact that one can easily describe consistent and general categorical models of dependent types is often touted as one of the success stories of category-theoretic model theory?<p>
+
+<em>Why? Category theory's focus on isomorphism (instead of equality) doesn't scale.</em><p>
+
+Doesn't it? First, the `focus' on isos is not part of the letter, but rather the spirit, of category theory. Second, actually one should expect up-to-iso equivalence to scale better than up-to-equality equivalence, because it demands less, so there are more models which translates back to more implementations. For example, demanding a type iso to a particular stack ADT lets you use anything which behaves like a stack rather than that particular stack implementation. To me, this sounds like exactly the sort of thing you want for `large-scale' programming and specification.<p>
+
+<em>John Baez's writings on things such as "the category of all categories" and "the category of all categories of all ..." illustrate the near-hopeless complexity of isomorphisms-of-categories perfectly.</em><p>
+
+Unlike set theory where one has an infinitely high tower of infinities?<p>
+
+<em>As a result, simple notions like "the type of the type of all inhabited subtypes of the type of natural numbers" seem incomprehensibly difficult in category theory and hence in type theory.</em><p>
+
+You call that simple? :) (No, don't explain---I know what it means.)<p>
+
+<em>Category theory brought useful advances to topology.  No surprise here, because topology is precisely the study of isomorphisms between geometric objects.</em><p>
+
+Well, the study of certain equivalences---usually not isos---between geometric objects.<p>
+
+Anyway, maybe the `essence' of type theory and/or computation is also precisely the study of equivalences between computational objects? I'm not saying that it is but, if it can be characterized that way, maybe that fact would only become apparent after one tries to regard it that way.<p>
+
+It's not such a strange idea, after all. Church's thesis says that lambda-calculus, an archetypal <em>equational</em> language, is sort of the essence of computation. And Dana Scott's adaptation of topological notions forms the heart of domain theory.<p>
+
+<em>Type theory, as it applies to any sort of actual programming system, just needs to answer the question, "which values are allowed in this context?" and there is no benefit to dragging isomorphism into this picture.</em><p>
+
+That is only the very tip of an enormous iceberg.<p>
+
+For most type systems, one can lay out the typing rules which answer your question in only a page or two. It doesn't just stop there. Then you develop the theory, to find out what properties characterize the type system: subject reduction, termination, confluence, etc. The question of which types behave the same way, that is, which types are interderivable, that is, which types are isomorphic, is a natural question to ask; for example, it's a measure of how redundant the type system is.<p>
+
+<em>The state of type theory today seems to me to like a set theory where most refuse to acknowledge the possibility that sets might themselves contain sets, or the existence of functions from sets to sets, from values to sets, or from sets to values.</em><p>
+
+That's an interesting analogy.<p>
+
+<em>Sure, the current approach brings some simplifications to reasoning about types, but only at the expense of a wealth of new tools for expressing, refining, and reasoning about types.</em><p>
+
+Blame Russell. He should never have made that remark to Frege. :)<p>
+
+But seriously, it is easy to complain about all the heavy machinery one needs for categorical type theory, but much harder to provide an alternative which solves the same problems. The work of people like Baez is actually an attempt to organize and reduce that machinery, although I guess you don't see that.
+<p></p>
+<p><a href='#8081'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Oleg</a> - Re: Theorems for free! <a name="8102">&nbsp;</a><a href='#8102' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/3/2003; 4:18:48 PM (reads: 751, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I'd like to caution that the applicability of the free theorems is
+_far_ more limited than one may think. The reason is simple: there are
+very few pure total polymorphic functions. For example, the only pure
+total function of a signature forall a. a->a is the identity
+function. The rarity of pure total functions is exactly what makes the
+theorems for free possible.<p>
+
+Furthermore, free theorems do not apply for impure functions,
+functions with effects, and in a language that permits pervasive
+reflection. The following are a few few less obvious examples for
+which free theorems do not apply.<p>
+
+<blockquote>
+Example: Suppose a polymorphic function r with type
+forall a.[a]->[a], then r satisfies the following theorem: for
+all types A and A', and every total function a:A->A', we
+have map a . r_A = r_A' . map a. 
+</blockquote><p>
+
+It's plain that if the function 'a' raises an exception, free theorems do
+no apply: such a function is not total. However, if a function has an
+effect, then the free theorems don't apply either -- even if the
+function is total. Let us consider the following example, in Ocaml:<p>
+
+<pre>
+# let a x = print_string "OK"; x;;
+val a : 'a -> 'a = &lt;fun><p>
+
+# let ra x = if List.length x > 0 then [] else x;;
+val ra : 'a list -> 'a list = &lt;fun><p>
+
+# ra (List.map a [1;2;3]);;
+OKOKOK- : int list = []
+# List.map a (ra [1;2;3]);;
+- : int list = []
+</pre><p>
+
+Here, the function 'a' is plainly a total function A->A, ra also has
+the right type: it's a total polymorphic function on lists that takes
+any list into an empty list. The inferred types agree with our
+expectations. However, the behavior of r_A' . map a and map a . r_A
+obviously differs.<p>
+
+As we mentioned, a reflection can also be used to break the free
+theorems. Let us consider the following functions, in Scheme<p>
+
+<pre>
+(define (a x) (not x)) ;; Bool -> Bool<p>
+
+(define (ra lst) ;; forall. [a] -> [a]
+  (map (lambda (el) (if (boolean? el) #f el)) lst))<p>
+
+(ra (map a '(#f #f #f)))
+; ==> '(#f #f #f)<p>
+
+(map a (ra '(#f #f #f)))
+; ==> '(#t #t #t)
+</pre><p>
+
+Function ra is a polymorphic function forall a. [a] -> [a]. It works
+on any list -- and returns the list of the same type. And yet, (ra
+(map a '(#f #f #f))) and (map a (ra '(#f #f #f))) obviously produce
+very different results.<p>
+
+The above behavior is actually quite insidious -- and can be shown
+even in a language like OCaml.<p>
+
+<pre>
+# let foo = [1;2;3];;
+val foo : int list = [1; 2; 3]<p>
+
+# let a x = -x;;
+val a : int -> int = &lt;fun>
+# let ra x = if Hashtbl.hash x == Hashtbl.hash foo then [] else x;;
+val ra : 'a list -> 'a list = &lt;fun><p>
+
+# ra (List.map a [1;2;3]);;
+- : int list = [-1; -2; -3]
+# List.map a (ra [1;2;3]);;
+- : int list = []
+</pre><p>
+
+Plainly functions 'a' and 'ra' have the right types. Function 'a' is
+total. Both functions are pure. And yet the free theorem does not
+work.
+<p></p>
+<p><a href='#8102'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Theorems for free! <a name="8106">&nbsp;</a><a href='#8106' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/4/2003; 12:33:33 AM (reads: 745, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+What if we reflect that functions have side effects using the type system (e.g., monads)?
+<p></p>
+<p><a href='#8106'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Theorems for free! <a name="8109">&nbsp;</a><a href='#8109' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/4/2003; 4:17:05 AM (reads: 704, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Oleg wrote: <em>I'd like to caution that the applicability of the free theorems is _far_ more limited than one may think. The reason is simple: there are very few pure total polymorphic functions.</em><p>
+
+There are also `few' integers on the real number line, yet I've heard that most programmers find them rather useful. :)<p>
+
+I agree that in most extant programs one finds more impure, non-polymorphic functions than pure, polymorphic ones, but that is largely an observation on programming style, and the fact that the few people program in purely functional languages. What you see as a defect of the theorem, I see as a strength of pure FP languages.<p>
+
+<em>For example, the only pure total function of a signature forall a. a->a is the identity function. The rarity of pure total functions is exactly what makes the theorems for free possible.</em><p>
+
+No, that is not at all what makes them possible. What makes them possible is the `intuitive explanation' given at the top of this page: the fact that a value of an abstract(ed) type cannot be observed. It has nothing to do with cardinality or frequency, and I think it is not useful to imply otherwise.<p>
+
+<em>Furthermore, free theorems do not apply for impure functions, functions with effects, and in a language that permits pervasive reflection.</em><p>
+
+Yes; like I said above, you have to buy into the idea of referential transparency to make it work, and that's a whole different discussion.<p>
+
+OTOH, I think the requirement that the function has to be total is actually bogus: sets and partial functions form a category with finite products, and call-by-name is a decision procedure for equality of ground terms. Also see my response to Ehud below.<p>
+
+<pre># let ra x = if Hashtbl.hash x == Hashtbl.hash foo then [] else x;;</pre><p>
+
+This one doesn't work because <code>ra</code> is not a natural transformation, because <code>hash</code> is not natural: it doesn't respect the abstractness of universally-abstracted types. Maybe you could call <code>hash</code> `pure', I don't know. (This demonstrates how vague the term `pure' is.) This is an interesting example, though; I didn't realize that these sorts of polymorphic primitives weren't natural. I never liked them; now I have a good reason not to like them. :)<p>
+
+Ehud wrote: <em>What if we reflect that functions have side effects using the type system (e.g., monads)?</em><p>
+
+As long as the language is `referentially transparent', the theorem will hold. In fact, not only does a monadic effects system preserve the property, it <em>depends</em> on it, because the unit and multiplication (join) of a monad are natural transformations. Without naturality, for example, you would not have:<p>
+
+<pre>fmap f (return x) == return (f x)</pre><p>
+
+If the language isn't referentially transparent, for example like in computational lambda-calculus or Algol, naturality still plays an important role, though it doesn't show up as a theorem involving <code>fmap</code>, but rather involving substitution. For example,
+<a href="http://citeseer.nj.nec.com/ohearn95parametricity.html">O'Hearn and Tennent</a>
+used parametricity (which is a kind of naturality) to explain the phenomenon of local state: "a non-local procedure is independent of locally-declared variables in the same way that a parametrically polymorphic function is independent of types to which it is instantiated."<p>
+
+So naturality actually has a lot to do with effects. Maybe something like this is true: if effects are controlled, then naturality is easier to recognize because you can express it in the concrete syntax of the language; if not, then it still remains an important feature at the semantic level (of categorical models).
+<p></p>
+<p><a href='#8109'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Theorems for free! <a name="8111">&nbsp;</a><a href='#8111' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/4/2003; 5:10:47 AM (reads: 726, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>As long as the language is `referentially transparent', the theorem will hold. </i><p>
+Right. And since most algebraic manipulation assume r.t. functions, i don't see this part of Oleg's ciritique as very damaging.
+<p></p>
+<p><a href='#8111'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

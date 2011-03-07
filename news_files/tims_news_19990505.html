@@ -1,0 +1,44 @@
+<h4>Maps that broke since 220</h4>
+
+<p>Some user maps such has <a
+href="http://www.planetunreal.com/dl/dl.asp?nalicity/dmhellshrap.zip">DmHellShrap</a>
+broke with version 224. This was caused by a little bug in the file
+backwards-compatibility code, that I've fixed for 225.&nbsp; Map authors don't need to do
+anything, this will automatically be fixed with 225.&nbsp; The specific problem I fixed
+was an exit with an assertion:</p>
+
+<pre>
+    Assertion failed: Field [File:..\Inc\UnClass.h] [Line: 139]</pre>
+
+<p>If there are any user maps which don't require .u file mods, and the maps refuse to
+load with a <span class="italic">different</span> error message than this, please email the map (or a URL
+where we can download the map) to <a href="mailto:unreal224@epicgames.com">unreal224@epicgames.com</a>.</p>
+
+<p>-Tim</p>
+
+<h4>Quick Notes</h4>
+
+<p>We've been going through the Unreal 224 bug reports and addressing lots of issues
+people have pointed out.&nbsp; Here's the latest status. </p>
+
+
+<ul>
+  <li>Creative Labs EAX 3D sound support is fixed for 225.</li>
+  <li>We're working with Aureal to get A3D 2.0 support into 225, which is very likely to
+    happen.</li>
+  <li>I fixed the cause of the &quot;out of memory&quot; errors that tended to happen when the
+    console was pulled down on some machines. There was a problem in UnrealScript with switch
+    statements operating on strings, which caused this and some similar problems reported by
+    licensees.&nbsp; Thanks to Mark Poesch of <a href="http://www.wheeloftime.com">Legend</a> for tracking this one down.</li>
+
+  <li>Under some conditions, alt-tabbing between fullscreen and windowed play would cause the
+    in-a-window game window to be collapsed to zero size. Fixed.</li>
+  <li>I optimized the network visibility code by about 25%.&nbsp; Server admins are reporting
+    notably more CPU usage per player with 224 than 220.&nbsp; I haven't tracked this down,
+    but I'm going through a lot of code to measure and improve the server performance.</li>
+</ul>
+
+<p>Many other fixes, tweaks, and incremental improvements are in the works. See the <a
+href="http://unreal.epicgames.com/Bugs.htm">Known Bugs</a> page for more info.</p>
+
+<p>-Tim</p>

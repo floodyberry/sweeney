@@ -1,0 +1,22 @@
+http://groups.google.com/group/fa.haskell/browse_thread/thread/a4c23426d07d9245/f4b72876f5ca28ea?lnk=st&rnum=38&hl=en#f4b72876f5ca28ea
+[fa.haskell] Re: Implementing RefMonads in Haskell without ST,IO
+Hi Derek,
+
+How can one implement RefMonad below directly in Haskell?
+
+[code]
+class Monad m => RefMonad m r | m -> r where
+    newRef :: a -> m (r a)
+    readRef :: r a -> m a
+    writeRef :: r a -> a -> m ()
+[/code]
+
+I've been able to implement a monad that encapsulates "references to integers", by creating a monad that passes "the heap" (a function int->int, from heap indices to integer values stored in the heap) in and out of functions.  That was pretty straightforward, and the monad makes everything look like an imperative language that supports updatable references to integers (and only integers).
+
+But how can one implement RefMonad to support references of all possible types simultaneously?
+
+The problem is that "readRef" needs to return elements of an arbitrary type, so it has to be able to extract them from some sort of "heap" function or data structure.  But what does the heap data structure look like?  The values that "readRef :: r a -> m a" depend on type "a", and I can't figure out how to implement that, because "a" is local to that declaration.
+
+If this were implemented in C++, for example, the heap could just store "objects", and readRef could cast the object to the appropriate type when returning it.  But in Haskell, I don't see any way to do this.
+
+-Tim 

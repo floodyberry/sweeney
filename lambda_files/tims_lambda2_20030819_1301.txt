@@ -1,0 +1,30 @@
+http://lambda-the-ultimate.org/classic/message8378.html
+http://lambda-the-ultimate.org/classic/message8378.html#8399
+0532666
+Closures and mutability
+Re: Closures and mutability
+<p>The advantage is conceptual.  As you mention, you can always losslessly translate from one representation to the other using boxing.  The value I've found in encapsulating all mutability entirely in ref&lt;t&gt; / new_ref / read_ref / write_ref is that it's much easier to combine imperative programming and functional programming into a single framework, and to analyze it using modern type theories.</p><p>
+
+In the "everything is implicitly mutable unless you declare it constant" view, you have the following subtype relationships:</p><p>
+
+- int is not a subtype of object.
+- int is not a subtype of const int.
+- const int is not a subtype of int.
+- const int is a subtype of const object.</p><p>
+
+- is {int,const string} a subtype of const {int,object}?
+- the answer is not obvious.   </p><p>
+
+In the explicit-references view, you have:</p><p>
+
+- int is a subtype of object.
+- int is not a subtype of ref&lt;int&gt;.
+- int is not a subtype of ref&lt;object&gt;.
+- ref&lt;int&gt; is not a subtype of ref&lt;object&gt;.</p><p>
+
+- is ref&lt;{ref&lt;int&gt;,string}&gt; a subtype of {ref&lt;int&gt;,ref&lt;object&gt;}?
+- obviously not.</p><p>
+
+The type relationships are clearer in the explicit-references view: all basic data types have the obvious subtyping relationships to each other; but all reference types are disjoint from each other and all other types.</p><p>
+
+In the everything-is-mutable-by-default view, the relationships are obscured.  It becomes quite hard, when looking at two complex data structures containing a mix of constant and mutable fields, to see what sort of structural subtype relationship exists between them.</p>

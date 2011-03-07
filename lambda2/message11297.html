@@ -1,0 +1,243 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Finalization  (CLR)</b></font><br>
+<font color="white" size="-1">started 2/21/2004; 1:11:02 AM - last post 2/22/2004; 2:18:14 PM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Finalization  (CLR) <a name="11297">&nbsp;</a><a href='#11297' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/21/2004; 1:11:02 AM (reads: 9712, responses: 9)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a11297"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://blogs.msdn.com/cbrumme/archive/2004/02/20/77460.aspx">Finalization  (CLR)</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			Finalization can be a tricky business, but as usual Chris Brumme provides a detailed and readable explanation.<p>
+One wonders about the cost/benefit ratio of confusing language constructs like finalization methods.  Surely, there has to be a better way?<p>
+This <a href='message6936.html'>paper</a> may also be of interest.<p><br>
+			<font size="-2"><b>Posted to <a href='cross-language-runtimes.html'>cross-language-runtimes</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 2/21/04; 1:14:11 AM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#11297'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Olivier Lefevre</a> - Re: Finalization  (CLR) <a name="11300">&nbsp;</a><a href='#11300' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/21/2004; 8:32:19 AM (reads: 322, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Finalization has a reputation for being tricky to implement correctly
+but if you don't care about implementation issues, how is it confusing?
+<p></p>
+<p><a href='#11300'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Andris Birkmanis</a> - Re: Finalization  (CLR) <a name="11301">&nbsp;</a><a href='#11301' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/21/2004; 8:38:21 AM (reads: 325, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Specification usually guarantees very little about finalization.
+Starting from unspecified order of invocation, through ability to reach already finalized objects, towards completely unguaranteed finalization (as in Java). And do not forget about problems with repeatability of test cases.
+All in all, it's tricky not only to implement finalization, but also to use it correctly.
+<p></p>
+<p><a href='#11301'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Neel Krishnaswami</a> - Re: Finalization  (CLR) <a name="11302">&nbsp;</a><a href='#11302' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/21/2004; 9:42:18 AM (reads: 312, responses: 2)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Yeah, everything Andris said is right. But we still need finalization as a feature, since it's the easiest way to link up C libraries with explicit memory management to gc'd languages -- put the C deallocation function in a finalizer.
+<p></p>
+<p><a href='#11302'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Andris Birkmanis</a> - Re: Finalization  (CLR) <a name="11303">&nbsp;</a><a href='#11303' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/21/2004; 10:06:31 AM (reads: 311, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I didn't denied usefulness of finalizers.
+Even <a href="http://www.cse.unsw.edu.au/~chak/haskell/ffi/ffi.pdf">Haskell</a> has them ;-)<p>
+
+A side note for audience: an introduction to finalizers <a href='message6936.html'>Destructors, Finalizers, and Synchronization</a> was left without any discussion.
+Should we crosslink these threads? :-)
+<p></p>
+<p><a href='#11303'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Finalization  (CLR) <a name="11307">&nbsp;</a><a href='#11307' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/21/2004; 1:02:58 PM (reads: 283, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Supporting finalization in a garbage-collected environment leads to a significant number of issues with performance, non-determinism, and collector inefficiency.<p>
+
+Rather than going down that path, I would much prefer to see significant R&amp;D effort put into the development of imperative-style data structures and algorithms in a way that doesn't require finalization.  I have experimented with some of these issues myself.<p>
+
+Here are some thoughts.<p>
+
+File handles: If you are going to just open a file, do a bunch of operations, and close it, you could use a monad encapsulation similar to the way Haskell's State works, enabling opening the file, performing operations, and closing it, in a way that's guaranteed to result in the file being closed when exiting the lexical scope in which it was created.<p>
+
+But much more interesting is the possibility of using memory mapped files, and treating file-opening calls as returning a (possibly mutable) array of bytes which you can operate on.  Then the memory mapped file would be closed when the array is eventually garbage collected.  The big problem here is that in current file-mapping implementations, holding a file handle isn't referentially transparent: another process can observe whether the file is locked.  This could be remedied by adding support in the OS for "tear-off" file mappings which memory map the file and then make it appear to the outside world that the file is closed (for example, so another process could modify it or delete it without a sharing violation).  In this case, the OS paging mechanism would need to implement a copy-on-write-or-delete scheme for torn-off file handles, so the referential transparency requirements of both the file-using process and the outside world are satisfied.<p>
+
+Network sockets: Sockets for protocols like TCP are not amenable to finalization-free garbage collectors, because the process of closing a socket has non-referentially-transparent IO effects that ought not occur nondeterministically.  But a language could expose higher level protocols that are more suitable, for example creating the illusion of monadic persistent connections between processes.<p>
+
+Note that all of these considerations aren't terribly relevant in a runtime like .NET which doesn't have a first-class concept of referential transparency.  There, any variable in any object might change at any time because other functions to which you have passed the object could at any time modify any variable in another thread or through reflection.  But in an environment with a functional subset or just a means of specifying and verifying limits on the scope of effects of computations, it becomes very important to avoid observable side-effects of garbage collection.
+<p></p>
+<p><a href='#11307'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Dan Shappir</a> - Re: Finalization  (CLR) <a name="11308">&nbsp;</a><a href='#11308' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/21/2004; 3:33:57 PM (reads: 260, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I always found this finalization issue rather amusing: isn't GC supposed to make things easier? And yet finalization is so much easier in C++ than in, say, Java (I was tempted to say trivial in C++, but there are some complications there as well: partial objects, and recursive exceptions for example).<p>
+
+There are alternatives: in Java for example, you should use the finally clause and a close method. C# makes it even easier with <code>IDisposable </code>and the <code>using </code>statement. But, at the end of the day, the library writer cannot rely on its users to always use it optimally. Hence, she must employ finalizers, and suffer at least some performance degradation as a result. The fact that a rare system resource might not be released for the duration of the application is even worse.
+<p></p>
+<p><a href='#11308'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Finalization  (CLR) <a name="11312">&nbsp;</a><a href='#11312' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/22/2004; 2:14:51 AM (reads: 210, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Languages must dance or die, right?<p>
+But in some cases one wonders whether it's worth the price?
+<p></p>
+<p><a href='#11312'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Franck Arnaud</a> - Re: Finalization  (CLR) <a name="11317">&nbsp;</a><a href='#11317' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/22/2004; 2:18:14 PM (reads: 168, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>This could be remedied by adding support in the OS for "tear-off" file mappings which memory map the file and then make it appear to the outside world that the file is closed</i><p>
+
+<p>This is the semantics of 'rm' in Unix, you can remove a file opened by another application. The problem is if someone leaks such resources, you sometimes find yourself with an empty disk (du = 0) that is full (df = 0)! Well, it makes sysadmin more challenging.</p><p>
+
+<i>But, at the end of the day, the library writer cannot rely on its users to always use it optimally.</i><p>
+
+<p>It's sad when it's due to poor language support. It does not seem very hard to make to enforce at least some cases of usage/release with the type system, e.g. if the API for reading files was like:</p><p>
+
+<pre>
+ foldfile : (Line -> Result -> Result) -> Result -> Filename -> Result
+</pre><p>
+
+<p>The open/close can be safely included within one atomic call.</p><p>
+
+<p>Even some trivial stuff like allowing finalizers only on reference-less objects would make the "freeing C API resource" pattern much safer; and is not incompatible with having a distinct unsafe facility for other things, if needed.</p>
+<p></p>
+<p><a href='#11317'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

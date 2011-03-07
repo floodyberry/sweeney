@@ -1,0 +1,13 @@
+http://groups.google.com/group/fa.haskell/browse_thread/thread/8801d22ed11f076d/0231357a8dc0bd56?lnk=st&rnum=71&hl=en#0231357a8dc0bd56
+[fa.haskell] Re: Tetration operator in functional programming
+[blockquote]It should reflect arithmetic laws of tetration, which for example relate (b ^^ (a1*a2)) with b^^a1 and b^^a2 or so, but are there any? So how should (a,b)-->t be defined?[/blockquote]
+
+I couldn't find any papers on this topic, so I'm trying to work out the laws now.  The interesting ones are (a*b)^^c and (a^b)^^n.  They don't seem to be as "obvious" as the rules for exponents and products, though.
+
+There is also a notion of "dependent tetration" which is even more mysterious.  Just as Sigma(a:t).b corresponds to "dependent sum" (with types or numbers) and Pi(a:t).b corresponds to "dependent product", there is a Tetra(a:t).b corresponding to "dependent tetration".
+
+This operation is mysterious because exponentiation, the operator upon which tetration is defined, is the first operator in the Ackermann hierarchy which is not symmetric.  So we can't just carelessly say that Tetra(a:t).f(a) = ((...->f(e2))->f(e2) where e1,e2,... are the elements of type t.  The result of Tetra(a:t).f(a) depends on the order in which we choose the elements of t.  Which begs the question: *which* order is appropriate?
+
+Perhaps our notion of dependent products and dependent functions is currently oversimplified, since we are neglecting this hidden "ordering" which is implicitly involved, but can neatly be hidden because sums and products are symmetric, up to isomorphism, i.e. a+b~=b+a and a*b~=b*a.  I wonder, are there useful types (in a type theory) for which sum and product are not so neatly symmetric?  One such construction is to apply the rules of simple matrix algebra, but put types inside the matrices rather than numbers.  The resulting types commute: (a*b)*c~=a*(b*c) but we don't have a*b~=b*a, since the "shape" of the resulting matrix depends on the ordered dimensions of the inputs.
+
+-Tim 

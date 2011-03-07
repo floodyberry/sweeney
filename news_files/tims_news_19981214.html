@@ -1,0 +1,44 @@
+<h4>Hard at work</h4>
+
+<p>We're hard at work putting the finishing touches on Unreal 220.&nbsp; It's looking
+good, but the extent of the changes and improvements has required quite a lot of testing
+and refinement.&nbsp; It won't be ready for public consumption this week or over the
+weekend, but hopefully early next week.</p>
+
+<p>A lot of mod authors have emailed asking for early access to Unreal 220 so they can get
+their stuff is up and running in the new version.&nbsp; The answer right now is
+&quot;maybe&quot;...if the code comes together over the weekend, I'll post a public
+&quot;for mod authors only&quot; version.&nbsp; 220 will break compatibility with most
+UnrealScript mods, but I've modified UnrealEd so that mods can still be loaded (this is a
+change: 219's UnrealEd gives a fatal error when loading an incompatible .u file). &nbsp;
+
+Upgrading most mods will be easy; the most significant changes are function parameter
+changes all over the place, and splitting off the network-related variables in Pawn into a
+new PlayerReplicationInfo class, to make scoreboard-programming simpler and more
+expandable.&nbsp; In terms of mod support, the week following 220's release will be
+chaotic, with mods being repaired and re-released.&nbsp; Sorry, we would have liked to
+avoid this, but the improvements we wanted to make were just too cool to stick with full
+backwards-compatibility.</p>
+
+<p>Levels, sounds, texture files, music files, and audio files remain
+backwards-compatible.</p>
+
+<p>Shortly after 220, I'll be releasing the C++ headers required for users to write C++
+add-ons.&nbsp; I'm planning on throwing together a very simple SampleTexture package
+showing how to make algorithmic textures, and a SampleActor package showing how to write
+intrinsic C++ functions for actors.&nbsp; This stuff should give mod authors a very
+significant amount of new stuff to play with, though the more exciting C++ stuff will come
+in a later release with the UnrealEd plug-in interface.&nbsp; It will be interesting to
+see the response to the C++ headers, because the Unreal engine's C++ architecture is very,
+very different than what people are used to in Quake and other engines.&nbsp; It's very
+much a framework rather than an API.</p>
+
+<p>Jack &quot;Mek&quot; Porter has come here from Australia for a few months to help with
+the Unreal Tournament programming, and is currently working on some cool new mouse-based
+user interface code.&nbsp; He is a big Linux fan, and is talking with Brandon Reinhart
+about cooperating on a native Linux port of the Unreal server.</p>
+
+<h4>That's UnrealEd.net</h4>
+
+<p>The cool independent Unreal editing site I mentioned is actually <a
+href="http://www.unrealed.net/">UnrealEd.net</a>, not UnrealEd.com.</p>

@@ -1,0 +1,13 @@
+http://slashdot.org/comments.pl?sid=66732&cid=6136331
+[slashdot] A few notes
+Regarding documentation, check out the Unreal Developer Network for a huge amount of documentation.
+
+Also, the 3D Buzz team has created many excellent training videos covering many aspects of the Unreal tech, from programming to content creation.
+
+[blockquote]Ultimately, the developer of such a mod should be fairly compensated based on the popularity and ultimately, the sales, of their mod, not a one-time payout.[/blockquote]
+
+The mod developer keeps complete ownership of his work. The contest doesn't take that away.
+
+For example, if you enter an early version of your mod in the contest, you could later create a retail game based on it and pursue a publishing deal. The Tactical Ops mod for the original Unreal Tournament went this route and was published in retail by Atari.
+
+Regarding tax issues, one should definitely consult a tax attourney upon making the finals for the grand prize. My understanding (IANAL) is that, if we gave you a $350K cash prize, that would be revenue for your mod team's corporation or small business. If you then spent that $350K on an Unreal engine license with the intent of using it commercially (which is the only reason one would want such a license), you would then incur a $350K expense, leaving a net tax liability of zero. So a direct award of an engine license is not necessarily a taxable event.

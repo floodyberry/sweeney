@@ -1,0 +1,35 @@
+http://www.gamespot.com/news/2005/03/08/news_6119896.html
+Q&amp;A: Epic Games' Tim Sweeney on Ageia PhysX
+Is the physics processing unit going to be as important as the CPU and the GPU? PPU manufacturer Ageia has Epic Games convinced, and Tim Sweeney tells us why.
+GameSpot
+James Yu
+
+<desc>If semiconductor company Ageia has its way, the PPU (physics processing unit) will soon join the CPU and GPU as another hardware component that has a major effect on gaming performance. Current CPUs are only powerful enough to support 30 to 40 physical objects that you can interact with onscreen, but systems with a PPU add-in card will be able to support more than 30,000 objects on screen.
+
+Ageia promises to bring a new level of physics to games with its <a href="http://hardware.gamespot.com/Story-ST-x-1610-x-x-x">PhysX</a> processor, and the company has the game developer support to do it. Epic Games, the creator of the hugely popular Unreal first-person shooter series, has chosen Ageia's NovodeX physics middleware solution for Unreal Engine 3.
+
+We caught up with Epic Games CEO and founder Tim Sweeney to find out what he thinks the dedicated hardware physics processing will do for gaming.</desc>
+
+<q>How did you react when you first saw the Ageia PPU? Would you say that the PhysX chip will bring on a new physics revolution in gaming similar to the 3D revolution sparked by 3dfx in the 1990s?</q>
+
+<a>It's very clearly an idea whose time has come. In games, software-based rigid body dynamics physics has been in use for about five years. It also took about five years from the release of the first realistic 3D games (Wolfenstein 3D and Doom) to the first truly great 3D accelerator, the 3dfx Voodoo1. This is about the time that an industry-changing idea takes from first implementation to industrywide change including hardware adoption. Physics and graphics are both areas where dedicated hardware can exploit the problem domain's underlying parallelism to deliver far more performance than a sequential CPU.</a>
+
+<q>Can you give examples of how a game might be able to increase realism with the help of a PPU?</q>
+
+<a>When people talk about physics in recent games, they mostly think of Unreal Tournament 2004's vehicles or Half-Life 2's dynamic objects. There, you have 10 or perhaps 100 big objects interacting physically in an otherwise static environment. Knocking chairs and tables around is fun, but that's hardly the apex of physics simulation.
+
+The next steps are realistic dynamic environments, fluid simulation, large-scale particle simulation, and other very large-scale physical phenomenon. If you look at a modern action or sci-fi movie, and what's possible with the non-real-time computer graphics effects there, it's clear that major new physics innovations will be introduced into gaming as hardware performance increases 10x, 100x, and more.</a>
+
+<q>Do you see any limitations in what the PPU can accomplish due to overhead issues associated with offloading work and transferring it across the system bus?</q>
+
+<a>The computations driving physics simulation and collision detection make use of a large amount of static data that needs to be uploaded to the hardware once, and a smaller amount of dynamic data that needs to be transferred per frame. This is the same usage pattern as a modern GPU, where huge textures and vertex buffers change infrequently, while the smaller rendering commands need to be sent each frame. The PPU or GPU then expends an enormous amount of parallel computing power in computing the result, but the result itself is fairly compact. A GPU's frame buffer is a few megabytes, and a PPU's result matrices will be similarly compact. So, the PCI Express or even PCI bus will be plenty fast to accommodate the required traffic.</a>
+
+<q>How long do you think it will take for developers to release games that will look and play significantly better on a PPU-enabled PC system?</q>
+
+<a>As with any new technology, there will be early games available that add hardware physics support into a mostly finished game design. That's the first stage, and it will give gamers the first hardware-accelerated physics support right away.
+
+The later revolution will be in next-generation games designed with large-scale physics from the very beginning. PhysX will make that possible on the PC, while other innovations will make large-scale physics possible on next-generation game consoles. There is a great deal of synergy there, with Ageia's physics engine providing a great hardware-accelerated solution on PC (with a software physics fallback for reduced detail) and also addressing the needs of the future consoles.</a>
+
+<q>How will Epic's Unreal Engine 3 incorporate Ageia's technology?</q>
+
+<a>We've been collaborating with Ageia since their inception, and Unreal Engine 3 thoroughly exploits the Novodex physics API; when the first Unreal Engine 3-based games begin shipping in early 2006, they will really up gamers' expectations. The combination of next-generation graphics, next-generation physics, and content-rich games goes way beyond current games, both qualitatively and quantitatively.</a>

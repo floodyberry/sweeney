@@ -1,0 +1,5 @@
+http://groups.google.com/group/sci.math.symbolic/browse_thread/thread/adc63ff23e1c7742/ff5ba7e2da84e341?lnk=st&rnum=23&hl=en#ff5ba7e2da84e341
+[sci.math.symbolic] Re: Repeated exponentiation n@m
+Also, google for "Knuth's arrow" operator.  It's the general case of addition/multiplication/exponentiation for arbitrary iterations.  Also related is Ackermann's function.
+
+As far as I understand it, these operations and their inverses are closed over the complex numbers, so no new number systems need to be introduced to study them completely. 

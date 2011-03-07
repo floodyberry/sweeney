@@ -1,0 +1,10 @@
+http://lambda-the-ultimate.org/node/284
+http://lambda-the-ultimate.org/node/284#comment-2208
+1048860
+Monads in various languages
+This problem appears to exist
+<p>This problem appears to exist generally when translating comprehensions into any strongly-typed language without type deduction.  Python generator expressions avoid this by being weakly typed.</p><p>
+
+Requiring explicit type annotations would be unfortunate.  For example, using comprehension syntax for monadic parser combinators is very convenient, but would be about 50% more verbose if type annotations were required.</p><p>
+
+Are there any languages in which monad operations are convenient and readable without comprehensions?  For example, complex Haskell monad operations seem considerably less readable without the helper syntax.</p>

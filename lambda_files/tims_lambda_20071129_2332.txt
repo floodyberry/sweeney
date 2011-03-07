@@ -1,0 +1,11 @@
+http://lambda-the-ultimate.org/node/2549
+http://lambda-the-ultimate.org/node/2549#comment-38442
+1051125
+foundations for J, APL etc
+APL and vector-like data types
+<p>So, for most scalar operations in APL, the compiler lets you to apply the operation to a vector data type, with the appropriate lifting.  One Haskell analogy is having the programmer writing "f xs" and the compiler interpreting it as "map f xs" when xs is a list.
+</p><p>I spent some time investigating APL-like lifting of functions to vectors, arrays, etc, in a more general programming language setting.
+</p><p>In general, that doesn't work, because the resulting system is ambiguous.  For example, say that you define a+b on integers to indicate addition, and s+t on arrays to indicate concatenation.  How should the compiler interpret a+b on arrays of integers?  It could be either an element-wise vector addition, or array concatenation.
+</p><p>Now you're probably thinking the compiler could define some precedence rules to disambiguate such an expression.  That would be unpredictable -- a feature that works in some cases confusingly wouldn't work in others.  Depending on context, maybe the compiler would interpret a-b as elementwise subtraction, but a+b as concatenation.  Worse, given strong implicit typing features (Java generics, Haskell typeclasses), the general case can't be disambiguated for lack of concrete context.
+</p><p>So this aspect of APL is a clever trick for code reduction, but it's unsound and inappropriate in a general programming language.  There, we need to clearly specify how we want to lift a function (using map, fold, etc, or explicit recursion and case decomposition) when applying it to a collection data type.
+</p><p>Note that languages like Haskell could make this process simpler than they do.  For example, when you define a datatype like "Tree t = Leaf t | Node (Tree t) (Tree t)" which is structured as a covariant functor, the compiler could automatically generate the map function for that type, as it's uniquely determined by the type's structure.  When you define a recursive datatype as a fixed point of a functor, the compiler could automatically generate the fold function.</p>

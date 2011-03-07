@@ -1,0 +1,49 @@
+<h4>Getting closer...</h4>
+
+<p>But we're not quite there with 224 yet.&nbsp; The guys have been beating on internal
+test versions for the past few days, and we've been polishing the code.&nbsp; It's both a
+blessing and a curse that the Unreal code is evolving by leaps and bounds, gaining major
+new features all the time.&nbsp; This approach makes testing each new patch a major
+effort.&nbsp; Though, 224 will be especially worth the effort because of the in-game
+server browser and level-of-detail optimizations.</p>
+
+<p>224 will probably happen late this week.</p>
+
+<p>Here is a <a href="http://www.next-generation.com/jsmid/news/6387.html">Next-Generation article</a> where Mark Rein shamelessly plugs the patch.</p>
+
+<h4>Network Cross-Compatibility</h4>
+
+<p>(warning: nitty-gritty technical info)</p>
+
+<p>An interesting technology feature in 224 is a new method of evolving .u files in a way
+that is backwards-compatible for network play.</p>
+
+<p>One of the things that has always bothered me about past versions of Unreal is that
+clients and servers had to have exactly-matching .u files in order to play together.
+&nbsp; This has meant that every recent Unreal patch has broken network compatibility,
+leaving some players orphaned.&nbsp; The reason behind this is that Unreal's network code
+(described in detail <a href="http://unreal.epicgames.com/network.htm">here</a>)
+uses the positions of objects within .u files as a &quot;common point of reference&quot;
+which clients and servers use to map objects between each others' address spaces. &nbsp;
+Some scheme of this nature is necessary when network code is generalized like Unreal's is,
+with the same scripts executing on the client and server, passing arbitrary data back and
+forth, with the network code transparently coordinating the game world.</p>
+
+<p>I've been aware of some solutions to this problem all along (such as &quot;send all
+object names as strings&quot;), but they all sacrificed bandwidth.</p>
+
+<p>Recently, I found a no-compromises way to enable .u files to evolve incrementally
+without losing compatibility.&nbsp; Now, when we release a new version, we copy the .u
+files into a new developers-only subdirectory \Unreal\SystemConform.&nbsp; Then we can
+make minor changes to our scripts and recompile new versions that are network-compatible
+with the old ones.&nbsp; When recompiling and saving a .u file such as
+\Unreal\System\Engine.u, the script compiler now examines the existing file
+\Unreal\SystemConform\Engine.u, and makes the new version &quot;conform to the layout of
+the original&quot;.&nbsp; In addition, when a client connects to a server, they both
+negotiate to figure out who has the earliest version of each .u file, and both talk about
+objects &quot;in relation to that old .u file&quot;.&nbsp; This enables compatibility
+without any loss in performance or bandwidth usage.</p>
+
+<p>Really major updates will always break code assumptions and require downloading an
+update.&nbsp; This approach just makes minor incremental updates possible, enables us to
+test spot-fixes on the net, and generally makes our programming lives easier.</p>

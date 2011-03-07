@@ -1,0 +1,10 @@
+http://lambda-the-ultimate.org/node/1277
+http://lambda-the-ultimate.org/node/1277#comment-14495
+1049853
+The Next Mainstream Programming Languages
+ Tim&#039;s idea of adding more
+<p><span class="italic"> Tim's idea of adding more annotations seems like it would make this problem even worse. </span> 
+</p><p>I'm a huge fan of concise syntax.
+</p><p>I'm not such a fan of syntax that's so concise that it hides potential problems.  For example, "a[i]" in Java looks like you're just reading an element from an array, but actually translates into something like: "if a is NULL, throw an exception; if i&lt;0 or i&gt;a.length then throw an exception, otherwise read the element from the array".
+</p><p>So the goal of further type annotations would be to introduce more explicitness in type declarations in exchange for making other parts of the program clearer by virtual of eliminating all of the hidden things that can go wrong with them.
+</p><p>Obviously, this isn't what you want for, e.g. a Python-like scripting language, where coders want to write simple code with minimum effort.  But for the sort of code we write -- hundreds of thousands of lines of game and engine code -- the explicitness and extra compile-time checking would be a net productivity improvement in the lifecycle of writing, extending, debugging, testing, and shipping complex software.</p>

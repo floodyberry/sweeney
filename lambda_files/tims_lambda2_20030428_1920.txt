@@ -1,0 +1,16 @@
+http://lambda-the-ultimate.org/classic/message6641.html
+http://lambda-the-ultimate.org/classic/message6641.html#6641
+0530929
+David McAllester's "Ontic" Language
+David McAllester's "Ontic" Language
+<p><a href="http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps">http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps</a></p><p>
+
+</p><blockquote><div> Ontic is a higher order formal specification language designed for expressing formal concepts as clearly and concisely as possible. The consiceness and clarity is achieved through the use of nondeterminism. In a nondeterministic language each term has a set of possible values. This improves conciseness in a variety of ways. First, since terms denotes sets, nondeterminism allows terms to be used as types. Second, since each term has a set of possible values it is natural for a term not to have any values. </div></blockquote><p></p><p>
+
+Since reading this paper last year, I've come to believe that McAllester's work is one of the major breakthroughs of type theory, indicative of type systems in future programming languages.</p><p>
+
+There's something fundamentally new happening here that hasn't been seen in strongly-typed programming languages: a general means of combining types and values into a single Turing-complete framework that gains the expressive power of functional, logic, and constraint logic programming.</p><p>
+
+To appreciate Ontic, you need to accept three concepts that don't have analogies in current languages: An "either" operator for expressing terms with multiple potential values, where "potential" has a very specific meaning that takes sharing into account and requires looking at beta-reduction more carefully; a type-forming operator, "the-set-of-all"; and a potential value extraction operator "an-element-of".</p><p>
+
+The value of this paper may be obscured by its LISP-based presentation and by its "nondeterminism" terminology; perhaps this is why almost nobody has noticed it since its 1993 publication. In actuality, Ontic is fully deterministic, and none of its fundamental features are specific to LISP.  But if you're into type systems, please bear with me and give it a read.</p>

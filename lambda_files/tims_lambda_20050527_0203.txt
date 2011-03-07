@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/735
+http://lambda-the-ultimate.org/node/735#comment-6678
+1049311
+Generics: The Importance of Wildcards
+Wow
+<p>Wow, talk about the blind flaming the blind.  The problem with variance in both languages isn't type erasure versus runtime support, or wildcards versus pure generics.  Neither writer seems to even understand the problem.
+</p><p>The problem is that both languages only expose mutable arrays.  If they exposed read-only arrays (similarly to lists in Haskell), those would be covariant in C# and Java; and if they exposed write-only arrays, those would be contravariant.
+</p><p>But there is a solution that is more fundamental still: to separate arrays from mutable references entirely, so that arrays are always covariant.  Then the type of arrays of integers is a subtype of the type of arrays of numbers, and the true source of the invariance is exposed: it is the reference type constructor (like IoRef t in Haskell) that is invariant.
+</p><p>Microsoft employs the greatest set of programming language researchers ever assembled; they should be able to do better than this.</p>

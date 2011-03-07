@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Duck typing vs Structural Subtyping | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1201" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Duck typing vs Structural Subtyping</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >I ran into structural subtyping [vs nominal] this summer with Cannasee's <a href="http://ncannasse.free.fr/?p=19">Motion-Types description</a>. While talking to somebody about a joke ["Genetic code is dynamically typed and favors the "duck typing" philosophy. This creates an enormous amount of security holes, where special ducks ("poisons") with appropriate appearance but malicious behaviour could be introduced into the system."], we realized we didn't know the precise difference between the two terms. Duck typing seems to have a dynamic connotation, where as structural subtyping is one of the gems of the static ocaml world. A google search actually hit the LtU forums with someone hinting at subclassing vs subtyping.</p>
+<p >I have a couple of ugrad years left and would like to know this one before I'm out :) Thoughts?</p>
+<p >- Leo</p> </div>
+ <div class="links">By <a href="user/2585" title="View user profile.">lmeyerov</a> at 12/29/2005 - 03:53 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1213" title="Stroustrup talking about C++0x">previous forum topic</a> | <a href="node/1207" title="Realistic Functional Programming in the Java Platform">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1201" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2243 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1201" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1201" />
+<a id="comment-12962"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1201#comment-12962" class="active">I Can&#039;t See Any..</a></h3>
+ <div class="content"><p >...difference between "duck typing" and "structural typing." See the "Static vs. Duck Typing" subthread of <a href="http://lambda-the-ultimate.org/node/view/1145">this</a> thread. As you can see, at least one poster offered a definition of "duck typing" that isn't reflected in any programming language, but instead goes into features that only exist in description logics. Again, there's nothing wrong with that; I <em >love</em> description logics, but they aren't what people are talking about when they use the phrase "duck typing." I haven't yet seen a definition of "duck typing" that isn't identical to "structural typing," so I continue to maintain that they are, in fact, identical.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Thu, 12/29/2005 - 13:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-12966"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1201#comment-12966" class="active">The essence of duck typing</a></h3>
+ <div class="content"><p >I take duck typing to mean the strategy of applying runtime coercions to make values fit into the types required by operations.  For example, some languages let you add the string "1" to the integer 2 to yield the integer 3.  In C++, you can add the integer 1 to the floating-point value 2.0 to yield the floating-point value 3.0.  Duck typing includes the strategy of loosely typing records/objects so that two such types are deemed equal if they contain the same set of field names and the fields are of coercible types.  This is similar to the structural subtyping principle.</p>
+<p >There's nothing fundamentally unsound or dangerous about structural subtyping.  You can reason about them in the same way as you can reason about tuples: tuples map indices to values of some index-dependent type, while structural records map names to values of some name-dependent type.  But of course there's no abstraction there!</p>
+<p >To gain compile-time security from type abstraction you definitely want a mechanism to augument structural typing.  Nominal typing and partially opaque types are all well-understood solutions to this problem.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 12/29/2005 - 18:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-12969"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1201#comment-12969" class="active">I agree</a></h3>
+ <div class="content"><p >I agree with this definition. Duck typing is trying to fit a runtime value into a "type hole" by making appropriate coercions. For objects you don't even need coercions you "let the object pass" and wait some field access failure.</p>
+<p >OTOH Structural subtyping is a compile-type check that enable more flexibility in programs : see <a href="http://ncannasse.free.fr/?p=25">this other post</a>. I recently added some kind of structural subtyping in <a href="http://haxe.org">haXe</a> as well, but it's only in the form <code >Class :&gt; Anonymous Object</code>.</p></div>
+ <div class="links">By <a href="user/1436" title="View user profile.">Nicolas Cannasse</a> at Thu, 12/29/2005 - 20:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13026"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1201#comment-13026" class="active">Bits and Pieces</a></h3>
+ <div class="content"><p >Hi Tim!</p>
+<p >I hadn't taken the concept of coercions to be fundamental to duck typing, instead thinking of them as essentially artifacts of the notion of "duck typing" apparently coming almost exclusively from the dynamically-checked language world. So I suppose my question, assuming that I've understood your point correctly, would be: what's the relationship between "duck typing" as you understand it, and "structural typing" coupled with "extensional polymorphism," as found e.g. in <a href="http://www.yl.is.s.u-tokyo.ac.jp/~furuse/gcaml/">G'Caml</a>? If nominal typing and partially opaque types resolve the tension between type abstraction and structural typing, is <a href="http://scala.epfl.ch/docu/related.html">A Nominal Theory of Objects with Dependent Types</a> a worthwhile thing to study?</p>
+<p >I remain hopeful that within the next few years we'll see a new language that's statically-typed but inferred, dramatically simplifies the development of correct concurrent and distributed software, and supports the E project's "object capabilities" and "<a href="http://www.erights.org/talks/auditors/index.html">auditors</a>" but in as static a fashion as possible (but no "staticer," <i >pace</i> Einstein).</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sat, 12/31/2005 - 06:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-13067"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1201#comment-13067" class="active">Extensional Polymorphism</a></h3>
+ <div class="content"><p >I don't fully understand G'Caml, but I'm not a fan of its basic thesis (that abandoning parametricity brings real benefits).  For example, the author's really cool generic printing example can be achieved with union types provided that one can distinguish between obviously disjoint types -- e.g. knowing that integers are not lists, and lists are not floating point values.  That certainly doesn't require violating parametricity.</p>
+<p >I'm a fan of the view that a nominal type just bundles up a value of some type (such as an integer) with some sort of name (in the spriit of LISP atoms).  Haskell's "data" declarations do something like this.  As an aside, most of the literature on nominal types confuses names with pointer-like identity and runs into confusion over dependent functions, e.g. should List(Int) differ from List(Int) because they're separate function calls generating different type names?  That is silly, of course.</p>
+<p >So in my worldview, you only need structural types, names, and a means for bundling up types and values with names, from which you can derive nominal types.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Mon, 01/02/2006 - 00:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-13124"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1201#comment-13124" class="active">Is the Confusion Fundamental?</a></h3>
+ <div class="content">Tim Sweeney: <i>I don't fully understand G'Caml, but I'm not a fan of its basic thesis (that abandoning parametricity brings real benefits).</i>
+<p><p>
+So do I understand your thesis to be that parametric polymorphism and an ML-style module system are "sufficient" in some sense? That would tend to imply that Standard ML, O'Caml, and/or Haskell are adequate. If that's the case, I'm sympathetic, as you know&mdash;I'm having a great time with O'Caml. But I strongly suspect that you're making a claim that I'm not yet able to derive from the observation above.
+<p><p>
+Tim Sweeney: <i>For example, the author's really cool generic printing example can be achieved with union types provided that one can distinguish between obviously disjoint types -- e.g. knowing that integers are not lists, and lists are not floating point values. That certainly doesn't require violating parametricity.</i>
+<p><p>
+I'm curious as to whether this bears some relationship to polymorphic variants in O'Caml. From <a href="http://wwwfun.kurims.kyoto-u.ac.jp/~garrigue/papers/fose2000.html">Code Reuse Through Polymorphic Variants</a>:
+
+<blockquote>
+It is interesting to see what makes hard to encode the above example into traditional variants. There the standard way to produce the union of two types is to embed them in a type containing a constructor for each of them. In table 5 we give types for such an encoding, and some sample of the code.
+<p><p>
+One first problem, that you can see immediately by looking at the type definitions, is that this approach does not support multiple inheritance properly: lexpr contains two type 
+of variables, Lambda(VarL "x") and Expr(VarE "x"). This is due to the fact traditional variants provide only disjoint sum, while union of polymorphic variants provides coalesced sum, required to handle the sharing of a common ancestor in multiple inheritance. 
+</blockquote>
+
+I think I'm on the right track. From <a href="http://wwwfun.kurims.kyoto-u.ac.jp/~garrigue/papers/">Programming with Polymorphic Variants</a>:
+
+<blockquote>
+Not only can the same variant tag be used in many different variant 
+types, but any polymorphic variant may be viewed under different 
+types. Variant types form a subtyping hierarchy, and both variants 
+and their acceptors (functions receiving them) have multiple views 
+according to this hierarchy... a and b are both subtypes of c. They may be used several times, at any of their supertypes. For acceptors, see show both in section 2.
+</blockquote>
+
+Tim Sweeney: <i>I'm a fan of the view that a nominal type just bundles up a value of some type (such as an integer) with some sort of name (in the spriit of LISP atoms). Haskell's "data" declarations do something like this. As an aside, most of the literature on nominal types confuses names with pointer-like identity and runs into confusion over dependent functions, e.g. should List(Int) differ from List(Int) because they're separate function calls generating different type names? That is silly, of course.</i>
+<p><p>
+Stated that way, it is rather obviously silly... so why does the confusion seem so pervasive, and persist?
+<p><p>
+Tim Sweeney: <i>So in my worldview, you only need structural types, names, and a means for bundling up types and values with names, from which you can derive nominal types.</i>
+<p><p>
+I perceive a lot of devils in the details here, Tim. :-) "A means for bundling up types and values with names" sounds like it could be records, or an object system, or a module system. "Names" can be in multiple spaces or not, interned or not, and so on. Is it still "nominal typing" without "pointer-like identity," whatever problems pointer-like identity may introduce? If so, don't Standard ML, O'Caml, and Haskell all qualify as "nominally typed" given their module/typeclass systems? What should I infer from the observation that <a href="http://www.yl.is.s.u-tokyo.ac.jp/~furuse/gcaml/">G'Caml</a> and <a href="http://www.cl.cam.ac.uk/users/pes20/acute/">Acute</a> both offer type-safe marshaling and unmarshaling, with all that that implies in terms of names and types and abstraction boundaries, and that G'Caml violates parametricity, but Acute apparently does not? I recall that you're concerned about the number of new primitive concepts that Acute introduces, and now you're concerned about G'Caml violating parametricity. Any further insight you can provide into how a language designer might unify systems like these in a principled way would be greatly appreciated.
+<p><p>
+<b>Update:</b> edited to clarify that G'Caml violates parametericity while Acute (AFAICT) does not.</div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Wed, 01/04/2006 - 06:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

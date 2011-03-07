@@ -1,0 +1,11 @@
+http://groups.google.com/group/sci.math/browse_thread/thread/71a8944c2fa95f49/cea53da51b38393e?lnk=st&rnum=59&hl=en#cea53da51b38393e
+[sci.math] Re: Hestenes' Geometric Algebra
+[blockquote]I have downloaded a lot of papers by David Hestenes and others on geometric algebra and am reading the book Clifford Algebra to Geometric Calculus by Hestenes,but I am still looking for some pratical examples of calculations done using this system of geometric algebra.  Does anyone know of any examples?[/blockquote]
+
+Hello,
+
+In writing 3D graphics code in C++, I've used geometric algebra to represent points (3D vectors), planes (3D bivectors), and quaternions (3D spinors, the sum of a bivector and a scalar).  This approach works quite well, though I haven't yet found any fundamental improvements in using geometric algebra over more traditional matrix approaches.
+
+Hestenes presets the basis-free nature of geometric algebra as one of its biggest strengths, but if you're a computer guy, the first thing you'll do in writing a geometric algebra library is to make the basis explicit.
+
+-Tim 

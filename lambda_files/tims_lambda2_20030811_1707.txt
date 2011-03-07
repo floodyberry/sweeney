@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/classic/message8288.html
+http://lambda-the-ultimate.org/classic/message8288.html#8305
+0532576
+Udell: Symbol grounding, XML, and RDF
+Re: Udell: Symbol grounding, XML, and RDF
+<p>Does anyone else see XML as an overcomplicated solution the meager problem of serializing data in and out of text files?</p>

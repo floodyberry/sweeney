@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/1270
+http://lambda-the-ultimate.org/node/1270#comment-14182
+1049846
+Naked Objects
+The Subtyping Property
+<p>raould: By "given just a value of some arbitrary type, one should not be able to extract its 'type', since that notion violates many universal properties", I mean:  In the presence of subtyping, a value is expected to be a member of every type that contains it.  In a language with subtyping, singleton types, and a top type, what can you say about "the type of 3"?  Well, 3 belongs to every type that contains 3.
+</p><p>The least such type is the singleton type containing 3, and the greatest is the top type.  These are the only two universal answers we could hope to give, and neither one yields any usable information.  This is unlike Java's o.getClass() function on objects, which yields nontrivial information.  If we consider Object as a universal type (which Java and C# encourage), then these languages are obviously aparametric.  So then they pile on all sorts of extra security features in order to regain just a few of the guarantees that parametricity could have provided.
+</p><p>Daniel: Excellent, thanks for pointing out "deriving Typeable".  So Haskell implementations do indeed solve the introspection problem safely. I learn something new about Haskell every day.
+</p><p>So the intuition here is that if I declare a type "deriving Typeable", then I'm explicitly choosing to expose its internal details.  But abstract datatypes not declared that way remain abstract such that it's physically impossible for an outside function to break the abstraction barrier.</p>

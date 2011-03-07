@@ -1,0 +1,19 @@
+http://slashdot.org/comments.pl?sid=54835&cid=5371889
+[slashdot] We need 64-bit TODAY
+Intel's claims are wholly out of touch with reality.
+
+On a daily basis we're running into the Windows 2GB barrier with our next-generation content development and preprocessing tools.
+
+If cost-effective, backwards-compatible 64-bit CPU's were available today, we'd buy them today. We need them today. It looks like we'll get them in April.
+
+Any claim that "4GB is enough" or that address windowing extensions are a viable solution are just plain nuts. Do people really think programmers will re-adopt early 1990's bank-swapping technology?
+
+Many of these upcoming Opteron motherboards have 16 DIMM slots; you can fill them with 8GB of RAM for $800 at today's pricewatch.com prices. This platform is going to be a godsend for anybody running serious workstation apps. It will beat other 64-bit workstation platforms (SPARC/PA-RISC/Itanium) in price/performance by a factor of 4X or more. The days of $4000 workstation and server CPU's are over, and those of $1000 CPU's are numbered.
+
+Regarding this "far off" application compatibility, we've been running the 64-bit SuSE Linux distribution on Hammer for over 3 months. We're going to ship the 64-bit version of UT2003 at or before the consumer Athlon64 launch. And our next-generation engine won't just support 64-bit, but will basically REQUIRE it on the content-authoring side.
+
+We tell Intel this all the time, begging and pleading for a cost-effective 64-bit desktop solution. Intel should be listening to customers and taking the leadership role on the 64-bit desktop transition, not making these ridiculous "end of the decade" statements to the press.
+
+If the aim of this PR strategy is to protect the non-existant market for $4000 Itaniums from the soon-to-be massive market for cost-effective desktop 64-bit, it will fail very quickly.
+
+-Tim Sweeney, Epic Games

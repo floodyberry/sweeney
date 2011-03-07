@@ -1,0 +1,21 @@
+http://lists.seas.upenn.edu/pipermail/types-list/2006/001086.html
+[TYPES] semantics of 'quote'
+I looked into this a while ago and found two ways of approaching a "quote" operation.
+
+The first is to allow one to dynamically convert any value to its Godel number or something similar (e.g. an AST representation).  Such an operation has a sweeping impact on the language's properties.
+
+For example, adding "quote" to a language with extensional equality would make its equality inconsistent with observable equivalence: quote(f) and quote(g) would reveal that f=lambda(x:int)=x+1 and g=lambda(x:int)=1+x are distinct.
+
+Adding "quote" to a language respecting the parametricity property would break parametricity:  You would write a function like forall(t:type) lambda(x:t) quote(x) which converts a value of any type to an integer and thus distinguish values of universal type.
+
+The second, and less devastating, approach would be to expose "quote" as a purely syntactic feature, where you could write code like:
+
+f=quote {lambda(x:int) x+1}
+
+And then, from f, you could extract both the semantic value and the syntactic value.  For example, f.value would return the function lambda(x:int) x+1, and f.quote would return a Godel representation, textual representation, abstract syntax tree representation, or some other representation that does not obey the parametricity and extensionality properties you would expect the value itself to obey.
+
+The extent of the "quote" operation here is just the syntactic span of code inside the quote.  For example, in forall(t:type) lambda(x:t) quote {x}, the quote {x} would just return some syntactic indicator of a reference to a bound variable (a local property), rather than introspecting the actual value of x and returning some syntactic representation of it (a global property violating extensionality and parametricity).
+
+This issue is important to many languages, because programmers have a general desire for both "nice properties" (parametricity, extensionality, etc) and for the ability to extract metadata from their program in order to enable automation of certain operations (graphical user interface creation, implementing persistence, etc).  An explicit syntactic quote operation like this enables both capabilities to be mixed and matched explicitly, without violating nice global properties of programs.
+
+-Tim 

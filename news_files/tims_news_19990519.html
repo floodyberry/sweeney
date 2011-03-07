@@ -1,0 +1,59 @@
+<h4>Unreal 225 musings</h4>
+
+<p>The recent work on 225 has been focused on improving server performance and stability,
+and it has been paying off really well.&nbsp; It turns out that 224's server code was
+noticeably slower than 220, as a result of some code improvements I made but didn't test
+and time rigorously.&nbsp; The two bottleneck routines in the server are the visibility
+tracer and the actor replicator.&nbsp; I've been making the visibility tracer faster by
+processing all actors simultaneously and optimizing the code for a pure &quot;yes/no&quot;
+visibility test, rather than using the more general (and slower) line trace routine built
+into the engine.&nbsp; The actor replicator has gained significant speedups from a
+combination of low-level optimization (to the bit-stream writer, and replication condition
+caching code), and a new time-stamping system that speeds up replication by up to 50% on
+servers with high player counts.</p>
+
+<p>Now, the 225 server is faster than all previous versions, and I'm working on some
+further improvements over the next few days.</p>
+
+<p>As many server admins have pointed out to us, if we can double Unreal's server
+performance, admins will be able to run twice as many servers on their machines!</p>
+
+<h4>&quot;Make Something Unreal&quot; Contest</h4>
+
+<p>Check out the <a href="http://www.unrealcontest.com/">Contest</a> site
+for the latest info and news on the contest for Unreal map makers, mod authors, artists,
+and TC developers!</p>
+
+<h4>Things That Are Cool</h4>
+
+<ul>
+  <li><a href="http://msdn.microsoft.com/ssafe/">Microsoft Visual SourceSafe</a>:
+    &nbsp; Anybody who is programming on a large project without using a source-control system
+    is nuts!&nbsp; SourceSafe provides a central repository for all code, and enables
+    programmers to check out files and work on them without their changes
+    &quot;colliding&quot; with those of other programmers.&nbsp; SourceSafe also tracks all
+    changes to all files since the beginning of a project, which has been incredibly useful in
+    developing Unreal, because it enables us to examine our past code changes when tracking
+    down bugs.&nbsp; Finally, SourceSafe is excellent for managing &quot;branched&quot; projects: when we split Unreal 224 apart from the Unreal Tournament codebase, SourceSafe
+    managed the files' shared history automatically.</li>
+</ul>
+
+<ul>
+  <li><a href="http://www.glsetup.com/">GLsetup</a>:&nbsp; Now that Microsoft
+    has publicly committed to dropping the ball on 3D hardware driver distribution with
+    DirectX7, GLsetup is the only hope for game developers who want their game to <span class="italic">work</span>
+    on users' computers out-of-the-box.&nbsp; The PC is already plagued by driver problems,
+    and the classic symptom is users having to go to the web and download new drivers to get
+    new games working.&nbsp; The world would be a much better place if Microsoft took a
+    leadership role in driver updates, by keeping the DirectX redistribution continually
+    refreshed with new QA-certified drivers, thus assuring that new games always work
+    &quot;out of the box&quot; -- if that happened, PC gaming would be a lot closer to the
+    level of reliability of console games.&nbsp; But Microsoft isn't doing that, and GLsetup
+    is a grassroots effort to solve the problem.</li>
+
+</ul>
+
+<p>-Tim</p>
+
+<p>P.S. Check out <a href="http://www.unrealnation.net/">Unreal Nation</a>,
+the cool in-depth Unreal news site.</p>

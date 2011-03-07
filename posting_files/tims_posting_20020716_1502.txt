@@ -1,0 +1,29 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/ea865a2841e6c2b5/001daaf1175462d3?lnk=st&rnum=58&hl=en#001daaf1175462d3
+[comp.lang.functional] Extending Church Numerals to integers, rationals
+Does anybody know of work on extensions of Church Numerals beyond the natural numbers?
+
+Church Numerals are a convenient way of encoding natural numbers in the lambda calculus.  A Church Numeral N is a function that, given a function F as input, returns F iterated N times.  In other words:
+
+0 = lambda(f).lambda(x).x
+1 = lambda(f).lambda(x).f(x)
+2 = lambda(f).lambda(x).f(f(x))
+n+1 = lambda(f).lambda(x).f(n(f)(x))
+
+Church Numerals are interesting because they admit a very simple representation of addition, multiplication, and exponentiation:
+
+a+b = lambda(f).a(f)(b(f))
+a*b = lambda(f).a(b(f))
+a^b = lambda(f).lambda(g).g(f)
+
+In this spirit, we can write computationally valid (though perhaps mathematically odd-sounding) expressions such as:
+
+    sin*cos (x) = sin(cos(x))
+    sin^3 (x) = sin(sin(sin(x)))
+
+One can imagine extending Church Numerals (as entities of the lambda calculus) beyond the natural numbers in an analogous way to extending the natural numbers to the integers, rationals, or reals: just as "2" is a function that iterates its argument twice, "-1" is a function that returns the inverse of its argument.
+
+I'm intentionally oversimplifying, of course: such an "inverter" function only makes sense when its argument is a function with a valid inverse, but that does not necessarily invalidate the concept.  Such a condition of invertability could perhaps be expressed in a sufficiently powerful dependent-typed lambda calculus.
+
+I'm interested in any pointers to research along these lines because this seems like it may be a fruitful way of extending well-known mathematical concepts (such as addition, multiplication, and exponentiation) into functional concepts, in a well-defined way.
+
+-Tim 

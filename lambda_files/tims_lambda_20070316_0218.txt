@@ -1,0 +1,27 @@
+http://lambda-the-ultimate.org/node/2127
+http://lambda-the-ultimate.org/node/2127#comment-26620
+1050703
+Syntax Solicited for Imperative-flavored Concurrent Language with Keywords
+Imperatrix Ornothologica
+<p><a href="http://www.toontalk.com/english/computer.htm">http://www.toontalk.com/english/computer.htm</a>
+</p><p>Wow.  ToonTalk appears to be a serious product to teach concurrent constraint programming, to children, by means of the following metaphors:</p>
+<blockquote><div><ul >
+<li>computation :: city</li>
+<li>actor or process or object :: house</li>
+<li>methods :: robots</li>
+<li>method preconditions :: contents of thought bubble</li>
+<li>method actions :: actions taught to robot</li>
+<li>tuples or messages or vectors :: boxes</li>
+<li>actor spawning 	:: loaded trucks</li>
+<li>actor termination :: bombs</li>
+<li>channel transmit capabilities :: birds</li>
+<li>channel receive capabilities :: nests</li>
+</ul>
+<p>Another way to understand the computational model of ToonTalk is to consider what you can train robots to do:</p>
+<ul >
+<li>send a message by giving a box or pad to a bird</li>
+<li>spawn a new agent by dropping a box and a team of robots into a truck</li>
+<li>perform simple primitive operations (e.g. +, -, *) by dropping a pad on a pad</li>
+<li>terminate an agent by setting off a bomb</li>
+</ul></div></blockquote>
+<p>Again, wow.  That's one hell of a metaphor there!</p>

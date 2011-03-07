@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/classic/message7365.html
+http://lambda-the-ultimate.org/classic/message7365.html#7373
+0531653
+Point Free Style
+Re: Point Free Style
+<p>I've always found it very hard to read and write point-free code.  I wonder if this is just a matter of practice.  Anyone here feel comfortable with the point-free style?</p>

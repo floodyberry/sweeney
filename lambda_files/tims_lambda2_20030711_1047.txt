@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/classic/message7588.html
+http://lambda-the-ultimate.org/classic/message7588.html#7591
+0531876
+Partial Types in C#
+Re: Partial Types in C#
+<p>Gee, everyone hates the way our UI builder works by auto-generating a pile of messy code whenever you move controls around a form (unlike Visual Basic, and Delphi, and ...).  I know, instead of fixing the problem, let's further obfuscate it by adding a bizarre new language feature that breaks well-known principles of encapsulation!</p>

@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Variance and Generalized Constraints for C# Generics | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1573" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Variance and Generalized Constraints for C# Generics</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p ><a href="http://research.microsoft.com/research/pubs/view.aspx?type=inproceedings&amp;id=1215">Variance and Generalized Constraints for C# Generics</a>. Burak Emir, Andrew J. Kennedy, Claudio Russo, Dachuan Yu. July 2006<br >
+<blockquote ><p >
+Generic types in C# behave invariantly with respect to sub-typing. We propose a system of type-safe variance for C# that supports the declaration of covariant and contravariant type parameters on generic types. To support more widespread application of variance we also generalize the existing constraint mechanism with arbitrary subtype assertions on classes and methods. This extension is useful even in the absence of variance, and subsumes equational constraints proposed for Generalized Algebraic Data Types (GADTs). We formalize the subtype relation in both declarative and syntax-directed style, and describe and prove the correctness of algorithms for constraint closure and subtyping. Finally, we formalize and prove a type safety theorem for a featherweight language with variant classes and generalized constraints.<br >
+</blockquote>
+<p >
+<a href="http://lambda-the-ultimate.org/node/1134">Discussion</a> of previous C# GADT paper on LtU.<p >
+I am unsure about use-site versus definition-site variance declerations. It would be interesting to hear what others think.<p >
+Also check out the LtU <a href="http://lambda-the-ultimate.org/node/735">discussion</a> on wildcards in Java.</p> </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 06/18/2006 - 11:33 | <a href="taxonomy/term/14">OOP</a> | <a href="taxonomy/term/17">Software Engineering</a> | <a href="taxonomy/term/21">Type Theory</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1573" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2263 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1573" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1573" />
+<a id="comment-18827"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18827" class="active">Comments, anyone?</a></h3>
+ <div class="content"><p >Comments, anyone?</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Sun, 06/18/2006 - 18:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-18839"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18839" class="active">Although I think it&#039;s great work,,,</a></h3>
+ <div class="content"><p >...my only criticism is at the syntactical (and somewhat superficial) level.  I really think that overloading + and - with yet another semantic meaning, is not the route I would have chosen.  But then, this is probably more a call for introducing more symbols into the PL world, or at least using a more verbose syntax.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Mon, 06/19/2006 - 14:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-18846"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18846" class="active">Java almost used +/-</a></h3>
+ <div class="content"><p >The papers and (I believe) early prototypes for generics in Java used +/- symbols.  Though I liked them, there were people who didn't and so it was eventually changed to the ridiculously verbose (? extends X).  I suppose the verbosity would be less of a problem if Java had local type inference...</p>
+<p >Scala uses +/- and I think it's pretty easy to get used to.</p></div>
+ <div class="links">By <a href="user/925" title="View user profile.">Kannan Goundan</a> at Mon, 06/19/2006 - 21:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-18852"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18852" class="active">Or typedefs</a></h3>
+ <div class="content"><p >"I suppose the verbosity would be less of a problem if Java had local type inference..."</p>
+<p >Typedefs would be enough.</p></div>
+ <div class="links">By <a href="user/1104" title="View user profile.">nat</a> at Tue, 06/20/2006 - 11:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-18847"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18847" class="active">OCaml uses +/- as well for</a></h3>
+ <div class="content"><p >OCaml uses +/- as well for variance notations.</p></div>
+ <div class="links">By <a href="user/1436" title="View user profile.">Nicolas Cannasse</a> at Mon, 06/19/2006 - 21:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-18840"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18840" class="active">Interesting.</a></h3>
+ <div class="content"><p >I guess variance and constraints are important for library writers: it allows them to finetune their libraries so as that type violations are minimal. From a user's perspective, I doubt it will make much of a difference. Maybe catching a few bugs here and there.</p>
+<p >I also agree with Chris Rathman about the usage of symbols + and -. It would have been better if they used a keyword.</p>
+<p >It seems like C#, Java, and to a lesser extent C++ (when it gets constraints), will converge at some point to the same language.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Mon, 06/19/2006 - 14:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-18843"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18843" class="active">Language Convergence</a></h3>
+ <div class="content"><p >Although I'd agree that this is perhaps more important from a library design standpoint, I think that ultimately cleaner libraries are in the best interest of all users.  I also happen think that most users are designers of ad hoc libraries, so it will help them as well, though perhaps not as dramatically.  I do notice that I've been using the current offering in generics more and more in C# and that it does make my life easier - the more I use them, the more I like them.  So my personal opinion would be that although these sorts of things seem esoteric at first, they slowly creep into your toolbox and become second nature.  (Of course, the dynamic PL crowd will tell us that generics is a symptom of static typing - but that's a different issue).</p>
+<p >As for convergence, well C# and Java started as basically the same language, so it wouldn't be that surprising if they are on parallel projectories.  From a language design standpoint, I think that Java and C# are somewhat good for each other - though there's friction between the communities based on competing interests. </p>
+<p >[Edit Note] Probably obvious, but I meant this in reply to Achilleas.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Mon, 06/19/2006 - 14:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-18848"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18848" class="active">Tension</a></h3>
+ <div class="content"><p >Excellent work from the authors, as always.  There is much tension in exposing variance specifiers in a language that assumes mutability everywhere and has no means of specifying constant references and constant operations.  The use of "where" constraints further implies complex nonlocal reasoning both in typechecking and on the human side when we read the code and try to understand why it works.  These extensions stretch the C language family to an impressive new local optima, but at some point the world is going to have to move away from this imperative-everywhere, broken-const model of programming.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Mon, 06/19/2006 - 22:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-18859"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18859" class="active">why is it necessary (apart</a></h3>
+ <div class="content"><p >why is it necessary (apart from backwards compatability) to require annotation in these cases?  why not make all generic parameters covariant and all return values contravariant?  or, at least, make that the default - if one wants to limit a generic expression to be exactly equal to the class then require extra syntax.  this seems to work fine with ordinary methods, classes, etc.</p>
+<p >i assume i've got something mixed up - do you end up with something inconsistent?</p></div>
+ <div class="links">By <a href="user/1016" title="View user profile.">andrew cooke</a> at Tue, 06/20/2006 - 16:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-18874"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18874" class="active">Ergonomics?</a></h3>
+ <div class="content"><p >I guess it's the same reason you have to mark a class 'abstract' instead of relying on the fact that a single abstract method forces the class to be abstract.</p>
+<p >The requirement for covariance in a type parameter (that it appears in a covariant position in every place it is used) is not totally trivial and so it's nice to be able to have the compiler tell you when your declared variance conflicts with the way you're using it.</p></div>
+ <div class="links">By <a href="user/925" title="View user profile.">Kannan Goundan</a> at Tue, 06/20/2006 - 18:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-18875"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18875" class="active">For type functions</a></h3>
+ <div class="content"><p >Variance annotations are not for value arguments but for type arguments. For example, when you define a generic type</p>
+<p >  List[+A] = ...</p>
+<p >then it says that List[A]&lt;List[B] if A&lt;B. Of course, this requires the definition of List to conform, i.e. its generic type argument may only ever appear in covariant position on the RHS (that's why mutability almost always precludes variance).</p>
+<p >Where the definition is known, variance can in fact be inferred. OCaml does this, for instance. But in interface specifications, where no definition might be given, it cannot. C# however does no such inference, neither does Scala, AFAIK.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Tue, 06/20/2006 - 20:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-18885"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18885" class="active">that&#039;s why mutability almost</a></h3>
+ <div class="content"><blockquote ><p >that's why mutability almost always precludes variance</p></blockquote>
+<p >ah, ok, i get it now.  yes, of course.  hence tim's comment which had confused me.</p>
+<p >ok, so next question along the road - wouldn't it have been better add some kind of const statement (and then make this implicit)?  i guess the arguments is (1) that's hard to enforce (i can imagine you end up with a whole new language if you follow it through; which again is probably what tim was implying (as i type this i can't see his comment so am going by memory)) and (2) this is more general (in that you can do consistent changes, although off the top of my head it's hard to think of non-trivial ones in java, but - another penny drops - perhaps this where c# lower bound comes in).</p>
+<p >thanks again - that made thing a lot clearer (i think!).</p></div>
+ <div class="links">By <a href="user/1016" title="View user profile.">andrew cooke</a> at Tue, 06/20/2006 - 23:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-18891"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1573#comment-18891" class="active">Prerequisite, not replacement</a></h3>
+ <div class="content"><p >I believe what Tim alluded to is the fact that variance hardly ever applies to mutable types. In other words, some form of "constness" is a *prerequisite* for variance to be useful. But because you cannot always infer variance, constness is no *replacement*.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Wed, 06/21/2006 - 10:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

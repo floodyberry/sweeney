@@ -1,0 +1,21 @@
+http://lists.tunes.org/archives/gclist/1999-July/001649.html
+[gclist] Instanteneous GC
+Hello,
+
+Thanks for all the feedback everyone has given regarding optimizing a game programming language for garbage-collection efficiency.  It has been a great help.
+
+I've started prototyping my collector and its data structures, and will probably be seeking more advice once I get into all the hairy details.  I'm having a hard time finding the right set of tradeoffs to make, regarding immediate vs incremental collection, and robustness of support for multithreading.
+
+Once idea I've always liked, despite its huge implementation hurdles, is "immediate garbage collection", where all references to objects are subject to a write-barrier and some logic that causes all objects to be collected the very instant they become garbage.  I'm not talking about a simple reference counting scheme (which has pitfalls with cyclic references), I mean a fully general GC scheme that notices immediately when groups of objects in the rooted graph become disjoint.
+
+I like the concept because I'm a big fan of deterministic behaviour, and I've always been a little uneasy about the idea of garbage objects "eventually" being cleaned up.
+
+Ok, so here's what I've come up with:
+
+1. Absolutely naieve implementation: Each time a reference is updated or goes out of scope, start at the root object and do a full mark-and-sweep through all objects and determine which ones are garbage. Advantage: always instantaneous. Disadvantage: Incredibly inefficient.
+
+2. Faster implementation: Assign each object a positive number, starting with 0 at the root.  For each object, maintain for lists of references: (incoming, outgoing) x (to lower numbered objects, to higher numbered objects).  Enforce a rule that every object always has at least one incoming reference from a lowered number object.  Whenever a reference changes that breaks this rule, move the offending object to the end of the list (make it the highest numbered object), and readjust the other objects--which may cause them to recursively fall to the bottom of the list.  In this process, some objects that land at the bottom of the list will have no upward references, and those objects have immediately become garbage.  The overhead of this is (on a 32 bit machine) 8 bytes per object + 24 bytes per reference variable.  This has a lot of O(n^2) performance cases, for example many double-linked list implementations, but I think the algorithm can be restructured to never be worse than O(n).  Still this is impractically slow.
+
+So, my question is: is there any reasonably efficient way to do instantaneous garbage collection, using a write-barrier function that can immediately determine that objects have become garbage?
+
+-Tim

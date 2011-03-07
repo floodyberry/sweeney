@@ -1,0 +1,185 @@
+<h4>Latest News</h4>
+
+<p>We've been going through many iterations of internal testing and improvements on the
+upcoming patch, which is now known as 223.&nbsp; Here is the latest <a href="http://unreal.epicgames.com/ReadMe223.htm">list of changes</a>.&nbsp; The story behind the version number is
+that each time we make a new version for internal testing, we give it a new version letter
+(for example, 221a, 221b).&nbsp; Between the previously released 220 patch and the current
+one we're working on,&nbsp; we've gone through more than 52 internal versions.&nbsp; We've
+beta-tested two release candidate patches, but each one has required more work.&nbsp; I
+don't have a release date for this patch yet, but we're working hard to get it finished.</p>
+
+<p>One unfortunate side-effect of the recent UnrealScript improvements (dynamic strings,
+multi-skin support, other engine enhancements) is that 223 will have to break mod
+compatibility with previous versions, and require at least a recompile (and code changes
+in many cases).&nbsp; We hate breaking mods, because we understand how much pain it causes
+for mod makers and the community to get back in synch with the latest version, but
+sometimes it's a necessary evil, as a side-effect of progress.&nbsp; </p>
+
+<p>One bonus we're putting into 223 to help compensate for the pain and suffering is Jack
+&quot;Mek&quot; Porter's windowed GUI code, the high-level UnrealScript windowing
+framework we're using for Unreal Tournament.&nbsp; This includes the graphical
+&quot;server browser&quot; for finding good servers to play on -- sort of an in-game
+GameSpy. The windowing code will give the community a chance to experiment with windowing
+well before Unreal Tournament ships.</p>
+
+<h4>Level-Of-Detail Texture Mapping</h4>
+
+<p>I finally got the chance to write a rendering optimization I've been thinking about for
+a long time now, level-of-detail texture mapping.</p>
+
+<p>Unreal's biggest performance problem in OpenGL has been texture management overhead,
+which causes frame rates to vary a lot (for example, jumping from 30+ fps down to 15 fps
+for a frame or two when new textures come into view).&nbsp; This is especially noticeable
+on on the Riva TNT, which has a very good fill rate and can handle large polygon counts,
+but is around 4X slower transferring textures to the card than Voodoo2.</p>
+
+<p>Solution: I create redundant versions of textures, scaled down 4X (in memory usage),
+16X, 64X, and 256X. When an object being rendered is far away, I use a lower resolution
+version of the texture -- which doesn't cause visual problems (since the texture would be
+mipmapped anyway) but requires less texture data to be transferred.</p>
+
+<p>This has enabled us to boost the Unreal Tournament player models' texture usage to 256K
+of texels per model.&nbsp; More info about additional level-of-detail features later...</p>
+
+<h4>Future of Programming Languages</h4>
+
+<p>Lately, I've been doing research on programming languages, in the interest of gaining
+new ideas to implement in the successor to UnrealScript for our next-generation (after
+Unreal Tournament) engine.&nbsp; Some of the topics I've been formulating are: </p>
+
+<ul>
+  <li><p>Garbage collection (see the <a href="http://www.iecc.com/gclist/GC-faq.html">GC FAQ</a> for background).&nbsp; UnrealScript uses a simple recursive
+    mark-and-sweep garbage collector which is only executed when changing levels, along with
+    some special-case code to garbage-collect destroyed actors during gameplay.&nbsp; Most
+    implementations of Java use a background thread to run a generational garbage collector.
+    &nbsp; Java's approach is more general, but can cause pauses during execution as large
+    amounts of garbage are purged, which is bad for frame-rate consistency.</p>
+
+    <p>Java garbage collection presents a problem for object finalizers (the equivalent of C++
+    destructors), because the finalizer is executed at some random time after the object in
+    question effectively becomes garbage, and finalizers of multiple objects are executed in
+    random order.&nbsp; This limitation makes finalizers dangerous and not terribly useful.
+    &nbsp; One work-around is to not support finalizers.&nbsp; Another work-around is to
+    support them, but publish a list of &quot;things that aren't safe to do from within a
+    finalizer&quot; (such as cause finalized objects to become rooted again, make assumptions
+    about finalization order, etc).&nbsp; UnrealScript's current solution is a mix of the two;
+    finalizers must be native (implemented in C++) and are subject to those safety guidelines.</p>
+    
+
+    <p>Another general conceptual problem I have with garbage collection is that, often, the
+    physical lifetime of an object (as defined by the garbage collector) often exceeds the
+    &quot;practical&quot; lifetime of an object (as defined by the semantics of the program
+    you're writing).&nbsp; For example, a window object in a windowing system is only
+    meaningful when the window is open on screen; after the window has been closed, the object
+    becomes meaningless even though it still exists and other objects might still be referring
+    to the window.&nbsp; The general problem is that programmers often would like a &quot;way
+    of explicitly destroying an object and removing any other objects' references to it&quot;.
+    &nbsp; C and C++ avoid this problem by making all memory management the program's
+    responsibility.&nbsp; Java avoids it by making the program responsible for determening
+    whether an object you're referring to is meaningful (for example by calling
+    Window.IsOpen()).&nbsp; It would certainly be nice if object lifetime management and
+    notifications became the full responsibility of the programming language, enabling
+    programmers to instead focus on higher-level problems.</p>
+
+    <p>The garbage-collection strategy that would be ideal, from the standpoint of predictable
+    code and memory usage, is to finalize and destroy objects the exact moment they become
+    garbage, i.e. when the last variable still referencing it changes.&nbsp; I've tried, very
+    unsuccessfully, to find efficient approaches to manage such as system by tracking multiple
+    reference counts, doubly-linked lists of two-way references between objects, etc etc etc,
+    and haven't been able to find an approach more efficient that performing a brute-force
+    mark-and-sweep pass every time a reference to an object changes (plus optimizations such
+    as reference counting to collect objects without cyclic references).&nbsp; Stated in graph
+    theory, the question boils down to &quot;Given a graph and a particular directed edge of
+    the graph, does removing that edge break the graph into two disjoint pieces?&quot; &nbsp;
+    Does anybody know if there is a graph-theory algorithm for determining this, which enables
+    you to add a directed edge to the graph in constant time, and also remove an edge and
+    determine disjointedness from that removal in constant time?</p>
+  </li>
+  <li><p>LISP defines a new kind of object called a &quot;function closure&quot; which basically
+    represents a pointer-to-a-member-function with several of its parameters bound to specific
+    values (for example, binding the implicit &quot;Self&quot;/&quot;this&quot; parameter to a
+    particular object.&nbsp; This is a great object-oriented generalization of
+    function-pointers, but the syntax becomes fairly complex in a statically-typed language
+    (some issues you run into are recursively-defined closure types, and cyclic closure
+    types).&nbsp; Microsoft's Java extensions in Visual J++ include a simpler and more limited
+    type of object called a &quot;delegate&quot; which is a pointer-to-a-member-function bound
+    to a specific instance of an object.&nbsp; I plan to experiment with these possibilities
+    and implement &quot;something along these lines&quot; in the next engine.</p>
+
+  </li>
+  <li><p>Inner classes, as defined by Java, are a great feature for attaching objects together
+    hierarchically.&nbsp; This is definitely a feature I want for the future.&nbsp; One
+    example area where inner would simplify and generalize the code is Unreal's actor lighting
+    support.&nbsp; Currently, the Actor class has a bunch of variables related to lighting
+    (LightBrightness, LightHue, LightSaturation, LightEffect, etc), and an enumeration
+    LightType that describes the light's overall mode of operation.&nbsp; While this is an
+    improvement over past engines, and general enough for 1998-1999 games, it could be much
+    better.&nbsp; Actors could instead reference a separate Light object which describes the
+    lighting in a more general way.&nbsp; Instead of having a hardcoded enumeration for light
+    effects (such as LE_TorchWaver, LE_Cylinder, LE_Spotlight), all the different light types
+    could be represented by separate classes (TorchWaverLight, CylinderLight, SpotLight) with
+    the class supplying the appropriate spatial and volumetric lighting math. &nbsp;</p>
+
+    <p>Additionally, the lighting objects could be made hierarchical, so you could modulate a
+    cylinder light by a spotlight, and add a torch wavering effect on top. &nbsp; New light
+    classes could be defined modularly to supply new lighting functions without modifying the
+    engine source.</p></li>
+</ul>
+
+<p>While my plan for the next scripting language is gaining more clarity, there are still
+a lot of wide-open issues.&nbsp; For example, whether Java-style interfaces are necessary
+(since most of the same functionality can be obtained from inner classes), what the final
+garbage-collection strategy is, how similar do we want to make the language to Java, etc.</p>
+
+<h4>Visible Surface Determination</h4>
+
+<p>One of the biggest next-generation challenges for 3D programmers will be in solving the
+&quot;visible surface determination&quot; problem for complex scenes.&nbsp; Doom basically
+used a densely portalized BSP scheme; Quake used a BSP in conjunction with precomputing
+the visibility from each BSP leaf in the world to every other leaf, trading off
+precomputation time in exchange for rendering performance. Unreal uses a sparsely
+portalized BSP tree and performs a software span-buffering pass to determine which
+polygons are visible prior to actually rendering them.&nbsp; None of these approaches are
+clearly superior to the others; they each have strengths and weaknesses.&nbsp; Unreal's
+tradeoff enables us to render more complex multi-pass surfaces (very high-res textures,
+detail textures, light maps, and fog maps) but limits our polygon counts, since rendering
+performance grows approximately as &quot;n log n&quot; with polygon counts, compared to
+Quake's basically linear &quot;n&quot; scaling. </p>
+
+<p>The visuals of Unreal Tournament vs. Quake 3 Arena will provide a very useful
+equal-footing comparison between the two techniques, with id Software is pushing the
+limits of polygon counts, and us pushing the limits of texture detail.</p>
+
+<p>After this generation of games, I think we'll all have to fundamentally change the way
+we approach the visibility problem.&nbsp; As 3D worlds grow larger, more seamlessly
+interconnected, and more vibrant in terms of dynamic and procedural geometry, we'll need
+more of a no-tradeoffs approach than precomputed visibility or BSP's.&nbsp; Portal and
+anti-portal clipping schemes look promising.&nbsp; Hardware-assisted visibility tests
+(such as HP's <a href="http://www.opengl.org/Documentation/Version1.2/HPspecs/occlusion_test.txt">OpenGL occlusion test extension</a>) look promising.&nbsp; Even the good
+old DFE scheme becomes more practical with increased 3D hardware performance.&nbsp; After
+Unreal Tournament, I'll be experimenting again with all of these techniques.</p>
+
+<h4>Commentary on Cool Stuff</h4>
+
+<p>I just wanted to point out the following cool technical things. </p>
+
+<ul>
+  <li>OpenGL <a
+    href="http://www.opengl.org/Documentation/Version1.2/EXTspecs/fragment_lighting.txt">Fragment Lighting</a> and <a
+    href="http://www.opengl.org/Documentation/Version1.2/EXTspecs/light_texture.txt">Light Texture</a> extensions.&nbsp; These exceedingly clear, general, and
+    well thought-out rendering capabilities are going to be the next quantum leap in 3D
+    hardware acceleration acceleration, enabling true Phong/Blinn bump mapping and a
+    tremendous variety of other features.&nbsp; My reaction to seeing this spec for the first
+    time is reminiscent of first experiencing 3dfx's Voodoo accelerator and the Glide
+    API--it's &quot;I can't believe how powerful yet simple this is to work with&quot;.</li>
+
+  <li><a href="http://teach.belmont.edu/ht/applet/htbu.html">Hyperbolic Tree
+    Controls</a>: This is the first generally useful new GUI control I've seen in years.
+    Imagine the possibilities for using hyperbolic trees to browse the actor lists and server
+    interconnectivity of huge interconnected online worlds.</li>
+  <li><a href="http://dogma.net/markn/articles/bwt/bwt.htm">Burrows-Wheeler
+    Data Compression</a>: A new, unpatented approach to data compression; trivial
+    implementations can easily beat PKZIP.</li>
+</ul>
+
+<p>-Tim</p>

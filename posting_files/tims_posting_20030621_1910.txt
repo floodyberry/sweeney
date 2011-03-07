@@ -1,0 +1,13 @@
+http://slashdot.org/comments.pl?sid=68429&cid=6263894
+[slashdot] This is lame
+Given that Blizzard is using the trademarks "StarCraft" and "WarCraft" in this very specific market (realtime computer strategy games), their claim that "FreeCraft" infringes on their copyright is reasonable and very likely winnable in court.
+
+So, no problem, just rename FreeCraft to a unique name that clearly isn't derivative of Blizzard's product. And don't be mad that they asked you to do this, because they have the right and obligation to protect their copyrights.
+
+On the other hand, unless you've physically ripped code or content out of StarCraft or WarCraft and put it in your game, any claim that your game is "too similar" to theirs seems absurd and almost certainly has no basis in copyright or trademark law. If you ignore them on that issue, then they are almost certain to go away.
+
+And if they don't go away nicely, the resulting outrage over their persecution of the open source community would almost certainly force them to go away ashamedly.
+
+But if you just cave in, and you fail to stand up for your rights when presented with this sort of threat, then you are certain to lose your rights.
+
+If a person asks you to get out of his seat, you move. If a bully asks you to give up YOUR seat, you fight.

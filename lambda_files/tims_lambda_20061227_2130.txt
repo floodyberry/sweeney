@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/1930
+http://lambda-the-ultimate.org/node/1930#comment-23482
+1050506
+Quotation and evaluation -- or, how pure is the pure lambda calculus?
+Lambda terms as graphs
+<p>The graph representation of lambda terms dates back to Bourbaki.  For a modern overview, see Ariola's "Lambda calculus plus letrec": <a href="http://www.cs.uoregon.edu/~ariola/cycles.html">http://www.cs.uoregon.edu/~ariola/cycles.html</a>.</p>

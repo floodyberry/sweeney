@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/2793
+http://lambda-the-ultimate.org/node/2793#comment-41598
+1051369
+Automatic Patch-Based Exploit Generation
+Ouch
+<p>This is going to be a very painful revelation for a whole lot of software vendors.
+</p><p>Given limited and variable bandwidth, the only effective solution is for auto-patching systems to roll out patches in encrypted form, force all online users to shut down the program, and then roll out the decryption keys to users as they (re)start the program or operating system.
+</p><p>Valve's game distribution system, Steam, employs a similar system for streaming encrypted pre-release software, and then sending out the decryption keys on the release date, to enable staggered rollout without pre-release piracy.</p>

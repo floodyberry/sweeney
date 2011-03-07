@@ -1,0 +1,7 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/570615e64e3e4fc0/6ec51cbc5421e3c6?lnk=st&rnum=13&hl=en#6ec51cbc5421e3c6
+[comp.lang.functional] Re: Perfect list shuffling: an interesting algorithm
+Can't one always do shuffling with O(n) element accesses, by forming a new array one element at a time, at each point selecting and removing (by index) a random element from the original array?  For example, one could implement this in C by starting with an array of n elements, selecting a random item from among the remaining contiguous items, appending that item onto the result array, and then replacing it (in place) with the item at the end of the array, repeating until all elements are exausted.
+
+This appears to me to require O(n) element accesses, and a source of O(n log n) random bits.  Any source of O(n log n) computational steps -- unless you are treating each random bit access as a step -- would I think be an artefact of using functional lists instead of indexable, updatable arrays.
+
+Tim Sweeney 

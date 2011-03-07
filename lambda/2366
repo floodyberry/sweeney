@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Comprehensions with ‘Order by’ and ‘Group by’ | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2366" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Comprehensions with ‘Order by’ and ‘Group by’</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p ><a href="http://research.microsoft.com/Users/simonpj/papers/list-comp/index.htm">Comprehensive Comprehensions</a>, Phil Wadler and Simon Peyton Jones</p>
+<blockquote ><p >"The new constructs proposed here are more general than the constructs in the other languages, because they work with any function of a given type, rather than being limited to speciﬁc functions. Parametricity of these functions plays an important role in ensuring the semantics of such constructs is independent of particular details of how tuples of bindings are represented."</p></blockquote> </div>
+ <div class="links">By <a href="user/674" title="View user profile.">Isaac Gouy</a> at 2007-07-25 21:52 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/2350" title="Current &amp;quot;best books on FP&amp;quot;?">previous forum topic</a> | <a href="node/2353" title="Or is it now?">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2366" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2322 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2366" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2366" />
+<a id="comment-35307"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2366#comment-35307" class="active">It seems strange to me to</a></h3>
+ <div class="content"><p >It seems strange to me to encourage people to use the 'Order by' keyword  for other things than sorting, just becourse the type system allows it.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Thu, 2007-07-26 18:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-35311"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2366#comment-35311" class="active">Type of groupWith</a></h3>
+ <div class="content"><p >They give the type<br >
+<code >(a -&gt; b) -&gt; [a] -&gt; [[a]]</code><br >
+I've always imagined the type as<br >
+<code >(a -&gt; k) -&gt; [a] -&gt; Map k [a]</code><br >
+because you always need the value you grouped by later.</p>
+<p >With the type in the paper you have to reconstruct the grouping value, which might not always be as simple as <code >the dept</code>.</p>
+<p >Actually, the same goes for sorting, so maybe the following functions might work best:<br >
+<code >by :: (a -&gt; k) -&gt; [a] -&gt; [(k, a)]<br >
+sortByFirst :: [(k, a)] -&gt; [(k, a)]<br >
+groupByFirst :: [(k, a)] -&gt; Map k [a]</code></p>
+<p >But it is harder to merge this with list comprehension syntax.</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">Sjoerd Visscher</a> at Thu, 2007-07-26 22:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-35312"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2366#comment-35312" class="active">iterate</a></h3>
+ <div class="content"><p >What does iterate do in Haskell, it is used in at least one example and probably in the LIMIT equivalent (order using take).</p></div>
+ <div class="links">By <a href="user/3493" title="View user profile.">Denis Bredelet -jido</a> at Thu, 2007-07-26 23:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-35313"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2366#comment-35313" class="active">iterate f x = x:iterate f (f x)</a></h3>
+ <div class="content"></p>
+<pre >
+iterate f x = x:iterate f (f x)
+</pre><p >e.g.</p>
+<pre >
+iterate (1+) 0 = [0..] = [0,1,2,3,4,...
+</pre></p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Fri, 2007-07-27 01:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-35314"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2366#comment-35314" class="active">Unconstructive Criticism</a></h3>
+ <div class="content"><p >I really, really hope that this never gets into Haskell.  It looks ugly.  It's too "magical" for my tastes (and thus, I see it being confusing for many in all but trivial cases).  Along those lines, I see it easily abused (much more significant than merely abusable.)  I feel it would lead people away from many more natural solutions (though I will readily admit that it may often be a natural solution itself.) It's too inflexible, I'd rather see a new library of combinators or some such (which I also feel would be more Haskelly/natural.)  I like ending my comments with parenthetical remarks (as you can see.)</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Fri, 2007-07-27 01:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-35317"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2366#comment-35317" class="active">Use records</a></h3>
+ <div class="content"><p >Their examples in chapter 2 can be done much easier if you use records.</p>
+<p ><code >map (\(name,salary) -&gt; name)<br >
+(sortWith (\(name,salary) -&gt; salary)<br >
+[ (name,salary)<br >
+| (name, salary, dept) &lt;- employees<br >
+, salary &lt; 50 ])</code></p>
+<p >becomes</p>
+<p ><code >map name (sortWith salary [ e | e &lt;- employees, salary(e) &lt; 50 ])</code></p>
+<p >and</p>
+<p ><code >let<br >
+depts =<br >
+nub [ dept<br >
+| (name,dept,salary) &lt;- employees ]<br >
+in<br >
+[ (dept,<br >
+sum [ salary<br >
+| (name,dept’,salary) &lt;- employees<br >
+, dept == dept’])<br >
+| dept &lt;- depts ]</code></p>
+<p >becomes</p>
+<p ><code >[(dept (head group), sum (map salary group)) | group &lt;- groupWith dept employees]</code></p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">Sjoerd Visscher</a> at Fri, 2007-07-27 07:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-35325"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2366#comment-35325" class="active">Is there a better way?</a></h3>
+ <div class="content"><p >To me, the major benefit of comprehensions is that they enable us to express frequent programming patterns by referring to simple things with variables, rather than combining higher-order functions.</p>
+<p >Philip and Simon's new extensions further enable us to express frequent programming patterns pointfully.  Still, this scheme feels a bit arbitrary.  I wonder if there is a nicer generalization, perhaps less directly mapped to SQL.</p>
+<p >Sjoerd gets to the core of the issue, that records make for cleaner comprehensions than pattern-matched algebraic data types.  With idiomatic Haskell ADTs, you frequently must invent redundent local names for tupled elements in an ADT.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 2007-07-27 21:01 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-35326"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2366#comment-35326" class="active">I was secretly hoping monad comprehensions would...</a></h3>
+ <div class="content"><p >...come back one day. This extension seems incompatible with monad comprehensions and would dash my hopes that they could ever reappear.</p></div>
+ <div class="links">By <a href="user/1545" title="View user profile.">sigfpe</a> at Fri, 2007-07-27 22:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-35328"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2366#comment-35328" class="active">Look at Michael Adams reply</a></h3>
+ <div class="content"><p >Look at Michael Adams reply in the wiki talkpage.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Fri, 2007-07-27 23:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2007/07/05" title="Previous month">«</a> August 2007  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2007/8/1" title="2 posts">1</a></td>
+  <td class="day-link"><a href="archive/2007/8/2" title="1 post">2</a></td>
+  <td class="day-link"><a href="archive/2007/8/3" title="2 posts">3</a></td>
+  <td class="day-normal">4</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-today">5</td>
+  <td class="day-future">6</td>
+  <td class="day-future">7</td>
+  <td class="day-future">8</td>
+  <td class="day-future">9</td>
+  <td class="day-future">10</td>
+  <td class="day-future">11</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">12</td>
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+  <td class="day-future">15</td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2377" title="4 comments">First-class Polymorphism</a></li><li><a href="node/2373" title="17 comments"> Monad Description For Imperative Programmer</a></li><li><a href="node/2375" title="14 comments">Syntactic abstraction? (newbie question)</a></li><li><a href="node/2374" title="3 comments">continuations and trampolining</a></li><li><a href="node/2279" title="11 comments">Merging Functions, Modules, Classes, the whole nine yards...</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2377" title="4 comments">First-class Polymorphism</a></li><li><a href="node/2375" title="14 comments">Syntactic abstraction? (newbie question)</a></li><li><a href="node/2374" title="3 comments">continuations and trampolining</a></li><li><a href="node/2373" title="17 comments"> Monad Description For Imperative Programmer</a></li><li><a href="node/2371">Jedi</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

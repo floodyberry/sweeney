@@ -1,0 +1,67 @@
+<h4>Known Bugs</h4>
+
+<p>Having a problem with Unreal?&nbsp; Please visit the <a href="http://unreal.epicgames.com/Bugs.htm">Known Bugs</a>
+page to see if we know about it and are addressing it, and if there any any workarounds.</p>
+
+<h4>Future Patch</h4>
+
+<p>There will be another Unreal 1 patch.&nbsp; It will be 225.&nbsp; It will contain fixes
+for the significant bugs reported that are under our control (3D card drivers are
+dependent on the hardware makers).&nbsp; By popular demand, our focus on future Unreal 1
+patches will be making bug fixes and small, incremental improvements.&nbsp; So, we've
+split off the Unreal 1 code base from the Unreal Tournament code base, and won't be major
+new features added to the Unreal 1 code base, just fixes.</p>
+
+<p>This code split gives the server community some room to get back together and grow
+healthily.&nbsp; The server community was fragmented in the past because of our Unreal 224
+delays, at one point having 4 major versions available (220 for the PC, 219 for the Mac,
+222 for U.S. 3dfx Voodoo3 users, 223 for European 3dfx Voodoo3 users.&nbsp; From here on,
+we'll keep network compatibility between versions, and keep code changes to a minimum.
+&nbsp; And we'll keep Unreal 1 script compatibility (but not UT script compatibility).</p>
+
+<p>The split also gives us more flexibility in releasing future patches.&nbsp; In the
+past, we've been adding so many new features to the engine for Unreal Tournament, some
+necessitating architectural changes, that we've had a long internal testing cycle for each
+patch.&nbsp; From now on, the Unreal 1 changes will be simple and localized.</p>
+
+<p>The split is also something our Unreal tech licensees have wanted.&nbsp; From here on,
+our partners who want to ship games soon (before or soon after Unreal Tournament) will
+prefer to stay on the 224 track to gain stability and minimize changes, and those with
+further-off products may want to move forward with the Unreal Tournament code track, to
+keep up to date with the latest features.</p>
+
+<p>-Tim</p>
+
+<h4>Check out the Unreal news sites</h4>
+
+<ul>
+  <li><a href="http://www.planetunreal.com/">PlanetUnreal</a> has lots of
+    news and tips about 224.</li>
+  <li><a href="http://www.unrealengine.com/">UnrealEngine.com</a> is a news
+    site dedicated to the Unreal engine.</li>
+  <li><a href="http://www.unreal.org/">Unreal.org</a> is a master index of
+    Unreal resources on the Internet, and has tons of cool Unreal related links.</li>
+
+</ul>
+
+<p>I'll be making a summary of reported bugs, workaround, and related feedback from the
+community later tonight.</p>
+
+<h4>OpenGL UnrealEd</h4>
+
+<p>Thanks <a href="http://www.planetunreal.com/">PlanetUnreal</a> for
+pointing out this feature I added months ago but basically forgot about. :)</p>
+
+<p>Though it theoretically works, the consumer OpenGL drivers I've tried aren't yet stable
+enough for it to work reliably on real-world hardware.&nbsp; But for people who like
+experimenting, if in-game OpenGL support works flawlessly, you can try editor OpenGL
+support by changing the WindowedRenderDevice= line in Unreal.ini to
+WindowedRenderDevice=OpenGLDrv.OpenGLRenderDevice.&nbsp; Problems I've experienced on my
+Riva TNT and ATI Rage Pro (2 months ago) include crashing in the display driver when
+resing windows, failure to create HRC's when opening windows, and texture corruption.</p>
+
+<p>If there is enough demand, perhaps we can pressure 3D hardware makers to test with
+UnrealEd.&nbsp; Hopefully this will be easier now that we've released Unreal's OpenGL
+source code to the public.</p>
+
+<p>-Tim</p>

@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/608?comments_per_page=1000
+http://lambda-the-ultimate.org/node/608?comments_per_page=1000#comment-20999
+1049184
+expressivity of &quot;idiomatic C++&quot;
+Relying on libraries
+<p>This is common language bigotry, and the authors cheat on their C++ "solution".  They're relying on a heavyweight library class to do the difficult work, and thus hiding both the complexity and performance implications of their solution.
+</p><p>If you're going to compare language expressiveness and programming paradigms using examples like the Hamming problem, YOU HAVE TO ACTUALLY SOLVE THE PROBLEM, and not call some big library function to solve it for you.  Otherwise you're just comparing libraries, and degenerately, an arbitrarily crappy language with a library that includes GiveMeHammingNumbers() wins.</p>

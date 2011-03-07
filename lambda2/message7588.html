@@ -1,0 +1,234 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Partial Types in C#</b></font><br>
+<font color="white" size="-1">started 7/11/2003; 10:13:04 AM - last post 7/15/2003; 7:47:10 AM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Chris Rathman</a> - Partial Types in C# <a name="7588">&nbsp;</a><a href='#7588' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">7/11/2003; 10:13:04 AM (reads: 2244, responses: 7)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a7588"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://www.developer.com/net/net/article.php/2232061">Partial Types in C#</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			Partial Types were mentioned in a <a href='message6420.html'>previous post</a>.  Can't say that I find the feature appealing - I think the enforced style of a single source file was a good thing in Java.<p>
+Be nicer if they borrowed the Category concept from Objective-C, allowing one to add methods to classes that you don't have source for - such as the base libraries.  Problem with the proposed C# extension is that both parts of the class definition require the use of the Partial keyword.  No way to add methods to a class that is not considerate enuf to allow extension.<br>
+			<font size="-2"><b>Posted to <a href='oop.html'>OOP</a> by <a href='http://lambda-the-ultimate.org/'>Chris Rathman</a> on 7/11/03; 10:14:05 AM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#7588'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Partial Types in C# <a name="7591">&nbsp;</a><a href='#7591' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">7/11/2003; 10:47:56 AM (reads: 1116, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Gee, everyone hates the way our UI builder works by auto-generating a pile of messy code whenever you move controls around a form (unlike Visual Basic, and Delphi, and ...).  I know, instead of fixing the problem, let's further obfuscate it by adding a bizarre new language feature that breaks well-known principles of encapsulation!
+<p></p>
+<p><a href='#7591'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Isaac Gouy</a> - Re: Partial Types in C# <a name="7592">&nbsp;</a><a href='#7592' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">7/11/2003; 11:32:36 AM (reads: 1089, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>bizarre new language feature that breaks well-known principles of encapsulation! </i> <br>
+Hmmmm I hadn't supposed that encapsulation was <b>necessarily</b> defined in terms of source-files. <br><p>
+
+I thought it was something to do with classes (which in Smalltalk wouldn't mean source-files) or perhaps modules (which in Ada and Modula-2 would mean 2 source-files, in Oberon-2 a single source file) or maybe even components. <br><p>
+
+In Nice, a multi-method OO language, methods can be declared in a different part of the source-file, or <a href="http://nice.sourceforge.net/cgi-bin/twiki/view/Doc/FunctionsAndMethods">in a different source-file</a>, than the class definition. The method implementation can be in yet-another source-file. (As this is the normal behaviour in Nice, there's no need for a <i>partial</i> keyword, and the compiler has no difficulty detecting that there's a missing method declaration and/or implementation.)
+<p></p>
+<p><a href='#7592'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Paul Snively</a> - Re: Partial Types in C# <a name="7593">&nbsp;</a><a href='#7593' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">7/11/2003; 2:04:53 PM (reads: 1074, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Isacc Gouy: <i>Hmmmm I hadn't supposed that encapsulation was necessarily defined in terms of source-files.</i><p>
+
+It's true, even if largely as an accident of history. Very often, a "compilation unit" was mapped, in practice, to a source file, and that was known to be a legitimate scope. Nowadays, of course, you often have to indicate that that's the scope that you want using a keyword such as "static." But even that doesn't alter the fact that it's a legitimate scope.<p>
+
+I'm not surprised by this move on Microsoft's part; their design philosophy has ignored information hiding for years. I recall being shocked to my core by all of the public data members in MFC, for example. I've seen no evidence to suggest that their architectural perspective has changed since then.
+<p></p>
+<p><a href='#7593'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Isaac Gouy</a> - Re: Partial Types in C# <a name="7594">&nbsp;</a><a href='#7594' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">7/11/2003; 3:51:28 PM (reads: 1049, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I went back and put <b>necessarily</b> in bold ;-) <br><p>
+
+<i>even that doesn't alter the fact that it's a legitimate scope</i> <br>
+Sure - if that's what the language defines it to be. <br><p>
+
+And there are languages that <i>by design</i> allow methods of a class to be defined across multiple source files: <br><p>
+
+<a href="http://www.cs.iastate.edu/~cclifton/multijava-data/papers/TR00-06.pdf">MultiJava: Modular Open Classes and Symmetric Multiple Dispatch
+for Java</a> <br>
+"The open class feature of MultiJava allows a programmer to add
+new methods to existing classes without modifying existing code
+and without breaking the <b>encapsulation</b> properties of Java." <br><p>
+
+<a href="http://nice.sourceforge.net/index.html">The Nice programming language</a> <br>
+"Modularity <br>
+In object-oriented languages, it is possible to add a new class to an existing class hierarchy. In Nice, it is also possible to add methods to existing classes without modifying their source file." <br><p>
+
+<a href="http://www.functionalobjects.com/resources/advantages.phtml">Advantages of Dylan</a><br>
+"Behavior can be added to existing classes without subclassing or modifying the source code of those classes. Access to the source code is not even required. This is a direct result of the generic function object model."<br><p>
+
+
+If it's <i>a good thing</i> in "advanced" "research" languages then shouldn't it still be <i>a good thing</i> when Microsoft take it mainstream? (Shouldn't the complaint really be about the way it's being implemented?)<p>
+
+<p></p>
+<p><a href='#7594'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Chris Rathman</a> - Re: Partial Types in C# <a name="7595">&nbsp;</a><a href='#7595' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">7/11/2003; 7:44:33 PM (reads: 1018, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+MultiJava is in the mold of AOP where you want to isolate cross-cutting concerns into a common file.  Dylan's multimethods are really about the interactions between more than the single class instance.  Don't know enuf about Nice to know the motivation for their extension (though I can imagine some form of Genericity/Template where the file can be used for a specific instantatiation for a class).<p>
+
+Anyhow, the main thing about MultiJava and Dylan is that the methods involve more than a single class (the Visitor pattern is meant to apply a method to a range of classes - class of classes?).  So it makes sense in those instances to remove the common code and place it within a single (if external) file.<p>
+
+The partial class extension, however, seems to only involve a single class.  You can't re-use the same partial code across multiple classes.  In the end, it just sounds like a convenience mechanism to allow a single class to be split into more than one file.  Sounds more like they need a better code inclusion mechanism (ala Sather) rather than what amounts to a recipe to reintroduce the complexities of Make (though Ant has become indispensible in the Java world so it probably is an irrelevant point).
+<p></p>
+<p><a href='#7595'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Isaac Gouy</a> - Re: Partial Types in C# <a name="7613">&nbsp;</a><a href='#7613' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">7/12/2003; 4:20:21 PM (reads: 955, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>it just sounds like a convenience mechanism</i> <br>
+That's what Microsoft state: <p>
+
+<blockquote>Host: Anders (Microsoft)
+Q: What's the aim of partial types in C#?<p>
+
+A: Two reasons. First, people often ask us for include files. When we dig a little deeper, it turns out they want to split large classes into multiple files. Partial types will allow you to do that, but in a structured fashion. Second, partial classes solve the “round trip” problem with auto generated code. The code generator can create one file and the user’s additions can be placed in another file. When code is regenerated, the user’s changes aren’t lost.</blockquote>
+I agree that the mechanisms in MultiJava, Nice and Dylan provide much much more than C# partial classes. <br>
+I don't see that splitting a class's methods across multiple source-files is a novel departure for a programming language or that it breaks class encapsulation.  <br><p>
+
+Must be that <a href="http://wiki.cs.uiuc.edu/CampSmalltalk/Source+code+in+files%3F+How+quaint!">Source code in files? How quaint!</a> thang ;-)
+<p></p>
+<p><a href='#7613'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Patrick Logan</a> - Re: Partial Types in C# <a name="7675">&nbsp;</a><a href='#7675' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">7/15/2003; 7:47:10 AM (reads: 863, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+This sounds interesting, but it also sounds like a form of "delegation" which is easy to experiment with using a dynamic language like Smalltalk, Lisp, etc. (<a href="http://lieber.www.media.mit.edu/people/lieber/Lieberary/OOP/Delegation/Delegation.html">Lieberman, 1986</a>)<p>
+
+The problem I have is with languages that are so difficult to extend that they force one primary solution to a problem without enough experimentation and publication beforehand.
+<p></p>
+<p><a href='#7675'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

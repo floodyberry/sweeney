@@ -1,0 +1,42 @@
+<h4>Unreal Tournament notes for mod authors</h4>
+
+<p>I've had several inquiries from mod makers about how hard it will be to &quot;port maps
+and mods from Unreal 1 to Unreal Tournament&quot;.&nbsp; The answer is, port?&nbsp; What's
+this talk of porting?&nbsp; This stuff <span class="italic">just works</span>.</p>
+
+<p>Steve Polge put a lot of effort into updating the Unreal 220+ game code so that it
+integrates seamlessly with Unreal Tournament.&nbsp; Both products install into the \Unreal
+directory, and are mutually compatible.&nbsp; So, you can install one, the other, or both
+-- and existing maps and mods which are compatible with the latest version of Unreal, will
+be fully compatible.</p>
+
+<p>For convenience, Unreal Tournament ships with all of the script packages from Unreal 1
+(including UnrealShare.u and UnrealI.u), all of the .utx files, and all of the .uax files.
+&nbsp; Unreal Tournament is a superset of the Unreal 1 with the exception of the Unreal 1
+maps and music.&nbsp; All new UT content (lots of scripts, textures, sounds, game types,
+and new actors) are designed to interoperate with the existing ones in Unreal 1.</p>
+
+<p>The new player code is implemented in a subclass of UnrealIPlayer, which means that
+Unreal Tournament players will work in user-created deathmatch maps for Unreal 1. &nbsp;
+
+However, the new UnrealTournamentPlayer classes and meshes include new features and
+animations, so you can choose to take advantage of this (and require UT), or not. &nbsp;
+The new game types are GameInfo subclasses.&nbsp; The new weapons and pickups interoperate
+with the old ones.</p>
+
+<p>UnrealEd supports Unreal Tournament maps without any modifications.&nbsp; This
+&quot;just works&quot; in the same way that most of the licensees use UnrealEd without
+modifications.</p>
+
+<p>One huge Unreal Tournament feature that script programmers will be interested in is the
+all-new user interface code.&nbsp; While Unreal 1's menus are functional, the &quot;look
+and feel&quot; is basically derived from Doom's menus, which were derived from Wolfenstein
+3D's menus, which probably date back to some even earlier id Software game.</p>
+
+<p>The new game UI is a cutting-edge redesign, and continues our tradition of creating
+code and tools which licensees and mod makers can endlessly customize and tweak.&nbsp; I
+can't say more about it yet, but the ongoing joke is that we're going to rename it
+UnrealOS (it's just a joke, but the analogy will become clear later).&nbsp; Maybe we'll
+release UI screenshots at some point.</p>
+
+<p>-Tim Sweeney</p>

@@ -1,0 +1,15 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/f93d7ace40c24ad5/812bb4bb31b58ccd?lnk=st&rnum=41&hl=en#812bb4bb31b58ccd
+[comp.lang.functional] Re: curried function calling
+Alan,
+
+The way you're describing this code reflects the LISP view of programming, where there is such a thing as a "function with a parameter attached to it", and that "evaluating the function with the parameter attached to it" produces the resulting value.
+
+That concept doesn't exist in most languages.  For example, in Haskell,
+
+   g = (+) 3
+
+applies the function (+) to the argument 3, and binds the result to "g".  The function (+) takes a number parameter A, and returns a new function that takes a different number parameter B and returns A+B. Thus "g" is bound to a function that takes a number B and returns B+3.
+
+In this view, functions can return functions, and functions take take functions as parameters.  So there is no such thing as "binding a parameter to a function" here, just calling a function with a parameter, which produces a result.
+
+To get a better understanding of the differences in view, it's useful to look at a simple implementation of a lambda expression evaluator in Haskell, where you'll see that the primitive pieces of code are functions (lambdas), constants, and function calls -- there isn't any such thing as a "function with a parameter attached".  Then compare to LISP evaluators where quoted lists are literally considered to be "functions with parameters attached", which can later be evaluated to produce results. 

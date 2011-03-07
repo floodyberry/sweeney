@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>On the importance of Turing completeness | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2846" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>On the importance of Turing completeness</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >In taking a graduate class in theoretical computer science, I developed a question that was never answered in a way that I felt comfortable with accepting, and now I can't stop thinking about it.</p>
+<p >We discussed that most computer languages are Turing complete, but did not discuss why that is necessary.  When I asked, I got an answer of the type: because there are problems only solvable by Turing complete languages.  Yet, I feel no examples coming immediately to mind.  Pushdown-automata or stacks are always decidable, and there is an enormous amount of problems that can be solved using them.  Also, very many practical problems can be solved in the form of a graph.  Yet, many other problems can be solved with primitive recursion which is also decidable. </p>
+<p >So, I still feel like I am missing something; what are the practical benefits of making a language Turing complete?  Or to ask another side of the question: what practical benefits would be lost by not being Turing complete?</p>
+<p >Any help on this one, I would tremendously appreciate.</p> </div>
+ <div class="links">By <a href="user/5664" title="View user profile.">jdgallag</a> at 2008-06-11 16:49 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/2831" title="erlang green threads and the CLR">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2846" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 505 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2846" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2846" />
+<a id="comment-42110"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42110" class="active">Here&#039;s a concrete example of</a></h3>
+ <div class="content"><p >Here's a concrete example of an interesting semi-decidable problem: full intuitionistic first-order predicate logic. You can write a theorem prover that will always find the proof of a proposition P, if it is in fact true. However, there's no way to make this complete: there's no way to ensure that the theorem prover will halt if P is <em >not</em> provable. (If it were, then you could solve the Halting problem.)</p>
+<p >So a complete theorem prover for FOL has to be written in a Turing-complete language. </p></div>
+ <div class="links">By <a href="user/1111" title="View user profile.">neelk</a> at Wed, 2008-06-11 17:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-42113"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42113" class="active"> So a complete theorem</a></h3>
+ <div class="content"><blockquote ><p > So a complete theorem prover for FOL has to be written in a Turing-complete language. </p></blockquote>
+<p >That's not actually true.  Consider a language consisting of only one valid program - "RunFOLTheoremProver()" - with appropriate semanics :).  There are also less trivial examples.</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Wed, 2008-06-11 17:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-42131"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42131" class="active">This is Turing-complete!</a></h3>
+ <div class="content"><p >This is a sufficient primitive to write an interpreter for any other Turing complete language. What you do is say "If the reduction predicate Eval(x,y) for language L is foo, then does there exist an x such that Eval(p, x) holds for program P?" Then, if the prover returnss a proof, then you can look at x to figure out what that program P evaluated to. If the prover never returns, then the program must have gone into an infinite loop. It won't be efficient, but it will work....</p></div>
+ <div class="links">By <a href="user/1111" title="View user profile.">neelk</a> at Wed, 2008-06-11 21:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-42132"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42132" class="active">Hmmm</a></h3>
+ <div class="content"><p >Well I guess you have a point.  I was too busy trying to be flip to think it through :/.</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Wed, 2008-06-11 21:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-42111"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42111" class="active">Writing an interpreter</a></h3>
+ <div class="content"><p >One can write an interpeter for an Turing-complete language in a Turing-complete language.  You can, obviously, write an interpreter for something less than Turing-complete in a Turing complete langauge.</p>
+<p >However, less powerful formalisms are generally incapable of self-interpretation.  You cannot create a "universal state machine"--a device which takes as input a "program" (for state machines, a regex or some other means of specifying an arbitrary regular language), followed by input strings to match against that language--using a state machine.</p>
+<p >Likewise, you cannot write an intepreter for a primitive-recursive language using a primitive-recursive language; you need full recursion.  </p>
+<p >This <a href="http://www.cs.chalmers.se/Cs/Grundutb/Kurser/naber/docs/areallfunctions.pdf">paper</a> may be of interest; it covers the relevant computational theory and its consequences.</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 2008-06-11 17:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-42114"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42114" class="active">That said...</a></h3>
+ <div class="content"><p >despite the fact that there are indeeed practical problems (not just theoretical exercises like computing Ackerman's function) that require full-Turing-completeness...</p>
+<p >there are many that do not, and benefit from decideability.</p>
+<p >Consider the advice of Sir Tim Berners-Lee, expressed as the <a href="http://en.wikipedia.org/wiki/Principle_of_Least_Power">Principle of Least Power</a>.  Also consider the similar (and excellent) advice by LtU's own Peter Van Roy in <a href="http://www.info.ucl.ac.be/~pvr/book.html">Concepts, Techniques, and Models of Computer Programming</a>, although in the context of choosing a declarative vs an imperative programming model/language.  PVR advises choosing more declarative models when you can, the less declarative models (which are more expressive, but harder to reason about) when you have to.  (If I have misquoted you Peter--I don't have my copy of CTM handy to browse here at work--please correct me).</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 2008-06-11 18:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-42122"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42122" class="active">Ackerman Termination</a></h3>
+ <div class="content"><p ><a href='http://en.wikipedia.org/wiki/Charity_(programming_language)'>Charity</a> was an interesting exercise in non-Turing complete programming languages that is capable of expressing the Ackerman function.  Alas, it seems to have not been active over the last 10 years.  Though it would be of interest to anyone interested in seeing how far one can take a non-TC language.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Wed, 2008-06-11 20:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-42115"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42115" class="active">Why Turing Completeness?</a></h3>
+ <div class="content"><p >There's a practical argument as well.  It's usually much easier and more natural to express an algorithm using general recursion than primitive recursion or another sub-Turing language that guarantees termination.  A trivial example is the factorial function; you can write it using primitive recursion, but the excercise is a lot more intuitive with general recursion.</p>
+<p >Most programming in languages guaranteed to terminate reduces to writing programs in a very convoluted way so as to prove that they terminate.  Turing-complete languages have no such burden, so you can just write your algorithm directly.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Wed, 2008-06-11 18:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-42126"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42126" class="active">Also why Turing incompleteness.</a></h3>
+ <div class="content"><p >Conversely, this is also why languages where programs are guaranteed to terminate may be useful in proof systems / dependent types / static verification. If you are going to accept code of type "program that produces a proof of X when run" as proof of X you had better show that the program will actually terminate. If you need the termination proof anyway it is hopefully easier to bend the algorithm a bit so it is "obviously" terminating rather than also providing a completely independent termination proof (though you can usually do that if necessary, with well-founded recursion).</p></div>
+ <div class="links">By <a href="user/2755" title="View user profile.">Brandon Moore</a> at Wed, 2008-06-11 20:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-42116"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42116" class="active">random algorithms, iterate-until-done algorithms</a></h3>
+ <div class="content"><p >Here's a couple more examples of algorithms that would be annoying to write in a language where all computations provably terminate.</p>
+<p >Consider this plausible algorithm to give a uniformly distributed random number &lt;200, given a source of uniformly distributed random bytes:</p>
+<pre >
+def random_lt_200():
+    while True:
+        v = get_random_byte()
+        if v &lt; 200: return v
+</pre><p >
+In practice, this will terminate very quickly; but if get_random_byte returns truly random numbers, this may not terminate at all (although it will terminate with probability 1).  If get_random_byte() returns pseudo-random numbers with a reasonable generator, then this probably can be proved to terminate with pencil and paper, but the proof may not be simple enough to encode in your language (depending on where the non-Turing-completeness comes from).</p>
+<p >As another example, consider the Simplex algorithm for linear programming.  This starts with an initial solution, then incrementally improves the solution until it reaches the final, optimal answer.  This could be written in a non-Turing-complete language by computing an upper bound on the number of improvement iterations required, and then iterating at most that many times, but this has a couple of problems: 1) this upper bound is not an interesting number, so computing it and maintaining a loop counter is wasted work and clutters the code; and 2) you have to write code to deal with the loop ending without finding a solution, even though this can never happen.</p>
+<p >On the other hand, sub-Turing-complete languages are very interesting, and can be useful in their niches.  I have a programming language design in my head where the core language is sub-Turing-complete (basically Haskell with only primitive recursion), but Turing completeness is restored with a Nontermination monad that allows general looping.</p></div>
+ <div class="links">By <a href="user/866" title="View user profile.">Carl Witty</a> at Wed, 2008-06-11 19:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-42117"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42117" class="active">&quot;Natural&quot; programming languages are Turing-complete</a></h3>
+ <div class="content"><p >At least imperative ones.</p>
+<p >If your programming language permits unbounded recursion or loops, then its Turing-complete.</p>
+<p >Generally, the languages which are not Turing-complete are not things like BlooP (a non-Turing complete, though primitive recursive, language in imperative style developed by Douglas Hofstadter as a pedagogical exercise)--but data-declarative languages which support limited transforms/queries on the data.  The query subset of SQL is not Turing complete, but still highly useful.</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 2008-06-11 19:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-42120"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42120" class="active">Right. To put it more</a></h3>
+ <div class="content"><p >Right. To put it more bluntly: Turing-completeness is very easy to get when designing a language; non-TC requires more careful thought.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Wed, 2008-06-11 20:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-42124"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42124" class="active">well, not quite...</a></h3>
+ <div class="content"><p >You also need to be able to compute with an unlimited amount of data.</p>
+<p >I don't think standard C lets you deal with an arbitrarily large amount of memory (memory is accessed via pointers, and the number of distinct pointers you can have is limited because they are interconvertible with the fixed-size integral type intptr_t).  Presumably the inclusion of file I/O does allow standard C to be Turing-complete.</p></div>
+ <div class="links">By <a href="user/866" title="View user profile.">Carl Witty</a> at Wed, 2008-06-11 20:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-42127"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42127" class="active">C pointers can be arbitrarily large</a></h3>
+ <div class="content"><p >There is a requirement that they be convertible to type "long int" and back, but you can create a C dialect with 1024-bit pointers, if you like--sufficient to uniquely address any atom in the universe, and then some.  The fact that (void *) is 4 or 8 bytes on most machines is a mere concession to practicality.</p>
+<p >Of course, *no* practical (constructible) computing device is Turing-complete, if we are that picky; all machines ever built have a finite amount of memory, after all.  Which doesn't seem to be a limitation in practice--any algorithm that terminates will by necessity consume a bounded amount of memory.  Fork bombs may (attempt) to consume an infinite amount of memory--but they don't terminate--at least until the OOM killer zaps 'em.</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 2008-06-11 21:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-42118"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42118" class="active">On a practical level</a></h3>
+ <div class="content"><p >On a practical level, it's much easier for those of us that are at the subgenius level to actually get our work done.  Sure there are DSL's and sub-turing languages that allow us to get things done.  And a more comprehensive set of languages are always welcomed for specialty tasks.  But there is still a lot of territory that is much easier to travel in Turing complete languages.</p>
+<p >To take a practical example - SQL.  SQL is a very useful language for getting at the data (warts and all).  But it has it's limitations.  Either you get around those limitations via stored procs (PL/SQL, T-SQL, etc).  Or you dive off into a different programming language.  The practical question is whether we could keep the determinism of SQL without having to resort to more powerful languages?  And if we designed a non-Turing query language that could do all the things we do in stored procs or Java/C#, is it possible for an average programmer to get work done.</p>
+<p >On a different note, modularity is also an important concern - the main thrust of any software engineering.  We can not tackle problems as one gigantic equation to be solved.  We must be able to build it up from pieces of smaller solutions.  So any idea on practicality has to incorporate the idea of the open-closed principle.  We must be able to isolate things in the small.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Wed, 2008-06-11 19:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-42119"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42119" class="active">Another point with SQL</a></h3>
+ <div class="content"><p >Would all those query optimizers--a key feature of RDBMS's that make SQL practical to use (it's easy to write queries that, if implemented naively, would take a jakillion years to complete on even the fastest server)--still be possible if SQL didn't limit itself to a logical foundation (predicate calculus) that wasn't Turing-complete?</p>
+<p >Probably not.</p>
+<p >(This is in general the downside of many declarative languages--they have logical semantics which is well-defined and well-controllable by the user, but the operational semantics are poorly-defined and difficult to control.  Whereas full-blown imperative languages typically have operational semantics that the user can control--meaning the programmer can exert a great deal of influence over factors such as performance--but poorly-defined or nonexistant logical semantics).</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 2008-06-11 19:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-42125"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42125" class="active">Fighting the optimizer</a></h3>
+ <div class="content"><p >As one who spends way too much time cleaning up SQL statements, there is much trivia to be found in guessing how to outsmart the database optimizers.  They can be quite fussy at times when you hit the borders of their limits.  The expert SQL programmers still have to exert control over the performance, but in a different fashion.</p>
+<p >But, yes, the optimizers would have a very tough go if the ceiling were removed.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Wed, 2008-06-11 20:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-42121"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42121" class="active"> So, I still feel like I am</a></h3>
+ <div class="content"><blockquote ><p > So, I still feel like I am missing something; what are the practical benefits of making a language Turing complete? Or to ask another side of the question: what practical benefits would be lost by not being Turing complete? </p></blockquote>
+<p >I think this is a little bit like asking "What are the practical benefits of having a complete car?"  It's easiest to answer if we know which part you're thinking of removing.  Each of the decidable systems you mentioned has serious limitations that would make it unsuitable for general computation.  You can do alot better (like taking a Turing language and restricting to the portion that can be proved total in ZFC with plenty of inaccessible cardinals), but that will require significant programmer help and/or be unusably slow (edit: to compile).</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Wed, 2008-06-11 20:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-42128"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42128" class="active">That&#039;s Coq</a></h3>
+ <div class="content"><p ><a href="http://citeseer.ist.psu.edu/94763.html">Sets in Types, Types in Sets</a> shows more or less that the calculus of constructions with a given number of universes is equivalent to ZFC with some other number of inaccessible cardinals. Or, that Coq is basically such a language (and type checking is generally only slow where the automation has produced big terms)</p></div>
+ <div class="links">By <a href="user/2755" title="View user profile.">Brandon Moore</a> at Wed, 2008-06-11 21:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-42130"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42130" class="active">Ya, I actually just read</a></h3>
+ <div class="content"><p >Ya, I actually just read that paper a few months ago.  Coq is an example that falls into the burdensome to use category -- programmers supply most of the proofs.  If the programmer is not obligated to provide such complete proofs, checking will get slow.</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Wed, 2008-06-11 21:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-42123"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42123" class="active">Turing completeness is overrated</a></h3>
+ <div class="content"><p >We can divide computation in two groups: those that are supposed to terminate (i.e. algebraic) and those that may not terminate but must do something useful as they go (i.e. coalgebraic, and this property is called productivity). It's very hard to find examples of programs (that are useful, common and aren't theorem provers) that aren't supposed to either terminate or be productive. The main problem isn't writing programs that terminate or are productive but convincing the compiler that the code we wrote has one of these properties, that's the primary reasons why we use Turing complete languages.</p>
+<p > Also as a general rule of thumb we can always convert an undecidable program to a provably terminating one by defining a maximum amount of time before timeout, it can even be arbitrarily high, and the vast majority of useful programs are supposed to do what we want in a finite amount of time. A similar trick can be done for programs that we don't know if are productive. In a sense I prefer languages that lack Turing completeness because they allow me to understand the programs better: if a function provably terminates it's easier to reason about the program that uses it. OTOH I agree with many of the above comments: it's usually painful to write certain algorithms without being able to use general recursion. The usual strategies is relying on well known combinators that are proved, fall back to folds and unfolds when they are insufficient and ask for help if this doesn't work. The quality of a language without Turing completeness can be measured by how much work you can do before asking for help ;)</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Wed, 2008-06-11 20:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-42129"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42129" class="active">Even theorem provers...</a></h3>
+ <div class="content"><p >Arguably, theorem provers are being productive - they're exhausting more and more of the search space.  And I'd argue that they should be structured as such, exposing their partiality at top level rather than there being some function call findProof() that might hang.  They should probably even be visibly productive, displaying their progress to the user and responding to a user request for termination.  I think the *only* good reason to allow nontermination in a language is to avoid having to bother to prove that things terminate.</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Wed, 2008-06-11 21:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-42135"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42135" class="active">A relevant quote</a></h3>
+ <div class="content"><pre >"&gt; So are you saying that you can determine in advance whether the program will
+ &gt; terminate?  If so, how?
+
+   Can you? If not, why are you writing this program?"
+ - Matthias Blume</pre></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Wed, 2008-06-11 22:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-42139"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42139" class="active">Context?</a></h3>
+ <div class="content"><p >That's a great quote.  Do you have it in its original context?</p></div>
+ <div class="links">By <a href="user/2440" title="View user profile.">dbueno</a> at Thu, 2008-06-12 01:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-42141"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42141" class="active">Google is your friend</a></h3>
+ <div class="content"><p >It's from <a href='http://groups.google.com.br/group/comp.lang.functional/browse_thread/thread/1f0b2d3bff830c6e/a885a14003d27143?lnk=st#a885a14003d27143'>this</a> thread.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Thu, 2008-06-12 02:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-42133"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42133" class="active">fall back to folds and</a></h3>
+ <div class="content"><p ><i >fall back to folds and unfolds when they are insufficient</i></p>
+<p >Is programming primarily with folds and unfolds that onerous? I realize that iterating over two collections at once can be difficult with fold, but I believe it's doable. What are the fundamental limitations or downsides of fold? Or are the downsides perhaps limitations of current type systems?</p></div>
+ <div class="links">By <a href="user/2352" title="View user profile.">naasking</a> at Wed, 2008-06-11 22:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-42137"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42137" class="active">folds and unfolds are trickier</a></h3>
+ <div class="content"><blockquote >Is programming primarily with folds and unfolds that onerous?</blockquote>
+<p >They are trickier to use than just well known combinators. Writing <code >map f (filter p) xs</code> is easier than writing the equivalent fold. Also you need to do lots of mental origami to solve some problems with nothing more than fold/unfold, a delightful exercise but it isn't something that most programmers would like to face with a pressing deadline. The good thing is that today we have good combinators to almost <a href='http://haskell.org/haskellwiki/Zygohistomorphic_prepromorphisms'>everything one would like to do</a>, so we just need to find them (usually if you can spell the type you expect a tool like <a href='http://lambda-the-ultimate.org/node/1178'>Djinn</a> or <a href='http://www.haskell.org/hoogle/'>Hoogle</a> can write down the function for you).</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Wed, 2008-06-11 23:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-42138"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42138" class="active">Yes</a></h3>
+ <div class="content"><p >Basically, fold captures the principle of one-step structural induction. However, we often want to recursions that have more complex structure, and emulating them with folds gets yucky.  For example, here are two examples which are doable but ugly with folds:</p>
+<pre >
+(* We want both 0 and 1-element lists as base cases here *)
+
+fun concat [] = ""
+  | concat [x] = x
+  | concat (x :: xs) = x ^ ", " ^ (concat xs)
+
+(* with foldr, we need a flag to identify the last item *) 
+
+fun concat ss =
+  fst (foldr
+	 (fn (s, (acc, islast)) =&gt;
+	    if islast then (s, false) else (s ^ ", " ^ acc, false))
+	 ("", true)
+	 ss)
+
+
+(* We are using a course-of-values recursion here *) 
+
+fun fib 0 = 1 
+  | fib 1 = 1 
+  | fib n + 2 = (fib n) + (fib (n + 1))
+
+(* with folds, you need a higher-order fold to emulate course-of-values *)
+
+fun foldnat s z n =
+  if n = 0 then z else s (foldnat s z (n-1))
+
+fun fib n =
+  let val (_, fib', _) = 
+    foldnat
+      (fn (k, fibp, fibpp) =&gt;
+	 (k + 1,
+	  (fn n =&gt; if n &lt; k then fibp n else fibp n + fibpp n),
+	  fibp))
+      (0, (fn n =&gt; if n &gt; 0 then 1 else 0), (fn n =&gt; 0))
+      n
+  in
+    fib' n
+  end
+</pre><p >
+Things get more annoying when you want to iterate over two collections at once naturally. </p>
+<p >This is because the natural way to put two collections together is with a <code >zip</code>, which is an unfold, and since folding over an unfold may fail to terminate this won't typecheck. Unfolds generate elements of greatest fixed points, and folds consume elements of least fixed points. So the typechecker has to rule out <code >(fold f) o (unfold g)</code> because it doesn't know for sure that a call to <code >unfold g</code> will produce something typed by the least fixed point. (Haskell and ML don't care about this issue because they both admit nontermination.)</p>
+<p >-*-*-*-</p>
+<p >This is all more or less fixable with enough dependent type theory, because you can give a general induction principle more or less equivalent to the Knaster-Tarski theorem, and use it to derive all the specific induction principles you want. There will likely need to be some research done on the scaffolding you need to make this all work in a clean way, though -- today, most type theories are at the spartan end, because proof assistants want simple type theories to get small trusted bases, whereas programming languages call for rich type theories to get small programs. </p></div>
+ <div class="links">By <a href="user/1111" title="View user profile.">neelk</a> at Thu, 2008-06-12 00:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-42134"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42134" class="active">Ah thank you,</a></h3>
+ <div class="content"><p >The point about making life easier actually makes a lot of sense.  In a language that lacks Turing completeness, the programmer must do a great deal more work.  </p>
+<p >Thus it seems that the biggest benefit of Turing complete languages are that better/more abundant abstraction is available; which in turn allows efficient solutions and algorithms.</p>
+<p >Of course, there are algorithms that cannot be done in a decidable language, but I feel I was missing the point that in a non-Turing complete language everything must be spelled out to explicitly halt.</p>
+<p >However, there is a language Charity which can express the Ackerman function which cannot be done through primitive recursion, yet the language is not Turing complete.  I have not used Charity and only looked into briefly as I sometimes get pulled into the world of categories.  So now I am wondering, if many of the concerns expressed about primitive recursive languages would be much less a problem in a language like Charity.</p></div>
+ <div class="links">By <a href="user/5664" title="View user profile.">jdgallag</a> at Wed, 2008-06-11 22:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-42136"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42136" class="active">You would probably be</a></h3>
+ <div class="content"><p >You would probably be interested in <a href="http://lambda-the-ultimate.org/node/2003">this thread on total functional programming</a>. The paper is about building a language that is not Turing complete, and how much can still be accomplished given that constraint.</p></div>
+ <div class="links">By <a href="user/2352" title="View user profile.">naasking</a> at Wed, 2008-06-11 23:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-42140"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2846#comment-42140" class="active">Yes</a></h3>
+ <div class="content"><p >That paper is exactly the kind of thing I was hoping to see.  A very interesting read.</p></div>
+ <div class="links">By <a href="user/5664" title="View user profile.">jdgallag</a> at Thu, 2008-06-12 01:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="
+http://wiki.squeak.org/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2008/05/12" title="Previous month">«</a> June 2008  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/6/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2008/6/2" title="2 posts">2</a></td>
+  <td class="day-link"><a href="archive/2008/6/3" title="2 posts">3</a></td>
+  <td class="day-link"><a href="archive/2008/6/4" title="1 post">4</a></td>
+  <td class="day-link"><a href="archive/2008/6/5" title="2 posts">5</a></td>
+  <td class="day-link"><a href="archive/2008/6/6" title="2 posts">6</a></td>
+  <td class="day-link"><a href="archive/2008/6/7" title="1 post">7</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/6/8" title="1 post">8</a></td>
+  <td class="day-link"><a href="archive/2008/6/9" title="1 post">9</a></td>
+  <td class="day-link"><a href="archive/2008/6/10" title="1 post">10</a></td>
+  <td class="day-link"><a href="archive/2008/6/11" title="2 posts">11</a></td>
+  <td class="day-today">12</td>
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">15</td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2846" title="31 comments" class="active">On the importance of Turing completeness</a></li><li><a href="node/2831" title="29 comments">erlang green threads and the CLR</a></li><li><a href="node/2845">Functional Programming in the ACM CS Curriculum</a></li><li><a href="node/2839" title="6 comments">Our Own Little Language</a></li><li><a href="node/2844" title="3 comments">using foldr to do map</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2846" title="31 comments" class="active">On the importance of Turing completeness</a></li><li><a href="node/2845">Functional Programming in the ACM CS Curriculum</a></li><li><a href="node/2844" title="3 comments">using foldr to do map</a></li><li><a href="node/2843" title="2 comments">What kind of a category is the blue calculus?</a></li><li><a href="node/2841">JVM Language Summit</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

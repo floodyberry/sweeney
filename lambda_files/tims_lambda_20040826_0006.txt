@@ -1,0 +1,24 @@
+http://lambda-the-ultimate.org/node/212
+http://lambda-the-ultimate.org/node/212#comment-1611
+1048788
+Implementing Declarative Parallel Bottom-Avoiding Choice
+Thoughts
+<p>In this area, I think the research community is missing the boat in some important ways.</p><p>
+
+First of all, with "amb", there are really two kinds of bottom that really ought to be distinct: the notion of "no values", and the notion of divergence due to a never-ending computation.  Call the former "nothing" and the later "bot" (Haskell folks write _|_ for bot.)</p><p>
+
+Computing with "nothing" is very simple and well-founded.  "nothing amb x" and "x amb nothing" are equivalant to "x".  McAllester's Ontic language takes the amb operator a lot further than McCarthy had original envisioned, and enables one to bundle up collections of amb values into set-like types.  Ontic's syntax for this is "the-set-of-all x".</p><p>
+
+This "the-set-of-all x" construct is the microscope under which "nothing" and "bot" are revealed to be distinct concepts.  In a type containing a bunch of amb values, some of which may be divergent, it's impossible to perform any useful operations except for positively verifying that an element is a member.  Membership can't be refuted, because that requires executing a divergent computation.  The only way bottom-avoiding choice can be made usable is with a Prolog-style Cut operator, whose results are nondeterministic and likely to be unpredictable and weird in practice.</p><p>
+
+Thus I'm a big believer in amb as a fundamental programming construct, and "nothing"-avoiding choice is trivial in this system, but "bot"-avoiding choice seems an impractical and unhelpful tool in language design.</p><p>
+
+Note on the poster's comment on amb breaking referential transparency: When amb is implemented correctly (with proper sharing of choice points), it's referentially transparent.</p><p>
+
+For example, (\x.x+x)(3 amb 5) beta-converts to let x=(3 amb 5) in x+x, which reduces to (let x=3 in x+x) amb (let x=5 in x+x), which reduces to 6 amb 10.</p><p>
+
+This can be summarized as "only single-valued terms evaluate to values; zero-valued or multi-valued terms must be treated as references to a single, shared choice point".</p><p>
+
+Another way of visualizing terms like (\x.x+x)(3 amb 5) is to translate them to Haskell comprehensions: [x+x | x &lt;- [3,5]].</p><p>
+
+Another example is "let x=nothing in 7" must evaluate to nothing, not 7.  This is obvious from the comprehension [7 | x&lt;-[]]. At first, this seems counterintuitive because we tend to think of any expression you can write as evaluating to a value, whereas with "amb", only single-valued terms evaluate to values; the ordinary substitution rules don't apply where multiple values are present.</p>

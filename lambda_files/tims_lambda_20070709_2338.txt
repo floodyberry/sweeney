@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/2340
+http://lambda-the-ultimate.org/node/2340#comment-34923
+1050916
+Simply Easy! (An Implementation of a Dependently Typed Lambda Calculus)
+General recursion
+<p>For example, consider a dependent-typed program whose compilation constructs a parser from a parser definition in a string (say, in BNF format).  Then, when you run that program, it parses another file using that parser.  Here, we're moving something that is traditionally done at runtime to compile-time, which is sensible here since constructing a parser is a purely functional operation.
+</p><p>Well, depending on what the string contains, compiling this could loop.  So, to write the dependent-typed parser generator using wellfounded constructs, you can't simply write a function from strings to parsers, you need to construct a provably wellfounded parser by hand using constructs like primitive recursion.
+</p><p>More importantly, it's far easier for real-world programmers to write any sort of code using general recursion than to restructure everything using e.g. primitive recursion or this paper's FoldNat/NatElim constructs -- perhaps an order-of-magnitude easier.  Such productivity multipliers are a big deal for large-scale programming.
+</p><p>In those cases, programmers would much prefer to write code easily using general recursion and to debug the very rare cases where compilation doesn't terminate, than to spend a much greater effort writing these algorithms using unfamiliar induction constructs.</p>

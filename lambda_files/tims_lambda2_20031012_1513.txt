@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/classic/message9018.html
+http://lambda-the-ultimate.org/classic/message9018.html#9088
+0533306
+Historic Documents
+Re: Historic Documents
+<p>There are a lot of great paperes in the "collected manuscripts of Edsger W. Dijkstra" section.  It's amazing how much of the stuff he said relative to computing in the days of punchcard readers is still true, yet insufficiently recognized, now.</p>

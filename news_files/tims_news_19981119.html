@@ -1,0 +1,86 @@
+<h4>Unreal 220 Internet Improvements</h4>
+
+<p>I'm now down in Raleigh, North Carolina with the rest of the Unreal team.&nbsp; Things
+are really coming together for the top-secret project we're working on, and Unreal 220 is
+starting to solidify.&nbsp; We don't have a release date yet, but it could be as early as
+next week.</p>
+
+<p>The Internet play improvements in 220 are quite noticeable. &nbsp; Steve and I are
+using a new physics prediction scheme based on motion compensation.&nbsp; This improves
+the smoothness of other players' movement in deathmatch games, especially in large, open
+levels like DmDeck16, where lots of players are visible.</p>
+
+<p>Steve has redesigned the moving brush code so that moving brushes now are now handled
+client-side.&nbsp; Platforms and doors are very smooth now.&nbsp; Finally, I've created a
+new scheme for managing temporary actors like projectiles, which reduces their bandwidth
+by about 30%.</p>
+
+<p>Steve and Brandon have also added a lot of other improvements, such as showing ping
+times, server name, and level name in the player list, showing the name of opponents when
+you point the crosshair at them in a network game, a beep when chat messages come in, and
+color coding of messages.</p>
+
+<h4>Unreal Editor Progress</h4>
+
+<p>I've also been working on the new Unreal Editor, featuring a user-interface rewrite
+(moving over to C++ from Visual Basic). It's now more than half-way done. &nbsp;
+Architecturally, the new editor code is far more general than the old UnrealEd. &nbsp; The
+editor itself is very abstract, and almost all functionality is implemented through
+plug-ins.&nbsp; There are plug-in interfaces for brush builders, views of objects (like 3D
+scenes and the 2D editor), view controllers, import tools, export tools, browsers, and
+operations on arbitrary kinds of objects.&nbsp; Plug-ins can even define their own sub
+plug-in interfaces, etc.</p>
+
+<p>This new approach will provide a more solid foundation for Unreal 1 editing, but the
+big gains will come in the next-generation engine.&nbsp; A major bottleneck in creating
+the Unreal 1 engine was the complex coupling between the rendering engine and the editor,
+which made it difficult to modify the renderer.&nbsp; The new approach generalizes the
+concept of editing, and will make it easier to add cool new features which require editor
+support.</p>
+
+<p>I plan to start releasing public betas of the new UnrealEd as soon as it's really
+stabilized, with the first beta in the first week or two of 1999 if all goes well.</p>
+
+<p>We have long planned to release the editor as a full retail product through GT
+Interactive after it has been cleaned up and finalized, but there doesn't seem to be
+enough mainstream retail interest to justify it.&nbsp; So, unless something changes real
+soon, we'll plan to release the final version freely, with the manual provided in HtmlHelp
+format rather than printed.</p>
+
+<h4>Web Site Notes</h4>
+
+<p>A request of web sites providing collections of Unreal related files, such as the cool <a
+href="http://www.freshmeat.org/unreal/">Unreal Resources</a> page: Please
+link to the official <a href="http://unreal.epicgames.com/Versions.htm">Download</a> page for the Unreal patches,
+rather than mirroring specific patch versions locally.&nbsp; A bunch of web sites have old
+Unreal patches in their download sections (as old as the 1.01 patch), which are no longer
+relevent.&nbsp; If everyone links to the central <a href="http://unreal.epicgames.com/Versions.htm">Download</a> page,
+users are more likely to get the latest patch. Thanks! </p>
+
+<p>Cool Unreal related things I've seen recently... </p>
+
+<ul>
+  <li><a href="http://unrealnation.com/unloaded/">Unloaded</a>, a great &quot;overhead view&quot; mod including some custom levels. It feels a lot like the classic arcade game
+    Gauntlet.</li>
+  <li><a href="http://www.astro.uni-bonn.de/~cloewe/unreal/">AEus' Unreal Stats Page</a>, a
+    totally cool stats tool for server administrators.</li>
+  <li><a href="http://www.unrealed.com/">UnrealEd.com</a> has grown to contain more and more
+    useful UnrealEd resources.</li>
+
+</ul>
+
+<h4>Unreal mod notes</h4>
+
+<p>Mod developers who get the cryptic &quot;sandbox&quot; error when trying their mods in
+network play: This error means you have a .upkg file that says server-side-only because
+you copied the one from IpDrv.u (which is SUPPOSED to be server-side-only).&nbsp; This
+usually prevents the mod from working, but sometimes just causes actors defined in the mod
+to not be visible to players.&nbsp; If you don't have a .upkg problem, you won't have a
+problem.&nbsp; If you do have a .upkg file, it should read:</p>
+
+<pre>[Flags]
+AllowDownload=False
+ClientOptional=False
+ServerSideOnly=False</pre>
+
+<p>-Tim Sweeney</p>

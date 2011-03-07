@@ -1,0 +1,19 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/34c1cf0c2e5bca43/b8a02933ba6a099f?lnk=st&rnum=22&hl=en#b8a02933ba6a099f
+[comp.lang.functional] Re: result of heterogeneous union
+[blockquote][blockquote]However, it's possible to be even more precise.  In a type system like McAllester's Ontic language (see http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps), you could say that, for any value a, the type of a is just "the-set-of-all a", and never have ambiguity in questions of "what is the type of this expression in this context?"  This approach is far outside of existing programming language practice, but I recommend reading the paper, just to see what's possible at one far extreme of the design space.[/blockquote]
+
+I'm *very* interested to read this paper, so I downloaded it, and also searched for more references. I didn't find too much; the first hit on google was for a submission to the excellent Lambda the Ultimate weblog by one Tim Sweeney. Sadly it did not spur much discussion.[/blockquote]
+
+Someday I think it will be recognized as one of the most important ideas in programming language foundations, aside Church's lambda calculus and the Curry-Howard isomorphism.  Admittedly nobody else including the author seems to share this view.
+
+[blockquote]Unfortunately, when I try to convert this file into anything I can view or print (pdf, say) the fonts turn to mush. I could probably read it anyway if I was 15 years younger, but not with the eyes I have now.
+
+I know it's totally off-topic, but mightn't anyone have any idea how to convert that .ps file into something with readable fonts? (Alternatively, if you know how I can become 15 years younger, that would also get a big "thank you.")[/blockquote]
+
+For reading and printing .ps files, try GhostScript and GSView, from: http://www.cs.wisc.edu/~ghost/
+
+[blockquote]Does this idea of "nondeterminism" have anything to do with constraint-based programming languages, such as Mozart?[/blockquote]
+
+Yes, in fact I think the Ontic style (though not necessarily syntax) provides a far more expressive framework for constraint-based languages than existing practice.
+
+The important thing in understanding Ontic, and perhaps the reason it hasn't become widely-known, is that its use of the word non-determinism doesn't imply an unpredictable outcome, but merely that a term may have multiple values (in the same order-independent and unique-up-to-equality way that a set may contain multiple values), and that sharing is handled properly in the presence of multivaluedness.  In other words, a term like {x:=3|4,y:=x+1} is equivalant to {3,4}|{4,5} and does not include the value {4,4}. 

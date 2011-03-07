@@ -1,0 +1,13 @@
+http://www.digitalmars.com/d/archives/429.html#N463
+[D] Your feelings
+[blockquote]Frequently in the D news group you reject ideas because they don't "feel right".  Respectfully submit that this is not a basis for informed decision.  printf doesn't "feel right" to me and never did.[/blockquote]
+Language syntax is a creative work, influenced by history and aesthetics. Making a language "feel right" is vital to its success!
+
+[blockquote]If D cannot use the STL (or a wrapped version of the STL), not many people will be using it.[/blockquote]
+Baloney!  STL is something only a C++ programmer could appreciate.
+
+Witness that when STL is translated to a language with a more flexible type system (such as Haskell), it basically "disappears" into much simpler native language functionality -- and you realize that half of STL consists of workarounds for C++ limitations, while the other half consists of workarounds for STL's limitations.
+
+STL-like techniques have no place whatsoever in a cleanly designed language.
+
+-Tim

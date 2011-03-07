@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Anyone remember Russell (the language, that is)? | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F648" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Anyone remember Russell (the language, that is)?</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Russell was a functional language developed some 25 years ago to explore the idea of data types as full first-class objects.  I'm a total amateur when it comes to programming languages, but I remember thinking at the time that it was pretty cool.  A cursory search of Lambda and the web didn't turn up much.</p>
+<p >The main reference looks to be:<br >
+"Data Types are Values"<br >
+TOPLAS, vol. 7, #3 (July 1985)</p> </div>
+ <div class="links">By <a href="user/1843" title="View user profile.">beev</a> at 04/18/2005 - 19:02 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/837" title="The Language Machine - a toolkit for language and grammar">previous forum topic</a> | <a href="node/1144" title="Interesting Logo Site: Elica">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/648" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 1852 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="648" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="648" />
+<a id="comment-5599"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/648#comment-5599" class="active">remember the references</a></h3>
+ <div class="content"><p>The other thing about Russell which was magical to me was its reference types. I had been working with Fortran and Pascal for several years. Variables with stack-based lifetimes, pass-by-reference, pointer types, and manual allocation on the heap were the way compiled programming languages worked. Then I attended a presentation on Russell and they didn't need any of that! Just reference types and a few basic operations like creation, dereferencing, and assignment.</p></div>
+ <div class="links">By <a href="user/336" title="View user profile.">Scott Turner</a> at Mon, 04/18/2005 - 19:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-5607"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/648#comment-5607" class="active">Seems like..</a></h3>
+ <div class="content"><p ><a href="http://www.hpl.hp.com/personal/Hans_Boehm/">Hans Boehm</a> (of conservative garbage collector fame) was involved. You can find an old implemenation <a href="ftp://parcftp.xerox.com/pub/russell/">here</a>.</p></div>
+ <div class="links">By <a href="user/1112" title="View user profile.">Alexandre Richer</a> at Tue, 04/19/2005 - 00:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-5611"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/648#comment-5611" class="active">Types as values</a></h3>
+ <div class="content"><p ><a href="http://www.aldor.org/">Aldor</a> is another language that considered types to be values, if you're interested in such things.</p></div>
+ <div class="links">By <a href="user/1170" title="View user profile.">Geoff Wozniak</a> at Tue, 04/19/2005 - 05:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-12353"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/648#comment-12353" class="active">Russell - that&#039;s my language!</a></h3>
+ <div class="content"><p >Scary and funny. This evening, I'm finishing writing tomorrow's lecture in computer science. I've been teaching postgradutes for the last 10 years, and tomorrow is the first time they let me near 1st years ;-).<br >
+I was just doing up a few slides of background, trying to make them understand the larger frame of computer science, so I Googled Russell Programming Language, that IMHO was created by me in the early 80s. Lo and B-hold, I found these pages! I've downloaded the stuff from the xerox server and will carefully look if there's any resemblance...<br >
+I named MY language after Bertrand Russell, after reading Primcipia Mathematica and having interesting discussions on various CompuServe fourms about set theory...</p></div>
+ <div class="links">By <a href="user/2499" title="View user profile.">cyberviking</a> at Tue, 11/22/2005 - 23:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-12411"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/648#comment-12411" class="active">Thankfully, the full paper is</a></h3>
+ <div class="content"><p >Thankfully, the full paper is online: http://portal.acm.org/citation.cfm?id=3987.  This requires an ACM subscription, which is well worth the cost.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 11/24/2005 - 22:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-12480"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/648#comment-12480" class="active">OK, I&#039;ll dig out my old tape backups...</a></h3>
+ <div class="content"><p >Hey Sweeeny. I have ACM sub. Thanks. Reading the paper I'm even more convinced that it's MY language. Perhaps I should write a grant proposal to resusiscicate it ;-)</p></div>
+ <div class="links">By <a href="user/2499" title="View user profile.">cyberviking</a> at Wed, 11/30/2005 - 01:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-12419"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/648#comment-12419" class="active">Uses for type values</a></h3>
+ <div class="content"><p>Extending <code>case</code> expressions to allow patterns of different types can in most cases eliminate the need for explicit type values to be exposed. E.g. </p>
+
+<pre>
+case expr of
+{
+   i :: Int -> ...
+   c :: Char -> ...
+   Cons x y -> ...
+}
+</pre>
+
+The main area where they seem directly useful are for reference subtypes where the type can be determined dynamically.
+
+I use them in iterator functions such as:
+
+<pre>
+referrer x (::Socket)
+</pre>
+
+<p>In this example <i>referrer</i> selects a reference of type, say, <i>Socket</i> out of a list of reverse references.  The advantage of this kind of approach is that it permits a function to establish its local context in a wider application framework without resorting to global variables.</p>
+</div>
+ <div class="links">By <a href="user/2320" title="View user profile.">Alasdair Scott</a> at Fri, 11/25/2005 - 09:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

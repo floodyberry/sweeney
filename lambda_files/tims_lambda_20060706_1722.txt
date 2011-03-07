@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/1588
+http://lambda-the-ultimate.org/node/1588#comment-19471
+1050164
+Securing the .NET Programming Model
+You&#039;re right
+<p>You're right.  (b != true &amp;&amp; b != false) is an example of weird, semantically incorrect behavior while given int a&gt;0,b&gt;0, having a+b less than zero is weird, semantically correct behavior.</p>

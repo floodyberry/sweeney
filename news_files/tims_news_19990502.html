@@ -1,0 +1,147 @@
+<h4>STAT NET: Diagnosing your connection to the server</h4>
+
+<p>When playing a multiplayer game of Unreal, press TAB and type STAT NET to bring up the
+network stats display.&nbsp; You'll see something like this:</p>
+
+<pre>(IN/OUT):
+   137         PING
+    38         CHANNELS
+     0       0 UNORDERED/SEC
+   12%     14% PACKET LOSS
+    11      32 PACKETS/SEC
+   126      32 BUNCHES/SEC
+  1395    2031 BYTES/SEC
+  2600    2600 NETSPEED</pre>
+
+<p>The numbers on the left represent incoming statistics (for example, how many packets
+from the server to you were lost), and the right outgoing statistics (for example, how
+many packets from you to the server were lost).&nbsp; There interesting stats are:</p> 
+
+
+<ul>
+  <li>PING: Round-trip time between you and the server, in milliseconds.&nbsp; Modem users
+    will typically see 200-350 for in-country gameplay.&nbsp; ISDN/T1 users will be in the
+    50-200 range.&nbsp; Playing overseas results in enormous times, 600-1000 or more. &nbsp;
+    This number represents the quality of the connection between you and the server, and
+    really should be 300 or less for good gameplay performance.&nbsp;&nbsp;&nbsp; A bad
+    connection on either end can hurt the ping time.</li>
+  <li>CHANNELS: Roughly, the number of objects that the server is actively updating to you.
+    &nbsp; Proportional to how much combat is happening around you.</li>
+
+  <li>PACKET LOSS: Percentage of packets lost between the client and server.&nbsp; The higher
+    the packet loss, the worse the performance will be, and the more you'll see objects
+    skipping around rather than moving smoothly.&nbsp; High packet loss can be caused by:
+    <ul>
+      <li>Using too aggressive a network speed on the client side.&nbsp; Try typing &quot;NETSPEED
+        2600&quot; on the console to reign in bandwidth usage.&nbsp; </li>
+      <li>The server's connection is overtaxed.&nbsp; This will result in heavy packet loss and a
+        bad gameplay experience for everyone.&nbsp; Servers will limited bandwidth available need
+        to set their play limit conservative (expect 5000 bytes per client per second), and also
+        lower the MaxClientRate variable in Unreal.ini.&nbsp; A value of 5000 should be good for
+        everyone.</li>
+
+      <li>A bad connection anywhere between you and the server.</li>
+      <li>A bad connection between you and your ISP.</li>
+    </ul>
+  </li>
+  <li>PACKETS/SEC: Number of packets being sent per second.&nbsp; The number on the left
+    should be 13 or higher.&nbsp; If it's significantly less, that means the server is either
+    running too slowly, or experiencing high packet loss.&nbsp; Gameplay will be bad at 10,
+    and unbearable at 5.&nbsp; The number on the right is proportional to your frame rate and
+    you don't need to worry about it.</li>
+
+  <li>BUNCHES/SEC: Number of objects being updated per second.&nbsp; Not important for
+    tweaking.</li>
+  <li>BYTES/SEC: Bytes being sent per second.</li>
+  <li>NETSPEED: The network speed setting you set using the console NETSPEED command. &nbsp;
+    Recommended settings are:
+    <ul>
+      <li>2600 for a typical modem connection.</li>
+
+      <li>2400 for a poor modem connection.</li>
+      <li>5000 for an ISDN connection.</li>
+      <li>20000 for a T1 connection.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4>Server Alert</h4>
+
+<p>Unreal 224 servers are popping up very rapidly, and becoming filled to capacity rather
+quickly.&nbsp; From the last couple hours of cruising the net and playing on various
+servers, we're seeing wildly varying performance.&nbsp; As with all games, the quality of
+Unreal netplay is a function of how well the server is performing and how good your
+connection is (bandwidth, packet loss, and latency).</p>
+
+<p>If you're having a bad experience, please try out a few other servers.&nbsp; This can
+affect performance hugely.&nbsp; In my game sessions here, I had some great performance
+with a 300 msec ping and 28.8Kbps bandwidth, and some astronomically bad performance with
+a 100 ping and 50Kbps bandwidth.&nbsp; The bad performance fell into two categories.</p>
+
+<p>Some servers have more users than bandwidth available, so they are dropping packets,
+experiencing 50%+ packet loss and escalating ping.&nbsp; Some are just running very
+slowly, around 5 fps (I'm not sure why, perhaps other processes were running?).&nbsp; This
+tends to happen whenever we release a patch, as people rush to get into gameplay, flooding
+the servers that have upgraded, users setting up servers on cable modems out of
+desperation to get into a game... It can get chaotic.&nbsp; In the future, the new
+backwards-compatible network code should mean there are always lots of servers available
+when a patch is released.</p>
+
+<p>So, bottom line:&nbsp; Please don't bitch if netplay performance is erratic over the
+next couple days as servers get set up and stabilized.&nbsp; If netplay performance sucks
+after a couple of days, THEN commence bitching. :-)</p>
+
+<p>-Tim</p>
+
+<h4>Unreal 224v C++ headers released!</h4>
+
+<p>For hardcore mod authors who want to experiment with Unreal's C++ interface, here it
+is!&nbsp; This code requires Microsoft Visual C++ 6.0 with no service packs or SP1. &nbsp;
+Read the <a href="http://unreal.epicgames.com/ReadMeSrc.htm">Public Source ReadMe</a> for more information and
+distribution terms.</p>
+
+<p>Now it's time for a disclaimer about the C++ code.&nbsp; For mod authors, UnrealScript
+is the best way to write game code.&nbsp; The fact that 100% of the Unreal 1 and Unreal
+Tournament game-specific code is in UnrealScript illustrates our strategy here, that
+UnrealScript is a fully-featured language designed to simplify game programming compared
+to C++.&nbsp; The C++ code is significantly more complex than UnrealScript, and is only
+necessary for programming things that just aren't possible under UnrealScript, such as
+algorithmic textures,&nbsp; performance-critical AI decision making,&nbsp; and that kind
+of low-level work.&nbsp; Furthermore, our distributing just the headers (and not the C++
+engine source), means that many key aspects of the engine are hidden in implementation
+details, so it's going to be hard to understand what's happening &quot;under the
+hood&quot;.&nbsp; Another major downside to C++ is that C++ mods will break with almost
+every upcoming patch, whereas UnrealScript is more stable (having broken only 3 times in
+11 months and approximately 12 public betas released).&nbsp; Summary: This C++ code is for
+very, very hardcore mod makers only.</p>
+
+<p>That said, there is some cool stuff here.&nbsp; I've included all of the core and
+engine header files and .lib link libraries in this release, so you can compile your own
+DLL's and link them to Unreal.&nbsp; I've also included the C++ code for some modules
+which we don't feel are confidential: Unreal's OpenGL support layer (OpenGLDrv), the
+engine startup code (Launch), and the installer/uninstaller (Setup).</p>
+
+<p>The OpenGL code will be of interest to OpenGL driver writers who want to see what we do
+in Unreal, in order to optimize their drivers, and possible to enthusiasts who want to
+experiment with rendering.</p>
+
+<p>We will probably be able to publically release the Direct3D driver code soon too, also
+to aid driver writers and experimenters, but our Direct3D development partner is going to
+first spend some time cleaning up that code.</p>
+
+<p>This code is provided as-is: we don't have much time for answering everyone's questions
+about it, so you're mostly on your own.</p>
+
+<p>The <a href="http://unreal.epicgames.com/UnrealPubSrc224v.zip">C++ code can be downloaded here</a>. Unzip it into
+your \Unreal directory, and the proper subdirectories will be created (described in the <a
+href="http://unreal.epicgames.com/ReadMeSrc.htm">ReadMe</a>).&nbsp; The C++ code compiles there and links to DLL's in
+the \Unreal\System directory, read to run.&nbsp; Enjoy!</p>
+
+<p>-Tim Sweeney</p>
+
+<h4>Unreal 224v Released to the public!</h4>
+
+<p>The Unreal 224v patch is now available for download from our <a href="http://unreal.epicgames.com/versions.htm">downloads
+page</a>, along with the release notes.</p>
+
+<p>-Tim Sweeney</p>

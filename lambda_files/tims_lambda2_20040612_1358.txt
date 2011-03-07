@@ -1,0 +1,10 @@
+http://lambda-the-ultimate.org/classic/message12556.html
+http://lambda-the-ultimate.org/classic/message12556.html#12667
+0536844
+The view from the left
+Re: The view from the left
+<p>Frank, is there a known way of expressing non-trivial type isomorphisms in programming languages, where the compiler can either auto-derive the isomorphism itself, or let the user express it in such a way that the compiler can verify its validity?  This seems like a necessity for what you're looking to do with Arrow.</p><p>
+
+Do you have any concrete examples of writing programs "up to isomorphism"?  For example, a monad's unit is only determinable from the monad's functor up to unique isomorphism.  For example, with the Haskell list monad, three potential units are (x::t)-&gt;[] and (x::t)-&gt;(x::[]) and (x::t)-&gt;(x::x::[]).  Can you program with lists in a way that is generic with respect to list unit?  Does the trivial case of [] tell us anything new about list programming?  Does the fact that "double-consed" lists can't be exactly typed in most languages prevent this approach from working?</p><p>
+
+Some concrete examples would be very valuable.</p>

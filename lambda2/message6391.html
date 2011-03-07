@@ -1,0 +1,486 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>J. McCarthy: Towards a Mathematical Science of Computation</b></font><br>
+<font color="white" size="-1">started 4/3/2003; 3:47:05 AM - last post 4/8/2003; 1:01:18 PM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - J. McCarthy: Towards a Mathematical Science of Computation <a name="6391">&nbsp;</a><a href='#6391' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/3/2003; 3:47:05 AM (reads: 2285, responses: 18)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a6391"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://www-formal.stanford.edu/jmc/towards.pdf">J. McCarthy: Towards a Mathematical Science of Computation</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			The bulk of the paper introduces denotational semantics of a program
+as a function from a state vector (the values of registers and other
+memory locations) to a state vector. However the paper does not
+mention the phrase "denotational semantics". The paper then argues
+that the denotational function can be represented as a composition
+or a conditional expression of primitive operations (such as addition,
+etc.). The denotational semantics presentation is conventional -- but
+it is expressed in unconventional language.
+<p>
+An interesting quote:<p><p>
+
+	<blockquote>It should be possible almost to eliminate debugging. Debugging is
+the testing of a program on cases one hopes are typical, until it
+seems to work.  This hope is frequently vain.  Instead of debugging a
+program, one should prove that it meets its specifications, and this
+proof should be checked by a computer program. For this to be
+possible, formal systems are required in which it is easy to write
+proofs.  There is a good prospect of doing this, because we can
+require the computer to do much more work in checking each step than a
+human is willing to do.  Therefore, the steps can be bigger than with
+present formal systems. The prospects for this are discussed in
+[McC62].</blockquote>
+<p><p>
+The last section "The Limitations of Machines And Men as
+Problem-Solvers" is the best section. Here's its conclusion:<p><p>
+
+	<blockquote>In conclusion, let me re-assert that the question of whether there are
+limitations in principle of what problems man can make machines solve for
+him as compared to his own ability to solve problems, really is a technical
+question in recursive function theory.</blockquote>
+<p>
+-- Oleg.<p><br>
+			<font size="-2"><b>Posted to <a href='theory.html'>theory</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 4/3/03; 3:49:23 AM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#6391'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Vladimir Ivanovic</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6392">&nbsp;</a><a href='#6392' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/3/2003; 9:43:04 AM (reads: 1247, responses: 4)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+The number of real-world programming methodologies that don't use  debugging is precisely zero. This, it seems to me, is a powerful argument that there is no value in being able to prove programs correct.<p>
+
+People who derive economic benefit from programming do not want correct programs. They want their programs completed sooner, at less cost, with more (imperfect) features. Their policies and processes are designed to release programs with known bugs which are also expected to ontain even more undiscovered bugs.<p>
+
+As a theoretician, I'm agast; as a practitioner, it all seems perfectly reasonable. In fact, I'd like to see programming languages explictly include debugging features just as I like it when processors include debugging capabilities.<p>
+
+-- Vladimir
+<p></p>
+<p><a href='#6392'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6393">&nbsp;</a><a href='#6393' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/3/2003; 11:32:07 AM (reads: 1289, responses: 3)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>I'd like to see programming languages explictly include debugging features </i><p>
+Care to elaborate, or will this spoil the troll?
+<p></p>
+<p><a href='#6393'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Alex Sauer-Budge</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6394">&nbsp;</a><a href='#6394' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/3/2003; 12:17:41 PM (reads: 1314, responses: 2)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I do not know what Vladimir was refering to, but I think printf is a great debugging feature!<p>
+
+Well, a bit more seriously, I think that it would help to have language support for pervasive range and bounds checking with as much being done at compile time as possible, the rest being left to run time with an option to leave it out altogether in order to improve efficiency.<p>
+
+One of the greatest difficulties with fixing bugs is finding where they are rooted (oh-oh, mixed metaphor, I guess I should be calling them "weeds" and not "bugs" if I think they have "roots"), so language support for early discovery when things go awry is a good thing. On the other hand, if the language features are too cumbersome and heavy, then they won't get used and the feature is moot-- always a balance!<p>
+
+In this regard, MS Excel has a helpful debugging feature in which it draws the dependency graph for a particular cell on top of your spreadsheet. If nothing else, this allows you to limit the scope of your search for the problem. A general purpose language which allowed you to walk the dependency graph in some manner when things go awry might be useful.
+<p></p>
+<p><a href='#6394'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6395">&nbsp;</a><a href='#6395' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/3/2003; 12:34:28 PM (reads: 1358, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Static vs. dynamic checks is something we discuss regularly, and indeed this is a classic language design issue. I think most LtU readers know that I like Ada, which does exactly the sort of range checks you describe.<p>
+Walking the dependency graph  seems like an IDE feture, not something the language can (or should) provide.
+<p></p>
+<p><a href='#6395'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Patrick Logan</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6396">&nbsp;</a><a href='#6396' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/3/2003; 3:29:28 PM (reads: 1168, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>In this regard, MS Excel has a helpful debugging feature in which it draws the dependency graph for a particular cell on top of your spreadsheet. If nothing else, this allows you to limit the scope of your search for the problem. A general purpose language which allowed you to walk the dependency graph in some manner when things go awry might be useful.</i><p>
+
+These kinds of things are possible in languages that have reflection, e.g. Smalltalk, Lisp, Java, C#. For other languages you have to build a parser, add the semantic analysis, etc.<p>
+
+The original Smalltalk refactoring browser uses this information to analyze and automate source-to-source code transformations. The problem with Java and C# with refactoring is the objects only exist "at run time" not during development. And so even though they "have reflection" it cannot be used very well for development-time tools. Each vendor of these tools does the "write the parser, add the semantics" song and dance all over again.
+<p></p>
+<p><a href='#6396'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Alex Sauer-Budge</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6397">&nbsp;</a><a href='#6397' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/3/2003; 3:58:19 PM (reads: 1366, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I do indeed like the range and bounds checking feature of Ada. As far as language vs. IDE, from my perspective, the distinction between IDE and language does not seem as clear-cut in practice as it does in theory, and is, of course, another topic which has come up in the past on LtU with regards to Smalltalk and like environments . While something may be feasible in principle, the practical barriers to it may nullify such theoretical feasibility when it comes to actually implementing it. For example, C++ is very hard to parse, so it doesn't have as rich a set of program transformation and refactoring tools as some other languages (even though it is very widely used), which might be considered an IDE feature. Similarly, a debugger is typically also part of an IDE, but the language determines how easily a roll-back debugger can be implemented (through backtracking or saving the entire state periodically), etc..
+<p></p>
+<p><a href='#6397'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Anton van Straaten</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6401">&nbsp;</a><a href='#6401' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/4/2003; 1:32:12 AM (reads: 1121, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Some <a href="http://www-formal.stanford.edu/jmc/towards.html">more context</A> for a paper like this would be nice!  At first, going by the 1996 date on the title page, I was thinking that McCarthy must be really out of touch.  But the paper was actually written in 1962...
+<p></p>
+<p><a href='#6401'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6402">&nbsp;</a><a href='#6402' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/4/2003; 2:30:27 AM (reads: 1152, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+McCarthy is, of course, one of the founders of the field (as well as a major figure in AI).
+<p></p>
+<p><a href='#6402'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Anton van Straaten</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6403">&nbsp;</a><a href='#6403' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/4/2003; 3:05:34 AM (reads: 1122, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I do know who McCarthy is - see my post at the bottom of <a href='message2383.html'>this page</a> for some references to some of my favorite McCarthy-related material.  But as I said, based on the date in the paper, I thought McCarthy had perhaps somehow completely failed to keep up with what had happened in the field since his heyday.
+<P>
+My initial conclusion was probably somewhat fed by the fact that McCarthy's own descriptions of the invention of LISP emphasize his attempts to address mathematical issues of computability from the perspective of function application - something Church had already done, more comprehensively and correctly, decades earlier.  In addition, although McCarthy used 'lambda' as a keyword in LISP, he apparently used more it as a notational device, without familiarity with Church's calculus, and this showed clearly in the design (and shortcomings!) of LISP.  There's some discussion of this <a href="http://www8.informatik.uni-erlangen.de/html/lisp/mcc91.html">here</a>:
+<BLOCKQUOTE><I>
+This leads to the question of McCarthy's knowledge of the lambda-calculus. McCarthy always pointed out that he did not know much about this. It is obvious that he has read the first pages of Church's paper [C41]. The 'eval' of March 1958 proves that he did know about substitution. However, there is no sign of renaming variables, no sign of normalization. One cannot believe that McCarthy did not study carefully the substitution procedures of the lambda-calculus for his realization, but this is the only explanation for a series of errors that were not apparent in the simple examples of 1958. Today, we all know much better.</I></BLOCKQUOTE><p>
+
+I thought perhaps McCarthy still hadn't gotten around to reading Church... ;)
+<P>
+Of course, as it turns out, being from 1962, this paper was rather prescient.  I notice it is cited by people like Milner in subsequent papers about denotational semantics.<p>
+
+<p></p>
+<p><a href='#6403'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6404">&nbsp;</a><a href='#6404' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/4/2003; 3:09:11 AM (reads: 1116, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I'll bite.<p>
+
+<em>The number of real-world programming methodologies that don't use debugging is precisely zero. This, it seems to me, is a powerful argument that there is no value in being able to prove programs correct.</em><p>
+
+The number of real-world programming methodologies that produce correct programs is precisely zero. This, it seems to me, is a powerful argument that there is no value in being able to debug programs.<p>
+
+<em>People who derive economic benefit from programming do not want correct programs. They want their programs completed sooner, at less cost, with more (imperfect) features. Their policies and processes are designed to release programs with known bugs which are also expected to [c]ontain even more undiscovered bugs.</em><p>
+
+People who derive economic benefit from using software do not want incorrect software. They don't want to fiddle with buggy programs, file bug reports or contact customer service; they want to get real work done, sooner and at less cost. Their policies and processes are built on the assumption that the software they purchase actually does what the seller claims it does and it's a damn shame that they don't sue the pants off incompetent and even willfully negligent software manufacturers when it doesn't.<p>
+
+<em>As a theoretician, I'm agast; as a practitioner, it all seems perfectly reasonable. In fact, I'd like to see programming languages explictly include debugging features just as I like it when processors include debugging capabilities.</em><p>
+
+As a practitioner, I'm aghast: writing correct software is harder than I thought, and I thought my customers would be more forgiving about my mistakes, even though I take their money. As a theoretician, it all seems perfectly reasonable. In fact, I'd like to see programming languages explicitly include features which help me prove my programs correct, just as I like it when physics and mathematics textbooks actually support their own claims with evidence and proofs.
+<p></p>
+<p><a href='#6404'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6405">&nbsp;</a><a href='#6405' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/4/2003; 3:31:44 AM (reads: 1146, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I didn't mean to imply you didn't know who McCarthy is. You are a LtU regular after all..
+<p></p>
+<p><a href='#6405'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Anton van Straaten</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6406">&nbsp;</a><a href='#6406' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/4/2003; 4:09:13 AM (reads: 1105, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Don't worry, I wasn't being sensitive - I just wanted to clarify what I was talking about...
+<P>
+BTW, Frank, I think you should begin work on a calculus of message postings so that in future, at least some of us will be able to prove our own postings correct, thus radically simplifying many of these discussions!
+<P>
+V &#123;postings by Frank&#125; E &#123;truth&#125;
+<p></p>
+<p><a href='#6406'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6413">&nbsp;</a><a href='#6413' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/4/2003; 4:10:34 PM (reads: 1041, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+The problem with proving programs correct is that, in all systems produced to date, the proofs are far larger and more complicated than the programs they're proving correct.  Even the proposition (the type of the proof) tends to be more complex than the actual program, for example the proposition that qsort returns its argument stably sorted, compared to the implementation of qsort.<p>
+
+The pattern I've seen informally looking at the research are factors like 1:2:40.  For each line of program code, you need 2 lines of specification code, and 40 lines of proof code.<p>
+
+The end result is that it's easier to eyeball your program and guess that it's probably correct, than to eyeball the proposition being proved and guess that it's probably proving the right thing.  So, as far as shipping quality code is concerned, you get 40X better cost/benefit from writing code than from trying to prove stuff about it.<p>
+
+Proof techniques would need to come a very, very long way before this situation changes.
+<p></p>
+<p><a href='#6413'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Robert Goldman</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6449">&nbsp;</a><a href='#6449' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/8/2003; 9:57:25 AM (reads: 956, responses: 3)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Regarding Vladimir's first point, arguing that people don't want correct programs versus on-time and functional programs is a very partial view, that is true primarily of commercial office software.<p>
+
+When one moves to considering other kinds of software, such as software that is used to control devices (especially devices like airplanes and medical machinery), one sees a very different perspective!<p>
+
+You may be able to fix the bugs in MS Word in a service pack; you can't fix them in an airliner that way.  You're just not allowed to crash a bunch of planes to collect the bug reports!
+<p></p>
+<p><a href='#6449'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6450">&nbsp;</a><a href='#6450' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/8/2003; 10:18:53 AM (reads: 997, responses: 2)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I continue to wonder when (if ever) will we realize that there is and always will be a large set of goals, and that weighing the tradeoffs is essentially an engineering problem, just like any other engineering problem.
+<p></p>
+<p><a href='#6450'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>andrew cooke</a> - Re: J. McCarthy: Towards a Mathematical Science of Computati <a name="6451">&nbsp;</a><a href='#6451' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/8/2003; 12:35:40 PM (reads: 1024, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Don't we already realise this, largely?  The problem is more to do with pushing back the point where you need to make the decision.  If it's obvious you must use C without explaining what a Samba server is then choices are being made very early.  Writing such a program may require compromises, but surely they should be further down the line (maybe the protocol is ambiguous in a certain way that is difficult to describe using static types, say...)<p>
+
+[oops, example from different thread, but you get my drift, I hope.]
+<p></p>
+<p><a href='#6451'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Isaac Gouy</a> - Re: J. McCarthy: Towards a Mathematical Science of Computation <a name="6452">&nbsp;</a><a href='#6452' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/8/2003; 1:01:18 PM (reads: 964, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>I continue to wonder when...</i> <br>
+Is it in the curriculum? Do CS students now learn about QFD as well as time-space trade-offs? Tom Gilb's Design by Objectives? <br><p>
+
+An interesting quote:
+<blockquote>However, there are few debuggers or profilers for strict languages, perhaps because constructing them is not perceived as research. That is a shame, since such tools are sorely needed, and there remains much of interest to learn about their construction and use. <br>
+Constructing debuggers and profilers for lazy lan&#173;guages is recognized as difficult. Fortunately, there have been great strides in profiler research, and most imple&#173;mentations of Haskell are now accompanied by usable time and space profiling tools. But the slow rate of progress on debuggers for lazy languages makes us researchers look, well, lazy. <br> <a href="http://www.research.avayalabs.com/user/wadler/topics/recent.html">"Why no one uses functional languages" 1998</a></blockquote>
+<p></p>
+<p><a href='#6452'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: J. McCarthy: Towards a Mathematical Science of Computati <a name="6454">&nbsp;</a><a href='#6454' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/8/2003; 1:08:09 PM (reads: 1078, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Well, in my experience most programmers don't realize this. You often hear students, for example, say "I don't think reliability is important" without realizing that without context such a statement is almost meaningless.
+<p></p>
+<p><a href='#6454'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

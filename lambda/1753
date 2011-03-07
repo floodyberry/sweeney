@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Relationship between access modifiers and type | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1753" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Relationship between access modifiers and type</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >I was thinking the other day it'd be interesting if C++ supported something like the following:</p>
+<pre >
+template&lt;modifier T&gt;
+class A : public SomeClass {
+public:
+    void GuarunteedMethod();
+    void AlwaysThereMethod();
+
+T:
+    void DependsOnUser();
+    void MayNotBePublic();
+};
+
+template&lt;modifier T&gt;
+class B : T SomeClass {
+};
+</pre><p >
+Then somewhere in code using the templates:</p>
+<pre >
+A&lt;public&gt; X; // Object that has public DependsOnUser()
+A&lt;private&gt; X; // Object that doesn't
+
+B&lt;public&gt; X; // publically inherits from SomeClass
+B&lt;protected&gt; X; // protectedly inherits from SomeClass
+</pre><p >
+You can get the same effect in today's C++ as in A by splitting up the class more or in B's case by having dummy intermediary classes.</p>
+<p >A class has two different types I think, that which it presents to calling code, public interface, and that which it provides to extending code, protected interface (you could argue there's a third, the types that it presents to itself but that's not really an observer relationship). So in the sense that it changes the resulting type, the above C++ extension is consistent with the notion of templates as type factories.</p>
+<p >This got me thinking about what exactly the relationship between access modifiers and a class's type is. I'm not sure whether or not you could say that access modifiers change the type of member functions. Access modifiers do impose a compile time limit on who can use the function, which sounds related to types, but usually we only think of the type of a function to be it's return type + parameter types.</p>
+<p >Maybe I'm just caught up in the wording and access modifiers can be thought of as simply defining complex scopes, but it seems different to me from the concept of scope because it's not that the symbols aren't visible, it's that they're disallowed.</p>
+<p >Thoughts? :)</p> </div>
+ <div class="links">By <a href="user/2513" title="View user profile.">dataangel</a> at 10/03/2006 - 06:15 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1392" title="PHP 6 picks up GOTO and COMEFROM">previous forum topic</a> | <a href="node/1747" title="Which Java compiler for a student/research project?">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1753" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 844 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1753" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1753" />
+<a id="comment-21382"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1753#comment-21382" class="active">why</a></h3>
+ <div class="content"><p >Why would you want to do that? I mean, if you can make it public, why don't you just do it across the board?</p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Tue, 10/03/2006 - 14:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21389"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1753#comment-21389" class="active">fair question ;p</a></h3>
+ <div class="content"><p >If you wanted to quickly create classes where sometimes you want to really subclass from SomeClass (B&lt;public&gt;), and other times you want to inherit from it solely because the implementation of B requires it (B&lt;private&gt;) then it would be useful. I can see it coming up in policy programming -- you sometimes may want to inherit from some class so it will adhere to a policy, but want to do so privately so that users can't tweak the policy through its methods. Maybe the policy has your class use a message buffer and you want to prevent users from being able to call the provided Flush() method. You'd probably hide B&lt;private&gt; behind a typedef, and combine it with a class parameter. Doohickey&lt;private, MessageBuffer&gt; creates a DooHickey class that is forced to use MessageBuffer's defaults.</p></div>
+ <div class="links">By <a href="user/2513" title="View user profile.">dataangel</a> at Tue, 10/03/2006 - 16:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-21390"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1753#comment-21390" class="active">seems like</a></h3>
+ <div class="content"><p >Seems like you could do that by using aggregation instead of inheritance.</p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Tue, 10/03/2006 - 17:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21399"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1753#comment-21399" class="active">What are access modifiers?</a></h3>
+ <div class="content"><p ><cite >This got me thinking about what exactly the relationship between access modifiers and a class's type is.</cite></p>
+<p >For first-class reasoning about this, you need a fairly powerful type theory.  The cleanest way of reasoning about this is to say that a class is a record whose set of fields is existentially quantified with a known lower-bound.  Or, for more advanced access, several staged lower bounds, one for each sort of context in which the class can be seen (e.g. within the class scope, in the same package as the class, in an external package).</p>
+<p >In other words, represent class {public: int x,y; private: int z;} as something like: exists(s:set&gt;=set{'x','y'} = set{'x','y','z'}) lambda(field:s) case(field) of {'x'-&gt;int,'y'-&gt;int,'z'-&gt;int}.  Here, "outside of the definition" you only know the set of fields includes 'x' and 'y' and since you don't know whether or not 'z' belongs you cannot access it; while "inside the definition" you know the exact set of fields is x, y, and z.</p>
+<p >With more advanced staging constructs, code in different contexts could see different lower bounds, enabling Java "protected" access within a package, etc.</p>
+<p >The best way to reason about features like this is to translate them into a core language with a powerful type theory, rather than building up ad-hoc theories of types-with-access-protection, etc as is typically done when reasoning about object oriented languages.</p>
+<p >With this approach, questions like "How do I abstract over access modifiers?" and "Is this thing a subtype of that thing with the same fields but different access modifiers?" are easy to answer by referring back to the core language translation, in which everything is a term which may be analyzed and abstracted over.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 10/03/2006 - 20:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/09/21" title="Previous month">«</a> October 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/10/1" title="1 post">1</a></td>
+  <td class="day-link"><a href="archive/2006/10/2" title="1 post">2</a></td>
+  <td class="day-link"><a href="archive/2006/10/3" title="1 post">3</a></td>
+  <td class="day-link"><a href="archive/2006/10/4" title="1 post">4</a></td>
+  <td class="day-link"><a href="archive/2006/10/5" title="3 posts">5</a></td>
+  <td class="day-link"><a href="archive/2006/10/6" title="2 posts">6</a></td>
+  <td class="day-normal">7</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/10/8" title="2 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/10/9" title="2 posts">9</a></td>
+  <td class="day-link"><a href="archive/2006/10/10" title="1 post">10</a></td>
+  <td class="day-link"><a href="archive/2006/10/11" title="2 posts">11</a></td>
+  <td class="day-link"><a href="archive/2006/10/12" title="1 post">12</a></td>
+  <td class="day-link"><a href="archive/2006/10/13" title="3 posts">13</a></td>
+  <td class="day-normal">14</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/10/15" title="2 posts">15</a></td>
+  <td class="day-link"><a href="archive/2006/10/16" title="1 post">16</a></td>
+  <td class="day-link"><a href="archive/2006/10/17" title="4 posts">17</a></td>
+  <td class="day-link"><a href="archive/2006/10/18" title="2 posts">18</a></td>
+  <td class="day-link"><a href="archive/2006/10/19" title="2 posts">19</a></td>
+  <td class="day-link"><a href="archive/2006/10/20" title="1 post">20</a></td>
+  <td class="day-today">21</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1780" title="25 comments">Ralph Griswold died</a></li><li><a href="node/1776" title="6 comments">Delevoping a new language...</a></li><li><a href="node/1782" title="9 comments">Constraint based hybrid typing and the Curry Howard Isomorphism</a></li><li><a href="node/1783" title="1 comment">Question on terminology</a></li><li><a href="node/1779" title="4 comments">FP vs. JSP</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1783" title="1 comment">Question on terminology</a></li><li><a href="node/1782" title="9 comments">Constraint based hybrid typing and the Curry Howard Isomorphism</a></li><li><a href="node/1781" title="3 comments">System-level Static Analysis</a></li><li><a href="node/1780" title="25 comments">Ralph Griswold died</a></li><li><a href="node/1779" title="4 comments">FP vs. JSP</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

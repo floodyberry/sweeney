@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Twitter and  Rails brouhaha | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2198" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Twitter and  Rails brouhaha</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >I am a bit reluctant to post about <a href="http://www.tbray.org/ongoing/When/200x/2007/04/13/Twitter-and-Rails">this</a>, since many of the issues involved are not programming language related. I hope we can manage to avoid discussing these issues here - there are plenty of better places to discuss them.<p >
+Still, many issues that are raised in this <a href="http://www.tbray.org/ongoing/When/200x/2007/04/13/Twitter-and-Rails">multi-blog discussion</a> about the performance of Rails, and Ruby in general, may be of interest from a programming language perspective. More important, in my opinion, is to put this discussion in the context of the recent  revival of frameworks. We discussed many of the recent interesting libraries and frameworks. Let me point out that not only are we reaching a point where languages and frameworks are judged together (with "Ruby on Rails" a classic example), but more and more libraries make use of advanced programming techniques that were considered arcane and esoteric not long ago (e.g., jQuery use of closures, metaprogramming and code generation etc.) This is an important development, and an interesting area to keep an eye on.</p> </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 2007-04-14 16:59 | <a href="taxonomy/term/30">Ruby</a> | <a href="taxonomy/term/17">Software Engineering</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2198" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 4719 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2198" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2198" />
+<a id="comment-28970"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-28970" class="active">In your post, you suggest</a></h3>
+ <div class="content"><p >In your post, you suggest we</p>
+<blockquote ><p >
+...put this discussion in the context of the recent revival of frameworks.
+</p></blockquote>
+<p >Can you say more about the 'revival' of frameworks? When were they in use before? By 'frameworks' do you mean 'web frameworks'?</p>
+<p >You go on to say that we are</p>
+<blockquote ><p >
+...reaching a point where languages and frameworks are judged together...
+</p></blockquote>
+<p >but I'm not so sure this is anything special, if 'frameworks' may be taken as 'web frameworks'. We are approaching a time when <code >httpin</code> and <code >httpout</code> are as ubiquitous and necessary as <code >stdin</code> and <code >stdout</code>. How long do we have to wait until 'libwebapp' abstracts this stuff out of the individual application writers' hands all together?</p></div>
+ <div class="links">By <a href="user/2907" title="View user profile.">jsnx</a> at Mon, 2007-04-16 03:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-28980"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-28980" class="active">I am on my way to holiday,</a></h3>
+ <div class="content"><p >I am on my way to holiday, so I can't get into details. Briefly:<p >
+<i >Can you say more about the 'revival' of frameworks? When were they in use before? By 'frameworks' do you mean 'web frameworks'?</i><p >
+Frameworks were seen for a period to be a solution to many of the problems involved in SE. The classic example of a framwork is the MVF framework in ST. See <a href="http://web.archive.org/web/20010513231140/www2.cybercities.com/e/ehud/ada/frameworks.html">here</a> for more. The current crop of fw consists mostly of web fw, sure.<p >
+<i >I'm not so sure this is anything special</i><p >
+I didn't say it was special, I said it was important... More to the point, languages and libraries should not be confused. Confusing the two makes it hard to appreciate which specific semantic features enable the types of libraries/frameworks one is interested in. Being on the lookout for these features is fundamental for advancing the state of the art, in my view. We discussed this issue a lot in the early days of LtU, and it is nice to see it resurface (I again suggest looking at jQuery, and how it evangalizes closures...)</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Mon, 2007-04-16 09:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-29042"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29042" class="active">Frameworks were seen for a</a></h3>
+ <div class="content"><blockquote >
+Frameworks were seen for a period to be a solution to many of the problems involved in SE. The classic example of a framework is the MVF framework in ST.
+</blockquote>
+<ul >
+<li >SE = Software Engineering?</li>
+<li >MVF = ?</li>
+<li >ST = ?</li>
+</ul>
+<p >I'm not as familiar with the lingo as I'd like to be.</p></div>
+ <div class="links">By <a href="user/2907" title="View user profile.">jsnx</a> at Mon, 2007-04-16 17:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-29046"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29046" class="active">typonym?</a></h3>
+ <div class="content"><p >SE is Software Engineering, yes.  I think MVF may have been a typo for the MVC framework in Smalltalk (ST).  YMMV, HTH.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Mon, 2007-04-16 17:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-29047"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29047" class="active">Right. Sorry.</a></h3>
+ <div class="content"><p >Right. Sorry.<p >
+(YMMV= Your Mileage May Vary; HTH = Hope This Helps...)</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Mon, 2007-04-16 17:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-29059"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29059" class="active">Translation</a></h3>
+ <div class="content"><p >MVF = Model-View-Controller (oops)<br >
+ST = SmallTalk</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Mon, 2007-04-16 20:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-29056"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29056" class="active">Frameworks are the new languages</a></h3>
+ <div class="content"><p >I think frameworks are the new languages in a way.  These days only the insane and the academic build programs without leveraging a framework.  The framework authors have become the prophets of the language creator, translating the so-called advanced concepts into a form the great unwashed can understand.  The best frameworks leave very little need for the application programmer to make decisions about how to best use language features, and hence to mess up.  In this way new language features are eased into the wider programming community.</p>
+<p >PS: Proudly insane!</p>
+<p >PPS: I agree with Avi's points on component based development.  I think that's the next big thing in web development.  It is kind of amazing it isn't the current big thing.</p></div>
+ <div class="links">By <a href="user/354" title="View user profile.">Noel</a> at Mon, 2007-04-16 20:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-29105"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29105" class="active">Give me not food, but the tool to learn to fish</a></h3>
+ <div class="content"><p >Frameworks are good up to the point that usage is within their developers' ideas. I prefer to have the tools to make whatever 'framework' I want, rather than either a complex framework or a limited one.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Tue, 2007-04-17 11:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-29109"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29109" class="active">Sometimes you can have the</a></h3>
+ <div class="content"><p >Sometimes you can have the cake and eat it too. I guess the consequence of having "too many frameworks" ( a popular complaint ) has lead to <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and <a href="http://pythonpaste.org/">Paste</a> in the Python community. But then they build again a <a href="http://pylonshq.com/">framework</a> on top of some pieces of infrastructure that glues components together.</p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Tue, 2007-04-17 13:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-29136"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29136" class="active">Pylons and Spring</a></h3>
+ <div class="content"><p >Pylons are Spring are, IMHO, excellent examples of the rediscovery of the original principles behind application frameworks. In particular, that they should consist of small pieces, loosely coupled. It's hard to do in practice, and it doesn't strike me as accidental that WSGI basically specifies a "callable" that takes two arguments, one of which is itself a callable, and you build WSGI-based applications, middleware, etc. by composing these callables and calling them at the appropriate time.</p>
+<p >Spring, in the Java world, does something essentially as clever: by reasserting the value of dependency injection and relying on interfaces rather than concrete classes, they achieve the same end of small pieces (interfaces with few signatures) loosely coupled (they're interfaces, not classes, although Spring provides a ton of concrete classes that play together nicely).</p>
+<p >I find it highly suggestive that both Pylons and Spring, object-oriented Python and Java frameworks respectively, aggressively avoid inheritance and aggressively pursue functional composition. There are big lessons in these very pragmatic frameworks!</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 2007-04-17 18:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-29327"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29327" class="active">Spring</a></h3>
+ <div class="content"><p >I like Spring; it is lightweight, and certainly helps keep my code documented and easily modifiable.</p>
+<p >Using it I tend to view its concepts as prototype based OOP combined with a form of currying.  Using an object with a method:</p>
+<p >void updateUsers( Connection con, List users );</p>
+<p >in Spring we inject the Connection into the Object and just use:</p>
+<p >void updateUsers( List users );</p>
+<p >Currying also yields a function/closure/object which can perform the action.<br >
+(Since I don't know Haskell I will use Javascript):</p>
+<p >function updateUsers()<br >
+{<br >
+  var con = arguments[0];<br >
+  if ( arguments.length==1 ) return function(x){ updateUsers(con,x) }<br >
+  //.. update users here...<br >
+}</p></div>
+ <div class="links">By <a href="user/3120" title="View user profile.">David Medlock</a> at Fri, 2007-04-20 00:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-29595"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29595" class="active">Do you have any references</a></h3>
+ <div class="content"><p >Do you have any references regarding "original principles behind application frameworks"? I ask because my understanding is that frameworks are supposed to encapsulate one specific design for reuse. Quoting Ralph Johnson, "a framework is the skeleton of an application that can be customized by an application developer"[1]. This seems to imply that loose coupling is not a primary feature of frameworks. </p>
+<p >[1] <a href="http://citeseer.ist.psu.edu/johnson97components.html">Components, Frameworks, Patterns (1997)</a></p></div>
+ <div class="links">By <a href="user/2600" title="View user profile.">Rafael</a> at Sun, 2007-04-22 16:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-29596"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29596" class="active">Unfortunately...</a></h3>
+ <div class="content"><p >...my information about that period of framework history is largely anecdotal, based on early exposure to Smalltalk-80, Symbolics Lisp Machines, and MacApp. My grasp of the principles as I understand them derives a lot more from MacApp than from Smalltalk or the Lisp Machines, perhaps because Apple actively sold MacApp and tried to help developers understand how to use it.</p>
+<p >There are multiple degrees of, and multiple ways of implementing, loose coupling in frameworks&mdash;so much so that I think one can credibly claim that, in order to support Ralph Johnson's "can be customized by an application developer," a framework must be loosely coupled at least to that degree, otherwise all you have is an application skeleton whose source code must be altered in arbitrary ways to implement any application.</p>
+<p >What I was alluding to in my comment regarding Spring, in particular, was its aggressive support for what is currently called "dependency injection" or, sometimes, "inversion of control," and we old-time MacAppers called the "Hollywood Pattern" (I still have my "Don't call us; we'll call you" t-shirt around somewhere). Here we have "loose coupling" by virtue of inclusion polymorphism: the framework code contains references to base classes; those references are initialized with instances of subclasses that hopefully adhere to the Liskov Substitutability Principle. But as long as they do, the framework neither knows nor cares what concrete class is being used&mdash;that's "loose coupling" in the context of a traditional object-oriented framework.</p>
+<p >Java and Spring add a couple of nice wrinkles to this venerable approach, thanks to supporting interfaces, reflection, and dynamic loading. Spring Core and Spring Bean give you a dependency injection container for JavaBeans. Reflection gives you the means of setting properties on them. An abstract factory class configured with a simple XML file lets you identify what concrete classes are associated with which interfaces, wire up your object graph, identify which objects are to be singletons, etc. Taken to an extreme, your application could be altered by replacing a .jar file that contained the single class you wished to update, and/or updating the XML file establishing the interface -&gt; concrete class mapping.</p>
+<p >So I think my claim about "loose coupling" is reasonable, but primarily because it's a bit too vacuuous not to be! It's important, I think, to keep in mind as a 50,000-foot goal, but the details about how to achieve this loose coupling are inevitably going to be specific to the combination of language and framework architecture in question.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sun, 2007-04-22 17:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-29239"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29239" class="active">We actually moved from Rails to Erlang</a></h3>
+ <div class="content"><p >Sometime in the fall of last year, we moved from Ruby on Rails to a pure Erlang stack. We recently (today!!) wrote up a blog post on this..<br >
+<a href="http://slideaware.typepad.com/slideaware/2007/04/from_python_to_.html">From Python to Ruby to Erlang</a><br >
+Comments/Feedback would be greatly appreciated..<br >
+Vijay</p></div>
+ <div class="links">By <a href="user/4018" title="View user profile.">Vijay Chakravarthy</a> at Wed, 2007-04-18 23:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-29254"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29254" class="active">How much code did you have</a></h3>
+ <div class="content"><p >How much code did you have to rewrite on your trip through languages and frameworks on each iteration? </p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Thu, 2007-04-19 05:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-29286"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29286" class="active">In my next post...</a></h3>
+ <div class="content"><p ><em >"In my next post, I’ll tell you whether Erlang lived up to our expectations…"</em><br >
+The blog post doesn't say anything about <em >"...Ruby to Erlang"</em>, it doesn't  say anything much about your experience or technical reasons for moving from Python to Ruby - <em >"Rails has a much larger following..."</em></p></div>
+ <div class="links">By <a href="user/674" title="View user profile.">Isaac Gouy</a> at Thu, 2007-04-19 16:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-29848"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-29848" class="active">So...</a></h3>
+ <div class="content"><p >Where's that next post?</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Tue, 2007-04-24 20:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-30608"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2198#comment-30608" class="active">All things come...</a></h3>
+ <div class="content"><p >I think it's <a href="http://slideaware.typepad.com/slideaware/2007/05/in_the_last_pos.html">here</a>.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Fri, 2007-05-04 04:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2007/04/12" title="Previous month">«</a> May 2007  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2007/5/1" title="1 post">1</a></td>
+  <td class="day-link"><a href="archive/2007/5/2" title="4 posts">2</a></td>
+  <td class="day-link"><a href="archive/2007/5/3" title="4 posts">3</a></td>
+  <td class="day-link"><a href="archive/2007/5/4" title="1 post">4</a></td>
+  <td class="day-link"><a href="archive/2007/5/5" title="2 posts">5</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2007/5/6" title="2 posts">6</a></td>
+  <td class="day-link"><a href="archive/2007/5/7" title="3 posts">7</a></td>
+  <td class="day-link"><a href="archive/2007/5/8" title="1 post">8</a></td>
+  <td class="day-link"><a href="archive/2007/5/9" title="6 posts">9</a></td>
+  <td class="day-link"><a href="archive/2007/5/10" title="1 post">10</a></td>
+  <td class="day-link"><a href="archive/2007/5/11" title="2 posts">11</a></td>
+  <td class="day-today">12</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+  <td class="day-future">15</td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2216" title="31 comments">The Monad.Reader</a></li><li><a href="node/1117" title="16 comments">Algebra Of Programming (Bird, De Moor)</a></li><li><a href="node/2221" title="47 comments">Microsoft&#039;s new Dynamic Language Runtime (DLR)</a></li><li><a href="node/1959" title="15 comments">Can referential transparency be bad? (puzzle included)</a></li><li><a href="node/2245">Expressing usage constraints within the language</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2245">Expressing usage constraints within the language</a></li><li><a href="node/2244" title="1 comment">checking oo code against detailed specs</a></li><li><a href="node/2241">CFP: PLOS &#039;07: 4th Workshop on Programming Languages and Operating Systems</a></li><li><a href="node/2240" title="5 comments">F3  is now openjfx</a></li><li><a href="node/2235" title="2 comments">Type-Safe Casts</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/2340
+http://lambda-the-ultimate.org/node/2340#comment-34902
+1050916
+Simply Easy! (An Implementation of a Dependently Typed Lambda Calculus)
+Dependent types
+<p>The authors are certainly correct that dependent types provide a cleaner solution than the hodge-podge of features found in more widely-used languages.
+</p><p>I'm afraid they are also correct in the suggestion at the end of the paper that regaining the expressiveness needed for large-scale programming may require the introduction of general recursion, and the possibility that the typechecker will loop in some circumstances.
+</p><p>Ultimately, we need to embrace partiality in the general case of typechecking.  Large-scale programming will never be done in a total language, because the burden of proving your program total imposes a development cost multiplier of several orders of magnitude.  And, when you mix types and values to gain expressiveness, any partiality in the value language necessary percolates up to the type system.
+</p><p>So, we need to grow comfortable with partial type systems.  I feel the lack of significant progress in type theory in the past decade is largely a result of refusing to embrace general type recursion, which causes researchers to focus in on microscopic details of proving totality for slight improvements on existing type systems, rather than exploring the wider possibilities.</p>

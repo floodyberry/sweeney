@@ -1,0 +1,89 @@
+http://www.beyond3d.com/interviews/sweeneyue3/
+Interview with Epic's Tim Sweeney on UnrealEngine3
+Beyond3d interview with Tim Sweeney on Unreal 3
+Beyond3d
+Anthony 'Reverend' Tan
+
+<desc>Recently at the Game Developers Conference as well as at NVIDIA's launch of the GeForce 6/NV40, one of the highlights of both events was the demonstration of Epic Games' next-generation engine called UnrealEngine3 (UE3 for short). Although the engine is still about 2 years away from completion, its public showing in its current state left almost everyone in awe of the technologies showcased and as explained in snippets by Epic's co-founder Tim Sweeney.
+
+We took the opportunity afforded by Tim, having recently informed this interviewer that further discussions of the game engine is possible after both events, by asking him in a little more about UnrealEngine3.</desc>
+
+<q>You have said that UE3 will target DX9-based video cards as the absolute lowest denominator, even to the point of saying DX9 cards such as the GeForceFXs and Radeon 9x00s will be brought to their knees in terms of performance. Using Valve's yet-to-be-available Half Life 2 as an example, will UE3 be at all scalable starting from lesser-than-DX9-level video cards (by making available, perhaps, DX7 and/or DX8 paths) or did you really mean what you said, i.e. nothing but a DX9 video card will be able to run UE3-based games? If the latter is the case, you are saying you are not worried at all by gamers that, by the time UE3-games are made available, still own pre-DX9 (like the GeForce3 or Radeon 8500) video cards?</q>
+
+<a>DirectX9 is our minimum hardware target for Unreal Engine 3. A great deal of generalization, improvement, and even simplification has been made possible by eliminating legacy code paths and formulating all rendering around fully-general pixel shader programs.
+
+If we were going to ship a PC game on UE3 this year, we certainly would have aimed lower, since those GeForce4 MX's are very prevalent on very low-end PC's today. But we're looking further ahead, and as a result Unreal Engine 3 has become a great engine for next-generation console games and PC games aimed at the mass market in early 2006.</a>
+
+<q>NVIDIA's latest GeForce 6 series of video cards has support for Shader Model 3.0 which is exposed, but not useable, in the publicly available version of DirectX9.0b. With an anticipated release of a revision of DX9 that allows the use of SM 3.0, could you tell us what are the more interesting and useable advantages SM3.0 offers over the current SM 2.0 model? Referencing the two public demos of UE3, what kind of pixel and vertex shader 3.0 were used?</q>
+
+<a>PS 3.0 utilizes a wide range of optimizations, from 64-bit frame-buffer blending to looping and dynamic conditionals for rendering multiple light interactions in a single pass without requiring a combinatorical explosion of precompiled shaders.
+
+Our pixel shaders in the Unreal Engine 3 demos are typically 50-200 instructions in length, and are composed from a wide range of artist-controlled components and procedural algorithms.
+
+Our vertex shaders are quite simple nowadays, and just perform skeletal blending and linear interpolant setup on behalf of the pixel shaders. All of the heavy lifting is now on the pixel shader side -- all lighting is per-pixel, all shadowing is per-pixel, and all material effects are per-pixel.
+
+Once you have the hardware power to do everything per-pixel, it becomes undesirable to implement rendering or lighting effects at the vertex level; such effects are tessellation-dependent and difficult to integrate seamlessly with pixel effects.</a>
+
+<q>More on shader models. With the GeForce 6 (and presumably other future SM 3.0 parts from other Independent Hardware Vendors) being made available, do you prefer Pixel Shader 3.0 and writing "fallbacks" Pixel Shader 2.0, or do you prefer 2.0 and write extra codes for 3.0 usage? What about Vertex Shader 3.0? Will it be used for effects that can't be done on Vertex Shader 2.0 hardware? What examples would those effects be?</q>
+
+<a>A major design goal of Unreal Engine 3 is that designers should never, ever have to think about "fallback" shaders, as Unreal Engine 2 and past mixed-generation DirectX6/7/8/9 engines relied on. We support everything everywhere, and use new hardware features like PS3.0 to implement optimizations: reducing the number of rendering passes to implement an effect, to reduce the number of SetRenderTarget operations needed by performing blending in-place, and so on. Artists create an effect, and it's up to the engine and runtime to figure out how to most efficiently render it faithfully on a given hardware architecture.</a>
+
+<q>There are currently two floating point implementions, 32-bit and 24-bit. You have said that UE3 requires 32-bit for accuracy. Can you provide us with specific (to UE3 and not in general) examples where 24-bit floating point hardware will either not run UE3-based games at all or will present artifacts? Essentially, what are the specific precision issues with 24-bit FP vis-a-vis 32-bit FP in UE3?</q>
+
+<a>Unreal Engine 3 works best with 32-bit floating point, but supports 24-bit floating point. Currently there are a few cases where minor artifacts are visible with 24-bit floating point. As shaders grow more complex, these will likely be amplified. But even with 24-bit precision, the scene quality looks far higher than, for example, Unreal Engine 2 scenes rendered with 8-bit-per-component precision.</a>
+
+<q>Can you explain the shadow algorithm of UE3? How is the "soft shadow" effect achieved, taking into account any aliasing artifact? What are the advantages and disadvantages of this dynamic soft shadow implementation?</q>
+
+<a>All characters in UE3 are capable of casting dynamic soft shadows, both for self-shadowing and environment shadowing, and the performance of this is quite reasonable on today's high-end DirectX9 hardware -- which will be in very mainstream consumer PC's by mid-2005. We won't be publicly disclosing implementation details until the first UE3 games ship, however.</a>
+
+<q>With regards to "virtual displacement mapping" or what is known as offset-mapping, other than the normally expected nice bumpy edges of corner walls, will this software technology be used for other things like, maybe, bullet-holes on walls or enemies? Currently, what is virtual displacement mapping utilized for in UE3?</q>
+
+<a>We're using virtual displacement mapping on surfaces where large-scale tessellation is too costly to be practical as a way of increasing surface detail. Mostly, this means world geometry -- walls, floors, and other surfaces that tend to cover large areas with thousands of polygons, which would balloon up to millions of polygons with real displacement mapping. On the other hand, our in-game characters have enough polygons that we can build sufficient detail into the actual geometry that virtual displacement mapping is unnecessary. You would need to view a character's polygons from centimeters away to see the parallax</a>
+
+<q>You had informed us, during the demo of UE3 in NVIDIA's GeForce 6 launch event, that in-game models consists of approximately 6000-7000 polygons but that this is actually "scaled down" from an original size of millions of polygons. How is "scaling down" achieved? Is there a tool for this or would artists have to create their own low-polygon cage?</q>
+
+<a>We provide a preprocessing tool with Unreal Engine 3 that analyzes the two meshes and generates normal maps based on the differences. This can be very CPU-intensive, so it can run as a distributed-computing application, taking advantage of the whole team's idle CPU cycles to generate the data.</a>
+
+<q>Are there different and separate lighting systems for the indoors and outdoors world of UE3? Is there usage of a kind of global illumination system or is it just normal mapping ala Half Life 2?</q>
+
+<a>The lighting and shadowing pipeline is 100% uniform -- the same algorithms are supported indoor and outdoor. Various kinds of lights (omni, directional, spot) are provided for achieving different kinds of artistic effects.
+
+All lighting is supported 100% dynamically. There is no static global illumination pass generating lightmaps, because those techniques don't scale well to per-pixel shadowed diffuse and specular lighting.</a>
+
+<q>Can you tell us how you would be making the editor for UnrealEngine3 (let's call it UnrealEd3) easier for artists when it comes to writing shaders or level development?</q>
+
+<a>In UE2, the editor was based on two primary editing components: The realtime 3D viewports and the script-driven hierarchical property editor. UE2 adds two more fundamental tools: A visual component editor and a timeline-based cinematic editor. The visual component editor powers the visual shader editor, sound editor, and gameplay scripting framework.
+
+In UE3, shaders are created by artists in a visual environment, by hooking together shader components. Programmers can supply and extend shader components, which take a set of inputs (from textures or other shader components), perform some processing work, and output colors or texture coordinates.
+
+A huge focus in UE3 has been empowering artists to do things which previously required programmer intervention: creating complex shaders, scripting gameplay scenarios, and setting up complex cinematics. We're building an engine to be suitable for small teams and very large teams alike, and in the past, programmers have been a bottleneck in both situations. The more power we put in the hands of content creators, the less custom programming work is required.</a>
+
+<q>Will UnrealEngine3 be taking advantage of PCI-E and use the GPU/VPU for physics calculations?</q>
+
+<a>All DirectX9 applications will automatically take advantage of PCI-Express as soon as it's available.
+
+We're using the GPU for visual effects processing, which includes both the obvious task of rendering visible pixels, and the invisible supporting work of, for example, generating shadow buffers and performing image convolution.
+
+However, given the limitations of the DirectX9 and HLSL programming model, I don't take seriously the idea of running non-visual processes like physics or sound on the GPU in the DirectX9 timeframe. For serious programming work, you need modern data structure features such as data pointers, linked lists, function pointers, random access memory reads and writes, and so on.
+
+GPU's will inevitably evolve to the point where you can simply compile C code to them. At that point a GPU would be suitable for any high-performance parallel computing task.</a>
+
+<q>In our last interview, you have said that 64-bit CPUs will afford the highest level of graphics detail with the next Operating System (code-named Longhorn) from Microsoft running. Can you elaborate on that? What would be the specific examples where 32-bit CPUs will lose out to 64-bit CPUs graphically?</q>
+
+<a>Off-the-shelf 32-bit Windows can only tractably access 2GB of user RAM per process. UT2003, which shipped in 2002, installed more than 2GB of data for the game, though at that time it was never all loaded into memory at once. It doesn't exactly take a leap of faith to see scenarios in 2005-2006 where a single game level or visible scene will require &gt;2GB RAM at full detail.</a>
+
+<q>Also in our last interview, you stated that consoles weigh heavily in the design of UE3. It is presumed that you're including the various next-generation consoles. Can you expand on this? For example, "threading" is presumed to be an important aspect of next-generation consoles - would UE3 be very "multi-threaded"? Generally, without pre-announcing next-generation console configurations/architecture, can you indicate what aspects of the design of UE3 are being influenced by consoles?</q>
+
+<a>We can only discuss these things with developers who are under appropriate NDA's.</a>
+
+<q>The next-generation console from Sony (Playstation3) has the "cell" technology, utilizing and taking advantage of multiple processors. id Software's John Carmack has voiced his disagreement (at the recent GDC) to the concept of multiple processors on both the console and PC industry. Can you comment on the concept of multi-processors in both industries, whether if it is the right way to go, or if it is avoidable because it is the wrong way to go, or...?</q>
+
+<a>In general, more computing power is always a good thing when it's exposed in a programmer-friendly way.</a>
+
+<q>With more consumers buying HD-TV's in America at least, will UE3 allow for HD-TV resolutions in the console market and take advantage of the 16:9 aspect ratio? Have you done a side-by-side comparison of images at 1080i vs. 720p to see which looks better? Any thoughts on the technology differences of 1080i and 720p? Will games made by Epic target 60fps at the highest TV resolution and scale back from that?</q>
+
+<a>Let's instead talk about something that's not under NDA. One can reasonably extrapolate from Moore's Law that by the time Unreal Engine 3 games begin shipping on PC, the higher-end consumer GPU's will be capable of running UE3 games at 1920x1200 resolution at frame rates that are considered good and competitive in each particular genre.</a>
+
+<q>"Virtual Displacement Mapping" is one of the cool new technology incorporated in UE3, one that nobody initially anticipated with DX9. Can you provide some other examples of graphics technologies in UE3 that you're excited about or wish to talk about? Perhaps stuff like interaction with objects (shoot holes in a bucketful of water and have the water come out the bullet holes, i.e. object physics), advanced artificial intelligence, deformable terrain everywhere, advanced physics, advanced audio, networking, collision detection, etc.</q>
+
+<a>See http://www.unrealtechnology.com for the features we've announced so far.</a>

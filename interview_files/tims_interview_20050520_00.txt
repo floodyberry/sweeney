@@ -1,0 +1,73 @@
+http://www.nvnews.net/vbulletin/showthread.php?t=50895
+Tim Sweeney/Unreal Engine 3 Interview
+Tim Sweeney at E3 2005
+nVNews
+Jacob Freeman
+
+<q>First of all, do you plan on supporting 64 bit CPU’s in a 64 bit environment?</q>
+
+<a>Yeah, that's going to be a big feature of Unreal Engine 3, that we support both 32-bit and 64-bit out of the box, this'll be big in PC games.</a>
+
+<q>Do you see any benefits of running 64-bit CPUs? Is there any performance benefit?</q>
+
+<a>Yeah, compiled code runs faster because you have twice as many registers to work with, but also with Unreal Engine 3 we're really pushing the content... we'll be able to use high-resolution textures with more detail in the environment and that'll be a great thing on PC, which is a really scalable platform.</a>
+
+<q>Yeah, also, will it support dual CPUs?</q>
+
+<a>Yeah, yeah, absolutely, so Unreal Engine 3 is broadly targeting multi-core CPUs, Sony has something like that with the Cell architecture, and Microsoft has that with the three CPUs in the Xbox 360 and, you know, Intel and AMD are already out with dual-core CPUs in the PC market.</a>
+
+<q>And do you also see a performance benefit running dual CPUs? Because most games now, they don't support dual processors, so you don't really see a performance benefit.</q>
+
+<a>Well, Unreal Engine 2 just runs single-threaded so you don't get a significant benefit from it but in Unreal Engine 3 you'll be able to do rendering and animation updates and physics in multiple threads so, I wouldn't say it would double, but it'll increase performance significantly.</a>
+
+<q>Okay, and will the PC version of Unreal 2007 differ from the Xbox 360 version?</q>
+
+<a>Well sure, PCs...</a>
+
+<q>[interrupting] I mean, talking graphics-wise.</q>
+
+<a>Well, the PC is a more scalable platform, so it'll run on $500 PCs and it'll scale down to the Xbox 360 and it'll run on a $3000 SLI machine with dual kickass Nvidia cards in it and it'll run with even more detail. So we'll be all over the place.</a>
+
+<q>And are the shaders in Unreal Engine 3, are they being developed with HLSL [High Level Shader Language]?</q>
+
+<a>Well, Unreal Engine 3 has a high-level material system, and in ours you connect your different material effects together in a graphical way, so in the end it does translate to HLSL on Microsoft platforms, and CG on the Sony and Nvidia platforms. But it's not really what you see when you're working on the engine, you see the really high-level artist-friendly shader system.</a>
+
+<q>And does the DirectX 9.0 shader compiler do as good at producing optimized code compared to, like, hand-writing the shaders?</q>
+
+<a>Yeah, well, we look at all the generated code from the HLSL compiler and it's within, you know, 2-5% of hand-optimized assembly code, so, it's at the point where it's good enough where we'd never ever touch assembly again.</a>
+
+<q>Sounds good to me. Will Unreal Engine 3 support Pixel Shader 2.0?</q>
+
+<a>Yeah, so we'll ship on any reasonable DirectX 9 hardware; the Geforce 6200 at the low end and the ATI Radeon 9800.</a>
+
+<q>How about Pixel Shader 1.1, like Geforce 4?</q>
+
+<a>We're not planning on it, but we might decide at the end of the project to do a crappy backwards-compatible hack for the really old hardware but we look at that like we look at software rendering in UT2004: it's not beautiful but it works.</a>
+
+<q>I think you added software rendering later in the Unreal Engine 2004.</q>
+
+<a>[nods] Right.</a>
+
+<q>And will a 6800 Ultra be able to run Unreal Engine 3 with all the options maxed at 1024 by 768?</q>
+
+<a>Yeah, 1024 by 768 should be perfect for an Ultra, of course by the time Unreal Tournament 2007 ships at the middle or the end of next year, you'll have even higher-end cards than that; you'll have four times the performance, so you'll be able to run 1600 by 1200 on those.</a>
+
+<q>And do you have any support for real-time soft shadows?</q>
+
+<a>Yeah, we have support for stencil shadows which are hard-edged, we support real-time soft shadows, for soft shadowing of characters and characters casting shadows in the environment, and we support pre-computed shadows. So our objective with Unreal Engine 3 is to give artists this big toolkit of shadowing effects that they can select from so they can make the tradeoffs between performance and visual quality.</a>
+
+<q>First of all how do you pronounce [Ageia]? Is it ah-geea?, or ah-jeea?</q>
+
+<a>It's 'ah-jeea'.</a>
+
+<q>Okay. How will that affect the performance of Unreal Engine 3 running on a hardware physics engine as opposed to a software physics engine?</q>
+
+<a>Well, the big thing there is how we'll be able to put far, far more physical effects, with things like particle systems, and fluid effects, where without the Ageia system, we'll have a particle system with only a few hundred particles, and with the system, we could have tens of thousands of particles there. And it's really nice, because it mirrors the kind of non-traditional processing power that's available on the Playstation 3 with the Cell architecture, so it's a factor of ten times more computing power, but it's very special-purpose.</a>
+
+<q>And what's your opinion of dual-core GPUs? Does a dual-core GPU, is it more efficient than an SLI system?</q>
+
+<a>It seems like it should be about the same comparing a dual-core GPU to an SLI system, maybe a bit faster because the on-chip communication is faster than your PCI-Express bus.</a>
+
+<q>Okay, one more question: R520 or G70?</q>
+
+<a>[laughs] Oh, G70 for sure.</a>

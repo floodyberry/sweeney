@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Folding neither Left nor Right (or how to avoid overspecifying the solution to a problem) | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1438" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Folding neither Left nor Right (or how to avoid overspecifying the solution to a problem)</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Can anyone tell me which functional languages support a non-order-specific fold, and what the name of those operations are? I read somewhere that sometimes reduce is non-order specific, but other places claims it is the same as foldl. Clearly it depends on the languages, but I don't trust those source, so I thought I'd ask my favourite group of egg-heads. :-)</p>
+<p >It seems that specifying left or right folds when the function being used is associative is over-specifying the solution to a problem. In other words you are solving a more specific problem than stated. Commonplace in imperative code, but it should be more easily avoided in functional code. Perhaps this is moot because it might be an "easy" problem for compilers to figure out if a "clean" function (e.g. pure functional) is associative and/or commutative based on the primitives.  </p>
+<p >I am studying the problem of optimizing / parallelizing pure functional code. So any good pointers to basic primers on the internet would be much appreciated. I am particularly interested in those common-knowledge optimizations of functional code. I don't have time to purchase any books, so online references would be most appreciated. It would be cool to gather a compendium of functional optimization tips and tricks on this thread, but that might be hoping for too much.  </p>
+<p >Thanks in advance.</p> </div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at 04/29/2006 - 21:04 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1445" title="Filter-Reduce Optimization">previous forum topic</a> | <a href="node/1437" title="First-Class Traces">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1438" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 1528 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1438" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1438" />
+<a id="comment-16431"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16431" class="active">I&#039;m not exactly sure I see</a></h3>
+ <div class="content"><p >I'm not exactly sure I see how you could have a sort of "neutral" fold like you speak of.  The reason you have a foldl and foldr in, for example, Haskell, is because when you pass a function to the fold, the associativity of the function becomes essentially irrelevant since the list you are folding over is decomposed 1 element at a time, and the fold is applied to that element along with the result of its previous application.</p>
+<p >So, for example, although one can talk about the associativity of (-), and say that the evaluation of:</p>
+<pre >0 - 1 - 2 - 3 - 4</pre><p >
+could be interpreted either as:</p>
+<pre >(((((0 - 0) - 1) - 2) - 3) - 4)</pre><p >
+or</p>
+<pre >(0 - (1 - (2 - (3 - (4 - 0)))))</pre><p >
+... for foldl and foldr respectively, in terms of the implementation of fold, this is somewhat misleading because the fold functions cannot determine the associativity of the function or operator passed to it.  You have to specify that explicity, which is partly what is meant when you say fold<strong >l</strong> vs. fold<strong >r</strong>.  In fact, in a functional language based upon the lambda calculus (which is nearly all of them), function application is always left associative, and it's only operators that may have different associativity.  But when you pass operators to functions, they are usually from that point just treated as any other function, so their associativity is, again, basically lost in the mix at that point.</p>
+<p >If there were a way for the fold function itself to determine, at the runtime level, what the associativity of the operator passed to it was, then I suppose you could have it determine whether to fold left or right according to that information.  I don't know of any languages that do this sort of thing though.  However, you can "fake" it if you like by creating an ADT that encodes a function along with an associativity, and then passing that to a sort of "intelligent" fold.  Not a very elegant solution though, in my opinion.</p>
+<p >Anyway, I don't know if any of that helps, but maybe it does :)</p></div>
+ <div class="links">By <a href="user/2491" title="View user profile.">Darin Morrison</a> at Sat, 04/29/2006 - 23:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-16432"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16432" class="active">Isn&#039;t &quot;reduce&quot; another name for &quot;fold&quot; rather than &quot;filter&quot;</a></h3>
+ <div class="content"><p >Hi Darin,</p>
+<p >Thanks for you response.</p>
+<p >I have never seen "reduce" called "filter". Can you please point me somewhere on the web where the terms "reduce" and "filter" are used to mean one another? </p>
+<p >I realize that foldl and foldr are specifically order dependant by their very definition in Haskell. My issue is that as a programmer, I would rather define a function such as "sum" without specifying whether to use foldl or foldr since they both will end up with the same result. The idea being that if I don't specify the order, then the compiler can theoretically optimize and parallelize the code more easily.</p>
+<p >Maybe I am barking up the wrong tree here.<br >
+:-)</p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Sat, 04/29/2006 - 23:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-16433"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16433" class="active">They don&#039;t necessarily give</a></h3>
+ <div class="content"><p >They don't necessarily give the same result in Haskell - foldl never terminates given an infinite list for input, whereas foldr can. Consider folding (&amp;&amp;) over an infinite list with a False in it, for example, or using the fold to build a data structure not all of which is evaluated.</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Sun, 04/30/2006 - 00:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-16439"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16439" class="active">Good point</a></h3>
+ <div class="content"><p >Good point, thanks for bringing it up. </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Sun, 04/30/2006 - 16:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-16442"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16442" class="active">speaking of names: filter -&gt; sieve</a></h3>
+ <div class="content"><p >I think of filters as stateful processors of streams, e.g. low pass filters, etc. Thus I think a better name for "filter" is "sieve" since it eliminates things from the stream (Smalltalk calls it "select"). When writing stream processors that can also be signal processors, using the name "filter" is confusing to people who are more familiar with signal processing than functional programming. </p></div>
+ <div class="links">By <a href="user/1560" title="View user profile.">James McCartney</a> at Sun, 04/30/2006 - 17:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-16458"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16458" class="active">&quot;associativity&quot;  vs.  &quot;associates&quot;</a></h3>
+ <div class="content"><p >Close, but not quite.   It's rather perverse that these two forms of the same word have rather different technical meanings.    You seem to be getting these meanings confused. </p>
+<p >First, if you talk about the "<i >associativity of subtraction</i>,"  most mathematicans would take that to mean "subtraction is associative,"  which means that for all x, y, and z:</p>
+<pre >x - (y - z) == (x - y) - z</pre>
+<p >You seem to understand that this is not the case.   In fact, it's easy to use elementary algebra to prove that this equality is true if and only if z = 0.   (Although this isn't the case in group theory.)  Therefore,  there is no "associativity of subtraction,"  at least when you are talking to a mathematician.  </p>
+<p >On the other hand,  there are the conventions that define standard order of operations.   Sombody will say  that "subtraction <i >associates to the left</i>"  to mean that when we write</p>
+<pre >x - y - z</pre><p >
+we actually mean</p>
+<pre >(x - y) - z</pre><p >
+This is purely <i >convention</i>,  no more and no less.   "associates"  has nothing to do with fold-left vs fold-right.</p>
+<p >On the other hand,  "associativity" is quite relevant to fold-left and fold-right.  Namely,  when passed an associative operator,  fold-left computes the same value as fold-right when at least one of these additional conditions are true:</p>
+<ol >
+<li > the initial element is the identity element for that operation </li>
+<li > the operation is also commutative.  </li>
+</ol>
+<p >If the operation is not associative,  it all depends.  Fold-left probably does not compute the same thing as a fold-right.</p></div>
+ <div class="links">By <a href="user/1602" title="View user profile.">Leon P Smith</a> at Mon, 05/01/2006 - 15:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-16480"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16480" class="active">&quot;fully&quot;</a></h3>
+ <div class="content"><p >I've generally found it easiest to explain by calling associative operations "fully" associative instead of "left" or "right" associative.  People seem to get that pretty easily.</p></div>
+ <div class="links">By <a href="user/1925" title="View user profile.">jimdesu</a> at Mon, 05/01/2006 - 22:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-16482"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16482" class="active">Subtraction</a></h3>
+ <div class="content"><p ><cite ><br >
+(Although this isn't the case in group theory.)<br >
+</cite></p>
+<p >Depends on the point of view really:</p>
+<p >(a) If one considers '-' as a binary operation [over a set of integers],  then the the structure is not a group but rather a quasigroup without identity (similarly,  nonzero rationals under division).</p>
+<p >(b) If one considers '-' as a notation for the inverse element, then we have a group [of integers] under addition where the '+' operation is implied:</p>
+<p >a-b-c  a + (-b) + (-c)</p></div>
+ <div class="links">By <a href="user/1594" title="View user profile.">vc</a> at Tue, 05/02/2006 - 00:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-16434"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16434" class="active">Neutral folds</a></h3>
+ <div class="content"><p >A compiler for a Turing-complete language can't ascertain whether an arbitrary function of two variables is commutative.  So, could we hope to come up with an incomplete but conservative solution for determining commutativity that succeeds in simple cases?  Unfortunately, even that seems intractably difficult to implement, and even then, only likely to work in the most simplistic of cases.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Sun, 04/30/2006 - 03:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-16440"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16440" class="active">An area for research</a></h3>
+ <div class="content"><p >So does this mean it is a good area for research? One solution, might be to allow programmers to provide attributes for functions with regards to their properties (i.e. associative, commutative, etc).</p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Sun, 04/30/2006 - 16:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-16460"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16460" class="active">Go for it</a></h3>
+ <div class="content"><p >I'm sure it's worth researching for your own benefit,  and you just might come up with something. :)   I really don't know what has or has not been done with your question,  but I can offer generic advice.  </p>
+<p >It's pretty well known that you can use associativity and commutativity properties to optimize folds, especially really large folds across multiple machines.    As you suggest, you could declare something to be associative and commutative,  though I certainly would not trust a hurried programmer to create these declarations.  </p>
+<p >Tim's right.   Associativity and commutivity are undecidable properties in general.   Unchecked declarations might be the way to go if you are looking to get something done,   but this probably isn't a viable line of research.</p>
+<p >There are interactive theorem provers that help humans generate a machine-checkable proof of associativity and commutativity.   This a possible application of proof-carrying-code,  as a means of safe optimization instead of a means of security.   (Though the two are interrelated.)  </p>
+<p >Another tactic for dealing with undecidablity is to restrict your language.    Can you find a restricted language that produces only associative and commutative operations,  and is still sufficient to efficiently express most or all operations of interest?    Can you restrict your language so that a fully automated theorem prover <i >can</i> decide whether or not something is associative and commutative?</p>
+<p >Regular expressions, SQL, HTML, CSS, PDF, are examples of languages that sacrificed turing-completeness in order to gain something else.   (Such languages also have the tendancy to creep back to turing-completeness.)</p>
+<p >Finally,  you may decide that you don't really need associativity and commutivity,  that your conceptual domain and range are actually a quotient type.   Then you should prove that functions you define are in fact well-defined.</p></div>
+ <div class="links">By <a href="user/1602" title="View user profile.">Leon P Smith</a> at Mon, 05/01/2006 - 17:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-16468"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16468" class="active">Associativity, Commutativity, and Quotients</a></h3>
+ <div class="content"><p >A language which supports declaring associativity and commutativity of a operators in a non-trivial way is OBJ3 and presumably other members of the <a href="http://www-cse.ucsd.edu/~goguen/sys/obj.html">OBJ family</a>.  It is covered in section 2.4.1 of <a href="http://www-cse.ucsd.edu/~goguen/ps/iobj.pdf">Introduction to OBJ3</a> (the correct link to the PDF there is also a link to a PS on the page).  In general, the OBJ family is interesting.</p>
+<p >Leon's remark at the end makes me again bring up <a href="http://www.cs.nott.ac.uk/~txa/publ/mpc04.pdf">Constructing Polymorphic Programs with Quotient Types</a>.  A function accepting an unordered pair would be a commutative function.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Mon, 05/01/2006 - 20:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-16436"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16436" class="active">Aggregation and databases</a></h3>
+ <div class="content"><p >The operation you want is called aggregation, which, abstractly, takes a multiset, a binary associative and commutative operator over the members of the multiset, and the identity element for the operation.  The sum and the product of the elements of a multiset are the aggregation of addition and multiplication, respectively, over that set.</p>
+<p >SQL databases implement aggregate functions like SUM, PRODUCT, MIN, MAX, etc., but not a higher-order aggregation function.  This is in fact highly relevant to you, since SQL is after all a declarative laguage that gets compiled to an execution plan, and many database engines do in fact exploit the commutativity and associativity of the underlying binary operations to optimize and parallelize the SQL aggregate functions; that is, the problem you're interested on here is intimately related to many database query optimization problems.</p>
+<p >Aggregation is also of fundamental importance to dimensional modeling in OLAP database applications.</p></div>
+ <div class="links">By <a href="user/1424" title="View user profile.">em</a> at Sun, 04/30/2006 - 06:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-16441"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16441" class="active">So if I understand you,</a></h3>
+ <div class="content"><p >So if I understand you, aggregate atomic operations, are mostly ignored in many functional languages? In the Google map/reduce framework do they parallelize the reduce function I wonder?   </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Sun, 04/30/2006 - 16:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-16443"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16443" class="active">So if I understand you,</a></h3>
+ <div class="content"><p ><i >So if I understand you, aggregate atomic operations, are mostly ignored in many functional languages?</i></p>
+<p >I'm not sure I understand this question.  Anyway, I think the deal here is that most functional languages use lists as their most common data structure.  Fold right is a very natural operation over a list, since it essentially performs a recursive computation that's isomorphic to the list it's given (the good old "replace cons and nil with your choice of function and value" description of fold right).</p>
+<p >Aggregation, on the other hand, is an operation over <i >sets</i> or <i >multisets</i> (a.k.a. "bags"), a data structure that functional languages have not tended to emphasize as much as lists.  Relational query languages, on the other hand, have the <i >relation</i>, a set of tuples, as their fundamental data type.</p>
+<p >So I think one approach to what you're interested in would be to for the language to provide abstract set and multiset datatypes, and higher-order aggregation combinators over these.  The contract here is that if you're using the set or multiset datatypes, while there may be a way to construct a set recursively, when you deconstruct the same set, you can't necessarily recover the order in which you constructed it (which is what makes sets and lists different).  Then, your underlying concrete data structures, and your implementation of the aggregation combinators, can be such that the operation parallelizes.</p></div>
+ <div class="links">By <a href="user/1424" title="View user profile.">em</a> at Sun, 04/30/2006 - 19:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-16447"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16447" class="active">Didn&#039;t the Kleisli Query System do this?</a></h3>
+ <div class="content"><blockquote ><p >So I think one approach to what you're interested in would be to for the language to provide abstract set and multiset datatypes, and higher-order aggregation combinators over these.</p></blockquote>
+<p >If I recall correctly, Kleisli took this approach, including primitive structural recursion operators for lists, sets and bags. These primitives were also exposed via comprehension syntax for each type of collection.</p>
+<p >I think Kleisli deserves a bit more attention for its efforts to bridge databases and programming languagues.</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Mon, 05/01/2006 - 04:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-16459"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16459" class="active">&quot;insert&quot; in APL &amp; J</a></h3>
+ <div class="content"><p >I don't think this answers your question, but it's another way of looking at folds.  In J, the "insert" operation works by inserting the specified verb between all the elements of a list.  So "+/" applied to "1 2 3 4 5" means "1 + 2 + 3 + 4 + 5".  "/" is the insert operator; "+" is the verb to insert.  I've always found this easier to explain than fold.</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Mon, 05/01/2006 - 16:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-16483"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16483" class="active">That is indeed useful. I</a></h3>
+ <div class="content"><p >That is indeed useful. I want to write an introductory programming text at some point, and I find this a useful way to think about fold/reduce. </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Tue, 05/02/2006 - 00:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-16484"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1438#comment-16484" class="active">Data structure API contracts</a></h3>
+ <div class="content"><p >While not exactily the same as what you asked, I've delt with this situation in <a href="http://www.eecs.tufts.edu/~rdocki01/docs/edison/index.html">Edison</a><br >
+by introducing a family of folds where the order is unspecified by the API contract.  Concrete datastructure implementations are then free to fold in any order that is convienient.</p>
+<p >Of course, the behavior is fixed for any particular concrete implementation.</p></div>
+ <div class="links">By <a href="user/2402" title="View user profile.">Rob Dockins</a> at Tue, 05/02/2006 - 00:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

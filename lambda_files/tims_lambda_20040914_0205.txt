@@ -1,0 +1,32 @@
+http://lambda-the-ultimate.org/node/256
+http://lambda-the-ultimate.org/node/256#comment-1874
+1048832
+Generics for the masses
+There must be a better way
+<p>It feels like there must be a better way to do this.  I've been thinking about this for a while but a comprehensive solution isn't clear.  But a few things do seem obvious:</p><p>
+
+First of all, function-overloading provides a more straightforward means of expressing this than typeclasses.  This is even more so when one may abstract over the domain of an overloaded function.  For example, given a reference "f" to a possibly-overloaded function, you want to be able to extract the type of f's domain using a syntax like "f.dom".  This way, for a contrived example, you can write a generic function to take the sum of certain kinds of elements over certain data structures:
+
+</p><pre class="code_box">
+// The sum of a single integer is that integer.
+sum(x:int):=x
+
+// The sum of a character is zero.
+sum(x:char):=0
+
+// To generate the sum of a list of
+// elements compatible with
+// summation, we add up the sum of
+// each element.
+sum(x:list(sum.dom)):=
+   if(x=nil) 0
+   else sum(x.head)+sum(x.tail)
+</pre><p>
+
+This way, we can say sum({})=0, sum(1,2,3)=6, sum( {3,4}, {5,{}, 7}, "Hello" ) = 19, etc.  (Here, strings are arrays of characters.)  A more useful example would be a generic framework for printing elements of generic types, including both values and containers like arrays and finite sets.</p><p>
+
+Second, this approach only works well in a closed-world environment.  For example, to use a module containing generic printing functions for certain data types, and to use it in combination with your own generic printing functions, you would need to pass your own expanded printing functions in to the container's printing functions, so that it may recursively call both your sum functions and its own.</p><p>
+
+It appears that Haskell's type classes solve this problem by automatically generating implicit parameters for typeclass instances at their use site.  Thus, identical typeclass invocations on identical data types may behave differently depending on their local context.  And this is often desirable!  This phenomenon is described in <a href="http://www.mail-archive.com/haskell@haskell.org/msg15080.html">http://www.mail-archive.com/haskell@haskell.org/msg15080.html</a></p><p>
+
+I think an optimal solution (given the requirements of a strongly-typed language, etc) is a combination of two orthogonal features: support for general overloading of functions (though perhaps with restrictions, like: the domain of the overloads must be disjoint), and support for lexically-scoped implicit parameters.  Overloading is a convenience that avoids the need for all the manual plumbing in this paper, while implicit parameters would make generic types work in an open-world environment.  Given these two features, plus dependent types, I don't think typeclasses would be needed in a language at all.</p>

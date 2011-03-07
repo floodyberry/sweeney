@@ -1,0 +1,34 @@
+http://lambda-the-ultimate.org/classic/message6475.html
+http://lambda-the-ultimate.org/classic/message6475.html#6501
+0530763
+Hundred Year Language
+Re: Hundred Year Language
+<p>This is a great article, the first such set of predictions I've seen that are grounded in reality and history, rather than silly speculation.</p><p>
+
+The history of mathematics provides a good roadmap, both for the areas where we can expect major progress, and those where we should only hope for incremental improvement.</p><p>
+
+When I was a kid, I had an old Calculus book from the early 1900's and learned calculus from it, because that's the only reference I had on the topic.  When the subject was later taught in school, it was a surprisingly natural transition -- this despite the 100 years of scientific progress that had passed since the book was written.</p><p>
+
+Language syntax and notation can only be expected to change incrementally.  100 years ago, mathematicians used f(x) to denote "calling function f with parameter x", and they will likely still be doing so 100 years from now.  This is almost certain to carry over to future programming, too.  The current notations for function calling, infix operators, and definitions won't likely change much.  I expect that if in 100 years I showed a programmer "f(x:int):int -&gt; if x&lt;=0 then 1 else x*f(x-1)", he would understand exactly what this code is doing.</p><p>
+
+The most important change in mathematics over the past 100 years has been in putting it on a solid logical foundation, such as basing calculus on formal limits rather than ill-defined infinitesimals.</p><p>
+
+I think the most important change in programming in the next 100 years -- and which will happen much sooner than 100 years from now -- is the reformulation of language semantics around well-defined type systems based on mathematical logic.  The last 30 years have led to incredible progress in research here, but the results haven't been picked up by mainstream languages, though R&amp;D languages like Haskell based on sound type systems are gaining ground among certain groups.</p><p>
+
+C# is a great illustration of the superficiality of popular language progress.  It is the most polished and fine-tuned mainstream language ever created, yet fails to come to grips with basic mathematics type and theory.  You still have absurdities like 2^64=0, 7/2=3, simple expressions like x/y and a[x] which the  compiler accepts yet aren't actually typesafe in any reasonable definition of the term, arrays have serious typing flaws, and the basic confusion between things and references to things remains.</p><p>
+
+Right now, the open language lineages are:</p><p>
+
+- LISP: This is the apex of untyped programming with nested scoping and metadata manipulation.  It's at the end of the line, not because of lack of potential, but it's so simple and powerful than any improvements to it can be implemented in LISP itself without affecting the core language.  In 100 years, after the last C and C++ programmers are long gone, there will still be LISP enthusiasts.  But don't expect large-scale software development to happen this way.</p><p>
+
+- C, C++, Java, C#: The problem nowadays isn't with implementation but with the underlying flaws in the paradigm.  We can continue to go the route of adding tweaks as with C#, but they're asymptotically approaching a limit that's not far from the current state of affairs.</p><p>
+
+- Python, Perl, etc: Languages with significant improvements in usability for certain audiences, and are generally a mix of untyped LISP features with typed C/Java-style features.  The primary innovations I see here are in the syntax and libraries, for example Python's pioneering of "pseudocode that runs" and Perl's first-class regular expressions and text parsing capabilities.  Future languages will certainly inheret these features, even as the underlying paradigm is changed.</p><p>
+
+- ML, Haskell, simply-typed functional languages with type deduction and, in general, programs consisting of a whole bunch of top-level declarations.  The elegance of these languages is based on Hindley-Milner and with most of the neded  extensions of the language (subtyping, dependent types), that breaks, and the resulting declarations and error messages become quite a mess.  These languages will certainly remain useful to their current fans, but I see no hope for this style of programming to scale up to mainstream development.</p><p>
+
+So which lineage will be the basis of languages 100 years from now?  I think the syntax has long since been determined, and will fall very much in the middle ground between Haskell, Pascal, and C++ -- and not very much outside that triangle.</p><p>
+
+Regarding the type system and semantics, I think the basic principles in such mathematical-style code as "f(x:int):int -&gt; if x&lt;=0 then 1 else x*f(x-1)" will not change one iota in 100 years, but that the current notions of objects, references, member functions, exceptions, however-many-bit integers, integer being "the" type of 7, and so on will seem terribly archaic.  In this area, I don't think any current lineages will stand.</p><p>
+
+However, I do think we'll converge on a type system that is not far outside of the past 20 years' research into dependent types, intersection and union types, unification, constraint logic, and proofs-as-programs.  These type systems essentially have the expressive power of mathematical logic itself, which is fundamental and not a product of invention or whim.</p>

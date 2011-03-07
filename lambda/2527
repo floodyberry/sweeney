@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Universal Type System | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2527" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Universal Type System</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Hi Folks</p>
+<p >I was just having a discussion with a friend and this question might not seem logical but - just like any code structure can be represented by closures and any control flow can be modelled by continuations, is there any type system in which all type systems can be represented ? Does this concept even make sense ?</p> </div>
+ <div class="links">By <a href="user/3560" title="View user profile.">Akhilesh Mritunjai</a> at 2007-11-06 16:32 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/2499" title="ErlOCaml">previous forum topic</a> | <a href="node/2510" title="On the Importance of Purity">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2527" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2603 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2527" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2527" />
+<a id="comment-37980"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-37980" class="active">Not yet...</a></h3>
+ <div class="content"><blockquote ><p >
+is there any type system in which all type systems can be represented?
+</p></blockquote>
+<p >In the context you ask the question, the answer is, no, there is no widely-accepted "grand unified theory" for all type systems generated by some simple, uniform, computational mechanism.</p>
+<p >(Yes, I have hedged this carefully ;-) )</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Tue, 2007-11-06 18:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-37983"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-37983" class="active">OK, I&#039;ll Bite</a></h3>
+ <div class="content"><p >Why aren't <a href="http://www.informatik.uni-hamburg.de/TGI/mitarbeiter/wimis/stehr/pts_eng.html">Uniform Pure Type Systems</a> precisely that?</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 2007-11-06 19:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-37984"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-37984" class="active">What do you mean by &quot;is&quot;? ;-)</a></h3>
+ <div class="content"><blockquote ><p >
+Why aren't Uniform Pure Type Systems precisely that?
+</p></blockquote>
+<p >Note my saying "widely-accepted": to wit, the page you reference doesn't even have working links and a quick Google search doesn't provide much more reference for that term.</p>
+<p >A second proviso I would add is that there may be "type systems" of interest that don't fit that (or some other) candidate framework.</p>
+<p >Beyond that, I'll reserve my personal opinion about your candidate until I can find some more details on the work you referred to.</p>
+<p >If you want to make the case, go ahead. ;-)</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Tue, 2007-11-06 21:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-37985"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-37985" class="active">No, I have a real answer (re universal types)</a></h3>
+ <div class="content"><p >I think the poster is asking a question that can be usefully answered this way:</p>
+<p >There are many universal data types.  Perhaps the simplest is an idealized "cons pair" defined this way:</p>
+<p >1. "nil" is a cons pair<br >
+2. If A and B are cons pairs (perhaps identical) then (A . B) is a cons pair.</p>
+<p >A notable extension to this would admit mutation -- a way to modify a cons pair by changing one of the two "parts".   I won't try to define that axiomatically off the top of my head.</p>
+<p >It's not hard to see that you could make up rules to represent other kinds of data as cons pairs.  You can encode numbers, lists (of course), trees (of course), type tags, procedures, etc.   You can encode anything.</p>
+<p >Moreover (I claim) that if you have a realistic model of how computer memory performs (how long reads and writes take) then, formally, a cons-pair-only representation of data is just as big-O time efficient and as space efficient as anything else you can think of.</p>
+<p >Cons-pairs are interesting because they are so simple.  I'm not sure what "simplest" means in the context of a universal data structure but I'm sure cons-pairs are pretty hard to beat for simplicity.</p>
+<p >You could make up other data structures that are also universal.  Cons pairs are simple in that they only have 2 parts so, for example, you could use arrays:</p>
+<p >1. nil is an array<br >
+2. for any A1, A2, ... An;  [A1, A2, ... An] is an array</p>
+<p >Those are interesting too.  They give you a naive performance model that is often more accurate "locally" (in small computations) but that is obviously less accurate in big-O space.</p>
+<p >-t</p></div>
+ <div class="links">By <a href="user/3938" title="View user profile.">Thomas Lord</a> at Tue, 2007-11-06 23:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-37986"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-37986" class="active">Incompleteness</a></h3>
+ <div class="content"><p >Type system design usually involves keeping the delicate balance between expressiveness and decidability. It is impossible to have a system that is expressive enough to subsume all possible others while still staying decidable. Basically, a variation of Goedel's incompleteness result.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Tue, 2007-11-06 23:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-37999"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-37999" class="active">How about a type system prototyping system...</a></h3>
+ <div class="content"><blockquote ><p >is there any type system in which all type systems can be represented?</p></blockquote>
+<p >Yes, any programming language sufficient to implement a type system in, because we would be implementing the meta-level of all type systems: the type system axioms.</p>
+<p >. . .</p>
+<p >Preferrably, use a language like LUA or LISP/SCHEME that allows you do do what Thomas has mentioned.  With that, start with the axiomatic functionality of all type systems:</p>
+<ul >
+<li >Type Inference</li>
+<li >Type Checking</li>
+<li >Type Coercion</li>
+</ul>
+<p >Then for each, bootstrap a function within the language you are using:</p>
+<ul >
+<li ><code >ValidTypesOf(D)</code> - given structured data D, returns a set of all plausible types for D based on D's structure and state.  This function would be the type-inference function.</li>
+<li ><code >IsOfType(D, T)</code> - type-checks D for compatability with T; returns a truth value.  The type-checking function.</li>
+<li ><code >AsType(D, T)</code> - returns coerced data D to type T, where T is a type within the set returned by <code >ValidTypesOf()</code>.  This is the type coercion function.</li>
+</ul>
+<p >I suppose we are saying that all valid types(T) of any data(D) is a function of D's internal data and structure.</p>
+<p >Types simply become value patterns and structural patterns found in data, with the type of data being inferred from the data's structure and/or state.  In other words, types are "structured-data patterns".</p>
+<p >. . .</p>
+<p >Need complete determinism?  Just use a tag within each data structure that stores the default, intentional type of given structured data.</p></div>
+ <div class="links">By <a href="user/4852" title="View user profile.">Winheim Raulsh</a> at Wed, 2007-11-07 17:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38001"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38001" class="active">Once More, With Feeling</a></h3>
+ <div class="content"><p >Please have a look at <a href="http://kanren.sourceforge.net">Kanren</a> and one of its examples, an implementation of the Hindley-Milner type inference relation (so it can serve either as a type inferencer or type checker).</p>
+<p >See also <a href="http://repository.upenn.edu/cis_reports/100/">TinkerType: A Language for Playing with Formal Systems</a>. At one point the code for TinkerType was available, but I'll be darned if I can find it now.</p>
+<p >I would also look at <a href="http://www.cl.cam.ac.uk/~pes20/ott/">Ott: Effective Tool Support for the Working Semanticist</a>.</p>
+<p >Finally, any of the good theorem-proving-eh-functional-logical-programming-languages will let you develop extremely powerful type systems and play with them. I like <a href="http://coq.inria.fr">Coq</a>; other folks seem to like <a href="http://twelf.plparty.org/wiki/Main_Page">Twelf</a> a lot. I also tend to think that <a href="http://www.informatik.uni-hamburg.de/TGI/mitarbeiter/wimis/stehr/pts_eng.html">Pure Type Systems in Rewriting Logic</a> gets overlooked, for reasons that I can't fathom&mdash;I'd be pursuing it personally if Coq didn't have the Coq'Art book and I weren't such a newbie to the entire domain.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Wed, 2007-11-07 18:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38007"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38007" class="active">Interesting</a></h3>
+ <div class="content"><p >I forgot that logic programming allows one to reuse bidirectional relations, which one could then define between data's type and data' value and structure, resulting in all the functionality of a type system for less coding.  Kanren using the Hindley-Milner relation makes a point along those lines.</p></div>
+ <div class="links">By <a href="user/4852" title="View user profile.">Winheim Raulsh</a> at Wed, 2007-11-07 22:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38017"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38017" class="active">Tinkertype availablility</a></h3>
+ <div class="content"><p >I'm looking for a tool to help me with this stuff (both doing and learning-how-to-do), so I did some googling. Source code is linked on <a href="http://www.cis.upenn.edu/~bcpierce/papers/index.shtml">Pierce's bibliography</a> under the citation for the paper. Looks completely and totally unmaintained....</p></div>
+ <div class="links">By <a href="user/2788" title="View user profile.">crux</a> at Thu, 2007-11-08 04:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-38026"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38026" class="active">Good Enough</a></h3>
+ <div class="content"><p >What maintenance would you recommend for the tool that was used to construct the various typecheckers found in TAPL, and probably to check the work in ATTAPL?</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Thu, 2007-11-08 15:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-38027"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38027" class="active">Well ...</a></h3>
+ <div class="content"><p >... for someone just picking it up: the only documentation aside from the journal papers is a 631-byte readme that links to a dead website; there are no example type systems at all (they are purported to be on said dead site), nor documentation of the syntax of inputs. It has no obvious license, which is not important for self-education and tinkering, but pretty important if you wanted to redistribute an output type system as part of your own stuff.</p>
+<p >It's probably a good tool for the experienced practitioner, particularly those who wrote it; for me (someone who's new to the concepts looking to learn, eventually to build systems for my own use), it will require some code spelunking if I decide to take it up.</p></div>
+ <div class="links">By <a href="user/2788" title="View user profile.">crux</a> at Thu, 2007-11-08 16:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-38028"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38028" class="active">The Undead website</a></h3>
+ <div class="content"><p >I was able to get most of the pieces from <a href="http://web.archive.org/web/20031004111848/www.cis.upenn.edu/~milevin/tinkertype/">archive.org's latest copy of that (un)dead website</a>.</p></div>
+ <div class="links">By <a href="user/499" title="View user profile.">Doug Landauer</a> at Thu, 2007-11-08 17:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38061"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38061" class="active">Working on it...</a></h3>
+ <div class="content"><p >Just a little shameless self-promotion here: I'm currently working on a different approach to the same kind of problem, i.e. experimenting with type systems in an existing language. My tool, JStify, will be a toolbox designed to play with type systems (and other kinds of code-writing policy enforcement) for JavaScript 2, written in OCaml. </p>
+<p >Out-of-the-box, it will come with nothing but the ability to parse JavaScript 2, a general-purpose annotations mechanism (called "marginalia") and name resolution. I hope that we will be able to progressively add more-and-more refined type-checks, starting with JavaScript 2's static type system.</p>
+<p >So, while this tool is not a universal type checker -- indeed, it allows writing pretty stupid, unsound analysis -- it is meant as a tool for experimenting with type systems, testing them before actually proving then.</p></div>
+ <div class="links">By <a href="user/1802" title="View user profile.">David Teller</a> at Sat, 2007-11-10 10:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38047"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38047" class="active">Conclusion: boostrapped type system in turing complete language</a></h3>
+ <div class="content"><p >I was going to say this before...before I realized that this encompasses everything!</p>
+<p >Assumption: all data processed by the type system is stored via a single universal data structure, whether that would be lists, hash tables, or bits.</p>
+<ul >
+<li >Because the language is turing-complete, the type system can be made turing complete.</li>
+<li >A dependant type system is analogous to coding functions that return constructed data, where the programmer can completely design the parameters to the function as parameters to a dependant type.</li>
+<li >Any type system concievable</li>
+</ul>
+<p >By bootstrapping a type system, we completely expose its semantics for definition, thereby making this a univeral type system--a language in which all type systems can be described/implemented.</p>
+<p >If Coq et. al. proof assistants are turing complete, then they obviously fit this conclusion.</p>
+<p >Here's your grand unified theory, AFAIK.</p></div>
+ <div class="links">By <a href="user/4852" title="View user profile.">Winheim Raulsh</a> at Fri, 2007-11-09 21:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38058"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38058" class="active">Turning complete type systems</a></h3>
+ <div class="content"><p >Note that Turing-complete type systems (while good and useful) don't guarantee the programmer the ability to extend the language's type system naturally with new features or constructs.</p>
+<p >While they enable a programmer to write a typechecker for a more powerful type system, and run it at compile-time in the source language, you would need the source compiler to expose some meta-representation of the program at compile-time, with some sort of compositional semantics, in order to actually extend the base type system usefully.  This can be done, but isn't automatic.  For example, in C++, templates make the type system Turning-complete, but the language lacks the ability to, e.g., define templates taking template abstractions as parameters, so exposing certain abstractions requires the user to manually create metadata containers to describe types, rather than just using them directly.</p>
+<p >And, even if the compiler did expose a meta-representation of the language to its Turing-complete typechecker, naive introspection of that representation would break various theoretical properties of the unextended language -- such as subsumption and parametricity.</p>
+<p >This isn't an argument against Turing complete type systems, rather just a claim that they aren't the total solution for type system extension.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Sat, 2007-11-10 03:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-38089"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38089" class="active">My idea is not language extension...</a></h3>
+ <div class="content"><p >The idea is that any type system can be implemented in any turing complete language simply as a library of coded routines--that is what I mean by "bootstrapped".  Sorry for the ambiguity.  I have not made an attempt to hide a type system in the language, just simply to implement one, regardless of what language uses it.  The point is that this will satisfy the criteria of being "universal" in the sense that all type systems can be implemented this way.  My point is simply a no-brainer, I suppose, but it is a starting point for realizing an ideal.</p></div>
+ <div class="links">By <a href="user/4852" title="View user profile.">Winheim Raulsh</a> at Mon, 2007-11-12 21:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-38003"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38003" class="active">Universal Type System</a></h3>
+ <div class="content"><p >The set of typing rules in a type system is equivalent to the set of axioms in a logic.  Therefore, there is a direct translation of Godel's incompleteness theorem, saying: Any sufficiently powerful type system is either unsound (all types are equivalent), or incomplete (there exist programs whose correctness can't be proven or disproven within the type system).</p>
+<p >So, we can't hope to construct one sound type system that contains all other type systems.</p>
+<p >However, we can certainly construct a type system that can represent a great number of existing popular type systems.  Much of the practical work in type theory consists of showing that one type system contains another in this way, and this can be directly applied in representing types from different programming languages within a single type system.</p>
+<p >So, one can make great progress in unifying type systems, though it's not possible to "finish" the task.</p>
+<p >Fortunately, incompleteness generally doesn't manifest itself when typechecking programs a person would ordinary write.  Incompleteness arises from tricky arguments involving infinities and non-inductive recursion, which require the introduction of new axioms to prove or refute.</p>
+<p >The logic analogy shows that this shouldn't be surprising: 2500 years passed from the time philisophers began stating recognizable mathematical axioms and proving theorems, to the time mathematicians realized that all such axiom systems were incomplete.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Wed, 2007-11-07 19:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38004"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38004" class="active">The halting problem for types</a></h3>
+ <div class="content"><blockquote ><p >The set of typing rules in a type system is equivalent to the set of axioms in a logic. Therefore, there is a direct translation of Godel's incompleteness theorem, saying: Any sufficiently powerful type system is either unsound (all types are equivalent), or incomplete (there exist programs whose correctness can't be proven or disproven within the type system).
+</p></blockquote>
+<p >Would the halting problem be another way to look at it? A sufficiently complicated type system would be Turing complete (i.e., a type becomes a chunk of code which says whether or not a value belongs to the type); at that point, you can have types which do not halt.
+</p>
+<blockquote ><p >So, one can make great progress in unifying type systems, though it's not possible to "finish" the task.
+</p></blockquote>
+<p >Job security.  :-)
+</p></div>
+ <div class="links">By <a href="user/1346" title="View user profile.">John Stracke</a> at Wed, 2007-11-07 21:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38006"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38006" class="active">Qi typing</a></h3>
+ <div class="content"><p >Not sure how it fits into the discussion of Universal Type Systems, but <a href='http://lambda-the-ultimate.org/node/707'>Qi typing is Turing complete</a>.  Most language designers think that's not a good thing, but the Qi group contends it makes for the most powerful type system possible.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Wed, 2007-11-07 21:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38032"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38032" class="active">Incompleteness vs The Halting Problem</a></h3>
+ <div class="content"><p >That's a great question.  Does anybody know the answer?</p>
+<p >Godel showed that given any axiom system as powerful as ZF, there exist theorems which can neither be proven nor refuted.</p>
+<p >Turning showed that given any computer as powerful as a Turing Machine, there exist programs whose termination can neither be proven nor refuted.</p>
+<p >I think the answer is: There exist type systems as powerful as ZF which are not Turing-complete, so Godel's theorem gives us insight into systems where Turing's theorem is inapplicable.  We can't construct a model of a Turing machine in ZF, because the axiom of comprehension is insufficiently powerful to represent general recursion.  But on a Turing machine, we can write a ZF axiom prover that terminates for any axiom that is provable or refutable -- but it might not halt.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 2007-11-08 19:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-38034"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38034" class="active">ZF is too big</a></h3>
+ <div class="content"><blockquote ><p >
+Does anybody know the answer?
+</p></blockquote>
+<p >We talked about this quite a bit in <a href="http://lambda-the-ultimate.org/node/2515">this thread</a>.</p>
+<p >ZF is <i >more powerful</i> than a Turing-complete (i.e. effective/computable) system, since the set of all total functions from N to itself is a valid entity in ZF, thanks to the Powerset Axiom plus the Axiom of Infinity, whereas only countably many such functions can be represented computably.</p>
+<p >Since a Turing-complete system encodes arithmetic, it is subject to G&ouml;del in the direct sense, but we can also take G&ouml;del as a more general statement about systems with enough power to make certain kinds of self-reference, and the Halting Problem can be seen as an example of this larger principle as well.</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Thu, 2007-11-08 21:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-38060"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38060" class="active">ZF Turing Complete?</a></h3>
+ <div class="content"><p >I don't think it's fair to say that ZF is more powerful than a Turing complete system simply because it has axioms that gaurantee the existence of objects that _it_ considers large sets.  We could consistently extend it with an axiom gauranteeing  purple unicorns after all ;).  Regardless of what it claims (under some interpretations), ZF is a first order theory with a countable model.  However...</p>
+<p >Tim wrote:</p>
+<blockquote ><p >
+We can't construct a model of a Turing machine in ZF, because the axiom of comprehension is insufficiently powerful to represent general recursion.
+</p></blockquote>
+<p >Is this right?  What is a model of a Turing machine here [*]?  It seems to me that the transition rules for Turing machines can be encoded in simple ZF arithmetic.  (I haven't worked through the details - this is just intuition.)  Then we can encode the question of whether the machine terminates as "does there exist an N for which there is a sequence of N valid transitions ending with [program]?"  </p>
+<p >You can then demonstrate the incompleteness of ZF by writing Tim's Turing program that enumerates ZF proofs looking for a proof of termination of some given program.  If ZF were complete then we would always either find a proof of "[program] terminates" or "[program] doesn't terminate" and so we could solve the halting problem.  But we can't, so it isn't.</p>
+<p >[*] It's true that there is no way to model only proper Turing  machines in ZF.  The ability to assert the termination of a function that decrements its argument until it reaches zero is enough to pin down the naturals, so we're necessarily going to have to admit some non-standard models in a first order theory.  One might hope, though, to produce an encoding for which every and only terminating programs can be proved to terminate (with some non-terminating programs that cannot be proved to not terminate).  This I suspect can be done.</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Sat, 2007-11-10 07:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-38062"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38062" class="active">It&#039;s hard out there for a Computationalist</a></h3>
+ <div class="content"><blockquote ><p >
+I don't think it's fair to say that ZF is more powerful than a Turing complete system
+</p></blockquote>
+<p >Let me provide a different "proof" that ZF is beyond Turing-completeness.  In ZF, you can iterate completely over an infinity (at the very least N); in a Turing-complete system any such iteration is non-terminating, and can at best be finitely approximated.</p>
+<p >Explicit recursion is only necessary when you need to <i >finitely</i> represent infinities: if you already have manifest infinities, you are already more powerful than a computational system, even if you explicitly eliminate all recursion.  (Which ZF doesn't really do, but that is another story...)</p>
+<blockquote ><p >
+ZF is a first order theory with a countable model.
+</p></blockquote>
+<p >For some interpretations of  both "first order" and "model", this is patently false.  What are you thinking of here? (I have some idea, but since I wan't to stick to computational interpretations rather than pure-mathematical ones, best to get them in the open. )</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Sat, 2007-11-10 17:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-38064"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38064" class="active">IANAL, but...</a></h3>
+ <div class="content"><p >(that's logician)</p>
+<blockquote ><p >
+In ZF, you can iterate completely over an infinity (at the very least N); in a Turing-complete system any such iteration is non-terminating, and can at best be finitely approximated.
+</p></blockquote>
+<p >I have the same objection to this that I had before.  I don't think it's fair to attribute computational power to a logic on the basis of what the logic is supposed to be asserting under some interpretation.</p>
+<p >The <a href="http://en.wikipedia.org/wiki/ZFC"> Wikipedia page on ZF</a> links to what I mean by first order.  In the first order model I had in mind, each "ZF set" under discussion is interpretted as an element of some set, and containment is a relation on this set, etc.  But there is no requirement that there be any deeper structure to the model - the "ZF sets" don't themselves have to be interpretted as "real sets" at the meta-level nor does the containment relation need to correspond to containment at the meta level.  It's certainly possible to insist on a stronger model, but in some sense I think that's cheating - you're not fairly assessing the power of the logical system.  Consider a logical system with no inference rules and a single axiom "exists x. I(x)" that we interpret to mean "there exists an element x which is an infinite set."  How powerful do you consider this system?</p>
+<p >One way it would make sense to ask about the strength of ZF as a computation scheme is to ask what ZF can compute.  For example we can define that a function f :: N -&gt; N is computable in ZF if for every n there exists an m such that "f(n) = m" is provable.  It's clear that in this sense a Turing machine is at least as powerful as ZF, since it could always just simulate ZF to define functions.  Whether ZF is as powerful as a Turing machine here isn't super obvious to me, but I would again suspect it to be.  I'd think that it should be possible in ZF to prove that Turing machines under the encoding of my previous post always produce a unique answer when they terminate, and thus define functions.  </p>
+<p >(In retrospect it would probably be easier to define computability in terms of relations on N instead of functions N -&gt; N).</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Sat, 2007-11-10 19:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-38069"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38069" class="active">ZF as a type system</a></h3>
+ <div class="content"><p >Thinking about it a little more I think the situation might be this:</p>
+<p >- ZF is strong enough to prove that programs terminate on a particular input if they do.  Consideration of this fact in light of the halting problem leads to a proof of incompleteness as above.</p>
+<p >- But to consider ZF as a type system, we're really more interested in the programs that ZF can prove to terminate on all inputs.  There is another incompleteness result to prove here - that there are programs that terminate on all inputs (and thus ZF can prove termination on any particular input) but for which ZF cannot prove termination on all inputs.</p>
+<p >It seems like a way to prove this would be to construct T(P,n), a program that terminates if and only if program P (not requiring input) has not terminated on or before n steps.  For a program that doesn't terminate, ZF should be able to prove that T(P,n) terminates for any particular n by working through the steps.   But if you can prove T(P,n) terminates for all n, then you have proven P does not terminate.  Choose P to be one of the programs that does not terminate but cannot be proven not to terminate, and I think you have your example.</p>
+<p >But it does seem that all of this can be made to fall out of the Halting Problem result.</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Sun, 2007-11-11 14:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-38071"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38071" class="active">A little Wikipedia is a dangerous thing... ;-)</a></h3>
+ <div class="content"><blockquote ><p >
+One way it would make sense to ask about the strength of ZF as a computation scheme is to ask what ZF can compute
+</p></blockquote>
+<p >Asking what ZF can compute (for a very general notion of compute) is essentially the same as asking what entities can be constructed from its axioms.</p>
+<p >I think what you don't realize is that the thing you are calling ZF is <i >not</i> ZF:  you seeem to be referring to a computable or finitary fragment of ZF, which is not the same thing as ZF.  (For example, it necessarily would not be closed over the usual axioms).</p>
+<p >This is the kind of situation where mixing pure math and computer science without being aware of these distinctions gets people in trouble.</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Sun, 2007-11-11 22:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-38073"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38073" class="active">Just wait until you cross paths with a big Wikipedia</a></h3>
+ <div class="content"><p >Note:  My background in this area is from a math POV, and I only skimmed the Wikipedia page to verify it would provide a reference that supported my view.  In math circles, I don't think the assertion "ZF is a first order theory" is controversial, so I wanted to provide a reference.</p>
+<blockquote ><p >
+Asking what ZF can compute (for a very general notion of compute) is essentially the same as asking what entities can be constructed from its axioms.
+</p></blockquote>
+<p >After I used the phrase "what ZF can compute" I proceeded to informally define what I meant by that.  I'm not aware of the formal definition of what it means for a logic to compute anything.</p>
+<blockquote ><p >
+I think what you don't realize is that the thing you are calling ZF is not ZF: you seeem to be referring to a computable or finitary fragment of ZF, which is not the same thing as ZF. (For example, it necessarily would not be closed over the usual axioms).
+</p></blockquote>
+<p >Hmm, I may be abusing terms like 'compute', but I'm somewhat confident that I'm using ZF in a manner consistent with its meaning to  most mathematicians.  In my world view, ZF is a formal system, not a structure that satisfies the axioms (and talking about it being 'closed over axioms' doesn't really make sense).</p>
+<p >Putting terminology aside, at the start this discussion concerned how powerful ZF would be as a type system.  From that perspective, ZF asserting the existence of gigantic ordinals that support transfinite induction (ZFC*) is somewhat like it asserting the existence of God or purple unicorns, except to the extent those constructions help me figure out what my program will do [*].  For that reason, I think the approach to computability I was using is relevant to the conversation.  </p>
+<p >[*] I'm going blank coming up with an example where the use of infinite sets helps prove a theorem of Arithmetic that could not be proved without their use.  Anyone have an example?</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Mon, 2007-11-12 00:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-38074"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38074" class="active">Goodstein&#039;s Theorem</a></h3>
+ <div class="content"><p >Goodstein's theorem is independent of the axioms of Peano arithmetic but provable in ZFC, and the proof relies on Zorn's lemma on infinite cardinals.</p>
+<p >One point you have alluded to but haven't made explicit is that ZFC, for all it's talk of infinite sets and axioms of choice has countable models. I think you elements of that model are just equivalence classes of predicates that denote unique sets (not in any kind of semantic sense that presupposes a universe of sets, but in the formal sense that P(x) /\ P(y) -&gt; x=y is provable).</p></div>
+ <div class="links">By <a href="user/2755" title="View user profile.">Brandon Moore</a> at Mon, 2007-11-12 01:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-38076"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38076" class="active">Interesting - thanks for the reference!</a></h3>
+ <div class="content"><p >FYI I did mention that <a href="http://en.wikipedia.org/wiki/L%C3%B6wenheim-Skolem_theorem"> ZF has a countable model </a> earlier in the thread :)</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Mon, 2007-11-12 02:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-38075"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38075" class="active">To you from failing hands we throw</a></h3>
+ <div class="content"><blockquote ><p >
+In my world view, ZF is a formal system, not a structure that satisfies the axioms (and talking about it being 'closed over axioms' doesn't really make sense).
+</p></blockquote>
+<p >Perhaps we will have to agree to disagree, since for me "a structure that satisfies axioms" is pretty close to the <i >definition</i> of a formal system.</p>
+<p >If you think ZF as a type system will help you understand computation, by all means see where it will take you.</p>
+<p >Just know that a lot of work has been done coming up with other set theories and type systems exactly under the premise that ZF was too powerful for constructive and computational purposes.</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Mon, 2007-11-12 01:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-38077"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38077" class="active">I&#039;m (dis) agreeable with that</a></h3>
+ <div class="content"><p >In the terms I'm familiar with, the formal system is the axioms + inference rules, and there can be a number of structures that model it.  <a href="http://en.wikipedia.org/wiki/Model_theory"> Structure </a> is another term of art here.</p>
+<p >For the record, I don't think ZF is the ideal formal system for reasoning about programs, but I found the thread interesting so I jumped in :).</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Mon, 2007-11-12 02:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-38012"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38012" class="active">splay trees.. yeah, splay trees</a></h3>
+ <div class="content"><p >Everyone is answering with stuff from "type theory".  That seems slightly off the mark.  He isn't asking for a universal theory of types.  He's asking for a universal type.</p>
+<p >Cons pairs are one (very good) universal data type and you can see that by thinking about combinators and splay trees and physical machine all at the same time.</p>
+<p >Consider the set of all finite cons-pair trees over the starter-set {nil}.</p>
+<p >Let us identify the head forms of all such trees, to some depth, with some set of primitive combinators.   We're already well off on our way to computation because, in our definition of "head forms" ("what the tree looks like near the root") we've already introduced variables.   The name of a head form might look like "(X . (3 . *))" meaning a tree with the fixed value X as left child, and as the right child a subtree.  That right-child subtree has a fixed 3 as left child, and any value at all as the right child.    That "any value at all" is a variable name -- and there's yr lambda, right there.</p>
+<p >Combinators in this system can arbitrarilly rewrite the head form placing the variable values wherever they like, but not "reaching inside" the subtrees bound to variables.   A combinator can construct any fixed, finite number of new nodes during this rewrite (that is, the definition of the combinator must imply a fixed upper bound on the number of new nodes that will be constructed).  The rearrangement of the head form can be computed by any function whose specification guarantees termination in at most some fixed number of steps.  The classic combinators are an example "(((S . *x) . *y) . *z))) -&gt; ((*x . *z) . (*y . *z))"</p>
+<p >A natural cost model falls out of this:  The reduction of any head form by evaluation of its combinator rule costs at least J steps where J is the size of the head form pattern naming the combinator.  The rearrangement of the head form might raise or lower the depth of variable elements, copying them any number of times.   The rule can construct any number of elements.  In the example of the classic S combinator, above, the subtree *z is copied twice and the subtrees *x and *y each change depth by 1.   If we take the size of the S combinator's name ("(((S . *x) . *y) . *z)") to be 7, then with two changes of depth and and one copy, the S combinator has a cost of 10 steps.</p>
+<p >This cost model is physically realistic.  All physical representations of data are essentially tree-like (e.g., CPU registers at the root, then caches, the main memory, etc.)   The cost of resolving the address of some piece of data (a "variable name" in our combinator system) is, indeed, log-n in the number of values addressable by a name of similar length.   Raising and lowering the depth of subtrees closely corresponds to moving data between the layers of a memory hierarchy and, as our cost model predicts, the cost of bringing in data from the nth order of magnitude of addressability is, again, log n.</p>
+<p >Type <i >theory</i> is about something related but different.  If you picked by cons-pair model of computation (combinators + cost) as foundational then you could say that type theory focusses on the combinators part and tries to say as much as can be said about the divergence of computations based on the finitely computable (hence "static") properties of a tree.</p>
+<p >But, "type" in the sense of "data structure" -- which is again I think the original question (keyword, "represented"):  trees are a good answer.</p>
+<p >-t</p></div>
+ <div class="links">By <a href="user/3938" title="View user profile.">Thomas Lord</a> at Thu, 2007-11-08 01:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38018"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38018" class="active">Perhaps tangential...</a></h3>
+ <div class="content"><p >I don't think I agree with you about the original question. In fact, I think Tim Sweeney hits the nail right on the head in his comment above, and I really have nothing to add to that.</p>
+<p >However, regarding the system you're presenting here: if I squint a little, this looks a lot like the type system Chris Diggins proposed for his Cat language. I find that interesting...</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Thu, 2007-11-08 05:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38037"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38037" class="active">Now definitely tangential ...</a></h3>
+ <div class="content"><p >The relationship with Cat makes sense because the Cat type-system can be easily understood in terms of the composition of functions on tail-polymorphic (i.e. row-polymorphic) lists. </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Thu, 2007-11-08 23:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38031"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38031" class="active">Me too post</a></h3>
+ <div class="content"><p >I'm with Tim Sweeney as well since the OP said "type <i >system</i>", a rather unambiguous term imho, and in this context "to be represented" could be read as "to be contained".</p></div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at Thu, 2007-11-08 19:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-38025"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38025" class="active">Type systems are computations.</a></h3>
+ <div class="content"><p >Type systems are computations; but there is no universal computation that can prove the correctness of all other computations, and therefore there is no universal type system (I am not a mathematician, so I apologize if my comment is not precise enough).</p>
+<p >Still, I think that Turing-complete type systems are more useful than decidable type systems, for the sole purpose that there is a number of bugs that they can catch that decidable type systems can not.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Thu, 2007-11-08 13:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38029"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38029" class="active">Now you have my interest...</a></h3>
+ <div class="content"><p >Being a novice in formal type systems theory, am I on the right track in guessing that these turing complete type systems would catch bugs like deadlocks in concurrency, or infinite loops, or even circular-linked-list iteration, or stack-overflows, specifically, due to the halting problem preventing a <i >decideable</i> type system from completeting its computation?  Is this right?</p>
+<p >. . .</p>
+<blockquote ><p >Type systems are computations</blockquote>
+I see what you mean--my comment earlier, by definition, reflected that thought--type systems are implemented in programming languages as computations, therefore they are, essentially, computations.</p></div>
+ <div class="links">By <a href="user/4852" title="View user profile.">Winheim Raulsh</a> at Thu, 2007-11-08 17:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38030"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38030" class="active">Not quite</a></h3>
+ <div class="content"><p >No, the halting problem says that solving some of those problems is at best semi-decidable and therefore no decidable type system can catch them all while not eliminating valid programs. If the type system's decidable then given enough resources (and this'll be a finite amount) the checking problem will complete.</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Thu, 2007-11-08 18:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-38079"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2527#comment-38079" class="active">Intersection types</a></h3>
+ <div class="content"><p >A full answer to the question should explain intersection types, whose inhabitation relation is semidecidable.  While some attempt to marry these type systems with regular types has been carried out by folks interested in control flow analysis, I don't think we can be said to know much about type systems that generalise both HM and intersection types.</p></div>
+ <div class="links">By <a href="user/918" title="View user profile.">Charles Stewart</a> at Mon, 2007-11-12 13:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="
+http://wiki.squeak.org/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2007/10/17" title="Previous month">«</a> November 2007  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-normal">1</td>
+  <td class="day-link"><a href="archive/2007/11/2" title="2 posts">2</a></td>
+  <td class="day-normal">3</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-normal">4</td>
+  <td class="day-link"><a href="archive/2007/11/5" title="3 posts">5</a></td>
+  <td class="day-link"><a href="archive/2007/11/6" title="4 posts">6</a></td>
+  <td class="day-normal">7</td>
+  <td class="day-normal">8</td>
+  <td class="day-link"><a href="archive/2007/11/9" title="1 post">9</a></td>
+  <td class="day-link"><a href="archive/2007/11/10" title="1 post">10</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2007/11/12" title="2 posts">12</a></td>
+  <td class="day-link"><a href="archive/2007/11/13" title="1 post">13</a></td>
+  <td class="day-link"><a href="archive/2007/11/14" title="1 post">14</a></td>
+  <td class="day-normal">15</td>
+  <td class="day-link"><a href="archive/2007/11/16" title="1 post">16</a></td>
+  <td class="day-today"><a href="archive/2007/11/17" title="1 post">17</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2538" title="2 comments">Well-typed programs can’t be blamed</a></li><li><a href="node/2491" title="71 comments">Examples of large-scale functional language projects</a></li><li><a href="node/2519" title="28 comments">PL research &amp; grad schools?</a></li><li><a href="node/2537">Including life-cycle processes for generated code in a pi-compiler</a></li><li><a href="node/2499" title="4 comments">ErlOCaml</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2538" title="2 comments">Well-typed programs can’t be blamed</a></li><li><a href="node/2537">Including life-cycle processes for generated code in a pi-compiler</a></li><li><a href="node/2527" title="39 comments" class="active">Universal Type System</a></li><li><a href="node/2526"> FringeDC Informal Meeting Saturday Nov 10</a></li><li><a href="node/2520" title="1 comment">[ANN]: Open Quark Framework for Java, version 1.7.0 released</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

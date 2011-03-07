@@ -1,0 +1,49 @@
+http://www.seas.upenn.edu/~sweirich/types/archive/1999-2003/msg01233.html
+[TYPES] Classifying the cardinalities of types
+I'm developing a programming language similar in its type structure to McAllester's Ontic, where types and values are represented in a unified, dependent-typed framework.  One of the major problems of the compiler is to characterize the cardinalities of various types in programs, and I'm posting this to informally share my results, and see if anyone has references to similar work.  Here goes:
+
+Every type T can be thought of as having a cardinality, Card(T) characterizing the number of unique elements of that type T.  The cardinality of the empty type is 0, the cardinality of the unit type is 1, the cardinality of the boolean type is 2, the cardinality of the natural numbers is a countably infinite cardinal.
+
+In this language, we can say:
+
+- "1" is a single value, so it's cardinality 1.
+
+- "1|2|3" is either 1, 2, or 3. It has 3 potential values, so its cardinality is 3.
+
+- "a-natural-number" can potentially be any natural number, so its cardinality is countably infinite.
+
+- Given a variable "x" representing an unknown natural number, "x|3" reduces to the single value "3" if x=3, or the two distinct potential values "x" and "3" if x!=3. In this case, we have to say its cardinality is 1|2.  Thus to each term the compiler assigns not a single cardinality, but a set of potential cardinalities.
+
+Characterizing the precise set of potential cardinalities of a term is a hard problem, especially as the complexity of the type system grows. However, conservatively approximating the potential cardinalities of an expression is tractable, and this is the course I've pursued.
+
+I draw potential cardinalities from the set {0,1,m} where "m" stands for "many".  Thus we can precisely characterize the cardinality of the empty type as 0 and the unit type as 1, while the cardinality of 1|2|3 and a-natural-number are both conservatively approximated as "m".  The expression "x|3" above has cardinality 1|m.
+
+This affects the language design in the following way.  Each type-theoretic operator (such as "intersection of types", "union of types", "product types", "disjoint union of types" has a table characterizing the potential cardinality of the result as a function of the cardinalities of the input. For example, in {0,1,m} approximation, in a language with only atomic values and not functions, we can describe the union operation with:
+
+{0} {1} {m}
+{1} {1|m} {m}
+{m} {m} {m}
+
+In other words, the union of 0 with an element cardinality x is itself x, while the union of two elements of cardinality 1 can either be of cardinality 1 (if the elements are equal) or m (if unequal).
+
+Everything I've said so far can be applied to set theory as well as type theory.
+
+Now, the presence of functions in the type system complicates the cardinality characterization considerably, and becomes dependent on the intricate details of the type theory.
+
+If the full variance of functions is built into the type theory, then every function of the form a->b is a subtype of c->d if b<:c and c<:a.  In a type system without a universal element (u such that every type in the type theory is a subtype of u), every function is of cardinality "m", because every function has infinitely many subtypes.  In the presence of a universal element, functions from the universal element to elements of cardinality 1 is itself of cardinality 1 because there are no subelements.
+
+Since practical functions like lambda(x:a-natural-number).x have infinitely many subelements, they receive cardinality "m".  This isn't completely satisfactory, because my language requires that programs be observationally deterministic -- "3" is a valid program, while "3|4" is not (though 3|4 may be used as an intermediate term in part of the program, for example as the domain of a function).  Unfortunately classifying a function as cardinality "m" (which is necessary for the cardinality to be correct) prevented programs from being functions.
+
+The realization that saved the day is that we can make a distinction between items that are observably multivalued (like 1|2) and items that are observably single-valued (like that function above) but, because of the nature of function variance, are inhabited by multiple subelements.  To make the distinction, I draw cardinalities from the set {0,1,m,1f,mf} where {1f,mf} categorize sets of functions and {1,m} categorize sets of atomic values.  Examples:
+
+    "1" has cardinality 1
+    "1|2" has cardinality m
+    "lambda(x:a-natural-number).x" has cardinality 1f.
+    "lambda(x:a-natural-number).x|x+1" has cardinality mf.
+    "1|2|lambda(x:a-natural-number).x" has cardinality m|om.
+
+I have lookup tables for all of the basic type operations over the cardinality set {0,1,m,1f,mf} and everything behaves as expected.  I can think of many extensions to the cardinality set of varying degress of usefulness but {0,1,m,1f,mf} seems sufficient for my purposes.
+
+I'm interested if anybody has any comments or references to similar work. So far the only discussion I've found of cardinality is in the paper on Mercury (www.cs.mu.oz.au/research/mercury/information/ doc-latest/reference_manual_6.html), where there is a lattice of "determinism categories", and that only scratches the surface.
+
+-Tim

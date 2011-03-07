@@ -1,0 +1,18 @@
+http://groups.google.com/group/fa.haskell/browse_thread/thread/a4c23426d07d9245/f5b775ccb6e01d37?lnk=st&rnum=39&hl=en#f5b775ccb6e01d37
+[fa.haskell] Implementing RefMonads in Haskell without ST,IO
+Given the common definition of RefMonad:
+
+[code]
+class Monad m => RefMonad m r | m -> r where
+    newRef :: a -> m (r a)
+    readRef :: r a -> m a
+    writeRef :: r a -> a -> m ()
+[/code]
+
+Is it possible to actually implement a working instance of RefMonad in Haskell, without making use of a built-in monad like IO or ST?  If so, I'd love any tips -- I've been making good use of monads for a while, but can't figure this one out.
+
+The Java programmer in me wants to implement RefMonad by passing around a function from integers (think of them as pointers or heap indices) to "objects", and in readRef, "cast" the "object" to the appropriate type "t".  
+
+If it's not possible to implement a typesafe RefMonad instance directly in Haskell, without making use of built-in imperative features like IO, then doesn't this refute the claims that monads implement imperative features functionally?
+
+-Tim 

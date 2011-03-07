@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/464
+http://lambda-the-ultimate.org/node/464#comment-3444
+1049040
+Links (Wadler)
+Why it matters
+<p>Perhaps because of the presentation's vagueness, I'm reading into it what I would like it to be.
+</p><p>But I think it's more than that: What Wadler is looking to do is to unify queries, interaction, message passing, and HTML/XML generation into a clean, sound programming environment.  These sorts of things are currently handled with a large set of ad hoc imperative languages communicating in poorly-defined ways, leading to a very error-prone system.</p>

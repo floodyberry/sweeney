@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/1942
+http://lambda-the-ultimate.org/node/1942#comment-23528
+1050518
+AgentSheets:  End-User Programing (and Secret Lisp Success Story!)
+Anti-Objects
+<p>Solving a problem by defining intermediate data structures that lack a direct physical mapping to your problem space is an utterly common technique in all areas of computing.  Presenting it as some sort of invention is silly.</p>

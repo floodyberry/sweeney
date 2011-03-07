@@ -1,0 +1,13 @@
+http://lambda-the-ultimate.org/node/2048
+http://lambda-the-ultimate.org/node/2048#comment-25105
+1050624
+Patrick Logan on Software Transaction Memory
+STM nervousness
+<p>STM makes me nervous too, but raw shared-state concurrency is terrifying, so that's an improvement!  Here are some thoughts:
+</p><blockquote><div>"large scale stateful software isn't going away" and "imperative programming is the wrong default" are contradictory</div></blockquote><p>
+</p><p>My current analysis of the sort of code that's required in a game is that purely functional programming (plus Haskell-style ST non-imperative local state) is sufficiently expressive for around 70% of the code we write, which accounts for 95% of our performance profile.  Thus I see functional programming as the right default.
+</p><p>The other 30% of our code (which accounts for 5% of performance) is necessarily so stateful that purely functional programming and message-passing concurrency are implausible.  Thus I see imperative programming, in some form or another, as remaining an essential tool for some systems present in modern software.
+</p><blockquote><div>Performance is crucial to him, yet he's willing to live with a 4X slowdown for STM</div></blockquote><p>
+</p><p>Without STM, the only tractable way to manage this code is to single-thread it.  I'm not nearly smart enough to write race-free, deadlock-free code that scales to 10,000 freely-interacting objects from 1000 C++ classes maintained by tens of programmers in different locations.
+</p><p>With STM, I can continue writing software at full productivity, and it makes 5% of my performance profile become 4X slower.  I break even at 4 threads, and come out ahead after that.  So, eventually, STM wins over single-threading.
+</p><p>How do the message-passing guys implement robust interactions between independent objects with mutable state, like the classic "bank transfer" example that justifies transactions in databases?  You end up writing an endless set of ad hoc transaction-like message exchanges for each interaction that may occur in the system.  Thus my argument that STM is the only productivity-preserving concurrency solution for the kind of problems we encounter in complex object-oriented systems that truly necessitate state, such as games.</p>

@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2048
+http://lambda-the-ultimate.org/node/2048#comment-25156
+1050624
+Patrick Logan on Software Transaction Memory
+Bloat
+<p>The problem with implementing ad-hoc transactions using message-passing is that it bloats the code tremendously.  In the single-threaded world or the STM world, you say "if(Ammo&gt;0) {Ammo--; FireBullet();}".  That would bloat up into tens of lines of asynchronous code to ask the recipient if he has ammunition, to reserve that ammunition, to finalize the interaction by effecting the ammo reduction, handle failure asynchronously, etc.  Such code needs far more thought and testing than the STM version.
+</p><p>A solution that imposes an order-of-magnitude code bloat, productivity decrease, etc, is unattractive.</p>

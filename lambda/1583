@@ -1,0 +1,1551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Petition for adding garbage collection to C++. | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1583" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Petition for adding garbage collection to C++.</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Dear fellow LtU members,</p>
+<p >I took the initiative and started a petition for adding garbage collection to C++. You can find it here:</p>
+<p ><a href="http://www.ipetitions.com/petition/garbage_collection_for_cpp/">petition for adding garbage collection to C++.</a></p>
+<p >Maybe if we get too many, the C++ standards committee will hear us!</p> </div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at 06/22/2006 - 12:45 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1591" title="Article: Exploring Cocoa with F-Script">previous forum topic</a> | <a href="node/1559" title="Church-Turning is False?">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1583" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 4778 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1583" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1583" />
+<a id="comment-18971"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-18971" class="active">Not trying to be inflammatory...</a></h3>
+ <div class="content"><p >Are there any sizeable application domains for which garbage-collected C++ would be appropriate?  I would have thought that most of the C++ development remaining was in realms for which garbage collection is viewed as inappropriate (games, embedded, etc.)  Areas where GC would be a big win for C++ (enterprise, web) have pretty much been ceded to Java and the new scriptign languagues.  Again, I'm not trying to flame, I'm just trying to figure out who would benefit from this.  </p></div>
+ <div class="links">By <a href="user/1503" title="View user profile.">Dave Griffith</a> at Thu, 06/22/2006 - 15:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-18978"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-18978" class="active">Graphics</a></h3>
+ <div class="content"><p >There are many applications where high throughput is required but where occasional latency is acceptable (unlike games and embedded applications). This includes things like 3D modelling and animation packages, and 2D image processing and compositing packages. These types of applications are typically structured as a C++ core, an array of C++ modules, and a scripting language to drive these modules. GC might help in these domains, although these applications sometimes require quite complex resource management that might make them unsuitable for GC.</p></div>
+ <div class="links">By <a href="user/1545" title="View user profile.">sigfpe</a> at Thu, 06/22/2006 - 18:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19012"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19012" class="active">About games...</a></h3>
+ <div class="content"><p >Maybe Paul or Tim can double-check this, but at POPL 2006, Tim Sweeney remarked that the Unreal engine uses garbage collection everywhere. IIRC, the reason was that latency bugs in manual memory management were just too annoying to debug, and realtime GC just eliminated that entire class of errors.</p></div>
+ <div class="links">By <a href="user/1111" title="View user profile.">neelk</a> at Fri, 06/23/2006 - 16:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19016"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19016" class="active">GC in games</a></h3>
+ <div class="content"><p >I'd be surprised if GC was actually used *everywhere* -- I'm guessing it's mainly for actors, resources, and other stuff that persists between frames. Maybe Tim can speak more on this.</p>
+<p >A language like Java (flat GC'ed memory space and where structs cannot contain other structs) is death for interactivity. To create a data structure with 10,000 items (which can occur every frame in some cases) you need to either create 10,000 objects which are GC'ed, or arrays with 10,000 elements (hack).</p>
+<p >It's interesting that Tim actually considered and rejected Java as a candidate for Unreal's scripting langauge...</p></div>
+ <div class="links">By <a href="user/1445" title="View user profile.">Steven Hugg</a> at Fri, 06/23/2006 - 17:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19022"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19022" class="active">IIRC...</a></h3>
+ <div class="content"><p >Tim, please correct me if I misremember, but:</p>
+<p >I think the Unreal technology GCs everything that is reflected in both C++ and UnrealScript. Of course, if you launch UnrealEd, extract the UnrealScript code from UT2004, and start browsing, that's a <em >lot</em> of stuff, and no doubt there's even more in the forthcoming Unreal Technology 3 titles.</p>
+<p >I don't know what "structs cannot contain other structs" means.</p>
+<p >There were good reasons for Tim to reject Java, especially at the time. There might be a VM with a good enough real-time GC today, but nevertheless, UnrealScript has some features, e.g. language-level support for hierarchical finite-state machines, that are really helpful to game developers and that Java lacks. IMHO, UnrealScript is an excellent 1995 design, but clearly Tim is heading in other directions these days. I can't wait to see the language he uses in Unreal Technology 4.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 06/23/2006 - 18:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19023"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19023" class="active">Composite objects</a></h3>
+ <div class="content"><p ><i >I don't know what "structs cannot contain other structs" means.</i></p>
+<p >I'm blanking on the proper term for this -- but what I meant was an object in Java can only be composed of primitives and references (not arrays or other objects). This increases your total reference count, and thus your total GC workload. The workaround is to "denormalize" your class structures, but this trades efficiency for simplicity of design.</p></div>
+ <div class="links">By <a href="user/1445" title="View user profile.">Steven Hugg</a> at Fri, 06/23/2006 - 18:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-19045"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19045" class="active">Gotcha!</a></h3>
+ <div class="content"><p >Ah, you mean that you can't structure things in such a way that a couple of objects might be composed in such a way as to be laid out end-to-end vs. a pointer from one to the other being maintained. Gotcha!</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 06/23/2006 - 22:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19024"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19024" class="active">don&#039;t forget</a></h3>
+ <div class="content"><p >"most of the C++ development remaining was in realms for which garbage collection is viewed as inappropriate (games, embedded, etc.)"</p>
+<p >don't forget most infrastructure and core system services in most modern platforms...</p></div>
+ <div class="links">By <a href="user/1328" title="View user profile.">rmalafaia</a> at Fri, 06/23/2006 - 18:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19026"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19026" class="active">I was under the impression...</a></h3>
+ <div class="content"><p >that that was still mostly vanilla C, rather than C++.</p></div>
+ <div class="links">By <a href="user/1503" title="View user profile.">Dave Griffith</a> at Fri, 06/23/2006 - 19:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-18976"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-18976" class="active">Am I missing something when</a></h3>
+ <div class="content"><p >Am I missing something when I suggest using Boehm's GC library?</p></div>
+ <div class="links">By <a href="user/1909" title="View user profile.">dolf</a> at Thu, 06/22/2006 - 18:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-18979"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-18979" class="active">It&#039;s not true that there are no technical obstacles in GC in C++</a></h3>
+ <div class="content"><p >A conservative GC like Boehm's GC is prone to memory leaks because it must treat any bit pattern looking like a pointer to some object as a potential pointer which keeps it alive. I've heard that this actually happens when the memory used has size comparable to the address space (in the range of gigabytes for 32-bit machines) and it contains lots of randomly looking bytes (e.g. a compressed video).</p>
+<p >It's also slow. I've tested that it's even slower than malloc. It must be slow because a potential pointer may point into the middle of an objcet so the GC must find the beginning of each object, and because it can't move objects to other addresses, and because it doesn't know where pointers are located so it must scan all allocated memory.</p>
+<p >OTOH a precise GC is incompatible with traditional C++ assumptions about data representation, e.g. that pointers are POD types, or that structures without virtual member functions have no allocated fields besides those specified by the programmer.</p></div>
+ <div class="links">By <a href="user/1547" title="View user profile.">Qrczak</a> at Thu, 06/22/2006 - 18:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-18981"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-18981" class="active">Already being considered</a></h3>
+ <div class="content"><p >In <a href="http://www.artima.com/cppsource/cpp0x.html">this article</a>, Stroustrup says that optional GC will most likely be part of the upcoming standard:</p>
+<blockquote ><p >C++0x will most likely support optional garbage collection and it will support concurrency in the form of a machine model plus standard library facilities supporting threads (and maybe more). Some would consider that radical, but I don’t; people have used garbage collection with C++ for years (where that makes sense) and just about everybody uses threads sometime. In these cases, the issue is simply to standardize current practice.</p></blockquote></div>
+ <div class="links">By <a href="user/2615" title="View user profile.">Ruediger Hanke</a> at Thu, 06/22/2006 - 19:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-18993"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-18993" class="active">Are there any sizeable</a></h3>
+ <div class="content"><blockquote ><p >
+Are there any sizeable application domains for which garbage-collected C++ would be appropriate?
+</p></blockquote>
+<p >There are many domains where garbage-collected C++ is needed:</p>
+<ul >
+<li >desktop applications. There are big applications like Word, Excel, Firefox etc that the performance of other languages is not appropriate. For example, a 20% less performance in Word would result in big delays in document repagination. Personally I have seen Word, Excel, Firefox, Explorer, Visual Studio and other flagship applications die horribly from memory management / pointer problems.</li>
+<li >defense applications. Many apps in this sector has a real-time part and a non-real time part where garbage-collected C++ fits well.</li>
+<li >game development tools. Many developers are frustrated to having to use a different programming language for writing their tools than the one their game is written on.</li>
+<li >mobile applications. Check out <a href="http://www.allegro.cc/forums/thread/585895/592758#target">this</a> post...there are many similar posts around.</li>
+</ul>
+<blockquote ><p >
+Areas where GC would be a big win for C++ (enterprise, web) have pretty much been ceded to Java and the new scriptign languagues
+</p></blockquote>
+<p >The only reason Java exists is because C++ does not have garbage collection. Take that away, and nobody will need Java anymore. Remember that Java was created as the language Oak, and Oak was created because someone tried to make an infrastructure with C++ for mobile telephony and failed.</p>
+<blockquote ><p >
+A conservative GC like Boehm's GC is prone to memory leaks because it must treat any bit pattern looking like a pointer to some object as a potential pointer which keeps it alive. I've heard that this actually happens when the memory used has size comparable to the address space (in the range of gigabytes for 32-bit machines) and it contains lots of randomly looking bytes (e.g. a compressed video).</p>
+<p >It's also slow. I've tested that it's even slower than malloc. It must be slow because a potential pointer may point into the middle of an objcet so the GC must find the beginning of each object, and because it can't move objects to other addresses, and because it doesn't know where pointers are located so it must scan all allocated memory.
+</p></blockquote>
+<p >I confirm this, and thanks a lot for the input. Indeed, Boehm's GC is good work, but not the appropriate solution.</p>
+<blockquote ><p >
+In this article, Stroustrup says that optional GC will most likely be part of the upcoming standard
+</p></blockquote>
+<p >Unfortunately, the new upcoming standard in 2009 does not have garbage collection.</p>
+<blockquote ><p >
+people have used garbage collection with C++ for years
+</p></blockquote>
+<p >I have not seen a garbage-collected C++ application in all my life. Where did mr Stroustrup find them?</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Fri, 06/23/2006 - 07:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-18995"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-18995" class="active">Source?</a></h3>
+ <div class="content"><blockquote ><p >Unfortunately, the new upcoming standard in 2009 does not have garbage collection.</p></blockquote>
+<p >Can you give a source, I couldn't find any final word on the inclusion or exclusion of garbage collection, although I may have missed this as I don't follow too closely what's happening regarding C++0x.</p>
+<p >In any case, that they would have "most likely" added it shows that they are <em >aware</em> of the fact that GC in C++ would be a good thing and considered it <em >seriously</em>, and if they dismissed it, there probably was a reason. So instead of petitioning, you might rather want to identify why the old proposal was not appropriate, write a better proposal and submit it...</p></div>
+ <div class="links">By <a href="user/2615" title="View user profile.">Ruediger Hanke</a> at Fri, 06/23/2006 - 09:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-18996"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-18996" class="active">I do not have a final word</a></h3>
+ <div class="content"><p >I do not have a final word either, but my impression is that they will not put GC in C++0X...and this impression is reenforced by the fact that the C++ standards committee gives priorities to things other than GC. There is only one vague reference to the article Stroustrup posted on artima, and that's it.</p>
+<p >EDIT:</p>
+<p >My opinion in favor of C++ has been reenforced lately after founding pages like <a href="http://www.javaperformancetuning.com/tips/rawtips.shtml">this</a>.  How's that for a "simple-to-use language that the rest of us can use?"</p>
+<p >EDIT:</p>
+<p >The artima article also says that the C++ committee has stopped accepting any other proposals.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Fri, 06/23/2006 - 09:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19000"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19000" class="active">Unfortunately, the new</a></h3>
+ <div class="content"><blockquote ><p >
+Unfortunately, the new upcoming standard in 2009 does not have garbage collection.
+</p></blockquote>
+<p >What do you mean, the standards committee are no where near completion. The C++ standards committee only finished accepting proposals last autumn/winter now they are currently carefully reviewing them all and a draft spec is estimated to be available in 2007/8. As far as i'm aware there has been no offical confirmation whether or not GC will be accepted in C++0x.</p>
+<p >All indications suggest at the very least C++0x will acknowledge GC within the C++ standard itself, by providing more defined behaviours in other words C++0x will have better support for optional GC.</p>
+<p >Making a petition is unnecessary because the standards committee have been discussing GC in C++ for years.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Fri, 06/23/2006 - 11:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19011"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19011" class="active">
+desktop applications. There</a></h3>
+ <div class="content"><blockquote ><p >
+desktop applications. There are big applications like Word, Excel, Firefox etc that the performance of other languages is not appropriate. For example, a 20% less performance in Word would result in big delays in document repagination. Personally I have seen Word, Excel, Firefox, Explorer, Visual Studio and other flagship applications die horribly from memory management / pointer problems.
+</p></blockquote>
+<p >Big applications like that are not speed critical. In cases like that, improving the algorithms used results in a much greater speed boost than using a faster language. Even so, just because a language isn't as low level as C++ doesn't mean it's not fast (or faster). Most of the .NET languages are more than fast enough for pretty much anything outside of a few uncommon application domains. If you really care about garbage collection and speed, you could give O'Caml a try, which is about as fast as C++ for most things (although I personally can't stand the language). </p>
+<blockquote ><p >
+game development tools. Many developers are frustrated to having to use a different programming language for writing their tools than the one their game is written on.
+</p></blockquote>
+<p >That's hardly a reason. Not everyone likes bashing their head on a rock because they don't like to learn.</p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Fri, 06/23/2006 - 16:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19036"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19036" class="active">the old mantra</a></h3>
+ <div class="content"><p >"The only reason Java exists is because C++ does not have garbage collection. Take that away, and nobody will need Java anymore."</p>
+<p >except, of course, to run and give support to the tons the legacy java code that's been developed in the meantime while C++ was sleeping...</p>
+<p >as they say, old programming languages never really die.</p></div>
+ <div class="links">By <a href="user/1328" title="View user profile.">rmalafaia</a> at Fri, 06/23/2006 - 20:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19037"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19037" class="active">www.inkscape.org</a></h3>
+ <div class="content"><p >The vector drawing program inkscape uses libgc.</p></div>
+ <div class="links">By <a href="user/1909" title="View user profile.">dolf</a> at Fri, 06/23/2006 - 20:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-18997"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-18997" class="active">why do a petition?</a></h3>
+ <div class="content"><p >despite the general opinion the c++ comitee is not ignoring the necessity of natively supported garbage collection for some of the languages application domains.</p>
+<p >see <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1943.pdf">this paper</a> for work on the topic by boehm et al. (which is btw already in active discussion for one year now)</p>
+<p >you can follow any of the bigger recent newsgroup threads about the topic for insight into the technical and design issues around gc and c++, for example this <a href="http://groups.google.com/group/comp.lang.c++.moderated/browse_frm/thread/86a5a3f804c84ea4/73aeb5166ab141f8?lnk=st&amp;q=garbage+collection+group%3Acomp.lang.c%2B%2B.moderated&amp;rnum=11&amp;hl=en#73aeb5166ab141f8">posting fest </a> spawned by alexandrescu where various committee members attended.</p>
+<p >personally i hope for gc in c++0x, but it may very well be that the next standard will not provide that. if so, though, because of the technical and/or democratic complexity of introducing a fundamental change in the language, and not for lack of interest.</p></div>
+ <div class="links">By <a href="user/2535" title="View user profile.">peter steiner</a> at Fri, 06/23/2006 - 09:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-18998"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-18998" class="active">Thanks a lot for the link.</a></h3>
+ <div class="content"><p >Thanks a lot for the link. The author's views are similar to mine.</p>
+<p >I really liked the paragraph where it says that "C++ is used in domains where manual memory management is not needed". At last, after all these years, someone recognizes the truth.</p>
+<blockquote ><p >
+personally i hope for gc in c++0x, but it may very well be that the next standard will not provide that.
+</p></blockquote>
+<p >That's what I am afraid of.</p>
+<blockquote ><p >
+because of the technical and/or democratic complexity of introducing a fundamental change in the language
+</p></blockquote>
+<p >It is not that difficult to add GC to C++. Microsoft has already C++/CLI out. Why should we have to wait for so many years for something so important?</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Fri, 06/23/2006 - 10:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19002"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19002" class="active">It is not that difficult to</a></h3>
+ <div class="content"><blockquote ><p >
+It is not that difficult to add GC to C++. Microsoft has already C++/CLI out. Why should we have to wait for so many years for something so important?
+</p></blockquote>
+<p >Because there are many issues to resolve it's nontrivial, choosing an appropriate model for C++, how it effects the rest of the standard, defining behaviours and what is undefined and left as an implementation detail, etc, etc.</p>
+<p >If you follow the mailing list of the C++ standards committee you will see how diffcult it really is and how many years its been in discussion.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Fri, 06/23/2006 - 11:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19003"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19003" class="active">Quite. A LtU discussion of</a></h3>
+ <div class="content"><p >Quite. A LtU discussion of the specific semantic implications is, of course, appropriate.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Fri, 06/23/2006 - 11:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19009"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19009" class="active">I am aware of the technical</a></h3>
+ <div class="content"><p >I am aware of the technical details of GC and I see no great difficulty in introducing one in C++. There are technical difficulties, but nothing that can not be solved.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Fri, 06/23/2006 - 14:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19010"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19010" class="active">well...</a></h3>
+ <div class="content"><blockquote ><p >
+It is not that difficult to add GC to C++. Microsoft has already C++/CLI out.
+</p></blockquote>
+<p >c++/cli introduced the concept of a managed pointer type which represents a boxed value, contrary to existing raw pointers which directly represent a value at a particular memory location. this additional semantic allows for a better gc (e.g. reduced memory usage through relocation), but essentially breaks compatibility with large parts of existing idiomatic pointer usage.</p>
+<p >this may be ok for microsoft, where historically standard idioms were ignored for (often inferior) proprietary alternatives, but it is clear (and comforting) that standard c++ is bound to follow existing concepts in future extensions.</p>
+<p >boehm proposes to add current non-intrusive gc solutions intrusively, while maintaining known pointer semantics. ensuring the backwards-compatible nature while keeping the proposal implementable is non-trivial at best.</p>
+<p >by the way, native gc support may be politically important to increase public acceptance of c++, but i'd like to stress that there already are viable solutions like the free boehm collector or commercial alternatives that have been successfully applied to projects of any size.</p></div>
+ <div class="links">By <a href="user/2535" title="View user profile.">peter steiner</a> at Fri, 06/23/2006 - 14:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19030"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19030" class="active">c++/cli introduced the</a></h3>
+ <div class="content"><blockquote ><p >
+c++/cli introduced the concept of a managed pointer type which represents a boxed value, contrary to existing raw pointers which directly represent a value at a particular memory location. this additional semantic allows for a better gc (e.g. reduced memory usage through relocation), but essentially breaks compatibility with large parts of existing idiomatic pointer usage.
+</p></blockquote>
+<p >There are certain things that shall not be done with GC pointers. For example, casting a pointer to an integer and back. Semantics like this is the responsibility of the end-user of the language. The language shall provide a clear way to say that a pointer is GC'd or not, and Microsoft's solution is a step in the right direction.</p>
+<p >Personally I would not change the syntax or add new pointer types, but I would have the following options:</p>
+<ul >
+<li >globally enabled garbage collection, with a compiler flag or pragma; programs will be garbage-collected as is, without syntax.</li>
+<li >controlling GC areas with pragmas.</li>
+<li >using a special attribute 'gc' before classes and pointers to make them GC'able.</li>
+</ul>
+<blockquote ><p >
+ensuring the backwards-compatible nature while keeping the proposal implementable is non-trivial at best.
+</p></blockquote>
+<p >Care to elaborate? I can truly find nothing very difficult in keeping backwards compatibility.</p>
+<blockquote ><p >
+but i'd like to stress that there already are viable solutions like the free boehm collector or commercial alternatives that have been successfully applied to projects of any size.
+</p></blockquote>
+<p >Of course there are. I have even written my own. But, in the end, if it is not part of the official standard, it is avoided. Perhaps not by me, but from the managers (and I have examples of this).</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Fri, 06/23/2006 - 19:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19071"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19071" class="active">difficulties</a></h3>
+ <div class="content"><blockquote ><p >
+The language shall provide a clear way to say that a pointer is GC'd or not, and Microsoft's solution is a step in the right direction.
+</p></blockquote>
+<p >a syntactical difference between collected and non-collected pointers is matter of taste. a semantical difference is rather dangerous though. for example CLI arrays cannot participate in the iterator pattern, which renders stl algorithms useless for these.</p>
+<p >microsoft tackles all of these problems. the different syntax implies different semantics to the careless programmer. a duplicated stdcli namespace provides the stl with cli support.</p>
+<p >this does not suffice for a standard based solution. imagine standard c++ shipping with two flavours of stl...</p>
+<blockquote ><p >
+Care to elaborate? I can truly find nothing very difficult in keeping backwards compatibility.
+</p></blockquote>
+<p >type unsafety doesn't play very well with gc. are mistyped pointer values to be considered for collection?</p>
+<p >pointers as array iterators create problems as well. are arrays pointed to into the middle considered for collection as soon as the first byte is not any longer pointed to?</p>
+<p >see the <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/1996/N0932.pdf">original  gc proposal</a> by bjarne stroustrup for more of these issues. existing practise create conflicts with conventional gc concepts which is why c++ is particularily difficult to gc.</p></div>
+ <div class="links">By <a href="user/2535" title="View user profile.">peter steiner</a> at Sat, 06/24/2006 - 14:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19140"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19140" class="active">a syntactical difference</a></h3>
+ <div class="content"><blockquote ><p >
+a syntactical difference between collected and non-collected pointers is matter of taste. a semantical difference is rather dangerous though. for example CLI arrays cannot participate in the iterator pattern, which renders stl algorithms useless for these.</p>
+<p >microsoft tackles all of these problems. the different syntax implies different semantics to the careless programmer. a duplicated stdcli namespace provides the stl with cli support.</p>
+<p >this does not suffice for a standard based solution. imagine standard c++ shipping with two flavours of stl...
+</p></blockquote>
+<p >No, shipping two versions of STL would be wrong. But I do not see what is the big deal, again. If two kinds of pointers are used, then STL containers and algorithms could be customized (as to what type of pointers to use) either by template parameters or type traits (or by pragmas/attributes). I prefer type traits, as it is easier to manage customization using traits (the type declaration is uncoupled from some of its attributes, thus making syntax easier).</p>
+<blockquote ><p >
+type unsafety doesn't play very well with gc. are mistyped pointer values to be considered for collection?
+</p></blockquote>
+<p >A gc pointer is considered for collection. If the programmer does something stupid like <code >ptr = 0xff0012cd</code>, then it is the programmer's problem.</p>
+<blockquote ><p >
+pointers as array iterators create problems as well. are arrays pointed to into the middle considered for collection as soon as the first byte is not any longer pointed to?
+</p></blockquote>
+<p >No. Pointers pointing into the middle of arrays is no different than pointers pointing to members of objects. If an object is reachable from any pointer, either one that points to the object start or a pointer that points to the object middle, it should not be collected.</p>
+<blockquote ><p >
+see the original gc proposal by bjarne stroustrup for more of these issues. existing practise create conflicts with conventional gc concepts which is why c++ is particularily difficult to gc.
+</p></blockquote>
+<p >Thanks for the link, but I do not see the "difficulties" as very ...difficult problems to solve.</p>
+<p >EDIT:</p>
+<p >I have just read the small document you posted (thanks) and indeed I can not find something too difficult to tackle...nothing that accounts for delaying GC for C++ so many years.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Mon, 06/26/2006 - 13:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-19143"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19143" class="active">Absolute pointers</a></h3>
+ <div class="content"><blockquote ><p >If the programmer does something stupid like ptr = 0xff0012cd, then it is the programmer's problem.</blockquote>
+It's been more than a decade since I used C or C++, but the pattern of addressing hardware through a pointer to an absolute memory address was fairly common when I dealt with hardware.  Has there been something to replace this pattern of usage?  That is, what kind of differentiation exists in pointer types?  Pointing at an absolute location may be in error in some cases, but in for embeddeded devices it is fairly attractive feature.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Mon, 06/26/2006 - 13:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19044"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19044" class="active">It is difficult</a></h3>
+ <div class="content"><blockquote ><p >It is not that difficult to add GC to C++. Microsoft has already C++/CLI out.</p></blockquote>
+<p >C++/CLI has introduced 3 kinds of pointers in addition to the old <code >T*</code> (<code >T^</code>, <code >pin_ptr&lt;T&gt;</code>, and <code >interior_ptr&lt;T&gt;</code>), and one new kind of reference (<code >T%</code>, which semantically corresponds to <code >interior_ptr&lt;T&gt;</code>). There are separate GC'd and non-GC'd heaps in addition to objects allocated on the stack and statically. Classes are divided into standard C++ classes, .NET reference classes, and .NET value classes (let's ignore .NET enums in addition to C++ enums, and .NET delegates in addition to C++ function pointers and function objects and boost/new-C++ function templates).</p>
+<p >There are some rules about which objects may be put on which storage areas, which kinds of objects may contain which kinds of references, and rules about when objects are referenced and when they are copied. I'm not familiar with the details.</p>
+<p >In addition to C-style arrays and standard C++ vectors, there are garbage-collected .NET arrays and .NET collection classes. In addition to C++ templates, there are .NET generics, using the same syntax but different semantics.</p>
+<p >In short, the language is schisophrenic, and contains both C++ and .NET objects together, with their own sets of rules and restrictions. It doesn't show how to make C++ a garbage collected language. It shows how to let C++ and GC'd worlds cooperate. It might have done it as well as it's possible.</p></div>
+ <div class="links">By <a href="user/1547" title="View user profile.">Qrczak</a> at Fri, 06/23/2006 - 21:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-19013"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19013" class="active">Why not just use D?</a></h3>
+ <div class="content"><p >Isn't D appropiate for the class of problems that C++ w/ GC would be used for? (It has similiar syntax, generics, and it compiles to native code).</p></div>
+ <div class="links">By <a href="user/2583" title="View user profile.">Logan Capaldo</a> at Fri, 06/23/2006 - 16:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19029"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19029" class="active">First of all, in D objects</a></h3>
+ <div class="content"><p >First of all, in D objects are like in Java: they are all allocated on the heap.</p>
+<p >Secondly, I dislike D template syntax.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Fri, 06/23/2006 - 19:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19033"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19033" class="active">Heap Allocation</a></h3>
+ <div class="content"><blockquote ><p >they are all allocated on the heap.</blockquote>
+Maybe I'm totally clueless, but isn't heap allocation (or something similar) necessary for garbage collection?  So I guess you want to have the speed of objects allocated on the stack and garbage collection for objects allocated on the heap?</p>
+<blockquote ><p >Secondly, I dislike D template syntax.</blockquote>
+Can't say that I like C++ template syntax either - but then opinions are a cheap commodity.  What specifically can you not do with D templates?</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Fri, 06/23/2006 - 19:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19141"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19141" class="active">
+Maybe I&#039;m totally clueless,</a></h3>
+ <div class="content"><blockquote ><p >
+Maybe I'm totally clueless, but isn't heap allocation (or something similar) necessary for garbage collection?
+</p></blockquote>
+<p >Yes, GC objects are allocated on the heap. </p>
+<blockquote ><p >
+Can't say that I like C++ template syntax either - but then opinions are a cheap commodity. What specifically can you not do with D templates?
+</p></blockquote>
+<p >D templates are similar to C++ templates, but it is the syntax I do not like - not the capabilities. Of course D's syntax is what it is in order to make the parser LALR(1), which C++ isn't.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Mon, 06/26/2006 - 13:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19057"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19057" class="active">hello</a></h3>
+ <div class="content"><p >First post here at LTU.  </p>
+<p >I am a long(2+ years?) lurker, but never really posted as a good amount of stuff here is *way* outta my league.</p>
+<p >D objects are generally allocated on the heap except when using the auto keyword.</p>
+<p >class Foo {}<br >
+auto Foo x = new Foo() ;<br >
+// this is allocated on stack, and destructed on leaving scope</p>
+<p >D has also recently acquired a small amount of type inference:<br >
+auto x = new Foo(); </p>
+<p >This statement has no type declaration so is not allocated on the stack, but D structs are allocated on the stack and have most of the class capabilities.  I think its a good tradeoff.</p>
+<p >D just got new lambda-like delegate syntax, policy-like scope commands:scope(exit), scope(failure), scope(success).</p>
+<p >Sorry for rambling but D really is a better C++. </p></div>
+ <div class="links">By <a href="user/3120" title="View user profile.">David Medlock</a> at Sat, 06/24/2006 - 03:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19142"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19142" class="active">A minor correction.</a></h3>
+ <div class="content"><p >The auto keyword in D does not allocate D objects on the stack. It allocates them on the heap, but their destructor is invoked when the scope is exited.</p>
+<p >D has many goodies, but I want my objects to live on the stack as well as on the heap. I am not ready to surrender stack allocation.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Mon, 06/26/2006 - 13:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19176"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19176" class="active">you are correct</a></h3>
+ <div class="content"><p >I remember Walter considered making auto objects on the stack, since they must go out of scope.</p>
+<p >Nevertheless structs remain on the stack.  They have almost all the methods of classes, and can be parameterized.</p>
+<p >I am still curious why you put so much emphasis on this?  </p>
+<p >Are you are thinking of speed?  My programs run the same or faster than my C++ equivalents.  It does require differing idioms in certain cases, but the power is still there.  </p>
+<p >And I finish faster allowing the optimizer between my ears to help out.</p>
+<p >The new syntax for delegates is very nice:</p>
+<p >auto times2 = (int x){ return(x * x); }<br >
+writefln( times2(100) );</p>
+<p >Thanks to array functions being automatically applied to arrays the following is possible:</p>
+<p >int[] array;<br >
+int[] x = array.where(  (int r) { return r&lt;=10; } );</p>
+<p >int[] y = array.map( (int r) { return r*3; } );</p>
+<p >All this with the compiled speed of C++, and faster compile times.<br >
+It isn't perfect but its at least as good as C++ imo.</p></div>
+ <div class="links">By <a href="user/3120" title="View user profile.">David Medlock</a> at Tue, 06/27/2006 - 12:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19186"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19186" class="active">Details...</a></h3>
+ <div class="content"><blockquote ><p >The auto keyword in D does not allocate D objects on the stack. It allocates them on the heap, but their destructor is invoked when the scope is exited.</p>
+<p >D has many goodies, but I want my objects to live on the stack as well as on the heap. I am not ready to surrender stack allocation.</p></blockquote>
+<p >Are we discussing languages here or implementation details?</p></div>
+ <div class="links">By <a href="user/2339" title="View user profile.">Nuno Cruces</a> at Tue, 06/27/2006 - 17:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19189"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19189" class="active">Performance is generally an</a></h3>
+ <div class="content"><p >Performance is generally an implementation detail. For example, it's conceptually possible to analyze whether or not a variable is ever used or stored outside the function, allowing the compiler to put what it can on the stack.</p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Tue, 06/27/2006 - 17:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-19199"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19199" class="active">And that&#039;s why...</a></h3>
+ <div class="content"><p >... people who do not understand C++ will never understand it. Performance isn't an afterthought in C++. The biggest blocker in C++ to multiple inheritance wasn't syntactic detail, or even semantic meaning. The biggest argument against it is performance, since you've got to re-adjust the virtual table for the second and third, etc. bases. Maybe I'm too young to remember when C++ was pushed as some sort of magical OOP solution (only been coding for a decade, and commercially for half that). But modern C++ is about retaining absolute efficiency, whilst providing comfortable interfaces. Admittedly the average C++ coder is willing to live with more than necessary. Look at the stuff that Boost is producing. There is a reason that something like multi_index container hasn't been produce in <em >any</em> other imperative language (to my knowledge; please correct me otherwise). No other language allows the sort of control that C++ allows whilst building abstractions. Of course there are problem. There are issues. But as someone else here has pointed out, the things that people usually suggest simply throw away bits of C++ that people actually use, trying to shoot for 80%, which for once is not good enough. And this is coming from a guy who's other language of choice is Haskell.</p></div>
+ <div class="links">By <a href="user/1873" title="View user profile.">genneth</a> at Tue, 06/27/2006 - 20:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-19203"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19203" class="active">eh?</a></h3>
+ <div class="content"><p >I'm confused...what are you getting at? C++ is probably the worst language I can imagine in terms of its relationship with optimization, not because it's generally fast, but because it sacrifices a lot of flexibility for speed <i >by default</i>, which leads to a lot of extra work when this isn't true. Examples of this include: non-virtual classes, lack of introspection capabilities, lack of dynamic dispatch, etc. which are all inferrable by the compiler most of the time. I'd rather the language default to flexibility, while still giving me the chance to optimize it later <i >if I need to</i>. Actually, one might even say that the strictness of C++ supports premature optimization. </p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Tue, 06/27/2006 - 21:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-19206"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19206" class="active">Feature not bug</a></h3>
+ <div class="content"><blockquote ><p >
+I'd rather the language default to flexibility, while still giving me the chance to optimize it later if I need to.
+</p></blockquote>
+<p >I agree, as I'm sure many others here do.  Historically, however, what you describe hasn't been so easily achieved, and the languages most abstracted from the machine still tend to have issues in that area.  In that context, the C++ "relationship with optimization" has been one of its biggest selling points.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Tue, 06/27/2006 - 21:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-19214"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19214" class="active">flexibility wanted</a></h3>
+ <div class="content"><p >Anton van Straaten: <i >I agree, as I'm sure many others here do.</i></p>
+<p >Absolutely; it's agonizing the default is not flexibility before speed. The only escape that looked easy to me was writing a high level flexible language in C++ that lets me drop into C++ when I finally get to the optimization stage after covering bases first.  Most people use scripting class languages for this general purpose.</p>
+<p >Many features and support frameworks don't get done (ever) in C++ projects because there isn't time to do them, and ironically most have slim performance needs.  Often there's only time to blindly careen down the critical path once for a product, hoping the organic growth of change in response to discoveries won't render old code too chaotic.</p>
+<p >Curtis W <i >Actually, one might even say that the strictness of C++ supports premature optimization.</i></p>
+<p >That's it in a nutshell.  Let's pretend coding is like writing prose. In C++ you tend to spend all your time writing optimal verions of first drafts without any time to revise or explore your thesis, or to add illustrations, guides, and tables of contents.  Also, there's no time to proofread the result, and you couldn't proofread if you wanted to, since optimization forbids review.</p></div>
+ <div class="links">By <a href="user/2390" title="View user profile.">Rys David McCusker</a> at Tue, 06/27/2006 - 22:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-19216"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19216" class="active">Exactly</a></h3>
+ <div class="content"><p >I believe even Straustroupe said something like: "Inside C++, there's a clean language trying to get out". Everyone knows that C++ is a huge mess; no other language has a language reference that thick (even Ada). When was the last time you pondered the use of a protected pure destructor? However, the particular combination of features, whether it be by luck or by design, that have congregated in C++ means that some very interesting pieces of code can be made. For example, a custom memory allocator that allocates things inside the AGP apeture can be written, and integrated into existing code seamlessly, using the same coding pattern. </p>
+<p >Below it's been mentioned that programmers might be underestimating the compiler. While this might be true for trivial things like data packing or instruction ordering, this becomes less true when it involves things that the compiler has no knowledge of: data invariants, platform garantees, etc. The only languages existing right now that could deliver this data to the compiler in a declarative form are dependent typed languages. If you want, look at C++ as an attempt to carry out multi-staged imperative programming. At each level you walk the compiler through what you want, often overriding what it's warning you about, hushing it with some arcane <i >invocatio</i>. Until we have a dependently typed language that we can actually explain everything to, C++ will manage to pull off efficiencies and cute/neat (for C++ at least) abstractions that other languages can't.</p>
+<p >My defence of C++ basically amounts to that it actually allows me to build more abstractions in an executionally efficient manner than other languages. It does not allow me to do this easily, but something is better than nothing. After a while, you get used to the crap, and understand that you're looking at patterns that actually mean something underneath, and begin to marvel that it's even possible.</p>
+<p >C++ occupies a very interesting design point; one that in the wake of its success and subsequent shitstorm is very easy to miss and underestimate.</p></div>
+ <div class="links">By <a href="user/1873" title="View user profile.">genneth</a> at Tue, 06/27/2006 - 23:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-19207"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19207" class="active">I think it&#039;s psychological</a></h3>
+ <div class="content"><p >I think it's a psychological thing: Many people deeply mistrust the compiler doing good optimization and want full control for themself because they think they can do it better (even if they're wrong). Many programmers are simply kind of 'control freaks'.</p>
+<p >OTOH: In the moment there is no real alternative to C++. Creating a nice language is one thing, but to make it really usefull you also need libraries and tools. And I don't even see a real alternative languagewise to C++: While it's possible (and maybe even relativly simple) to create such a language, most attempts simple went into the wrong direction to really satisfy most C++ users.</p></div>
+ <div class="links">By <a href="user/2480" title="View user profile.">Karsten Wagner</a> at Tue, 06/27/2006 - 21:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-19224"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19224" class="active">Examples of this include:</a></h3>
+ <div class="content"><blockquote ><p >
+... lack of introspection capabilities, lack of dynamic dispatch, etc.
+</p></blockquote>
+<p >Eh? C++ does support dynamic dispatch but only single dynamic dispatch not predicate or multiple dispatch and C++ does support a (very) limited form of introspection via RTTI and if accepted in C++0x will support eXtended type information (XTI).</p>
+<p >Also lets not ignore the fact that C++ has rich compile-time introspection capabilities via type traits in std::tr1 or boost type traits. No offense but are you sure you know (enough) C++ to really make comments or judgments.</p>
+<p >As i mentioned earlier people seem to be ignoring actually what (advance) C++ programmers do with C++, most likely due to the fact that they don't really know or don't know completely.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Wed, 06/28/2006 - 09:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-19232"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19232" class="active">In Curtis&#039; Defense...</a></h3>
+ <div class="content"><p >...I took his point to be precisely that C++ doesn't have multiple dispatch, that this is a big enough issue to be addressed, e.g. in Alexandrescu's <a href="http://erdani.org/">Modern C++ Design</a>, and that C++'s RTTI is essentially useless for purposes such as developing orthogonal persistence implementations or supporting precise garbage collection, two of the most obvious domains in which a proper reflection/introspection facility would help.</p>
+<p >XTI seems to be perpetually on its way; I can't even find a reference implementation anywhere. C++0x isn't due to be final until 2009 (!) and that's just the spec&mdash;we all know how long it takes for our favorite compilers to conform to new standards, and if you've been following the process, you know that, e.g. "auto" support basically means a rewrite for most compiler teams. This doesn't give me warm fuzzy feelings about C++ (then again, it's far past too late to give me warm fuzzies about C++).</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Wed, 06/28/2006 - 13:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-19240"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19240" class="active">Yes, I meant multiple</a></h3>
+ <div class="content"><p >Yes, I meant multiple dispatch.</p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Wed, 06/28/2006 - 15:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19053"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19053" class="active">Why not  D</a></h3>
+ <div class="content"><p >That's exactly what I was thinking.  Just the fact that there's no header file crap is a huge improvement over C++, plus all the other <a href="http://www.digitalmars.com/d/lex.html">features</a>.  </p>
+<p >Achilleas, I disagree with an earlier thread post you made about the only reason that Java exists is because it had GC.  GC is a feature, but I believe that the big benefit of Java over C++ is the number of crossplatform packages that Java provides out of the box.</p></div>
+ <div class="links">By <a href="user/2246" title="View user profile.">Dave Lopez</a> at Sat, 06/24/2006 - 00:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19059"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19059" class="active">wtf?!</a></h3>
+ <div class="content"><p >"Just the fact that there's no header file crap is a huge improvement over C++"</p>
+<p >what are you talking about?!  C/C++ headers are very handy interface/module specs.  All i need to do to use a library is to take a look at the header, rather than, say, navigate throughout a large body of Java source and search the methods one by one... </p>
+<p >i don't believe it's good design to let that kind of need in charge of external tools, i.e. class browsers in IDEs...</p></div>
+ <div class="links">By <a href="user/1328" title="View user profile.">rmalafaia</a> at Sat, 06/24/2006 - 05:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19063"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19063" class="active">Are you kidding?</a></h3>
+ <div class="content"><p >Hehe, so you're saying that all the rest of the languages that don't use header files (basically all of them except C/C++) got it wrong?  Maybe you should propose header file inclusion in the next revisions of Ruby, Lisp, Python, Java, etc... because you're having such a hard time using proper tools.</p></div>
+ <div class="links">By <a href="user/2246" title="View user profile.">Dave Lopez</a> at Sat, 06/24/2006 - 09:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19074"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19074" class="active">interfaces</a></h3>
+ <div class="content"><p >All i'm saying is that header files provide handy standalone interface spec.  Don't try to read too much into it.</p>
+<p >Java has proper interfaces and it'd be good if all created classes were backed by one or more of these, but alas, since it's not needed, seldom are they used except to implement system interfaces...</p>
+<p >Python will get its own interface mechanism eventually.  But even now it's not really hard to browse python code and get a listing of the methods -- not even saying you can quickly get them by dir() -- because the language is rather dense when compared to Java and the likes.  Same can be said of ruby/perl/etc.  Scheme module systems provide similar listings of export symbols, so you can quickly search for the definitions.</p>
+<p >But really, separate interfaces containing the prototypes for exported functions are a must.  I truly enjoy C/C++ header files.  Pascal does something similar, except the interface and implementation sections are in the same file.  Of course, distributed binaries only come with the interface section intact...</p></div>
+ <div class="links">By <a href="user/1328" title="View user profile.">rmalafaia</a> at Sat, 06/24/2006 - 18:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19081"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19081" class="active">Interfaces have nothing to do with header files</a></h3>
+ <div class="content"><p >As others have stated, C/C++ header files are basically a textual substituion hack, probably related to compiler technology of the time and not having a module system.  </p>
+<p >Header files have nothing to do with Java interfaces, which are more of subtyping contract.  Python getting interfaces has more to do with an eventual real compilation implementation (it already has Duck typing), and Guido's interest in positioning Python as an "enterprisey" language.</p>
+<p >In any case, reading header files for documentation is a pretty piss-poor strategy for understanding interfaces that don't have proper documentation and/or programmers that don't have proper tools.  As a last resort, it's fine, but you end up wading through a bunch of macro crap, and in the case of C++, some actual implementation code.</p></div>
+ <div class="links">By <a href="user/2246" title="View user profile.">Dave Lopez</a> at Sat, 06/24/2006 - 19:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-19086"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19086" class="active">regardless</a></h3>
+ <div class="content"><p >header files represent the interface to a particular library.</p>
+<p >"Header files have nothing to do with Java interfaces"</p>
+<p >conceptually, they are both abstract prototypes of functionality promised to be implemented by others.  By following the interface -- a contract -- you can be sure the desired functionality will be present to you.</p>
+<p >"In any case, reading header files for documentation is a pretty piss-poor strategy for understanding interfaces"</p>
+<p >No documentation is as faithful as a coded interface.  And seemingly, developers have dealt just fine with it for about 30+ years...</p></div>
+ <div class="links">By <a href="user/1328" title="View user profile.">rmalafaia</a> at Sat, 06/24/2006 - 22:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-19088"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19088" class="active">header files represent the</a></h3>
+ <div class="content"><blockquote ><p >header files represent the interface to a particular library.</p></blockquote>
+<p >No, not really.  Header files also tend to contain many symbols that are not intended to be publically used.</p>
+<blockquote ><p >conceptually, they are both abstract prototypes of functionality promised to be implemented by others. By following the interface -- a contract -- you can be sure the desired functionality will be present to you.</p></blockquote>
+<p >Conceptually, yes, but from a language semantics point of view, no.</p>
+<blockquote ><p >No documentation is as faithful as a coded interface. And seemingly, developers have dealt just fine with it for about 30+ years...</p></blockquote>
+<p >Except that it's likely you will need context, whether that is implementation details and/or proper documentation, in order to use those functions.  </p>
+<p >But if I'm just interested in symbols I'd rather have an editor that can understand the language and present to me those symbols with visibility context and without having to wade through header files.</p></div>
+ <div class="links">By <a href="user/2246" title="View user profile.">Dave Lopez</a> at Sat, 06/24/2006 - 23:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-19100"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19100" class="active">I&#039;ve coded C++ as my job for</a></h3>
+ <div class="content"><p >I've coded C++ as my job for the last year and not once consulted a header file as interface documentation. Probably because I depend mostly on popular open source libraries, so they're well documented.</p>
+<p >Also, using dir() in Python is superior because its clear what is meant to be public/_protected/__private, while this is not the case with headers.</p></div>
+ <div class="links">By <a href="user/2513" title="View user profile.">dataangel</a> at Sun, 06/25/2006 - 18:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-19102"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19102" class="active">collaboration</a></h3>
+ <div class="content"><p >dataangel: <i >...not once consulted a header file as interface documentation.</i></p>
+<p >If you had a coworker who wrote any code you needed to use -- or vice versa -- how would the two of you inform each other about API and usage conventions?  Read the code?</p>
+<p >Some coworkers seldom (sometimes never :-) write documentation, and often resist giving any evidence about their coding intentions (since then errors are undeniable).</p></div>
+ <div class="links">By <a href="user/2390" title="View user profile.">Rys David McCusker</a> at Sun, 06/25/2006 - 18:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-19121"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19121" class="active">hmm</a></h3>
+ <div class="content"><p >"its clear what is meant to be public/_protected/__private, while this is not the case with headers."</p>
+<p >In the case of vanilla C, the headers represent the public interface of the library.  functions and data meant to be kept private to the translation unit are declared static.  Which is a consistent practice.</p>
+<p >It's kinda obnoxious declaring a C++ class in a header, though, and show the private members that people using the class should not be concerned with...</p></div>
+ <div class="links">By <a href="user/1328" title="View user profile.">rmalafaia</a> at Sun, 06/25/2006 - 22:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19065"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19065" class="active">Ancient technology</a></h3>
+ <div class="content"><p >The problem with header files is not that they separate interface from implementation - that is a good thing.</p>
+<p >The problem is, that this is done based on an incredibly primitive, fragile, and ineffective mechanism, namely textual inclusion. No separate compilation, no proper interface/implementation conformance checks, no namespacing, no protection from horrible macro interference, no whatever.</p>
+<p >Have you never wondered why a C compiler spends, say, 80% of its time in processing the same header files over and over again? Why you have to wrap every header in a stupid #ifdef? Why you need to be so careful about the order of #includes? And so on.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Sat, 06/24/2006 - 10:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19077"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19077" class="active">if it&#039;s working...</a></h3>
+ <div class="content"><p >"based on an incredibly primitive, fragile, and ineffective mechanism, namely textual inclusion. No separate compilation"</p>
+<p >what good would separate compilation of an interface consisting only of function prototypes that'll get inserted in the final code bring to the table?</p>
+<p >"no proper interface/implementation conformance checks"</p>
+<p >why would that matter, if the interface is getting textually inserted into the code so the compiler will complain of any mismatches anyway?</p>
+<p >"no namespacing"</p>
+<p >C single namespace is really not that bad as most people picture it.  If two classes share the same name in java, to disambiguate you use the full module path in all references to the class.  In C, you prepend a proper prefix to the functions, so its mostly just a hardwired "path".</p>
+<p >"no protection from horrible macro interference."</p>
+<p >some people actually find macros, even primitive like cpp's, quite handy.</p>
+<p >"Have you never wondered why a C compiler spends, say, 80% of its time in processing the same header files over and over again?"</p>
+<p >no, because i actually "wrap every header in a stupid #ifdef", cause that's the standard idiom when dealing with C and i'd rather follow it than fight it.</p>
+<p >If it's working, don't fix it.  There's no need to transform C/C++ into OCaml or Java.</p></div>
+ <div class="links">By <a href="user/1328" title="View user profile.">rmalafaia</a> at Sat, 06/24/2006 - 18:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19087"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19087" class="active">Here:</a></h3>
+ <div class="content"><p ><A href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2006/n1964.pdf">Here</A> are some more rationales for proper module support (section 4).</p></div>
+ <div class="links">By <a href="user/3004" title="View user profile.">Bárður Árantsson</a> at Sat, 06/24/2006 - 22:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19066"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19066" class="active">Really, this is widely</a></h3>
+ <div class="content"><p >Really, this is widely regarded as a huge flaw in C++. Textual inclusion of headers is an arcane technique. The language is in desperate need of a module system, and there are a few proposals to add one to the next standard (but I won't hold my breath). </p></div>
+ <div class="links">By <a href="user/3038" title="View user profile.">Steven Woodhouse</a> at Sat, 06/24/2006 - 10:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19234"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19234" class="active">CMod</a></h3>
+ <div class="content"><p >The <a href="http://www.cs.umd.edu/~saurabhs/CMod/">CMod</a> project at might be a good starting poing.</p>
+<blockquote ><p >
+CMod is a tool written to enforce a modular programming style in C code, to ensure that modules, when linked together, yield a type correct program.</p>
+<p >C syntax does not provide direct support for modules. But over time, programmers have developed a discipline of modular programming which treats .c files as module implementations and .h files as interfaces. However, without proper enforcement (of the requirements of a module system), mistakes can be made which will not be reported by a normal C compiler. In particular, one module can declare that it requires some symbol of type T1, but in the module defining the symbol it actually has type T2. This problem is compounded and obfuscated by the extensive use of preprocessor directives which is common in large C programs. These mistakes can lead to confusing errors that manifest themselves at runtime and are hard to track down.</p>
+<p >The reason this problem exists in C is because the language has only an informal notion of an external interface: the .h file. CMod provides a way to treat .h as more formal interfaces. In particular, it enforces three rules as to how .h files should and should not be used; if the rules are followed, checked by CMod at compile-time and link-time, then the final program is likely to be type correct. In addition to this benefit, it is widely recognized that modular code is easier to maintain, easier to extend and more readable.
+</p></blockquote></div>
+ <div class="links">By <a href="user/767" title="View user profile.">Ethan Aubin</a> at Wed, 06/28/2006 - 14:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19070"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19070" class="active">small correction</a></h3>
+ <div class="content"><p >D has no *required* separate header files.</p>
+<p >You can and do make them as you like. </p>
+<p >EDIT:<br >
+The dmd compiler generates header files for you as well.</p></div>
+ <div class="links">By <a href="user/3120" title="View user profile.">David Medlock</a> at Sat, 06/24/2006 - 11:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19144"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19144" class="active">
+Achilleas, I disagree with</a></h3>
+ <div class="content"><blockquote ><p >
+Achilleas, I disagree with an earlier thread post you made about the only reason that Java exists is because it had GC. GC is a feature, but I believe that the big benefit of Java over C++ is the number of crossplatform packages that Java provides out of the box.
+</p></blockquote>
+<p >GC is one of the primary reasons why there is a large number of cross-platform packages. It is much easier to write libraries when you do not have to deal with manual memory management.</p>
+<p >If C++ had GC, I would have written many libraries myself (as open source, that is), including a GUI library. I started to do so, but the project died because it was getting too complex.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Mon, 06/26/2006 - 13:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19147"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19147" class="active">GC only a small part of the reason</a></h3>
+ <div class="content"><p >GC is only a small part of the reason that Java has the level of library support it does.  The portable bytecode format, simple standard distribution format, standard and extensible dynamic loading capabilities, and low-cost high-quality cross-platform build tools are equally important. </p>
+<p >Distributing a common C++ library tbat can be used by all developers pretty much requires distribution as source, including a build file, which may or may not work in the user's environment.   Using the library may or may not require building it, but certainly requires worrying about supported OSes and link file formats, expected locations of header files, and probably a good deal more stuff that I've mercifully blocked out.  You'll also need to worry about all of that for any libraries the library you want depends on, and if you need multiple versions of the same library, god help you.</p>
+<p >Distributing a common library in Java requires slapping a .jar file on a website, with a javadoc tree if you're really being posh.  Using that library requires nothing more than pointing your IDE or build script at that file or URL.   The latest tools will automatically handle versioning and dependency management, although those tools will be obsoleted when built into Java 1.7.</p>
+<p >Java has eclipsed C++ in the enterprise and web spaces for a lot of reasons, including portability, lower training costs, decreased complexity, higher security, and some amazing low-cost high-quality tools.  Merely adding GC to C++ isn't going to do anything to change that.</p></div>
+ <div class="links">By <a href="user/1503" title="View user profile.">Dave Griffith</a> at Mon, 06/26/2006 - 14:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19270"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19270" class="active">I disagree.</a></h3>
+ <div class="content"><p >I disagree.</p>
+<blockquote ><p >
+simple standard distribution format
+</p></blockquote>
+<p >Any language can have that.</p>
+<blockquote ><p >
+standard and extensible dynamic loading capabilities
+</p></blockquote>
+<p >I have happily used dynamic loading in C++ applications through DLLs in many apps.</p>
+<blockquote ><p >
+and low-cost high-quality cross-platform build tools
+</p></blockquote>
+<p >...which are made possible due to GC.</p>
+<blockquote ><p >
+Distributing a common C++ library tbat can be used by all developers pretty much requires distribution as source, including a build file, which may or may not work in the user's environment.
+</p></blockquote>
+<p >Not really. People are happy to download the binary versions of the library they want to use, and this has been happening quite a few years. And there are not that many different platforms to care about these days; you can count them on two hands.</p>
+<blockquote ><p >
+but certainly requires worrying about supported OSes
+</p></blockquote>
+<p >You need to worry about supported OSes in Java as well. Not all libraries are available for every O/S under the sun, and each O/S requires its own wrapper from the Java side...which is exactly the same as in C++.</p>
+<blockquote ><p >
+and link file formats,
+</p></blockquote>
+<p >Hardly a problem, because libraries are easily available for all major compilers, since most of the compilers are free.</p>
+<blockquote ><p >
+expected locations of header files
+</p></blockquote>
+<p >That's no different than supplying classpath in Java programs. The actions I have to do to link a library in C++ are exactly the same as in Java: I have to point the C++ IDE to the directories that include files and libraries exist, just like I have to point the Java IDE to the directories that contain the java libraries.</p>
+<blockquote ><p >
+Distributing a common library in Java requires slapping a .jar file on a website, with a javadoc tree if you're really being posh. Using that library requires nothing more than pointing your IDE or build script at that file or URL. The latest tools will automatically handle versioning and dependency management, although those tools will be obsoleted when built into Java 1.7.
+</p></blockquote>
+<p >That's exactly what I have been doing with DevCPP on Win32: I click 'update' and the latest library for Mingw32 is downloaded and installed, automatically.</p>
+<blockquote ><p >
+Java has eclipsed C++ in the enterprise and web spaces for a lot of reasons, including portability,
+</p></blockquote>
+<p >There are thousands of portable C++ libraries around the web.</p>
+<blockquote ><p >
+ lower training costs,
+</p></blockquote>
+<p >That's a function of 'decreased complexity'.</p>
+<blockquote ><p >
+ decreased complexity, higher security, and some amazing low-cost high-quality tools.
+</p></blockquote>
+<p >And all that is because of garbage collection.</p>
+<p >Do a mental experiment: take garbage collection out of Java and re-evaluate your statement. None of your arguments will really hold, except perhaps the argument about bytecode. Without GC, it would not be possible to have decreased complexity, low-cost high-quality tools, higher security etc.</p>
+<p >By the way, which are the high-quality low-cost quality tools you are talking about?</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Thu, 06/29/2006 - 09:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19276"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19276" class="active">You&#039;re missing the point</a></h3>
+ <div class="content"><p >I never indicated that any of the nice things I listed were impossible in C++.  I meant to indicate that they were more difficult, non-standard, more expensive in terms of developer time, <b > and that these difficulties adversely impacted the amount and quality of libraries available</b>.   Moreover, it's not GC that causes those difficulties, it's mostly compilation to native link formats rather than zipped-up bytecode.  </p>
+<p >Take security, for example.  There's nothing that prevents C++ code from being as secure as Java code, it's just a hell of a lot more difficult to do, requiring painstaking care and attention to a lot of details.  That means more expensive, and lowers the probability that any given C++ library is secure.  That's what people mean when they say "We aren't using C++ because of security risks".  </p>
+<p >It does absolutely no good to examine that things that are <i >possible</i> if you are trying to explain the way the world is, or could feasibly be.  Instead, you have to examine the things that are <i >economical</i>.  "It could be done, but it takes a lot more work for not much payoff" is almost precisely equivalent to "It won't be done".  Adding garbage collection to C++ isn't going to make any of the things I listed any more economical to perform, so it's not going to make cross-platform libraries any more likely to manifest.  </p></div>
+ <div class="links">By <a href="user/1503" title="View user profile.">Dave Griffith</a> at Thu, 06/29/2006 - 13:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19067"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19067" class="active">Why not just use D?</a></h3>
+ <div class="content"><blockquote ><p >
+Why not just use D?
+</p></blockquote>
+<p >If we are going to suggest alternatives then why not use O'Caml for exactly the same reasons suggested.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Sat, 06/24/2006 - 10:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19068"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19068" class="active">Big difference</a></h3>
+ <div class="content"><p >A C++ programmer will almost immediately recognize and be able to code in D.</p></div>
+ <div class="links">By <a href="user/2246" title="View user profile.">Dave Lopez</a> at Sat, 06/24/2006 - 10:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19069"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19069" class="active">That wasn&#039;t really my point,</a></h3>
+ <div class="content"><p >That wasn't really my point, the same could be said for Cyclone or any safer C dialect and i personally do not like or think D is better than C++ in every aspect.</p>
+<p >As far as i'm concerned D still has along way to go (despite some of it's advantages) before it is truely better than C++ and the fact of the matter is C++ is still evolving besides.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Sat, 06/24/2006 - 11:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19082"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19082" class="active">It&#039;s pretty much the point though</a></h3>
+ <div class="content"><p >Your personal dislike of D is pretty much irrelevant of why D would be taken up by C/C++/Java/C# programmers before Ocaml.  Yes, syntax matters.</p></div>
+ <div class="links">By <a href="user/2246" title="View user profile.">Dave Lopez</a> at Sat, 06/24/2006 - 19:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19083"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19083" class="active">I&#039;m not C++ programmer then?</a></h3>
+ <div class="content"><p >I'm not C++ programmer then? i really cannot fathom a C#/Java programmer to take up D to replace either of those in their jobs.</p>
+<p >You still didn't get my point (but you proved it for me), i never said syntax never mattered or not either.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Sat, 06/24/2006 - 20:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-19085"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19085" class="active">More likely than Ocaml</a></h3>
+ <div class="content"><p >Once again, it's not about your personal dislike for D.  It's about D being a more likely alternative choice for someone coming from a C++ background than Ocaml.  That was why the OP brought up D and not other random statically typed, natively compiled language.</p></div>
+ <div class="links">By <a href="user/2246" title="View user profile.">Dave Lopez</a> at Sat, 06/24/2006 - 22:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-19089"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19089" class="active">I have to agree with Dave.</a></h3>
+ <div class="content"><p >I have to agree with Dave. O'Caml is nothing like C++.</p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Sun, 06/25/2006 - 00:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-19093"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19093" class="active">That was why the OP brought</a></h3>
+ <div class="content"><blockquote ><p >
+That was why the OP brought up D and not other random statically typed, natively compiled language.
+</p></blockquote>
+<p >Suggesting O'Caml as alternative to C++ isn't that random at all, despite the syntax.</p>
+<blockquote ><p >
+I have to agree with Dave. O'Caml is nothing like C++.
+</p></blockquote>
+<p >I never said it is well i never meant it, admittedly i did miss out (or it was added later) the statement about having a "simillar syntax" but i did not say it's like C++.</p>
+<p >I'm suggesting another alternative that just as with D, O'Caml has parametric polymorphism and you can compile O'Caml to native.</p>
+<p >My original point was just as how much my opinion maybe irrelevant is just much as how making suggestions to alternatives is being off topic here.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Sun, 06/25/2006 - 11:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-19091"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19091" class="active">Felix</a></h3>
+ <div class="content"><p ><a href="http://felix.sourceforge.net/">Felix</a> seems like a good middle ground.</p></div>
+ <div class="links">By <a href="user/3038" title="View user profile.">Steven Woodhouse</a> at Sun, 06/25/2006 - 09:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-19101"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19101" class="active">C++ doens&#039;t need GC -- it&#039;s got RAII</a></h3>
+ <div class="content"><p >That RAII hasn't been mentioned anywhere in this discussion is telling.</p>
+<p >If you are having problems with memory resources in C++, here's some advice: "DON'T PROGRAM C++ LIKE IT'S C -- IT'S NOT." Use smart pointers. Use the STL containers. Don't call new and delete outside of constructors and destructors.</p>
+<p >Hell, if you're writing C++ code that could be improved by garbage collection, it's almost certainly not even exception safe.</p></div>
+ <div class="links">By <a href="user/3123" title="View user profile.">thras</a> at Sun, 06/25/2006 - 18:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19103"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19103" class="active">Even RAII Doesn&#039;t Scale</a></h3>
+ <div class="content"><p >Let me refer you to Tim Sweeney's POPL '06 <a href="http://lambda-the-ultimate.org/node/1277">slides</a> where he discusses the Unreal 3 Technology. Pertinent observations include:</p>
+<ul >
+<li >Gears of War is about 250,000 lines of combined C++ and UnrealScript
+<li >The underlying Unreal 3 engine is about another 250,000 lines of C++
+<li >Gameplay simulations objects are "usually garbage collected"
+<li >"Garbage collection should be the only option" in "The Next Mainstream Programming Language"
+</ul>
+<p >Some more details about why Epic makes the engineering choices that they make can be found in Tim and Martin Sweitzer's GDC 2006 session, "Building a Flexible Game Engine: Abstraction, Indirection, and Orthogonality," the MP3 of which is available (cheap!) <a href="http://store.cmpgame.com/product.php?id=56&amp;cat=">here</a>. Highly recommended.</p>
+<p >The bottom line for very large C++ codebases seems to be that lifecycles become too complex to reason about effectively, and RAII therefore becomes too confining. It's interesting to note that the Unreal technology has always included real-time garbage collection, and the Unreal technology runs neck-and-neck in performance to similar technology that, AFAIK, does not rely on garbage collection, e.g. id Software's technology. It's also interesting to note that O'Caml, which in most domains achieves competitive performance with C/C++, also features extremely effective garbage collection.</p>
+<p >So I think garbage collection has, at long last, won enough battles, and what battles it hasn't won it seems that region inference will, and manual memory management is, at long last, on its way out. (Of course, in LtU-ish timeframes, "last legs" and "on its way out" should be interpreted liberally, say another 10-15 years.)</p>
+<p ><b >Update:</b> I'm wrong about Unreal <em >always</em> having had real-time GC, as <a href="http://lists.tunes.org/archives/gclist/1999-July/001632.html">this</a> blast-from-the-past mailing-list thread reveals. It's fascinating to read what Tim was thinking about in 1999!</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sun, 06/25/2006 - 19:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19106"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19106" class="active">Most people find that RAII scales fine</a></h3>
+ <div class="content"><p >That Sweeney thinks RAII could never have worked in a project that never had it is unconvincing.</p>
+<p >The best thing that can be said for garbage collection is that it's the ideal tool for 110-IQ programmers and half-baked designs. That's not denigration of GC. Much of the world runs on software programmed by 110-IQ programmers working from half-baked designs. GC is more forgiving to people who don't know the craft.</p>
+<p >On the other hand, well-designed projects from the 130+ IQ programmer crowd will always have their place (this statment is anathema to the productivity gurus, I know). So I'd be surprised if GC takes over, even given 15 years.</p></div>
+ <div class="links">By <a href="user/3123" title="View user profile.">thras</a> at Sun, 06/25/2006 - 20:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19107"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19107" class="active">Let&#039;s not a start a</a></h3>
+ <div class="content"><p >Let's not a start a "language for smart people" thread again (search the archive if you must). Let me just remark that since some of the classic examples of GC come from the most highbrow languages I, for one, wouldn't want to defend the claim GC is for 110 IQ programmers (I guess this refers to Wadler, Peyton Jones etc. ;-) </p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Sun, 06/25/2006 - 20:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19111"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19111" class="active">Forgiving to them</a></h3>
+ <div class="content"><p >The "is this language for smart people" question is the most overlooked element of language design. It probably needs more discussion. But another time and another place.</p>
+<p >To say a feature is forgiving to the bad programmer is very different from saying that a feature is only useful to the bad programmer. I was careful to only say the first. (On the other hand, I'd probably agree with the statement that GC is <i >most</i> useful to the bad programmer, and is less useful for someone who knows his craft.)</p></div>
+ <div class="links">By <a href="user/3123" title="View user profile.">thras</a> at Sun, 06/25/2006 - 20:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19112"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19112" class="active">LFSP</a></h3>
+ <div class="content"><p >If you are interested in this you should read our previous <a href="http://lambda-the-ultimate.org/classic/message4365.html">thread</a>. Search the archive if you want more...</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Sun, 06/25/2006 - 21:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19148"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19148" class="active">As a development manager...</a></h3>
+ <div class="content"><p ><i >On the other hand, I'd probably agree with the statement that GC is most useful to the bad programmer, and is less useful for someone who knows his craft.</i></p>
+<p >As a development manager, why exactly would I want my most skilled developers spending their time on workaday memory management issues, rather that building new features or high-quality infrastructure? </p></div>
+ <div class="links">By <a href="user/1503" title="View user profile.">Dave Griffith</a> at Mon, 06/26/2006 - 14:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19108"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19108" class="active">Either way, why should a</a></h3>
+ <div class="content"><p >Either way, why should a newly designed language not support automatic memory management? Why force manual management on the programmer when this is a solved problem? GC is perfectly good in the general case and when you want more control then regions/reaps allow this, while retaining safety.</p>
+<p >I personally do expect GC to have taken over within 15 years. What language won't be using it? Already, Java/C#/Haskell/Erlang/ML all use garbage collection. The notable exceptions are C and C++. I think it is unlikely C++ will remain dominant for applications programming. C will probably survive for low level software like operating systems, but even then there are languages like Cyclone that are well suited to this area and choose to replace manual management with regions.</p></div>
+ <div class="links">By <a href="user/3038" title="View user profile.">Steven Woodhouse</a> at Sun, 06/25/2006 - 20:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19110"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19110" class="active">If this discussion (which is</a></h3>
+ <div class="content"><p >If this discussion (which is kinda similar to the "I like D"/"I don't" subthread) is to continue how about pointing to specifics? While I am sure I know what you guys think are the arguments for your opposing positions I may be wrong, and you guys may also be arguing without knowing the real position of the other party to the debate. What are the disadvantages (please give specific data, perferably published) of GC? What are the counter arguments to that (you can point to the archives for links to relevant papers)? What are the advances in the field that might make GC relevant (ditto)? Why are these not enough?<p >
+If you have personal experiences worth sharing please do so, but hey - let's remember not to overgeneralize (see the policies doc for more ;-)</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Sun, 06/25/2006 - 20:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19124"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19124" class="active">experience and opinion</a></h3>
+ <div class="content"><p >Ehud Lamm: <i >If you have personal experiences worth sharing please do so,...</i></p>
+<p >Most of my gc experience is with (early) mark and sweep collectors and (later) copying collectors I wrote myself for Lisp and Smalltalk implementations, so I've little real world feedback on systems used by lots of people.  But around 2001 I noticed something about processor speeds that affected my gc plans.</p>
+<p >I was writing infrastructure to move bytes around in bulk, and I wanted some time statistics on moving blocks of memory in RAM, so I wrote tests to get crude numbers for back-of-the-envelope calculations on expected server behavior.  I was amazed to find I could move a megabyte from one place to another in one millisecond, or do something complex like crc32 in 6ms per megabyte.  (I'm sure things have only gotten faster since then.)</p>
+<p >Since most of the complaints I'd ever heard about gc (from the olden days) were about latency interfering with real time response, these numbers made me excited.  I realized I could easily copy collect a few megabytes in a few milliseconds, and thus have high responsiveness in collected systems. Provided I made sure I partitioned memory into small enough (ie several megabyte) disjoint partitions, I could ensure no particular gc event had latency more than a few milliseconds.</p>
+<p >So I thought increase of processor and memory speeds during the 90's had turned an improvement in quantity into an improvement in kind, since it was now feasible to implement imperceptible garbage collection, given some moderate discipline in memory partitioning. I wrote about this in my weblog back then, since I expected the affect of partitioning to be similar to generational garbage collection in terms of latency and memory footprint.</p>
+<p >Oh, that's the other old complaint about gc: a naive implementation might reserve too much free space to receive the result of a copy during collection.  Classical (1970) Cheney copy collection describes the use memory in two alternating hemispheres, implying latent waste of half of memory.  But if memory is divided into N disjoint partitions with no references between partitions, you need only enough free space to copy the largest partition under copy gc.  This decreases memory footprint for memory in use, and avoids some complexities in generational gc.</p>
+<p >Ehud Lamm: <i >What are the disadvantages (please give specific data, perferably published) of GC?</i></p>
+<p >Next I offer unpublished intuitive opinion that would be hard to falsify, and therefore suffers from lack of scientific rigor and lack of evidence.  But a game theorist might have a fun go with it.</p>
+<p >I'm only aware of a gc disadvantage -- for some styles of gc -- when used with manual memory allocation in the same address space as a collected model requiring pervasive exactness and correctness.  It would be easy for sloppy code in C and C++ to whack the gc runtime with a tiny memory corruption; so I'd expect gc to go down first like a canary in a coal mine.  A conservative collector like the Boehm collector in C++ wouldn't have this problem, since it errs in the other direction, of not collecting when in doubt.</p>
+<p >This is only a disadvantage to someone who really wants to mix randomly collect C++ libraries in the same address space as a gc engine that's very sensitive to corruption.  Too much C++ and C code has a higher tolerance for memory poisoning, having evolved in a memory poisoned environment.  This is a result you can derive from worse-is-better philosophy plus some game theory.</p>
+<p >I'd advise folks to make a gc address space immutable from the view of C code, however you arrange for this, if you don't want gc to bear the brunt of blame for failures caused by memory corruption.</p></div>
+ <div class="links">By <a href="user/2390" title="View user profile.">Rys David McCusker</a> at Sun, 06/25/2006 - 23:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-19127"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19127" class="active">Real-time GC</a></h3>
+ <div class="content"><blockquote ><p >
+Provided I made sure I partitioned memory into small enough (ie several megabyte) disjoint partitions, I could ensure no particular gc event had latency more than a few milliseconds.
+</p></blockquote>
+<p >That sounds about right.  Real-time GC systems like IBM's <a href="http://domino.research.ibm.com/comm/research_projects.nsf/pages/metronome.index.html">Metronome</a> (described further in <a href="http://www.embedded.com/showArticle.jhtml?articleID=170703019">this article</a>) claim "worst-case delays of 2 milliseconds".  I just mention that one because I saw it demoed - there are others out there.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Mon, 06/26/2006 - 01:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19115"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19115" class="active">RAINAP (not a panacea)</a></h3>
+ <div class="content"><p >Using RAII for memory management scales fine in the kind of projects which are suited to using RAII for memory management.  Not coincidentally, many of the kinds of projects that get developed in C++ are a very good fit for RAII.</p>
+<p >However, there are many memory allocation patterns for which RAII isn't well-suited.  For example, in cases where shared objects have a lifetime exceeding that of the variable which references them, using RAII typically means using something like reference-counted smart pointers.  This has performance implications, and also creates issues with reclaiming memory from cyclic structures.  These issues can be quite a show-stopper for many kinds of applications.  </p>
+<p >I've only touched on some of the issues.  For a more detailed explanation of some the other factors, including others which hinder scalability, see <a href="http://www.ipipan.gda.pl/~marek/objects/faq/oo-faq-S-3.12.html">Why is Garbage Collection A Good Thing</a>.  That should help in understanding why, in a system such as Unreal, it is highly unlikely that RAII alone would be a sufficient solution for memory management.  (And why garbage collection is used gratefully by those with high IQs, too...)</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Sun, 06/25/2006 - 21:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19159"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19159" class="active">My personal opinion</a></h3>
+ <div class="content"><p >I find that RAII often is sufficient for my needs when I program in C++ (which is rarely nowadays).  But one area where it falls flat on its face, and I strongly suspect that many others share this view, is with graph-like data structures (which incidentally is where reference counted pointers will fail too).  For example, writing the parser stage of a compiler is more or less straightforward, but it is extremely painful writing even the basic structure of the optimization passes with graphs of basic blocks.  In such a case, in C++, I'd be more inclined to use something like pool allocation.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Mon, 06/26/2006 - 19:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19160"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19160" class="active">A Good Point That Someone Else Made...</a></h3>
+ <div class="content"><p >... is that you can't use RAII when you're exposing an interpreter to your users, i.e. when your allocation/deallocation patterns are truly dynamic. This is precisely the case that Tim ran into with the Unreal technology: there are C++ and UnrealScript objects that are intrinsically coupled and with totally dynamic lifetimes. Consider that, from the Unreal console, you can "summon" an instance of any UnrealScript class, which by definition means a paired C++ class. RAII can't help you here.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Mon, 06/26/2006 - 20:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19118"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19118" class="active">Region Papers</a></h3>
+ <div class="content"><p >In the cases where GC might not be the best solution there is region-based memory mangement, as mentioned earlier.</p>
+<p >Papers on regions, reaps and region inference can be found <a href="http://www.it-c.dk/research/mlkit/index.php/Papers">here</a> at the MLKit website, and at the Cyclone site <a href="http://cyclone.thelanguage.org/wiki/Papers">here</a>.</p>
+<p >There is also a brief explanation and comparison to GC <a href="http://mlton.org/Regions">here</a>.</p></div>
+ <div class="links">By <a href="user/3038" title="View user profile.">Steven Woodhouse</a> at Sun, 06/25/2006 - 21:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19104"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19104" class="active">For those in the dark, read</a></h3>
+ <div class="content"><p >For those in the dark, read on <a href="http://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization">RAII </a> on WP.<p >
+Also relevant for this discussion is this <a href="http://lambda-the-ultimate.org/classic/message6936.html">paper</a> (by Boehm).</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Sun, 06/25/2006 - 19:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19139"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19139" class="active">RAII versus</a></h3>
+ <div class="content"><p >RAII works wonders in many applications. It's also predictable, which is good in latency sensitive contexts.<br >
+Now consider multithreaded programs, with lots of shared data. For shared objects you'd have to use a technique such as reference counting, and whose counter is protected by a mutex. Even if your code is exception safe.<br >
+That's lots of overhead every time you want to access the object.<br >
+Moreover, you risk getting hold and storing the raw pointer inadvertently.</p>
+<p >At this point the (performance+ease of development)/drawbacks ratio may tip towards the use of gc.</p>
+<p >This is one of the reasons Java is being increasingly used for long-lived server software.</p>
+<p >And by the way, using gc for shared objects need not preclude RAII.<br >
+Objects can still be allocated on the stack or as part of an enclosing structure (by value).<br >
+Operator delete can still perform its job and tell the GC an object is definitely out of scope.</p></div>
+ <div class="links">By <a href="user/3097" title="View user profile.">Serge Zloto</a> at Mon, 06/26/2006 - 13:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19145"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19145" class="active">Obviously your requirements</a></h3>
+ <div class="content"><p >Obviously your requirements differ from mine. Please read up a little on why RAII is no replacement on GC, there are many links around.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Mon, 06/26/2006 - 13:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19198"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19198" class="active">exception safety</a></h3>
+ <div class="content"><blockquote ><p >if you're writing C++ code that could be improved by garbage collection, it's almost certainly not even exception safe</p></blockquote>
+<p >Yep. Exception safety in C++ is hard, compared to most any other language out there. The principal reason is (drumroll) manual memory management: most exception-safety problems I've seen were memory leaks, a GC would've fixed them easily. Exception safety in Java is much less of an issue, because Java has GC.</p>
+<p >The root cause is deeper, I think. C++ relies heavily on mutation - there are always those pesky side effects to undo. In a language where immutable objects are the default, like Haskell or ML, the programmer almost never has to worry about "exception safety".</p></div>
+ <div class="links">By <a href="user/2277" title="View user profile.">Vladimir Slepnev</a> at Tue, 06/27/2006 - 20:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-19149"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19149" class="active">On the subject of current alternatives</a></h3>
+ <div class="content"><p >While we are or where on the subject of *current* alternatives to C++ (which have similar syntax to C/C++) i have chance to say something i've being meaning to say for a while but i haven't found the right opportunity to do it, so now seems like the perfect place.</p>
+<p >I think there are good reasons why all current alternatives to C++ (which have similar syntax to C/C++) will never take the majority of C++ programmers away.</p>
+<p >These alternatives either:</p>
+<p >(Over) emphasizes 1 or 2 (or maybe even 3) <strong >main</strong> features which fix problems C++ while typically removing other certain features without actually replacing them at all with better alternatives. At the same time they still have a (relatively) ad-hoc type systems just as with C++, no real formalism has been applied and don't offer a rich type system.</p>
+<p >Or</p>
+<p >They have formal (or semi formal) type system that again only emphasizes dealing 1/2/3 issues with C/C++.</p>
+<p >Either way they don't deal with all the other things that advance C++ programmers do with C++ and these rarely are to do with low-level programming (but often the case of efficiency).</p>
+<p >For instance D, i would say D falls into first category last time i checked out D doesn't have a preprocessor or it's a small subset of C/C++'s preprocessor (i can't remember exactly) and before anyone jumps down my throat just wait and read everything first, give me a chance.</p>
+<p >For the advance C++ programmer who knows how what there doing they will use the C++ preprocessor for macro metaprogramming with <a href="http://www.boost.org/libs/preprocessor/doc/index.html">boost.preprocessor</a> to aid them.</p>
+<p >I know what your about to say "but D supports template metaprogramming...." yes i know but what about repetitive boilerplate code of template metaprogramming? let me tell you when you do alot of template metaprogramming (typically with <a href="http://www.boost.org/libs/mpl/">boost MPL</a>) you can get a bucket load of repetitive boilerplate (meta)code.</p>
+<p >This brings up another thing, whether they realize it or not advance C++ programmers do <strong >a form</strong> of multi-staged programming, if we have alook:</p>
+<ol >
+<li ><a >boost.preprocessor</a> (top-level, level-1)</li>
+<li ><a href="http://www.boost.org/libs/mpl/">boost mpl</a> (level 2)</li>
+<li ><a href="http://spirit.sourceforge.net/dl_more/fusion_v2/libs/fusion/doc/html/index.html">boost.fusion (v2)</a> (level 3)</li>
+</ol>
+<p >As far as i'm aware there is no support for multi-staged programming in D, only support for template metaprogramming &amp; static assertions. </p>
+<p >Another important lacking feature of D (last time i checked) is no type deduction of template function arguments, this means a no no for anything like the C++ standard library containers &amp; algorithms or more importantly expression templates and the writing of domain specific embedded languages (DESLs) like in a C++ style or any method of writing DESLs in D (as far as i'm aware).</p>
+<p >For the majority of what advance C++ programmers do boils down to essentially 2 things:</p>
+<ul >
+<li >Try and get as much into the type system as possible and get checked and/or verified (well try to) at compile-time.</li>
+<li >Writing code to be as generalized as possible while applying (domain specific) optimizations for special cases at compile-time when the exact type is known such as what happens in modern implementations of C++ standard library algorithms.</li>
+</ul>
+<p >Clearly a C++ programmer wants a language with a very rich type system together with the ability to do metaprogramming in multiple-stages in there langauge and still being able to work close to the hardware model when necessary.</p>
+<p >Anyways getting back on track some of the current alternatives also force certain features without giving options, prime example being garbage collection, GC shouldn't be the only option there should be a variety of options like having regions aswell as GC.</p>
+<p >Unforutnately as of current there is no such alternative that has a similar syntax to C++.</p>
+<p >If you really want you to entice the majority of C++ programmers away and have a truely better alternative to C++ that fixes C++ we need to keep in mind as to what C++ programmers do in C++ aswell as fixing the issues with C++ with what we already know.</p>
+<p >So how do we fix C++ and give something that is truely better?</p>
+<p >I've mentioned earlier what advance C++ programmers do so we know the majority of the things they do in C++ so now we can focus on actually fixing C++.</p>
+<p >So what we need to do is start by "rollingback" C++, all the way back to a purely functional subset of C (lets do it with the C99 standard) just like with the <a href="http://www.sac-home.org/index.php?p=.">SAC programming language</a>, remove all suspicious and/or non-referentially transparent features and undefined behaviors that may be in the standard. Change the compiliation system, no more textual substituion, no more traditional (dumb) linkers, no more single-pass processing limitings.</p>
+<p >Now we have a very simple language reminiscent of simple typed lambda calculus and we all know the benefits of a purely functional language can give. It now becomes easy to define the behaviours of how language constructs that interact in the face of concurrency/paralliism, garabage collection etc, etc.</p>
+<p >Before that we should fix &amp; tighten the type system, make it more rich &amp; expressive change the type system into a dependently typed one. Adding pattern matching capabilities and local type inference. Add a real syntax macro system and support for multi-staged programming not just at compile-time. The macro system should be able to interact with the type system smoothly. These should allow for <a href="http://www.cs.nott.ac.uk/~nhn/TFP2006/Papers/30-BradyHammond-DependentlyTypedMetaProgramming.pdf2">dependently typed meta-programming</a>.</p>
+<p >From there add <strong >formal</strong> effects system to the the type system like uniqueness types (linear and dependant types) and linear regions, support GC aswell.</p>
+<p >Then on do what you want but keep it simple, apply it with formalism.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Mon, 06/26/2006 - 14:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19225"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19225" class="active">No comments or opinions then?</a></h3>
+ <div class="content"><p >No comments or opinions then?</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Wed, 06/28/2006 - 09:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19233"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19233" class="active">My Immediate Reaction...</a></h3>
+ <div class="content"><p >...is that what you're describing won't be similiar enough to C++ in any meaningful sense to get lots of converts. OTOH, from a conceptual standpoint, what you're describing sounds an awful lot like Tim Sweeney's design ideas to me, so I like them. The difference is that Tim can implement his design, include it in the Unreal 4 technology, and instantly have tens of thousands, if not hundreds of thousands, of people itching to learn it. Releasing a "successor" to C++ in the wild would be vastly harder.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Wed, 06/28/2006 - 13:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19236"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19236" class="active">Unreal Engine 4</a></h3>
+ <div class="content"><p >I'm designing a language which will look very similar to Ontic and have similar semantics to the ones Tim described in the old 'Python Metaclass Programming' thread.</p>
+<p >So Tim is still exploring these ideas too? If this is so I'm very pleased, especially if they end up in UnrealScript or in some other part of Unreal Engine 4. Can you (or Tim) elaborate?</p></div>
+ <div class="links">By <a href="user/3038" title="View user profile.">Steven Woodhouse</a> at Wed, 06/28/2006 - 14:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19267"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19267" class="active">I Certainly Can&#039;t!</a></h3>
+ <div class="content"><p >I (regretably) don't work for Tim. :-) Hopefully he will elaborate when he feels comfortable doing so.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Thu, 06/29/2006 - 04:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19246"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19246" class="active">...is that what you&#039;re</a></h3>
+ <div class="content"><blockquote ><p >
+...is that what you're describing won't be similiar enough to C++ in any meaningful sense to get lots of converts.
+</p></blockquote>
+<p >I've spoken to some C++ programmers about it and the general conscious is that they would be converts if such a language existed. The fact there isn't such language we cannot comment on whether or not such language would get alot of converts.</p>
+<blockquote ><p >
+OTOH, from a conceptual standpoint, what you're describing sounds an awful lot like Tim Sweeney's design ideas to me, so I like them.
+</p></blockquote>
+<p >It is similar but there some minor suggestions i don't completely agree with Tim's paper that isn't a problem. Also nothing was mentioned for support for meta &amp; multi-staged programming , one that works smoothly together with a dependently typed language like in the paper i linked to.</p>
+<blockquote ><p >
+ The difference is that Tim can implement his design, include it in the Unreal 4 technology, and instantly have tens of thousands, if not hundreds of thousands, of people itching to learn it. Releasing a "successor" to C++ in the wild would be vastly harder.
+</p></blockquote>
+<p >Well we can only hope. I wish there was more details on his reference implementation given than his paper.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Wed, 06/28/2006 - 16:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19238"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19238" class="active">I think pure fp with</a></h3>
+ <div class="content"><p >I think pure fp with referential integrity isn't ready for the masses yet. While referential integrity is a very nice property, it invalidates many well known programming patterns and makes some previously simple things much more complicated.</p>
+<p >And for a language which should be able to do low level programming it's especially problematic because most of those 'low level'  programing uses and creates side-effects and are thus dependent on execution order. While you can captures this with monads this would create another level of complexity which would prevent the success of such a language.</p>
+<p >A very strict static type system is also problematic. Most big systems require a least a bit of dynamism, so having a type system which is totally static can make certain things difficult or even impossible.</p></div>
+ <div class="links">By <a href="user/2480" title="View user profile.">Karsten Wagner</a> at Wed, 06/28/2006 - 14:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19250"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19250" class="active">I think pure fp with</a></h3>
+ <div class="content"><blockquote ><p >
+I think pure fp with referential integrity isn't ready for the masses yet. While referential integrity is a very nice property, it invalidates many well known programming patterns and makes some previously simple things much more complicated.
+</p></blockquote>
+<p >I think you mean referential <strong >transparency</strong>, expressions &amp; functions in a purely functional language <strong >are</strong> referentially transparent by nature it's not something that is added onto it. Anyways this is not what i meant, you've misunderstood me please read carefully to what i wrote.</p>
+<blockquote ><p >
+And for a language which should be able to do low level programming it's especially problematic because most of those 'low level' programing uses and creates side-effects and are thus dependent on execution order. While you can captures this with monads this would create another level of complexity which would prevent the success of such a language.
+</p></blockquote>
+<p >Again please read carefully, did i mention anything of monads? (despite the correspondence between monads &amp; effects in Wadler's paper).</p>
+<blockquote ><p >
+A very strict static type system is also problematic. Most big systems require a least a bit of dynamism, so having a type system which is totally static can make certain things difficult or even impossible.
+</p></blockquote>
+<p >Not unless you have rich type system which is what i suggested already and besides the point this is exactly the case with C++. I'm talking about providing suggestions on making a truely better alternative to C++ for what advance C++ programmers actually do with C++ aswell as what Tim mentions in his paper, i'm not inventing or suggesting arbitrary features of some new arbitrary language.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Wed, 06/28/2006 - 18:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19258"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19258" class="active">You wrote &quot;remove all</a></h3>
+ <div class="content"><p >You wrote "remove all suspicious and/or non-referentially transparent features". So I thought you want a language with referential transparency (I wrongly wrote 'integrity', because I've just read a paper about referential integrity in virtual machines and mixed it up. Sorry.)</p>
+<blockquote ><p >did i mention anything of monads?</p></blockquote>
+<p >No. But how do you want to create the necessary flexibility in a referentially transparent language without using monads? How do you ensure a certain execution order for execution order dependent hardware accesses or similar low level things?</p>
+<p >While it's probably possible (especially with the meta programming abilities you propose), I'm not sure if it's really that easy and more flexible then using monads.</p>
+<blockquote ><p >Not unless you have rich type system which is what i suggested already and besides the point this is exactly the case with C++. </p></blockquote>
+<p >Even rich static type systems remains static. How to you extend types depending on user interactions without recompilation? How do you handle dynamic linking? How do you easily integrate dynamic typed scripting languages? In C++ it's always possible to use reinterpret_cast for those cases. And while it isn't used very often (and then often well hidden into templates which do lots of checks) it's nonetheless sometimes necessary.</p>
+<p >While I think that the features you propose are usefull in more abstract high level language, for a C++ replacement you simply need features which enables unchecked access down to the 'metal'.</p>
+<p >C++ already has some very primitive kind of dependent types with the possibility to use values as template parameters (which is often 'misused' for template-meta-programming). </p>
+<p >And I think it remains questionable if it's really possible to do static array bound checking the way Tim mentions in his paper in real world applications because only one dynamically sized buffer in a inference chain would be enough to break it.</p></div>
+ <div class="links">By <a href="user/2480" title="View user profile.">Karsten Wagner</a> at Wed, 06/28/2006 - 19:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-19259"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19259" class="active">You don&#039;t have to use monads</a></h3>
+ <div class="content"><p >You don't have to use monads for impure computations. A few pure languages use uniqueness types instead. Another approach is using effects typing to annotate impure functions.</p></div>
+ <div class="links">By <a href="user/3038" title="View user profile.">Steven Woodhouse</a> at Wed, 06/28/2006 - 20:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19266"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19266" class="active">You should check into it again</a></h3>
+ <div class="content"><p >D has template type inference now.  </p>
+<p >It also has an auto type inference, which C++ does not have.  This saves some code typically employed by macros.</p>
+<p >We have DTL a container library, but often I just wrap the built in arrays/hashtrees with a class customized for the task at hand.</p>
+<p >It has the cleanest delegate syntax you are likely to see in a C++-esque language(see my other post).</p>
+<p >It has *static if* construct which is evaluated at compile time and can be type driven (along with the *is* operator).</p>
+<p >The scope operators also are nonexistent(?) in any imperative languages I'm familiar with.</p>
+<p >Walter has left the syntax open to Fortran like vector operation(not implemented yet).</p>
+<p >Instead of propping up C++, why not just try D?  If its missing so much power, why isn't everyone who is using it saying so?</p>
+<p >The biggest complaints are :<br >
+- lack of reference return types<br >
+- no static initializer for non static structs and arrays.</p>
+<p >On top of all of this, Walter frequents the newsgroup often and is very open to suggestions and answering questions.</p>
+<p >If D were to vanish I would not be able to go back to C++ now.</p>
+<p >-DavidM</p></div>
+ <div class="links">By <a href="user/3120" title="View user profile.">David Medlock</a> at Thu, 06/29/2006 - 03:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19273"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19273" class="active">Thanks but no thanks, i&#039;m not convinced</a></h3>
+ <div class="content"><p >I think you've missed the point of my post, which isn't about C++ VS D, i only used D as an example, it's the same with virtually all other current alternatives (with similar syntax).</p>
+<blockquote ><p >
+D has template type inference now.
+</p></blockquote>
+<p >I see there still is no support for implicit template instantiation which is a major issue despite the complexity it may add to the language. It looks as though you still cannot inherit from template type parameters in a class template and there is no bounded qauntification in D but C++ doesn't either however C++0x is geting first-class *Concepts* (which are similliar to haskell type classes but not quite).</p>
+<blockquote ><p >
+It also has an auto type inference, which C++ does not have.
+</p></blockquote>
+<p >C++ is getting local inference in C++0x, by change the semantics of the auto keyword.</p>
+<blockquote ><p >
+We have DTL a container library, but often I just wrap the built in arrays/hashtrees with a class customized for the task at hand.
+</p></blockquote>
+<p >It's nothing like or on par with the C++ standard library containers &amp; algorithms and never will unless support for implicit template instantiation is added. There is nothing like the iterator concepts &amp; generic algorithms either, yes there is some minor issues with the current model but now with past experinice and the help of boost iterators &amp; iterator concepts there going to get an overhaul. The C++ standard library &amp; boost libraries are only going to get better &amp; better as C++ evolves.</p>
+<blockquote ><p >
+It has the cleanest delegate syntax you are likely to see in a C++-esque language(see my other post).
+</p></blockquote>
+<p >Are you aware of what is on offer C++? std::tr1/boost::function, various generic signals &amp; slots libraries which subsumes delegates, DSELs for lambda expressions in C++ and C++0x most likely to gain lambda functions as part of core. This is only the start of it all.</p>
+<blockquote ><p >
+It has *static if* construct which is evaluated at compile time and can be type driven (along with the *is* operator).
+</p></blockquote>
+<p >Where do you think these ideas came from? this is already possible in C++, looking into std::tr1 type traits or boost type traits, boost mpl, static assertions, Concept checking library &amp; C++0x Concepts.</p>
+<blockquote ><p >
+Instead of propping up C++, why not just try D?
+</p></blockquote>
+<p >I'm not propping up C++, this is not about advertising C++ or C++ VS D. I'm (or we are) talking about how we should go about designing a new language which is <strong >truely</strong> a better alternative to C++.</p>
+<p >I've looked into D in the past, i've looked at it briefly today and as far as i'm concerned it's not a truely better alternative in <strong > all aspects</strong>.</p>
+<p >D is not what i have in mind, why reintroduce another ad-hoc type system &amp; templates?. Parametric polymorphism, ad-hoc polymorphism and metaprogramming should all be separate things (but operate together smoothly) not some intertwined monstrousity that is C++ &amp; D templates. </p>
+<blockquote ><p >
+If its missing so much power, why isn't everyone who is using it saying so?
+</p></blockquote>
+<p >Thats not what i'm saying and besides why is there only a small minority of D programmers? why haven't the C++ masses come rushing over to use D? well i (partly) answered the reasons in my previous post above.</p>
+<blockquote ><p >
+If D were to vanish I would not be able to go back to C++ now.
+</p></blockquote>
+<p >I'm not suggesting that, as said before this isn't about promoting C++ quite the opposite and this isn't about C++ VS D.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Thu, 06/29/2006 - 11:01 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-19165"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19165" class="active">Unreal Engine 3 garbage collection</a></h3>
+ <div class="content"><p >Since several folks asked:</p>
+<p >In Unreal Engine 3, we implement garbage collection for all "heavyweight" objects, those objects for which we maintain complete metadata, support orthogonal persistence, etc which are similar in functionality to instances of Java/C# "object" in their capabilities.  However, we also have "lightweight" allocations which we manage directly without garbage collection.</p>
+<p >Typically during gameplay, there are 40,000 heavyweight objects around, with extremely complex chains of references (including cyclic references) and ownership relationships, thus making garbage collection a huge win in productivity.  There are then hundreds of thousands of lightweight allocations whose ownership relationships are extremely simple and thus easily manageable explicitly.</p>
+<p >Overall I wouldn't endorse a proposal to add garbage-collection features to C++, since the language is sufficiently low-level that most applications will want to handle memory management quite uniquely.  Of course, I do see GC as perfectly appropriate for higher-level languages like Java and C#, which don't expose pointers-as-arrays, unchecked memory access, deal with low-level OS data structures, etc.</p>
+<p >It seems like 90% of the effort of implementing GC on top of C++ is in collecting proper metadata for everything.  Thus it would be useful for future C++ standards to address the problem of reflection very thoroughly, while leaving actual GC to the application.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 06/27/2006 - 00:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19168"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19168" class="active">Wilson and Johnstone Agree</a></h3>
+ <div class="content"><p ><a href="http://citeseer.ist.psu.edu/kakkad96portable.html">Portable Run-Time Type Description for Conventional Compilers</a> describes their system for extracting type information from the debugging data generated by C++ compilers, which they use for their real-time GC as well as their "Texas" persistent store. That's a tough way to get the metadata, but there it is!</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 06/27/2006 - 04:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19274"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19274" class="active">there is also reflex</a></h3>
+ <div class="content"><p >there is also <a href="http://seal-reflex.web.cern.ch/seal-reflex/">reflex</a> which offers a different approach to adding reflection to c++. it consists of a library component and a reflection data generator based on gcc-xml, which makes it non-intrusive and compiler-independent as well.</p></div>
+ <div class="links">By <a href="user/2535" title="View user profile.">peter steiner</a> at Thu, 06/29/2006 - 11:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19175"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19175" class="active">
+... It seems like 90% of</a></h3>
+ <div class="content"><blockquote ><p >
+... It seems like 90% of the effort of implementing GC on top of C++ is in collecting proper metadata for everything. Thus it would be useful for future C++ standards to address the problem of reflection very thoroughly, while leaving actual GC to the application.
+</p></blockquote>
+<p >There has been a C++0x proposal by Bjarne Stroustrup (i think), it's called XIT (e<strong >X</strong>tended type information) library. </p>
+<p >Whether this gets in or not nobody knows yet, proposals where only stopped being accepted late last year so the C++ standards committee are in the process of reviewing them all. We wont know until roughly 2007/8, when the C++0x draft spec is available.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Tue, 06/27/2006 - 10:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-19195"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19195" class="active">Tim Sweeney</a></h3>
+ <div class="content"><blockquote ><p >The best thing that can be said for garbage collection is that it's the ideal tool for 110-IQ programmers and half-baked designs.</p></blockquote>
+<p >You're essentially claiming that programmers with high IQs prefer to solve problems in difficult, unproductive ways.</p>
+<p >In large software projects with complex data relationships and multiple programmers, garbage collection yields very significant productivity gains compared to manual memory management.  A whole class of bugs (dangling pointers, memory leaks) and impediments to understanding (exactly who should free which object when) are eliminated.</p>
+<p >A practical, productivity-focused programmer -- of whatever IQ -- will welcome any areas where basic language features can improve productivity and software reliability.  And he will outperform higher-IQ programmers who stick with lower-productivity solutions.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 06/27/2006 - 19:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-19272"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1583#comment-19272" class="active">so to sum it up</a></h3>
+ <div class="content"><p >.NET *is* C++ with garbage collection.  Using D or a decent template library solves the problem as well.  So this petition is a great discussion starter, but cannot be taken literally.</p></div>
+ <div class="links">By <a href="user/3139" title="View user profile.">rp</a> at Thu, 06/29/2006 - 09:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

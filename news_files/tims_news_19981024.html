@@ -1,0 +1,46 @@
+<h4>Almost there...</h4>
+
+<p>The latest Direct3D support is now integrated into the Unreal codebase.&nbsp; It will
+be in the upcoming 218 patch in &quot;public beta&quot; form.&nbsp; It hasn't gone through
+wide testing yet, but we and our partners have been testing it a lot internally on Windows
+95 and 98.&nbsp; It's looking good on the next-generation 3D cards (Riva TNT, Matrox G200,
+Savage 3D), though high-level optimizations are planned that will boost performance
+further.</p>
+
+<p>The Voodoo2 multitexture code is in, thanks to the efforts of Jack Mathews at 3dfx.</p>
+
+<p>I'm doing some final Internet play testing and tweaking on the patch.&nbsp; My
+&quot;torture test&quot; environment is an ISP connection at 24.4K with 400 msec ping.
+&nbsp;&nbsp; If it's playable on that, it should be playable on anything. :) &nbsp;
+Yesterday's testing revealed a few last-minute problems that I'm working on now.</p>
+
+<h4>More discussion on CORBA</h4>
+
+<p><a href="mailto:sterren@iae.nl">William van der Sterren</a> provided this insight into
+CORBA with respect to realtime apps:</p>
+
+<blockquote><div>
+  <p>In general, CORBA causes too much overhead and latency to be a
+  server/clients gaming protocol. This is due to IIOP's (the default inter-ORB protocol) use
+  of TCP/IP, and the use of large packet sizes (compared to the dedicated bit-tuned gaming
+  protocols being used in,&nbsp; for example, Quake2 and Unreal). Though support for IIOP is
+  mandatory, an ORB vendor can deploy more efficient (or more secure) protocols between
+  'his' ORBs, optionally using other network protocols. By default, CORBA calls are
+  synchronous (that is, the calling object is blocked until a response is received from the
+  called object). Such a connection-oriented call is best implemented using TCP. </p>
+  <p>CORBA also supports so-called 'one-way' operations, that&nbsp; enable the caller to
+  continue processing immediately&nbsp; after making the call - the call is non-blocking.
+  Here, it might make sense to use UDP as an underlying protocol, provided you deal with the
+  unreliability at the application level (the 'call' might not arrive at the client). Some
+  specialized high-performance ORBs, such as Nortel's RCP-ORB,
+  &lt;http://www.nortel.com/RCP-ORB/&gt;, use other transport protocols than TCP for one-way
+  calls. Most ORBs implement optimized mechanisms for 'intra-server' and 'intra-process'
+  communication (not that relevant for multi-player gaming).</p>
+</div></blockquote>
+
+<p></p>
+
+<p>I'll post more thoughts on the topic in the future.&nbsp; With Unreal,
+distributed object models are already playing a role in multiplayer gaming, but only in a
+&quot;tip of the iceberg&quot; sort of way.&nbsp; This kind of technology will expand very
+interestingly in the future.</p>

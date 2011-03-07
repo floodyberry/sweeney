@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Generics: The Importance of Wildcards | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F735" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Generics: The Importance of Wildcards</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+Martin Bravenboer <a href="http://mbravenboer.blogspot.com/2005/04/generics-importance-of-wildcards.html">writes </a> about generic wildcards in Java, and concludes that it is unfortunate that C# will not support wildcards or a similar mechanism.<p>
+Eric Gunnerson from Microsoft <a href="http://blogs.msdn.com/ericgu/archive/2005/05/26/422247.aspx">replies</a>.<p>
+I was originally a type-erasure fan, but these days I am not so sure. I hope this turns into a fruitful discussion that helps me decide...<p>
+P.S<p>
+The Java paper was mentioned on LtU <a href="http://lambda-the-ultimate.org/classic/message12679.html">before</a>. </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 05/26/2005 - 20:05 | <a href="taxonomy/term/17">Software Engineering</a> | <a href="taxonomy/term/21">Type Theory</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/735" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 3161 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="735" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="735" />
+<a id="comment-6668"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6668" class="active">Hairy details</a></h3>
+ <div class="content"><p >While scanning Eric Gunnerson's blog<br >
+<br ><br ><br >
+<em ><br >
+The key difference between C# boxing and Java 5.0 boxing is that C# boxes between primitive types and object, and Java does it between primitive types and the predefined wrapper types. This allows them to do implicit conversions both directions (an Integer and an int are pretty close in behavior).<br >
+<br ><br >
+There are some issues on this that have to do with object identity. Consider the following:<br >
+<br ><br >
+<br ></p>
+<pre >
+Map m = new Map();
+m.add(3, foo);
+string s = m.at(3);
+</pre><p >
+What does the third line do? Well, it turns out that the two 3 values arent the same because they are autoboxed to different reference types. That behavior is a bit surprising.<br >
+<br ></p>
+<p >To improve the situation, theyve come up with an interesting modification, which I believe this is not part of the standard, but part of javac.<br >
+<br ></p>
+<p >They get around this and Im not making this up by playing tricks for small integer values, but not for large integer values. They did not give an exact description for how this behavior is controlled.<br >
+</em><br >
+<br ><br >
+<br ></p>
+<p >Brwtfltlft? My god, I am thinking.... 31 bits....?</p></div>
+ <div class="links">By <a href="user/1360" title="View user profile.">marco</a> at Thu, 05/26/2005 - 21:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-6678"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6678" class="active">Wow</a></h3>
+ <div class="content"><p >Wow, talk about the blind flaming the blind.  The problem with variance in both languages isn't type erasure versus runtime support, or wildcards versus pure generics.  Neither writer seems to even understand the problem.</p>
+<p >The problem is that both languages only expose mutable arrays.  If they exposed read-only arrays (similarly to lists in Haskell), those would be covariant in C# and Java; and if they exposed write-only arrays, those would be contravariant.</p>
+<p >But there is a solution that is more fundamental still: to separate arrays from mutable references entirely, so that arrays are always covariant.  Then the type of arrays of integers is a subtype of the type of arrays of numbers, and the true source of the invariance is exposed: it is the reference type constructor (like IoRef t in Haskell) that is invariant.</p>
+<p >Microsoft employs the greatest set of programming language researchers ever assembled; they should be able to do better than this.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 05/27/2005 - 02:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-6679"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6679" class="active">Maybe MS don&#039;t know that they do</a></h3>
+ <div class="content"><p >... but they have <a href="http://lambda-the-ultimate.org/classic/message11003.html">great taste</a> covered.</p></div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at Fri, 05/27/2005 - 02:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-6683"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6683" class="active">Orthogonal to type-erasure</a></h3>
+ <div class="content"><blockquote ><p >
+I was originally a type-erasure fan, but these days I am not so sure. I hope this turns into a fruitful discussion that helps me decide...<br >
+</BLOCKQUOTE></p>
+<p >Ignoring technical artefacts of the two platforms in question, is the adoption of wildcards really related to the choice for or against type erasure? Wildcards are just crippled existential quantification (with ad-hoc restrictions like "top-level" only "capturing" due to the desire of leaving quantifiers implicit). I see no fundamental reason why existential quantification couldn't be supported in a type passing framework like CLR.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Fri, 05/27/2005 - 09:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-6685"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6685" class="active">Type deducible from call stack...</a></h3>
+ <div class="content"><p >I am still going through the Java paper. Something I don't get [well, my life is like that ;-)]</p>
+<p >In the cited paper on page 6 they discuss functional language parametric polymorphism.</p>
+<p >This is what I understand from it for now:</p>
+<p >They discuss a list example, continue to discuss ML's value restriction, and then discuss that, because of the side effects of an impure language, there are not enough static guarantees such that an application of a polymorphic function will be type-safe (because in a functional language this information is derivable from the stack?).</p>
+<p >Que? This seems untrue to me. Should I read this as: we don't have enough enough information at JVM-class-load time to prove type consistency of the whole program? What is this stack stuff?</p></div>
+ <div class="links">By <a href="user/1360" title="View user profile.">marco</a> at Fri, 05/27/2005 - 11:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-6689"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6689" class="active">Maybe they meant function call graph.</a></h3>
+ <div class="content"><p >I agree...  The stack is a runtime thing and cannot be used for static analysis.  I think they might have meant function call graph, which is like a static description of all possible runtime stacks.</p></div>
+ <div class="links">By <a href="user/925" title="View user profile.">Kannan Goundan</a> at Fri, 05/27/2005 - 20:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-6701"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6701" class="active">Makes more sense</a></h3>
+ <div class="content"><p >That would make more sense, at least to me. But then, ?assignments? making type inference hard? They must have meant something else.</p>
+<p >[edit: snapped a comment everybody knows]</p></div>
+ <div class="links">By <a href="user/1360" title="View user profile.">marco</a> at Sat, 05/28/2005 - 14:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-6690"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6690" class="active">Mutablity?</a></h3>
+ <div class="content"><p >I also don't know what the exact type stuff has to do with mutability.  I thought the reason you can't statically determine the exact type of something in an OO language was subtyping:</p>
+<pre >
+f (x : Boolean) : Shape {
+   if (x)
+      then return new Square()
+      else return new Circle()
+}
+</pre><br ></div>
+ <div class="links">By <a href="user/925" title="View user profile.">Kannan Goundan</a> at Fri, 05/27/2005 - 20:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-6706"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6706" class="active">mutability (somewhat) leads to the value restriction</a></h3>
+ <div class="content"><p >The problem isn't in determining exact types; its in whether you can generalize an expression to have polymorphic type and retain a sound type system.</p>
+<p >Essentially, people came up with a rule (for inferring a polymorphic type) that worked when you didn't have mutation, but then when they added mutation, that rule was no longer sound.</p>
+<p >So Andrew Wright suggested the value restriction, which most ML implementations have adopted, I believe.</p>
+<p >http://citeseer.csail.mit.edu/wright93polymorphism.html</p>
+<p >(Other solutions were proposed in the research literature of that time, such as adopting an effect system to retain soundness.  But the value restriction is really quite understandable, and the remarkable thing is that most programs already conformed to it.)</p>
+<p >I didn't read the Java paper closely enough to know whether they were talking about this particular detail or not.  But this is one place where mutability come into play with type inference.</p></div>
+ <div class="links">By <a href="user/1095" title="View user profile.">pnkfelix</a> at Sat, 05/28/2005 - 15:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-6713"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6713" class="active">Ouch - generalization</a></h3>
+ <div class="content"><p >Ha! thanks for the reference, I noted and somewhat understood ocaml's odd behavior but didn't read the paper with design decisions. </p>
+<p >Still, it isn't about mutability, right? It seems it is the same question as: Can I stick \x -&gt; x + 1 into a list of type [a-&gt;a]? (That was the thing I edited away above)</p>
+<p >Dated 93, hmmm, I guess most people nowadays call this value restriction, well, a feature?</p></div>
+ <div class="links">By <a href="user/1360" title="View user profile.">marco</a> at Sat, 05/28/2005 - 19:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-6707"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/735#comment-6707" class="active">Hmpf</a></h3>
+ <div class="content"><p >Ah, now I get it. They were discussing exact typing vs subtyping in programming languages [wich also allow polymorphic types]. Seems to me that they got some stuff wrong in their reasoning though; as far as I know, you do have static guarantees in subtyped languages [even with polymorphism] and you don't need to carry around all type information [at run time]. Ah well, whatever.</p>
+<p >[edit: didn't get it, it's about generalization, see argument above by felix]</p></div>
+ <div class="links">By <a href="user/1360" title="View user profile.">marco</a> at Sat, 05/28/2005 - 15:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

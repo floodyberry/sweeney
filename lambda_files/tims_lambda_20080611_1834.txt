@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2846
+http://lambda-the-ultimate.org/node/2846#comment-42115
+1051422
+On the importance of Turing completeness
+Why Turing Completeness?
+<p>There's a practical argument as well.  It's usually much easier and more natural to express an algorithm using general recursion than primitive recursion or another sub-Turing language that guarantees termination.  A trivial example is the factorial function; you can write it using primitive recursion, but the excercise is a lot more intuitive with general recursion.
+</p><p>Most programming in languages guaranteed to terminate reduces to writing programs in a very convoluted way so as to prove that they terminate.  Turing-complete languages have no such burden, so you can just write your algorithm directly.</p>

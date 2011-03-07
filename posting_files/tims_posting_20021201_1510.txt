@@ -1,0 +1,18 @@
+http://groups.google.com/group/sci.math/browse_thread/thread/49c37a223d14d82/272c06d61a4472cc?lnk=st&rnum=49&hl=en#272c06d61a4472cc
+[sci.math] Extending GCD,MOD operations to rationals
+Hello,
+A common mathematical definition of the greatest common denominator GCD(a,b) expresses the function in terms of the prime factors of the arguments: GCD(2^a0*3^a1*5^a2*...,a^b0*3^b1*5^b2*...) is 2^min(a0,b0)*3^min(a1,b1)*5^min(a2,b2)*...  This definition extends easily to rational numbers, where the exponents of the prime factors may be negative.  So we have, for example, GCD(2/3,5)=1/3.
+
+The standard GCD algorithm on natural numbers (in C++ syntax) is:
+
+int gcd(int a,int b) {return a==0? abs(b): b==0? abs(a): gcd(b,a%b);}
+
+Where "a%b" means "the remainder obtained when dividing a by b".
+
+In an attempt to be clever, I've extended the remainder operation to rationals by defining (a/b)%(c/d) to be (ad%bc)/bd where a,b,c,d are integers.  This appears to extend the above GCD algorithm to rationals in the expected way.  Any comments on whether this is sound?
+
+Also, given possibly negative integers a,b, is there a standard convention on the sign of gcd(a,b)?  I'm assuming it should be positive (it's the *greatest* common denominator after all), but don't want to miss out on any potential generality that could be gained.
+
+Finally, is there an extension of the gcd operation to reals that brings some meaning to terms like gcd(e,pi)?  Obviously in this case one would have to reason with something besides prime factorizations.
+
+-Tim Sweeney 

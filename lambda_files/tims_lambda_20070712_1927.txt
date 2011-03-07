@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/2340
+http://lambda-the-ultimate.org/node/2340#comment-35030
+1050916
+Simply Easy! (An Implementation of a Dependently Typed Lambda Calculus)
+Type erasure requires totality
+<p>You've made a very important point here: type erasure requires totality.  Any dependent-typed expression that may diverge must be fully evaluted at runtime, otherwise the type system is unsound.
+</p><p>If the language is ambivalent about partiality, this means dependent types carry a significant runtime cost.
+</p><p>The answer is that dependent-typed, performance-critical languages need to have some sort of effects-typing system so that the runtime can erase types whose computation is conservatively known to be total.  In the general case, it won't be able to ascertain that, but in the typical cases of simple dependent types (e.g. the Haskell-like subset), it's pretty straightforward.</p>

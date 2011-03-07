@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2231
+http://lambda-the-ultimate.org/node/2231#comment-31138
+1050807
+The expression problem, Scandinavian style
+Excellent
+<p>This is a refreshingly excellent paper!  The solution is very intuitive, the exposition is very clear, up there with SPJ's work.  I wish papers more were written like this: Here's the problem, here's an example of code that solves the problem using intuitive language constructs, and finally some discussion on theory.  Too often, it's: Here's the problem, here are fifty pages of derivations, and finally a vague outline of how this might be applied in the real world.
+</p><p>The key detail here is that to compose a data structure extension with an operation extension, you need to create a third extension that defines the new operation for the new datatype.  This way, the compiler can always verify that your program is sound is free of any data structures lacking operations, without any of that multimethod voodoo of determining which overload is the "best" match according to some obscure rules.</p>

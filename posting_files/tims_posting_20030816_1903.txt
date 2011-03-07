@@ -1,0 +1,33 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/4d35a446c24c8de3/eb3f6a34d4e1776c?lnk=st&rnum=26&hl=en#eb3f6a34d4e1776c
+[comp.lang.functional] Terminology: sgn, abs, normal, magnitude
+On real numbers, the "abs" and "sgn" are commonly defined as:
+
+[code]
+abs(x) = x if x>0, 0 if x=0, -1 if x<0
+sgn(x) = 1 if x>0, 0 if x=0, -1 if x<0
+[/code]
+
+In many kinds of vector space (in this case, a 3d vector space), the "magnitude" and "normalize" operations are commonly defined as:
+
+[code]
+magnitude(v) = v.x^2 + v.y^2 + v.z^2
+normalize(v) = v / (v.x^2 + v.y^2 + v.z^2) if v<>0, 0 otherwise
+[/code]
+
+These operations obey the identities:
+
+[code]
+abs(x) = x*sgn(x)
+sgn(x) = lim(y->x) y/abs(y)
+
+magnitude(v) = v*normalize(v) (where * is the inner product operation)
+normalize(v) = lim(w->v) w/magnitude(w)
+[/code]
+
+So, from a certain point of view these two sets of operations represent the same notion: "absolute value" and "magnitude" represent the directionless size of a number or vector, while "sign" and "normalize" represent the sizeless direction of a number or vector.
+
+QUESTION: Is there a name for or formalization of this generalized notion of "size" and "direction"?  And exactly what is the minimal set of spaces upon which these operations are generally defined?
+
+From my informal Google search on this topic, it sounds like the "normed vector spaces" (http://mathworld.wolfram.com/NormedSpace.html) are what I'm looking for.  If this is the answer, then would it be considered kosher to view the real numbers as a normed vector space (over the real numbers themselves), where the norm is simply the absolute value?
+
+The context of the question is this: I'm writing a computer math library, and am looking for the appropriate set of types over which the sgn/abs/magnitude/normalize functions can be defined generally, and am looking for an abstraction and nomenclature which will offend the fewest people possible. 

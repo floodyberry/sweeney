@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Pure, Declarative, and Constructive Arithmetic Relations | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2697" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Pure, Declarative, and Constructive Arithmetic Relations</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<small><a href="http://okmij.org/ftp/Prolog/Arithm/arithm.pdf">Pure, Declarative, and Constructive Arithmetic Relations</a>. Oleg Kiselyov, William E. Byrd, Daniel P. Friedman, and Chung-chieh Shan. FLOPS 2008. <a href="http://okmij.org/ftp/Prolog/Arithm/">(source code)</a></small><p>
+<blockquote>
+We present decidable logic programs for addition, multiplication, division with remainder, exponentiation, and logarithm with remainder over the unbounded domain of natural numbers. Our predicates represent relations without mode restrictions or annotations. They are fully decidable under the common, DFS-like, SLD resolution strategy
+of Prolog or under an interleaving refinement of DFS...<p>
+[The] attempts to define decidable multiplication even for the seemingly trivial unary case show the difficulties that become more pronounced as we move to binary arithmetic. We rely on a finite representation of infinite domains, precise instantiatedness analysis, and reasoning about SLD using search trees.
+</blockquote><p>
+So you've read <a href="http://lambda-the-ultimate.org/node/1104">The Reasoned Schemer</a> and were excited about the fact that unlike the built-in operations in Prolog, arithmetic relations (over binary numbers) were fully implemented. For example, addition could also be used for subtraction and multiplication for factoring numbers and for generating all triples of numbers related by multiplication. Now comes this paper to explain the motivation behind some of the more arcane definitions needed to implement arithmetic in a fully relational style,  and to prove their properties formally. The paper develops unary and binary arithmetic relations in pure Prolog (with no cuts, negation or introspection).<p>
+LtU readers will also be interested in <a href="http://okmij.org/ftp/Prolog/Arithm/DefinitionTree.hs
+">yet another embedding of pure Prolog into Haskell</a>, that the authors offer. It is not meant to be the most optimal or convenient Prolog implementation (it wasn't even intended to be an implementation of a logic
+system). It was explicitly designed to be easier to reason about and so help prove certain properties of SLD or similar evaluation strategies. The main difference of DefinitionTree from other embeddings of Prolog in Haskell has to do with the generation of fresh names for logic variables. In DefinitionTree, name generation is <strong>not</strong> an effect, and the naming is fully decoupled from the evaluation. The evaluation no longer needs to carry a state for the generation of fresh names, hence the evaluator is easier to reason
+about equationally.
+ </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 2008-02-27 05:11 | <a href="taxonomy/term/13">Logic/Declarative</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2697" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2928 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2697" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2697" />
+<a id="comment-40412"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40412" class="active">Backtracking arithmetic in Prolog</a></h3>
+ <div class="content"><p >The following three predicates are found in many dialects of Prolog:</p>
+<ul >
+<li >between/3: (+,+,?) succeeds if the third value is between the first two, provided the second is greater than the first two;
+<li >succ/2: (?,?) succeeds if the second value is the successor of the first; can trivially be defined in terms of add/sum;
+<li >plus/3: (?,?,?); exactly equivalent to add/3 in the paper.
+</ul>
+<p >(For those not familiar with Prolog's arity notation, something like (+,?,?) means that a 3-place predicate can generate answers to values provided in any of the places marked "?"; the predicate will neither succeed nor fail if a logic variable is passed to a position marked "+").</p>
+<p >These are very useful predicates in Prolog, and though they are easy enough to define in standard Prolog, their absence from the standard counts as something of a defect.</p>
+<p >The predicates other than add/3 defined in the paper do not seem to be so useful, but the implementation is clean, it's always nice to see code justified by correctness arguments, and I enjoyed looking over the code.  I'm at a bit of a loss to see the point of the paper, though: what makes this count as a scientific communication?   Does it lie in the fact that their code works for several different resolution strategies?  Are they trying to promote a certain resolution-strategy-insensitive coding style?  I don't get it.</p></div>
+ <div class="links">By <a href="user/918" title="View user profile.">Charles Stewart</a> at Wed, 2008-02-27 11:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-40420"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40420" class="active">Mode-oblivious arithmetic</a></h3>
+ <div class="content"><p >I don't think plus/3 (as found in, say, SWI Prolog) is our add/3:</p>
+<pre >
+?- plus(A,B,C).
+ERROR: plus/3: Arguments are not sufficiently instantiated
+?- plus(A,B,5).
+ERROR: plus/3: Arguments are not sufficiently instantiated
+?- plus(5,A,B).
+ERROR: plus/3: Arguments are not sufficiently instantiated
+</pre><p >A broader point that we want to make in this paper is that arithmetic need not be treated specially in a logic programming system and may not necessitate the definition of a predicate to care about the modes of its arguments.  This point addresses an instance of the question, why extend logic programming to constraint programming?</p></div>
+ <div class="links">By <a href="user/555" title="View user profile.">Chung-chieh Shan</a> at Wed, 2008-02-27 16:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-40432"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40432" class="active">Good answers, thanks.
+The</a></h3>
+ <div class="content"><p >Good answers, thanks.</p>
+<p ><a href="http://www.math.nagoya-u.ac.jp/~garrigue/FLOPS2008/accepted.html">The FLOPS 08 programme</a> looks very interesting &amp; has a strong PC.  I should think whichever of the authors delivers the paper will have an interesting reception.</p></div>
+ <div class="links">By <a href="user/918" title="View user profile.">Charles Stewart</a> at Wed, 2008-02-27 20:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-40434"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40434" class="active">In your paper, you write:</a></h3>
+ <div class="content"><p >In your paper, you write: "Unfortunately, this flexibility has a price: CLP restricts the arithmetic domain to be finite...", but this is not the case. For example, check out library(clpfd) in SWI-Prolog:</p>
+<p ><code ><br >
+:- use_module(library(clpfd)).<br >
+?- A + B #= C.<br >
+A = _G1441{inf..sup},<br >
+B = _G1442{inf..sup},<br >
+C = _G1445{inf..sup}.<br >
+?- A + B #= 5.<br >
+A = _G1751{inf..sup},<br >
+B = _G1752{inf..sup}.<br >
+?- 5 + A #= B.<br >
+A = _G1752{inf..sup},<br >
+B = _G1755{inf..sup}.<br >
+</code></p>
+<p >The atoms "inf" and "sup" denote negative and positive infinity, respectively. Compile SWI Prolog with GMP to see that you can reason over arbitrarily large integers with library(clpfd). For example:</p>
+<p ><code ><br >
+?- 5 + X #= 7^7^7, X #&lt; 10.<br >
+fail.<br >
+</code></p></div>
+ <div class="links">By <a href="user/3743" title="View user profile.">mat</a> at Wed, 2008-02-27 21:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-40467"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40467" class="active">Furthermore</a></h3>
+ <div class="content"><p >In addition to Mat's comments, the example that he gives terminates in CLP. Using the add predicate in the paper in the same way fails to terminate (as explained in one of the propositions) :</p>
+<p >add(X,Y,Z), Z=[u,u].</p>
+<p >On having a read through the paper this approach appears to be much less powerful than it first appears because it rules out any variable sharing, and only considers single instances of arithmetic operations rather than conjunctions. </p>
+<p >So it would be impossible to do something like:</p>
+<p >add(X,[u],X]).    % Impossible but doesn't terminate<br >
+add(X, Y, Z), add(X2, Y2, Z).     % Can't enumerate X+Y=X2+Y2</p>
+<p >So you have to be very specific about what you mean by arithmetic to claim that it can do the same as CLP in a pure subset of Prolog. It is much more limited than CLP over <b >programs</b> of arithmetic operations, rather than just single operations. And even over single operations I think the X+1=X would fail finitely in CLP (I haven't got a clp library installed here to check this right now so please correct me if I'm wrong)... </p>
+<p >The mention of using the multiplication predicate to factor is vaguely reminiscent of Torben Mogensen's "Semi-Inversion of Guarded Equations" which was capable of transforming between a multiplication predicate written in a specific way and a automatically generated division predicate.</p></div>
+ <div class="links">By <a href="user/2942" title="View user profile.">Andrew Moss</a> at Fri, 2008-02-29 04:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-40427"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40427" class="active">Correspondence to known sets of axioms for the natural numbers?</a></h3>
+ <div class="content"><p >Is this a new axiomatization of the natural numbers? Or does it correspond to other (decidable) axiomatizations of the numbers? Is it more powerful as e.g. Presburger arithmetic?</p></div>
+ <div class="links">By <a href="user/5402" title="View user profile.">heckenpenner</a> at Wed, 2008-02-27 19:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-40428"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40428" class="active">Did you look at HOL-Light, Isabelle, or ACL2?</a></h3>
+ <div class="content"><p >Did you look at the implementation of arithmetic in the logics of the HOL-Light, Isabelle, or ACL2 theorem provers?  I doubt that any satisfy all of your goal properties, but I suspect that each of them may satisfy more than you'd guess.</p></div>
+ <div class="links">By <a href="user/3618" title="View user profile.">Tim Leonard</a> at Wed, 2008-02-27 20:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-40468"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40468" class="active">Stress on purity</a></h3>
+ <div class="content"><p >To answer several questions, I'd like to point our two premises of the<br >
+paper. It is easy to write all-mode arithmetic relations in general:<br >
+by using var/1, we determine which of the arguments are instantiated,<br >
+and so use addition, or subtraction, or generation as appropriate. In<br >
+the latter case, we may chose to propagate the addition constraint or<br >
+to residualize: suspend the evaluation of the addition making it a<br >
+constraint, to be re-evaluated when variables become sufficiently<br >
+instantiated. Mercury, for example, allows us to write different<br >
+clauses for different modes of a predicate. There is a good reason why<br >
+such a predicate must be marked unsafe in Mercury, and why the<br >
+frequent use of var/1 is discouraged. In our paper, we specifically<br >
+disavowed any use of var/1, negation or other such (reflective)<br >
+facilities. We deliberately limited ourselves to Horn clauses, and<br >
+nothing else.</p>
+<p >There is no doubt that theorem provers or constraint solving libraries<br >
+offer very sophisticated procedures for solving arithmetic<br >
+constraints. In any such procedures, to my knowledge, we must know<br >
+where all our variables are. But in our paper, we specifically do not.<br >
+We have no idea which arguments of our goals are or contain variables,<br >
+and we cannot tell. We disclaim any and all intensional analysis. Not<br >
+that there is anything wrong with it; we merely wanted to see how much<br >
+we can do without.</p>
+<p >Our use of SLD resolution and its simple variants -- as widely<br >
+implemented and quite efficient -- was another self-imposed<br >
+restriction. One may quite rightfully say that we deliberately painted<br >
+ourselves into the corner. On the other hand, purity and minimalism,<br >
+however difficult to live with, often offer deep and general insights.</p>
+<p >As to the relation to Presburger arithmetic: the latter can decide<br >
+arbitrary formulas within its domain. We can fully decide only base<br >
+predicates -- addition, multiplication, etc. -- but <em >not</em> their<br >
+conjunctions, or conjunctions with equality. Conjunctions of the<br >
+base predicates let us express arbitrary Diofantine equations, which<br >
+are not generally decidable.</p>
+<p >Finally, the goal of this project was not to be useful but to be<br >
+insightful (although, quite surprisingly to us, a similar development<br >
+for Curry proved to be practically useful and has become part of a<br >
+Haskell Curry implementation).</p></div>
+ <div class="links">By <a href="user/114" title="View user profile.">Oleg</a> at Fri, 2008-02-29 05:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-40469"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40469" class="active">Purity and Presburger</a></h3>
+ <div class="content"><p >Excellent answer to the question of motivation: I now see properly where the paper is coming from.</p>
+<p ><i >As to the relation to Presburger arithmetic: the latter can decide<br >
+arbitrary formulas within its domain. We can fully decide only base<br >
+predicates -- addition, multiplication, etc. -- ...</i>  This is true, but perhaps risks misleading those not familiar with the logical theory underlying resolution based languages.  So here follows a quick tour that might help with heckenpenner's question...</p>
+<p >Theories like Peano arithmetic (PA) and Presburger arithmetic (Pres) are theories of first-order logic, and so have a deceptively sophisticated language of quanitifiers, whilst Prolog does not.  PA sits in a nice place: it is strong enough to talk about all operations of arithmetic; it's limitation lies in that it cannot prove the totality of all actually total functions.  Pres is much weaker: it has no idea of the existence of multiplication, let alone higher functions.</p>
+<p >Prolog can be seen as weaker in some respect than theories such as Pres in that it has no first-class quantifiers, but there is some metamathematical wizardry in the shape of skolemisation which tells us how to formulate semi-decision procedures for all formulae of first-order logic (FOL) &amp; likewise of theories in FOL whose axioms we can translate into Horn clauses (with additional techniques, all first-order theories can be so translated).  The indirect nature of this connection makes informal equivalences problematical to state (in the sense that they will fail to fix crucial details and so will tend to mislead), and I'm sorry to say I don't know of a good expository overview of the theory.   </p></div>
+ <div class="links">By <a href="user/918" title="View user profile.">Charles Stewart</a> at Fri, 2008-02-29 10:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-40470"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40470" class="active">Further Analysis</a></h3>
+ <div class="content"><p >Very interesting and insightful response to the questions and comments so far. It certainly clears up the motivation for the paper a lot more. Although what you've done so far is interesting research, I'm intrigued by your description of seeing "how far you can go" in horn clauses. </p>
+<p >Possibly an open question, but given my examples above do you think it would be possible to handle them by relaxing your stress on purity, but without introducing contraints through deferring evaluation? In particular, if you allow negation-as-failure could you rule out (with finite failure) clauses of the form add(X,[u],X)? Obviously you could rule out such a single instance of an infinite set of tuples that are not in the add relation, but what is your opinion on how far you could go in ruling out families of invalid tuples? Ie Can pure prolog + negation-as-failure model addition exactly? If it can, then is \+ a sledge-hammer in this case, or is the minimum needed to model this relation?</p></div>
+ <div class="links">By <a href="user/2942" title="View user profile.">Andrew Moss</a> at Fri, 2008-02-29 11:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-40512"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40512" class="active">Retreating from pure Horn clauses</a></h3>
+ <div class="content"><p >That's the big question.  It appears unlikely that pure Horn clauses will lead to something comparable in expressive power to Constraint Logic Programming.  So, we need more power.  But can we still avoid introspection (var/1) and unsoundness (Mercury modes)?   Options include negation, cut, or moving to a more powerful base language with quantifiers and/or lambdas.</p>
+<p >Also, what subset of problems would a more complete solution have, given the undecidability of the general case?</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 2008-03-04 20:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-40518"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40518" class="active">How far along we can push the extensional approach</a></h3>
+ <div class="content"><p >http://lambda-the-ultimate.org/node/2697#comment-40470<br >
+http://lambda-the-ultimate.org/node/2697#comment-40512</p>
+<p >This is indeed a very good question. Negation-as-failure of course<br >
+helps -- but it helps <em >too much</em>, because Prolog's built-in negation<br >
+predicate immediately gives us var/1 (spelled as vr/1 below),<br >
+using the well-known trick:</p>
+<pre >
+vr(X) :- \+ \+ (X=1), \+ \+ (X=2).
+</pre><p >
+When arithmetic predicates are invoked with arguments that share logic<br >
+variables, we rather sooner, in my experience, come across a recursive<br >
+invocation of a goal whose arguments differ only in the names of free<br >
+variables from the arguments of the original invocation. That<br >
+indicates that tabling will give us finite failure in this case. I<br >
+don't know if tabling will give us finite failure in all the cases<br >
+where sharing of variables across arguments would have lead to<br >
+divergence. But is seems quite likely. Tabling and the XSB system thus<br >
+appear the most promising extension to look at.</p>
+<p >Of course checking how much more can be implemented in lambda-Prolog<br >
+(where we do have quantifiers and more general formulas), and whose<br >
+variable-scoping mechanism offers a general way to prevent unsoundness<br >
+often occurring in negation (that is, when the negated formula binds<br >
+variables that were accessible outside negation). Alas, lambda-Prolog<br >
+doesn't seem to be <em >actively</em> developed, although the web page<br >
+<a href="http://teyjus.cs.umn.edu/">http://teyjus.cs.umn.edu/</a> does<br >
+show a quite recent release, after a 2-year hiatus. Hopefully the<br >
+development will continue.</p></div>
+ <div class="links">By <a href="user/114" title="View user profile.">Oleg</a> at Wed, 2008-03-05 07:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-40521"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2697#comment-40521" class="active">Is logic programming macro-expressible?</a></h3>
+ <div class="content"><p >I haven't (yet) read The Reasoned Schemer, which extends Scheme with logical constructs, or looked at the logic programming monads for Haskell. Do these libraries fully macro-express logic programming features in these languages, or do they only simulate them?</p>
+<p >For example, Scheme can macro-express coroutines in terms of call/cc, so they don't have to be included as a language primitive. On the other hand, Haskell cannot macro-express call/cc, only simulate it locally using the CPS monad. Adding coroutines as primitives to Scheme would not increase expressiveness, but adding true first-class continuations to Haskell would increase expressiveness.</p>
+<p >To gain the full expressiveness of logic programming in a functional language do you have to add primitives - as Mercury and Curry do - or do libraries suffice?</p></div>
+ <div class="links">By <a href="user/3038" title="View user profile.">Steven Woodhouse</a> at Wed, 2008-03-05 14:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="
+http://wiki.squeak.org/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2008/02/08" title="Previous month">«</a> March 2008  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2008/3/1" title="1 post">1</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/3/2" title="1 post">2</a></td>
+  <td class="day-link"><a href="archive/2008/3/3" title="2 posts">3</a></td>
+  <td class="day-normal">4</td>
+  <td class="day-link"><a href="archive/2008/3/5" title="1 post">5</a></td>
+  <td class="day-link"><a href="archive/2008/3/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2008/3/7" title="1 post">7</a></td>
+  <td class="day-today">8</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">9</td>
+  <td class="day-future">10</td>
+  <td class="day-future">11</td>
+  <td class="day-future">12</td>
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+  <td class="day-future">15</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2706" title="48 comments">Confused Deputies in Programming Languages</a></li><li><a href="node/2710" title="4 comments">Excel as a different programming paradigm</a></li><li><a href="node/2699" title="28 comments">Is null needed?</a></li><li><a href="node/2698" title="5 comments">A Question about Overlap</a></li><li><a href="node/1439" title="182 comments">What do you believe about Programming Languages (that you can&#039;t prove (yet))?</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2710" title="4 comments">Excel as a different programming paradigm</a></li><li><a href="node/2707" title="2 comments">Type-safe solution to the expression problem in C#?</a></li><li><a href="node/2706" title="48 comments">Confused Deputies in Programming Languages</a></li><li><a href="node/2704" title="8 comments">Bell-LaPadula and type safety</a></li><li><a href="node/2703" title="4 comments">Structural recursion on sets</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

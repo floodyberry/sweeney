@@ -1,0 +1,122 @@
+<h4>DirectX7</h4>
+
+<p>Microsoft has released DirectX7.&nbsp; You can read about it and download it from <a
+href="http://www.microsoft.com/DirectX">Microsoft's DirectX Page</a> and
+download it on their <a
+href="http://www.microsoft.com/directx/homeuser/downloads/default.asp">Download
+Page</a>.</p>
+
+<p>Now that DirectX7 is available, we're doing final testing and tweaking on the upcoming
+Unreal Tournament demo with Direct3D and OpenGL support, coming in the next few days.</p>
+
+<p>One thing we've found on DirectX7 is that NVidia TNT2 performance is not fill-rate
+limited until you get to very high resolutions.&nbsp; During testing, performance at
+640x480 seemed a bit slow, but as we increased the resolution, the frame rate was hardly
+impacted at all.&nbsp; So 1024x768 seems to yield the best overall experience on this
+card.</p>
+
+<p>I've enabled support for 32-bit color textures under Direct3D, which significantly
+improve the graphical quality, with a 10-15% frame rate impact.</p>
+
+<p>The Direct3D code now uses vertex buffers, which speeds up mesh and text drawing a bit.</p>
+
+<h4>What about OpenGL?</h4>
+
+<p>We're still maintaining OpenGL sypport, though it's not as much of a priority at the
+moment because texture management performance in GL on Windows is significantly behind
+Direct3D.&nbsp; It's still useful in NT4 and Linux of course.&nbsp; I've been advocating a
+GL extension which would enable the fine-grained control over texture management that has
+led to such an improvement in Unreal performance under Direct3D.&nbsp; Here is a
+suggestion I sent to the OpenGL ARB.</p>
+
+<blockquote><div>
+  <p>I've been maintaining the Unreal / Unreal Tournament
+  rendering code under both Direct3D and OpenGL simultaneously for a while. They used to
+  have approximately equal performance back when I was using Direct3D's &quot;driver-managed
+  textures&quot; (similar to the one and only OpenGL option for texture management, which is
+  transparent to the application). Unfortunately, the performance wasn't very good, and the
+  memory usage was nuts because our game uses a huge amount of textures, and the automatic
+  texture management in Direct3D and OpenGL had to keep duplicate copies around as
+  &quot;backing store&quot; to the copies in video memory.</p>
+  
+  <p>However, I recently rewrote my Direct3D code to
+  manage textures explicitly. I create a limited number of textures of all possible sizes,
+  forced to be in video memory, and then at runtime swap my actual game textures into those
+  &quot;video memory textures&quot;. This way, I have complete control over texture
+  management, and can make optimal decisions about where to put textures, based on the
+  constraints of my app, such as:</p>
+  
+  <ul>
+    <li>Texture usage patterns.</li>
+
+    <li>Decompressing textures at glTexImage2D time using my
+      own internal formats.</li>
+    <li>Having a background thread load them off disk
+      speculatively and stick them in video memory when needed.\</li>
+    <li>Other nonlinear, possibly time-variant priority
+      factors.</li>
+  </ul>
+  
+  <p>When I replaced D3D's default texture manager with my
+  own code, Unreal's performance and memory usage under Direct3D improved very
+  significantly, to the point where it's not worth bothering playing the game in OpenGL
+  anymore.</p>
+  
+  <p>So, my question is, does anybody have plans to add an
+  &quot;extended version of glBindTexture&quot; which lets the application tell the OpenGL
+  driver, &quot;allocate this texture in video memory, keep it there, and never swap it
+  out&quot;? If an option like this existed, I could do the same kind of high-level
+  optimizations as I did in Direct3D, and probably get a comparable increase in performance.
+  Obviously, video memory is a limited resource, so at some point those glBindTextures will
+  fail if video memory fills up, and have to return an error code.</p>
+
+  <p>This is a bit lower-level than GL's existing
+  glBindTexture mechanism, but I think it's justified by the need to support apps which use
+  huge quantities of textures and have to manage them carefully in order to maintain
+  realtime frame rates.</p>
+  
+  <p>For example:</p>
+  <p>If the GL_EXT_BIND_TEXTURE_2D_VIDEOMEMORY string is exposed, then you can replace a call to
+  glBindTexture( GL_TEXTURE_2D, MyBindId ) with glBindTexture( GL_TEXTURE_2D_VIDEOMEMORY, MyBindId )
+  and the texture is guaranteed to be allocated in video memory and never moved around by
+  the GL driver's texture manager.</p>
+  <p>For my application, glPrioritizeTextures(?) isn't a
+  viable solution, because it still requires extra backing-store copies of textures to be
+  kept in system memory so they can be swapped in and out. In addition, implementing my own
+  texture manager on top of the existing, unextended glBindTexture isn't at all efficient,
+  because I don't have any way of knowing how many textures I can allocate before they start
+  spilling out of video memory, and in addition most GL drivers do lots of extra internal
+  memcpy's in the process -- and with big textures, having lots of unnecessary 256K memcpys
+  (for 256x256x32-bit textures) just kills performance.</p>
+  
+  <p>Such a solution would benefit Unreal engine games on
+  Windows, Linux, and possibly Mac such as Unreal Tournament, Duke Nukem Forever, Deus Ex,
+  Wheel of Time, etc etc etc. As well as other developers' texture-intensive games that use
+  OpenGL, such Starsiege: Tribes (the developers have been running into this same issue).</p>
+</div></blockquote>
+
+<h4>Experiencing poor Internet play on your&nbsp; Voodoo3 3500TV?</h4>
+
+<p>As <a href="http://www.voodooextreme.com/">Voodoo Extreme</a> reports,
+the Voodoo3 3500TV's WebTV installer does some evil things to your Internet setting,
+causing many games (including Unreal Tournament and Quake 3 Arena) to experience poor
+Internet play:</p>
+
+<blockquote><div>
+  <p>Hello, We are aware of the problems that the Voodoo3 3500TV is experiencing with online
+  games. Many of these problems can be cured by removing WebTV, however that will disable
+  the Visual Reality software. The problem usually can also be cured by removing the
+  Internet Explorer 5 upgrade from Windows98. While these are just a work around, and not
+  really fixes, both options usually will cure the problem until 3dfx releases a real fix.
+  We are currently working with Microsoft to try and figure out whether the problem is due
+  to Microsoft software (WebTV and IE5) or 3dfx software (3500TV drivers and Visual
+  Reality).</p>
+  
+  <p>Thank you for your patience,
+  
+  Aaron D. Patton
+  
+  3dfx Interactive Email Support</p>
+</div></blockquote>
+
+<p>-Tim</p>

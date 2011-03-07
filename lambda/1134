@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Generalized Algebraic Data Types and Object-Oriented Programming | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1134" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Generalized Algebraic Data Types and Object-Oriented Programming</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<small><a href="http://research.microsoft.com/~akenn/generics/gadtoop.pdf">Generalized Algebraic Data Types and Object-Oriented Programming</a>. Andrew Kennedy and Claudio Russo. OOPSLA, October 2005, San Diego, California.</small><p>
+<blockquote>
+Generalized algebraic data types (GADTs) have received much attention recently in the functional programming community. They generalize the type-parameterized datatypes of ML and Haskell by permitting constructors to produce different type-instantiations of the same datatype. GADTs have a number of applications, including strongly-typed evaluators, generic pretty-printing, generic traversals and queries, and typed LR parsing. We show that existing object-oriented programming languages such as Java and C# can express GADT definitions, and a large class of GADT-manipulating programs, through the use of generics, subclassing, and virtual dispatch. However, some programs can be written only through the use of redundant run-time casts. We propose a generalization of the type constraint mechanisms of C# and Java to avoid the need for such casts, present a Visitor pattern for GADTs, and describe a switch construct as an alternative to virtual dispatch on datatypes. We formalize both extensions and prove a type soundness result.</blockquote><p>
+I've been waiting for awhile for this paper to be available online.<p>
+This paper is, of course, related to the other items posted here about GADTs. The examples in the introduction might be somewhat  relevant to the recent discussion about the static versus dynamic features of Java, and its type system. </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 11/24/2005 - 20:47 | <a href="taxonomy/term/14">OOP</a> | <a href="taxonomy/term/17">Software Engineering</a> | <a href="taxonomy/term/21">Type Theory</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1134" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 4471 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1134" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1134" />
+<a id="comment-12410"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1134#comment-12410" class="active">It&#039;s always great to see rece</a></h3>
+ <div class="content"><p >It's always great to see recent research advances from Haskell and elsewhere make their way into mainstream languages like this.</p>
+<p >C# generic constraints have always seemed somewhat strange in their operation.  How does the typechecker work, exactly?  When you're typechecking an expression in a context, do you go off and search all of the constraints visible to that context in order to find a match?</p>
+<p >In implementing these things elsewhere, it has always seemed more convenient to introduce intersection types and union types and require explicit binding of variables to them, to avoid the go-search-the-environment-for-constraints voodoo.  You really want typechecking to be context-free, in the sense that grammars are context-free: a term should have an interpretation independent of the context in which it exists.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 11/24/2005 - 21:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-12413"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1134#comment-12413" class="active">You beat me!</a></h3>
+ <div class="content"><p >I was going to post this paper last week, but I felt like I'd been posting too much, so I decided to wait... Obviously that was a mistake...</p>
+<p >Actually, I stumbled across the abstract when I <a href="http://article.gmane.org/gmane.comp.lang.scala/1613">heard</a> that the next version of Scala will have GADTs. Martin has been quiet about it, so I was trying to get an idea of what that might look like.</p>
+<p >It's a good paper, and it's always interesting to see how the same idioms are expressed in OO vs. functional styles. I feel pretty comfortable with the OO code, and in some cases find it preferable, but I admit that with the full machinery of generics, I'm starting to find it pretty hard to read. In this paper, for example, I know what code to expect in each of the examples, but it still takes a fair bit of effort to verify that it's really what I expected. I don't recall having that problem with the wobbly types paper, for instance.</p>
+<p >I think Anton's comment about Lichtenstein was spot on.   When I step back a bit, the C# examples here look flexible and elegant, but when I get too close, I start to feel a little dizzy.</p>
+<p >All that aside, these are really cool features, and they solve some long-standing problems in a really satisfying way (just like GADTs everywhere). I look forward to actually using this stuff, and I really agree with Tim that it's nice to see new features "trickling down"...</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Fri, 11/25/2005 - 01:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-12723"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1134#comment-12723" class="active">Come on, guys!</a></h3>
+ <div class="content"><p >I've been really, really, really busy... </p>
+<p >But I'm really disappointed that this didn't get more attention, especially from the professional Java/C# programmers. Like I said, I'm really excited about some of these features becoming available to us working programmers, but most discussion about Java/C# these days seems to revolve around whether they're getting too sophisticated... </p>
+<p >Should I assume that the silence means that most of the Java people just don't care about this stuff, or think it's just more unnecessary complexity? Or is it just not a big deal?</p>
+<p >Did anybody around here go to OOPSLA? Was this paper well-received?</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Mon, 12/12/2005 - 00:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-12739"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1134#comment-12739" class="active">But I&#039;m really disappointed t</a></h3>
+ <div class="content"><i>But I'm really disappointed that this didn't get more attention</i><P>
+I second that.</div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Mon, 12/12/2005 - 11:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

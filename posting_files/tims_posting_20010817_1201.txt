@@ -1,0 +1,30 @@
+http://www.digitalmars.com/d/archives/39.html#N343
+[D] Int to string
+Using "+" for string concatenation always leads to confusing ambiguities. In a language without overloading or templates, this can still work, but requires the user to sometimes perform mental gymnastics figuring out "why am I getting weird results using + in this context?"
+
+However, if templates or overloading are present, then you run into even worse ambiguity problems.  To avoid ambiguity, you really need to have separate syntax for:
+
+[code]adding (i.e. integers).
+concatenating arrays (strings just like any other case).
+prepending one t to a t[].
+appending one t to a t[].[/code]
+Note that this is provable rather than speculation. :-)
+
+-Tim
+
+"Overlord" <peewee telia.com> wrote in message news:9lgrsh$2e8c$1 digitaldaemon.com...
+[blockquote]In D strings can be copied, compared, concatenated, and appended like
+
+[code]str1 = str2;
+if (str1 < str3) ...
+func(str3 + str4);
+str4 += str1;[/code]
+But if you want to add a integer into this, does(or will) D support it this(or in some simmilar way)?
+
+[code]int i=10;
+char[] str = "abc";
+
+str1 = i;         // str1="10"
+if (str == i) ...
+func(str + i);    // abc10
+str += i;         //same as above[/code][/blockquote]

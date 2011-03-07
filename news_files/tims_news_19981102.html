@@ -1,0 +1,27 @@
+<h4>Unreal 219!</h4>
+
+<p>It's now available for download <a href="http://unreal.epicgames.com/Versions.htm">HERE</a>.
+&nbsp; The Epic Deathmatch servers will be shut down for the night, to provide more
+bandwidth for downloads.</p>
+
+<h4>The testing is going well</h4>
+
+<p>Ok, ok, you can stop now, that's enough testers. :)&nbsp; Server performance has
+definitely improved since I last benchmarked it. My dual-processor Pentium II-300 is
+serving a 20-player game, copying 600 megs across the network, and running a 3dfx Unreal
+client at 800x600. The server is keeping up a steady 15 fps.&nbsp; I have more
+optimizations planned, though.</p>
+
+<p>On my 28.8K connection, gameplay has remained pretty smooth until I get into a
+firefight with 5-6 people, at which point the movement of other players starts to become
+unsmooth.&nbsp; We should be able to improve this significantly further in 220, with two
+protocol improvements.&nbsp; First, I'll be improving the scheme for managing temporary
+objects like projectiles, which should reduce their bandwidth usage by around 30%.
+&nbsp;&nbsp; Second, Steve Polge and I working out a new variable priority
+predictor/corrector scheme for transmitting the movement of other players.</p>
+
+<h4>Testing 219</h4>
+
+<p>I have an Unreal 219 server up and running at <a href="unreal://208.212.53.3/">unreal://208.212.53.3/</a>
+in case a few people want to help test.&nbsp; You can join in and play with 218; it's
+fully compatible. 219 should be available soon, unless new bugs are discovered.</p>

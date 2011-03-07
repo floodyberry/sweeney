@@ -1,0 +1,23 @@
+http://www.seas.upenn.edu/~sweirich/types/archive/1999-2003/msg01135.html
+[TYPES] Re: Type inference and related research...
+Hello,
+
+If your interest is directed towards type systems of real-world programming languages, focusing on type inference is not necessarily the most productive direction to take.  As I see it, the subject mostly dead-ends around the point of sophistication of the Haskell type system, after which it becomes undecidable or at least unwieldy.  This does not seem like a feature that will make it into future programming languages that are widely used. Though, the underlying concept of unification is very powerful and seem more promising -- if unification is your primary interest, then it could be very useful to explore it in other, more practical, situations than type-inference algorithms.
+
+Here are two type-theoretic subjects that I feel hold the most promise towards improving future type systems:
+
+1. The representation of "very dependent types", as originated by Jason Hickey.  See http://www.cs.caltech.edu/~jyh/papers/fool3/default.html for the original paper.  In earlier type systems, terms could reference (by symbolic binding or de Bruijn index) the 'parameter' part of outer lambda expressions.  Very dependent types also expose the 'function' part of outer lambda expressions, but in a more general way than the recursive mu binder: they preserve partially-known information.
+
+Thus you can use very dependent types to form arbitrarily complex dependent-typed records with recursive dependencies.  This provides a framework that seems an ideal framework for representing object-oriented concepts such as self-type dependence (without resorting to a new binder as in Cardelli's object calculi), as well as uniformly representing dependent mathematic structures such as groups or rings.  In my experience, very dependent types have proven very easy to work with and well-known concepts such as Cardelli's explicit substitutions approach, and Cardelli's subtyping-of-recursive-types are easily extensible to very dependent types.
+
+As far as I'm aware, there is only one paper on this topic and the value of this research topic hasn't been widely recognized yet.
+
+2. Type systems that combine non-determinism (at least at the type level) with type-forming and type-specification operators.  The breakthrough paper on the topic is David McAllester's description of the Ontic language: http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps.  This also appears to be the only paper on the topic and the value of the research hasn't been widely recognized yet.
+
+The notion of non-determinism in Ontic isn't the scary or impractical kind that is associated (by practical programmers) with languages like Prolog; here it can be used purely as a type-system tool that enables you to express such concepts as "the type containing the elements 1, 2, and 3"; "an element whose value is either 1, 2, or 3", "a subtype of the type of natural numbers", "the type of all subtypes of natural numbers", etc.  The Ontic type system provides a direct and intuitive representation of concepts which are either difficult or indirect and circuitous to express in more traditional dependent-type systems.
+
+One of the neat things of Ontic is that the idea of a typechecker assigning type judgements to each term context in the form "a:T" is replaced by the more general idea of assigning a (hopefully finitary) set of possible values to each term.  This makes it easier to deal with complex subtyping situations such as f-bounds and recursive types.
+
+Please note that I am not a type theorist, but a practical programmer who follows type theory research in search of ideas that may contribute towards future practical programming languages, so my advice here is biased in a direction that others are likely to disagree with.
+
+-Tim

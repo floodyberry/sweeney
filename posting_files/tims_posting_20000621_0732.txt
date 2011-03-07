@@ -1,0 +1,73 @@
+http://www.seas.upenn.edu/~sweirich/types/archive/1999-2003/msg00452.html
+[TYPES] State of the art in dependent typing?
+I'm a game programmer, but lately I found out about Haskell, Cayenne, and dependent type systems.  As a beginner, I have a few questions about dependent types and proofs-as-types systems.  This is for fun and enlightenment rather than important research, so please don't feel obliged to respond unless you enjoy doing so.
+
+1. In propositional logic, one can use {x:Nat|x<10} to express the subset of natural numbers less than 10.  Hindley-Milner extensions have been proposed to support subset types, such as Sokolowski's:
+
+http://www.ipipan.gda.pl/~stefan/Papers/research.html
+
+This seems very useful; is there a good reason why this hasn't been adopted by languages like Haskell and ML?
+
+2. In languages like Augustsson's Cayenne:
+
+http://www.cs.chalmers.se/~augustss/cayenne/
+
+One can model both programs and proofs in a uniform language.  Why isn't this an area of huge interest, i.e. with would-be Sun Microsystems trying to popularize new mainstream languages based on this technology?
+
+While Java is receiving tremendous hype, it's mostly an incremental improvement over C++, whereas this stuff is *revolutionary*, having the potential to make commercial software far more reliable.  It seems surprising there isn't widespread interest.
+
+Is it that people are turned off by the theoretical undecidability of powerful dependent type systems?  This doesn't seem too likely to cause real-world problems -- reasonable programs tend to be easy for a typechecker to analyze.
+
+3. Is there anything preventing the programs-with-proofs concept from being taken to the extreme?  For example, building abstract definitions of:
+
+[ul][li]sets[/li][li]monads[/li][li]groups[/li][li]lambda calculi[/li][li]categories[/li][li]sorting functions[/li][/ul]
+
+and concrete instances containing proofs that they obey the appropriate laws.  I've seen a few assorted systems along these lines, but nothing universal.  Has anyone attempted to build a comprehensive set of types and proofs for mathematical objects or categories this way?
+
+4. I noticed the following analogy between ordinary types and dependent types:
+
+[code]
+A=>B <-> All(x:A).B
+A*B  <-> Exists(x:A).B
+A+B  <-> ___________
+[/code]
+
+Can we fill in the blank meaningfully, i.e. is there a useful notion of "dependent sum"?
+
+Would it be valid to say that "A+B" is not actually a primitive type itself, but instead corresponds to the existential subset type:
+
+[code]Exists( {t|t==A or t==B)} ).t[/code]
+
+Where the {x|P(x)} represents the notion of "subset types" as described above?  One can read this as: there exists a type t, equal to either A or B, such that we encode a single value of type t.  This encoding of sums is (I think) a more flexible version of Cardelli's "Any/TypeOf/ValueOf" definitions:
+
+http://research.microsoft.com/Users/luca/Papers/TypeType.ps
+
+5. Cayenne has a construct for defining records:
+
+[code]s = struct {a=1; s="hello";}[/code]
+
+Has anyone tried defining such records as functions from strings (corresponding to tags) to dependent types? i.e.:
+
+[code]
+s :: (x::String).
+    if      x="A" then Int;
+    else if x="s" then String; -- else _|_
+
+s = (x:String)->
+    if      x="A" then 1;
+    else if x="s" then "hello";
+[/code]
+
+Such functions seem to obey the ordinary rules of records.
+
+A variation on this theme is to represent certain records as "functions from types to dependent types".  These seem to be signature-free records, which may be useful for composing Cayenne-style proofs without committing to specific proof names.
+
+6. Looking at the bigger picture, are "programs with proofs" of practical value in future commercial software?  I have to wonder if we're simply trading "bugs in programs" for "bugs in proof types".
+
+For example, I can easily write a "qsort" function, test it with sample data, and be pretty confident it's ok.
+
+But, what is the "proof type which all sorting functions must inhabit"?  I have no idea, but suspect it's very complex and dependent on other proofs such as those governing ordering relationships.  Given human fallability, it seems just as likely to write the wrong "proof type" (hence prove the wrong thing) as write an buggy program.  Is this a problem in practice?
+
+Thanks,
+
+-Tim

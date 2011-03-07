@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Links (Wadler) | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F464" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Links (Wadler)</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+Wonder what Wadler is up to? 
+<blockquote>My latest research interest is a programming language for web application development, building on my experience with XML, Java, and Haskell.</blockquote><p>
+A short <a href="http://homepages.inf.ed.ac.uk/wadler/papers/links/links.pdf">introduction</a> and a set of <a href="http://homepages.inf.ed.ac.uk/wadler/papers/links/lablunch.pdf">slides </a> are available (both PDF).<p>
+Wonder about the language name?<p>
+<blockquote>
+A quarter of a century ago, Burstall and others at
+Edinburgh introduced an influential programming language,
+Hope, named after Hope Park Square, located
+near the University on the Meadows. This note proposes
+a research effort to design a new programming
+language for the web, Links, named after the Brunts-field Links, located at the other end of the the Meadows and site of the world’s first public golf course.
+</blockquote><p>
+And here's why you should be interested in this work,<p>
+<blockquote>
+Other languages for web programming
+include Xtatic from Pierce, Scala from Odersky,
+and Xen and Cw from Microsoft. Links will benefit
+from fruitful interactions with these efforts. However,
+Links differs crucially in that it adopts database ideas
+from Kleisli and systems principles from Erlang, taking
+it well beyond the capabilities of these other languages.
+</blockquote>
+ </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 01/05/2005 - 18:57 | <a href="taxonomy/term/16">Parallel/Distributed</a> | <a href="taxonomy/term/27">XML</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/464" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 3719 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="464" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="464" />
+<a id="comment-3416"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3416" class="active">Oooo can I have that now, please?</a></h3>
+ <div class="content"><p >The <a href="http://www.geneticxchange.com/Papers/wls-icfp00-1.pdf">Kleisi system</a> (pdf) looks interesting too.</p></div>
+ <div class="links">By <a href="user/674" title="View user profile.">Isaac Gouy</a> at Wed, 01/05/2005 - 20:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-3419"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3419" class="active">Heterogenous collections</a></h3>
+ <div class="content"><p>From the paper:</p>
+<blockquote>
+<p>Our sets, bags and lists are homogenous. In order to mix objects of different types in a set, bag or list it is necessary to inject these objects into a variant type.</p>
+</blockquote>
+<p>I started working through the <a href="http://homepages.cwi.nl/~ralf/HList/">HList</a> paper a short while ago, and while I've not got all the way through it yet I believe it offers an interesting approach to the problem of typing heterogenous collections (albeit one that reminds me eerily of some of the tricks performed by Alexandrescu with the C++ template system).</p>
+<p>I am pleased to see that the Kleisli paper addresses the question of data exchange (and <q>self-describing</q> data exchange at that) without making the usual gestures of obeisance towards XML. The  structures under discussion - nested bags, sets and tuples - seem similar to those <a href="http://namesys.com/whitepaper.html">Hans Reiser</a> has been looking at. There is a drive there in a similar direction: away from layering data structures on top of some existing data model, and towards developing new (combinations of) structural primitives that can express complex and variable structures in a more tractable way.</p></div>
+ <div class="links">By <a href="user/813" title="View user profile.">Dominic Fox</a> at Wed, 01/05/2005 - 23:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-3423"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3423" class="active">A major event</a></h3>
+ <div class="content"><p >This announcement perhaps marks one of the major events in programming language history, which go on to shape the field for decades to come.  It's wonderful to see Philip Wadler at the center of this effort; he is one of the few who have the broad experience and credibility to make it a success.</p>
+<p >I certainly hope that the Links syntax will be inspired by the C/Java/Pascal/Python school rather than Haskell, ML, Scheme, or (worse) XML.  The later languages are far from mainstream programming practice and would needlessly inhibit the language's adoption by the practical folks who are its target audience.</p>
+<p >It is certainly unrealistic to expect that a pure functional language would succeed in the mainstream.  A better tradeoff is a language with monadic effects types (but retaining mainstream syntax -- not Haskell "do" notation) which enable general imperative programs to be written naturally, and the scope of their effects clearly delimited so that the language retains a powerful and usable functional core.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 01/06/2005 - 03:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-3436"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3436" class="active">Perhaps I&#039;m confused</a></h3>
+ <div class="content"><p >What exactly is important about this?  Is it that it's Philip Wadler?  I ask because I didn't see anything in either of the PDFs that seemed new, and I'm unclear why we need yet another web-specific language.</p></div>
+ <div class="links">By <a href="user/1580" title="View user profile.">Randall Randall</a> at Thu, 01/06/2005 - 17:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-3437"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3437" class="active">It&#039;s a great organizational opportunity</a></h3>
+ <div class="content"><blockquote>
+What exactly is important about this?
+[...]
+I'm unclear why we need yet another web-specific language
+</blockquote>
+That was exactly my reaction <em>before</em> reading the introduction. <em>After</em> reading it I think the main point is not yet another language, but a gravity center for Computer Science and business communities to meet.
+<p>
+And of course Philip Wadler is not immune to failure, if you meant that.</div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Thu, 01/06/2005 - 18:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-3441"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3441" class="active">Actually</a></h3>
+ <div class="content"><p >I had just never heard of Philip Wadler before, to my knowledge, and the poster to whom I replied made a point of saying that it was good to see him involved, so I thought that might be important. :)</p></div>
+ <div class="links">By <a href="user/1580" title="View user profile.">Randall Randall</a> at Thu, 01/06/2005 - 21:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-3451"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3451" class="active">Wadler</a></h3>
+ <div class="content"><p >Wadler is one of the most distinquished researchers in the field, so natrually it is interesting to see what he is up to. I suggest searching the archives - his work was discussed here many times.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Fri, 01/07/2005 - 14:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-3537"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3537" class="active">Or check his CV :)</a></h3>
+ <div class="content"><p ><a href="http://homepages.inf.ed.ac.uk/wadler/vita.pdf">Philip Wadler</a></p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Sun, 01/09/2005 - 09:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-3502"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3502" class="active">Web programming still has a long way to go</a></h3>
+ <div class="content"><p >Not much of it is new, but this language is a <i >engineering</i> project, not a research project.   The ideas have been done in other languages,  but they have yet to be brought together.  </p>
+<p >However, the proposal contains some stumbling blocks. For example, if you work with Erlang enough, you start to realize that it's not statically typed because of message passing.   Type systems for message passing has not been adequately solved yet.  Even Wadler's type-checking tool for Erlang doesn't do much with send/receive.   Joe Armstrong has created UBF,  which does hint at what a message-passing type system might look like.</p>
+<p >Yes, there are many web-specific languages, but most of them are basically the same language and aren't very good.   For example,  PHP is sloppy and encourages bad programming practices. </p>
+<p >If a Links program compiles,  it will be guaranteed to produce well-formed and valid XML streams,  and it won't be vulnerable to SQL injection attacks.</p></div>
+ <div class="links">By <a href="user/1602" title="View user profile.">Leon P Smith</a> at Sat, 01/08/2005 - 21:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-3536"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3536" class="active">Inadequate?</a></h3>
+ <div class="content"><blockquote>
+Type systems for message passing has not been adequately solved yet
+</blockquote>
+Does join-calculus qualify as message-passing?
+<p>If yes, then how type systems for <a href="http://pauillac.inria.fr/join/">Join</a>, <a href="http://pauillac.inria.fr/jocaml/">JoCaml</a>, or <a href="http://lampwww.epfl.ch/funnel/">Funnel</a> are inadequate<sup>1</sup>? I guess I have to check the proposed type system for Erlang...
+<p>
+<hr/>
+<sup>1</sup>? A good reference is probably this one: <a href="http://pauillac.inria.fr/bin/psearch/publioscope?concur-97">Implicit Typing à la ML for the join-calculus</a>.
+<p>
+PS: Not all of the links may work right now because of the major storms in Europe.</div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Sun, 01/09/2005 - 09:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-3439"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3439" class="active">&gt; I certainly hope that the L</a></h3>
+ <div class="content">I certainly hope that the Links syntax will be inspired by the<br >
+&gt; C/Java/Pascal/Python school rather than Haskell, ML, Scheme, or (worse) XML.</p>
+<p >I honestly don't know that you'd find a Python programmer out there who would concede that their syntax belongs in the same school as C or Java's, unless you were to use threats of physical violence ;) IMHO if you believe that the reason why Haskell, ML and Scheme have remained niche items is due to their syntax then I think you're overlooking the more fundamental issues that separate these languages.</p>
+<p >As to the announcement itself... It's pleasantly high-level, admirably inclusive, and utterly devoid of any useful detail. In general I'm afraid to say that I've become fairly cynical about the more academically / formally inclined who start spinning what they're doing to make it sound more relevant to industry. I worry when I see things like a conference about .net - I can't help but wonder if it's a genuine research opportunity or just a cynical attempt to grab money from a cash rich organization. I personally don't see what's wrong with pure research done well - not everything has to have immediate relevance to industry.</p></div>
+ <div class="links">By <a href="user/1322" title="View user profile.">Laurence Tratt</a> at Thu, 01/06/2005 - 20:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-3456"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3456" class="active">It&#039;s in the Types</a></h3>
+ <div class="content"><blockquote>a language with monadic effects types (but retaining mainstream syntax -- not Haskell "do" notation)</blockquote> 
+<p>Although I can't cite an existing strict language that uses monads to distinguish pure code from impure, it's predictable that Links will have this combination, given Wadler's involvement and the intro's statement that it will be strict.</p>
+<p>Monadic types steer you away from conventional syntax. Even if you drop the Haskell syntax, you still have the Haskell way of joining code together. So your core code consists of<ul><li>name definitions</li><li>function definitions</li><li>action expressions</li><li>actions returning a value</li></ul>
+Expressions with side effects can't be used as function arguments.  Also, monadic types make a big distinction between Haskell's <code>&lt;-</code> which names the result of an action, and the familiar use of <code>=</code> to update a variable. 
+In learning functional programming, one must become comfortable with the former and limit use of the latter. In these two respects, monadic types call for their own syntax. Familiar syntax would bring the user directly to this hurdle, and not help get over it.</p>
+
+</div>
+ <div class="links">By <a href="user/336" title="View user profile.">Scott Turner</a> at Fri, 01/07/2005 - 18:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-3430"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3430" class="active">Related work</a></h3>
+ <div class="content"><p >Here's an <A href="http://www.info.ucl.ac.be/people/PVR/elansary.ps">article</A> presented at <A href="http://www.cetic.be/moz2004">MOZ 2004</A> that tackles the same problem.  It gives an integrated approach to building Web-based applications that takes advantage of the multiparadigm abilities of Oz.  It presents a tool, QHTML, that is based on similar ideas to <A href="http://www.mozart-oz.org/documentation/mozart-stdlib/wp/qtk/html/index.html">QTk</A> (see chapter 10 of CTM).  One difference with Links is that the QHTML approach stays completely within the Oz language, using Oz records to model Web pages instead of XML-like syntax.</p></div>
+ <div class="links">By <a href="user/288" title="View user profile.">Peter Van Roy</a> at Thu, 01/06/2005 - 11:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-3444"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3444" class="active">Why it matters</a></h3>
+ <div class="content"><p >Perhaps because of the presentation's vagueness, I'm reading into it what I would like it to be.</p>
+<p >But I think it's more than that: What Wadler is looking to do is to unify queries, interaction, message passing, and HTML/XML generation into a clean, sound programming environment.  These sorts of things are currently handled with a large set of ad hoc imperative languages communicating in poorly-defined ways, leading to a very error-prone system.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 01/06/2005 - 23:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-3465"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-3465" class="active">Aha...</a></h3>
+ <div class="content"><p >Look what I <a href="http://wadler.blogspot.com/">found</a>...</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Fri, 01/07/2005 - 22:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-4033"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/464#comment-4033" class="active">Check this out</a></h3>
+ <div class="content"><p >If you want to learn <a href="http://groups-beta.google.com/group/comp.lang.functional/msg/4716d8724bb17ca2">more </a> about Links and perhaps even influence the design.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Tue, 02/01/2005 - 20:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

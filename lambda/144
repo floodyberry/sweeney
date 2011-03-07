@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>History: Array languages | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F144" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/2">Site Discussion</a></div><h2>History: Array languages</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >This has got to be one of the sparsest language families. The classics are APL, APL2, A+, J, and K, which were developed in that order and have entangled histories.  Nial is the dark horse.  Glee is the newest.  Nesl is a parallel array language. Then there's the programming language of Mathematica, which supports array operations.</p>
+<p >Surely there are more?</p> </div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at 07/29/2004 - 16:23 | <a href="taxonomy/term/2">Site Discussion</a> | <a href="node/546" title="Special characters&amp;#039; input methods">previous forum topic</a> | <a href="node/523" title="pi-ple rights oppressed">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/144" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 4293 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="144" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="144" />
+<a id="comment-905"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-905" class="active">FISh</a></h3>
+ <div class="content"><p>
+<a href="http://www-staff.it.uts.edu.au/~cbj/sitemap.html">FISh</a> <a href="http://www-staff.it.uts.edu.au/~cbj/FISh/Announcement/">claims</a> that <q style="color:blue;">FISh execution speeds on typical array problems are <em>several times faster</em> than other higher-order, polymorphic languages.</q>
+</p>
+</div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Thu, 07/29/2004 - 22:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-907"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-907" class="active">SAC</a></h3>
+ <div class="content"><p >I'm confused about your post. The subject starts with "History", but the message refers to recent languages. If you include Mathematica, because it supports array operations, the family is not sparse at all.</p>
+<p >On a more constructive note let me mention <a href="http://www.sac-home.org/">SAC - Single Assignment C</a>. This is a functional language for numerical applications,  in particular array processing.</p></div>
+ <div class="links">By <a href="user/1238" title="View user profile.">Ronny Wichers Schreur</a> at Thu, 07/29/2004 - 23:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-922"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-922" class="active">History clarification</a></h3>
+ <div class="content"><p >"History" as in, "all array languages ever created, both new and old."</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Fri, 07/30/2004 - 14:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-949"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-949" class="active">More</a></h3>
+ <div class="content"><p >Among the classics you left out APL2000, Dyalog APL,<br >
+Sharp APL and MicroAPL. F-Script probably fits the<br >
+bill as an array language, too.</p>
+<p >You seem to imply that this is a short list but if you<br >
+consider that most of the languages mentioned so far<br >
+are commercial (i.e., all except SAC, F-Script and A+<br >
+but the latter got its start as a proprietary language<br >
+in use at Morgan Stanley), that is a rather long list.<br >
+Quick: how many commercial Lisp vendors are left?</p></div>
+ <div class="links">By <a href="user/490" title="View user profile.">Olivier Lefevre</a> at Sat, 07/31/2004 - 22:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-971"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-971" class="active">Lisp vendors</a></h3>
+ <div class="content"><p ><a href="http://alu.cliki.net/implementation">This page</a> lists ten vendors.</p></div>
+ <div class="links">By <a href="user/1172" title="View user profile.">Manu Simoni</a> at Sun, 08/01/2004 - 22:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-1498"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-1498" class="active">10 vendors</a></h3>
+ <div class="content">Thanks but that's pretty much the point. APL has a reputation for being obscure and dead whereas Lisp could be called the most mainstream of non-mainstream programming languages. Yet here are about ten <i>current</i> array language implementations, most of different languages or APL dialects, as many as for Common Lisp. That's evidence of vitality, I would say, and I don't understand why the original poster called array languages "one of the sparsest language families". <p><p>
+There's also MatLab, by the way.</div>
+ <div class="links">By <a href="user/490" title="View user profile.">Olivier Lefevre</a> at Fri, 08/20/2004 - 23:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-1501"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-1501" class="active">And Maple too</a></h3>
+ <div class="content"><p >Maple in fact has more Array types than all the usual array languages - but also offers a uniform access mechanism to all those types.</p>
+<p >What other language allows you to deal with banded symmetric matrices of 8 bit integers in C order storage as easily as with sparse complex hermitian hermitian matricies of 10000 Digit complex floats in Fortran order storage?  All with optimal space and (often) optimal algorithms for particular sub-classes.</p>
+<p >Disclaimer: I used to work for Maplesoft, although am now in academia.</p></div>
+ <div class="links">By <a href="user/1094" title="View user profile.">Jacques Carette</a> at Sat, 08/21/2004 - 00:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-1595"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-1595" class="active">What other language</a></h3>
+ <div class="content"><p>
+Maple is a great package, but Mathematica 5 <a href="http://www.wolfram.com/products/mathematica/newin5/performance/">meets</a> that challenge, down to the <a href="http://www.wolfram.com/products/mathematica/tour/page4.html">particular sub-classes</a>.  Have a look.
+</p>
+</div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Tue, 08/24/2004 - 20:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-4289"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-4289" class="active">Maple/Mathematica</a></h3>
+ <div class="content"><p >Comparing the history of both these packages is fascinating.  In part because they are both commercial but neither are overwhelming market leaders, there is pretty healthy competition going on.  Each of Maple and Mathematica are ahead of the other in some areas, and quite behind in others, while being essentially equivalent for most purposes.  Whenever one side comes up with some real useful features, within a few releases the other side has that too.</p>
+<p >One of these days, if someone prods me, I'll write up a short (ongoing!) history of feature innovation in both these products.  It really is fascinating.</p></div>
+ <div class="links">By <a href="user/1094" title="View user profile.">Jacques Carette</a> at Wed, 02/16/2005 - 01:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1586"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-1586" class="active">Re: More</a></h3>
+ <div class="content"><blockquote ><p ><i >Among the classics you left out APL2000, Dyalog APL, Sharp APL and MicroAPL</i></p></blockquote>
+<p >Isn't that somewhat like listing various flavors of Lisp as different languages?  Regardless of the vendor and vendor-specific extensions, they're all Lisp.</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Tue, 08/24/2004 - 13:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1587"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-1587" class="active">Wikipedia on array languages</a></h3>
+ <div class="content"><p >There's a good list of array languages <A href="http://en.wikipedia.org/wiki/Array_programming">here</a>, including some I'm not familiar with.</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Tue, 08/24/2004 - 13:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1915"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-1915" class="active">Why not more array languages?</a></h3>
+ <div class="content"><p >Some thoughts on why array languages aren't more prevalent.</p>
+<p >1. Most major programs that make significant use of arrays (and would benefit from array constructs there) also make use of significant other features where one wants a more polished, complete, or mainstream language than array languages.</p>
+<p >2. Most programs that use arrays don't do anything that's difficult to do with existing languages.  For example, if you deal with fixed-size vectors and matrices, then you just write a few functions for array-matrix multiplication and then you build your program on top of that.</p>
+<p >3. There are reasonable theoretical arguments against some of the common features of array languages.  For example, given a function f:t-&gt;u, some array languages automatically let that function operate on arrays, for example as if it's overloaded to f:[t]-&gt;[u]=map(f), etc.  This is incompatible with Haskell-style polymorphism.  For example, given a function reverse:[t]-&gt;[t] which reverses an array, and a value a::[[t]], there are two different ways one could interpret reverse(a), and this is confusing.  Similar combinatorical ambiguities occur with automatic currying (treating any f:(t,u)-&gt;v as f:t-&gt;u-&gt;v , etc.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 09/16/2004 - 02:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1917"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-1917" class="active">How to solve problem #3</a></h3>
+ <div class="content"><p >My toy language Moiell solves problem #3 by making a difference between lists and sequences. A sequence is 1,2,3, and a list contains one sequence. Sequences always flatten, lists don't. So f(1,2,3) calls f 3 times, but f([1,2,3]) calls f only once.</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Thu, 09/16/2004 - 12:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1918"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-1918" class="active">Lush and Numarray</a></h3>
+ <div class="content"><p >There is  also <a href="http://en.wikipedia.org/wiki/Lush_programming_language"><br >
+Lush</a>, a dialect of Lisp whose centerpiece is an array processing engine.  With it's Lisp syntax, it is less array centric than APL derived languages, but is still quite effective tor applications that require maniuplating large arrays of data.  Lush is FLOSS, available under the Gnu GPL at <a href="http://lush.sf.net">Sourceforge</a>.</p>
+<p ><a href="http://www.stsci.edu/resources/software_hardware/numarray">Nummaray </a> is an array processing package for Python.  It allows efficient processing of large arrays of data with a simple Python syntax.  Matlab and Mathematica have been mentioned elsewehre.</p>
+<p >The extreme terseness and array orientation of the classic APL family of languages makes for a steep learning curve which limits their appeal.  They aren't always easy to apply to non-array oriented problems.  I don't think the array processing barch of the language tree is really that sparse, just not well known.</p></div>
+ <div class="links">By <a href="user/1140" title="View user profile.">shrogers</a> at Thu, 09/16/2004 - 12:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-4284"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-4284" class="active">there are a few</a></h3>
+ <div class="content"><p >i think you missed:</p>
+<ul >
+<li > C*
+<li > SISAL
+<li > ZPL
+<li > Matlab
+</ul>
+<p >at the very least. while these are all great if you are solving PDEs, systems of linear equations, etc., its really a bit of work to apply them to other problem domains. still, this thread unfortunately has mostly died, and people who do work in those domains are worse<br >
+off for it.</p></div>
+ <div class="links">By <a href="user/1678" title="View user profile.">yuri</a> at Tue, 02/15/2005 - 21:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-4286"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-4286" class="active">Some more ...</a></h3>
+ <div class="content"><p ><a href="http://www.langreiter.com/space/vector-languages">... I've come across</a>.</p></div>
+ <div class="links">By <a href="user/902" title="View user profile.">Christian Langreiter</a> at Tue, 02/15/2005 - 23:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-4306"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-4306" class="active">What about relational languages</a></h3>
+ <div class="content"><p >While not "array" langauges per se; the various relational languages (SQL, Tutorial D, Business System 12) operates on sets and the like.  If not siblings of APL, perhaps these are at least cousins?</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 02/16/2005 - 19:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-4309"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/144#comment-4309" class="active">Numerics are neglected by most languages</a></h3>
+ <div class="content"><p >I do research in a field that requires fast numerics (linear algebra). I use Matlab because it offers a very productive development environment (a REPL and a concise language that maps onto the problem domain), and gives simple access to LAPACK.</p>
+<p >One of the problems with the more open languages and development environments (e.g. Python) is that support for numerics has to be 'bolted-on' as an afterthought.</p>
+<p >I would encourage the designers and implementers of new languages to seriously consider making numerics a first class citizen of the language. People *really* do need to do this stuff, e.g. for: scientific computing; 3D games; image, video and sound manipulation. Yes, some of these tasks can be offloaded to GPUs and DSPs, but this is often impractical and undesirable.</p>
+<p >Simply providing access to LAPACK and supplying a convenient syntax, as a core part of the language, would undoubtedly attract many to consider the more 'academic' languages.</p>
+<p >If integers, floating point numbers, lists and tuples may be first class citizens of languages, then surely so must vectors, matrices and multidimensional arrays. We really do need to operate on these data types on a routine and efficient basis (as evidenced by the AltiVec unit and forthcoming Cell architecture), and to do so within a comfortable environment (i.e. the language, not afterthought libraries).</p></div>
+ <div class="links">By <a href="user/1612" title="View user profile.">C Rose</a> at Thu, 02/17/2005 - 12:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

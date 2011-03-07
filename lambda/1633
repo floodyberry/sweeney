@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Cost of provably-correct code | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1633" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Cost of provably-correct code</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Some of you my find <a href="http://www.mail-archive.com/sc-l@securecoding.org/msg01278.html">this discussion</a> (especially the cost estimates) interesting.</p> </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 07/22/2006 - 21:26 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1651" title="Ocean implementation begins">previous forum topic</a> | <a href="node/1647" title="theory of category">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1633" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2848 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1633" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1633" />
+<a id="comment-19998"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-19998" class="active">bullfeathers?</a></h3>
+ <div class="content"><p >I don't believe that provably correct code, has any useful meaning without provably correct specifications. </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Sun, 07/23/2006 - 22:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20001"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20001" class="active">However...</a></h3>
+ <div class="content"><p >...provably correct specifications are called "code with passing tests," since there's no way to prove a specification correct (that is, that it specifies what the author intends)!</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Mon, 07/24/2006 - 00:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20013"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20013" class="active">Specifications and correctness</a></h3>
+ <div class="content"><p ><I >I don't believe that provably correct code, has any useful meaning without provably correct specifications.</I></p>
+<p >Why? It says that the code is correct relative to the spec. When there is a bug - i.e. a test fails to meet your expectations - you know what to blame. Since a spec usually is on a much higher level of abstraction, the search space is reduced significantly, potentially by several orders of magnitude.</p>
+<p >And of course, there are domains for which provable correct specifications are possible. Compilers, for example.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Mon, 07/24/2006 - 09:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20018"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20018" class="active">To my mind it is about</a></h3>
+ <div class="content"><p >To my mind it is about compartmentalizing risk. Sure, you cannot know for certain that your specification is exactly what was wanted or needed, but then you also may not know whether the CPU has a flaw in it, or whether the OS actually works exactly as intended. There are innumerable reasons why things could, in fact, go wrong. The reason to prove code correct is that you can then at least be sure that the code not doing exactly what the developers intended (where their intentions are laid out in a formal spec) is not one of them - if problems do occur you can focus your attention on things like the spec, the hardware etc.</p></div>
+ <div class="links">By <a href="user/2373" title="View user profile.">Leland McInnes</a> at Mon, 07/24/2006 - 13:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20019"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20019" class="active">It&#039;s also worth noting...</a></h3>
+ <div class="content"><p >that most of the time when our computer systems have errors, it really is a fault in an application program, rather than the OS, or the CPU, or even the spec.  Complaining about the problem analysis has a long and storied tradition in software engineering, but mostly the faults lie not within our specs, but within ourselves.  Pretty much any error-reduction strategy that has a chance of working has to focus largely on coding errors, rather than analysis errors.  (Plus, fixing coding errors is easy.  There are so many of them, you hardly have to aim!)</p></div>
+ <div class="links">By <a href="user/1503" title="View user profile.">Dave Griffith</a> at Mon, 07/24/2006 - 14:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20087"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20087" class="active">I don&#039;t believe that</a></h3>
+ <div class="content"><p ><i >I don't believe that provably correct code, has any useful meaning without provably correct specifications.</i></p>
+<p >The term doesn't appear to be defined in the cited conversation, either.  It's an annoying term, because it facilely implies 100% confidence.  But there might be something there anyway:</p>
+<p >The desired example is this--suppose you have a compiler.  The specification is a formal, mathematical, denotational semantics of the source language.  Your compiler provably generates code that obeys the semantics.  Of course the specification may be buggy, or the proof-checker might be buggy, but that's less likely than a coding error.  Is the compiler "provably bug-free"?  Of course not.  Is the set of proofs better than a large set of unit tests?  I don't know.  I imagine proofs would be better, if the two were equally feasible (obviously not yet).</p>
+<p >Now suppose you want to make a change, introduce an optimization in the compiler.  You can make the change, update the proofs, and you are assured that your change doesn't break anything in the formal spec.  Is that valuable?</p>
+<p >If we had a way to formalize and prove high-level requirements, we could weigh the costs and risks to decide which requirements to bother proving.  It could only make software reliability better.  Certain very common requirements, like "it doesn't crash" and "it doesn't contain stupid type errors", happen to be mathematically tractable; many compilers now basically prove them for every program.  That could be taken further.  It could also be generalized and opened up so that users can define and prove their own rules.</p></div>
+ <div class="links">By <a href="user/2639" title="View user profile.">jorend</a> at Thu, 07/27/2006 - 17:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20110"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20110" class="active">Is the set of proofs better</a></h3>
+ <div class="content"><blockquote ><p >Is the set of proofs better than a large set of unit tests? I don't know. I imagine proofs would be better, if the two were equally feasible (obviously not yet).</p></blockquote>
+<p >This is obviously a matter of the degree of certainty, or assurance, that you need for the unit. If running a very small selection of tests is adequate for your purposes then clearly unit testing is far more feasible. If you require a very high degree of certainty, say correctness over all possible valid inputs, then exhaustive unit testing  will likely be far more time consuming and expensive than a proof. In between is a sliding scale of assurance level which variously make the addition of static types, design by contract, and formal specification attractive options as the easiest way to achieve that level of assurance. It's all a matter of how certain you wish to be.</p>
+<p >What I would like to see is programmers actually provide, to the users, some indication of the degree of assurance they are willing to offer for code. That may be a lon time coming however.</p></div>
+ <div class="links">By <a href="user/2373" title="View user profile.">Leland McInnes</a> at Fri, 07/28/2006 - 14:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20111"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20111" class="active">No exhaustive testing</a></h3>
+ <div class="content"><p ><I >If you require a very high degree of certainty, say correctness over all possible valid inputs, then exhaustive unit testing will likely be far more time consuming and expensive than a proof.</I></p>
+<p >In particular, since there is no such thing as "exhaustive unit testing", because the set of possible inputs typically is infinite.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Fri, 07/28/2006 - 14:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-20155"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20155" class="active">Exhaustive Testing</a></h3>
+ <div class="content"><p >One of the papers that reference the original QuickCheck paper do exactly that. They exhaustively test each piece of code.</p>
+<p >I think it was done in Clean, but I'm not completely sure.</p>
+<p >Wouldn't this be proof by exhaustion / exhaustive unit testing?</p></div>
+ <div class="links">By <a href="user/1177" title="View user profile.">shapr</a> at Mon, 07/31/2006 - 08:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-20157"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20157" class="active">Exhaustiveness?</a></h3>
+ <div class="content"><p >As long as you don't provide a link to that follow-up paper I cannot tell. ;-) There certainly is no such claim in the original QuickCheck paper. They only say that random testing has a high likelihood of covering all execution paths. But that is not at all the same as exhaustive testing. For starters, how do you know that you've made the right choice of execution paths?</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Mon, 07/31/2006 - 09:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20025"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20025" class="active">The cost number...</a></h3>
+ <div class="content"><p >...seems bogus to me -- $20,000/line? That's either crazy, or I got to get me a job writing provably-correct code. I could write a hundred lines of code, prove it correct, and retire! :)</p>
+<p >Anyway, these days one thing I do is to do a correctness proof, and use that to guide the construction of the code. It works like "Okay, for the proof to go through, <code >f(a,b)</code> must equal <code >f(a,b-1) + f(a-1, b)</code>, so that must be part of the definition of <code >f</code>!"</p></div>
+ <div class="links">By <a href="user/1111" title="View user profile.">neelk</a> at Mon, 07/24/2006 - 16:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20028"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20028" class="active">Cost</a></h3>
+ <div class="content"><p >20k/line would require 200M for a brand new, 10kloc project, which doesn't do much by itself. I wonder if this is actually $20k per each line added to an existing, mammoth codebase. Still, the figure seems quite high.</p></div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at Mon, 07/24/2006 - 17:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20044"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20044" class="active">Not *that* much...</a></h3>
+ <div class="content"><p >There was an article on the people who write space shuttle software for NASA and IIRC the figures are not <B >that</B> far off -- I can't for the life of me find the article now, so I'm going by memory here. IIRC the entire shuttle code base was on the order of 10kloc, and every single change to a single line in the code base would be accompanied by a document of hundres of pages detailing the impact of the change on all the other code in the system. Such attention to detail is going to have an enormous cost in terms of man-hours. How they arrived at those 10kloc in the first place is another matter -- I don't recall the article saying anything about that.</p>
+<p >Anyway, when you have billions and billions of dollars worth of hardware riding on the correctness of the software, $200M seems relatively cheap.</p></div>
+ <div class="links">By <a href="user/3004" title="View user profile.">Bárður Árantsson</a> at Mon, 07/24/2006 - 20:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20046"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20046" class="active">Not necessarily a good example</a></h3>
+ <div class="content"><p >The process for developing shuttle software is extremely heavyweight, decidedly manual, and involves much more than just proving correctness. It wouldn't surprise me if that process cost a lot more than normal software development.</p><p >On the other hand, you have places like <a href="http://www.praxis-his.com/">Praxis High-Integrity Systems</a>, which claims to be able to to produce "correct-by-construction" code for a cost not that much higher than code produced using other techniques. Praxis relies heavily on the SPARK toolkit for automated code verification. I notice that the original post that was the source of this story included a response by someone from Escher Technologies - their Perfect Developer toolkit allows automated code analysis as well - refuting the claim that provably correct code would cost a fortune.</p></div>
+ <div class="links">By <a href="user/1670" title="View user profile.">Allan McInnes</a> at Mon, 07/24/2006 - 21:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20047"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20047" class="active">Some other kind of programming</a></h3>
+ <div class="content"><p >If one has to supplement every line of computer source code with pages and pages of text, the main product of the programming activity is the text and the computer source code is more like manually generated object code.</p>
+<p >Another way to drive up the costs of each line of source code is to throw away a lot of code: prototypes, cancelled projects, multiple implementations competing against each other, etc.</p></div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at Mon, 07/24/2006 - 22:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20066"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20066" class="active">interestingly enough...</a></h3>
+ <div class="content"><p >...nasa did not do apply proof technologies in any of the recent space missions. see <a href="http://www.nasa.gov/centers/ames/research/exploringtheuniverse/exploringtheuniverse-computercheck.html">this article</a> for a non-too-technical explanation of test methods in the likes of static analysis and regression testing which have been applied.</p>
+<p >on the other hand, automated software certification is a big topic in research there. for example see <a href="http://ic.arc.nasa.gov/people/edenney/papers/esfor2004.pdf">An Empirical Evaluation of Automated Theorem Provers in Software Certification</a> for hard empirical data that shows that near 100% automation is possible with current technology, as the commercial plug in the referenced discussion claims.</p>
+<p >the hot question might be if cost/benefit ratio is the final reason why classic techniques have been preferred over theorem proving in these recent projects.</p></div>
+ <div class="links">By <a href="user/2535" title="View user profile.">peter steiner</a> at Tue, 07/25/2006 - 20:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20029"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20029" class="active">I do agree that the price is</a></h3>
+ <div class="content"><p >I do agree that the price is exaggerated, but I guess the question is then what proportion of programmers have the technical background necessary to construct provably correct code?</p></div>
+ <div class="links">By <a href="user/1325" title="View user profile.">Carter T Schonwald</a> at Mon, 07/24/2006 - 17:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20055"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20055" class="active">Interesting</a></h3>
+ <div class="content"><p >Although not directly related to cost, I found these quoted arguments against provably-correct code interesting:</p>
+<blockquote ><p >Indeed, consider SQL injection attacks. They didn't exist 5 years ago, because no one had thought of them. Same with XSS bugs. Same with printf format string attacks. All of them are examples of processing user input without validation, but they are all really big classes of such, and they were discovered to occur in very large numbers in common code.</p>
+<p >What Dana is trying to tell you is that some time in the next year or so, someone is going to discover yet another of these major vulnerability classes that no one has thought of before. At that point, a lot of code that was thought to be reasonably secure suddenly is vulnerable.</p></blockquote>
+<p >To me this argument sounds like it comes from the <a href="http://www.ranum.com/security/computer_security/editorials/dumb/">Penetrate and Patch</a> mentality.  Thoughts?</p></div>
+ <div class="links">By <a href="user/2068" title="View user profile.">Benjamin D. Cutler</a> at Tue, 07/25/2006 - 14:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20056"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20056" class="active">Assumptions</a></h3>
+ <div class="content"><p >It's certainly a reasonable belief given a certain set of assumptions: software being written in non-memory-safe languages with weak type checking. Once you start addressing those assumptions, most of the point is mitigated dramatically. If I write a program in <a href="http://lambda-the-ultimate.org/classic/message7506.html">Flow Caml</a> and deploy it on <a href="http://www.openbsd.org">OpenBSD</a>, I wonder what my actual exposure would be?</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 07/25/2006 - 14:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20064"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20064" class="active">Excactly</a></h3>
+ <div class="content"><p >With good engineering practices (proper modularization and security) and tools (languages and code verification) exposure can be reduced to near zero.  With good engineering, even if one part of the program breaks, the rest of the program is isolated and secure.  With good tools the chance of programmer error is minimized.</p></div>
+ <div class="links">By <a href="user/2068" title="View user profile.">Benjamin D. Cutler</a> at Tue, 07/25/2006 - 19:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20060"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20060" class="active">Big Theorems</a></h3>
+ <div class="content"><p >With correctness proofs, you often run into the problem that the theorem you aspire to prove is approximately as lengthy and complicated as a well-written but unproven implementation of the program itself.</p>
+<p >For example, imagine the sort of theorem that a word processor would need to obey -- there would be sub-theorems concerning how input, display, printing, formatting, etc need to be handled.</p>
+<p >If your theorem is as complicated as a simple but unproven implementation of a program, then the former is no better than the later, because you can just as easily have bugs in your theorem (e.g. causing the wrong things to be proven) as bugs in your program (causing unexpected runtime behavior).</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 07/25/2006 - 17:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20061"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20061" class="active">Bang for your buck</a></h3>
+ <div class="content"><p >When it comes to correctness proofs, I think it's important to focus on how critical correctness is, and what confidence you need in the correctness of a particular application. Having made those assessments, you are then in a position to decide what <em >kind</em> of proof of correctness you require. This is not unlike any other engineering project, where the level of analysis and testing that is done depends on the criticality of the system or subsystem.</p><p >For many applications, you might be able to gain sufficient confidence in the system through testing (Theorem: the system does what I want; Proof: by scientific induction on test results). But there may be some critical parts of the application that warrant more rigorous attention. In the case of a word processor the UI and display might be adequately verified by testing, but you might want to provide a much more rigorous proof that a document will <em >never</em> become corrupted in the event of a crash (god knows I've often wished that Word would provide such a guarantee).</p><p >Of course, automated tools such as type systems, extended static checkers (e.g. SPARK), and counter-example generators (e.g. Alloy), model-checkers, and theorem-provers can also help alleviate the burden of more rigorous proofs of correctness. Which of these tools get used, and how much of the system they are applied to, will also depend on the level of confidence you need in system correctness, and the costs involved in the use of the tools. Not that these tools are infallible either (as you rightly point out). But they can give you a lot more confidence in the correctness of a design than you might otherwise have. And that's really the point: there's no binary decision between proving correctness or not, there's a sliding scale of confidence in correctness.</p></div>
+ <div class="links">By <a href="user/1670" title="View user profile.">Allan McInnes</a> at Tue, 07/25/2006 - 18:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20062"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20062" class="active">Redundancy is of the essence</a></h3>
+ <div class="content"><p ><I >If your theorem is as complicated as a simple but unproven implementation of a program, then the former is no better than the later, because you can just as easily have bugs in your theorem (e.g. causing the wrong things to be proven) as bugs in your program (causing unexpected runtime behavior).</I></p>
+<p >That is true. However, the redundancy alone is likely to uncover many bugs, because it is unlikely that you introduce exactly the same ones in both formulations.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Tue, 07/25/2006 - 19:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20067"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20067" class="active">Embrace and Extend</a></h3>
+ <div class="content"><p >Tim Sweeney: <i >If your theorem is as complicated as a simple but unproven implementation of a program, then the former is no better than the later, because you can just as easily have bugs in your theorem (e.g. causing the wrong things to be proven) as bugs in your program (causing unexpected runtime behavior).</i></p>
+<p >Yep. This leads me to two thoughts:</p>
+<ul >
+<li >Oleg Kiselyov and Chung-chieh Shan are on to something with <a href="http://lambda-the-ultimate.org/node/1635">Lightweight Static Capabilies</a>. In particular, points 1 and 2 from the abstract seem relevant: construct a tiny domain-specific kernel of trust, proving its properties formally,  then rely on an expressive type system to extend that proven trust safely to the rest of the application.
+<li >The theorem and "simple but unproven implementation" dichotomy might be artificial: the <a href="http://coq.inria.fr">Coq</a> theorem prover, for example, supports not only extraction of programs from proofs, but also of just modules. This would seem to dovetail nicely with the prior point. Of course, the catch is that your target language has to be an extraction target, which is great for us O'Caml/Haskell/Scheme programmers today, but not so much for us C++ programmers. Call it "an important future direction." :-)
+</ul>
+<p ><b >Update:</b> Mark Miller, characteristically, makes my first point much more eloquently <a href="http://lambda-the-ultimate.org/node/1635#comment-20006">here</a>.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 07/25/2006 - 21:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20104"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20104" class="active">But there is still an advantage.</a></h3>
+ <div class="content"><p >I agree with what you said, but I think there is still an advantage to provably-correct code: logical contradictions may be caught at compile-time, rather than at run-time. Of course this level of proof does not mean the specs are correct, but it will help catch yet another class of errors.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Fri, 07/28/2006 - 09:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20164"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20164" class="active">Old-fashioned proofs</a></h3>
+ <div class="content"><p >Is nobody mentioning the down-to-earth correctness proofs that are fundamental to computing? Any book on algorithms or paper by Knuth or Dijkstra is chock full of practical proofs that don't even have to be verified by a machine because they make such convincing arguments by themselves. These aren't proofs of whole programs in the modern sense but they are proofs of many necessary parts of them.
+<p >
+Surely some celebration and cheering would be appropriate :-)
+<p >
+Possibly interesting link: <a href="http://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1051.html">EWD1051 "The next forty years"</a>.</p></div>
+ <div class="links">By <a href="user/465" title="View user profile.">Luke Gorrie</a> at Mon, 07/31/2006 - 17:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20168"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20168" class="active">Modulo Knuth&#039;s Realism</a></h3>
+ <div class="content"><p >Along the lines of "I have only proven it correct, not tested it." The idea that something doesn't have to be verified because they make convinving arguments themselves misses several points: First, there can be a lot of these things, and humans have better things to do with their time than to keep checking. Second, humans can make mistakes even on very simple arithmetic. Simple human-driven proofs were a stupendously important place to start, and it is good for humans to exercise their brains and understand what is going on, but it seems to me they aren't really sufficient in the modern world.</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Mon, 07/31/2006 - 20:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20169"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20169" class="active">Exact citation</a></h3>
+ <div class="content"><p >The exact citation is <cite >Beware of bugs in the above code; I have only proved it correct, not tried it.</cite> See the last item in <a href="http://www-cs-staff.stanford.edu/~knuth/faq.html">Knuth's FAQ</a>.</p></div>
+ <div class="links">By <a href="user/1238" title="View user profile.">Ronny Wichers Schreur</a> at Mon, 07/31/2006 - 20:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-20170"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20170" class="active">Pragmatism</a></h3>
+ <div class="content"><p >Apart from the humor value in Knuth's quote, it's also important to remember how massive your Trusted Computing Base is even if you've proven an algorithm correct: the implementation in language X has to be correct; the compiler for language X has to be correct; the runtime for language X has to be correct; the OS on which the runtime runs has to be correct; the hardware on which the OS runs has to be correct... I've always understood Knuth to be making a "ha ha, only serious" comment.</p>
+<p ><b >Update:</b> I meant that Knuth didn't mean to imply that the proof was useless, but that the stuff that couldn't be proven could still hurt you. If we had an automated proof with extraction to code in a language with a formal semantics and a certified compiler targeting an OS such as Coyotos, chances are we really wouldn't have to test the routine so developed, because the unproven TCB would be... um... the laws of physics?</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Mon, 07/31/2006 - 21:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-20175"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20175" class="active">Proving the universe correct</a></h3>
+ <div class="content"><blockquote ><p >
+[...] we really wouldn't have to test the routine so developed, because the unproven TCB would be... um... the laws of physics?
+</p></blockquote>
+<p >It's not so much the "actual" laws of physics, but our theories about those laws, which of course we can never prove correct &mdash; although we can test that they're sufficiently reliable approximations.  Proofs can be useful and important, but it all comes down to testing in the end...</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Tue, 08/01/2006 - 06:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-20179"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20179" class="active">Yep</a></h3>
+ <div class="content"><p >I keep forgetting to remind people that in the presence of a phase distinction, e.g. compile-time vs. runtime, proof-at-compile-time and testing-at-runtime are dual: proof-at-compile-time can prove the absence of some undesirable properties that testing can't prove the absence of, while testing can get asymptotically near proving the presence of desirable dynamic (hence unprovable at compile time) properties, depending upon how good the test coverage is&mdash;and there are some nice tools to help increase test coverage, there's the success of randomizing test paths, etc. One ignores either phase at their peril. So my semi-tongue-in-cheek comment above obviously ignores the testing-for-dynamic-semantics aspect. One of the more interesting aspects of using a type system with dependent types is: how much of your semantics is still dynamic in such a system, assuming that either you've got inference of principal typ(ing)s or have written out very specific annotations? Still, some of it obviously will be, else your program would simply normalize to a value (42!) at compile time.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 08/01/2006 - 13:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-20180"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20180" class="active">&quot;Dynamic properties&quot;?</a></h3>
+ <div class="content"><p >I'm afraid I don't get it. How can a property - in the logical sense (and that's what you care for wrt testing) - be dynamic? It may be context or time dependent, but that just turns it into some form of implication or modal statement, it does not make it "dynamic".</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Tue, 08/01/2006 - 13:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-20182"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20182" class="active">I took Paul&#039;s comment</a></h3>
+ <div class="content"><p >I took Paul's comment to mean exactly that -- the sorts of properties we'd use a modal logic to express like progress, communication patterns, phases, etc. All we'd need to make this sort of "dynamic property" statically checkable [in-language] is a type system that can encode CTL* or some similar logic (though I shudder at the thought of types involving type-level-sets of type-level-formulae expressing real properties -- they'd likely be quite a bit larger than good taste permits).</p>
+<p >In a much more restricted (and probably more easily implemented) sense, something like the type discipline described in <i >Language primitives and type discipline for structured communication-based programming</i> by Honda, Vasconcelos, and Kubo <a href="http://scholar.google.com/scholar?cluster=4958628772712584598">[Google scholar]</a> might do the trick if it were turned to describing sessions between programs and environments rather than (and probably subsuming) communicating programs.</p></div>
+ <div class="links">By <a href="user/101" title="View user profile.">Thomas Sutton</a> at Tue, 08/01/2006 - 14:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-20184"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20184" class="active">Language Design Terminology</a></h3>
+ <div class="content"><p >Good point. I meant "dynamic semantics" in the sense that the term is used in programming language design, where the design is broken into "static" and "dynamic" semantics. This definition is admittedly informal, and you're quite right that it's possible to model the dynamic semantics in an appropriate logic. I just haven't seen a language design that actually does, and even if I had, the point remains that this semantics exists on the runtime side of the phase distinction, so testing for desired results, particularly, e.g. in the presence of data from external sources (user input, etc.) remains necessary.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 08/01/2006 - 17:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-20185"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20185" class="active">Actually I would say that</a></h3>
+ <div class="content"><p >Actually I would say that acording to Gödels incompletness theorem there would always exist properties in a programing language that you cant prove, and you might want to test those. (in theory)</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Tue, 08/01/2006 - 18:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-20188"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20188" class="active">Real Programming Languages vs. Algorithmic Information Theory</a></h3>
+ <div class="content"><p >Practical programming languages are designed <em >not</em> to run into the incompleteness theorems: they can compute anything that can be computed. But the question as to what a language that was designed <em >to</em> run into the incompleteness theorems&mdash;indeed, to be able to say new things about them&mdash;would look like is interesting. Thankfully, we don't have to guess; Gregory Chaitin developed a dialect of Lisp to support his books on Algorithmic Information Theory, which can be found <a href="http://cs.umaine.edu/~chaitin/unknowable/lisp.html">here</a>. Basically, Chaitin works with self-delimiting bit strings and has a "try" operator with a time-limit to cut off evaluation. He then constructs proofs out of these blocks, among others. Fascinating stuff.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 08/01/2006 - 19:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-20191"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1633#comment-20191" class="active">The programmers</a></h3>
+ <div class="content"><p >It's not so much the languages, but the programmers, though languages usually do encourage "safer" practices, e.g. structured control constructs.  General recursion, a feature most languages have, and the only (looping) control construct of Haskell is about as "free" as you can get, so I would not say that languages are designed not to run into incompleteness.  As far as I can tell, short of language implementation, the problem domain itself usually is rather distant from incompleteness.  Albeit, Stephen Wolfram <a href="http://www.wolframscience.com/thebook.html">suggests</a> that in reality universality is much more prevalent than we normally think.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Tue, 08/01/2006 - 20:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

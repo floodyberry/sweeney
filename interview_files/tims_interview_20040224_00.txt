@@ -1,0 +1,94 @@
+http://www.beyond3d.com/interviews/sweeney04/
+Tim Sweeney of EpicGames
+Beyond3d interviews Tim Sweeney
+Beyond3d
+Anthony 'Reverend' Tan
+
+<desc>It is unlikely that there are seasoned gamers that haven't already heard of Unreal. Despite seriously divided opinions about the game as a whole, its graphics certainly earned almost universal applause and was one of the major reasons that 3D accelerators took off in a big way (think Unreal and you'll likely think of the misguided-and-demised 3dfx, where Unreal's use of 3dfx's proprietary Glide API was a huge reason for owning a 3D accelerator back then).
+
+Epic Games (then known as Epic MegaGames) then quickly took advantage of the online multiplayer first-person-shooter craze (given a big kick almost single-handedly by id Software's efferverscent Quake) and gave us Unreal Tournament and Unreal Tournament 2003, with the former offering many innovative gameplay modes and is still highly regarded by the multiplayer community.
+
+One of the founders of Epic, Tim Sweeney became a very public figure due to Unreal. Chiefly responsible for the engine (originally called the Unreal Engine) powering all of Epic's games, Tim has been continually refining the engine (now into its UnrealEngine3 iteration), taking advantages offered by the advancing technologies of both the CPU as well as the 3D hardware industry. The Unreal Engine has to be labelled a very successful engine by virtue of the number of non-Epic-developed games that uses it. With a number of licensees of the engine, probably most notably by Ubisoft with games such as Splinter Cell and most recently XIII, Tim Sweeney plays an important and influential part in the balance sheet results of Epic - beyond just creating an engine for games to be developed by Epic, licensees of the Unreal engine pay considerable sums of money to Epic.
+
+This interviewer, having interviewed Tim three times in the past but never before on this site (which, when this realization dawned on this interviewer, was surprising), felt that it would be good to shoot some wide-ranging questions Tim's way. While the nature and focus of this site naturally should lead us to assume that an interview with Tim would be mostly about next-generation hardware or future technology, such an interview wouldn't be possible without having Tim hinting (or at least having the public think he's talking) about Epic's future technology (or, most immediately, what Tim is working on at the moment). The questions are therefore rather general in nature. Finding difficulty in providing us with a recent and decent picture of himself, we'll have to be content with reading Tim's thoughts.</desc>
+
+<q>Can you tell us how, and in what ways, Epic has grown from the days when it was developing the original Unreal to Unreal Tournament 2003? Of the three games, which was the hardest to create and produce?</q>
+
+<a>When James Schmalz, Cliff Bleszinski and I began working on the game that became Unreal back in 1994-95, Epic was a shareware developer and publisher. We had released a number of games such as Jill of the Jungle, Jazz Jackrabbit, and Epic Pinball, but these were all relatively small projects with 1-3 person teams, with everyone working remotely. Unreal was our effort to grow into a major developer.
+
+The original Unreal was the most difficult project we've ever undertaken, largely because it was our first large-scale project and the first experience with 3D programming and content creation for many of us. Development took 3.5 years and it was a great and trying learning experience for all of us. The game ended up being a big hit back in 1998 when it was released, selling around 1.5 million copies.
+
+But Unreal 1's multiplayer didn't achieve everything that we wanted, so we set out to create Unreal Tournament. It was an easier and more rewarding project, because we started out with working technology from the very beginning and were able to focus most of our efforts on gameplay and polish.
+
+Unreal Tournament 2003 was about half-way betweeen the two original Unreal games in complexity. We had upgraded the tech so significantly that a lot of new learning was required before we mastered the new pipeline.
+
+On the other hand, UT2004 started out with a 100% working game to begin with, and now we have been able to focus all of our efforts on improving the core gameplay with new game types like Assault and Domination, and the team is having a great time with it.</a>
+
+<q>You are often credited as "the Unreal engine creator". Can you be more specific about your duties? What roles do your colleagues like Daniel Vogel and Andrew Scheidecker play at Epic? That is to say, do different parts/aspects of the engine have dedicated personnel working on it?</q>
+
+<a>For the original Unreal, Steve Polge wrote the AI and gameplay systems, Erik de Neve wrote the procedural texture effects and helped optimize the renderer, and James Schmalz had written some of the weapon and inventory code.
+
+Most everything else, I wrote : the core engine and resource management, the editor, the renderer, the networking code, the scripting system, the collision detection and physics. It was a fun and daunting experience. I think the one-man-band approach works well for the first year and a half of developing entirely new technology -- if multiple programmers were working on the project at that point we would have just gotten in each others' way and made a mess of things.
+
+By early 1997, we had hired Steve Polge after seeing his Reaper Bot mod for Quake, and he had written his first pass of the AI and gameplay code. That was my first experience collaborating and sharing responsibility for a large amount of code with a great programmer, and it was a very positive experience that paved the way for the next generation of Epic programmers.
+
+Nowadays, we're developing the third generation Unreal engine, and it's a very collaborative effort between a quite larger programming team than the original Unreal. Andrew Scheidecker has written the third generation Unreal Engine's new DirectX9 renderer with its scene visibility solution, new material shader system, new terrain system featuring displacement maps and foliage, and has improved many of the engine's internals. He joined us during development of UT PS2, and he absorbs knowledge at an amazing rate. Dan Vogel has responsibility for the particle system, sound system, new background loading code, and lots more. James Golding is heading up our physics system, while Warren Marshall is responsible for UnrealEd. In total, there are now 11 of us programmers at Epic, each responsible for certain parts of the engine.</a>
+
+<q>Which aspect of a game engine is the most difficult to program and which is the most important, assuming "most difficult" and "most important" are not the same?</q>
+
+<a>I don't think it's wise to single out any subsystem as "the most important", because games are such an across-the-board experience. For a successful game, you almost always have to have fun gameplay (which usually implies good AI, good network code, and good physics), impressive visuals (implying a modern and stable renderer), good sound, sufficiently powerful content creation tools to empower the artists to work their magic, and a sufficently powerful and stable engine framework (the unglorious things like resource management and loading) to enable the programmers to work productively. A game or engine seriously lacking in any of these areas is very likely to turn into a disaster.
+
+On the other hand, it's easy to point to the hardest part of engine development: putting together a coherent set of subsystems that interact well together. It tends to be much easier to program one cool feature in isolation than to make it integrate well with lots of other features. A modern game engine has a very complex set of internal interactions between rendering, networking, physics, gameplay, and editing tools.
+
+For example, good gameplay networking performance depends on having a predictable physics model, and physics depends on collision, which depends on editing tools, which require a renderer for visualization, and that renderer isn't of much use if you don't have an editor so you can get content in. There are a great many circular dependencies, and as Dijkstra said, "The hard part of programming is how to not to make a mess of it".</a>
+
+<q>You have mentioned that UnrealEngine3 - what you're currently working on - is :
+
+"… the name for the next major step in Unreal technology, aimed at DirectX9 hardware as the absolute minimum spec, and scaling (way) upwards from there."
+
+Could you briefly clarify (perhaps with a summarized list of DirectX9 features) what is meant by "DirectX9 hardware as the absolute minimum spec" since there appears to be different interpretations of "minimum DirectX9 spec" from a hardware perspective?</q>
+
+<a>By DirectX9 minimum spec, we mean we're going to make a game that brings today's GeForce FX's and Radeon 9700+'s to their knees at 640x480! :-) We are targetting next-generation consoles and the kinds of PC's that will be typical on the market in 2006, and today's high end graphics cards are going to be somewhat low end then, similar to a GeForce4MX or a Radeon 7500 for today's games.
+
+Specifically, all pixel rendering is done via high level shading language, and these shaders are quite complex and are often dynamically and programatically constructed as artists visually put together their own custom materials. All lighting and shadowing are per-pixel, and we support lighting and shadowing techniques that go one or two generations beyond what the major upcoming 2004 games are doing.</a>
+
+<q>In your opinion, what is the currently the biggest hurdle to overcome in 3D hardware technology? We've seen that shaders go beyond simple texturing and lighting and we're witnessing faster bus technology… what specifics would you like to see addressed?</q>
+
+<a>Now is a great time because 3D hardware is coming out of the dark ages of being toy game acceleration technology, and morphing into highly-parallel general computing technology in its own right. The last hurdle is that the GPU vendors need to get out of the mindset of "how many shader instructions should we limit out card to?" and aim to create true Turing-complete computing devices.
+
+We're already almost there. You just need to stop treating your 1024 shader instruction limit as a hardcoded limit, and redefine it as a 1024-instruction cache of instructions stored in main memory. Then my 1023-instruction shaders will run at full performance, and my 5000-instruction shaders might run much more slowly, but at least they will run and not give you an error or corrupt rendering data. You need to stop looking at video memory as a fixed-size resource, and integrate it seamlessly into the virtual memory page hierarchy that's existed in the computing world for more than 30 years. The GPU vendors need to overcome some hard technical problems and also some mental blocks.
+
+In the long run, what will define a GPU -- as distinct from a CPU -- is its ability to process a large number of independent data streams (be they pixels or vertices or something completely arbitrary) in parallel, given guarantees that all input data (such as textures or vertex streams) are constant for the duration of their processing, and thus free of the kind of data hazards that force CPU algorithms to single-thread. There will also be a very different set of assumptions about GPU performance -- that floating point is probably much faster than a CPU, that mispredicted branches are probably much slower, and that cache misses are probably much more expensive.</a>
+
+<q>When can we expect to see games featuring the UnrealEngine3? Have there been any interests in this engine from potential licensees?</q>
+
+<a>We're not going to be announcing anything along these lines publically for a while, because UnrealEngine3 projects are quite early in development and are are largely tied to platforms and launch timeframes that haven't been announced. But we will be showing UnrealEngine3 behind closed doors at GDC to select development teams.</a>
+
+<q>Is UnrealEngine3 being created with Longhorn (the codename for Microsoft's next Operating System) in mind?</q>
+
+<a>We expect to ship 32-bit and 64-bit executables on-disc, likely with the highest level of graphical detail that our game supports on PC only be available on 64-bit CPU's running the codename Longhorn OS. We certainly won't require it to run the game, but there are a lot of things we can do based on its key architectural improvements including address space, but not only that.</a>
+
+<q>With consoles being more attractive than the PC in terms of profits, how does this affect the way game engines are being designed that simultaneously target both platforms?</q>
+
+<a>Next generation console weighs verily heavily on our minds for the third generation Unreal Engine, and is going to be a major focus of ours both from a game point of view and an engine point of view. Can't say more yet, though.</a>
+
+<q>Your thoughts on PCI-Express in terms of its potential effect on game engine design decisions, as expressed by Ubisoft's Dany Lepage on his own developer page at our site?</q>
+
+<a>Fundamental architectural improvements due to PCI-Express will likely have to wait for the next major Microsoft OS release to be widely utilized by games and by video drivers. But in the meantime, it's a great platform improvement, allowing another decade of significant performance scaling just as AGP reaches its limits. I'm also looking forward to it as a geek toy, being able to buy high-end PC's with two PCI-Express graphics slots and plug in two high-end video cards.</a>
+
+<q>On the 3D Independent Hardware Vendor (IHV) front, the past year has seen a very competitive battle between NVIDIA and ATI. This is not only in terms of outright performance differences but also in terms of DirectX9 API features, with each IHV attempting to one-up each other in the latter category. As a Independent Software Vendor (ISV), do these differences (different performance, different features among different IHV parts) affect the way games are developed?</q>
+
+<a>We've been very happy with both NVidia's and ATI's efforts in the past few years. Though they compete aggressively on features, the architectures and common-denominator feature sets are sufficient that we're not held back. The only thing more we could wish for is for the badly underpowered integrated graphics chips from Intel and others to go away or improve enough that they aren't such unfortunate handicaps for game developers.</a>
+
+<q>There have been criticisms of some DirectX9 games not looking much better than a game like Unreal Tournament 2003. Tomb Raider : Angel of Darkness is an example, despite featuring a host of DirectX9 features like floating point textures and different 2.0 Pixel Shaders for certain effects. In your opinion, what and how do the general gaming public determine what is "great looking"? Do you think it wouldn't be too far wrong to say that it is still a matter of detailed and colorful textures, instead of what DirectX9 proposes to provide ("realism")? Are some of the DirectX9 features too "subtle" to notice in its displayed form?</q>
+
+<a>The first DX9 games will mostly use it to add some visual improvements on top of a rendering pipeline designed over a multi-year development cycle and targetted primarily at DirectX7 hardware. That approach doesn't give you anywhere near the full benefit of DirectX9, but it's the commercially reasonable way to go if you're shipping a product in 2004, because there are at least 10X more DirectX7 class cards in gamers' hands than DirectX9 cards.
+
+The really interesting things in shader land will start to happen in the late 2005 to early 2006 timeframe. That's when there will be a good business case for shipping DirectX9-focused games.</a>
+
+<q>Finally, where do you think 3D hardware and CPU technology should be headed? Do you think we are likely see 3D hardware taking over some of the functions of the CPU, going beyond rendering?</q>
+
+<a>I think CPU's and GPU's are actually going to converge 10 years or so down the road. On the GPU side, you're seeing a slow march towards computational completeness. Once they achieve that, you'll see certain CPU algorithms that are amicable to highly parallel operations on largely constant datasets move to the GPU. On the other hand, the trend in CPU's is towards SMT/Hyperthreading and multi-core. The real difference then isn't in their capabilities, but their performance characteristics.
+
+When a typical consumer CPU can run a large number of threads simultaneously, and a GPU can perform general computing work, will you really need both? A day will come when GPU's can compile and run C code, and CPU's can compile and run HLSL code -- though perhaps with significant performance disadvantages in each case. At that point, both the CPU guys and the GPU guys will need to do some soul searching!</a>
+

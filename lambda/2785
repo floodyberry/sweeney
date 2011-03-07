@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title> Species: making analytic functors practical for functional programming | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2785" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2> Species: making analytic functors practical for functional programming</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p ><a href="http://www.cas.mcmaster.ca/~carette/species/">Species: making analytic functors practical for functional programming</a>, Jacques Carette and Gordon Uszkay. Submitted to MSFP 2008.</p>
+<blockquote ><p >
+Inspired by Joyal's theory of species, we show how to add new type constructors and constructor combinators to the tool set of functional languages. We show that all the important properties of inductive types lift to this new setting. Species are analytic functors, representing a broader range of structures than regular functors. This includes structures such as bags, cycles and graphs. The theory is greatly inspired by combinatorics rather than type theory: this adds interesting new tools to bear, but also requires more work on our part to show that species form a good foundations for a theory of type constructors. The combinatorial tools provide a calculus for these structures which has strong links with classical analysis, via a functorial interpretation of generating series. Furthermore, we show how generic programming idioms also generalise to this richer setting. Once the theory is understood, various methods of implementation are relatively straightforward.
+</p></blockquote>
+<p >Learning more about the theory of species and working out its implications for programming has been on my to-do list for several years now. It really seems like the natural way to more tightly integrate combinatoric ideas into the functional programming style. (For an example of how fruitful this connection can be, consider how datatype differentiation explains zippers/functional pointers.) </p>
+<p >However, there's been this whole "graduation" and "primary research focus" stuff that's kept getting in the way, so I'm happy to see that Carette and Uszkay are figuring it out so I can just crib from them. :)</p> </div>
+ <div class="links">By <a href="user/1111" title="View user profile.">neelk</a> at 2008-04-23 18:37 | <a href="taxonomy/term/22">Category Theory</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2785" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2241 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2785" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2785" />
+<a id="comment-41414"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2785#comment-41414" class="active">Missing link</a></h3>
+ <div class="content"><p >Probably this one:<br >
+<a href="http://www.cas.mcmaster.ca/~carette/species/">http://www.cas.mcmaster.ca/~carette/species/</a></p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">Sjoerd Visscher</a> at Wed, 2008-04-23 18:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-41416"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2785#comment-41416" class="active">Just beat me!</a></h3>
+ <div class="content"><p >I was just about to post this as well. Species have come up on LtU many times over the years, sometimes explicitly and sometimes in the background. Lots of people seem to share the hunch that this is going to be a very important direction for functional and datatype-generic programming in the coming years, so I'm very excited to see this work being done!</p>
+<p >(Incidentally, I think this is also a great example of some of the stuff that generally falls under the cultural heading of "functional programming", but is really only tangentially related to the way that most people understand that term.)</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Wed, 2008-04-23 19:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-41422"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2785#comment-41422" class="active">This is *submitted*</a></h3>
+ <div class="content"><p >Please note that this paper has been <i >submitted</i> to MSFP but not accepted.  It might be good to edit the post reflect that.</p></div>
+ <div class="links">By <a href="user/1094" title="View user profile.">Jacques Carette</a> at Wed, 2008-04-23 20:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-41451"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2785#comment-41451" class="active">Confusing</a></h3>
+ <div class="content"><p >The paper is written with frustrating vagueness, especially in its basic definitions.</p>
+<p >The authors define a species as a certain kind of functor.  But then they define species by means of vague analogy to data structures without stating clearly what the functor is.  For example, we see the species 0 of "structures that can't be instantiated".  What functor is this?  The functor from finite sets to the empty set?  Then we see the species epsilon, "a set with membership but no order on the elements".  Aren't species supposed to be functors?  If so, what's the functor?  What does it mean for a species to be a set?</p>
+<p >The definition of composition equates (F o G) with F(G[A]).  What's A?  What does it mean to equate a species to a structure?  Or does the author mean (F o G)[A] = F(G[A])?  What do the graphs with nodes and lines have to do with the underlying functors?</p>
+<p >What does it mean to restrict a species to a cardinality n?  Its functor maps finite sets to finite sets, so are we talking about restricting the cardinality of the sets in the functor's domain?  Or its range?  If the later, is the resulting functor partial?</p>
+<p >The paper gets clearer later on (e.g. the definition of molecular species).  But by then most of the non-expert audience is lost, which is unfortunate given the impressive breadth of the field that the paper covers and the translation into a generic-programming style implementation in Haskell at the end.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 2008-04-24 19:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-41454"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2785#comment-41454" class="active">Thanks for the feedback</a></h3>
+ <div class="content"><p >The paper was originally written using set-theoretical and combinatorial language only (like the [Berg89] book) but then we decided that for MSFP we could safely assume categorical knowledge.  We had originally tried to give more 'intuition', and unfortunately that came out as vagueness.  We rewrote parts of the paper in a more categorical style, but did not redo the earlier parts.  Clearly we should have done that too. </p>
+<p >We will fix the vagueness - whether the paper gets accepted to MSFP or not.  Hopefully we can do that in the coming week, and we'll update the version on the web site.</p>
+<p >To answer some of your questions: The species 0 is the functor that maps all sets to the empty set (and all arrows to the identity).  The species \epsilon of "elements" is the functor that maps any set U to the set U, and is the identity on arrows (ie keeps the arrows as is); in other words the structures on U are the elements of U.  We carelessly described functors by their images on objects, in other words the "set encoding" of a data-structure [the arrows being bijections].  Think of the usual coding of a pair (a,b) as the set {{a},{a,b}}, or the disjoint sum of sets U and V as the set {(0,u)|u\in U} union {(1,v)|v\in V} [where you have to encode that as a set too].  So the low-level set maps are hideous, and that's why one wants to immediately move away from that.  But the low-level maps are often closer to actual implementation details!  So unlike some of the literature on models of data-structures as Functors, we wanted to keep a bit of that visible since B-species and L-species offer different perspectives on memory hierarchies [for example, something we left out: using 5-sorted species, we can model the 5 levels of memory (register, L1, L2, main memory, on-disk) ].</p>
+<p >For composition, we should have written (F o G)[A] = (F(G[A]]) as the "on objects" definition.  Graphs and nodes are then the usual visual abstraction that one always does when doing set-theory: you associate an abstract object (like a graph) to a particular set-encoding.</p>
+<p >Cardinality restriction can be defined precisely as<br >
+F_n[U] = if |U| = n then F[U] else \emptyset</p></div>
+ <div class="links">By <a href="user/1094" title="View user profile.">Jacques Carette</a> at Thu, 2008-04-24 21:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-41459"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2785#comment-41459" class="active">Thanks!</a></h3>
+ <div class="content"><p >Thanks for elaborating on the definitions.  As I spend more time with this, I'd be happy to provide more feedback directly if you'd like (just email me: tim@epicgames.com).</p>
+<p >There is an impressive amount of information in this paper.  This is an important field for future data structure work, so I see a lot of value in presenting the material in a way that's accessible to technical people in other disciplines.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 2008-04-25 00:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-41571"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2785#comment-41571" class="active">email?</a></h3>
+ <div class="content"><p >[Sorry for the noise on LtU]  Did my email make it through?</p></div>
+ <div class="links">By <a href="user/1094" title="View user profile.">Jacques Carette</a> at Mon, 2008-04-28 21:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-41460"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2785#comment-41460" class="active">What&#039;s functorial composition?</a></h3>
+ <div class="content"><p >I still can't see the difference between composition and functorial composition. The definitions in the paper are F(G[A]) and F[G[U]], which (to me) look identical. (Is there a difference between brackets and parentheses?) I'm guessing the difference has to do with U being the "underlying set", but I have no sense of what that means.</p></div>
+ <div class="links">By <a href="user/1242" title="View user profile.">Dave Menendez</a> at Fri, 2008-04-25 01:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-41572"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2785#comment-41572" class="active">Imprecision, again</a></h3>
+ <div class="content"><p >I have uploaded a new version of the paper where the definitions are much more precise [at least on the object part of the functor, the arrow part is usually straightforward].  You guys really hammered the point home that the ``intuitive'' definitions were simply insufficient [they below in a much longer expository paper, along with many more pictures, but skipping the formal definition was a mistake].</p>
+<p >Composition is really substitution - F\circ G is really an F-structure on a set of G-structures obtained by partitioning the underlying set.  It corresponds to composition of power series.  This is what people mean when they say "a List of Trees".  Functorial composition corresponds to putting an F-structure on the set of all G-structures on the underlying set, which corresponds to composition of series <b >coefficients</b>.  The neutral element for Functorial composition is the species of pointed sets, while X is the unit for composition.</p></div>
+ <div class="links">By <a href="user/1094" title="View user profile.">Jacques Carette</a> at Mon, 2008-04-28 21:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="
+http://wiki.squeak.org/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2008/03/29" title="Previous month">«</a> April 2008  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2008/4/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2008/4/2" title="1 post">2</a></td>
+  <td class="day-link"><a href="archive/2008/4/3" title="1 post">3</a></td>
+  <td class="day-normal">4</td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/4/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2008/4/7" title="3 posts">7</a></td>
+  <td class="day-link"><a href="archive/2008/4/8" title="1 post">8</a></td>
+  <td class="day-link"><a href="archive/2008/4/9" title="2 posts">9</a></td>
+  <td class="day-link"><a href="archive/2008/4/10" title="2 posts">10</a></td>
+  <td class="day-link"><a href="archive/2008/4/11" title="3 posts">11</a></td>
+  <td class="day-link"><a href="archive/2008/4/12" title="2 posts">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/4/13" title="2 posts">13</a></td>
+  <td class="day-link"><a href="archive/2008/4/14" title="3 posts">14</a></td>
+  <td class="day-link"><a href="archive/2008/4/15" title="2 posts">15</a></td>
+  <td class="day-link"><a href="archive/2008/4/16" title="2 posts">16</a></td>
+  <td class="day-link"><a href="archive/2008/4/17" title="1 post">17</a></td>
+  <td class="day-link"><a href="archive/2008/4/18" title="1 post">18</a></td>
+  <td class="day-normal">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/4/20" title="3 posts">20</a></td>
+  <td class="day-link"><a href="archive/2008/4/21" title="2 posts">21</a></td>
+  <td class="day-link"><a href="archive/2008/4/22" title="1 post">22</a></td>
+  <td class="day-link"><a href="archive/2008/4/23" title="1 post">23</a></td>
+  <td class="day-link"><a href="archive/2008/4/24" title="2 posts">24</a></td>
+  <td class="day-link"><a href="archive/2008/4/25" title="3 posts">25</a></td>
+  <td class="day-link"><a href="archive/2008/4/26" title="1 post">26</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/4/27" title="1 post">27</a></td>
+  <td class="day-normal">28</td>
+  <td class="day-today"><a href="archive/2008/4/29" title="2 posts">29</a></td>
+  <td class="day-future">30</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2794" title="4 comments">A Cybernetics DSL?</a></li><li><a href="node/2791" title="14 comments">Is Halting Problem Valid for P?</a></li><li><a href="node/1096" title="7 comments">iPod-compatible SICP</a></li><li><a href="node/2754" title="30 comments">Static Analysis for Duck Typing</a></li><li><a href="node/1662" title="80 comments">Lisp Lovers, how would you fix Lisp or bring it up to date?</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2794" title="4 comments">A Cybernetics DSL?</a></li><li><a href="node/2792" title="3 comments">is there anybody knows about the origin &quot;Dope Vector&quot;?</a></li><li><a href="node/2791" title="14 comments">Is Halting Problem Valid for P?</a></li><li><a href="node/2790" title="1 comment">Dao 1.0 preview version is released</a></li><li><a href="node/2789" title="3 comments">Resume using continuations</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

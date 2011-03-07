@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2340
+http://lambda-the-ultimate.org/node/2340#comment-34910
+1050916
+Simply Easy! (An Implementation of a Dependently Typed Lambda Calculus)
+Can you imagine your typical
+<p></p><blockquote><div>Can you imagine your typical programming team mucking about with a type-checker debugger, trying to figure out why their app won't compile?</div></blockquote><p>
+</p><p>Hey, C++ templates are a Turing complete compile-time construct, hence they can loop.  Industry-wide, maybe 0.01% of C++ debugging time is spent determining why a template expression loops.  Much as we all hate C++, it's the world's leading mainstream programming language today, and the partial typechecker is absolutely not a barrier to adoption.</p>

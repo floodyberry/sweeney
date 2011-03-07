@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1035
+http://lambda-the-ultimate.org/node/1035#comment-10691
+1049611
+literature on commutative lifted boolean operators
+Parallel Or
+<p>Most of the research on this topic talks about "Parallel Disjunction", which is the or-counterpart of the 'land' operator you describe.  I'm not familiar enough to reference specific papers, but a search for "Parallel Disjunction" turns up lots of stuff.
+</p><p>Such parallel operators are definitely the route to "maximum lazyness", and it's easy to envision building higher-level operations from them, especially if nondeterminism is allowed.  For example, a parallel "find" operation could find some occurance of a value in a list provided that at least one non-divergent such value is present.
+</p><p>One thing to keep in mind is that the combinatorical performance impact of these parallel operators can be quite dramatic, having to execute an unbounded amount of divergent code while searching for one convergent result.  It's quite easy to construct programs this way that are convergent in principle but not on any available hardware.</p>

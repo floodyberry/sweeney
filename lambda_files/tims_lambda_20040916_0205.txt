@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/144
+http://lambda-the-ultimate.org/node/144#comment-1915
+1048720
+History: Array languages
+Why not more array languages?
+<p>Some thoughts on why array languages aren't more prevalent.
+</p><p>1. Most major programs that make significant use of arrays (and would benefit from array constructs there) also make use of significant other features where one wants a more polished, complete, or mainstream language than array languages.
+</p><p>2. Most programs that use arrays don't do anything that's difficult to do with existing languages.  For example, if you deal with fixed-size vectors and matrices, then you just write a few functions for array-matrix multiplication and then you build your program on top of that.
+</p><p>3. There are reasonable theoretical arguments against some of the common features of array languages.  For example, given a function f:t-&gt;u, some array languages automatically let that function operate on arrays, for example as if it's overloaded to f:[t]-&gt;[u]=map(f), etc.  This is incompatible with Haskell-style polymorphism.  For example, given a function reverse:[t]-&gt;[t] which reverses an array, and a value a::[[t]], there are two different ways one could interpret reverse(a), and this is confusing.  Similar combinatorical ambiguities occur with automatic currying (treating any f:(t,u)-&gt;v as f:t-&gt;u-&gt;v , etc.</p>

@@ -1,0 +1,32 @@
+http://www.digitalmars.com/d/archives/8.html#N338
+[D] Operator overloading
+As someone who writes tons of vector math code in production applications, my feeling is that a language which doesn't support operator overloading and template-style programming is really going to be really painful for moden math-intensive applications, such as games, modelling programs, etc.
+
+I'm not necessarily advocating C++'s approach (operator overloading can be confusing, such as using an overloaded "<<" operator to represent both bit shifting and character output!)
+
+Haskell-style "typeclasses" are an interesting replacement for general operator overloading.  This approach encapsulates the idea that a given operator like "+" or "*" should have the same notional meaning everywhere, even when operating on different data types.
+
+A simple example is that "+" and "*" would belong to the "numeric" typeclass.  If you create a new numeric typeclass of your own (for example, a "bigint" class), then you declare your class to belong to the "numeric" typeclass, and implement those specific operators.  However, you wouldn't be able to create a "+" operator for a non-numeric class.
+
+This can map to popular languages easily by having your class implement an abstract interface (aka typeclass) and provide an appropriate static or friend function for those operators.
+
+However, this approach doesn't extend well to more general situations.  For example, say you define a template like vector<float,4> (a mathematical 4-component vector), one wants the ability to multiply those vectors by scalars using "*", which requires the more general form of overloading.
+
+-Tim
+
+"John Fletcher" <J.P.Fletcher aston.ac.uk> wrote in message news:3B78E154.BC62E006 aston.ac.uk...
+
+[blockquote]
+Quote from the specification for D:
+
+Operator overloading. The only practical applications for operator overloading seem to be implementing a complex floating point type, a string class, and smart pointers. D provides the first two natively, smart pointers are irrelevant in a garbage collected language.
+
+Another quote:
+
+D has many features to directly support features needed by numerics programmers, like direct support for the complex data type and defined behavior for NaN's and infinities.
+
+Comment:
+
+For numerical computing it is convenient to define classes e.g. vectors, matrices and other entities beyond complex numbers, such as quaternions.  For this overloading of operators such as +, -, +=, etc means that top level code can be easily written and readable.
+
+John Fletcher[/blockquote]

@@ -1,0 +1,30 @@
+http://lambda-the-ultimate.org/classic/message6346.html
+http://lambda-the-ultimate.org/classic/message6346.html#6378
+0530634
+Book and Course in Constraint Programming and Reasoning
+Re: Book and Course in Constraint Programming and Reasoning
+<p>Dominic,</p><p>
+
+In the style of code I was writing, there are three cases:</p><p>
+
+- Some constraints can be verified at compile time.  These simplify down to determinate terms.</p><p>
+
+- Some constraints can only be verified at runtime, so the compiler just marks them nondeterministic (i.e. the type may be inhabited by 0, 1, or many terms), and lets the runtime sort them out.</p><p>
+
+- Some constraints can't be verified due to limitations of the language or to undecidability in general.  These result in a compiler error.  For example, you can express Fermat's Last Theorem as "flt typedef {x:nat&gt;0, y:nat&gt;0, z:nat&gt;0, n:nat&gt;2, x^n+y^n=z^n }".  The compiler has no idea whether that statement is inhabited or not, but it's happy to accept the definition.  And if you supplied a deterministic value x, the compiler or runtime can tell you whether x is a witness to flt.</p><p>
+
+I have a compiler that accepts these kinds of expressions and can verify constraints.  For example with the above definitions, you can say:</p><p>
+
+x:t={3,4,r:nat}</p><p>
+
+And the term reduces to {3,4,5}.  This is just a simple case of filling in the blanks and forward-propagating values around terms.  This isn't an everything-is-global implementation like Prolog; everything can be arbitrarily nested in records, closures, arrays, etc.</p><p>
+
+The "=" operator performs unification.  In the case of deterministic terms (the only thing you can express in languages like C++), it works just like you'd expect, but given non-deterministic terms a and b, "a=b" denotes the set of values that a and b have in common.</p><p>
+
+You can't express this sort of thing in C++, because there's a syntactic distinction between templates (which are purely compile-time), and functions (which are a purely runtime).  So, for example, you can't write a simple function f(x) and template t&lt;i&gt; and refer to t&lt;f(x)&gt; for example.  You can't write a single "assert" that functions both at compile time and runtime.  You can't write a matrix(n,m) class which supports type-checked fixed-size matrices and unknown (at compile time) sized matrices.</p><p>
+
+So every C++ class library tends to implement stuff twice, once for the purely runtime case (i.e. for variable-size matrices) and again using templates for the purely compile-time case (i.e. for fixed-size matrices).</p><p>
+
+These limitations are understandable for a language that evolved from C, a "processor independent assembly language" from the 1970's.  But it's very unfortunate that modern efforts like the Java generics extensions, and the C# generic types proposal, still go that route.  Dependent types provide a natural and far more general solution than templates, allowing for checking at compile-time when possible, and at runtime otherwise.</p><p>
+
+-Tim</p>

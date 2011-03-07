@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1134
+http://lambda-the-ultimate.org/node/1134#comment-12410
+1049710
+Generalized Algebraic Data Types and Object-Oriented Programming
+It&#039;s always great to see rece
+<p>It's always great to see recent research advances from Haskell and elsewhere make their way into mainstream languages like this.
+</p><p>C# generic constraints have always seemed somewhat strange in their operation.  How does the typechecker work, exactly?  When you're typechecking an expression in a context, do you go off and search all of the constraints visible to that context in order to find a match?
+</p><p>In implementing these things elsewhere, it has always seemed more convenient to introduce intersection types and union types and require explicit binding of variables to them, to avoid the go-search-the-environment-for-constraints voodoo.  You really want typechecking to be context-free, in the sense that grammars are context-free: a term should have an interpretation independent of the context in which it exists.</p>

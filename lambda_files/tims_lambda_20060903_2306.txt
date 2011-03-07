@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/1712
+http://lambda-the-ultimate.org/node/1712#comment-20935
+1050288
+Small Value Set Types
+Finite set types
+<p>See <a href="http://lambda-the-ultimate.org/classic/message6641.html">http://lambda-the-ultimate.org/classic/message6641.html</a> for a link to a language with a type system that tackles some of these concepts very generally.</p>

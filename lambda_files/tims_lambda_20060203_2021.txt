@@ -1,0 +1,17 @@
+http://lambda-the-ultimate.org/node/1277
+http://lambda-the-ultimate.org/node/1277#comment-14300
+1049853
+The Next Mainstream Programming Languages
+Why virtual classes?
+<p><span class="italic"> How is that different from just adding new fields to class Actor? If all classes extending Actor will need those new fields, then it makes sense to add the field to class Actor. </span>
+</p><p>In a one-developer world, you would just add the new functionality to your base class.  But in the case of Unreal Engine 3, we maintain and distribute a large software framework used by a hundred or so other developers.
+</p><p>We're continually adding new features to the framework, so if an external developer adds a new member function to our base class's source in their local codebase, then they'll need to merge their changes into all subsequent versions of our framework, and we release frequently - every week or two.
+</p><p>In this case, a virtual class solution that enables a team to extend an entire class hierarchy in a framework, without modifying the framework's source, would be very valuable.
+</p><p>Obviously there are lots of workarounds available (see the slides) - adding extra data components, dynamically casting them to the expected type, etc.  But they're quite error-prone.
+</p><p><span class="italic"> by the time a game gets to the flat profile, does it usually have sufficient performance? </span>
+</p><p>When all commercially-practical code optimizations have been exausted, further optimizations have to come from the game's content: reducing the number of visible objects, enemies, etc.  At that point, it's just a performance vs quality tradeoff, as opposed to performance vs cost.
+</p><p><span class="italic"> Arrays are preferable to lists? doesn't that mean imperative counters? </span>
+</p><p>Comprehensions and folds are fine substitutes for imperative iteration.
+</p><p><span class="italic"> Type inference doesn't scale </span>
+</p><p>My 1-line example produced an incomprehensible error message in HUGS, but it was easy enough to see what was wrong with that code.  Given a multi-hundred like Haskell program with fairly complex typing, it can be combinatorially more difficult to figure out what's wrong, given such an error message.  This property doesn't seem at all tenable in a mainstream programming language.
+</p><p>Note that I'm only arguing against type inference: inferring x::Numeric in "f x = x+1".  Type propagation, deriving the typing x::Numeric from "x = 7", is not problematic.</p>

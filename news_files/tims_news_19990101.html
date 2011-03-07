@@ -1,0 +1,199 @@
+<h4>Happy New Year</h4>
+
+<p>The team is now getting back together from the holiday and we'll get back to Unreal 221
+development first thing tomorrow (Saturday).&nbsp; We were on the verge of releasing the
+patch right before Christmas, but we're now back to being a few days away, since I added
+some new features that need re-testing, and some additional bugs have been found.</p>
+
+<p>For me, the holidays were fun and productive.&nbsp; I hauled my computer up to Maryland
+for a one-week visit with my parents, and that provided a good excuse to work on engine
+improvements and new R&amp;D in a zero-distractions environment.&nbsp; Without getting to
+deep into the details, here are some of the things I worked on: </p>
+
+
+<ul>
+  <li><p><span class="strong">Unicode Unreal</span>.&nbsp; I finished up 16-bit Unicode support; now the
+    Unreal code base can be recompiled for the ANSI (8-bit) or UNICODE (16-bit) character
+    sets.&nbsp; This has several advantages.&nbsp; First of all, localizing a game for
+    non-Roman languages (such as Japanese, Chinese, Korean, Hebrew, Arabic) is easy with
+    Unicode.&nbsp; Second, we're really interested in Windows CE, and that is a pure Unicode
+    OS.&nbsp; Windows CE is the native operating system of the Dreamcast, so Unicode is a
+    natural stepping-stone along the Dreamcast porting path which we're exploring. &nbsp;
+    Windows CE is also used in tons of palm-top computers.&nbsp; Now, none of these palm-top
+    computers are currently interesting from a gamer's perspective, but if you extrapolate
+    their grown--in terms of video resolutions, RAM, and processing power--along a Moore's Law
+    curve, they're not that many years away from being comparable to low-end Pentium II PC's
+    today.&nbsp; I like to think that the GameBoy's of the future won't be a closed platform,
+    but rather run a standardized OS like Windows CE.</p>
+
+    <p>
+    All Unreal data files are &quot;character set neutral&quot;, meaning they can contain any
+    mix of ANSI and Unicode characters, and they're automatically converted/truncated at load
+    time.&nbsp; Network play similarly &quot;just works&quot; between the Unicode and
+    non-Unicode versions.</p>
+    
+    <p>
+    Regarding Unicode font issues (&quot;who's going to paint all those Japanese
+    characters?&quot;), Jack Porter has built a TrueType font importer into UnrealEd, which
+    converts any Windows TrueType font to an Unreal-compatible font bitmap.&nbsp; This is an
+    essential part of our Unicode efforts, but also ties into the new user interface he and
+    Brandon are building for Unreal Tournament.&nbsp; There are lots of Unicode fonts with
+    support for nearly all Windows-supported languages, so localizing games into all languages
+    should be fairly painless.</p>
+  </li>
+  <li><span class="strong">Data compression</span>.&nbsp; I spent a couple days experimenting with
+    various compression schemes and found some interesting results.&nbsp; First of all, it's
+    fairly easy to achieve PKZIP-quality compression--the algorithms are well documented and
+    easy to implement.&nbsp; Second, it's nearly impossible to beat PKZIP by much of a margin.
+    &nbsp; Beyond the standard algorithms (Huffman and LZH compression), I experimented with
+    many variations, including:<ul>
+      <li>&quot;Double&quot; Huffman-compressing each character in a file then recursively merging
+        compressed regions together into spans, with the goal of compressing &quot;different types
+        of data&quot; with different encoding tables.&nbsp; This approach came out neutral: there
+        were huge gains in compression, but they were offset by having to store lots of Huffman
+        tables.</li>
+
+      <li>Trying Huffman compression in bases other than 2 (such as 3, 5, and 7): no overall
+        gains.</li>
+      <li>&quot;Infinite sliding window&quot;: An LZH-style scheme that spends a huge amount of
+        CPU time on compression by analyzing an entire file for differences.&nbsp; Here, the gain
+        was typically 10%, but it was unbearably slow to work with.</li>
+      <li>Arithmetic encoding.&nbsp; This is a Huffman-style scheme that employs some basic number
+        theory to generate a compression table using arbitrary bases (other than base 2). &nbsp;
+        This gets real gains of around 10% compared to Huffman, but is much slower to decode
+        because it relies on arbitrary-precision integer math.</li>
+
+    </ul>
+    <p>I didn't get the compression code into the Unreal master source (it was standalone
+    R&amp;D).&nbsp; I'm considering supporting compression for client-downloadable files in
+    Unreal Tournament, to make it easier to go onto servers running custom maps.&nbsp; My most
+    usable compression scheme got 4:1 compression on .unr and .u files (nice!) but no
+    significant compression on textures and sounds.</p>
+    
+    <p>
+    Unreal's textures compress poorly for an interesting reason: they are already stored using
+    palettes, which are a form of compression.&nbsp; Furthermore, the process of generating an
+    optimal palette for an image yields an array of bytes which are distributed
+    near-uniformly, which is the worst possible case for variable-code-word compression.
+    &nbsp; I think the state-of-the-art in texture compression will be S3's real-time S3T/DXT
+    scheme, which is fairly lossy, but optimal for real-time decompression while rendering.
+    &nbsp; And it's 6:1 for all possible kinds of data.</p>
+
+    <p>One interesting technique I played around with for texture compression is wavelet
+    compression.&nbsp; The 2D wavelet scheme for textures is quite similar to mipmaps: to
+    oversimplify a lot, you represent an nxn image as a sequence of 1x1, 2x2, 4x4, 8x8 ...
+    nxn.&nbsp; Each bitmap is stored as &quot;signed differences&quot; relative to the
+    lower-res versions of the bitmap.&nbsp; Wavelets are a good starting point for lossy
+    compression schemes, because the &quot;most visually noticeable&quot; details are in the
+    low-res bitmaps, and in the high-frequency portions of the high-res ones.&nbsp; So, it's
+    fairly easy to filter out unimportant details and compress what remains.&nbsp; Wavelets
+    are also nice because you can generate all your texture's mipmaps from a single wavelet
+    without any overhead.&nbsp; While I don't think wavelets will play a role in our future
+    texture-mapping plans, they look more useful as a way of storing and manipulating height
+    maps and displacement maps.&nbsp; Wavelets provide a very efficient, &quot;level of
+    detail&quot;-aware form of storing 2D surface geometry.</p>
+
+  </li>
+  <li><p><span class="strong">3D API's</span>.&nbsp; I spent a few days learning the basics of curved
+    surface rendering, which turned out to be very interesting.&nbsp; I was going to do my
+    research with Direct3D (under Windows NT 5.0 Beta 3 RC0) but the 3D hardware support isn't
+    quite there yet, so I took the opportunity to learn OpenGL using the software rasterizer
+    and 3dfx's OpenGL minidriver.&nbsp; Both renderers were extremely stable and easy to use.
+    &nbsp; To my amazement, I never experienced a &quot;blue screen of death&quot; or had to
+    reboot--quite a difference from my past work with Glide and Direct3D!&nbsp; (Note: I
+    haven't been very closely involved in the Unreal Direct3D and OpenGL support, which has
+    been developed by our partners, so this is my first really in-depth experience).<p>OpenGL's
+    approach to window management turns out to be extremely simple and reliable.&nbsp; I went
+    from zero to having a spinning cube up and running in under 30 minutes.&nbsp; The tools GL
+    provides for polygon drawing are extremely simple and powerful.&nbsp; For just drawing a
+    few lone polygons, glVertex() and its associated functions are super-easy.&nbsp; For
+    drawing complex meshes, GL's approach to providing separate client-side arrays for
+    vertices, colors, and texture coordinates is very easy and efficient for multi-pass
+    rendering, since you can swap out one table (say, texture coordinates) without affecting
+    the others.</p>
+
+    <p>OpenGL's texture approach (glTexImage2D and glBindTexture) are also very simple and
+    powerful.&nbsp; I remember back under DirectX5, trying to upload a texture to hardware.
+    &nbsp; I spent 4 hours trying to figure out the code and rebooting my computer as it
+    repeatedly locked up.&nbsp; I spent less than 15 minutes figuring out OpenGL texturing and
+    implementing it.&nbsp; Comparing both API's texturing approaches, OpenGL's texture
+    management is absolutely the right way to go.
+    </p>
+    <ul>
+      <li>It's extremely foolproof--you call 3 textures to create, upload, and delete textures.
+        &nbsp; Nothing can possibly go wrong!</li>
+      <li>There is no bizarre/mysterious emulation going on.&nbsp; For example, in Direct3D you
+        can modify a texture by Lock()ing it and writing to &quot;video memory&quot; directly.
+        &nbsp; But, on some hardware (like the Riva TNT), the hardware stores textures internally
+        in a &quot;swizzled&quot; format you can't access directly.&nbsp; So some emulation thing
+        has to go on behind the scenes where multiple copies of the textures are maintained and
+        copied around.</li>
+
+      <li>OpenGL hides the inner details of texture management from the app, enabling the driver
+        to be optimized for whatever style of texture management is best for a particular 3D card.
+        &nbsp; In OpenGL, a driver writer has total control over texturing and can optimize the
+        hell out of it.&nbsp; In Direct3D, the API hides the application from the hardware and
+        vice-versa, which makes it impossible for a game or a hardware driver to implement good
+        texture caching.</li>
+    </ul>
+    <p>Here's a link to <a href="http://www.opengl.org/">OpenGL information</a> and <a
+    href="http://www.microsoft.com/directx">DirectX information</a>.</p>
+
+  </li>
+  <li><span class="strong">Curved Surfaces</span>. I became familiar with a bunch of different
+    techniques.&nbsp; Curved surfaces pose the same kind of dilemma I felt when writing
+    Unreal's software renderer: there are lots of mutually incompatible approaches to choose
+    from, but no really clear favorite.&nbsp; Each technique has some desirable strengths, but
+    no technique combines them all.<p>My first experimentation was with bicubic bezier
+    patches, which are a great primitive for building curvy shapes without holes between
+    patches (as with polygons, continuity can be guaranteed by having adjacent patches share
+    vertices and control points).&nbsp; However, they require a fair amount of math for
+    tessellation and, though continuity can be guaranteed, it's hard to join patches together
+    smoothly (with a continuous normal vector across adjacent patches), especially during
+    animation.&nbsp; I'm pretty sure these will be a key primitive in the next-generation
+    engine.&nbsp; Beziers are very intuitive to model with.</p>
+
+    <p>The tensor-product math for bicubic bezier quad patches can easily be modified to
+    enable &quot;bicubic bezier triangles&quot;, which can share edges continuously with
+    quads.&nbsp; I haven't been able to find any references on this, but I derived the math,
+    and it seems to work.</p>
+    <p>Then, a totally different approach can be used to generate smoothly curved surfaces of
+    arbitrary topology, using a technique known as &quot;subdivision surfaces&quot;. &nbsp;
+    This looks promising: approximately the same overhead as Beziers, but a bit more general.</p>
+    <p>All of the above approaches can also be modified to support displacement maps, for
+    creating more organic geometry.&nbsp; While it will be a long time before 3D hardware
+    supports sufficient triangle densities for displacement maps to be practical for fine
+    surface detail (such as rocks and bricks in walls), they're very applicable to terrain and
+    coarse surface detail.</p>
+
+    <p>There are two even wilder curved techniques I experimented with and found to be quite
+    promising, but I don't want to get too far off on that tangent.</p>
+    <p>No, Unreal Tournament will not contain any curved surfaces.&nbsp; While curves are cool
+    and we'd love to have them, we've been totally focused on core game play, networking, and
+    user-interface enhancements for UT.</p>
+    <p>One thing that has become extremely clear in my curved-surface rendering research is
+    that editing tools will be a make-or-break factor in the success of next-generation level
+    design.&nbsp; UnrealEd is a pretty feature-filled polygon based editing tool, but we're
+    going to need a lot more than that for the next generation.&nbsp; So many features that
+    were trivial with polygon engines--such as texture alignment, light map placement,
+    primitive building tools, object alignment, and freeform object editing--become more
+    complex when curves are involved.&nbsp; The editing tools will need to be more powerful
+    and intuitive in order to compensate.&nbsp; Editing tools will be a huge focus for us
+    going into the next project.</p>
+
+  </li>
+</ul>
+
+<p>-Tim Sweeney</p>
+
+<h4>Other Updates</h4>
+
+<ul>
+  <li>We updated and coolified the <a href="http://unreal.epicgames.com/Partners.htm">Unreal Technology Partners</a> page,
+    which lists all the announced Unreal engine licensees.&nbsp; </li>
+
+  <li>Alexander Brandon updated the <a href="http://www.epicgames.com/alex/music.htm">Music
+    composition page</a>.</li>
+  <li>Dave Carter's <a href="http://www.nervedamage.com/">Nerve Damage</a>
+    contains lots of cool resources for Unreal modelers and animators.</li>
+</ul>

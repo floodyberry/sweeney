@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Uniform naming | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2677" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Uniform naming</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Via <a href="http://research.swtch.com/2008/02/hideous-name.html">research!rsc</a>, I came across <a href="http://pdos.csail.mit.edu/~rsc/pike85hideous.pdf">The Hideous Name</a>. Although it's mainly about file and email names, this paragraph was interesting.</p>
+<blockquote ><p >
+Although this syntax may seem unnecessarily cumbersome, it has a precedent: it is analogous to expressions      in programming languages. Consider a C expression such as *structure[index].field-&gt;ptr. If * were postfix and / the only dereferencing operator, the expression might be written structure/index/field/ptr/. Functionally-minded programmers might use the notation contents(ptr(field(index(structure)))). (A single character cannot be used in C because it could not distinguish X[Y] and X-&gt;Y, with X a structure pointer and Y an integer or structure element respectively, but this ambiguity could be eliminated in a different language.) C and VMS use syntax to distinguish the types of the components of a name. Instead, the UNIX file system deliberately hides the distinctions. Aside from the obvious advantages such as simplicity of syntax and the usurping of only a single character, the uniformity also makes the name space easier to manipulate: the mount system call aliases a disk and a directory.
+</p></blockquote>
+<p >Do any languages use a uniform naming system for all entities?</p>
+<p >[Edit: fixed the links]</p> </div>
+ <div class="links">By <a href="user/5279" title="View user profile.">George Morrison</a> at 2008-02-18 20:12 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/2683" title="TinyML - Lexer, Parser, Interpreter, and Polymorphic Type Checker in Under 700 Lines of SML">previous forum topic</a> | <a href="node/2659" title="time as a first class value?">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2677" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 1097 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2677" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2677" />
+<a id="comment-40217"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2677#comment-40217" class="active">Dereferencing operators</a></h3>
+ <div class="content"><p >If all dereferencing-like operators are made postfix as in Pascal, then you can write: structure[index].field^.ptr^.  This is clearly superior to to the messy combination of prefix and infix path operators in C++ that lead to ugly expressions like *((*a)-&gt;b[c].e)-&gt;f.  That half of your proposal has much merit.</p>
+<p >But, merging all such operations into a single symbol would have undesirable consequences.  For example, in C++/Java/C#, a.b looks up b in the scope of a, while a[b] looks up b in the current scope.  If you combined syntax, then the scope in which "b" is found in "a/b" would depend on whether a is a class or array.  Context-dependent scoping would add undesirable complexity.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Mon, 2008-02-18 23:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-40219"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2677#comment-40219" class="active">For example, in C++/Java/C#,</a></h3>
+ <div class="content"><p ><i >For example, in C++/Java/C#, a.b looks up b in the scope of a, while a[b] looks up b in the current scope.</i></p>
+<p >I don't think I understand what you mean by 'current scope'. Surely the value returned by a[b] is the value of b in the scope of a, just like a.b. Unless you're referring to the distinction between variables and literals. If b is a literal, the meaning is the same, but if b is a variable, then a.b is currently meaningless for structs, but for arrays it's value in the current scope is used. We would need something like first-class labels and a disambiguation strategy to be able to use them both (as they are both useful). Something like the syntax for string substitution in various scripting languages:</p>
+<pre >//look up 'b' under scope 'a'
+a/b
+
+//variable 'b' from current scope spliced into the access
+a/$b</pre></p></div>
+ <div class="links">By <a href="user/2352" title="View user profile.">naasking</a> at Mon, 2008-02-18 23:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-40220"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2677#comment-40220" class="active">Perhaps...</a></h3>
+ <div class="content"><p >...although I think Alloy makes an interesting choice: everything is represented as a relation, even scalars, tuples, and sets. The "dot" operator, then, is a join, but it works uniformly given this uniform representation. See <a href="http://people.csail.mit.edu/dnj/talks/re05-tutorial/alloy-90.pdf">Alloy in 90 Minutes</a> (PDF) for more.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 2008-02-19 05:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-40246"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2677#comment-40246" class="active">Cool, thanks for the PDF link</a></h3>
+ <div class="content"><p >time to re-read-up on alloy again. (for various reasons, i've been thinking nebulous thoughts about how i want to try writing code which basically has a relational database in memory and then a bunch of rules which operate using that data. so this sounds like food for thought in that general vicinity.)</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Tue, 2008-02-19 18:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-40253"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2677#comment-40253" class="active">You Might Find...</a></h3>
+ <div class="content"><p ><a href="http://www.equi4.com/metakit/index.html">MetaKit</a> or <a href="http://dbappbuilder.sourceforge.net/Rel.html">Rel</a> interesting. See also <a href="http://lambda-the-ultimate.org/node/1446">Out of the Tar Pit</a>, right here on LtU.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 2008-02-19 20:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-40277"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2677#comment-40277" class="active">Categories and Allegories oh my</a></h3>
+ <div class="content"><p >I don't completely grok category theory wrt programming languages, so I am even more at sea with this, but it sounds like there is some angle on relational data modeling <a href="http://www.cs.nott.ac.uk/~gmh/allegories.txt">via allegories</a>?</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Wed, 2008-02-20 22:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-40218"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2677#comment-40218" class="active">The link above is broken</a></h3>
+ <div class="content"><p >It should be <a href="http://plan9.bell-labs.com/cm/cs/doc/85/1-05.ps.gz">http://plan9.bell-labs.com/cm/cs/doc/85/1-05.ps.gz</a>.</p></div>
+ <div class="links">By <a href="user/2010" title="View user profile.">johnwcowan</a> at Mon, 2008-02-18 23:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-40221"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2677#comment-40221" class="active">Doh!</a></h3>
+ <div class="content"><p >I forgot to fill in the link URLS. Fixed.</p></div>
+ <div class="links">By <a href="user/5279" title="View user profile.">George Morrison</a> at Tue, 2008-02-19 06:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="
+http://wiki.squeak.org/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2008/02/08" title="Previous month">«</a> March 2008  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2008/3/1" title="1 post">1</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/3/2" title="1 post">2</a></td>
+  <td class="day-link"><a href="archive/2008/3/3" title="2 posts">3</a></td>
+  <td class="day-normal">4</td>
+  <td class="day-link"><a href="archive/2008/3/5" title="1 post">5</a></td>
+  <td class="day-link"><a href="archive/2008/3/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2008/3/7" title="1 post">7</a></td>
+  <td class="day-today">8</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">9</td>
+  <td class="day-future">10</td>
+  <td class="day-future">11</td>
+  <td class="day-future">12</td>
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+  <td class="day-future">15</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2706" title="48 comments">Confused Deputies in Programming Languages</a></li><li><a href="node/2710" title="4 comments">Excel as a different programming paradigm</a></li><li><a href="node/2699" title="28 comments">Is null needed?</a></li><li><a href="node/2698" title="5 comments">A Question about Overlap</a></li><li><a href="node/1439" title="182 comments">What do you believe about Programming Languages (that you can&#039;t prove (yet))?</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2710" title="4 comments">Excel as a different programming paradigm</a></li><li><a href="node/2707" title="2 comments">Type-safe solution to the expression problem in C#?</a></li><li><a href="node/2706" title="48 comments">Confused Deputies in Programming Languages</a></li><li><a href="node/2704" title="8 comments">Bell-LaPadula and type safety</a></li><li><a href="node/2703" title="4 comments">Structural recursion on sets</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

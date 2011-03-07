@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/1438
+http://lambda-the-ultimate.org/node/1438#comment-16434
+1050014
+Folding neither Left nor Right (or how to avoid overspecifying the solution to a problem)
+Neutral folds
+<p>A compiler for a Turing-complete language can't ascertain whether an arbitrary function of two variables is commutative.  So, could we hope to come up with an incomplete but conservative solution for determining commutativity that succeeds in simple cases?  Unfortunately, even that seems intractably difficult to implement, and even then, only likely to work in the most simplistic of cases.</p>

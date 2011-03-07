@@ -1,0 +1,9 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/5052cd7f5788f790/7c5604a8622bbbde?lnk=st&rnum=27&hl=en#7c5604a8622bbbde
+[comp.lang.functional] Re: local variables don't cause side effects
+[blockquote][blockquote]If each invocation of a functional-datatype-with-imperative-implementation requires single-threaded invocation, then any sort of polymorphic behaviour in such datatypes could lead to deadlocks that are impossible to detect[/blockquote] at compile time.
+
+I'm not sure how this could happen. Could you give an example[/blockquote]
+
+Say you've implemented functional-style arrays using imperative techniques (heaps, mutability, sequential execution), and have somehow proven to the compiler that your implementation is observationally equivalant to a functional implementation.  What if a given function (for example, array concatenation) contains a loop that leaves some linked lists temporarily inconsistent, even though it's guaranteed to be fix everything up by the time it exits.  Wouldn't the code generator have to then insert locks at entry/exit from the function to assure atomicity?  What if your imperative implementation had to call some user-defined function passed into it as a parameter, and it called that function at a point when it left a linked list in an inconsistent state?  What if that user-defined function happens to access the same data structure that is currently in an inconsistent state?
+
+The real question is: what limitations would a type system have to impose on programs in order for it to admit purely-functional-constructs-with-opaque-imperative-implementations without introducing potential deadlocks or nondeterminism?  (An open question, I think.) 

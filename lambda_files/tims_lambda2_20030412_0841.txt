@@ -1,0 +1,57 @@
+http://lambda-the-ultimate.org/classic/message6475.html
+http://lambda-the-ultimate.org/classic/message6475.html#6511
+0530763
+Hundred Year Language
+Re: Hundred Year Language
+<blockquote><div>Actually, as Hilbert discovered thanks to Goedel, mathematics hasn't got and will never have a solid logical foundation</div></blockquote>
+
+<p>Please take everything I say here to be mod undecidability, the halting problem, and finite resource limitations on actual computers.</p>
+
+<blockquote><div>Why is 2^64=0 absurd? This is just exponentiation modulo 2^64.</div></blockquote>
+
+<p>While the C definitions of (+,-,*) are consistent with the ring of integers mod 2^64, (/,&lt;,&lt;=,&gt;,&gt;=) aren't. C math is inherently non-mathematical.</p><p>
+
+This was fine for the "platform-independent assembler" that C was in the 1970's, but in the future I think programming language math will map more closely to actual math.</p>
+
+<blockquote><div>Why is division not typesafe?</div></blockquote>
+
+<p>int divide(int num,int denom):</p><p>
+
+In C, this is a useful function, but it's not division.  It crashes in the case of a zero denominator, and returns mathematically incorrect results when there the numerator is not an integer multiple of the denominator.  </p><p>
+
+That Ackermann(64,64) is an observationally partial function is an artefact programmers much accept if we want the power of being able to write general recursive functions.</p><p>
+
+But a division function that crashes and sometimes returns invalid results, isn't going to be with us much longer.</p><p>
+
+rational divide(rational num,rational&lt;&gt;0 denom):</p><p>
+
+This is a typesafe and mathematically correct definition of division.  Type systems in current languages don't support this, but there is a great deal of promising type system research to draw from for the future.</p>
+
+<blockquote><div>C# arrays</div></blockquote>
+
+<p>For example, you can pass an array of integers to a function expecting an array of objects, and try to write a character into it.  This is the classic problem of not properly distinguishing a thing and a mutable reference to a thing.  A thing is constant and referentially transparent and obeys very useful subtyping and variance rules, for example allowing you to pass an array of integers to a function expecting an array of objects.  A reference to a thing isn't like that at all.</p>
+
+<blockquote><div>Dependent types</div></blockquote>
+
+<p>How do you feel these work against separation of concerns?</p><p>
+
+This answer might partially dependent on what one considers dependent types.  C++ templates (yuck) and C# generics could be considered dependent types, with a syntax limiting them to situations that allow decidable typechecking.  Haskell, if you get into the implicit universal quantifiers involved in type deduction, has a constrained form of dependent types.</p><p>
+
+One view on dependent typing is that C++/C# generics are just a limited form of expressing functions that take type parameters and return types or functions as results.  There's a direct correspondence between something like:</p><p>
+
+template&lt;type t&gt; class c {int a; t b;}</p><p>
+
+And a dependent-typed defintion like:</p><p>
+
+c(t:type):class={a:int,b:t};</p><p>
+
+But with dependent types, you have much more power to mix types and values.  And, typechecking becomes undecidable in the general case, though the subset corresponding to any existing type deduction / template / generic type frameworks is certainly decidable, so it's at least as expressive as past work.</p><p>
+
+I don't see undecidable typechecking as a big problem.  Current compilers either succeed or fail with a definite error.  Undecidability just leads to another category of compiler failure, where the compiler can't accept the program, not because it's certain to be incorrect, but because it's not certain to be correct.</p>
+
+<blockquote><div>unification of functional, logic, OO</div></blockquote>
+
+<p>I agree 100% about the upcoming convergence of these things and find the topic very exciting.</p><p>
+
+I think, actually, you'll get constraint logic for free as a result here.  Yes, it will be undecidable in many situations, but a practical tool regardless; C++ template typechecking is undecidable, for example.  Typecheckers eventually become theorem provers in this case, though probably not very powerful ones.</p><p>
+</p>

@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Error handling strategies | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F202" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Error handling strategies</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+Some kind of language support for error handling (e.g exceptions of various kinds, on error blocks, Maybe types, continuations etc.) has become standard. The exact mechanism is yet another language design decision designers have to make.<p>
+Eric Lippert <a href="http://blogs.msdn.com/ericlippert/archive/2004/08/19.aspx">describes</a> VBScript's error handling mechanims. The VBScript approach is perhaps more confusing than it has to be (though I personally didn't find Eric's examples confusing). Tying exception handlers to blocks is more structured and perhaps better.<p>
+Be that as it may, I think better error handling constructs are still waiting to be discovered (or designed).  </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 08/19/2004 - 22:27 | <a href="taxonomy/term/17">Software Engineering</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/202" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 4940 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="202" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="202" />
+<a id="comment-1475"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1475" class="active">The URL is broken</a></h3>
+ <div class="content"><p >It points to LtU...</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Fri, 08/20/2004 - 00:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1476"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1476" class="active">Correct Link</a></h3>
+ <div class="content"><p ><a href="http://blogs.msdn.com/ericlippert/archive/2004/08/19.aspx"><br >
+http://blogs.msdn.com/ericlippert/archive/2004/08/19.aspx</a></p></div>
+ <div class="links">By <a href="user/856" title="View user profile.">Daniel Marlay</a> at Fri, 08/20/2004 - 00:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1483"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1483" class="active">Fixed URL</a></h3>
+ <div class="content"><p >Sorry.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Fri, 08/20/2004 - 08:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1477"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1477" class="active">Language support required?</a></h3>
+ <div class="content"><p>In my experience working on <a href="http://slate.tunes.org/doc/progman/node22.html">Slate's condition-handling</a>, the only primitive support needed to improve on Common Lisp and Dylan's excellent <a href="http://www.nhplace.com/kent/Papers/Condition-Handling-2001.html">condition-handling systems</a> were easy lexical closures and <tt>ensure:</tt> (unwind-protect) methods. We have object-oriented conditions with behaviors, and restarts as objects, potentially as local to certain kinds of conditions for polymorphic overrides and so forth. As with Lisp and Dylan, the condition handlers have control before the stack is unwound, and as with Smalltalk, a meta-context can be escaped into where live debugging and editing can occur.</p>
+<p>The Erlang capability to propagate errors outside of processes and let the code die to restart is not beyond the scope of what we're doing, although we haven't gotten to that kind of support yet. One capability that Lisp and Dylan don't provide and certainly dogs Smalltalk is the ability to globally handle certain conditions in pre-defined ways, which limit their ability to take advantage of the "let it die" philosophy in an unforgiving production environment. With an increasingly flexible and open system, you can actually start to think about answers to these problems.</p>
+<p>Slate is a deliberately simple language with few primitive concepts, so it doesn't take much to support any of this. In fact, I would argue that deliberately removing conventional limits on a language is what made this possible.</p></div>
+ <div class="links">By <a href="user/46" title="View user profile.">Brian Rice</a> at Fri, 08/20/2004 - 01:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1478"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1478" class="active">Failure as a first-class concept</a></h3>
+ <div class="content"><p >It is interesting for languages to treat failure as a first-class language concept, requiring explicit handling of any failure conditions that may occur.  Java's (controversial) exception declarations provide one approach to this.  Icon provides another which is very expressive but quite different.</p>
+<p >I'm not a fan of Icon's multi-valued semantics (which wrap a nested list comprehension around the entire program!)  But I like the basic style it encourages:</p>
+<pre>
+if(f:OpenFile("Log.txt"))
+   Write(f,"Some Text")
+else
+   Print("Failed to open file")
+</pre><p >Whereas, on the other hand, writing:</p>
+<pre>
+f:=OpenFile("Log.txt")
+Write(f,"Some Text")
+</pre><p >Is disallowed by the compiler because the "OpenFile" expression may fail, but isn't explicitly handled.</p>
+<p >This technique can be combined with dependency and sequencing to allow some very expressive programming interesting idioms, such as:</p>
+<pre>
+if(c:ParseChar(),c&gt;='A',c
+</pre><p >Which not only tests some conditions, but also creates variable bindings.  For example, you can use this for type-aware casting to work in an environment with compile-time array bounds checking:</p>
+<pre>
+PrintElement(a:[]int,b:int):=
+   if(i:nat &lt;a len="b)" else</pre><p >
+In this example, we're casting the integer "b" to "the type of natural numbers less than the length of the array a", and binding a variable to the result which can then be safely used to index into the array.</p>
+<p >A final example uses "?t" syntax (similar to Haskell "Maybe t") for the type of an optional element of type t, and "^t" for "Pointers to non-null elements of type t":</p>
+<pre>
+List:=type{x:int,next:^List}
+Display(a:List):void
+   Print("Value is ",a.x)
+   if(n:a.next)
+      Display(n^)
+</pre><p >This provides a clean type-theoretic solution to earlier discussion on "nullable pointers", by orthogonalizing the concepts of pointers and optional values, and assuring that in any context where an optional value is used, it must be explicitly tested with a conditional to guarantee that no runtime failure can occur.<BR ><BR ></p>
+<p >I have implemented this on a fairly large scale in an experimental language and feel the results are promising.  I'd love to hear feedback on this approach, and also whether readers find this C-Pascal-Python hybrid syntax attractive or revulsive.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 08/20/2004 - 03:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1479"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1479" class="active">Significant Whitespace</a></h3>
+ <div class="content">I may be the only one on this, but I've never been able to accept significant whitespace. It's been sufficient to keep me from exploring Python to any significant degree (although I should add that I did explore it enough to find that I don't care for several aspects of its semantics, either).
+<p>
+As we've already discussed, I'm very excited about your language's semantics, and I think that significant whitespace aside, the C/Pascal syntax will make it very approachable. And if significant whitespace it's gonna be, well, I'll just have to find a way to make my peace with that. :-)</div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 08/20/2004 - 03:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1484"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1484" class="active">Failure in Icon is not equivalent to exceptions</a></h3>
+ <div class="content"><p >I'm assuming you're referring to the Ralph Griswold Icon programming language... At which point I'm not sure your description is entirely accurate. Your file example uses functions which aren't built into Icon. If one uses the correct functions, the following code <em >does</em> compile fine under Icon:</p>
+<pre>
+f:=open("Log.txt", "w")
+write(f,"Some Text")
+</pre><p >
+I feel your characterization of the failure concept in Icon as being something akin to exceptions is really rather misleading. Failure in Icon is not meant to indicate exceptional conditions; it is really meant to represent the natural termination of a generator [it does have various other uses, but they could all be argued to flow from this requirement].<br ><br ></p>
+<p >It's worth noting that Icon doesn't really posess the concept of exception as do more modern programming languages (I presume Unicon does include such a concept). It includes a crude <code >exit</code> function, but that's about it - there's no way to declare errors, and no way to catch them once <code >exit</code> has been called.<br ><br ></p>
+<p >I also have very little idea why you would claim that 'Icon's multi-valued semantics ... wrap a nested list comprehension around the entire program'. I can vaguely see that you think that Icon's goal-directed evaluation is a bit like list comprehensions, but I'm not at all sure that one could reasonably say it's wrapped around the <em >entire</em> program. If nothing else, that ignores the significant effect that many expressions in Icon are <em >bound</em>: that is, backtracking will not break out of the bound expression. Since every logical line in an Icon program is implicitly bound in this way, at best you could perhaps argue that each bound expression in Icon is a bit like a list comprehension. But it's still a bit of a stretch IMHO.<br ><br ></p>
+<p >Your language looks to be interesting but, for better or worse, it doesn't really appear to be overly similar to Icon.</p></div>
+ <div class="links">By <a href="user/1322" title="View user profile.">Laurence Tratt</a> at Fri, 08/20/2004 - 08:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-1485"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1485" class="active">Language Confusion</a></h3>
+ <div class="content">Laurence Tratt: <i>I'm assuming you're referring to the Ralph Griswold Icon programming language... At which point I'm not sure your description is entirely accurate. Your file example uses functions which aren't built into Icon. If one uses the correct functions, the following code does compile fine under Icon...</i>
+<p>
+Obviously, Tim can answer this himself, but I want to point out that the code examples Tim shows are in his new language, not Icon, and the specific example referred to here was intended precisely to show how his language's semantics differ from Icon's.
+<p>
+Laurence: <i>Your language looks to be interesting but, for better or worse, it doesn't really appear to be overly similar to Icon.</i>
+<p>
+I think that was part of Tim's point: Icon gives us a suggestive look at a language whose conditionals aren't based on booleans; his language's conditionals are also not based on booleans (in fact, his language doesn't even have a "boolean type" <i>per se</i>). However, his language is deliberately not an Icon clone or derivative.
+<p>
+Of course, this is just my interpretation of his post. He could contradict me. :-)</div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 08/20/2004 - 15:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-1492"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1492" class="active">Re: Language Confusion</a></h3>
+ <div class="content"><p >Paul: <em >I want to point out that the code examples Tim shows are in his new language, not Icon, and the specific example referred to here was intended precisely to show how his language's semantics differ from Icon's.</em></p>
+<p >That's absolutely fair enough [although Tim might be best advised to be very clear about when he is talking about Icon and when he is talking about his own language], but I do think that Tim's characterization of Icon's 'basic style' is misleading. Just because Icon doesn't have booleans doesn't mean that any language which lacks booleans is in the Icon style. In fact, Icon's lack of booleans is a mere by-product of the fact that one can encode most of the visible effects of boolean logic via Icon's conjunction <code >&amp;</code> and disjunction <code >|</code> operators (the latter of which is a special kind of generator). It's not really a fundamental design issue that Icon doesn't have booleans - they're just not particularly neccessary given the other features which Icon does have.</p>
+<p >However as soon as you starts equating failure with exceptions (which is what Tim appears to do, handling exceptions in the conditional of the <code >if</code> in a special way), you've moved a looooooong way from the fundamentals that really define Icon. A really, really long way IMHO. It will be interesting to see if this approach is useful (I'll admit, it seems Draconian to me - but I'd be happy to proved wrong), but most important is not to get confused over what Icon presents to the world.</p>
+<p >Paul: <em >Of course, this is just my interpretation of his post. He could contradict me. :-)</em></p>
+<p >Until you said that, I was going to consider your comments binding ;)</p></div>
+ <div class="links">By <a href="user/1322" title="View user profile.">Laurence Tratt</a> at Fri, 08/20/2004 - 16:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1481"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1481" class="active">Wheat&#039;s Errors</a></h3>
+ <div class="content"><p >In the <a href="http://www.wheatfarm.org/">Wheat project</a> we are exploring a totally different direction: Errors are fundamental objects that self-propagate if operated on (a bit like floating point non-signaling NaNs.)  You can read more about them in the <a href="http://www.wheatfarm.org/wiki/ConstructsSpecial">Wheat Wiki</a>.</p>
+<p >This is similar to error objects in some functional languages (such as Erlang.), but with a richer facility for storing information in the error object.  References to other language experiences with such objects would be appreciated.</p></div>
+ <div class="links">By <a href="user/1200" title="View user profile.">MtnViewMark</a> at Fri, 08/20/2004 - 04:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1482"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1482" class="active">Wheat</a></h3>
+ <div class="content"><p >Wheat's approach sounds very useful and implementable.  I evaluate expressions that may contain failure by (conceptually) evaluating them as if they were comprehensions in something like Haskell's "Maybe" monad.  It would be straightforward to combine this with error codes by evaluating them in a order-dependent monad that looks something like "Perhaps t = Really t | Error string".<BR ><BR ></p>
+<p >I have a similar operator syntax "a||b" which evaluates to a if a doesn't fail, and evaluates to b otherwise.  This ends up working almost exactly like C's || operator (including evaluation order for imperative terms), but it propagates the original terms (rather than just a boolean true/false value).  Because of the way the failure propagates, a||b is literally translated to "if(x:=a)x else b".<BR ><BR ></p>
+<p >Using these failure semantics, it so happens that no explicit boolean operators are needed: the array-former (a,b) acts as a boolean conjunction, this (a||b) operates as a disjunction, and "!a" negation translates to "if(x:=a) fail else {}".<BR ><BR ></p>
+<p >The operators support variable bindings, so an expression of the form "if(x:=a||b,y:=c).." executes the ".." part if ((a doesn't fail or b doesn't fail) and c doesn't fail), sequences any imperative effects there, and lets you access "x" and "y" with knowledge of their type.  For example, if a and b evaluate to integers (or fail), you can use x as if it's an integer.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 08/20/2004 - 05:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1606"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1606" class="active">Continued</a></h3>
+ <div class="content"><p >Eric <a href="http://blogs.msdn.com/ericlippert/archive/2004/08/23/218974.aspx">returns to the discussion</a> of VBScript error handling.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Wed, 08/25/2004 - 08:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1623"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/202#comment-1623" class="active">Part III</a></h3>
+ <div class="content"><p >Is <a href="http://weblogs.asp.net/ericlippert/archive/2004/08/25/220373.aspx">here</a>. If nothing else, read the first sentence...</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Thu, 08/26/2004 - 10:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

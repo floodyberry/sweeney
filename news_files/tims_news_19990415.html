@@ -1,0 +1,104 @@
+<h4>Important Unreal 224 Note To Mod Authors</h4>
+
+<p>Unreal 224 .u files aren't backwards compatible with past versions of the engine.
+&nbsp; So you'll need to take special steps to upgrade your .u files.</p>
+
+<p>To upgrade mods to 224, you'll first need to export your scripts to *.uc files. &nbsp;
+You can do this in all versions of UnrealEd like this: </p>
+
+<ol>
+  <li>Bring up the UnrealEd class browser on the right side of the screen.</li>
+
+  <li>Click on the &quot;Load&quot; button and load your mod's .u file.</li>
+  <li>Click on the &quot;Export All&quot; button and have UnrealEd export all of the loaded
+    scripts to .uc files (including yours and the engine's), creating a directory structure
+    for all the .uc files: for example, the files from the Core package are in
+    \unreal\core\classes\*.uc.&nbsp; If your mod is named XYZ, your .uc files will be exported
+    to \unreal\XYZ\classes\*.uc.</li>
+</ol>
+
+<p>In Unreal version 221 and earlier, you can rebuild your mod named &quot;XYZ&quot; from
+the command line by typing:</p>
+
+<pre>cd \unreal\system
+del XYZ.u
+unreal -make</pre>
+
+<p>You can do that now, prior to the release of 224, to verify that your mod has been
+safely exported and can be rebuilt from the command line.&nbsp; I highly recommend doing
+this now, because if you install 224, you will no longer be able to load your old .u
+files, so you'll have to downgrade back to 220 in order to export them.&nbsp; Some
+developers prefer to edit scripts in UnrealEd, but many of us actually edit scripts in an
+external editor (like Visual C++) and use the command-line interface for all production
+work.</p>
+
+<p>In Unreal 224, we have a new command-line compiler with a slighly different syntax:</p>
+
+<pre>
+cd \unreal\system
+del XYZ.u
+ucc make</pre>
+
+<p>-Tim</p>
+
+<h4>Maps, Textures, Sounds, Music are backwards compatible</h4>
+
+<p>...so there shouldn't be any problem with existing user maps built with past versions
+of UnrealEd.&nbsp; I checked this by downloading a bunch of maps from <a
+href="http://www.freshmeat.org/unreal/">Unreal Resources</a> and <a
+href="http://www.planetunreal.com/nalicity/">Nali City</a> and testing
+them.&nbsp; The one &quot;gotcha&quot; is that some user maps being distributed contain .u
+files, and those aren't backwards compatible, so they will refuse to load until the .u
+files they depend on are upgraded.</p>
+
+<h4>Latest News</h4>
+
+<p>I've been awake for way too long, so please forgive my spelling and grammar!</p>
+
+<p>Internal testing of 224 continues.&nbsp; Things are looking pretty good, though we need
+to go through a couple more iterations before everything's in perfect shape.</p>
+
+<p>The <a href="http://avault.com/">Adrenaline Vault</a> has a good
+article on the latest <a
+href="http://avault.com/news/displaynews.asp?story=4141999-221754">Unreal
+224 features</a>.&nbsp; They spill the beans on the major new feature I alluded to below:</p>
+
+<blockquote><div>
+  <p>Another major enhancement to be included in 224 is continuous
+  level of detail,which varies polygon counts on objects such as player characters and
+  power-ups relative to their distance from the camera, or player's perspective. In <i>Unreal
+  Tournament</i>, this will enable the engine to place more characters and objects on the
+  screen and still maintain a consistent and fluid framerate. Rein said this is an important
+  feature not just for <i>Unreal</i> and <i>Unreal Tournament</i> but also for engine
+  licensees since it also opens the engine to new game types, such as real-time strategy
+  titles, that were not previously obvious choices for the engine.</p>
+</div></blockquote>
+
+<h4>Cool Stuff</h4>
+
+<p>While I wait for 200,000 lines of Unreal code to recompile, I wanted to point out some
+more cool things that seem to be under-appreciated. </p>
+
+<ul>
+  <li><a href="http://www.winamp.com/">WinAmp</a> is a great MP3 music player
+    for Windows; and its companion, <a href="http://www.shoutcast.com/">ShoutCast</a>
+    is a streaming &quot;Internet radio&quot; companion.&nbsp; While I know MP3's and Internet
+    radio has been around for a while, WinAmp really deserves credit for its grassroots
+    following and overall coolness factor.</li>
+
+  <li>Windows 2000 internationalization support.&nbsp; This pure Unicode OS will mark the
+    first time Microsoft ships a single binary worldwide, which will be a great leap forward
+    in making it easy to develop games (and applications, and websites...) for the
+    international market.</li>
+  <li><a href="http://www.plh.af.mil/ddvpc/melp.htm">MELP</a> 2400
+    bits-per-second phone-quality voice compresion.&nbsp; Speech compression research has been
+    making major leaps and bounds lately, as quality voice compression ratios skyrocket.
+    &nbsp; The latest set of algorithms analyze an audio stream and (to simplify things a bit)
+    transform it backwards to vocal cord excitation.&nbsp; The resulting compression ratio is
+    in the neighborhood of 100-to-1.&nbsp; This is a research subject Carlo Vogelsang (Unreal
+    sound engine programmer) and I have been looking into lately, and it turns out to be very
+    complex and math intensive.</li>
+
+</ul>
+
+<p>-Tim</p>

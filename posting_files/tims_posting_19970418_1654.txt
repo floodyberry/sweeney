@@ -1,0 +1,25 @@
+http://groups.google.com/group/comp.graphics.algorithms/browse_thread/thread/fdcb50c7f4ee724/1aa2773680f074f3?lnk=st&rnum=75&hl=en#1aa2773680f074f3
+[comp.graphics.algorithms] Re: Is there a faster way to find the highest bit set in a 32 bit integer?
+(bunch of cool routines deleted)
+
+Another interesting approach is to use the FPU, which automatically computes the index of the highest bit, using something like this:
+
+[code]
+Input DD 0
+Temp DD 0
+Output DB 0 ; log 2 of input
+
+fild [Input] ; 4 cycles?
+xor eax,eax ; free
+fst [Output] ; 3 cycles
+mov eax,[Output] ; 1 cycle
+and eax, ??? ; 1 cycle, the value of ??? is left as an excercise to the
+reader. :)
+shr eax, ??? ; 1 cycle
+add eax, ??? ; 1 cycle adjust for exponent bias.
+; The idea of the above is to extract the exponent.
+[/code]
+
+This would always be about 11 cycles, and I reckon it would be faster than the other methods posted, because their average case performance suffers from branch misprediction penalties which are pretty expensive especially on PentiumPro class processors.
+
+-Tim Sweeney, Epic MegaGames Inc. 

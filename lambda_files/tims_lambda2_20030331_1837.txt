@@ -1,0 +1,22 @@
+http://lambda-the-ultimate.org/classic/message6346.html
+http://lambda-the-ultimate.org/classic/message6346.html#6355
+0530634
+Book and Course in Constraint Programming and Reasoning
+Re: Book and Course in Constraint Programming and Reasoning
+<p>These languages seem very attractive because they make it look like you can specify a problem very concisely, and the language will automatically work out the solution for you.  Several comments:</p><p>
+
+- This doesn't really work in practice.  "Generate and test" is hopelessly exponential for problems of interesting size.</p><p>
+
+- However, constraints can be very useful as a feature in a type system in a more traditional language.  Being able to express things like "the type of natural numbers less than 31" and have the compiler perform range arithmetic as part of type checking as very useful.  This approach is the first step towards implementing real mathematics in type systems.  By "real mathematics", I mean mathematics where natural numbers are a genuine subtype of integers, which are a subtype of rationals, and when you perform common operations on numbers of certain types, the results are closed as you'd expect (i.e. integer*integer=integer), without mathematically unsound casts and coercions.</p><p>
+
+- I dislike the lack of structure in the example languages described; most of the research is being done in Prolog-style "everything is global".  Because of this, there is a huge gap between these R&amp;D languages and any future implementation that might appeal to mainstream programmers.  It's very interesting to explore these concepts in structured languages that include things like dependent-typed records.</p><p>
+
+- It even more interesting to apply CLP style constructs to a language that unifies types, sets, and nondeterminism into a single framework, such as McAllester's "Ontic" language.  Here, constraints just work automatically as part of the type system.  Also, you get first-class proof:proposition :: value:type, even when the constraints are intractable.  For example, you can express the type of pythagorean triples as:</p><p>
+
+t typedef {x:nat,y:nat,z:nat=sqrt(x*x+y*y)};</p><p>
+
+And whether or not the language is able to tell you anything useful about the type t, such as whether it's inhabited, and one or more solutions, you can always say:</p><p>
+
+x:t={3,4,5};</p><p>
+
+And the language accepts it.  Verifying that a deterministic element satisfies a (probably non-deterministic) set of constraints is a much easier problem than trying to solve the constraints in general, so it's reasonable to support logic constraints in a language even when the general case of typechecking/solving them  is incomplete or undecidable.</p>

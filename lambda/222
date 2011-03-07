@@ -1,0 +1,761 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>multidimensional arrays | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F222" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>multidimensional arrays</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Someone on comp.lang.python remarked</p>
+<p ><i >It is just funny how easy horizontal slicing is made (list[:]) but how "difficult" vertical slicing is. It is a common task and one does not realize how often one does need vertical slicing. eg.: getting the keys of dictionary is a vertical slicing, or turning a list into a dict involves vertical slicing...</p>
+<p >Just out of pure curiosity: Is there a langue that allows vertical and horizontal slicing and dicing with the same built-in pattern?</i></p>
+<p >The basic problem is, of course, that multidimensional arrays are implemented as arrays of arrays, but that made me wonder in turn - which languages have true multidimensional arrays? (i.e., arrays in which every dimension is treated as equivalent)</p> </div>
+ <div class="links">By <a href="user/436" title="View user profile.">Martin DeMello</a> at 08/27/2004 - 18:01 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/334" title="Dr. Kenneth Iverson Passes Away">previous forum topic</a> | <a href="node/339" title=" Algorithmically Unbounded Journal of Mathematical Truths">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/222" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 4640 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="222" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="222" />
+<a id="comment-1651"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1651" class="active">doesn&#039;t fortran 90 allow you</a></h3>
+ <div class="content"><p >doesn't fortran 90 allow you to do all kind of odd things with array indices (like specify a new array from some sampling of an old one)?  i'm pretty sure common lisp does too.  and i bet the array languages let you do similar stuff.</p></div>
+ <div class="links">By <a href="user/1016" title="View user profile.">andrew cooke</a> at Fri, 08/27/2004 - 18:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1653"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1653" class="active">Blitz++</a></h3>
+ <div class="content"><p >You can't create multi-dimensional arrays in a <a href='http://oonumerics.org/blitz/'>library</a>. Some languages with multi-dimensional arrays (e.g. <a href='http://www-staff.it.uts.edu.au/~cbj/FISh/index.html'>FISh</a>) even compile to C which doesn't have true multi-dimensional arrays.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Fri, 08/27/2004 - 19:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1654"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1654" class="active">More</a></h3>
+ <div class="content">Obviously you can do cool things with arrays in APL and J. The arrays are truly multi-dimensional, and you can shape and reshapre them in various ways.<p>
+PL/I's <a href="http://www.users.bigpond.com/robin_v/pli-n7.htm">iSUB</a> facility is pretty cool, too.</div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Fri, 08/27/2004 - 21:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1655"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1655" class="active">Language design problem</a></h3>
+ <div class="content"><p >iSUB is trying to fix a language design fault. It's nothing more than a weird function definition. If the language was designed properly, arrays and functions could have been used interchangebly. They have the same "signature": a tuple as input and one value as output.</p>
+<p >Now that I think about it, I can't recall a language that allows this. Is there a language where you can write a factorial function and slice it like a list: fac[1:20]</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Fri, 08/27/2004 - 22:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-1657"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1657" class="active">Two ways in Mathematica</a></h3>
+ <div class="content"><p>
+Table[Factorial[n],{n,1,20}]
+</p>
+<p>
+Factorial[Table[n,{n,1,20}]]
+</p>
+
+<p>
+Functional languages can do these things.
+</p>
+</div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Sat, 08/28/2004 - 07:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-1659"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1659" class="active">Higher order functions</a></h3>
+ <div class="content"><p >Do higher order functions that expect functions as argument, also allow arrays, and vice versa?</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Sat, 08/28/2004 - 13:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-1663"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1663" class="active">Re: Higher order functions</a></h3>
+ <div class="content"><p>
+See <a href="http://www.lcc.gatech.edu/~xinwei/papers/texts/FuncPMma.pdf">this PDF</a>, <a href="http://www.mathconsult.ch/showroom/pubs/MathProg/">Maeder's books</a> and <a href="http://www.mathematica-journal.com/issue/v5i3/columns/maeder/index.html">articles</a>, and <a href="http://documents.wolfram.com/v5/">Wolfram</a>.
+</p>
+
+<p>
+There is sample code all over the Internet and you can install the free <a href="http://www.wolfram.com/products/mathreader/">MathReader</a> on any platform to inspect it.
+</p>
+
+<p>
+Most functions have the attribute Listable (look it up).  The documentation includes a <a href="http://documents.wolfram.com/v5/Built-inFunctions/Programming/FunctionalProgramming/index.html">section on FP</a>, and a <a href="http://documents.wolfram.com/v5/Tour/MathematicaAsAProgrammingLanguage.html">rundown on programming paradigms</a>.
+</p>
+
+<p>
+For more help please appeal to Google.
+</p>
+</div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Sat, 08/28/2004 - 20:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-1664"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1664" class="active">Not what I mean</a></h3>
+ <div class="content"><p >It's all very cool! But listable means that functions automatically map over lists. That's not what I mean.</p>
+<p >Let's take a particular example from those pages. NestList is a higher order function. The first argument is a function. Can I use a list instead?</p>
+<p >NestList[{1,3,4,2,3}, 0, 6] -&gt; {0, 1, 3, 2, 4, 3, 2, 4}</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Sat, 08/28/2004 - 21:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-1665"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1665" class="active">Talk to my agent about consulting rates</a></h3>
+ <div class="content"><p>
+The use cases proposed are not higher order.  Factorial is not a higher-order function in the first place.  Feeding numerical parameters (or arrays of same) into a function is not a higher-order operation; it is a straight function call.  Higher order means that a function appears somewhere in the parameter list.  I see no function parameter in the calls that you propose.  Rethink what you are asking and why.  Do you really care about HOFs, or is it something else that you want?  If you feed an array into NestList, how is NestList supposed to know what function you want applied to the list, unless you supply it as a parameter?
+</p>
+
+<p>
+I'm signing off now, but you can ask the various user groups or Google for more help.
+</p>
+</div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Sun, 08/29/2004 - 02:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-1666"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1666" class="active">Big misunderstanding</a></h3>
+ <div class="content"><blockquote>If you feed an array into NestList, how is NestList supposed to know what function you want applied to the list, unless you supply it as a parameter?</blockquote>
+<p>No, no, no! I want the the list to *be* the function.</p>
+<p>A function is a mapping from values from its domain to values from its range. Similarly, a list is a mapping from indexes to values. A list can therefore be considered a function. Similarly, multidimensional arrays are mappings from a tuple of indexes to values, just like functions with multiple arguments. I want to know if there are programming languages that acknowledge this, in any way.</p>
+
+</div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Sun, 08/29/2004 - 09:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-1668"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1668" class="active">Ruby sort of does, in that it</a></h3>
+ <div class="content"><p >Ruby sort of does, in that it lets you overload the [] operator, and that a[i] = a.at(i) for an array and a.call(i) for a proc. I've seen code written that let you pass in whatever parameter you wanted, as long as it supported the [] operation, so it definitely does support the idiom. However, it doesn't have built-in multidimensional arrays, and methods are treated differently from proc objects.</p></div>
+ <div class="links">By <a href="user/436" title="View user profile.">Martin DeMello</a> at Sun, 08/29/2004 - 13:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-1669"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1669" class="active">lists as functions</a></h3>
+ <div class="content"><p >Hmm, to use a list as a function you need an<br >
+infinite list, i.e. a stream. Indeed Streams over A are<br >
+"isomorphic" to Nat -&gt; A. What is isomorphic to<br >
+functions over binariy trees? I wrote a paper about<br >
+this a few years ago.</p></div>
+ <div class="links">By <a href="user/1288" title="View user profile.">alti</a> at Sun, 08/29/2004 - 21:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-1671"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1671" class="active">Boy, I&#039;ll say</a></h3>
+ <div class="content"><p>
+You're in a bog of terminology confusion that seems more complicated than the actual task, which still eludes me.  The whole presentation abuses standard terminology.  HOF means HOF; you mean something else, but want to cram it into HOF with elliptical reasoning.  That penny tutorial about function domains was nice, but bears no relation to HOF in computer science.  I would drop the term HOF.
+</p>
+
+<p>
+You picked NestList.  NestList returns a list of iterated function applications to a seed expression.  We know what f[x] means - f is a function.  Replace f with the list {1,2,3}.  How shall an array be applied to an expression?  What is {1,2,3} of argument [4]?  Is it {4,8,12} or {5,6,7} or something else?  What is {4,5,6} of argument ["A"]?  Not only do you abuse the meaning of HOF, you abuse the meaning of function.
+</p>
+
+<p>
+Mathematica allows nonsense inputs; it grants formal manipulations.  So Mathematica accepts NestList[{1,2,3},x,6] and produces the expected (nonsense) output:  {x, {1,2,3}[x], {1,2,3}[{1,2,3}[x]], ... }.
+</p>
+
+<p>
+There is a <em>mathematical</em> sense in which an array represents <em>mathematical function samples</em>, or let us say, delta functions at index coordinates.  For these purposes Mathematica offers treatments like interpolating functions, curve fits, and DiracDelta.  I don't think those are what you want, but they are the only things that make rational sense of your (mathematical) definition of arrays-as-functions.  Otherwise, asserting that "arrays are functions!" is neither a problem statement nor a behavioral specification.  It's just meaningless noise.
+</p>
+
+<p>
+Mathematica enables fantastic varieties of array manipulation and functional programming, and I have already pointed you in the right directions.  It is highly dubious that you can find any problem which cannot be coded elegantly and optimally in Mathematica.  Guessing, some hints:  Apply replaces the head List with whatever you like, turning arrays into anything.  Arrays of functions are possible.  Anonymous functions are possible.  If you want to consider index values as implicit data, MapIndexed passes them as auxiliary parameters to the mapped function.  You can also make index values explicit by various array constructions, e.g. defining each array element as an {index, value} couplet.  Probably you should look at MapIndexed, Apply, Thread, level specifications, or maybe Outer and Inner for all I know.  Read the friendly help files, Wolfram's are good.
+</p>
+
+<p>
+Or, try doing the magic in Lisp, which is more familiar to LtU readers.
+</p>
+</div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Mon, 08/30/2004 - 06:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-1674"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1674" class="active">Arrays are functions</a></h3>
+ <div class="content"><blockquote ><p >
+There is a mathematical sense in which an array represents mathematical function samples, or let us say, delta functions at index coordinates.
+</p></blockquote>
+<p >No, arrays are functions, not <em >function samples</em> or whatever. The array (or list) [1, 2, 3] is a function from the domain {0, 1, 2} into the set {1, 2, 3}. [1, 2, 3] of [4] is a "type error" because 4 is not on the domain; it's the same as log(-4). The same goes for [4, 5, 6] of ["A"]. </p>
+<p >You seem to find the idea outrageous, but it's just standard mathematics. </p></div>
+ <div class="links">By <a href="user/1019" title="View user profile.">Andrei Formiga</a> at Mon, 08/30/2004 - 13:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-1678"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1678" class="active">Thank you</a></h3>
+ <div class="content"><p >I was beginning to think I had got it completely wrong. This is exactly what I was thinking.</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Mon, 08/30/2004 - 16:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-1950"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1950" class="active">Down the rabbit hole</a></h3>
+ <div class="content"><p>
+Andrei Formiga:  <q style="color:green">The array (or list) [1, 2, 3] is a function from the domain {0, 1, 2} into the set {1, 2, 3}.</q>  Sjoerd Visscher: <q style="color:purple">This is exactly what I was thinking.</q>
+</p>
+
+<p>
+The conventional term is array subscript.  The need for math, HOFs, or how this latest statement counters my demonstration of NestList gibberish, I fail to see.  Sjoerd picked NestList as a test case, and I showed the actual nonsense result.  Are you saying that because I missed something about arrays as functions, the NestList result is sensible?  I don't see it.
+</p>
+
+<p>
+Math is not our disagreement.  Modulo formalisms, we said the same thing, that CS arrays can have mathematical interpretations.  The choice of formalism (set isomorphisms, delta functions, function samples) is irrelevant.  Computer science is our disagreement.  Sjoerd seeks vague HOF magic by (a) giving arrays a mathematical function interpretation and (b) eliding the distinction between math and CS to (c) feed arrays-as-functions into HOFs.  It doesn't work, guys, and it doesn't even make sense.  I did not pick NestList as the test case; Sjoerd did, and I showed the resulting nonsense.  Mathematics doesn't define a "type error" (that's a CS concept), and incidentally, log(-4) equals ((i * pi) + log(4)) in mathematics.
+</p>
+
+<p>
+An array in CS is a piece of data, like a string or file.  A CS array can represent many things (stacks, queues, file sizes, years of employment on successive jobs, etc.).  Math functions are one more category of things they can represent; pick your favorite formalism.  I do not quibble that mathematical interpretations exist.  I quibble over sleight-of-hand re-interpretations as CS functions, and subsequent usefulness in accomplishing Sjoerd's mysterious task (which begs for concrete examples; I can't make heads or tails of his NestList case; it seems bogus to me, and doesn't reflect actual Mathematica output, which I demonstrated.)
+</p>
+
+<p>
+Look at a simpler case.  I can define a CS function that returns 5 for all inputs.  This thing is a CS function, although boring.  I can pass this CS function to a HOF.  What have I gained?  I may as well just use 5 as a straight argument to a plain function, and stop deluding myself that I need or want a HOF.
+</p>
+
+<p>
+The situation with arrays is the same.  Follow your interpretation faithfully.  Take a 3-element array {10,11,12}.  We baptise it as a function per your spec.  This "function" maps the (array subscript) domain {0,1,2} to the (pseudo-function) range {10,11,12}.  We pass this "function" to a HOF per Sjoerd (he wants the HOF, remember).  We do that by passing the range {10,11,12} to the HOF.  Surprise, we just passed an array to a function.
+</p>
+
+<p>
+Call a spade a spade.  We passed an array to a function.  The recipient may interpret it as a stack, queue, math function, or years of employment, but no such interpretation makes the recipient a HOF in the CS sense, or requires that it be one.  What do these weird HOF incantations buy us?  What are we really trying to do?
+</p>
+
+<p>
+Whatever Sjoerd wants to do, it probably falls into the category of standard array manipulations, functional programming, list comprehensions, or something similar, for which stock tools exist in Mathematica and other packages.  So far Sjoerd has not clarified his task or how a mathematical-function interpretation helps it.  If we are talking about array subscripts, why can't we just use standard terminology?
+</p>
+</div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Sun, 09/19/2004 - 08:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:300px;">
+<a id="comment-1952"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1952" class="active">The NestList example</a></h3>
+ <div class="content"><p >Take NestList[{1,3,4,2,3}, 0, 6]</p>
+<p >You say then that this produces:</p>
+<p >{0, {1,3,4,2,3}[0], {1,3,4,2,3}[{1,3,4,2,3}[0]], ...}</p>
+<p >My point is that {1,3,4,2,3}[0] is (almost obviously) reducible to 1. And {1,3,4,2,3}[1] to 3, etc.</p>
+<p >That's why I think the result should be {0, 1, 3, 2, 4, 3, 2}</p>
+<p >I don't see the point in keeping {1,3,4,2,3}[0] unreduced, and I don't see another valid meaning of the expression.</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Sun, 09/19/2004 - 12:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:325px;">
+<a id="comment-2104"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-2104" class="active">Pay the cashier on your way out</a></h3>
+ <div class="content"><p >This answer is what I mean about terminology circles.  It begs your question about 'function calling' an array.  If the only possible interpretation is array subscript, then just use array subscripts directly (with syntax sugar that suits your fancy).  Don't complain that we have a language design problem.  See my longer remarks below.</p></div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Mon, 09/27/2004 - 10:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-1953"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1953" class="active">I&#039;m going to be useful</a></h3>
+ <div class="content">This pure function will allow you to use arrays as functions:<p>
+Function[x, Function[y, x[[y]]]]<p>
+You could also wrap any array x like this:<p>
+(x[[#1]])&amp;<p>
+and turn the array into a function.<p>
+The only detail to correct your example is that Mathematica starts the index at 1, while 0 indexing an object returns the type (it's actually interesting indexing non-arrays).<p>
+NestList[({1, 3, 4, 2, 3}[[#1 + 1]]) &amp;, 0, 6] -> {0, 1, 3, 2, 4, 3, 2}<p>
+NestList[({1, 3, 4, 2, 3}[[#1 + 1]]) &amp;, 0, 7] -> {0, 1, 3, 2, 4, 3, 2, 4}<p>
+I don't know what Mark's problem is, you must have hit a nerve.</div>
+ <div class="links">By <a href="user/1171" title="View user profile.">Bryce Riner</a> at Sun, 09/19/2004 - 12:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-1955"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1955" class="active">Thanks, now to the point</a></h3>
+ <div class="content"><p >So arrays don't support the [] operator, and functions don't support the [[]] operator. Just like all other languages I know. (Although usually they are () and [])</p>
+<p >There seems to be no language that unites these operators. So I guess there must be a good reason to do that, but I don't see it. Anyone?</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Sun, 09/19/2004 - 15:01 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-1957"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1957" class="active">Matlab?</a></h3>
+ <div class="content"><p >In Octave/Matlab, parens serve both these functions.  I tend to keep track in my head of which identifiers are functions and which are arrays, suggesting that the indexing distinction makes some sense.  Arrays have a dimension/domain that you can query, unlike a typical function, and can only be indexed/called with integers.  These additional semantics to me at least make it inconvenient to treat the two as the same sort of thing.</p></div>
+ <div class="links">By <a href="user/199" title="View user profile.">sean</a> at Sun, 09/19/2004 - 15:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-1959"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1959" class="active">I am receiving mental commands from Altair IV.</a></h3>
+ <div class="content"><p>I believe that in <a href="http://scala.epfl.ch/">Scala</a> the "template class" <code>Array[a]</code> is a subtype of <code>Function[Int,a]</code>. In particular, indexing is done via the <code>apply</code> method of class <code>Function[Int,a]</code>.
+
+<p>BTW, concerning HOFs and n-dimensional arrays. Define [n] as {0,1,2,... n-1}. A linear array over (i.e., drawing elements from) A of length n is isomorphic to a function [n]->A. A 2-dimensional m-by-n array is representable as a function [m] * [n] -> A. If you curry this, you get [m] -> ([n] -> A), which is isomorphic to the type of linear arrays over [n] -> A of length m, which is isomorphic to the type of linear arrays over [m] -> A of length n.
+
+<p>In answer to Mark's complaint, "What is the point?": the point is that, if we could write functions generic over isomorphism classes of types, then we could reuse functions defined to operate on A-arrays as functions defined to operate on functions of the form [n]->A, and vice versa, and so obtain a more economical and less redundant programming language.</div>
+ <div class="links">By <a href="user/742" title="View user profile.">Frank Atanassow</a> at Sun, 09/19/2004 - 16:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-1661"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1661" class="active">Haskell to the rescue?</a></h3>
+ <div class="content"><p >Suboptimal, because we can't exchange ($) for (.$.) in all of the available libraries, but:</p>
+<div >
+<pre >
+module GenFun where
+
+import Data.Maybe
+import Data.Array
+
+class Mapping a b c | a -&gt; b, a -&gt; c where
+    (.$.) :: a -&gt; b -&gt; c
+
+instance Mapping (a -&gt; b) a b where
+    (.$.) = ($)
+
+instance Eq a =&gt; Mapping [(a, b)] a b where
+    l .$. el = fromJust $ lookup el l
+
+instance Ix a =&gt; Mapping (Array a b) a b where
+    (.$.) = (!)
+</pre></div>
+<p >It would be cool if <span >($)</span> was actually defined like <span >(.$.)</span>. There are the obvious interactions with laziness, though. Either way, that's a more general function application. (Mental note: think about this for my fantasy language :)</p></div>
+ <div class="links">By <a href="user/923" title="View user profile.">Carlos Scheidegger</a> at Sat, 08/28/2004 - 18:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-2576"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-2576" class="active">pop-11</a></h3>
+ <div class="content"><p >Sorry for bumping this old thread, but I just came across this section in the pop-11 primer and remembered this discussion:<br >
+<a href="http://www.cs.bham.ac.uk/research/poplog/primer/node100.html#SECTION00078000000000000000"><br >
+Arrays are procedures in Pop-11</a>.</p>
+<p >Not sure if this is exactly what you were after.</p></div>
+ <div class="links">By <a href="user/1142" title="View user profile.">Neil Madden</a> at Tue, 10/26/2004 - 13:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1662"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1662" class="active">Re: More</a></h3>
+ <div class="content"><p >Even in languages that don't have true multidimensioanl arrays it is possible to have an elegant and fully general syntax for slices, e.g., m[1;;] (same as m[1]), m[;1;] and m[;;1] in K, where m is a 3d structure (actually a list of lists of lists).</p></div>
+ <div class="links">By <a href="user/490" title="View user profile.">Olivier Lefevre</a> at Sat, 08/28/2004 - 19:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-2101"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-2101" class="active">Re: More</a></h3>
+ <div class="content"><p>
+See Mathematica's <a href="http://documents.wolfram.com/v5/Built-inFunctions/ListsAndMatrices/ElementExtraction/Part.html">documentation for Part</a> and <a href="http://documents.wolfram.com/v5/Built-inFunctions/ListsAndMatrices/ElementExtraction/FurtherExamples/Part.html">detailed examples</a> to see how All works as a subscript.
+</p>
+</div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Mon, 09/27/2004 - 08:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1941"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1941" class="active">Arrays are functions?</a></h3>
+ <div class="content"><p >Andrei, my experimental language treats arrays as functions with a domain of bounded natural numbers.  For example, {3,4,5} is a function with a domain of "the type of natural numbers less than 3".</p>
+<p >In my experience, array comprehensions solve the problems of list slicing well.  I use a BASIC-inspired function mid(xs,i,n) for slicing which takes elements from the array as, and returns a new array containing just the n elements starting at element i.  Thus if a horizontal slice of a 2D array is mid(xs,i,n), a vertical slice is for(xs:xss)mid(xs,i,n).  This isn't quite as simple as special-case "multidimensional slicing" syntax could be, but it's reasonable and has the advantage of being very general-purpose.</p>
+<p >I treat all arrays as 1D but nestable.  Thus there is no syntax like a[i,j] but instead a[i][j].  I think this is the "right way", because it makes higher-order operations like mapping and comprehensions simple -- they don't need to be specialized for arrays of different dimensions and choices of what indices are being iterated over.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 09/17/2004 - 22:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1967"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1967" class="active">Arrays as collections and arrays as mappings (~functions)</a></h3>
+ <div class="content"><p >(Some of my thoughts on arrays :)</p>
+<p >One way to look at (1-dimesional) arrays is like a sequential collection. Sometimes the order matters, sometimes not. The indices doesn't mean much on their own, so one just start indexing at e.g. 0 (or 1 if one likes that better).<br >
+Examples : array of subwidgets, array in a queue implementation, array of some kind of collected data (like e.g. user info or experiment result or database record). (Sometimes the indices have specific meaning even though the start index is fixed, of course.)<br >
+Language examples : C,Java,Basic,ML,Clean.</p>
+<p >Another way is to look at (1-dimesional) arrays is like a partial function from integers to whatever the element type is. A more refined way would then be a total function from a subtype (usually contiguous, from what I know) of integers to the element type. (The implementation of this would then, as we all know, use a memory block as a table instead of how functions are usually implemented.) In this view the indices have a meaning on their own. Here one sometimes also use symbolic constants (e.g. in an "enumeration type") as indices instead of integers in some range. In this case sometimes no special ordering of the constants is intended.<br >
+Examples : array indexed by timezone,array holding heap elements (starting from 1,left is 2*i,right is 2*i+1),array indexed by month,array indexed by "paper,scissor and stone",array indexed by lexer/parser token<br >
+Language examples : Pascal,Ada,Haskell(*).</p>
+<p >For multidimensional arrays, one can have nested (~= curried) arrays, where one index out one array and then from that index out again. In this way, there is a total order imposed on the "axes" of the array, and it gets hard to have slices(**) "across" the axis order, e.g. horizontal slices of a 2-dimensional might work, but not vertical slices. (But one might not need any special support from the language to get this limited form of multi-dimensional array slicing here.)<br >
+(Another issue here is whether or not the nested arrays on the same level must have the same shape. E.g. of "must" is C (the arrays described by the array types, not the array of pointers variety), E.g. of "don't have to" is Java)<br >
+Language examples : C,Java,Pascal(***),Ada.</p>
+<p >Or one can have multidimensional arrays where one index out an element with all indices at once. This though probably requires language support for slicing. (One could of course still have nested multidimensional arrays, as well, in the same language.)<br >
+Language examples : Ada,Haskell.</p>
+<p >One can view this latter kind of multidimensional arrays as arrays that are indexed by a tuple (vector) of individual indices. (One can easily imagine extending the allowable kinds of index types some more ..)</p>
+<p >So, there's probably a use for both collection-arrays and mapping-arrays, IMO.</p>
+<p >(*) The type of arrays in Haskell still doesn't tell what range the array indices have.</p>
+<p >(**) By slice, I mean either that it should be shared with the array it was taken from, or it should be possible to manipulate (e.g. update) the slice in place, or both. (I.e. just a copy of part of the array would not count in the sense used in this post.)</p>
+<p >(***) IIRC, Pascal has syntax that looks like non-nested multi-dimensional arrays, but the type is the same as a corresponding nested one, and one can't slice across the axes.</p>
+<p >(Hm, got a bit long)</p>
+<p >--<br >
+Stefan Ljungstrand</p></div>
+ <div class="links">By <a href="user/417" title="View user profile.">ski</a> at Mon, 09/20/2004 - 16:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1942"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1942" class="active">Reshaping</a></h3>
+ <div class="content"><p >One of the cool things you can do with APL (and J) arrays is reshape them. A 1D 12 element array can be operated on as if it a 2D 3*4 array, or a 2*2*3 array etc.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Sat, 09/18/2004 - 09:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1944"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1944" class="active">Why is that cool?</a></h3>
+ <div class="content"><p >I don't see a good use case. When does both a 12 element array and a 2D 3*4 array with the same data make any sense? Ok, it wouldn't hurt to have as an obscure library function, but why did you want to mention this here specifically? (just curious)</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Sat, 09/18/2004 - 12:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-1969"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-1969" class="active">When does both a 12 element a</a></h3>
+ <div class="content"><p ><i >When does both a 12 element array and a 2D 3*4 array with the same data make any sense?</i></p>
+<p >Imagine you have a two-dimensional array of quarterly sales figures.  To get the sales for a quarter you index by year (0,1,2...) and then quarter.  To get lifetime sales to date, you reshape the array to a single dimension and sum it.</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Mon, 09/20/2004 - 18:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-2100"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-2100" class="active">Train derails, not many dead</a></h3>
+ <div class="content"><p>
+Apologies for seeming irritated.  The problems were abuse of terminology, clarity of problem statement, and utility of the exercise.  I feel the same after the latest from Sjoerd and Frank.  (Frank, see below.)  I tried to escape the conversation earlier, foreseeing this train wreck.  But I am trying to help.
+</p>
+
+<p>
+Talking about array subscripts without using the accepted term is weird.  Maybe that's just me.  Nonstandard terms leave unclear whether the novelty lies in the concepts or in the terms.  I worry about self-deception.  For one example, we might confuse syntax sugar with true language novelty.  For another, the anonymous function <code style="font-size:120%">(x[[#1]])&</code> does not turn an array into a function.  It defines an array subscript function.  All languages know how to do this, and the terminology is well established.  The array remains a piece of data.  The function to be associated with the array, if any, remains a question of data interpretation which cannot be automated (auto-deduced).  That is why I mentioned interpolating functions and so on.  If you have an array, you can apply an interpretation of some sort to construct a function on a domain-specific, case-by-case basis.
+</p>
+
+<p>
+In the clarity and utility departments, here is what Mark doesn't get about Sjoerd's NestList example.  I missed the motivation for defining an array abstractly as a function from domain to range, then using the range to store domain values (the data interpretation), then feeding the result into a recursive HOF (NestList), then imagining that we achieved some novel language power.  This example is very convoluted.  Sure, it can be done.  How does it help us?  Even Frank's formality suffers under this example.  Sjoerd's NestList example doesn't have Frank's <code style="font-size:120%">[n]->A</code>, but <code style="font-size:120%">[n]->[n]->[n]->[n]->...</code>  At this stage we have something more akin to cellular automata than something relevant to programming languages.  So forgive my confusion.  This expansion clarifies the operation:
+</p>
+
+<code style="font-size:120%;font-style:normal">
+subscriptOf[array_,index_] := Part[array,index+1];<br>
+X = {1,3,4,2,3};<br>
+seed = 0<br>
+subscriptOf[X,seed]<br>
+subscriptOf[X,subscriptOf[X,seed]]<br>
+subscriptOf[X,subscriptOf[X,subscriptOf[X,seed]]]<br>
+subscriptOf[X,subscriptOf[X,subscriptOf[X,subscriptOf[X,seed]]]]<br><br>
+</code>
+
+<code style="color:red;font-size:120%;font-style:normal">
+0<br>
+1<br>
+3<br>
+2<br>
+4<br><br>
+</code>
+
+<p>
+It would make sense to talk about Nth subscripts if X were N-dimensional.  I asked for simpler examples with concrete utility and relevance.  Frank, I'd like you to demonstrate your formalism in 'wish-it-were-possible' pseudo-code with
+</p>
+
+<blockquote style="font-size:100%;font-style:normal">
+[n] = {1,2,3,...n}<br>
+A = the set of prime numbers<br>
+(function: [n] -> A) = Prime[5n]<br>
+(function: [m]*[n] -> A) = Prime[5mn]<br>
+pick any HOF, but keep things simple (e.g. nonrecursive)<br>
+</blockquote>
+
+<p>
+Abstractions are only as good as their best concrete cases, someone has said.  They can lead to confusions of their own.
+</p>
+
+<p>
+What Frank specified isn't what Sjoerd specified.  Taking the "Sjoerd array subscript" of the factorial function, per Sjoerd, is not Frank's <q style="color:green">reuse functions defined to operate on A-arrays as <span style="color:black">[higher-order-by-definition]</span> functions defined to operate on functions of the form [n]->A, and vice-versa.</q>  Factorial is neither a HOF nor operates on arrays.  So it's off Frank's radar.  Sjoerd, in his factorial case, wants to reuse a function defined on Z as a function defined on arrays of Z.  In Mathematica, Sjoerd's spec is easily satisfied by Listable.  That's why I brought it up.  You just set the function attribute Listable, and voila, your function now works on arbitrarily dimensioned arrays, element by element.  Many of Mathematica's stock functions have this attribute.  Hence my demonstration of Table above, and Range below:
+</p>
+
+<code style="font-size:120%;font-style:normal">
+Range[3,12]<br><br>
+</code>
+<code style="color:red;font-size:120%;font-style:normal">
+{3,4,5,6,7,8,9,10,11,12}<br><br>
+</code>
+<code style="font-size:120%;font-style:normal">
+Attributes[Factorial]<br><br>
+</code>
+<code style="color:red;font-size:120%;font-style:normal">
+{Listable,NumericFunction,Protected}<br><br>
+</code>
+<code style="font-size:120%;font-style:normal">
+(* zero-D *)<br>
+Factorial[3]<br>
+(* one-D *)<br>
+Factorial[Range[3,12]]<br>
+(* two-D *)<br>
+Factorial[Table[i+j,{i,3,6},{j,0,4}]]<br><br>
+</code>
+
+<code style="color:red;font-size:120%;font-style:normal">
+6<br><br>
+{6,24,120,720,5040,40320,362880,3628800,39916800,479001600}<br><br>
+{{6,24,120,720,5040},{24,120,720,5040,40320},{120,720,5040,40320,362880},{720,
+    5040,40320,362880,3628800}}<br><br>
+</code>
+
+<p>
+This and my first example satisfies Sjoerd's semantic spec.  We may quibble over syntax, but surely LtU is above arguments about syntax sugar?  (Cough, ahem.)  Here is some syntax sugar then.  It makes the "Sjoerd array subscript operator" look like a true array subscript (double brackets).
+</p>
+
+
+<code style="font-size:120%;font-style:normal">
+Clear[myFactorial]<br>
+myFactorial[n_Integer] := Factorial[n]<br>
+myFactorial /: myFactorial[[i_Integer]] := myFactorial[i];<br>
+SetAttributes[myFactorial, Listable]<br>
+myFactorial /: myFactorial[[imin_Integer, imax_Integer]] := myFactorial[Range[imin, imax]];
+</code>
+
+<p>
+Demos:
+</p>
+
+<code style="font-size:120%;font-style:normal">
+(* Normal function call *)<br>
+myFactorial[12]<br>
+(* "Sjoerd array subscript" syntax sugar *)<br>
+myFactorial[[12]]<br><br>
+</code>
+
+<code style="color:red;font-size:120%;font-style:normal">
+479001600<br><br>
+479001600<br><br>
+</code>
+
+<code style="font-size:120%;font-style:normal">
+(* Normal function call exploiting Listable *)<br>
+myFactorial[Range[3,12]]<br>
+(* "Sjoerd function slice" syntax sugar *)<br>
+myFactorial[[3,12]]<br><br>
+</code>
+
+<code style="color:red;font-size:120%;font-style:normal">
+{6,24,120,720,5040,40320,362880,3628800,39916800,479001600}<br><br>
+{6,24,120,720,5040,40320,362880,3628800,39916800,479001600}
+</code>
+</div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Mon, 09/27/2004 - 02:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-2103"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-2103" class="active">Where&#039;s the novelty?</a></h3>
+ <div class="content"><p>For me the novelty is in minimalistic language design, not utility per se. Take a look at this example:</p>
+<pre>fib[0] = 1
+fib[1] = 1
+fib[n] = fib[n-1] + fib[n-2]</pre>
+<p>You can call this a function definition, or an array definition with some kind of defaulting mechanism.</p>
+<p>Comming from Mathematica there may be no good reason to combine functions and arrays. But from a language design perspective I see no good reason to separate them.</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Mon, 09/27/2004 - 09:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-2105"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/222#comment-2105" class="active">Huh?</a></h3>
+ <div class="content"><p>
+Ugh, you had to pick another recursive function.  Please I beg you, pick another that isn't.
+</p>
+
+<p>
+Let's call things what everyone else calls them, shall we?  If fib is an array, what are the array dimensions of fib?  It's not an array, it's a function.
+</p>
+<p>
+I showed that Mathmatica <em>does</em> "combine" them, as you like to phrase it - incorrectly I think, but still.  Other languages can do the same tricks.  However yours seems not a language design issue, but a syntax sugar issue.  On that basis I don't think there is any novelty at all.
+</p>
+<p>
+The semantics of your proposal are that arrays can be functions - but only under an interpretation of array subscript.  That's just syntax sugar for array subscripts.  Then we have functions that can be arrays - with semantics identical to mappings across arrays.  More syntax sugar.
+</p>
+
+<p>
+Still, maybe my code snippets will be helpful in some way.  Good luck!
+</p>
+</div>
+ <div class="links">By <a href="user/787" title="View user profile.">Mark Evans</a> at Mon, 09/27/2004 - 10:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

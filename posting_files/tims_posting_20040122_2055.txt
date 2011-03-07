@@ -1,0 +1,15 @@
+http://lists.seas.upenn.edu/pipermail/types-list/2004/000106.html
+[TYPES] Functors and free theorems
+A covariant functor is an operator F:type->type paired with a function Map:(t->u)->(F(t)->F(u)) such that Map(id(t))=id(F(t)) and Map(f.g)=Map(f).Map(g) where "." is function composition and id(t) is the identity function over type t.
+
+Given a functor's Map function, since Map(id(t))=id(F(t)), we can at least in concept recover a functor's operator F from its Map function by translating the resulting identity arrow id(F(t)) back to its unique type. So a Map function obeying the two laws above is sufficient to define a functor.
+
+Question:
+
+Are there type systems where the type of all such a Map functions (for all possible functors) can be expressed precisely?
+
+I realize that in a type system supporting proofs-as-programs and equality types, it is possible to express the types of the proofs of Map(id(t))=id(F(t)) and Map(f.g)=Map(f).Map(g) directly.  But this takes the form of a product of a function and two relatively verbose proofs about it. Is there a way to do this more directly?
+
+I'm looking for something similar in spirit to the guarantee that in the Hindley-Milner type system, every function inhabiting the type ForAll(t:type).t->t is an identity function.  Is there a way to express the type of Map functions such that a parametricity-derived free theorem guarantees that it is inhabited exactly by those functions that are correct Map functions of functors?  A solution in any type theory whatsoever (not just Hindley-Milner) would be of interest.
+
+Tim Sweeney

@@ -1,0 +1,18 @@
+http://lambda-the-ultimate.org/node/1277
+http://lambda-the-ultimate.org/node/1277#comment-14252
+1049853
+The Next Mainstream Programming Languages
+Garbage collection
+<p>Garbage collection performance in games:
+</p><p>Though an Unreal Engine 3 game can easily consume 512MB memory (on console) or up to 2GB (on PC, in the editing tools), less than 10% of that memory consists of data that contains pointers.  The rest is bulk binary resources - like texture maps, sounds, animations, which don't require scanning for references.
+</p><p>50MB of data is well within the range of a mark-and-sweep garbage collector taking a few milliseconds within a game running at 30 frames per second.  This is what we do.  Realtime garbage collection is another possibility, but we didn't want to try to implement that within a primarily C++ engine.
+</p><p>Garbage collecting memory:
+</p><p>I do believe this is completely practical as the sole memory management solution, even in a realtime application like a game.
+</p><p>Garbage collecting resources (file handles, etc):
+</p><p>This is a very different question, because resource freeing has observable consequences beyond performance and memory consumption -- unlike garbage collection, which is justified by the realization that if you don't have any pointers to a value in memory, then it can simply dissapear (or not) without observable consequences.
+</p><p>For example, if you have a file handle open for writing, then other applications can't open that file.  You want such resource usage to be clear and deterministic, so that files don't just remain open for a random duration depending on the garbage collector's internals.
+</p><p>In general, I would not advocate garbage collection of OS resources or any other thing requiring explicit cleanup.  For example, I think that Java/C# finalizers are a misguided idea, because they have observable, nondeterministic consequences.  That is exactly the sort of feature a high-level, secure language should avoid.  The bizarre finalization state diagrams for those languages should be enough to indicate that something is wrong here!
+</p><p>For resource freeing, constructs which guarantee that every resource is freed look promising (think of wrapping a file handle in an abstraction like a Haskell State monad).  Or just plain old handles with explicit closing (and thus the risk of not closing a handle, closing it when it's not open, etc).
+</p><p>FxCop:
+</p><p>These sorts of tools are useful for analyzing code written in existing/legacy languages.  Microsoft has some scarily powerful analyzers along these lines that they use internally, as well.  But they're all built on the idea that you have code written in a language without strong safety guarantees, and you want to statically analyze them to figure out some of the things that might possibly go wrong at runtime.  That is useful, but it's not comparable to the guarantees one would have in a language with strong safety guarantees.
+</p><p>I remember writing game code in assembly language a long time ago.  Then macro assemblers came out and made assembly code easier to write correctly.  But the eventual solution was C, which led to ~5X higher programming productivity and a comparable reduction in bugs.  Ultimately tools like this are just workarounds for legacy problems to which genuine solutions are known ... and on the verge of coming into commercial practice.</p>

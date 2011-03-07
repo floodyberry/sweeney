@@ -1,0 +1,73 @@
+http://lists.seas.upenn.edu/pipermail/types-list/2005/000858.html
+[TYPES] Subtyping, extensional equality, and contravariance
+This is a query about a new direction in type systems supporting subtyping, extensional equality, and contravariance.
+
+Consider a type system with types "int" (the integers) and "nat" (the natural numbers) with nat<:int. Now define:
+
+[code]
+abs :: int -> int
+abs x = if x >= 0 then x else -x
+
+id :: int -> int
+id x = x
+[/code]
+
+Traditionally, one would say that abs!=int (at type int->int), and abs=id (at type nat->nat). In other words, extensional equality is only meaningful "at a type t", and the extensional equality of values may differ depending on the types at which they are interpretted.
+
+But I am interested in a type system in which equality represents the same relation at all types, in other words: a=b (at type t) implies that a=b (at type u) for all types u containing a and b.  Thus we can talk of a=b without referring to an interpretation type t.  The effect of this is to make all values non-polymorphic, that is, their interpretation is independent of the context in which they are interpretted.
+
+To satisfy this goal, I found it necessary to associate with every function value a unique "domain type" which is extractable and is carried around with the function value:
+
+[code]
+dom :: forall t,u. t -> u -> type
+dom f = t
+[/code]
+
+Then, two functions f and g are equal iff dom(f)=dom(g) and for all x:dom(f), f(x)=g(x).  In the examples above, dom(abs)=dom(id)=int, and abs!=id.
+
+The "invariant function space" type (written t+>u for now) then means the type of functions f in which dom(f)=t and for all x:t, f(x):u.  Thus we have abs:int+>int, but not abs:nat+>nat, because dom(abs)=int.
+
+The "contravariant function space" type t->u then means (intuitively) the union, for all supertypes types t' of t and all types u', of all functions f:t'+>u' in which for all x:t, f(x) belongs to type u'. In other words, all functions whose domain includes t, and whose image under t belongs to u. This is interesting because we then have abs:int->int and abs:nat->nat, but not abs:int->nat.
+
+Given an empty type "empty" and any type t, the type "empty->t" is then the type of all functions; name the later "function".
+
+This approach appears to enable implicit parametric polymorphism without the existing of any (implicit or explicit "forall") quantifiers. For example, in Haskell one would write:
+
+[code]
+map :: (t -> u) -> [t] -> [u]
+map f xs = [f x | x <- xs]
+as = map abs [3,-5,7]
+[/code]
+
+If we took the dependent-typed language Cayenne and removed parametric polymorphism, to write this we would have to specify all types explicitly:
+
+[code]
+map (t::type) (u::type) (f::t->u) (xs::[t])
+as = map int int abs [3,-5,7]
+[/code]
+
+But with the type system above, where every function value carries its exact domain type along with it, we can write the following:
+
+[code]
+map (f::function) (xs::[dom(f)]) = [f x | x <- xs]
+as = map abs [3,-5,7]
+[/code]
+
+Note that the above "map abs" application is as concise as in Haskell, but requires no forall quantifiers (neither explicit nor implicit), as the function's domain type is extracted from the function's value.
+
+We can also define a universal type "top" containing all possible values.  And then a Haskell function like:
+
+[code]
+id :: t -> t
+id x = x
+[/code]
+
+Can be translated without quantifiers as:
+
+[code]
+id (x::top) = x
+[/code]
+
+Has this approach been taken before?  I would appreciate any references to work along these lines, especially results on parametricity.
+
+Tim Sweeney

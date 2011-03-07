@@ -1,0 +1,449 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Joshua Bloch interview on new features in Java 1.5</b></font><br>
+<font color="white" size="-1">started 5/10/2003; 11:49:56 PM - last post 5/15/2003; 12:23:39 AM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Joshua Bloch interview on new features in Java 1.5 <a name="6771">&nbsp;</a><a href='#6771' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/10/2003; 11:49:56 PM (reads: 2251, responses: 17)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a6771"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://java.sun.com/features/2003/05/bloch_qa.html">Joshua Bloch interview on new features in Java 1.5</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			<small>(from the LtU <a href='message6770.html'>discussion group</a>)</small><p>
+Kimberley was kind enough to alert us to this interview regarding the new language features in Tiger (J2SE 1.5).<p>
+Nothing earth shattering: generics, enhanced <i>for</i> loops, autoboxing/unboxing, enums, static import and metadata.<p>
+We discussed most of these features before, but the interview is nice in that it give small code examples.<p>
+From a more abstract point of view it is nice to comapre the evolution of C++ we discussed at length this week, with the evolution of Java.<p>
+It is also interesting to notice the time it takes for new features to enter a programming language. We are not talking about ideas that come from Academia, mind you. Generics were implemented in Ada in 1983, and are used heaviliy. C++, as we all know, has them for years. Even the proposals for Java generics are now several years old.<p>
+But we'll get there. You can't stop progress.<p><br>
+			<font size="-2"><b>Posted to <a href='general.html'>general</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 5/11/03; 12:13:01 AM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#6771'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6774">&nbsp;</a><a href='#6774' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/11/2003; 7:46:05 AM (reads: 1175, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I see enums will be extendible via inheritance. Is this really a good thing? Opinions, anyone?
+<p></p>
+<p><a href='#6774'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Dan Shappir</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6777">&nbsp;</a><a href='#6777' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/11/2003; 8:48:21 AM (reads: 1170, responses: 2)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I think its a good idea for a very simple reason: it's a feature I wish I had when programming in C++. It generally happens when I build on top of existing functionality, without wanting to change it, e.g.:<p>
+
+<code>enum VALUES &#123; ... &#125;<BR>
+void foo(VALUES v);</code><p>
+
+is extended by:<p>
+
+<code>enum VALUES2 : public VALUES &#123; ... &#125;<BR>
+void foo2(VALUES2 v);</code><p>
+
+foo works the same way as before, accepting only values it can handle, while foo2 can handle the original values and new values.<p>
+
+The obvious problem is the "fragile base class" issue. That is, what happens if VALUE is extended to include new values. If we are lucky the new values added to VALUES will conflict with existing values in VALUES2 and we get a compile error. If we are unlucky foo2 may receive argument values it doesn't know how to handle.<p>
+
+Still, the fragile base class is an issue with all types of implementation inheritance and not specific to this case.
+<p></p>
+<p><a href='#6777'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Dan Shappir</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6778">&nbsp;</a><a href='#6778' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/11/2003; 9:25:05 AM (reads: 1178, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Put in more general terms: it makes as much sense to extend an enum as it does any other user-defined type. Since implementation inheritance if a cornerstone of OOP (at least in the Java style) its only fitting.
+<p></p>
+<p><a href='#6778'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>andrew cooke</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6779">&nbsp;</a><a href='#6779' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/11/2003; 10:19:20 AM (reads: 1133, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+There's a comment in the interview about avoiding adding new keywords.  The same thing crops up in Python discussion.  Why can't people defining a new language choose a syntax that avoids this problem (ie that can be parsed without needing to know that certain words are keywords to resolve what would otherwise be ambiguous statements)?  I've only implemented two parsers (via separate tools - I guess there's been quite a bit of ad-hoc recursive top down "parsing" at various points) in my life and even I've already learnt that keywords are nasty, so surely experts should know better.  I guess it's a C legacy thing (and maybe a Lisp legacy thing too, in a negative way).  Oz/Mozart manages to get quite close to C (closer than ML or Haskell, for example) while avoiding (I believe) this problem, so I'm not sure why Java should be broken in this way.<p>
+
+Or have I misunderstood?  :o)
+<p></p>
+<p><a href='#6779'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>andrew cooke</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6781">&nbsp;</a><a href='#6781' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/11/2003; 10:29:03 AM (reads: 1134, responses: 5)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Implicit conversion of null to zero on unboxing?!
+<p></p>
+<p><a href='#6781'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Dan Shappir</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6783">&nbsp;</a><a href='#6783' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/11/2003; 11:24:23 AM (reads: 1171, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+There is an additional important point with regard to enum inheritance that I thought of on the way home form work. The automatic type conversions that are defined by the inheritance relationship should work <b>in reverse</b> for enums than the way they do for regular classes.<p>
+
+Consider a class D derived from a class B. Java allows a reference to an object of type D to be used wherever a reference to an object of type B is expected. Using a reference to B where a reference to D is expected requires an explicit cast, and can result in a run-time exception if the object is not the correct type.<p>
+
+Given my previous example, Java should allow an automatic conversion from a value of type VALUES to a value of type VALUES2, because VALUES is a subset of VALUES2. The reverse conversion should require a cast, and result in a run-time exception if the value does not belong to the VALUES set. I don't know if Java 1.5 implements this feature in this way.<p>
+
+This is sort of related to <a href='message6587.html'>Tim Sweeney's posts</a> on type theory.
+<p></p>
+<p><a href='#6783'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6784">&nbsp;</a><a href='#6784' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/11/2003; 2:14:31 PM (reads: 1118, responses: 4)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I also found that strange.
+<p></p>
+<p><a href='#6784'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>andrew cooke</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6785">&nbsp;</a><a href='#6785' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/11/2003; 2:35:54 PM (reads: 1126, responses: 3)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Maybe Sun engineers have only got to addition in their maths class?<p>
+
+More seriously, it's not as bad as I first thought.  I think the reflex horror is largely based on using null as the empty list, but it doesn't work that way in Java - an empty iterator is empty (it doesn't return null) (as I'm sure you know).  But even so.  I guess they don't have any DB people on their team (I've just been reading one of Celko's books on SQL - not as good as I'd expected, does anyone know of anything better? (don't ask "better in what way?" - you <em>know</em> if a book is <em>good</em>)).  While I don't think it will do much harm (apart from looping over result sets from SQL), I can't think of <em>any</em> example where it would be useful.  Is there some part of Swing, say (I don't do Java GUI much), that is helped by assuming null implies zero?
+<p></p>
+<p><a href='#6785'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Kimberley Burchett</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6786">&nbsp;</a><a href='#6786' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/11/2003; 3:30:45 PM (reads: 1076, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+The fact that enums can be extended via inheritance is a direct consequence of the implementation strategy they chose.  They use the "typesafe enum pattern", which means that each enum value is represented by an instance of a given class.  Since classes can be extended, therefore so can enums.  And since enums are just classes, downcasts are implicit while upcasts are not.<p>
+
+They basically just codified the current idea of best practices.  I bet that if they gave any thought at all to the idea of allowing implicit upcasting (instead of implicit downcasting), that they dismissed it as being too weird.<p>
+
+Besides, changing the behavior of implicit casts would have required a change to the vm's bytecode verifier.  Java 1.4 already broke bytecode compatibility, and nobody would have tolerated it happening again in 1.5.  Also, requiring changes to the verifier suggests that implicit upcasting might open up security holes in some situations.<p>
+
+I suspect that most companies will simply decide that extending an enum is bad, and just ban it in their style guides.
+<p></p>
+<p><a href='#6786'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6794">&nbsp;</a><a href='#6794' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 5:50:04 AM (reads: 1014, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>The automatic type conversions that are defined by the inheritance relationship should work in reverse for enums than the way they do for regular classes.</em><p>
+
+XML Schema has a notion of subtyping like this. Basically, if you have a type X (which is a regular expression) which involves a choice, then you can declare any type Y which fixes that choice to be a subtype. For example, if X is:<p>
+
+<pre>author*, title, year</pre><p>
+
+and Y is:<p>
+
+<pre>author, title, year</pre><p>
+
+then Y can be declared to be a `restriction' of Y, since author* is type-equal to (1|author+), so it fixes a choice. (`1' is the empty sequence.)<p>
+
+I found this rather interesting; you might call it `additive' subtyping in contrast to the usual notion of subtyping where you extend a record, which might be called `multiplicative' subtyping. You can model these subtyping relations via coercions: additive refinements are modeled by injections of sums and multiplicative ones by projections of products.
+<p></p>
+<p><a href='#6794'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Daniel Bonniot</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6796">&nbsp;</a><a href='#6796' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 6:35:17 AM (reads: 1068, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+They give an example in the article where treating null as zero is what you want. But I agree this seems very ad-hoc. It just happens that in that case they are counting occurences, stored in a Map, in which case absebt naturally means 0. It's just as easy to imagine cases where the "default value" should be 1 (a multiplicative coefficient), some other integer, or rather reveal a bug, like that a wrong key was entered in the map.<p>
+
+From the point of view of the Nice language, all this confusion seems to result from Java's (and other language's) inability to express possibly-null and non-null types. For instance, when you have a Map&lt;String, int> map, then map.get(key) has type ?int. That is, the value is either an int, or null if there is no mapping for that key. Therefore, you need to test this result against null before treating it as an int. Consequently, the type system guarantess that you never get NullPointerException.<p>
+
+Nice also has the x || y operator: if x has type ?T and y has type T, then x || y has type T. It evaluates to the value of x, unless it is null, in which case it has the value of y. So in their example you could simply write map.get(key) || 0, which has type int.
+<p></p>
+<p><a href='#6796'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Matt  Hellige</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6799">&nbsp;</a><a href='#6799' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 7:48:49 AM (reads: 1056, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>More seriously, it's not as bad as I first thought.</em><p>
+
+I think it's absolutely as bad as I first thought! Using Integer objects with null is a pretty common idiom in Java to implement functionality like ML's 'a option type or Haskell's Maybe a type. Having null automatically converted to 0 makes this awkward at best, maybe impossible. Imagine the reaction if Simon Peyton Jones announced that in the next version of Haskell, Maybe Int and Int would be equivalent, and NONE would be considered equal to 0...<p>
+
+To launch something of a tangent, the real problem exposed here is that using null in this way is evil, and a much nicer (and still very OO) solution would be to define a MaybeInt class for this purpose (or, with generics, the much more useful Maybe&lt;*>). Unfortunately, class definition is too heavyweight for this, inner classes are ugly, and performance-conscious people tend to be enormously wary of creating "spurious" wrapper objects. This, in my opinion, is the much more serious problem with Java, and the one also manifested in the int/Integer distinction. It's quite awful to have an object-oriented language that discourages you from using objects... Imagine a functional language in which you were told, in all seriousness, to try to avoid defining too many functions!
+<p></p>
+<p><a href='#6799'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Daniel Bonniot</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6810">&nbsp;</a><a href='#6810' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 2:10:24 PM (reads: 1030, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+In Nice, ?T corresponds to what you call Maybe&lt;T>. It entirely resides in the type system, so no wrapper class is used in the generated code, which should reinsure performance-conscious people. <p>
+
+(In the current implementation, wrappers are used, but only for primitive values.)
+<p></p>
+<p><a href='#6810'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>andrew cooke</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6831">&nbsp;</a><a href='#6831' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/13/2003; 4:45:56 PM (reads: 902, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+A practical point - if you don't want enums to be subclassed then they (ie the class you use to subclass theirs) can be declared final.
+<p></p>
+<p><a href='#6831'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Dan Shappir</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6834">&nbsp;</a><a href='#6834' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/13/2003; 11:36:49 PM (reads: 903, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+But the point is that I do want inheritance for enums, just not the way they seem to be going about it. So basically what you're saying is that I'll get the feature but I should be careful never to use it. Is that a Good Thing?
+<p></p>
+<p><a href='#6834'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6860">&nbsp;</a><a href='#6860' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/14/2003; 10:17:35 PM (reads: 822, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I  received the following encouraging email from Joshua Bloch.<p>
+<i>Hi.  I glanced at your blog article regarding my recent interview on java.sun.com.  I just wanted to correct one misconception and provide one update:
+<p>
+The enum feature, as currently construed, will *not* allow inheritance, for precisely the reason that people discussed: the "inverted inheritance relationship" is too confusing to programmers.  There are a number of other technical complications too.  In the final analyisis, we felt the costs far outweighed the benefits.
+<p>
+Regarding auto-unboxing of null to zero, people overwhelmingly told us not to do this, so we almost certainly won't.</i>
+<p></p>
+<p><a href='#6860'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Dan Shappir</a> - Re: Joshua Bloch interview on new features in Java 1.5 <a name="6865">&nbsp;</a><a href='#6865' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/15/2003; 12:23:39 AM (reads: 840, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+It's nice to know they listen :-)<p>
+
+OTOH,<p>
+
+<i>the "inverted inheritance relationship" is too confusing to programmers.</i><p>
+
+Is that the reason, or, as Kimberley <a href='#6786'>pointed out</a>:<p>
+
+<i>changing the behavior of implicit casts would have required a change to the vm's bytecode verifier. Java 1.4 already broke bytecode compatibility, and nobody would have tolerated it happening again in 1.5</i><p>
+
+Probably both I guess ...
+<p></p>
+<p><a href='#6865'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

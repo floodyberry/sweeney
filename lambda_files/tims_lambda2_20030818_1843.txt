@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/classic/message8378.html
+http://lambda-the-ultimate.org/classic/message8378.html#8383
+0532666
+Closures and mutability
+Re: Closures and mutability
+<p>I absolutely agree with Erik, though I wouldn't have seen it this way without having implemented closures every possible wrong way and finally come around to this way of thinking.</p><p>
+
+It's quite a change from the C mindset and its simple "data structures &lt;-&gt; blocks of memory" view of the world, but there is great value to forcing all variables in a language to be constant, and expose mutability purely through typed references, solely through the new_ref, read_ref, and write_ref constructs.</p>

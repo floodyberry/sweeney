@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Apple Flunks First Grade Math | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F228" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Apple Flunks First Grade Math</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p>From <a href="http://www.mikeindustries.com/">Mike Davidson's blog</a>: a web designer gets an education in floating-point arithmetic.
+
+<blockquote>
+Something happened today which shook the very foundations of what I’ve always believed about computers. See, maybe this was just a crazy notion, but I was always under the impression that if there was ONE thing computers did well, it was math. Simple math, algebra, geometry, calculus… it didn’t matter. Computers have always been equation solving machines. Or so I thought. &mdash; <a href="http://www.mikeindustries.com/blog/archive/2004/08/apple-calculator">Apple Flunks First Grade Math</a>
+</blockquote>
+
+<p>Not really about programming languages, but I thought it was interesting to see a non-programmer's reaction to a basic programming issue. I say "non-programmer", and yet Davidson is apparently knowledgeable enough to write Flash code and Javascript DOM applications.
+
+<p>As programming skills become more and more necessary in non-programing fields, I expect we will see more and more people writing code with less and less understanding of what they are doing, and a piecemeal education will become (even more) the norm. How can/should we, as programming professionals and researchers, deal with that? </div>
+ <div class="links">By <a href="user/742" title="View user profile.">Frank Atanassow</a> at 08/31/2004 - 17:41 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/258" title="Faking it (even better)">previous forum topic</a> | <a href="node/214" title="Tree programming languages">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/228" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2565 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="228" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="228" />
+<a id="comment-1691"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1691" class="active">Shouldn&#039;t be exposed</a></h3>
+ <div class="content"><p >I don't see that this particular issue should be relevant to end users - Apple has a bug in their calculator, is all.  The "basic programming issue" in question shouldn't be exposed to end users, or even end programmers, under such straightforward conditions.  The way to deal with non-professionals working with systems is to first make sure that those systems get the basics right.  This is at least partially a language issue, since so many languages provide such a thin wrapper over hardware floating point.  </p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Tue, 08/31/2004 - 18:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1736"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1736" class="active">Thin wrapper over the hardware</a></h3>
+ <div class="content"><p >It's a good point.  Languages meant for general use should probably support rational bignums as the default; when you need the performance of hardware floating point, you should have to request it explicitly.</p>
+<p >Come to think of it, even rational bignums might not be good enough for some cases; you might want symbolic arithmetic (2*sqrt(2)-sqrt(2)==sqrt(2), not 1.414...).  Don't do any conversion until you have to display a result to the user.</p></div>
+ <div class="links">By <a href="user/1346" title="View user profile.">francis</a> at Thu, 09/02/2004 - 01:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1693"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1693" class="active">I&#039;m Reminded...</a></h3>
+ <div class="content"><p >... of a footnote in one of SICP's early chapters in which they acknowledge that a claim in the body text that they use "simple arithmetic" is a bald-faced lie. :-)</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 08/31/2004 - 19:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1738"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1738" class="active">But think of the converse</a></h3>
+ <div class="content">How many computer people act as if they know so much about other fields.  Just look at Slashdot comments.  So. Much. Crap.<p>
+There's also the Multidimensional Arrays thread where Mark Evans didn't see the connection between functions and array.  Now, having taking real analysis the connection is crystal clear to me.  Then there's misunderstandings about what mathematics is about and what functions are.  I didn't know until I took a course in abstract algebra and it cleared up so many things.  It made the distinction between a polynomial and a function <i>absolutely</i> clear.<p>
+Back to the non-programmers not knowing what's going on: programming can require excessive knowledge about how computers work.  That's what expressiveness is trying to get at.  Imagine having to build a car every-time you wanted to drive somewhere.  That's why people use "slow" languages, or "slow" libraries.  Metaprogramming is rarely exercised, compilers are treated as glaciers, and programmers complain when other people don't understand what's going on.</div>
+ <div class="links">By <a href="user/1171" title="View user profile.">Bryce Riner</a> at Thu, 09/02/2004 - 01:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1834"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1834" class="active">rational bignums as the default</a></h3>
+ <div class="content">Couldn't agree more!  Floating-point math is a useful but very quirky engineering tool and ought not be in such plain view of ordinary users.<p>
+
+I'd definitely like to see, in future languages, data types for integers, natural numbers, bounded natural numbers, and rational numbers that are in the obvious subtype relationship: 0..0 &lt;: 0..1 &lt;: 0..n &lt;: nat &lt;: int &lt;: rat -- and that obey all of the laws of arithmetic.  You know, those laws the ancient Greeks invented a few millenia ago, not the fixed-width twos-complement approximation that CPU's use internally.<p>
+
+My experience is that this can be done without significant performance compromises.  For example, in Unreal, about 95% of the occurances of integer math are used for indexing into arrays; the bounded natural number types can always be safely used there and fit into traditional operations.  The key realization here is that any number that can safely index into an array that exists in memory can be stuffed losslessly into the machine word size without sacrificing performance in all reasonable cases where real bignums aren't required.  This is a decision a compiler ought to make rather than forcing programmers to decide, as C# does, "Which one of the language's 12(!) built-in numeric data types do I want to use in THIS situation?"</div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 09/10/2004 - 23:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1841"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1841" class="active">Bounded natural numbers?</a></h3>
+ <div class="content"><p >What do you mean by "bounded natural numbers"?  Do you mean twos-complement 32-bit ints, or the groups of 0..n-1 with arithmetic mod n?  I have long wished for the latter.</p>
+<p >Sid Meier's trick was to divide 2^32 by n and use that as ONE, and so on, letting the twos-complementedness mod everything for him.  (Only works for powers of 2, though, and don't index your array with ONE!)  A cute trick.</p></div>
+ <div class="links">By <a href="user/1361" title="View user profile.">Chris Pine</a> at Sun, 09/12/2004 - 14:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-1842"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1842" class="active">Modulo mod</a></h3>
+ <div class="content"><blockquote>
+Do you mean twos-complement 32-bit ints, or the groups of 0..n-1 with arithmetic mod n?
+</blockquote>
+I hope Tim is accustomed to other people interpreting his posts. My understanding was that he meant dependent types. And probably without mod: if x:0..n and y:0..m then (x+y):(0..n+m).
+<p>
+I think the whole point of dependent types is being greedy about information, not letting it perish, or be diluted.
+<p>
+Could you elaborate about ONE? I am not sure I understood the idea.</div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Sun, 09/12/2004 - 14:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-1853"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1853" class="active">&quot;Could you elaborate about ON</a></h3>
+ <div class="content"><p >"Could you elaborate about ONE? I am not sure I understood the idea."<br ><br ></p>
+<p >Speaking of interpreting other people's posts... I'm assuming he means something like this:<br ><br ></p>
+<p >Suppose you want to represent arithmetic modulo n. We would like to do this by mapping to two's complement 32-bit integers. So let's use the following mapping: the modulo-n integer k (0 <br ></p>
+<p >It's probably easier to see why it works if we choose a smaller radix, e.g. 3. In this case we have<br >
+<br ><br ><br >
+-4  100<br ><br >
+-3  101<br ><br >
+-2  110<br ><br >
+-1  111<br ><br >
+ 0  000<br ><br >
+ 1  001<br ><br >
+ 2  010<br ><br >
+ 3  011<br ><br >
+<br ><br ><br >
+Consider the simplest case of modulo-2^3 arithmetic where we map 0 onto -4 = 100, 1 onto -3 = 101, and so on. To verify that the isomorphism works out in this case, we simply have to verify that two's complement arithmetic "wraps around" in the natural way. I think this is proved in pretty much all books that discuss two's complement arithmetic; this is essentially the property that makes "temporary overflow" not screw everything up in two's complement arithmetic.<br ><br ></p>
+<p >Note that for addition and subtraction it is not a problem that our modulo-2^3 zero does not get mapped onto the two's complement zero. We can just account for this by offsetting appropriately when converting to and from the representation.<br ><br ></p>
+<p >You can see that it works in the general case of modulo-n arithmetic by appealing to the simple case above.<br ><br ></p>
+<p >I'd be interested if the original poster could elaborate on how this works out for multiplication!<br ><br ></p></div>
+ <div class="links">By <a href="user/1250" title="View user profile.">Per Vognsen</a> at Sun, 09/12/2004 - 18:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-1857"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1857" class="active">&quot;Note that for addition and s</a></h3>
+ <div class="content"><p >"Note that for addition and subtraction it is not a problem that our modulo-2^3 zero does not get mapped onto the two's complement zero. We can just account for this by offsetting appropriately when converting to and from the representation."<br ><br ><br >
+This is wrong and in fact the mapping I describe does not work as advertised. Instead you want to associate a modulo-n integer k with k * (2^3 / n) calculated in UNSIGNED arithmetic, then treat the resulting bit pattern as a two's complement SIGNED integer and do all further calculations with two's complement arithmetic. Converting back is just a matter of inverting that formula.</p></div>
+ <div class="links">By <a href="user/1250" title="View user profile.">Per Vognsen</a> at Sun, 09/12/2004 - 20:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-1856"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1856" class="active">Could you elaborate about ONE</a></h3>
+ <div class="content"><blockquote>Could you elaborate about ONE? I am not sure I understood the idea.
+</blockquote>
+Sure.  The idea is to have something you want to be intentionally cyclic, like compass directions:
+<code><pre>
+NORTH = 0x00000000
+EAST  = 0x40000000
+SOUTH = 0x80000000
+WEST  = 0xC0000000
+TURN_RIGHT = EAST   //  This is like  1.
+TURN_LEFT  = WEST   //  This is like -1.
+NO_TURN    = NORTH  //  This is like  0.
+</pre></code>
+Now if you want your character to turn left three times, just add 3*TURN_LEFT.
+<p>
+You could generalize this to any power-of-2-sized set of "numbers", and call them ONE, TWO, etc.  And ZERO is always just regular integer 0.
+<p>
+I hope this also answers the question of how you multiply... one of the numbers needs to be a normal integer.  Sounds a little messy, but works pretty well in practice, if you're stuck in C.  But how nice if I had a language which would do this for me (or at least let me define such a thing nicely), and not just for powers of 2.
+<p>
+Incidentally, I do *not* see this as a subtype of the integers, because it's a different form of arithmetic:  arithmetic mod some n.  (But in the same light, I don't see how the naturals would be a subtype, since it's not closed under subtraction.)
+<p>
+The dependent type thing is interesting, though it seems less about "type" and more about "compiler optimization".</div>
+ <div class="links">By <a href="user/1361" title="View user profile.">Chris Pine</a> at Sun, 09/12/2004 - 20:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-1871"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1871" class="active">You can do modular arithetic in Haskell</a></h3>
+ <div class="content"><p >There's a paper by Oleg Kiselyov and Chung-chieh Shan about <a href='http://www.eecs.harvard.edu/~ccshan/prepose/prepose.pdf'>expressing configuration parameters via the type system</a>. One of their examples is modular arithmetic. They use the type of a number to encode its modulus and then make every such type an instance of <code >Num</code>.</p></div>
+ <div class="links">By <a href="user/1242" title="View user profile.">Dave Menendez</a> at Mon, 09/13/2004 - 14:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1835"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/228#comment-1835" class="active">Level of Abstraction</a></h3>
+ <div class="content">Tim Sweeney: <i>You know, those laws the ancient Greeks invented a few millenia ago, not the fixed-width twos-complement approximation that CPU's use internally.</i>
+<p>
+Heresy! Next you'll be saying that we should use high-level languages instead of quasi-portable assemblers!
+<p>
+Besides, <a href="http://www.gregorpurdy.com/gregor/gw/by-entry/000480.html">the universe is a two's-complement machine</a>. :-)</div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sat, 09/11/2004 - 23:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

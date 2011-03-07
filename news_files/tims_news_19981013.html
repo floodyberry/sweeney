@@ -1,0 +1,95 @@
+<h4>Unreal Cheat-Finding Challenge</h4>
+
+<p>I've seen two reports that people have found a way to cheat in Internet play.
+&nbsp;&nbsp; One person reported seeing a little tiny 1-inch tall player walking around
+named &quot;LilTinyChessPiece&quot;, and another reported a player who never took damage.
+&nbsp;&nbsp; I've been scouring the code, and haven't found any holes which would enable
+this kind of cheating, but I'd love to hear if anybody has found a way.</p>
+
+<p>If you find a way for players to cheat or crash servers over the Internet in Unreal,
+please email <a href="mailto:tim@epicgames.com">me</a>.&nbsp; The first person to report a
+particular security hole in Unreal will receive credit and thanks here for helping to
+protect the Unreal community from cheaters.</p>
+
+<p>People who cheat in Deathmatch are lamers, but people who are motivated by simply <span class="em">discovering
+ways to cheat</span> are doing valuable research.</p>
+
+<p>Note: I don't consider the following things Unreal cheats: </p>
+
+<ul>
+  <li>Server administrators cheating on their own server. Since the admin is in control of the
+    server, there are many ways he could disadvantage players (in any game, not just Unreal),
+    but fortunately people who go to the effort of setting up their own server tend to be
+    honest and respectful of the community. </li>
+  <li>Any of the standard TCP/IP tricks people can use to confuse Web &amp; FTP servers, such
+    as SYN flooding, packet flooding, DNS spoofing, and so on.&nbsp; These aren't
+    Unreal-specific cheats, and I can't stop them. </li>
+
+</ul>
+
+<h4>UnrealScript Notes</h4>
+
+<p>There was recently a &quot;to script or not to script&quot; debate about the merits of
+UnrealScript vs pure C/C++.&nbsp; In this debate, several misconceptions were put forth,
+which I want to correct: </p>
+
+<ol>
+  <li><p>UnrealScript replicated functions (described in the <a
+    href="http://unreal.epicgames.com/Network.htm">Network Architecture Documentation</a>)
+    indeed return instantly, rather than blocking execution while waiting for network
+    acknowledgement.&nbsp; Function calls are sent across the network using an asynchronous
+    RPC-like approach, and are executed upon reception. &nbsp; They can either be sent wih
+    guaranteed delivery and sequencing (by using the &quot;reliable&quot; keyword), or without
+    sequencing (using &quot;unrelible&quot;). &nbsp; Unreliable replicated functions are most
+    efficient, and should be used for non-vital events like hearing sounds.</p>
+
+    <p>
+    If one were to assume UnrealScript functions were synchronous and blocking, one would
+    indeed draw incorrect conclusions such as this statement: &quot;That must make AIs in
+    multiplayer games really fun, they fire at you and do an RPC, then freeze until they get a
+    ping back from the client.&quot;</p>
+  </li>
+  <li><p>As our licensees know, UnrealScript classes and C++ classes fully interoperate. &nbsp;
+    You can derive C++ classes from UnrealScript classes, and vice-versa.&nbsp; For all actor
+    classes, running &quot;Unreal.exe -make&quot; automatically parses the UnrealScript
+    classes, and generates C++ stubs for them, including:</p>
+
+    <ul>
+      <li>C++ variable declarations mirroring the UnrealScript ones, allowing variables to be
+        accessed identically in either language. </li>
+      <li>C++ -&gt; UnrealScript calling stubs, enabling C++ functions to call into UnrealScript
+        functions. </li>
+      <li>UnrealScript -&gt; C++ calling stubs, enabling UnrealScript functions to call into C++. </li>
+    </ul>
+
+    <p>Indeed, we invested a lot of effort into providing dual programming interfaces,
+    enabling seamless sharing of objects and code between the two languages.&nbsp; Among other
+    things, I studied COM, MFC/VB/ActiveX, CORBA/IDL, and JNI in order to determine the most
+    efficient and least error-prone methods of cross-language programming. There is a lot of
+    great research material on the net, for those who are interested.</p>
+    <p>I suspect that people who have a low opinion of mixed-language programming have likely
+    drawn their conclusions from JNI and CORBA/IDL which do indeed involve a lot of messy
+    handle/id references and error-prone redundent declaration of objects.&nbsp; It doesn't <span class="em">have</span>
+    to be this way.&nbsp; For an example of &quot;cross-language programming done right&quot;,
+    check out the ActiveX support in Microsoft Visual J++ and Visual Basic -- they're
+    ultra-clean, automatic, and they involve no redundency.&nbsp; MFC also does a pretty good
+    nearly-automatic job of cross-language ActiveX object handling.&nbsp; Mixed-language
+    programming can be very fruitful, if it's implemented properly.</p>
+
+  </li>
+  <li>Unreal performs all file loading and saving using serialization.&nbsp; Serialization is
+    automatic for objects defined in UnrealScript.&nbsp; For objects and structures defined
+    only in C++, such as the following function that serializes a vector. <pre>friend FArchive&amp; FVector::operator&lt;&lt;( FArchive&amp; Ar, FVector&amp; V )
+{
+        return Ar &lt;&lt; V.X &lt;&lt; V.Y &lt;&lt; V.Z;
+}</pre>
+
+    <p>For programmers just learning about object-orientation, a must-read is: <a
+    href="http://www.amazon.com/exec/obidos/ASIN/0201633612/o/qid=908310340/sr=2-1/002-5033601-8164246">Design Patterns: Elements of Reusable Object-Oriented Software</a>
+    (Addison-Wesley Professional Computing) by <a
+    href="http://www.amazon.com/exec/obidos/Author=Gamma,%20Erich/002-5033601-8164246">Erich
+    Gamma</a>, <a
+    href="http://www.amazon.com/exec/obidos/Author=Helm,%20Richard/002-5033601-8164246">Richard
+    Helm</a>,</p>
+  </li>
+</ol>

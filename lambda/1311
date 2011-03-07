@@ -1,0 +1,1618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Gilad Is Right | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1311" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Gilad Is Right</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >
+<b ><a href="http://bracha.org/">Gilad</a> Is Right (Confessions From A Recovering Typoholic)</b>
+</p>
+<p >
+If you have not seen Gilad Bracha's talk on <a href="http://bracha.org/pluggable-types.pdf">pluggable and optional type systems</a> or read the <a href="http://pico.vub.ac.be/~wdmeuter/RDL04/papers/Bracha.pdf">corresponding  paper</a>, I really urge you to do so (or invite Gilad as the <a href="http://public.research.att.com/~kfisher/FOOL/FOOLWOOD06/program.html#bracha"> invited talk in your conference or workshop</a>). The thesis of optional and  pluggable type systems is that type-systems should be an optional layer on top  of an otherwise dynamically typed system in such a way that (a) types cannot  change the run-time behavior of the program, and (b) they cannot prevent an  otherwise legal program form compiling or executing. In short what Gilad is  saying is that you should not depend on static typing. However, we all know that  static type-systems are very addictive, like the finest crack from the backstreets  of the ghetto, and I will stop beating around the bush and confess &quot;I am Erik, and I am a (recovering) <a href="http://www.cartesianclosed.com/pub/type_indexed_rows/">typoholic</a>&quot;.
+</p>
+<p >
+To illustrate the tantalizing power of static typing, take the concept of <a href="http://msdn.microsoft.com/vbasic/Future/default.aspx?pull=/library/en-us/dnvs05/html/vb9overview.asp#vb9overview_topic6">axis members in Visual Basic 9</a>. In our first design we keyed &quot;late&quot; binding over XML on the <i >static</i> type of the receiver. For example take the  following element declaration
+</p>
+<pre >Dim Pu As XElement = &lt;Atom AtomicWeight=&quot;244&quot;&gt;
+                       &lt;Name&gt;Plutonium&lt;/Name&gt; 
+                       &lt;Symbol AtomicNumber=&quot;94&quot;&gt;Pu&lt;/Symbol&gt;
+                       &lt;Radioactive&gt;true&lt;/Radioactive&gt; 
+                     &lt;/Atom&gt; </pre><p >
+Since the static type of <code >Pu</code> is <code >XElement</code>, our compiler interprets the member access expression <code >Pu.Symbol</code> as the call <code >Pu.Elements(&quot;Symbol&quot;)</code> on the underlying XLinq API. While this is rather cute, it is not without problems. First of all, the <code >XElement </code>class itself has quite a lot of members, and the question is who wins when there is an ambiguity like in <code >Pu.Name</code>. Should this mean <code >Pu.Elements(&quot;Name&quot;)</code> or should it just directly call the underlying <code >Name</code> property of <code >XElement</code>. Even worse, what happens if the static type of the receiver is <code >Object</code>, but its dynamic type is <code >XElement </code>as in <code >CObj(Pu).Symbol</code>.  What we should really do is to extend the Visual Basic late binder to understand  axis members, which means we now have two levels of possible ambiguity! At this  point, we have lost the majority of our users. Keying axis member binding on the  static type of the receiver is just <i >too</i> cute, we are really doing some kind of  fancy type-based overloading.
+</p>
+<p >
+Besides the child axis, we have special support for attribute axis, written using an <code >@</code>-sign as in <code >Pu.@AtomicWeight</code> and for the descendant axis, written using three consecutive dots as in <code >Pu...RadioActive</code>. Obviously, for these two there is no ambiguity with normal member access, depending on how you look at it, it is clear from the member name (<code >Pu <b >.</b><b >@AtomicWeight</b></code> and <code >Pu <b >.</b> <b >••RadioActive</b></code>) or the selector (<code >Pu <b > •@</b> AtomicWeight</code> and <code >Pu <b >•••</b> AtomicWeight</code>) what the intention is, independent of the static type of the receiver. There is no danger for ambiguity, and it all works fine for late-binding when the receiver has type object since we can always interpret <code >Pu.@AtomicWeight</code> as <code >Pu.Attributes("AtomicWeight")</code> and then do ordinary member resolution and type-checking on that.
+</p>
+<p >
+To solve our pain, we recently decided to also introduce special syntax for the child axis and write <code >Pu.&lt;Symbol&gt;</code> instead of <code >Pu.Symbol</code>. Now there is no ambiguity between <code >Pu.Name</code>, which returns the string <code >&quot;Atom&quot;,</code> and <code >Pu.&lt;Name&gt;</code> which returns the <code >XElement</code> child node <code >&lt;Name&gt;Plutonium&lt;/Name&gt;</code>. For consistency, we also changed the syntax for the descendant axis to be <code >Pu...&lt;RadioActive&gt;</code> instead of <code >Pu...RadioActive</code>. </p> <p >I hope that you agree that we have masked out the <a href="http://en.wikipedia.org/wiki/Siren">seductive voices of the static typing sirens</a> by providing a syntax that is more beautiful and a semantics that is much simpler than our previous one that relied heavily on static typing. Gilad is right!
+</p> </div>
+ <div class="links">By <a href="user/776" title="View user profile.">Erik Meijer</a> at 02/18/2006 - 01:48 | <a href="taxonomy/term/28">Guest Bloggers</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1311" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 12305 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1311" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1311" />
+<a id="comment-14795"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14795" class="active">After FOOL, Jonathan Aldrich</a></h3>
+ <div class="content"><p >After FOOL, Jonathan Aldrich told me about Gilad Bracha's talk, and I told him that I found this argument to be pretty credible.</p>
+<p >Then, I told him about a conversation I had with Manuel Fahndrich, who told me about the Singularity project at MS. They were building an OS that used (will use?) typed assembly language to ensure that every program on the machine is memory safe, and use linear types to type messages passed through a message store. This would let them do away entirely with context switches and hardware memory protection, and make IPC as cheap as handing off a pointer to a message object. The idea was that they could use types to entirely eliminate the cost of factoring a program into communicating processes, and permit programmers to properly decompose systems that would otherwise be monolithic for performance reasons, and hence increase reliability.</p>
+<p >Jonathan listened to me, and then said this sounded pretty credible, too.</p>
+<p >There's a certain amount of TANSTAAFL in language design, I think.</p></div>
+ <div class="links">By <a href="user/1111" title="View user profile.">neelk</a> at Sat, 02/18/2006 - 02:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14796"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14796" class="active">Judging by the slides, it</a></h3>
+ <div class="content"><p >Judging by the slides, it seems to be attacking weaknesses of the nominal/ mainly monomorphic type systems of mainstream langauges and then via hand wavery sweeping more powerful systems under the same carpet.</p>
+<p >On the other hand, it does have the very good point that using a more powerful type system to manage program complexity does have the cost of simply increasing complexity elsewhere instead. </p>
+<p >So who should bear the brunt of the complexity, the user or the implementor? Bracha seems to be arguing that the implementor should have less of a burden than one has with the Static Typing discipline of programming language design, to widen the class of expressible and behaviorally correct programs, which is an excellent objective.</p>
+<p >On the other hand, it seems that the languages which occupy the space between dynamic typing, and  ML (and beyond) static typing are those with the most issues, ie Java, C++ etc.</p></div>
+ <div class="links">By <a href="user/1325" title="View user profile.">Carter T Schonwald</a> at Sat, 02/18/2006 - 03:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14797"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14797" class="active">So where&#039;s the pluggable type system for VB?</a></h3>
+ <div class="content"><p >It's all well and good to say that we don't need static typing because the possibility exists for developing a pluggable type system on top of code written for a dynamic language.  But what's the chance that we can successfully type check all that legacy VB code that's already written?  Will a lint-type Type Checker tell us anything meaningful if we didn't continually involve this background checker in the active development and maintenance of the coding process?  I'd liken it to the past practice of writing tests after all the code has been written.</p>
+<p >And that's the rub.  If the code was written without the discipline of type checking - be it static or pluggable - then doing type checking ex-post facto is going to be rough road.  As an example, try to run lint on a large C project that has never had lint run on it before.  The likelihood is that you are going to get a gazillion warning messages.  You can either ignore them or slowly start grinding through the code looking for places where there might be an error.  A needle in a haystack comes to mind.  Yet, if we had constantly run lint on the project, we could have minimized the number of warnings along the way, making notes where the warning can be safely ignored.  And most importantly, change our coding to fit with the best practices suggestions of lint.</p>
+<p >So if you want to develop a type checker that is actively engaged in Visual Studio, I say go for it.  But I don't see how object container accessors have a relevance on whether pluggable type checking is feasible.  VB's type system is at best quirky - in my experience the type checking it does do is more trouble than it's worth.  So, yes, I'd rather see VB go down a more dynamic path.  But then C# is the language I use more of these days, so I'm a fence sitter on the subject of VB.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Sat, 02/18/2006 - 03:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14798"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14798" class="active">Nickle does this, but it is hard</a></h3>
+ <div class="content"><p >I agree with Gilad's thesis.  In fact, our <a href="http://nickle.org">Nickle</a> programming language has taken this approach to typing for several years.  It's really nice to be able to say to folks who whine about static typing "don't use it in the places where it gets in the way!"</p>
+<p >I will say, however, that we have paid a horrible price in efficiency for not being willing to do the hard work of deleting or optimizing runtime typechecks via "as-if" to improve performance.  We've also had a hard time finding/constructing a reasonable "polite" (doesn't reject valid programs) subtyping type system that can support some kind of parametric or template polymorphism or type classes or something to get decent static typing for containers and ADTs.  That may just be our lack of language design and mathematical sophistication showing, though.</p>
+<p >All in all, though, I think polite types are the future.  The scripting kiddies :-) mostly seem to think that all static typing is B&amp;D: the only way I've found to win them over is to let them learn the good side of B&amp;D by letting them ease into it gradually. :-) :-) </p></div>
+ <div class="links">By <a href="user/2649" title="View user profile.">po8</a> at Sat, 02/18/2006 - 04:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14799"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14799" class="active">No</a></h3>
+ <div class="content"><p >In Bracha's work here, and in Microsoft's work on C# 3.0, I sense an undercurrent dragging the language model toward the LISP/Smalltalk "ideal" of metadata-intensive, introspective, dynamic, loosely-typeable programming programming.</p>
+<p >This is misguided, for two reasons.  First, the demands of secure, robust software imply a need to verify more program at compile-time, not less; this means you need a strong type system or even a non-partial Curry-Howard style proof language as a subset of your language.  Second, the increasing importance of robust concurrency implies the need for strong typing to isolate constant storage from mutable storage and effect-free code from effectful code via type annotations.</p>
+<p >Of course, it's easy to see how this undercurrent arises.  When you release a language, you receive complaints from users about all the things they want to do and can't, and the ultimate way to satisfy all of these requests is to expose all metadata: make it extensible, make objects dynamic, and allow the possibility of completely dynamic typing.  The end of the road here looks an awful lot like LISP and SmallTalk.</p>
+<p >If you go this route, one day you'll realize you evolved the ultimate hacker language, and it became a godawful mess for writing real programs.</p>
+<p >More specifically here, the paper understates the number of important properties that break in an untyped language.  If the developer of a popular library adds a new field (function or variable) named "x" to one of his classes, then he breaks all previously-released applications (both source and binary) that have inherit from it and added their own member named "x".  Conclusion: modular object-oriented programming really isn't feasible in this model.  What else goes wrong?  Since (the lack of) typechecking can't change behavior -- the essential point of the paper -- all data-hiding is lost, your objects are open to introspection attacks, and you need to hack on some arbitrary runtime security checking to prevent that.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Sat, 02/18/2006 - 04:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14800"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14800" class="active">When you pursue the kind of</a></h3>
+ <div class="content"><p >When you pursue the kind of system described here, you have to use functions to do all your member access ("foo(x)" instead of "x.foo") as in CLOS/Dylan (Dylan actually interprets "x.foo" as "foo(x)"). That allows you to deal with name conflicts on slots/fields using your module system (so two different modules that define a "foo" slot would introduce two different slots and two different accessor functions -- CLOS's handling of slots gets this wrong). Then you can introduce new slots in future versions of a module without changing program behavior.</p>
+<p >Of course, once you have to call explicitly imported member-access functions fully qualified by their modules you are doing the equivalent of specifying static types (albeit with a less convenient, more verbose syntax).</p></div>
+ <div class="links">By <a href="user/2716" title="View user profile.">Tim Foley</a> at Sat, 02/18/2006 - 06:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14805"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14805" class="active">CLOS&#039;s handling of slots is also right...</a></h3>
+ <div class="content"><p >...same as in Dylan.</p></div>
+ <div class="links">By <a href="user/878" title="View user profile.">Pascal Costanza</a> at Sat, 02/18/2006 - 10:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14827"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14827" class="active">not exactly...</a></h3>
+ <div class="content"><p >From the CLOS hyperspec: "In general, more than one class among C and its superclasses can define a slot with a given name. In such cases, only one slot with the given name is accessible in an instance of C...". Adding a slot "x" to a class C breaks any application where a subclass of C had already inherited (or declared) a slot "x" (since storage for the two will alias). This rule means that you cannot maintain modularity and extensibility unless your slot "names" are all module-private unique symbols/values, which is not what I see in most sample CLOS code. Even if "real" CLOS apps only use module-private unique names for all slots, this still leads to the verbose member-access dilema I described. Dylan (at least by my reading of the DRM) doesn't have the concept of slot "names" as distinct from their getter/setter multimethods, so it doesn't suffer from the aliasing problem (although it still has the verbosity problem when slot-access multimethods names collide).</p>
+<p >This all becomes much easier when you resign yourself to the fact that in an extensible system, a given object could have many "x" members, and static typing is the only sane way to know which of these is meant in any given context.</p></div>
+ <div class="links">By <a href="user/2716" title="View user profile.">Tim Foley</a> at Sun, 02/19/2006 - 04:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14810"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14810" class="active">Types as an organizing principle</a></h3>
+ <div class="content"><blockquote ><p >If you go this route, one day you'll realize you evolved the ultimate hacker language, and it became a godawful mess for writing real programs.</p></blockquote>
+<p >This has been one of the upsides of using even C++ versus Scheme for me: the type system <i >encourages</i> organizing things in a particular way, so that a large codebase is more likely to be coherent (**).<br >
+The Bracha slides portray the advantages of type systems as "Performance" and "Safety", but there are other aspects.</p>
+<p >(** not that I think C++ is the best way to do this -- just better than nothing.  The downside to this is that it is less natural to alter the organizing principle.. no cake &amp; eating it too.)</p></div>
+ <div class="links">By <a href="user/1195" title="View user profile.">dbfaken</a> at Sat, 02/18/2006 - 14:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14825"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14825" class="active">i agree</a></h3>
+ <div class="content"><p >And having them mandatory is cool to if you work in a team. Also  terms like brittle or flexible seem pretty useless to me. A program is correct or it is not. I am getting sick of of those dynamic  language designers they avoid designing a good type system because it is to difficult for them and than they try to tell users that it is for there own good.</p></div>
+ <div class="links">By <a href="user/2503" title="View user profile.">remco greve</a> at Sat, 02/18/2006 - 23:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14823"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14823" class="active">doesn&#039;t happen</a></h3>
+ <div class="content"><p ><cite ><br >
+the paper understates the number of important properties that break in an untyped language. If the developer of a popular library adds a new field (function or variable) named "x" to one of his classes, then he breaks all previously-released applications (both source and binary) that have inherit from it and added their own member named "x".<br >
+</cite></p>
+<p >In a Python example:</p>
+<p ><code ><br >
+class Foo( object ): pass<br >
+class Bar( Foo ):<br >
+&nbsp;&nbsp;  def x( self ):<br >
+&nbsp;&nbsp;&nbsp;&nbsp;    return "x"</p>
+<p >b = Bar()<br >
+b.x() # -&gt; "x"</p>
+<p >def anotherX( obj ): print "XXX"<br >
+Foo.x = anotherX</p>
+<p >b.x() # -&gt; "x"<br >
+</code></p>
+<p >I don't know which "untyped" language you're talking about, but at least the most popular modern dynamically typed scripting languages -- Perl, Python, Ruby and others -- are mostly properly lexically scoped, so i guess the kind of problem you describe isn't "bound" to happen...</p></div>
+ <div class="links">By <a href="user/1328" title="View user profile.">rmalafaia</a> at Sat, 02/18/2006 - 21:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14828"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14828" class="active">you missed the point...</a></h3>
+ <div class="content"><p >The problematic case (to extend you Python example) is:</p>
+<p >1 - programmer A creates an application that uses a useful base class Foo</p>
+<p >2 - programmer B extends Foo to create Bar and adds a helper method "x" on Bar that returns a number</p>
+<p >3 - programmer A (who doesn't know about Bar) updates class Foo to have a new method "x" that returns a list, provides a default implementation, and then changes his application code to use the new method.</p>
+<p >4 - The application breaks the instant an instance of Bar is used in the application code that expects someFoo.x() to return a list, since Bar::x is now a method override rather than a new method.</p>
+<p >Programmer A, when he wrote "someFoo.x()", knew that he meant the x method define in Foo (or an *intentional* override). Programmer B, when he writes "someBar.x()", knows he means the x method defined in Bar (and knows that this method isn't supposed to override any superclass method). If we use static types to resolve the member lookup, this program does the right thing. If instead we expect the semantics of member lookup to be indepdendent of static context we make collisions between independent extensions almost inevitable.</p></div>
+ <div class="links">By <a href="user/2716" title="View user profile.">Tim Foley</a> at Sun, 02/19/2006 - 04:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14831"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14831" class="active">But isn&#039;t that supposed to happen?</a></h3>
+ <div class="content"><p >Parent and child in an inheritance hierarchy are closely coupled, so why shouldn't changing the parent without updating the child break things down?</p></div>
+ <div class="links">By <a href="user/1173" title="View user profile.">Ohad Kammar</a> at Sun, 02/19/2006 - 06:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14834"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14834" class="active">Why do static types help?</a></h3>
+ <div class="content"><blockquote >If we use static types to resolve the member lookup, this program does the right thing.</blockquote>
+
+<p >How does this work?</p></div>
+ <div class="links">By <a href="user/1142" title="View user profile.">Neil Madden</a> at Sun, 02/19/2006 - 14:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14836"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14836" class="active">Unintended inheritance</a></h3>
+ <div class="content"><p >But A is generous and permits future generations to override x declaring it as <i >virtual</i>. Now we are in the same situation as before unless a more extensive inheritance semantics like that of C# is introduced that forces B to modify the declaration of x in Bar using the <i >override</i> keyword ( intentional inheritance ) or preserve the status quo using the <i >new</i> keyword. In either case nothing works as usual but a compile time error is thrown unless x in Bar is not declared as <i >new</i> initially. </p>
+<p >There is no standardized protocol in Python to deal with unintended inheritance. You can prevent unintended inheritance quite well but than you loose the possiility of Bar to lock x into Foo. To achieve this you have to write:</p>
+<pre >
+class Foo(object):
+    def x(self):
+        print "I'm Foo.x"
+        
+    def f(self):
+        Foo.x(self)  # always bind x to Foo
+</pre><p >instead of</p>
+<pre >
+class Foo(object):
+    def x(self):
+        print "I'm Foo.x"
+        
+    def f(self):
+        self.x()  # always bind x to the class of particular instance
+</pre><p >This has nothing to do with static typing but everything with Pythons object model.</p>
+<p >Kay</p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Sun, 02/19/2006 - 17:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14837"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14837" class="active">An object model like C#&#039;s</a></h3>
+ <div class="content"><p >An object model like C#'s would allow you to get the right behavior without recompiling Bar (and C# will give you a warning or error about your possibly unitended override when you next compile Bar). C++ will give you a compile error when you next compile Bar, if the function return type isn't covariant with the virtual function it now overrides (it would, though, allow unintended inheritance otherwise).</p>
+<p >Your supposed "fix" for function Foo::f in the first case above doesn't have the right semantics (if I understand Python right). It will *always* call the x method declared in Foo and not an override (even if that override is intentional). The problem is that without static typing you can't resolve what was meant.</p>
+<p >A less ambiguous case to consider is a class (C) that has two base classes/interfaces (A,B) that each define a member "x" (function/slot/property doesn't really matter). When the expressions "foo.x" is encountered for an instance of this class, a dynamically-typed language can only assign one meaning to this (and so either has to disallow such inheritance or let the slots/functions alias in some way - so your string slot "x" and my integer slot "x" use the same storage and neither of us gets the behavior we want). If we look, instead, at the static type of "foo" we can resolve this; if foo is a C the code is a compile-time error since it is ambiguous, if it is an A then we know that "foo.(A::x)" was meant (and similarly for B).</p>
+<p >Basically, if you realize that guaranteeing extensibility in a dynamic OO language requires extensive decoration of member names (to avoid conflicts), then you will see that declared static types can be used as a compact notation for automatically generating the decorated names ("foo.x" -&gt; "foo.(staticTypeOfFoo::x)").</p></div>
+ <div class="links">By <a href="user/2716" title="View user profile.">Tim Foley</a> at Sun, 02/19/2006 - 17:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14840"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14840" class="active">It&#039;s not static typing.</a></h3>
+ <div class="content"><p >C++'s static typing can't really be considered a "solution" to the problem.  First of all, it breaks your code.  Your program source code was once legal but is now illegal because of a logically non-conflicting change in a library.</p>
+<p >Secondly, it only catches the error when the return types conflict.  Though I've heard some structural typing proponents claim that a singature is roughly equivalent to the logical behavior of a type, I don't buy it (no type system I've seen is capable enough).</p>
+<p >A real solution is C#'s "new" and "override" declaration specifiers.  This is one of my favorite things in Diff(Java,C#).  If Python required "new" and "override" annotations, the problems would go away, right?  Such declarations don't constitute static typing.</p></div>
+ <div class="links">By <a href="user/925" title="View user profile.">Kannan Goundan</a> at Mon, 02/20/2006 - 00:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14843"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14843" class="active">But how do you know if the new or the override is meant?</a></h3>
+ <div class="content"><p >Adding C#'s "new" and "override" keywords to something like Python wouldn't help things at all. The fundamental problem is that the semantics of "foo.x" in Python can only depend on the dynamic type/value of the expression "foo". So how can you specify whether you want the inherited "x" member, or the "x" member added with the "new" keyword?</p>
+<p >To specify which you mean you either have to rely on the static type of "foo", or require every member-access expression to be more verbose (by specifying the fully qualified name of the member they mean). If your static type system is absent or optional, the first option isn't possible.</p>
+<p >[I feel like we've driven this issue into the ground...]</p></div>
+ <div class="links">By <a href="user/2716" title="View user profile.">Tim Foley</a> at Mon, 02/20/2006 - 03:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-14845"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14845" class="active">Retrieving the definitional context</a></h3>
+ <div class="content"><blockquote ><p >Adding C#'s "new" and "override" keywords to something like Python wouldn't help things at all. The fundamental problem is that the semantics of "foo.x" in Python can only depend on the dynamic type/value of the expression "foo". So how can you specify whether you want the inherited "x" member, or the "x" member added with the "new" keyword?</p></blockquote>
+<p >Depending on an instance bar is usually not that bad because you can access the class hierarchy from bar. But you still have to locate the "right" x. If you call bar.x and x is defined in bar.__class__ you are done. But what happens if you call bar.f instead, where f is defined in Foo and f calls self.x() in its body? That's actually the tricky part because you have to access the definitional context of f when x is accessed within the body of f by an instance of Bar. This can nevertheless be done with all kinds of metaclass trickery, overriding __getattribute__ and call stack inspection. But I don't believe it's worth the effort and I don't know anyone who has ever tried to build a contract system in Python on such a weird introspective machinery not even as a proof-of-the-concept.</p>
+<blockquote ><p >
+[I feel like we've driven this issue into the ground...]
+</p></blockquote>
+<p >I concur.</p>
+<p >Kay</p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Mon, 02/20/2006 - 07:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-14884"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14884" class="active">Whoops</a></h3>
+ <div class="content"><p >Whoops, forgot about that part.  But isn't this technically a nominal vs. structural issue and not a static vs. dynamic one?  It's the structural typing part that causes ambiguity.  Of course, structural typing seems like the only viable option for a dynamic OO language...</p></div>
+ <div class="links">By <a href="user/925" title="View user profile.">Kannan Goundan</a> at Tue, 02/21/2006 - 23:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14866"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14866" class="active">Common sense</a></h3>
+ <div class="content"><p >It may be "logically non-conflicting", but if the language calls your attention to the fact that you have two unrelated methods in your class tree with the same name, I call that a feature.</p></div>
+ <div class="links">By <a href="user/2639" title="View user profile.">jorend</a> at Tue, 02/21/2006 - 13:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14871"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14871" class="active">x signature</a></h3>
+ <div class="content"><p >Let's also observe that in a statically typed language, you <i >can</i> add a method "x" to the base class and as long as it has a <i >different signature</i>, you really didn't cause any trouble at all.  You'd have to add the same method with the same signature.  </p>
+<p >Untyped languages are far more vulnerable to namespace collisions.  Different structures (fields vs. methods) are often in different namespaces.</p>
+<p >But the main reason that strongly typed languages are the future is that a dynamic language will never be able to <i >reason</i> about the code, and exhibit <i >do what I mean</i> -- the path towards declarative programming.  </p></div>
+ <div class="links">By <a href="user/1683" title="View user profile.">rossjudson</a> at Tue, 02/21/2006 - 15:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14891"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14891" class="active">Who&#039;s in control?</a></h3>
+ <div class="content"><p >The drawback of static type systems is that they force you to write programs in the way that they can reason about, instead of being able to reason about how you actually want to program.</p></div>
+ <div class="links">By <a href="user/1104" title="View user profile.">nat</a> at Wed, 02/22/2006 - 11:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14899"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14899" class="active">Why They vs We</a></h3>
+ <div class="content"><p >Is that a generalized claim that there can be no programmer that reasons about his programs like his typechecker does? Does everybody actually want to program sans static types?</p></div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at Wed, 02/22/2006 - 20:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14901"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14901" class="active">I think the point is that</a></h3>
+ <div class="content"><p >I think the point is that diffrent people wants to program in diffent ways, and having a single monolithic mandatory static typesystem in some sense, forces all those people to program in the same way, even thougth it can't possibly fit everyone. And that it would be better to have an optional modular typesystem, that you could form after your own needs. If you personally wanted a typesystem that was as static as possible for example, or added runtype checks that can't be implented staticlly you could have that, and not have to compromise with those that coudln't stand that kind of confinment, or insisted that all types must be inferrable. or vice versa. A bit like how a multiparadigmatic language allows you to chose how to implement a algorithm, recursive, categorics, gotos or what you want; but applied to safety instead.</p>
+<p >This isn't all good though. For your self you might want perfect freedom, but you probably wouldn't trust your coworkers (or fellow humans, in general) with it. So you could reason that you actually want a system that binds you to a particullar programing style, that removes as much of your free will as possible, so that you just becomes a replacable cog in a machine that produces code. Or well at least your employer might want that.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Wed, 02/22/2006 - 20:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14903"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14903" class="active">Optional typing that is ignored...</a></h3>
+ <div class="content"><p >...is not a type system at all.  A good optional type system, just like a good static type system, will influence the way one constructs code.  If plugin type system is ignored, then you mind as well not use it at all, since it's probably not going to tell you anything meaningful.  The case for the optional type system is not that types don't effect the construction of the code.  Rather that there are certain extenuating circumstances where a mandatory type system can prevent you from writing concise valid code.</p>
+<p >Designing a pluggable type system that can give meaningful results to dynamic code is a very hard chore - one that I would think near impossible.  The only way for a type system to work (optional or static) is to have code that resembles statically typed code - i.e. code that was influenced by a type checker.  The advantage of optional types is that you have the option to ignore or suppress the statically reported type errors.</p>
+<p >Optional typing sounds more appealing to dynamic language advocates only because it borrows some of their arguments about the corner cases where a type system fetters expressiveness.  However, the optional type system will actually require a more radical change from the dynamic PL programmer than it will the static PL programmer.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Wed, 02/22/2006 - 21:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14908"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14908" class="active">I think that a language must</a></h3>
+ <div class="content"><p >I think that a language must be designed to have an optional type system. For example it should probably suport algebraic datatypes, and simillar features.</p>
+<p >If you have a polite system that only reports errors that are sure to show up anyway, and you ignore that, then your just stupid. (Unless the error message is realy unclear.)</p>
+<p >I also think that our type systems is developing the sort of organic complexity, there you just have to let go and not try to understand exactly how it works. Sort of how most programers don't know exactly how the compiler optimizes the code, but just trusts that it does a good jobb. Thats sort of the point of automation/abstraction. That you delegate some of the thinking to an automated system. If you have to understand that system in detail, and think about it all the time, its not much of delegation, is it?</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Wed, 02/22/2006 - 21:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14943"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14943" class="active">What I meant is this...
+Any</a></h3>
+ <div class="content"><p >What I meant is this...</p>
+<p >Any type system disallows some correct programs that cannot be proven correct by the type system.</p>
+<p >Current type systems (even very sophisticated ones) bend the language to fit the kind of proofs that can be performed by the type system.  Haskell doesn't allow inclusion polymorphism.  O'Caml doesn't allow adhoc polymorphism.  And don't get me started on Java!</p>
+<p >The problem with type theory is that they force the programmer to jump through hoops to meet the needs of the type theorist, rather than the type theorist jumping through hoops to meet the needs of the programmer.</p></div>
+ <div class="links">By <a href="user/1104" title="View user profile.">nat</a> at Thu, 02/23/2006 - 17:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14950"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14950" class="active">On the Contrary</a></h3>
+ <div class="content"><p >nat: <i >The problem with type theory is that they force the programmer to jump through hoops to meet the needs of the type theorist, rather than the type theorist jumping through hoops to meet the needs of the programmer.</i></p>
+<p >"The fundamental problem addressed by a type theory is to insure [sic] that programs have meaning. The fundamental problem caused by a type theory is that meaningful programs may not have meanings ascribed to them. The quest for richer type systems results from this tension." &mdash; Mark Manasse</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Thu, 02/23/2006 - 19:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14964"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14964" class="active">Humpty Dumpty as a philosopher</a></h3>
+ <div class="content"><p >http://www.cs.indiana.edu/metastuff/looking/ch6.html.gz</p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Fri, 02/24/2006 - 07:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-15086"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15086" class="active">The only way a computer</a></h3>
+ <div class="content"><p >The only way a computer program acquires meaning is by running on a computer.</p></div>
+ <div class="links">By <a href="user/1104" title="View user profile.">nat</a> at Tue, 02/28/2006 - 10:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-15096"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15096" class="active">I don&#039;t think so</a></h3>
+ <div class="content"><p >So, until you run it, there are no bugs, right?  Pseudocode examples (as in algorithms textbooks) are totally meaningless.  So are comments.  Unreachable code has no meaning: it's possible for the "if/then" branch to have meaning while the "else" branch has none...</p>
+<p >Piffle.</p></div>
+ <div class="links">By <a href="user/2639" title="View user profile.">jorend</a> at Tue, 02/28/2006 - 13:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-15097"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15097" class="active">...right, and...</a></h3>
+ <div class="content"><p >...and of course, there can never be bugs in implementations, because implementations provide the only definition of meaning, and hence are vacuously correct. Cool!</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Tue, 02/28/2006 - 13:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-15142"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15142" class="active">Type systems let us reason</a></h3>
+ <div class="content"><p >Type systems let us reason about the meaning of the program by representing it symbolically, but they aren't the meaning itself.</p>
+<p >If the system has undesired behaviour that is not detected by the type system, then the type system is obviously not the meaning of the program.  The program text has a meaning that is not represented by the types and can only be observed by running the program.</p></div>
+ <div class="links">By <a href="user/1104" title="View user profile.">nat</a> at Wed, 03/01/2006 - 12:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14951"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14951" class="active">Hoops</a></h3>
+ <div class="content"><p ><cite ><br >
+The problem with type theory is that they force the programmer to jump through hoops to meet the needs of the type theorist, rather than the type theorist jumping through hoops to meet the needs of the programmer.<br >
+</cite></p>
+<p >Type theorists jump through hoops to meet the needs of programmers quite often - ad-hoc overloading is the perfect example: in principle, it's totally useless, but it's just so damned convenient.</p>
+<p >Unfortunately, the number of hoops a type system has digested does not monotonically increase the joy of working with it - see C++ for example.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Thu, 02/23/2006 - 19:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14918"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14918" class="active">A type is a kind of namespace</a></h3>
+ <div class="content"><p >An 'untyped' language is more vulnerable to namespace collisions because a type and a namespace are really the same thing, it's just a matter of degree. Languages that lack types have no way of resolving the ambiguity of symbols shared between objects.</p></div>
+ <div class="links">By <a href="user/2771" title="View user profile.">M. Douglas</a> at Thu, 02/23/2006 - 05:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14922"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14922" class="active">I dont think anyone is</a></h3>
+ <div class="content"><p >I dont think anyone is arguing that types shouldn't be checked at all. And with that in mind, a dynamic type system could just do any checks runtime that a static system would do at compile time. The only diffrence is when you do the checking. I cant see how that would lead to ambiguity.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Thu, 02/23/2006 - 08:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14929"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14929" class="active">No, it can&#039;t</a></h3>
+ <div class="content"><p >Or how does your "dynamic type system" check that some arbitrary function has type int-&gt;int?</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Thu, 02/23/2006 - 09:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14935"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14935" class="active">By checking that its input</a></h3>
+ <div class="content"><p >By checking that its input is int every time its applied, and that its output is int every time it returns.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Thu, 02/23/2006 - 14:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14936"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14936" class="active">What about HOFs?</a></h3>
+ <div class="content"><p >It means that the type-error is raised not at the moment a wrongly-typed function is passed as a parameter, but when it is used?<br >
+I cannot put my finger on it, but I feel uneasy about that fact...</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Thu, 02/23/2006 - 14:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-14942"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14942" class="active">Rehab for typoholics</a></h3>
+ <div class="content"><blockquote ><p >
+I cannot put my finger on it, but I feel uneasy about that fact...
+</p></blockquote>
+<p >Don't worry, those are just the standard withdrawal symptoms of the typoholic.  Deductive proofs can be dangerously addicting!  While you're  in rehab, you can use methodone, I mean contracts, to take the edge off.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Thu, 02/23/2006 - 16:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-14955"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14955" class="active">That was one of the funniest</a></h3>
+ <div class="content"><p >That was one of the funniest things I've read all day!  Thanks Anton!</p></div>
+ <div class="links">By <a href="user/2068" title="View user profile.">Benjamin D. Cutler</a> at Thu, 02/23/2006 - 22:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14939"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14939" class="active">Not the same</a></h3>
+ <div class="content"><p >That is not the same thing. You cannot check the type of a functional value, itself, dynamically. Nor can you check the type of a lazy value, or a future, or even a mutable reference.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Thu, 02/23/2006 - 15:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-14940"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14940" class="active">Duck-typing the rabbit hole</a></h3>
+ <div class="content"><blockquote ><p >
+Nor can you check the type of a lazy value, or a future, or even a mutable reference.
+</p></blockquote>
+<p >Or a continuation, for that matter.</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Thu, 02/23/2006 - 16:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-14954"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14954" class="active">Sure you can. you can give</a></h3>
+ <div class="content"><p >Sure you can. you can give the function a contract that asserts that the function has type "int-&gt;int", and then you can just check the contract. And the contract then throws an exception if the function would take or return a int.</p>
+<p >But no, its not the same thing. The dynamic system discovers the error later, then more information is known, so there is less risk that it frows an exception, and even if it does, it might be cathed or handled, so you have a chans of recovery.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Thu, 02/23/2006 - 21:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-14970"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14970" class="active">Where&#039;s the advantage on discovering errors later??</a></h3>
+ <div class="content"><p ><CITE ><br >
+The dynamic system discovers the error later, then more information is known, so there is less risk that it frows an exception, and even if it does, it might be cathed or handled, so you have a chans of recovery.<br >
+</CITE></p>
+<p >But those are the exceptions I want to have! Because then there is less risk that I blindly execute parts of the code (and possible side effects!) of some function under the false assumption (or hope) that it has the type I expected. I don't see at all how taking this risk could possibly simplify error recovery.</p>
+<p >Also, why do you assume that the late runtime check has "more information"? More information than what? It surely does not have the contextual information a static type system can derive.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Fri, 02/24/2006 - 12:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-14977"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14977" class="active">it isn&#039;t an advantage.</a></h3>
+ <div class="content"><p >Just as it isn't an advantage that a car is expensive.</p>
+<p >Generally a static type system doesn't throw exceptions on type errors at all, but just refuse to compile at all. So you wouldn't get any exceptions anyway, so there is no way to recover, as well, you don't even get a chance. You could view it as a question of trust vs assurance, you eighter trust your static system to guarantee that your program doesn't have any errors, or you make assurances so that even if you get a error it doesn't stop your program from running.</p>
+<p >But no, I didn't actually think it is an advantage to discover errors late. (It could be argued though that it lets you do better debugging by allowing you to do a trace of the program up to the error point.)</p>
+<p >But I think that losening the constraint on then to do checks, allows you to do things that isn't reasonable to do earlier. Static type systems isn't realy exact. If you apply them to a dynamic language, you will get situations there it can't be sure if an error will occor or not, there the type system is undecidable. Like hetrogenous lists for example. The method of static languages here is to not allow any such code. And this limmits not only how you can write your program (you lose the expressitivity of hetrogenous lists), but also what safety checks you can make. Checks that have a large portion of undecidable cases would be realy demanding as it would severly restrict your language. Perhaps even below turing completness. You need a dynamic or polite system to allow this, without completly crippling yourself.</p>
+<p >'Also, why do you assume that the late runtime check has "more information"?'</p>
+<p >I assume that there is some kind of computation going on at runtime, and that this produces some new information. As that is the purpose of runnig a program isn't it? I every computation was done at compile time there wouldn't be so much a program as just some kind of data. And also you can assume that you have more information about the inputs, after some user actually have enterd them.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Fri, 02/24/2006 - 15:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-14992"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14992" class="active">Hogwash</a></h3>
+ <div class="content"><blockquote ><p >Generally a static type system doesn't throw exceptions on type errors at all, but just refuse to compile at all. So you wouldn't get any exceptions anyway, so there is no way to recover, as well, you don't even get a chance.</p></blockquote>
+<p >Whaaaaat?  By this reasoning, no compiler should <em >ever</em> refuse to compile code.  All errors should be left until runtime.</p>
+<p >Look--in static-typed languages, the compiler obviously should make the user fix type errors.  Programs written in static-typed languages are written in a static-typed mindset; any type errors are programmer mistakes.  It's quick, and a good use of time, to fix them.</p>
+<p >The sort of argument you ought to make is that the static-typed mindset is not powerful enough, or that static-typed code is hard to read or extremely time-consuming to write.  Because once you're in the static-typed mindset, the extra type-checking is in fact extremely useful.  I don't see how anyone who has done static-typed programming could think otherwise.</p>
+<p >Generally, detecting errors early is a highly valuable feature for any tool.  This should be self-evident.  Fixing errors later is orders of magnitude more expensive.  For non-toy PLs, early error detection is one of the most important problems, period.</p>
+<blockquote ><p >I assume that there is some kind of computation going on at runtime, and that this produces some new information. As that is the purpose of runnig a program isn't it?</p></blockquote>
+<p >Information != relevant information.</p>
+<p >Type-checking mostly catches simple, stupid programmer mistakes.  There is no extra information available at runtime that could possibly be useful for debugging.</p></div>
+ <div class="links">By <a href="user/2639" title="View user profile.">jorend</a> at Fri, 02/24/2006 - 18:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-14996"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14996" class="active">Mindset being the operative word</a></h3>
+ <div class="content"><blockquote ><p >
+Because once you're in the static-typed mindset, the extra type-checking is in fact extremely useful. I don't see how anyone who has done static-typed programming could think otherwise.
+</p></blockquote>
+<p >Once you're in the static-typed mindset, you <i >think</i> that the extra type-checking is in fact extremely useful.  However, if you've done static-typed programming and actually thought about which parts of that apparent extreme usefulness are important, and which parts aren't, then it's quite possible to "think otherwise".</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Fri, 02/24/2006 - 19:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:300px;">
+<a id="comment-15014"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15014" class="active">Useful consequences of a sound type system</a></h3>
+ <div class="content"><p >Here are couple of things that I came up within a couple of minutes and have found to be valuable (roughly) in the below order:</p>
+<ul >
+<li ><i >Availability of formal, automatically verified, documentation in the form of types.</i> (Which greatly improves the ability to understand code written by others.)
+<li ><i >Immediate catching of most silly mistakes.</i> (Even silly mistakes can be costly and careful use of a type system can help to catch many. many kinds of silly mistakes.)
+<li ><i >Ability to enforce abstraction and greatly enhanced ability to reason about programs.</i> (Often this boils down to being able to prove that something is impossible. Proving negatives is hard!)
+<li ><i >Compiler optimizations.</i> (Like it or not, performance does matter in some cases, and implementations of typed languages tend to be faster.)
+</ul>
+<p >
+In an ideal world you wouldn't probably need (m)any of the above, but the world is rerely ideal.  Documentation (comments) either doesn't get written at all or isn't up-to-date.  Testing is done interactively or hardly at all.  Hardware spec may be fixed or the language implementation may be just slow.</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Sat, 02/25/2006 - 00:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:325px;">
+<a id="comment-15122"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15122" class="active">&quot;Sound&quot; type system?</a></h3>
+ <div class="content"><p >My original response was primarily to the absolutism of "I don't see how anyone could think otherwise".  That's very much a question of mindset, which essentially comes from first accepting the presence of static type-checking as a requirement, an axiom.  That acceptance forces one to think from "within" the statically-checked system, but  two different systems can't validly be compared from within one of them.</p>
+<p >To respond to your specific points, do you consider "sound" and "statically checked" to be equivalent, w.r.t. type systems, as your bullets mostly imply?  That seems questionable to me.</p>
+<p >Ritualistically, I'll give typical latently-typed responses to your first three bullets, in order: (1) latent types &amp; contracts; (2) assertions/contracts &amp; test suites; (3) same as #1 &amp; 2, with less emphasis on deductive proof.  </p>
+<p >The "requirement" for deductive proof is often not, in fact, a requirement, except if your mindset imposes it as such.  The inductive "proofs" given by testing and successful operation of systems are, in practice, usually good enough.</p>
+<p >You suggest that testing is lacking in practice, but that seems to ignore a major industry shift towards automated testing in the past 5-10 years or so.  Latently-typed programs are perhaps more likely to have good test suites, to be able to catch errors early (addressing jorend's point).  This may work to their benefit, as opposed to relying on an essentially trivial static type check (trivial by comparison to the program's entire meaning) as an incomplete proof of program correctness.  </p>
+<p >Static checking of ordinary types deductively proves the things that are easiest to deductively prove, and ignores everything else.  (I say "ordinary types" because static checks of other kinds of properties, e.g. related to concurrency and security, are potentially more interesting.)</p>
+<p >The response to the bullet about performance is more complex, but just practically speaking, I'll offer Erlang as an existence proof that performance-sensitive systems don't necessarily require static type checking, not to mention all the server systems implemented in languages like Python, PHP, and Perl.  My experience with such systems is that their performance bottlenecks are not usually language-related.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Tue, 02/28/2006 - 19:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:350px;">
+<a id="comment-15126"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15126" class="active">Sound of a type system</a></h3>
+ <div class="content"><p >
+<blockquote >To respond to your specific points, do you consider "sound" and "statically checked" to be equivalent, w.r.t. type systems, as your bullets mostly imply? That seems questionable to me.</p></blockquote>
+<p >No.  I consider "type system" (as a set of rules for assigning types to all valid expressions) and "statically typed" to be equivalent, but this isn't a point I want to make here.</p>
+<p >There are two reasons why I said "sound".  First, if a type system isn't sound (meaning: it doesn't actually <i >guarantee</i> anything), then the other points are mostly meaningless (e.g. abstraction boundaries can be broken using reflection in Java).  Second, this conveniently rules out the mainstream languages, whose type systems I would rather not spend time with.</p>
+<p >
+<blockquote >The inductive "proofs" given by testing and successful operation of systems are, in practice, usually good enough.</p></blockquote>
+<p >The coverage that (ad hoc / "a little here and a little there") testing and succesful operation yield is not enough.  I've fixed many bugs, in code written (by me or someone else) in both languages with an unsound type system and in languages with dynamic checking, that would have been caught by sound type systems.  But, this should be old news.</p>
+<p >
+<blockquote >You suggest that testing is lacking in practice, but that seems to ignore a major industry shift towards automated testing in the past 5-10 years or so.</p></blockquote>
+<p >I would bet that the ratio of code covered by unit tests to code not covered by any form of automated tests is rather depressing.  I'm definitely not against testing.  One should have both automated testing and a sound type system.</p>
+<p >
+<blockquote >Latently-typed programs are perhaps more likely to have good test suites [...]</p></blockquote>
+<p >I wouldn't make that bet.</p>
+<p >
+<blockquote >This may work to their benefit, as opposed to relying on an essentially trivial static type check</p></blockquote>
+<p >I wouldn't say that guarantees provided by a sound type system are necessarily trivial.  However, it seems to me that I don't share your implied premise;  I do not expect that a type system magically proves properties that it does not prove.</p>
+<p >
+<blockquote >(trivial by comparison to the program's entire meaning)</p></blockquote>
+<p >What is the meaning of a program that has unspecified behavior?  Call me a heretic, but I consider unspecified return values and unspecified evaluation order (for a strict language - particularly one with first-class continuations) to be totally unnecessary complications (for the language user) at best and fundamental design failures at worst.</p>
+<p >
+<blockquote >as an incomplete proof of program correctness.</p></blockquote>
+<p >Essentially, a sound type system guarantees that a program has a well defined meaning.  Nothing more and nothing less.</p>
+<p >
+<blockquote >I'll offer Erlang as an existence proof that performance-sensitive systems don't necessarily require static type checking, not to mention all the server systems implemented in languages like Python, PHP, and Perl. My experience with such systems is that their performance bottlenecks are not usually language-related.</p></blockquote>
+<p >Not all applications are servers where OS level IO (usually implemented in C or some other low level language) is the bottleneck. Imagine, for a moment, that the OS would have been implemented in pure Python, PHP, Perl, or any other "dynamic" language.  What kind of performance would you expect from such a system?</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Tue, 02/28/2006 - 21:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:375px;">
+<a id="comment-15135"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15135" class="active">What is the sound of a type not being checked?</a></h3>
+ <div class="content"><blockquote ><p >
+No. I consider "type system" (as a set of rules for assigning types to all valid expressions) and "statically typed" to be equivalent, but this isn't a point I want to make here.
+</p></blockquote>
+<p >
+I accept that equivalence, with the caveat that the rules can usefully be applied selectively, e.g. to functions but not to all their terms.  You could take such a skeleton from a dynamically-checked program, with appropriate stubbing, and compile it in a statically-checked language, and prove the validity of that program's (partial) type scheme.  Typically, of course, such proofs aren't performed, since a reasonable assurance of correctness is obtained in other ways.
+</p>
+<blockquote ><p >
+There are two reasons why I said "sound". First, if a type system isn't sound (meaning: it doesn't actually guarantee anything), then the other points are mostly meaningless (e.g. abstraction boundaries can be broken using reflection in Java). Second, this conveniently rules out the mainstream languages, whose type systems I would rather not spend time with.
+</p></blockquote>
+<p >
+That's fine with me, possibly depending on what you mean by "guarantee".  If you don't statically check types, and/or if a program includes code that hasn't been statically typed, you lose the proof of type scheme correctness, even though you may have strong evidence of its correctness.  A certain kind of guarantee is lost, but that doesn't make the other points meaningless.
+</p>
+<blockquote ><p >
+I would bet that the ratio of code covered by unit tests to code not covered by any form of automated tests is rather depressing.
+</p></blockquote>
+<p >I'm talking about comparing statically-checked programs to dynamically-checked programs that follow good testing and other practices.  In a professional context, where the quality of the development process is considered, the need for testing and the positive effect it has on the development process is understood, and normal procedures suffice to help catch errors early, even in dynamically-checked programs.  It's not important to me how many people aren't operating in that kind of context.
+</p>
+<blockquote ><p >
+What is the meaning of a program that has unspecified behavior? Call me a heretic, but I consider unspecified return values and unspecified evaluation order (for a strict language - particularly one with first-class continuations) to be totally unnecessary complications (for the language user) at best and fundamental design failures at worst.
+</p></blockquote>
+<p >
+This seems tangential, but in any case, you seem to be referring to Scheme and the fact that RnRS does not constrain implementations in certain ways.  However, all the implementations I use have a specified evaluation order and specified return values.  So your objection seems to be mainly about portability, or perhaps about the merits of different kinds of language specifications, neither of which is relevant here.
+</p><p >
+As for the meaning of a program that has unspecified behavior:
+</p>
+<blockquote ><p >
+Essentially, a sound type system guarantees that a program has a well defined meaning. Nothing more and nothing less.
+</p></blockquote>
+<p >
+And well-typed programs don't go "wrong".  But what is the overall meaning (in a less formal sense) of a program that has a well-defined meaning in a formal semantic sense, but is full of bugs relative to its specification?  Type systems deal with a particular subset of program semantics, and whether that subset is proved correct formally, or whether correctness is determined in other ways, doesn't always matter all that much.
+</p>
+<blockquote ><p >
+Not all applications are servers where OS level IO (usually implemented in C or some other low level language) is the bottleneck. Imagine, for a moment, that the OS would have been implemented in pure Python, PHP, Perl, or any other "dynamic" language. What kind of performance would you expect from such a system?
+</p></blockquote>
+<p >
+The Lisp Machine OS seemed to perform pretty well for the time.  (Perhaps it had partial static checking, but that's fine with me.)  I wouldn't write an OS in any of the "P" languages, but that has more to do with their choice of semantics in general, rather than their type systems specifically.  But I agree, this is all about "not all applications".  Not all applications need a deductive proof of the correctness of their type schemes.
+</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Wed, 03/01/2006 - 06:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:400px;">
+<a id="comment-15137"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15137" class="active">Types make a program easier to understand and modify</a></h3>
+ <div class="content"><p >
+<blockquote >This seems tangential, but in any case, you seem to be referring to Scheme and the fact that RnRS does not constrain implementations in certain ways. However, all the implementations I use have a specified evaluation order and specified return values.</p></blockquote>
+<p >I'm partly referring to Scheme, but not exclusively.  There are many languages out there that share a tradition of leaving many things unspecified or undefined (including C and, to some degree, even OCaml). This tends to make the type system less useful.  In C, for instance, one really can't assume much anything about a program that type checks.</p>
+<p >
+<blockquote >So your objection seems to be mainly about portability, or perhaps about the merits of different kinds of language specifications, neither of which is relevant here.</p></blockquote>
+<p >Why do you think that these aspects are irrelevant?  I thought that LtU, and this topic (type systems), was all about various aspects of programming languages including their design and specification.  The way in which a language is designed and consequently specified can have a tremendous effect on how easy or difficult it is, among other relevant things, to port programs from one compiler to another.  I find that an important aspect to consider when analyzing a language specification.</p>
+<p >Sorry, I don't have the time right now to reply to other points.  I may do so later.  However, it seems that this discussion is steering towards issues that I consider less relevant (I'm not blaming you for that). Consider my list of useful consequences of a sound type system and that they are written rougly in an order of importance.  The point I'd like to discuss is whether a sound type system makes programs easier to understand and modify.  Together, the first three bullets are at least an order of magnitude more important than the fourth bullet.  The nice thing is that in a (statically) typed language one can not avoid having the benefits. In "latently typed" languages the programmer can easily skip writing the assertions and test suites or may skip running the test suite.  In either kind of language, comments in code can (and quite often do) lie.  In contrast, in a language with a sound type system, the types do never lie and will always be there. (And again, I still want the assertions (contracts) and unit tests when the properties aren't guaranteed by the types.)</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Wed, 03/01/2006 - 08:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:425px;">
+<a id="comment-15138"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15138" class="active">Relevance, etc.</a></h3>
+ <div class="content"><p >On the question of relevance, I mean that things like portability and whether a language specification defines e.g. a single, fully specified language or (potentially) a family of languages isn't very relevant to the question of static type checking vs. other ways of validating a program's type scheme, which (to me) is what we're really discussing in this thread.  Of course, those things are relevant on LtU in general, though.</p>
+<p >I agree that "types make a program easier to understand and modify", but you can achieve that using latently typed languages.</p>
+<p >Saying "The nice thing is that in a (statically) typed language one can not avoid having the benefits" is certainly subjective, and seems to imply that you're trying to impose something on someone else - after all, if you want the benefits, don't skip the assertions and tests.  If you want that as a process in a company, make it the process.</p>
+<blockquote ><p >
+(And again, I still want the assertions (contracts) and unit tests when the properties aren't guaranteed by the types.)
+</p></blockquote>
+<p >But "the programmer could easily skip writing" those, so you're not really in that much better a position with a statically checked language (which still seems to be a synonym for a language with a sound type system, in your view).  If you don't skip writing those things, then you don't need the static type checking nearly as much.  The better your development process, the less important static typechecking is.  :)</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Wed, 03/01/2006 - 08:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:450px;">
+<a id="comment-15139"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15139" class="active">Processes and languages</a></h3>
+ <div class="content"><p >
+<blockquote >I agree that "types make a program easier to understand and modify", but you can achieve that using latently typed languages.</p></blockquote>
+<p >By "achieve", do you mean that you can emulate type systems in a "latently typed" language.  It is certainly possible, but, again, you assume an ideal world.  My real world experience suggests that it just doesn't happen in practice at a large scale.  (Indeed, I've experimented with such techniques, but my real world experience suggests that you just can't expect to see it at every programming shop.)</p>
+<p >Look, I'm not talking about the latest, state-of-the-art, buzzword compliant, all theoretical possibilities exhausted, software engineering practice in a "latently typed" language vs in a (statically typed) language with a sound type system.  I'm talking about everyday programming practice that you can <i >expect</i> to see at <i >any</i> programming shop using either a "latently typed" language or a (statically typed) language that has a sound type system.</p>
+<p >
+<blockquote >Saying "The nice thing is that in a (statically) typed language one can not avoid having the benefits" is certainly subjective, and seems to imply that you're trying to impose something on someone else - after all, if you want the benefits, don't skip the assertions and tests. If you want that as a process in a company, make it the process.</p></blockquote>
+<p >It is more about people agreeing to use a type system to communicate important information than forcing others to use a type system.  In other words, when you use a language with a sound type system, you are effectively making an investment in the form of writing a little bit of extra specifications, so that everyone, including you, will be able to understand and modify the code more easily.  It is possible to do the same in a "latently typed" language, but it requires a degree or knowledge, maturity and discipline that unfortunately doesn't exist at a large scale and can easily be (and often is) forgotten.</p>
+<p >A good type system with abstract types can be used to verify non-trivial properties (e.g. that, say, HTML output is well formed), but that is already beyond of what I think can be expected or what happens by default, and, is, IMO, less relevant.</p>
+<p >I do not believe in the idealistic view that processes guarantee quality.  Such a belief relies on an ideal world where, among other things, the process, when followed, guarantees quality and that people actually follow the process.</p>
+<p >Also, while processes may be considered relevant topics at some places, my impression has been that processes are somewhat of a non-relevant topic at LtU.  Let me put it this way, you shouldn't rely on a process to fix a broken language.</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Wed, 03/01/2006 - 10:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:475px;">
+<a id="comment-15163"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15163" class="active">Assumptions about proof</a></h3>
+ <div class="content"><p >If you're talking about "everyday programming practice that you can expect to see at any programming shop", then we're also talking about some variation of Java etc. vs. Python etc. which you earlier indicated that you weren't interested in.  What's more interesting is how the languages, processes, and the tools that support processes, wlll change in future.</p>
+<blockquote ><p >
+It is more about people agreeing to use a type system to communicate important information than forcing others to use a type system. In other words, when you use a language with a sound type system, you are effectively making an investment in the form of writing a little bit of extra specifications, so that everyone, including you, will be able to understand and modify the code more easily.
+</p></blockquote>
+<p >I agree with this.  However, you (and many others) are making a questionable leap from this, with the assumption that having written such specifications, that they should be checked statically, and that in order to do so, every other term in the program should also be typed and checked statically, and that if the static checks fail anywhere, the program shouldn't be allowed to run at all.  In many respects, that's a very strange leap to make!  It's the type theory tail wagging the program semantics dog.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Thu, 03/02/2006 - 01:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:450px;">
+<a id="comment-15144"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15144" class="active">The compromise?</a></h3>
+ <div class="content"><p >Since the question in the top message in this thread is Optional Type systems, I'm still left wondering if it's a compromise that will be accepted by either side.  The latent type proponents seem to be saying that adding a meta type layer above the code just fetters the process and doesn't buy you much.  The static typing proponents seem to be saying that any introduction of unsoundness in this meta type layer opens up a hole too large to hold back the deluge.</p>
+<p >Disregarding the question of which is better: Do optional typing systems represent a viable compromise to get the advantages of both static and latent typing?  Looking at the Smalltalk community, I'd say that Strongtalk never really gained widespread adoption.  At least from that experience, it doesn't seem that the dynamic language crowd is particularly enticed by introducing optional type systems.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Wed, 03/01/2006 - 14:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:475px;">
+<a id="comment-15145"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15145" class="active">The compromise</a></h3>
+ <div class="content"><p >For me, the compromise is easy to specify: systems that allow types to be declared and used, and to whatever extent possible, checked, without requiring every term in a program to have either a declared or inferred type.</p>
+<p >What I am arguing against is the notion that because types are useful (which I don't dispute), it is therefore necessary or important to require a successful static check of the type of every term in a program, before it is possible to run that program.  </p>
+<p >I would argue that in a substantial majority of cases that do use statically-checked languages, such checks are neither necessary nor important, except in the sense of being a necessary evil in order to get the type scheme mechanically checked by the rather simple-minded checking tools we have today.</p>
+<p >[Edit: added the below to (slightly) better address Chris's points.]</p>
+<p >The optional type systems I've seen don't really come close to doing what I'm thinking of.  (Using contracts/assertions does a much better job.)  I don't think that has much to do with technical possibilities, but much more to do with the unwillingness to "open up a hole too large to hold back the deluge", i.e. the tendency in optional systems is still to try to type everything.  It's a sort of disease, as Erik suggests, typoholism.</p>
+<p >Users of dynamically-checked languages already know what post-deluge life is like.  Types are useful for communication and other reasons, though, and some of us put them in comments for those reasons.  Just about anything would improve on that, but going from types in comments to full every-term-must-be-typed is like closing the borders of a country that's afraid of terrorism.  It just makes life difficult without solving the real problem.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Wed, 03/01/2006 - 15:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:500px;">
+<a id="comment-15150"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15150" class="active">Lack of invariants causes lack of information</a></h3>
+ <div class="content"><p ><CITE ><br >
+For me, the compromise is easy to specify: systems that allow types to be declared and used, and to whatever extent possible, checked, without requiring every term in a program to have either a declared or inferred type.<br >
+</CITE></p>
+<p >Main problem is that this simply won't work out in practice. Every small "hole" somewhere in the type checker's local knowledge quickly cascades to gigantic abysses downstream. In the end, it typically can detect almost nothing. For example, the Oz compiler has a relatively involved static analysis phase, but in practice it rarely finds interesting errors (besides trivial arity mismatches in direct procedure calls).</p>
+<p >Useful type checking relies on strong invariants, and arbitrarily leaving holes is in severe conflict with that.</p>
+<p >As long as dynamoholics only long for such weak systems, the preconception that type systems only detect trivial errors will be sort of a self-fulfilling prophecy... ;-)</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Wed, 03/01/2006 - 17:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:525px;">
+<a id="comment-15155"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15155" class="active">Wrong goal</a></h3>
+ <div class="content"><p >You're assuming that the goal is to statically check things.  I'm saying that's the wrong goal, in many cases.  The goals were quite well laid out in Vesa's bullet points, if you remove the bias towards static checks.  I'm saying you don't need static checking to achieve those goals.  Dynamic checks can be quite sufficient.  Anything you can do statically is a bonus, as long as it doesn't require restructuring the program to support it.</p>
+<p >BTW, my claim about detection of trivial errors applies to fully statically-checked systems.  They're trivial relative to the overall semantics of the program.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Wed, 03/01/2006 - 20:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:550px;">
+<a id="comment-15156"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15156" class="active">Anything you can do</a></h3>
+ <div class="content"><blockquote ><p >Anything you can do statically is a bonus, as long as it doesn't require restructuring the program to support it.</blockquote>
+From a theoretical perspective, I'm not sure that you can statically prove much from code that has not been somehow written with static type checking in mind (be it mandatory or optional).  Since Scheme already has a compromise, I was wondering how the Scheme community feels about Soft Typing?  (Whether it's in widespread use or just a curiosity piece to prove that Scheme is the ultimate swiss-army knife PL?)</p>
+<blockquote ><p >They're trivial relative to the overall semantics of the program.</blockquote>
+Beyond the question of what constitutes trivial vs. non-trivial, I should point out that trivial errors that are not detected can be just as costly.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Wed, 03/01/2006 - 20:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:575px;">
+<a id="comment-15157"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15157" class="active">Optional types &amp; annotations</a></h3>
+ <div class="content"><blockquote ><p >
+From a theoretical perspective, I'm not sure that you can statically prove much from code that has not been somehow written with static type checking in mind (be it mandatory or optional).
+</p></blockquote>
+<p >
+I agree, useful optional typing is highly likely to involve (optional) annotations related to types.
+</p>
+<blockquote ><p >
+Since Scheme already has a compromise, I was wondering how the Scheme community feels about Soft Typing? (Whether it's in widespread use or just a curiosity piece to prove that Scheme is the ultimate swiss-army knife PL?)
+</p></blockquote>
+<p >
+Soft typing is more of a research topic, and it doesn't really prove anything about Scheme (except perhaps how difficult it is to statically check).  There are soft typecheckers for Erlang, too, for example.  However, soft typechecking appears to be tackling a different problem than the one I'm most interested in &mdash; it usually attempts to infer a static type scheme for the entire program, i.e. all terms.  This results in the type checker worrying about, and trying to propagate, the types of expressions like (if (test) 42 #f), which leads to incredibly complex inferred types for expressions which the programmer "knows" have quite simple types.  Automatic static typecheckers aren't all that smart, whether they're soft or hard.  One way to get some of the more important benefit of types without the baggage is to not worry so much about static checking.
+</p>
+<blockquote ><p >
+Beyond the question of what constitutes trivial vs. non-trivial, I should point out that trivial errors that are not detected can be just as costly.
+</p></blockquote>
+<p >
+Agreed.  That's why I'm emphasizing assertions, contracts, and tests, all of which are pretty good at catching trivial errors, and helping to validate a program's type scheme, if the program is written in a type-aware way.  That's where optional annotations would come in, too.
+</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Wed, 03/01/2006 - 21:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:475px;">
+<a id="comment-15147"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15147" class="active">To my knowledge all optional</a></h3>
+ <div class="content"><p >To my knowledge all optional typesystems so far have been designed as an add on to a language thats already designed to have static typing. I think thats bad. There should be synergies between the language and the type system, at least on some level. I think an optional typesystem would only really work in a language designed to have just an optional typesystem, and not dynamic nor static as default.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Wed, 03/01/2006 - 17:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:500px;">
+<a id="comment-15149"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15149" class="active">A Practical Soft Type System for Scheme</a></h3>
+ <div class="content"><p >
+<blockquote >To my knowledge all optional typesystems so far have been designed as an add on to a language thats already designed to have static typing.</p></blockquote>
+<p >Just one example of a more or less "optional" type system for a "latently typed" language: <a href="http://citeseer.ist.psu.edu/8870.html">A Practical Soft Type System for Scheme</a>.</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Wed, 03/01/2006 - 17:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:475px;">
+<a id="comment-15152"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15152" class="active">How does &quot;optional&quot; work anyway?</a></h3>
+ <div class="content"><p >Maybe a more basic question which I still don't understand, say a language has mandatory static types which is sound wrt to some dynamic semantics which doesn't depend upon it, and an additional optional type system.</p>
+<p >If I write a program which is statically well typed, but optionally illtyped, is it a meaningful program?  Is the intension that a) optional typing prevents execution, or b) program halts when the optional type system witnesses a violation?</p>
+<p >The paper says: [an optional type system] "is one that has no effect on the run-time semantics of the programming language", so isn't Gilad talking exclusively about static type systems?  E.g. if a dynamic checks inserted by an optional type system fails, then the dynamic execution is changed.</p>
+<p >If I write a statically illtyped program which passes the addition optional type system can this be considered a meaningful program?<br ></div>
+ <div class="links">By <a href="user/767" title="View user profile.">Ethan Aubin</a> at Wed, 03/01/2006 - 18:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:500px;">
+<a id="comment-15162"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15162" class="active">Yes, the paper talks about</a></h3>
+ <div class="content"><p >Yes, the paper talks about an optional static type system added to a dynamic system in a way so that the static system only reports an error if there is 100% chance that that error would occure if the program was run. But it's not that kind of optional typing that neither me nor Anton van Straaten (I think) are talking about.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Thu, 03/02/2006 - 01:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:450px;">
+<a id="comment-15146"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15146" class="active">Skipping testing</a></h3>
+ <div class="content"><p >
+<blockquote >But "the programmer could easily skip writing" those, so you're not really in that much better a position with a statically checked language</p></blockquote>
+<p >The type checking would still be there to provide up-to-date and automatically verified information (types).</p>
+<p >
+<blockquote >a statically checked language (which still seems to be a synonym for a language with a sound type system, in your view)</p></blockquote>
+<p >A sound type system implies static checking, but static checking does not imply soundness.</p>
+<p >
+<blockquote >If you don't skip writing those things, then you don't need the static type checking nearly as much.  The better your development process, the less important static typechecking is. :)</p></blockquote>
+<p >Actually, I would expect the converse (converse in some sense) to be true.  I think that this isn't a question of need, but rather a question of being able to take advantage of a type system.  Frankly, arguments based on need are seriously lame.  You don't <i >need</i> "latent typing" or a type system to create software.  Heck, you don't even <i >need</i> a high-level language to create software.</p>
+<p >I would expect that a typical programming shop using a language with a sound type system would take advantage of only a rather small subset (but still an important subset) of the potential of the type system.  I would expect that better programming shops would routinely use type systems (and possibly other techniques) to automatically verify many non-trivial properties of the systems they are building.</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Wed, 03/01/2006 - 15:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:350px;">
+<a id="comment-15148"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15148" class="active">A type safe interface is a solution once and for all</a></h3>
+ <div class="content"><p >This is in response to the "ritualistic" responses.</p>
+<p >One important difference between (static) typing and "latent typing" is that a type safe interface is a solution once and for all.</p>
+<p >Consider the previously mentioned example of providing a module for creating HTML output in a type safe manner.  The types of the HTML generating combinators are expressed just once in the signature of the module.  The type checker then takes automatically care of enforcing the correctness of clients.  Clients of such a type safe interface need not worry about testing the aspects that the type safe interface already guarantees.  (Clients may concentrate on testing other aspects.)  A type safe interface is essentially a <i >O(1)</i> complexity solution.</p>
+<p >Run-time checked contracts can not provide similar benefits.  Even though the contracts may be checked in only one place, you will need tests to explicitly exercise every code path to evaluate the contracts with particular arguments (which still doesn't <i >guarantee</i> the absense of type errors).  Unless every client comes with a thorough test suite, it may, and does, happen that some specific code paths aren't exercised until much later.  A dynamically checked interface is essentially a <i >O(n)</i> complexity solution where <i >n</i> is the number of clients of the interface.</p>
+<p >Sometimes bugs in relatively rarely executed code paths are found years after their introduction.  I just fixed such a bug (dating back back at least 2 years and 10 months according CVS logs) a couple of days ago.</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Wed, 03/01/2006 - 17:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:300px;">
+<a id="comment-15100"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15100" class="active">Usefulness</a></h3>
+ <div class="content"><blockquote ><p >Once you're in the static-typed mindset, you think that the extra type-checking is in fact extremely useful. However, if you've done static-typed programming and actually thought about which parts of that apparent extreme usefulness are important, and which parts aren't, then it's quite possible to "think otherwise".</p></blockquote>
+<p >I've stated which part I think is extremely useful.  Catching errors early.</p>
+<p >I should think this is useful regardless of your mindset.</p></div>
+ <div class="links">By <a href="user/2639" title="View user profile.">jorend</a> at Tue, 02/28/2006 - 14:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-15001"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15001" class="active">You assume that you only</a></h3>
+ <div class="content"><p >You assume that you only want to make checks on trivial properties. I don't.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Fri, 02/24/2006 - 20:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-15012"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15012" class="active">Fixing errors later</a></h3>
+ <div class="content"><blockquote ><p >Fixing errors later is orders of magnitude more expensive.</p></blockquote>
+<p >Exactly. The cost of having a maintenance programmer fix a <em >bug</em> is often a minor part of the equation.  Before a bug is assigned to be fixed by a maintenance programmer, it has often gone through various "layers" of a organization such as technical support (contacted by the customer in the first place), testing (to verify the bug and file the actual bug report), and product management (to decide whether to fix or not). After the bug has been fixed, it needs to go back through most of the layers.
+<p >Note: I'm merely pointing out how things work in many organizations.</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Fri, 02/24/2006 - 23:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:300px;">
+<a id="comment-15013"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15013" class="active">&quot;Later&quot; doesn&#039;t necessarily mean</a></h3>
+ <div class="content"><p >"Later" doesn't necessarily mean "after deployment".  In this context, it could, and ideally should, merely mean during routine test suite runs.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Fri, 02/24/2006 - 23:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:325px;">
+<a id="comment-15098"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15098" class="active">Testing and reality</a></h3>
+ <div class="content"><p >There's no way to be 100% sure your code is free of type errors by testing.  That's a silly notion.</p>
+<p >You would have to make sure every code path executes with every combination of (significantly different) types that can reach it.  Writing a test suite like that would require... well, static type information.  Hmm.</p>
+<p >Let's aim a little lower--just coverage of every code path.  Is that common?  I'm far from sure such a test suite exists for <em >any</em> project in a runtime-typed language.  How mature are Python's code coverage tools?  How about Scheme?  What does this say about how often they're used?</p>
+<p >Even if you did have 100% test coverage, it's possible with runtime typing for one stupid mistake to mask another, which makes finding and fixing all the bugs time-consuming.  This happens to me in practice, even without test coverage.</p>
+<p >Whenever I write a Python program that takes more than 30 seconds to run, I start to notice how often I mistype identifiers, or fail to change a call site when I change the signature of a function.  (I notice because then I have to wait another 30 seconds to see my <em >next</em> stupid mistake.)  It is extremely common, no matter how careful I am.</p>
+<p >Now--I <em >think</em> I'm making up the time somewhere else.  After all, I did choose Python, not C#.  But for you to say that static typing isn't useful contradicts every shred of experience I've gathered.</p></div>
+ <div class="links">By <a href="user/2639" title="View user profile.">jorend</a> at Tue, 02/28/2006 - 14:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:350px;">
+<a id="comment-15133"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15133" class="active">100% certainty is 98% irrelevant</a></h3>
+ <div class="content"><blockquote ><p >
+There's no way to be 100% sure your code is free of type errors by testing. That's a silly notion.
+</p></blockquote>
+<p >
+And where does the requirement that you be 100% sure come from?  Aside from e.g. life-endangering applications in e.g. aerospace and medicine, the business case for being 100% sure that your code is free of type errors is unclear.  Does that mean it has fewer bugs?  Can you prove that, i.e. what's the correlation between static typechecking and bugs in a delivered program?  Or are you just taking it on faith that static checks are a benefit here, because they give you 100% certainty about something, regardless of its relevance?
+</p>
+<blockquote ><p >
+But for you to say that static typing isn't useful contradicts every shred of experience I've gathered.
+</p></blockquote>
+<p >
+I didn't say it isn't useful.  You claimed that "the extra type-checking [required by statically-checked languages] is in fact extremely useful", and said that you didn't "see how anyone who has done static-typed programming could think otherwise."  I'm pointing out that this is a subjective call (drop "extremely" and we'll talk), and that it is possible &mdash; in fact, quite reasonable &mdash; to have done statically-typed programming and think otherwise.
+</p><p >
+Regarding your other arguments, you're talking about some issues that go beyond typechecking.  For example, in Scheme and other dynamically checked languages (even Visual BASIC!), it's common for mistyped and undefined identifiers to be flagged at compile time.  In Scheme in particular, a lot of checking happens statically, partly because of macros, and particularly if you're using a good module system.  So in part, we have a situation here which is analogous to the one in which people use Java, dislike its type system, and blame static type systems in general, as opposed to the one in Java.  Don't extrapolate from Python to all dynamically-checked languages.
+</p><p >
+When you're focusing on typechecking in particular, the testing situation is not as bad as you make out, in practice.  The same properties that allow automated systems to statically infer and check types ensure that type errors in dynamically-checked systems aren't likely to remain hidden for long, except on entirely unused code paths.  This explains the effect that's been observed for Erlang, that running typecheckers on working programs doesn't turn up many type errors.
+</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Wed, 03/01/2006 - 00:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:375px;">
+<a id="comment-15134"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15134" class="active">Research completed</a></h3>
+ <div class="content"><p >.. and since type systems have reached 100% coverage of type errors there is surely no need for further work on them. :-)</p></div>
+ <div class="links">By <a href="user/465" title="View user profile.">Luke Gorrie</a> at Wed, 03/01/2006 - 04:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-14982"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14982" class="active">Running a program earlier</a></h3>
+ <div class="content"><p >One advantage of discovering errors later is that you can often run a program successfully before a roughly equivalent typed program would even be compilable by a static-checking compiler.</p>
+<p >This can be quite useful when developing in an interactive code &amp; test style: you may want to test some working code paths, while the program still has other code paths which are incomplete.  Those incomplete paths are likely to generate type errors and other errors, but you may not be interested in testing them yet.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Fri, 02/24/2006 - 17:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-14994"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14994" class="active">It was a lesson I took from SICP</a></h3>
+ <div class="content"><p >From reading the book and watching the videos, it's rather obvious that their style of programming is to give names to functions as they are going along...  and then to later on worry about implementation details.</p>
+<p >Of course, a static programmer can do the same sort of design - either by just waiting to run it once everything is written - or to create function stubs on the way.  Still, I'd think the tendency is that dynamic programmers start running early and often, and static programmers tend to get more written before the first trial runs.  But that's just a tendency, one which really requires discipline either way.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Fri, 02/24/2006 - 19:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-14997"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14997" class="active">Well Put</a></h3>
+ <div class="content"><p >Of all the discussions on static vs. dynamic typing, your and Anton's exchange comes closest to where I find myself, which is to have decided, as I've written before, that the real question is how interactively one can program. Personally, I sit in an interactive environment, trying out snippets of code on the fly, and it matters not in the slightest whether that interactive environment is a Scheme one, a Common Lisp one, an O'Caml one, a Java one<sup >*</sup>... and I don't find myself having to struggle to get any of them to do what I mean.</p>
+<p ><sup >*</sup> Yes, you can do Java interactively, too, with some effort. Here, I'm referring to the "Scrapbook" in the Eclipse IDE.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 02/24/2006 - 19:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:300px;">
+<a id="comment-15000"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15000" class="active">My first job out of college...</a></h3>
+ <div class="content"><p >...was programming 6809ASM for embedded instrumentation systems.  In that environment, it took a full four hours between every compile and test cycle.  Gave one an appreciation for getting as much out of the way in the coding and compile cycle prior to attempting a run.  </p>
+<p >My personal take is that these things have to be balanced.  Sometimes the churn of an interactive environment can boost productivity off the charts.  At other times, it just gets in the way of a more methodical reasoning process - getting hooked into instant gratification.  This balance is not a function of the language type, but rather certain PL practitioners have a proclivity one way or the other.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Fri, 02/24/2006 - 20:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-15004"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15004" class="active">Fully-Functorial Programming and Functions That Fail</a></h3>
+ <div class="content"><p >In ML (both SML and OCaml) one can use signatures and functors to compile (and consequently type check) code without having to fill in the implementation details.  All you need to do is to invent names and types (you can even use value specifications such as <b >val foo: 'a</b> to avoid having to invent the actual type) for the operations that you would like to have.
+<p >
+Alternatively, and in conjunction with functors, one can use functions that raise exceptions (either always or just in the unimplemented cases).  Such functions can be given arbitrary types (either explicitly using type constraints or automatically through type inference).  You can then compile your program as well as run parts of it (the parts that don't raise exceptions).
+<p >
+The point is that the effort required to get useful feedback from the type checker (or even to run parts of the program) is probably much less than one might believe.</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Fri, 02/24/2006 - 20:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-15007"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15007" class="active">In this case undefined is your friend</a></h3>
+ <div class="content"><p >Sometimes I just use <code >undefined</code> or <code >error "NIY"</code> to stub expressions and functions in Haskell. Doesn't it provide the same flexibility?</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Fri, 02/24/2006 - 21:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-15015"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15015" class="active">Stubs as offerings</a></h3>
+ <div class="content"><p >Sure, you can stub stuff out.  IME, stubbing things out requires more work in a statically typed language, particularly in early exploratory programming.  This is partly because type errors tend to propagate, so you have to make sure you put the right stubs in the right place, which is unnecessary work for a code path that you don't yet care about.  I think of this as being like burnt offerings &mdash; otherwise unnecessary things which you have to do just to appease the compiler.</p>
+<p >I think the earlier comment about "mindset" really captures a big part of the issue.  When I'm starting a program in say, OCaml, I often find myself concentrating quite a bit on getting the types I want, before I get to the real functionality, along the kind of lines Vesa described.  This seems natural in that context.  When I program in Scheme, I'm hardly ever focusing on the types so much at first.  In fact it can be almost the opposite - functionality first, type discipline later.  And as Chris points out elsewhere, there are times when one approach seems more appropriate than the other.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Sat, 02/25/2006 - 00:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-14965"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14965" class="active">Sure you can</a></h3>
+ <div class="content"><blockquote ><p >That is not the same thing. You cannot check the type of a functional value, itself, dynamically. Nor can you check the type of a lazy value, or a future, or even a mutable reference.</p></blockquote>
+<p >Sure you can.</p>
+<p >You can give a nonstandard semantics to a subset of Scheme (i.e., typable ML terms) that allows you to reify an expression as its type, even functions, promises, futures, and mutable cells.  Even continuations (call/cc is just a primitive, and can be given a nonstandard interpretation as well, witness the implementation of dynamic-wind in Scheme).</p>
+<p >But you weren't talking about implementing your own interpreter, I guess.</p>
+<p >Maybe surprisingly, you can perform a source-to-source translation (and provide nonstandard definitions of the primitives) that allows you to reify your subset of Scheme expressions as their types.</p>
+<p >And if you think a source-to-source transformation and nonstandard implementations of the primitives you need is too high a price to pay, consider that it's the same thing you would do in ML or Haskell to implement a dynamic or universal type.</p></div>
+ <div class="links">By <a href="user/538" title="View user profile.">Kevin Millikin</a> at Fri, 02/24/2006 - 08:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-14967"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14967" class="active">Highly sceptical</a></h3>
+ <div class="content"><p >Do you have a reference? I find it hard to believe that it should be possible to derive complete type information in a sort of bottom-up manner at runtime, when this is not possible statically. For example, how do you get the type of, say, the equivalent of ref(nil)? This seems to require (arbitrarily remote) contextual information.</p>
+<p >I can see that a source-to-source transformation might work, but that does not really refute what I said, because the transformation is basically an extension of a static type checking/inference algorithm (unless I misunderstand your idea).</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Fri, 02/24/2006 - 12:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-14974"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14974" class="active">I find it hard to believe</a></h3>
+ <div class="content"><blockquote ><p >I find it hard to believe that it should be possible to derive complete type information in a sort of bottom-up manner at runtime, when this is not possible statically. For example, how do you get the type of, say, the equivalent of ref(nil)? This seems to require (arbitrarily remote) contextual information.</p></blockquote>
+<p >Who said anything about sort of bottom-up (:?  A value in the store (for instance) is computed using arbitrarily remote contextual information, isn't it?</p></div>
+ <div class="links">By <a href="user/538" title="View user profile.">Kevin Millikin</a> at Fri, 02/24/2006 - 14:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-14978"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14978" class="active">Bottom-up</a></h3>
+ <div class="content"><p >Well, when you derive types from computed values only, then it will basically be bottom-up, or how could it not be? A value in the store is computed bottom-up (ignoring futures for now) before being stored. And when the value is just nil (the empty list), then you'll at best have partial type information.</p>
+<p >AFAICS, dynamically you can only infer information from results that you have already computed, i.e. past computations. A type system OTOH can sort of "look into the future", and infer the type of some expression from the way it is used "later" (the contextual information I was referring to). As soon as you no longer have least or principal types for everything (like with mutability) this becomes essential.</p>
+<p >So unless you can point me to some paper that debunks my ignorance, I'm afraid I won't buy it. ;-)</p>
+<p >[Oh dear, wasn't my intention to ignite yet another flamewar about this issue. Excuses to all.]</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Fri, 02/24/2006 - 16:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-15017"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15017" class="active">Bottom up?</a></h3>
+ <div class="content"><blockquote ><p >AFAICS, dynamically you can only infer information from results that you have already computed, i.e. past computations.</p></blockquote>
+<p >Results that you have already computed includes thunks you have constructed but not yet forced, yes?</p>
+<p >I don't know of any paper that says what you want it to say (I'll consider writing it if you think anybody would be interested (:).  There's nothing deep, it's just a hack (well, normalization by evaluation is kind of deep).  The code is too long and uninteresting to post here (I've posted something similar in the past), but this is a real honest-to-god scheme interaction:</p>
+<pre >&gt; (run (let ((x (literal '())))
+       (begin+ (begin+ (display-type (type-of x))
+                       (newline+))
+               (cons+ (literal 7) x))))
+#&amp;(list . #&amp;#&amp;number)
+(7)
+&gt; (run (cons+ (literal #t) (cons+ (literal 7) (literal '()))))
+
+Error in type-checking: failed to unify #&amp;#&amp;number and #&amp;boolean.
+Type (debug) to enter the debugger.</pre><p >The first expression prints a value and returns another.  Notice how the type of '() is known to be list of numbers even "before" it has had a number consed onto it.</p></div>
+ <div class="links">By <a href="user/538" title="View user profile.">Kevin Millikin</a> at Sat, 02/25/2006 - 05:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:300px;">
+<a id="comment-15018"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15018" class="active">I should say more</a></h3>
+ <div class="content"><p >The nonstandard interpretation of values is as a pair of a (representation of a) type and a thunk, if the expression is welltyped, and an error otherwise.  All that one needs to program at the source level with this nonstandard interpretation is lambda, pairing, and enough structure to represent the types.</p>
+<p >And that includes inference as well as checking, as long as you care to code it up (see above).  So you lose (:  (don't feel bad, you were going up against lambda).  Of course, your larger point that it is just a reimplementation of static inference is true.  But so is the claim that a sum type in ML is just a "reimplementation" of runtime tagging.</p>
+<p >Where does that leave us?  With some doubt on the usefulness of claims of "you can't do X with language Y".  On the one hand, as long as you give me some latitude, I can reify Scheme values, even functions, as their type at runtime (and catch type errors before "runtime").  On the other hand, if you don't, I will insist that a Haskell function that takes Either Int Bool doesn't *really* take either an int or a bool.</p></div>
+ <div class="links">By <a href="user/538" title="View user profile.">Kevin Millikin</a> at Sat, 02/25/2006 - 06:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:325px;">
+<a id="comment-15021"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15021" class="active">But that is static type checking!</a></h3>
+ <div class="content"><p >What you really do is splitting program execution into two separate phases: first you do static(!) type checking (which also performs a program transformation), and only when that is successful you execute the (transformed) program. Mind you, the static checking is performed at runtime, but that is not the same as checking dynamically - which I interpret as checking <I >during</I> computation, without relying on information from a separate analysis phase [*]. I would call your approach "late static checking" or something like that. It is an interesting idea on its own, of course, but I'm afraid it does not convince me wrt the point of discussion.</p>
+<p >Regarding Either: I fully agree with you ;-). Taking a sum is <I >isomorphic</I> to that, but it's not the same. You'd need intersection types or other forms of polymorphism to express the very thing.</p>
+<p >Likewise, I wouldn't disagree that defining a universal sum type, plus appropriate wrappers for primitives, qualifies as reimplementing dynamic tagging - it sure does.</p>
+<p >So yes, I tend to agree with most of your conclusion. But I still consider claims like "dynamic checking can check everything static checking can" mistaken, or at least severely misleading.</p>
+<p >[*] Without this interpretation, even the implementation of a REPL would suddenly turn a statically typed language into a dynamic one, because it's all "runtime"!</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Sat, 02/25/2006 - 08:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:350px;">
+<a id="comment-15022"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15022" class="active">And partial evaluation</a></h3>
+ <div class="content"><p >And partial evaluation should probably turn a dynamically typed language in to a statically typed one. (and actually any language with a macro system must be considerd to have static typing.)</p>
+<p >But this would also lead to classifing among other thing CMU Common Lisp and Oz as statically typed language, as they do some analyizis even at compile time. And I think at this point that exact distinction starts to become meaningless. Especially as nobody realy seems to want a purly dynamic system. </p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Sat, 02/25/2006 - 09:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:375px;">
+<a id="comment-15024"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15024" class="active">Don&#039;t see how this follows</a></h3>
+ <div class="content"><p >Dynamic typing does not preclude static analysis. But its crux is that the operational semantics does not assume or rely on any prior typing analysis.</p>
+<p >In any case, I'm confused by your argument. Not all static processing is static type checking. What has macro expansion to do with type checking?</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Sat, 02/25/2006 - 09:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:400px;">
+<a id="comment-15028"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15028" class="active">I was reasoning that</a></h3>
+ <div class="content"><p >I was reasoning that "static" means fixed or known at compile time, and "dynamic" means not static, and by that static type checking is checking done at compile time, and a macro is executed at compile time, and to do that you have to do som type checking, ergo your doing type checking at compile time.</p>
+<p >But in hindsight I realize that you don't even make that interpretation of that static and dynamic typing is. But i have to wonder, what is it that is "static" about what you call "static typing"?</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Sat, 02/25/2006 - 12:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:425px;">
+<a id="comment-15030"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15030" class="active">On the meaning of &quot;static&quot;</a></h3>
+ <div class="content"><p >To me, "static" simply means before, and independent of, actual execution. I find terms like "compile-time" and "run-time" much too fixated on specific tool scenarios, and not making much sense in contexts where these do not apply. An interactive system is one obvious example, where both overlap. There are also cases where there isn't a single compilation step, but static analyses are performed at several points in time prior to execution (consider a type-safe linker).</p>
+<p >Of course I'm aware that even with that interpretation there is no clear-cut distinction between static and dynamic. There are enough imaginable scenarios that blur the distinction further, or render it meaningless. Staged computation actually is doing that intentionally, for example.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Sat, 02/25/2006 - 13:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:450px;">
+<a id="comment-15032"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15032" class="active">Yes, I agree.</a></h3>
+ <div class="content"><p >Yes, I agree. Actually I think the terms dynamic, static and even type, are becoming more and more irrelevant.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Sat, 02/25/2006 - 13:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:350px;">
+<a id="comment-15026"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15026" class="active">Of course!</a></h3>
+ <div class="content"><p >Then I think we agree completely.</p>
+<p >But the goal posts have moved pretty far from your original challenge (paraphrasing): how can you tell at runtime that a function has type int -&gt; int before applying it?  I answered the question, and I'm not sure why that answer should be rejected on the grounds that it relies on computing that the function has type int -&gt; int before applying it!</p>
+<p >You're focusing on a separation of phases that the programmer doesn't necessarily see.  Here's the simpler answer I should have given without delving into implementation:  you define a suitable set of combinators for constructing functions from int to int, and limit yourself to values constructed by those combinators.  (Notice, no talk of staging.  How do you guarantee that a value was produced by your combinators?  That's a question of data hiding and encapsulation, which is orthogonal to static typing (though <a href="http://lambda-the-ultimate.org/node/834#comment-7726">not everyone agrees</a>).)</p></div>
+ <div class="links">By <a href="user/538" title="View user profile.">Kevin Millikin</a> at Sat, 02/25/2006 - 10:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:375px;">
+<a id="comment-15027"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-15027" class="active">Context</a></h3>
+ <div class="content"><p ><cite ><br >
+But the goal posts have moved pretty far from your original challenge (paraphrasing): how can you tell at runtime that a function has type int -&gt; int before applying it?<br >
+</cite></p>
+<p >Of course, that "challenge" was in reply to the claim I paraphrased above, so you have to take that context into account. And it established, at least from my reading, the implicit qualification "solely by means of dynamic typing (in the conventional sense)", which I assumed all the way ;-).</p>
+<p >With that clarified, yes, it seems we agree. Which is satisfying :-).</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Sat, 02/25/2006 - 10:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14941"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14941" class="active">You&#039;re thinking of</a></h3>
+ <div class="content"><p >You're thinking of contracts, a la Robby Findler and scheme. </p></div>
+ <div class="links">By <a href="user/1325" title="View user profile.">Carter T Schonwald</a> at Thu, 02/23/2006 - 16:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14801"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14801" class="active">Names and slots</a></h3>
+ <div class="content"><p >Agreed: if everyone follows the convention of using a fully-qualified name in every field access expression (either explicitly or via importing accessor functions from modules) then conflicts can be avoided.  Of course, this would mean that an expression like "p.x" would need to be qualified with something like "p.(Java.lang.point.x)".  Or accessed as "x(p)" -- but I suspect a lot of modules are going to be fighting for that accessor named x, so now we get into decorating accessor names to make them sufficiently unique, so we would want something like PointX(p).</p>
+<p >Or we need to declare "Point p" with an explicit type.  The conclusion is: modular object oriented programming without explicit types requires either fully qualified names everywhere or unambiguous accessor functions explicitly imported from modules (leading to large decorated names).  This is workable, but quite a mess.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Sat, 02/18/2006 - 07:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14802"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14802" class="active">Change is the only constant</a></h3>
+ <div class="content"><p >Since I've been pushing the optional/pluggable types agenda, I can't resist chiming in. I really don't want to spend a lot of time arguing religion; my views come from my experience and are based on anecdotal evidence. The same is true for the opposite view.</p>
+<p >I'd just like to clarify a few points. The first is, that while I believe in optional/pluggable types in general, my experience is with object oriented languages, and I make no strong claims about how applicable the idea is to functional programming. Maybe functional programming really benefits from types, though Erlang and Scheme would indicate the opposite.</p>
+<p >In the OO context, the fact that a large part of the code base may not be type checked was a non-issue for us in Strongtalk.  We simply declared interfaces for such libraries and typechecked against those interfaces. This worked very well in practice. Of course, we had no absolute guarantees. </p>
+<p >I think this is the root of the difference of opinion. If one is wedded to the view that the world can be characterized statically and immutably, one tends to believe in mandatory static typing, in proving programs and so forth. </p>
+<p >In contrast, if your experience is that things are inherently ever changing, then one sees the enormous value of dynamic typing and reflection (in the Smalltalk/Scheme/Self traditions). </p>
+<p >Stated another way,  you realize how futile it is to try and capture everything statically. </p></div>
+ <div class="links">By <a href="user/2750" title="View user profile.">Gilad Bracha</a> at Sat, 02/18/2006 - 07:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14813"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14813" class="active">FP and types</a></h3>
+ <div class="content"><p >One possible reason why types may be more useful with FP is that those languages eliminate most other sources of bugs.  </p>
+<p >With OOP, I find that static type systems very rarely catch anything that wouldn't be caught by unit tests.  And you <i >need</i> the unit tests: there are too many places where you might have hidden state - wrong values - that the typechecker won't catch.  If you're testing the actual values, then you get dynamic typechecks "for free", because you run the code every test cycle.</p>
+<p >With FP, all state is explicit, and mistakes usually jump out at you through inspection of the code.  Pattern-matching captures all possible values that the type can hold, and you know that if a function depends on state, <i >you</i> passed it in.  So the primary remaining source of bugs is type errors, and a good static typechecker can make testing basically unnecessary.  My (fairly limited) Haskell experience is that programs generally "just work" once they compile, even if I've been doing invasive modifications throughout the code.</p>
+<p >I haven't done any large Haskell/Ocaml dynamic systems though, so I can't speak for how well this works with complex, dynamic, distributed systems.  Certainly, complex modifications involve changes to more places - but there's more compiler checking, so you don't have to worry as much about breaking things.  Also, type inference, structural typing, and a concise syntax help minimize the pain of such changes.</p>
+<p >My experience in the Java world is that most large projects are moving to the Jini-model of lookups full of interfaces, dynamically retrieved by class - which supports your point.  Granted, that could be because my employer has invested heavily in Jini technology (and was co-founded by one of the Jini architects), so naturally our software follows the same architectural patterns.  I'm curious whether Haskell could scale to similar problems: the <a href="http://www.cl.cam.ac.uk/~pes20/acute/">Acute</a> people have done a lot on type-safe distributed programming, but to my knowledge no real project has used their system.</p></div>
+ <div class="links">By <a href="user/1377" title="View user profile.">Jonathan Tang</a> at Sat, 02/18/2006 - 16:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14826"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14826" class="active">The Acute link is to a New</a></h3>
+ <div class="content"><p >The Acute link is to a New Yorker article!</p></div>
+ <div class="links">By <a href="user/490" title="View user profile.">Olivier Lefevre</a> at Sun, 02/19/2006 - 01:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14830"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14830" class="active">Wrong clipboard contents</a></h3>
+ <div class="content"><p >Oops, must not've picked it up with the copy/paste.  Fixed now.</p></div>
+ <div class="links">By <a href="user/1377" title="View user profile.">Jonathan Tang</a> at Sun, 02/19/2006 - 05:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14803"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14803" class="active">Pluggable Types also have advantages for Type fans</a></h3>
+ <div class="content"><p >One point I forgot to mention earlier is that the pluggable types hypothesis has two elements to it. The more controversial one is that mandatory typing should be avoided altogether. The second is that one should be able to plug in additional type systems. This latter point applies even to when one does have a mandatory type system, as is the case in Java. Even hard core type theorists have some interest in this point, since it means that new and valuable type systems can get used in practice, without the huge hurdle of getting them to be part of a language definition.</p>
+<p >Of course, all the analyses being plgged in must avoid perturbing the dynamic semantics - otherwise they all interact and you are just extending the language's existing type system.</p></div>
+ <div class="links">By <a href="user/2750" title="View user profile.">Gilad Bracha</a> at Sat, 02/18/2006 - 08:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14804"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14804" class="active">Plugged to vanish</a></h3>
+ <div class="content"><p >I wonder why languages like LISP, Smalltalk, Ruby et al should be turned into statically typed languages by means of pluggable type systems, instead of improving ways of perform runtime inspections and provide and visualize runtime information? Because people like compilers prefer staring on tons of sourcecode and UML diagrams respectively in order to get how a program will behave? </p>
+<p >I imagine sometimes to turn the perspective completely ( envisioning a SmallTalk like philosophy ) putting agility to it's extreme - if it's possible to move beyond eXtreme programming . Instead of writing the sourcecode the programmer receives an initially blank  living state of a program and plenty of operators and triggers that enable him to inspect dependencies, draw code coverage images, manipulating variables on the fly, recovering state, track life-lines of objects, add little source snippets that will compile, so that new names are available immediately, showing possible name collisions, withdraw old names etc. There is no god like source code with static or no guarantees, but source generation is just a small moment in the overall systems manipulation. </p>
+<p >Of course we can lead endless retro-computing discussions born out of the bad conscience of computer scientists continue liking Smalltalk and LISP allthough they shouldn't do it anymore ;)</p>
+<p >Kay</p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Sat, 02/18/2006 - 08:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14806"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14806" class="active">What does this have to do with type systems?</a></h3>
+ <div class="content"><p >Is it just me or do the arguments in this post have absolutely nothing to do with type systems?</p>
+<p >The problem is that they were trying to shoehorn two namespaces into a single member selection syntax. And they thought that this would somehow be okay because they were only doing it for certain static types?</p>
+<p >Of course, they solve it by disambiguating the syntax, because this is a syntax issue, not a type system one. In fact, there was a discussion on the Lua list (a dynamically typed language) about exactly the same design issue in an XML library recently, with exactly the same conclusions.</p>
+<p >I'm not going to comment on Bracha's work, but for me this article completely fails to support it.</p></div>
+ <div class="links">By <a href="user/2751" title="View user profile.">Jamie Webb</a> at Sat, 02/18/2006 - 11:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14829"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14829" class="active">It&#039;s not just you.</a></h3>
+ <div class="content"><p >This is what I got from it: Visual Basic usually uses the dynamic type of an object to determine semantics.  The XML syntactic sugar relied on the static type.  This inconsistency screws things up.  Therefore, static typing must suck.</p></div>
+ <div class="links">By <a href="user/925" title="View user profile.">Kannan Goundan</a> at Sun, 02/19/2006 - 05:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14921"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14921" class="active">Multiple levels of disambiguation</a></h3>
+ <div class="content"><p ><i >"The problem is that they were trying to shoehorn two namespaces into a single member selection syntax"</i></p>
+<p >Just for comparison, the Javascript DOM solves the same kind of problem without syntax additions, and allows any number of additional namespace 'axis':<br >
+<code ><br >
+Element.prototype.symbol -&gt; Element.symbol<br >
+Element.attributes.symbol -&gt; Element.@symbol<br >
+Element.childNodes.symbol -&gt; Element.&lt;symbol&gt;<br >
+Element.style.symbol -&gt; "no equivalent"<br >
+</code><br >
+Or did I miss something?</p>
+<p >It's almost as if they are trying to use syntax to give individual types (such as Element), namespaces (such as Attribute, Descendant), which hurts my head.</p></div>
+ <div class="links">By <a href="user/2771" title="View user profile.">M. Douglas</a> at Thu, 02/23/2006 - 08:01 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14807"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14807" class="active">Implementation burden</a></h3>
+ <div class="content"><p >Really enjoyable paper!
+<p >
+I've heard quite a few talks about "soft type systems" at Erlang hoedowns and they seem to go over fairly well. The doubts that keep me from using them in my work are: Has it been adequately debugged? Can I use it privately without forcing it on my friends? Can it introduce mind-bending bugs in my object files? The successful type system will have to answer these points well.
+<p >
+The only static analysis program to be a big hit with Erlang programmers is the <a href="http://lambda-the-ultimate.org/node/338">Dialyzer</a>. This program infers everything, does not introduce new syntax, and has no opporunity to mess up object files. Despite the fact that Dialyzer does not invent source code annotations you can still "optimize for Dialyzability" by e.g. adding some extra guard expressions. To me this has the same good feeling as CMU Common Lisp.
+<p >
+P.S. Who can guess the cause of my favourite CMUCL error message?</p>
+<pre >
+Type-error in KERNEL::OBJECT-NOT-TYPE-ERROR-HANDLER:  1 is not of type NUMBER
+</pre><br ></div>
+ <div class="links">By <a href="user/465" title="View user profile.">Luke Gorrie</a> at Sat, 02/18/2006 - 11:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14809"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14809" class="active">Gilad is Wrong</a></h3>
+ <div class="content"><p >I'm sorry I can't even finish the presentation. It's wrong on so many levels. Let me pose a few questions:</p>
+<p > - How we go from "problems in Java type system" to "all type systems have awful/unsolvable problems"?<br >
+ - How are the "Brittleness" problems related to the type system? The classloader example is a specific problem of the semantics adopted. The serialization problem is also related to Java choices: Why do I even have to use classes? Isn't it an <em >Object</em>-Oriented PL? How would a language with a Java-like serialization model but without type-systems be worse? Why Alice ML doesn't have such problems, despite having a type system?</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Sat, 02/18/2006 - 13:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14811"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14811" class="active">Universal types</a></h3>
+ <div class="content"><p >In most strongly-typed systems one doesn't actually <b >have to</b> use them: you can define your own Universal-style type and program away.</p>
+<p >E.g. <a href="http://okmij.org/ftp/cpp-digest/poly-list.html">Truly polymorphic lists in C</a>.</p>
+<p >You could probably even do this <i >while</i> using the type system to provide "soft-typing" (warnings)!    (though I haven't tried this :)</p></div>
+ <div class="links">By <a href="user/1195" title="View user profile.">dbfaken</a> at Sat, 02/18/2006 - 14:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14815"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14815" class="active">I can quit any time Dr. Meijer</a></h3>
+ <div class="content">if you can convice me that my typoholic addiction to mandatory typing is bad.  Without the audio to go with the pdf there is lots of room for misinterpretation and
+miscommunication, so hopefully Gilad can expand on the bullet points</p>
+
+<blockquote >Type systems hurt reliability and security by making things complex and brittle<br >
+Undermine security</blockquote>
+
+<p >How are security guarantees (its not clear what security your talking about here) handled in a language without a mandatory type system? What stops the same techniques from being used in a language with mandatory typing?</p>
+
+<blockquote >Example: class loaders</blockquote>
+<p > This is just an argument that types needs to be safely verified dynamically.  E.g. with gadts, or with the type-safe marshalling. See the references in persistence below.</p>
+
+<blockquote >Complexity of implementation</blockquote>
+<p >So mandatatory static type systems
+  have complex implementations. Won't an optional pluggable
+  type system have a similar complexity?  Any implementation bug can
+  undermine a system, so then relying on anything leads to catastrophic
+  failure...</p>
+
+
+<blockquote >Persistence and Typing<br >
+Persistence works well with structural typing; nominal typing does not</blockquote>
+
+<p >Yes this is/was a problem, however there has been lots of work on it in mandatory static languages (e.g.  <a href="http://www.cl.cam.ac.uk/~pes20/acute/">Acute</a>, or
+  Andreas Rossberg's papers on <a href="http://www.ps.uni-sb.de/alice/papers.html">Alice</a>).</p>
+
+<blockquote >Nominal typing forces serialization to separate objects from their behavior.</blockquote>
+
+<p >This is a problem with the <i >one particular</i> nominal type system your refering to</p>
+
+<blockquote >Nominal typing suited to practical languages; structural typing problematic</blockquote>
+
+<p >Huh? This statement feels very wrong; both have a place.
+Even if your right, how does it play into the mandatory/optional argument?</p>
+
+<blockquote >Exposes class internals, compiler implementation details.</blockquote>
+<p >I don't understand this.</p>
+
+<blockquote >Type systems for VM and language collide</blockquote>
+
+<p >Yes, a badly designed type system can cause lots of problems.</p>
+
+<p > Traditionally the semantics of executable language do <b >NOT</b> depend on the type system, although it may be more true in existing OO languages.  The relation between static and dynamic semantics is a criteria for evaluating a type system not an argument againt mandatory types.</p>
+
+<p >Type Inference and annotations should be taken out of the argument,
+a modern type system may have no or tons of annotation.  Annotations
+may be necessary for <i >inference</i> but that isn't an aspect of the type system itself. How does inference work with optional typing?</p>
+
+<p >What does "Type inference relates to type system as type system
+relates to executable language" mean?</p>
+
+<p >I don't like the evidence in this paper because its
+psychological (e.g. that /people/ rely on types for security) and
+consistently anecdotal, referring to experience with java.</p>
+
+<p >What are the classes of type systems which can/cannot be made optional? Writing an example paper which shows how to add a few
+pluggable/optional types systems to an idealized scheme or Abadi's
+imperative object calculus would help me "get" how optional/pluggable
+actually work.</p></div>
+ <div class="links">By <a href="user/767" title="View user profile.">Ethan Aubin</a> at Sat, 02/18/2006 - 16:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14820"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14820" class="active">As Ethan says, there is lots</a></h3>
+ <div class="content"><p >As Ethan says, there is lots of room for misunderstanding when reading a presentation as opposed to hearing/seeing it live. Many of the earlier responses reflect that. I'll respond to some of Ethan's points right now. A full response is likely to be far too long. </p>
+<p >The security guarantees I'm referring to are the language level guarantees that have been popularized by the Java platform, and are largely similar in .Net.  These are chiefly pointer/memory safety (e.g., you cannot corrupt arbitrary memory by forging pointers, private data is really private etc.) and type safety.  The basic thesis is that because, as a practical matter, systems with mandatory typing rely on them heavily, failure of the type system is catastrophic.  One can certainly imagine a system with mandatory typing that carefully avoided any critical dependency on the type system. As Ethan suggests, types would be checked dynamically as well as statically. This doesn't happen in reality - the temptation to bank on the type rules is simply too strong.  This is a cultural issue - but cultural issues are very important in programming languages, and cannot be discounted.</p>
+<p >Optional type systems could be as complex as mandatory ones - but the difference is that their complexity is self contained. The run time doesn't get more complex every time you add a type system feature. Reification of generics is a good example. Failure of an optional type system does not lead to overall system failure.</p>
+<p >The central point of optional types is that it decouples elements of the language design and implementation. This means that the inevitable mistakes that happen are better contained and less harmful. So, if your optional type system is badly designed, or simply has a complex and buggy implementation,  it doesn't have a systemic effect.</p>
+<p >Language design is notoriously non-modular. Every little change tends to interact with many other seemingly unrelated features. In particular, there is usually a two way dependency between executable semantics and the type system. Optional types simplify matters by making the dependency one-way: types depend on the executable semantics, but not the other way around.</p>
+<p >A similar situation holds with respect to type inference. In many cases (e.g., ML) the design of the type system was constrained by the need to support inference - so again, there is a bidirectional dependency, this time between type checking and type inference/reconsruction. I argue it is more robust to make the typechecker independent of type reconstruction. Leave reconstruction to tools, that are free to use any heuristics they want.</p>
+<p >I  agree (and noted in an earlier post) that the evidence is anecdotal. There is much more of it that I can add, but it is still anecdotal. So are all the arguments for mandatory typing. Language design is much more an art than a science.</p>
+<p >Ethan is absolutely right that more such systems have do be built and experiented with. This is starting to happen, and we should see confernece papers on pluggable types in not too long, describing actual implementations. I hope to write something along these lines in the foreseeable future, and I know others are too.</p>
+<p >Finally, I will insist that in most statically typed languages, runtime semantics do depend on the type system. This applies to Fortran or ML as much as it does to Java, C#, Modula-1/2/3, Beta.</p></div>
+ <div class="links">By <a href="user/2750" title="View user profile.">Gilad Bracha</a> at Sat, 02/18/2006 - 19:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14844"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14844" class="active">Separate Type System from Runtime</a></h3>
+ <div class="content"><p ><P >I followed the same reasoning as you. I have been using OCaml for years and while it's a very good programming language, I got bored with the static runtime that comes with it. IMHO, it's not because everything is typed at compile time that you don't need types at runtime.
+</p>
+<P >More exactly, you would like to be able to define which amount of type informations gathered at compile time you want to be able to use at runtime. That's the reason why I wrote <a href="http://nekovm.org">Neko</a> which is a dynamicly typed intermediate language which is targeted by NekoML and other languages  such as <a href="http://haxe.org">haXe</a>. A static compiler plus a dynamic runtime proves to play quite good together since you get both safety and flexibility.
+</p></div>
+ <div class="links">By <a href="user/1436" title="View user profile.">Nicolas Cannasse</a> at Mon, 02/20/2006 - 04:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14874"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14874" class="active">I&#039;m not sure I understand</a></h3>
+ <div class="content"><p >I'm not sure I understand your point about the 'type inference': in Scala when the type inferencer fails to analyse the type of an expression, well you just get a compile-time error and you have to declare yourself the type of the expression.</p>
+<p >The type inferencer is deliberatedly simple so that the programmer is not surprised in a situation where there could be an ambiguous choice.</p>
+<p >That's the best choice in my opinion.</p></div>
+ <div class="links">By <a href="user/1458" title="View user profile.">renox</a> at Tue, 02/21/2006 - 17:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14832"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14832" class="active">Gilad&#039;s paper was mentioned</a></h3>
+ <div class="content"><p >Gilad's paper was mentioned here before... but honestly it seemed like a troll to me.  Still does.</p>
+<p >Random example.  "Class-based encapsulation" (Java-style private) is undesirable because it's "inherently less secure" than "object-based encapsulation" (VB6-style private).</p>
+<p >First, the implicit assumption is that the point of encapsulation. is security  But at least a few successful languages have built-in encapsulation features with no pretense of security. (C++, Ruby, Python.)</p>
+<p >Second, VB6-style private sucks in practice.  Whenever you write a method that combines two objects (e.g., the logical OR of two parsers), you have to make public any part of those objects the method needs.  Details of the implementation end up being exposed.</p>
+<p >The example code the paper gives for this distinction seems intentionally pointless.  That strikes me as particularly troll-like.</p>
+<p >Third, I don't think the security argument really holds water.  Gilad argues that object-based encapsulation is so simple it can be implemented in the parser alone.  But if it's actually implemented that way, the guarantee of privacy depends on a lot of downstream stuff--the bytecode verifier, how method dispatch is handled at run time, whatever.  If these mechanisms are supposed to be sufficient to enforce <code >private</code>, they're going to be a little complicated either way.</p>
+<p >The paper is full of stuff like this.</p></div>
+ <div class="links">By <a href="user/2639" title="View user profile.">jorend</a> at Sun, 02/19/2006 - 12:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14876"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14876" class="active">Optional type systems?</a></h3>
+ <div class="content"><p >Has anyone here ever taken a medium-size C project using gcc, but not originally using -Wall, and addded it to the Makefile?  It resulted in thousands or tens of thousands of warnings, didn't it?  Alternatively, for you Perl users, toss a "use warnings" at the top of all of your existing files.</p>
+<p >Gcc -Wall reports warnings for a few classes of things: portability issues, which if your project is only intended for a limited set of environments are not necessary, constructs that have caused people problems in the past, which if your project is already working are also not necessary, and possibly other similar things.  None of these warnings change the behavior of your project.  The only thing they will do is prevent a working program from compiling, if you have warnings interpreted as errors, or just spit out a huge number of messages.  They are the ultimate expression of the things that people who complain about type systems complain about, right?  I don't know how many projects I have seen with policies such as "bug reports about gcc -Wall warnings will be ignored" and "patches fixing nothing but gcc -Wall warnings will be discarded".</p>
+<p >So, can someone explain to me how an "optional type system" differs from an untyped system (or "dynamically typed", as in Lisp, Smalltalk, or Python)?  Most projects, unless they are done by people seriously into discipline, are going to start untyped, and once they achive a certain mass, the costs of introducing the type system are going to outweigh the perceived benefits.  (Has anyone ever noticed all the commandments in the Perl docs to use warnings?  Have you wondered why those commandments are thought to be needed?)</p>
+<p >The worst possible situation that I can see is an optional type system that leaks across module boundries.  Picture this:  "We could use module B.  Heck, it even does everything we want.  But linking it with our modules A, C, and L breaks the build.  So, I guess we're off to reinvent that particular wheel."</p>
+<p >On the subject of Bracha's talk, I, too, am wondering how "Java's  (or VB's) implementation of types is bad" implies "Mandatory types are bad".</p></div>
+ <div class="links">By <a href="user/1579" title="View user profile.">mcguire</a> at Tue, 02/21/2006 - 20:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14877"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14877" class="active">Adding static types</a></h3>
+ <div class="content"><p >Erlang people take pride in the fact that when people have write type systems for Erlang and typed the standard libraries and demo applications they have actually found few or no bugs. For example, I quote from the <a href="http://lambda-the-ultimate.org/node/56">Soft Type System for Erlang</a> paper:</p>
+<blockquote ><p >
+We have presented a soft-typing system for Erlang. The system is based<br >
+on two ideas -- use a specification language to give the interface of<br >
+each module, and use a data flow analysis to verify that the<br >
+implementation of the module matches the specication.
+<p >
+As we saw in the experimental section, the system can reason about<br >
+substantial programs and produce useful results. It is worth noting<br >
+that even though the programs were debugged and tested, the type<br >
+system still produced warnings. The warnings typically concerned<br >
+programming constructs that the data flow analysis could not analyze<br >
+precisely (and where one would not expect any other static typing<br >
+system to give better results).
+<p >
+One disappointing result is that the experiments did not<br >
+uncover a single bug in programs that had already been tested and<br >
+debugged. Perhaps this is an indication that careful testing tends to<br >
+reveal most type errors.
+</p></blockquote>
+<p >We can't be too smug though because the programs are in fact rife with bugs.</p></div>
+ <div class="links">By <a href="user/465" title="View user profile.">Luke Gorrie</a> at Tue, 02/21/2006 - 21:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14881"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14881" class="active">I&#039;d hope so...</a></h3>
+ <div class="content"><p >I would certainly hope there were few bugs in the standard libraries that would be discoverable by static analysis. :-)  In fact, I would tend to agree that careful testing reveals most type errors.  One of the advantages of a good static type system is that you don't have to spend as much time on fuzz-testing.</p>
+<p >But, how about general, run-of-the-mill code?</p>
+<p >Also, it could be argued that Erlang programmers are self-selected not to write those kinds of bugs in the first place, given that they're macho, careful, telecom types.  I could suppose that the popularity of a language is inversely related to the median skill of the language's users.</p>
+<p >And I would like to point out that "warnings [that] typically concerned programming constructs that the data flow analysis could not analyze precisely" would be precisely the thing that would prevent the use of the checeker on an existing codebase.</p>
+<p >[Eh, median, not mean. -TM]</p></div>
+ <div class="links">By <a href="user/1579" title="View user profile.">mcguire</a> at Tue, 02/21/2006 - 22:01 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14920"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1311#comment-14920" class="active">The case or RPython in PyPy</a></h3>
+ <div class="content"><p >A static typesystem for a "dynamic" ( extreme-late-binding ) language may be implicitely defined by the capabilities of type-inferencers. In order to make Python -&gt; C translations feasible that perform, a proper Python sublanguage called "RPython" emerged in the PyPy project. This is not formally defined since it is dedicated to be a maximal sublanguage of Python that can be accepted by translators and therefore a somehwat evolving target. RPython is actually the language the runtime is written in. Note that this is done for optimization and not for security purposes. An "optional static typesystem" in this regard would probably one that turns the approximately defined RPython into a definite sublanguage and opens it for extensions guided by a more expressive typesystem and explicit type annotations. From this point of view RPython is just a weakly defined "core language" that can be either extended to full Python or diverse statically typed languages.</p>
+<p >Kay</p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Thu, 02/23/2006 - 07:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

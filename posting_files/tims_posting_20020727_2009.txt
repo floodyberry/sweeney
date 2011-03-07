@@ -1,0 +1,42 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/1c1880834b7e96c9/a88869e90df5d541?lnk=st&rnum=53&hl=en#a88869e90df5d541
+[comp.lang.functional] Re: Interpolating plus, multiplication etc
+[blockquote]F(A,B,0) = A+B
+F(A,B,1) = A*B
+F(A,B,2) = A^B
+For instance F(3, 4, 3) = 3^(3^(3^3))
+
+So F grows rather rapidly whith 'i'... What I would like to do is to interpolate F so that 'i' may be any real number, which would produce a function where addition, multiplication etc are only a special case. I think this is very faschinating, but I really have NO IDEA of how to do it.[/blockquote]
+
+This is a fascinating question, but I too have been unable to find any research of significance on the topic.  It seems quite curious that such a fundamental question remains not only unanswered but also practically unasked.
+
+Thoughts:
+
+- Such a function of a,b,i isn't expressable as a Taylor series, because it grows arbitrarily fast.
+
+- We shouldn't expect such a function to be commutative or associative for arbitrary i.
+
+- It is not clear whether such a function would be continuous.
+
+- It is not clear that mainstream mathematical tools are suitable for answering this question.  In fact, given the lack of research into such topics, it is likely not.
+
+Here is another interesting way of asking the question, which I pose recreationally because it hasn't been studied rigorously.
+
+Rephrase your problem in the lambda calculus by defining f' as (lam i)(lam a)(lam b)f(a,b,i).  And then f(a,b,i) is just i'(f)(a)(b), where i' is the generalized Church numeral corresponding to the real number i.
+
+What is a Church numeral?  It's a way of encoding numbers as functions, such that:
+
+0 = (lam f)(lam x)x
+1 = (lam f)(lam x)f(x)
+2 = (lam f)(lam x)f(f(x))
+...
+
+What is a generalized Church numeral?  It's their extension to the reals:
+
+-1(f) = "the" inverse of the "function" f.
+1/2(f) = "the" "function" g such that for all x, g(g(x))=f(x)
+
+Where "the" and "function" are oversimplifications (in general, such objects are not one-to-one and are thus more general relations than functions, and in general they are not unique, so formally we might talk about equivalance classes of relations satisfying the Church numeral criteria.)
+
+How does one compute with generalized Church numerals?  This is an open question which, to my knowledge has not been studied.  However, I think this does represent at least meager progress, in the same way that writing i=sqrt(-1) enabled the study of complex numbers before their properties were fully understood.  To study something, one must first acknowledge that the thing might exist.
+
+-Tim 

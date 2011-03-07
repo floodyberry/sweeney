@@ -1,0 +1,17 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/34c1cf0c2e5bca43/beabe663eefea6c1?lnk=st&rnum=24&hl=en#beabe663eefea6c1
+[comp.lang.functional] Re: result of heterogeneous union
+[blockquote]What should be the result type of a union of the two tables? Specifically, what is the type of the resulting set?
+
+[ul] [li]None; this causes a type error[/li] [li](int|string)[/li] [li]Most specific supertype of int and string. (Possibly 'alpha'.)[/li] [li]alpha, the maximal supertype.[/li] [/ul]
+[/blockquote]
+This depends on your type system.
+
+In a type system like that of C++, this sort of typing scenario isn't expressible.
+
+In a C# style language with boxing, you could best say union(t,u)=the most specific type that is a supertype of both t and u.  Thus union(int,string)=object.
+
+To translate that most simply to Java, you would need to avoid basic types like int, and only take unions of class type.  So you might say union(Int,String)=Object, though it's not quite possible to express this in Java directly, even with the long-awaited generic type extensions.
+
+In the functional programming world, if you start with a simply-typed language without subtyping, then add unions (and the resulting subtype relations) in the obvious way, union(string,int) would be a supertype of both int and string but of no other types besides subtypes of int and string.  This seems the cleanest approach which doesn't rely on higher-order typing constructs.  Here, you would most naturally have union(set(t),set(u))=set(union(t,u)).
+
+However, it's possible to be even more precise.  In a type system like McAllester's Ontic language (see http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps), you could say that, for any value a, the type of a is just "the-set-of-all a", and never have ambiguity in questions of "what is the type of this expression in this context?"  This approach is far outside of existing programming language practice, but I recommend reading the paper, just to see what's possible at one far extreme of the design space. 

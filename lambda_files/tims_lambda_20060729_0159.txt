@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/1641
+http://lambda-the-ultimate.org/node/1641#comment-20123
+1050217
+Generics as a Library
+Expression Problem
+<p>Mainstream programmers tend to primarily write very domain-specific code rather than the sort of high-level frameworks and libraries where the expression problem mainly shows up.  Improved generic support will result in a more expressive language that better empowers framework and library writers (thus leading to better frameworks and libraries).  But I don't suppose the typical everyman programmer will make a lot of use of it directly.</p>

@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/1311
+http://lambda-the-ultimate.org/node/1311#comment-14801
+1049887
+Gilad Is Right
+Names and slots
+<p>Agreed: if everyone follows the convention of using a fully-qualified name in every field access expression (either explicitly or via importing accessor functions from modules) then conflicts can be avoided.  Of course, this would mean that an expression like "p.x" would need to be qualified with something like "p.(Java.lang.point.x)".  Or accessed as "x(p)" -- but I suspect a lot of modules are going to be fighting for that accessor named x, so now we get into decorating accessor names to make them sufficiently unique, so we would want something like PointX(p).
+</p><p>Or we need to declare "Point p" with an explicit type.  The conclusion is: modular object oriented programming without explicit types requires either fully qualified names everywhere or unambiguous accessor functions explicitly imported from modules (leading to large decorated names).  This is workable, but quite a mess.</p>

@@ -1,0 +1,9 @@
+http://groups.google.com/group/sci.math/browse_thread/thread/cfb1d2d023e415ee/5d00c98df7df2530?lnk=st&rnum=15&hl=en#5d00c98df7df2530
+[sci.math] Re: Universal set theory and three-valued logic
+[blockquote]With the new axioms, it is easy to construct a bijection from the universal set to its power set.
+[blockquote]How?[/blockquote][/blockquote]
+In a set theory with a universal set U and sufficient power to reason about it, P(U)=U.  So, the identity function is a suitable bijection.
+
+If P(U)=U is controversial (given a set theory with a universal set and no urelements), I would be interested in hearing so.  I realize that some universal set theories preclude analysis of P(U)=U on the grounds of stratification, but if a theory allows one to reason about P(U)=U then surely it must either be true or undecidable.
+
+Note that Cantor's construction showing that for non-empty x, |P(x)|>|x|, fails on such "large sets" as U: the set one constructs to refute the possibility of a bijection involves negation and the law of excluded middle, so the set membership relation of the refutation set may be partial, and that partiality precludes the contradiction. 

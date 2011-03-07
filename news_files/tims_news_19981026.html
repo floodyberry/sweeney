@@ -1,0 +1,123 @@
+<h4>Direct3D Drivers</h4>
+
+<p>To use Unreal's Direct3D support, you must have <a
+href="http://www.microsoft.com/directx/download.asp">Microsoft DirectX
+6.0</a> installed. You also need the <span class="strong">latest</span> Direct3D driver from your 3D
+hardware maker.&nbsp; Because Unreal uses many new Direct3D features, many hardware makers
+had to update their drivers for Unreal to work. Therefore, some of the drivers distributed
+with DirectX 6.0 have problems with Unreal (crashes or visual anomalies).&nbsp; Here are
+driver download sites for various brands: </p>
+
+<ul>
+  <li><a href="http://www.3dlabs.com/drivers/">3DLabs</a> Permedia </li>
+
+  <li><a href="http://www.3dfx.com/developers/drivers.html">3Dfx</a> Voodoo,
+    Voodoo Rush, Voodoo2, Voodoo Banshee </li>
+  <li><a href="http://support.atitech.ca/drivers/drivers.html">ATI</a> Rage </li>
+  <li><a href="http://developer.intel.com/design/graphics/drivers">Intel</a>
+    i740 </li>
+  <li><a href="http://www.matrox.com/mga/drivers/home.htm">Matrox</a> G200 </li>
+
+  <li><a href="http://www.nVidia.com/home.html">nVidia</a> Riva 128 (known
+    problems), Riva TNT </li>
+  <li><a href="http://www.rendition.com/download.html">Rendition</a> Verite </li>
+  <li><a href="http://www.s3.com/bbs/0main/topindex.htm">S3</a> Savage 3D </li>
+  <li><a href="http://www.trid.com/trident/html/DRIVERS.HTM">Trident
+    Microsystems</a> (untested, probably doesn't work) </li>
+
+  <li><a href="http://www.nine.com/support/drivers/index.html">#9 Visual
+    Technology</a> (untested, probably doesn't work) </li>
+</ul>
+
+<p>Please keep in mind that Unreal's Direct3D support is an early beta and isn't yet
+working reliably on all 3D hardware.</p>
+
+<h4>Known Issues</h4>
+
+<p>I've update the list of <a href="http://unreal.epicgames.com/Bugs.htm">Known Issues</a>,
+summarizing the problems people have found with 219.&nbsp; There are a bunch of items, but
+most are non-showstoppers.&nbsp; I'm working on them now.&nbsp; Overall, though, 218 is by
+far the best-received version of Unreal to date! New servers are popping up rapidly (50%
+increase in the past 18 hours), with player counts rising even faster.</p>
+
+<h4>Unreal 218 Gaining Support</h4>
+
+<p>After releasing the patch at midnight Sunday night, it was amazing to see how many
+Unreal servers had it up and running in less than an hour minutes.</p>
+
+<p>It will be interesting to watch new Unreal servers spring up on the net now that our
+Internet play quality is under control. In the not-too-distant future, we'll have many
+more improvements in Unreal network play: performance enhancements, new features requested
+by the community, and several cool upcoming surprises. GameSpy currently shows 27 Unreal
+servers, and a couple thousand for Quake. Clearly, we got off to a very slow start while
+we learned the the ins-and-outs of Internet game programming; now Unreal is on a solid
+footing and we're really beginning to pick up the pace!</p>
+
+<p>Level designers in the Unreal community have already started producing some great
+Deathmatch maps (see <a href="http://www.freshmeat.org/unreal/">Unreal
+Resources</a> for downloads), so we expect to see things accelerate in this area, too. </p>
+
+<h4>PlanetUnreal performance survey</h4>
+
+<p>If you're using the new 218 patch, please fill out <a
+href="http://www.planetunreal.com/">PlanetUnreal's</a> Unreal performance survey.
+&nbsp;&nbsp; We'll be watching Unreal players' feedback in the survey, and looking at all
+the 218 bug reports sent to the <a href="mailto:unreal218@epicgames.com">unreal218@epicgames.com</a>
+account.&nbsp; Everyone's feedback will be taken into account for future improvements to
+the Internet play and other features.</p>
+
+<h4>More about 3D API's</h4>
+
+<p>In an interview on <a href="http://www.voodooextreme.com">Voodoo
+Extreme</a>, I gave my opinion in the ongoing OpenGL vs Direct3D debate, and I wanted to
+add some more information here.</p>
+
+<p>First of all, both our DreamForge partners working on the OpenGL support, and our
+Direct3D partner have both done a very high-quality job, given the constraints of Unreal
+and the 3D card drivers available.&nbsp; My feelings on the two 3D standards are based
+completely on their API's and the quality of drivers available.</p>
+
+<p>Next, I wanted to give some more detail on the code.</p>
+
+<pre>API support layer      Lines of C++ code
+3dfx Glide             1711
+Direct3D               3123
+NEC PowerVR            4049
+OpenGL                 5697</pre>
+
+<p>Now, the Glide is the simplest, because it's aimed at the Voodoo family of 3D cards,
+which are very standard and straightforward to support.&nbsp; For programming to 3dfx
+cards, Glide is the ideal API.&nbsp; For people thinking &quot;If Glide is so great, why
+don't other 3D cards support it?&quot;&nbsp; The short answer is, if Glide supported other
+manufacturer's 3D cards, it would pick up all the complications&nbsp; involved in
+real-world Direct3D and OpenGL programming: Testing for core capabilities, working around
+driver bugs, etc.</p>
+
+<p>The Direct3D code is next in simplicity.&nbsp; It began as a working 1600 line driver,
+then expanded as it was optimized and support was added for 3D cards that lack key
+features.&nbsp; The Direct3D API follows the traditional Microsoft model of being not very
+beautiful code, but dealing with real-world hardware robustly, by providing a
+capability-querying mechanism and well-tested drivers.</p>
+
+<p>The PowerVR code is large because the PCX2 chip's rendering approach is very different
+than what Unreal was designed for.&nbsp; This makes the implementation fairly complex,
+though the next-generation PowerVR, currently on-hold in the PC market while NEC focuses
+on the Sega DreamCast, is a great chip that's more traditional in its architecture, and
+more optimal for Unreal.</p>
+
+<p>The OpenGL code is large because of optimizations and support for lots of real-world
+hardware.&nbsp; If reduced to plain-vanilla OpenGL, this would probably be the simplest
+and most stable driver of them all, because the OpenGL API is very straightforward.</p>
+
+<h4>Unreal 218 Patch is ready!</h4>
+
+<p>You can read the release notes and download the patch from the <a
+href="http://unreal.epicgames.com/Versions.htm">Patch Page</a>!&nbsp; Our test session
+went well, and the participants (including a lot of modem players, and even some overseas
+modem players) reported major success with the performance improvements.</p>
+
+<p>Epic's two deathmatch servers have been upgraded to 218: <a
+href="unreal://208.212.53.39:7777">Deathmatch 1</a> and <a
+href="unreal://208.212.53.39:7787">Deathmatch 2</a>.&nbsp; However, since our T1 line is
+going to be very saturated with people downloading the patch, performance probably won't
+be very good on our server for the next several days.</p>

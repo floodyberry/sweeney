@@ -1,0 +1,25 @@
+http://groups.google.com/group/sci.math.research/browse_thread/thread/cfb1d2d023e415ee/88762b7a6c942027?lnk=st&rnum=14&hl=en#88762b7a6c942027
+[sci.math] Re: Universal set theory and three-valued logic
+[blockquote][blockquote]In my formulation, I identify each set with its characteristic function from sets to {T,F,bot}.  Thus given s:set, the membership of an element x can be tested with s(x).  In the general case, this is a partial function, returning bot for some values.  I call such sets "partial sets", and sets whose characteristic function is in {T,F} "total sets".  Every set of ZF and NF is a total set, with this theory admitting a strictly larger class of sets than either.[/blockquote]
+
+In some ways, this is the structure of a topoi, or at least a functor from a topoi category to something similar.  Is the approach meant to be categorial (which, by the way, is a good thing in my eyes -- I'm just curious)?  Then, your partial classification appears to mainly distinguish the topoi of sets from some of the many other topoi.[/blockquote]
+
+My goal is to show evidence that a particular type theory is reasonable, by equating it to some existing system.  An axiomatic set theory was my first hope due to the relative simplicity, but a topos will do.
+
+[blockquote]The categorial study of paradox is becoming a large field these days, and it appears you may be repeating some of the work already done (which can be soooo frustrating sometimes!).  I don't mean to assume any level of study, but perhaps I might suggest that, if you haven't, you should check out some of the resources available in this field.  There are articles available online I can suggest.[/blockquote]
+
+Do you have any pointers to research on topoi coinciding to a set theory with a universal set, or more generally to any topos-centric analysis of paradoxes due to nonwellfoundedness?
+
+[blockquote]I could make one suggestion, it would be to not restrict yourself to your trivalent logic.  Any Heyting algebra is possible, and expands your research into the much more fruitful world that all topoi present.  In fact, because of natural distinctions that present themselves between propositions that take on the "middle" value, trivalent theories are often looked at only as summarisations of a more natural infinitely valent theory.  Good resources for this can be found in intuitionist discussions, but it is more general.[/blockquote]
+
+In my setting, I am mainly interested in mechanically analyzing sets to determine whether they are inhabited and, if so, whether they are singletons. A trivalent logic seems sufficient for this: any finer structure can be projected down for my purposes.
+
+[blockquote]Also, may I ask why you posted to comp.lang.functional?  This intrigues me because some of my own research has been around the evaluation of the lambda calculus and proof / evaluation theory in the context of non standard logics, but I do not see this approach explicitly stated in your message.[/blockquote]
+
+I'm developing a programming language with enough expressive power that one may easily express the major paradoxes from set theory, both those due to recursion (the liar paradox) and those due to nonwellfoundedness or reflection (Russell's paradox).  I have a compiler that analyzes programs and assigns to each term a set cardinality approximations classifying its potential inhabitance, as well as an indicator of the decidability of this classification.
+
+The general idea is that single-valued terms correspond to runtime-executable parts of programs, while more general (potentially uninhabited or multivalued terms) may be bundled up into extensional types and reasoned about within the limits of the compiler's resolution rules.  This all works to the extent of being able to express the paradoxes, recognize their undecidability, and mechanically determine that, for example, certain concrete terms do or don't belong to Russell's set.  But though it tends to work well in mechanical terms, it lacks a theoretical basis.
+
+Thank you very much for the pointers!
+
+Tim Sweeney 

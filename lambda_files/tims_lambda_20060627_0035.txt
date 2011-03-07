@@ -1,0 +1,10 @@
+http://lambda-the-ultimate.org/node/1583
+http://lambda-the-ultimate.org/node/1583#comment-19165
+1050159
+Petition for adding garbage collection to C++.
+Unreal Engine 3 garbage collection
+<p>Since several folks asked:
+</p><p>In Unreal Engine 3, we implement garbage collection for all "heavyweight" objects, those objects for which we maintain complete metadata, support orthogonal persistence, etc which are similar in functionality to instances of Java/C# "object" in their capabilities.  However, we also have "lightweight" allocations which we manage directly without garbage collection.
+</p><p>Typically during gameplay, there are 40,000 heavyweight objects around, with extremely complex chains of references (including cyclic references) and ownership relationships, thus making garbage collection a huge win in productivity.  There are then hundreds of thousands of lightweight allocations whose ownership relationships are extremely simple and thus easily manageable explicitly.
+</p><p>Overall I wouldn't endorse a proposal to add garbage-collection features to C++, since the language is sufficiently low-level that most applications will want to handle memory management quite uniquely.  Of course, I do see GC as perfectly appropriate for higher-level languages like Java and C#, which don't expose pointers-as-arrays, unchecked memory access, deal with low-level OS data structures, etc.
+</p><p>It seems like 90% of the effort of implementing GC on top of C++ is in collecting proper metadata for everything.  Thus it would be useful for future C++ standards to address the problem of reflection very thoroughly, while leaving actual GC to the application.</p>

@@ -1,0 +1,633 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Whither Self</b></font><br>
+<font color="white" size="-1">started 9/12/2003; 7:58:13 AM - last post 9/21/2003; 4:54:31 AM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Whither Self <a name="8721">&nbsp;</a><a href='#8721' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/12/2003; 7:58:13 AM (reads: 21740, responses: 22)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a8721"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://www.erlang.org/ml-archive/erlang-questions/200309/msg00083.html">Whither Self</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			And an Erlang language design discussion.<p>
+<font color="blue"><i>Shouldn't there be a Self in funs? ... writing<p>
+<pre>
+	Fac = fun(0) -> 1;	
+		 (N) -> N*Self(N-1) end
+</pre></i></font><p>
+I always make sure to follow the discussions Richard A. O'Keefe participates in.<p>
+<small>
+Luke, I thought erlang was your beat...</small><br>
+			<font size="-2"><b>Posted to <a href='functional.html'>functional</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 9/12/03; 8:03:26 AM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#8721'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Patrick Logan</a> - Re: Wither Self <a name="8723">&nbsp;</a><a href='#8723' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/12/2003; 9:42:55 AM (reads: 1345, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+The subsequent message about mutual recursion proposes a new function syntax for Erlang...<p>
+
+<i><code><pre>
+	define
+		Fac = fun/1
+			0 -> 1;
+			N -> N * Fac (N - 1)
+		end
+		some_constant = 2;
+		Even = fun/1
+			0 -> True;
+			N -> odd (N - 1)
+		end
+		Odd = fun/1
+			1 -> False;
+			N -> Even (N - 1)
+		end
+	end
+</pre></code></i><p>
+
+...which brings up the point about language design and "axioms"... mutual recursion per se should be "axiomatically" distinct in a language from function definition per se. Otherwise you get piecemeal growth of partially useful language features.
+<p></p>
+<p><a href='#8723'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>logarithm</a> - Re: Wither Self <a name="8727">&nbsp;</a><a href='#8727' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/12/2003; 11:54:58 AM (reads: 1302, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+i think it's a good idea for lambda functions to provide an implicit variable that is the lambda function itself.  Self in this sense is that variable, though one might as well call it Y.  maybe lambdas that recurse in functions like map(...) wouldn't look so hairy?
+<p></p>
+<p><a href='#8727'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Luke Gorrie</a> - Re: Wither Self <a name="8728">&nbsp;</a><a href='#8728' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/12/2003; 12:29:39 PM (reads: 1296, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+My beat? I just hack Emacs. :-)
+<p></p>
+<p><a href='#8728'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Mark Evans</a> - Re: Wither Self <a name="8730">&nbsp;</a><a href='#8730' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/12/2003; 5:56:07 PM (reads: 1227, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<p>
+Emacs: "It's a nice OS, but to compete with Linux or Windows, it needs a better text editor." - Alexander Duscheleit
+</p>
+<p></p>
+<p><a href='#8730'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Wither Self <a name="8740">&nbsp;</a><a href='#8740' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/14/2003; 12:01:25 AM (reads: 1078, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+"Self" or "this" only work nicely in languages that don't support nesting in a fully general way.  For example, in C++, "this" is unambiguous because there is at most one class lexically enclosing the current block of code.  But in Java, you have to be very careful to modify occurances of "this" as you move code between inner classes and outer classes.<p>
+
+When defining functions that may include recursive lexically enclosed lambda expressions, the name you associate with a function ("Fac" in the author's example) provides an unambiguous way to refer to that function, while "self" would beg the question: which self?  The nearest one lexically, or the outermost one?  Obviously, a language could pick one convention or another, but then the meaning of "self" would change if you, i.e., move an expression in or out of a given lambda.<p>
+
+The same problem exists for classes and records when you support nesting them (for example, with inner class or virtual class semantics): It's no longer obvious which "this" you're referring to.  In languages that support a "thistype" construct, the same problem exists there.<p>
+
+You could solve this by making "self" constructs indexed: instead of "self", you only have "self[0]", "self[1]", etc.  But then you have reinvented de Bruijn indices and, though they work well for procedural manipulation of terms, they aren't very human-friendly.<p>
+
+If one's language supports nesting in a fully general way, I think it is worth considering eliminating any "this" or "self" as standalone constructs, and instead require that any such things be referred to by name.<p>
+
+In the case of functions, this is unambiguous (mod shadowing of variable names): "f" refers to the enclosing function f.<p>
+
+In the case of classes, it's trickier because, depending on your language, there may be up to three things that a name refers to: the current instance (like C++ "this"), the current instance's type (like some languages' "thistype"), and the literal type (like referring to class name directly in C++).  Possible syntaxes for these are "c.this", "c.thistype", and "c".
+<p></p>
+<p><a href='#8740'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Vesa Karvonen</a> - Re: Wither Self <a name="8741">&nbsp;</a><a href='#8741' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/14/2003; 5:01:06 AM (reads: 1051, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<I>If one's language supports nesting in a fully general way, I think it is worth considering eliminating any "this" or "self" as standalone constructs, and instead require that any such things be referred to by name.</I><p>
+
+While I agree that a language should always offer the option of explicitly naming every binding, I quite often prefer the use of pronouns, when the context is small enough that there isn't much chance to misinterpret things.
+<p></p>
+<p><a href='#8741'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Wither Self <a name="8742">&nbsp;</a><a href='#8742' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/14/2003; 7:07:05 AM (reads: 1044, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>Shouldn't there be a Self in funs?</em><p>
+
+The syntactic distance between this new syntax and just using Y (or a letrec) does not seem big enough to justify adding new syntax.<p>
+
+<em>The subsequent message about mutual recursion proposes a new function syntax for Erlang</em><p>
+
+The syntactic distance between this new syntax and just using letrec (or whatever Erlang's equivalent is) does not seem big enough to justify adding new syntax. (Besides, what does that expression return? The value bound by the first name, in this case Fac?)<p>
+
+Well, I dunno much about Erlang; is the problem that Erlang doesn't support something like letrec in the first place?<p>
+
+[Oh, never mind; O'Keefe's post makes it clear that Erlang indeed lacks letrec.]<p>
+
+P.S. It should be "whither". :)
+<p></p>
+<p><a href='#8742'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>John Carter</a> - Re: Wither Self <a name="8744">&nbsp;</a><a href='#8744' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/14/2003; 2:31:15 PM (reads: 1005, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Try Ruby...
+<pre>
+class Integer
+  def fac
+    return 1 if self &lt;= 1
+    self * (self-1).fac
+  end
+end<p>
+
+10.fac
+3628800
+</pre>
+<p></p>
+<p><a href='#8744'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Luke Gorrie</a> - Re: Wither Self <a name="8746">&nbsp;</a><a href='#8746' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/14/2003; 8:29:33 PM (reads: 969, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Scheme's named-let is cute. Do other languages have it too?<p>
+
+<pre>
+(define (with-factorial-of n f)
+  (f (let fact ((m n))
+       (if (zero? m) 1 (* m (fact (- m 1)))))))
+</pre>
+can be used to print the factorial of 10 like this:
+<pre>
+(with-factorial-of 10 print)
+</pre><p>
+
+i.e. you define a local function that can call itself, and you include the initial values for its arguments. Control is passed straight to the function without you having to separately call it. This makes it convenient to write inline "loops".<p>
+
+The equivalent with letrec is more verbose:<p>
+
+<pre>
+(define (with-factorial-of n f)
+  (f (letrec ((fact (lambda (m)
+                      (if (zero? m) 1 (* m (fact (- m 1)))))))
+       (fact n))))
+</pre><p>
+
+<p></p>
+<p><a href='#8746'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Matt  Hellige</a> - Re: Wither Self <a name="8748">&nbsp;</a><a href='#8748' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/15/2003; 8:41:26 AM (reads: 847, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I agree that named-let is a nice construct, but I confess that I've never understood why it was chosen over a named lambda, which seems to be more general in every way. Further, named-let seems to needlessly confuse the pleasantly separate ideas of abstraction and local binding. Does anybody know the history of this construct, or whether there was/is any technical reason to prefer it to something like the following?<p>
+
+<pre>
+(lambda fact (n) (if (zero? n) 1 (* n (fact (- n 1)))))
+</pre>
+<p></p>
+<p><a href='#8748'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Patrick Logan</a> - Re: Whither Self <a name="8757">&nbsp;</a><a href='#8757' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/15/2003; 10:16:27 PM (reads: 766, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>I confess that I've never understood why it was chosen over a named lambda</i><p>
+
+"Chosen" is a loose term in Scheme. "Named let" is optional syntax. I remember defining it before it was included in the spec, having lifted it from whatever implementation where I found it, for use in whatever implementation did not have it.<p>
+
+So if you want "named lambda" or "case lambda", or whatever you want, you have only to define the syntax, load, and go.<p>
+
+I have no recollection which implementation had "named let" first. I believe it was around a good many years before showing up in the spec.<p>
+
+<i>Further, named-let seems to needlessly confuse the pleasantly separate ideas of abstraction and local binding.</i><p>
+
+The syntax is very useful and easy on the eyes, for what that is worth.
+<p></p>
+<p><a href='#8757'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Luke Gorrie</a> - Re: Whither Self <a name="8763">&nbsp;</a><a href='#8763' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/16/2003; 8:02:19 AM (reads: 743, responses: 2)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I suppose the reason named-lambda was not chosen in Scheme, even though it's more general than named-let, is that <code>letrec</code> is in turn more general than named-lambda :-).<p>
+
+The advantage of named-let is in very real human factors, as Patrick observed. Consider my example written in all three styles, assuming your named-lambda syntax (which would not work in scheme because "lambda-lists" can be symbols!):<p>
+
+<pre>
+;; named-let
+(define (with-factorial-of n f)
+  (f (let fact ((m n))
+       (if (zero? m) 1 (* m (fact (- m 1)))))))
+ 
+;; named-lambda
+(define (with-factorial-of n f)
+  (f ((lambda fact (m)
+        (if (zero? m) 1 (* m (fact (- m 1)))))
+      n)))
+ 
+;; letrec
+(define (with-factorial-of n f)
+  (f (letrec ((fact (lambda (m)
+                      (if (zero? m) 1 (* m (fact (- m 1)))))))
+       (fact n))))
+</pre><p>
+
+What I like about the first one is that it reads linearly. With the other two, you have to look ahead in the code to see what the initial value going into the loop is.<p>
+
+Darius Bacon once pointed out the importance of this to me ("otherwise, why use <code>let</code> instead of <code>lambda</code>?"). He had devised a single macro for more generally putting arguments lexically close to their bindings, but I don't remember what it was and didn't appreciate it at the time. If he's reading, perhaps he will post it with an explanation.
+<p></p>
+<p><a href='#8763'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Whither Self <a name="8765">&nbsp;</a><a href='#8765' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/16/2003; 10:21:08 AM (reads: 746, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>The advantage of named-let is in very real human factors, as Patrick observed.</em><p>
+
+(I know you're all getting tired of my harping on about this, but...)<p>
+
+Since you want to go there: it's also the disadvantage, because it means you now have three ways to write the same thing, all of which closely resemble each other, and any one of which can be used to define the other two.<p>
+
+I'm not saying I oppose redundant syntax, but most of these human factors arguments cut both ways; that's why I don't like them. To settle them, you really need to do some empirical measurements, and even then the premises are all too often open to criticism.<p>
+
+BTW, can an irresistible force displace an immovable object?
+<p></p>
+<p><a href='#8765'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Whither Self <a name="8766">&nbsp;</a><a href='#8766' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/16/2003; 10:58:45 AM (reads: 772, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+By immovable object you are referring to yourself, Frank? (<img src="http://static.userland.com/shortcuts/images/qbullets/sidesmiley.gif">)
+<p></p>
+<p><a href='#8766'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Patrick Logan</a> - Re: Whither Self <a name="8769">&nbsp;</a><a href='#8769' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/16/2003; 7:36:24 PM (reads: 704, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>I'm not saying I oppose redundant syntax, but most of these human factors arguments cut both ways; that's why I don't like them. To settle them, you really need to do some empirical measurements, and even then the premises are all too often open to criticism.</i><p>
+
+And in the darkness bind them.<p>
+
+It's all lambdas underneath, that's what makes redundant syntax so great in Lisp. If you don't like it, change it.
+<p></p>
+<p><a href='#8769'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Whither Self <a name="8770">&nbsp;</a><a href='#8770' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/17/2003; 3:41:26 AM (reads: 677, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>By immovable object you are referring to yourself, Frank?</em><p>
+
+haha, that really made me laugh out loud! The truth is, I would rather be the irresistible force, but I often feel like a big stick-in-the-mud around here, spoiling everyone else's fun.<p>
+
+<em>It's all lambdas underneath, that's what makes redundant syntax so great in Lisp. If you don't like it, change it.</em><p>
+
+Yes, you're right of course. If we're talking about Scheme. (I prefer not to use the L-word. :)<p>
+
+If we're talking about Erlang, though, or some language which doesn't support syntactic extension, then personally I would come down on the side of economy, and only support the usual letrec, because there's only so much syntax to go around.<p>
+
+But, whatever... the more I remark on this, the more hypocritical I feel. :) So I will stop now.
+<p></p>
+<p><a href='#8770'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Patrick Logan</a> - Re: Whither Self <a name="8772">&nbsp;</a><a href='#8772' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/17/2003; 11:17:47 PM (reads: 619, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>I prefer not to use the L-word</i><p>
+
+We all have someone back in our family tree we might not want to parade around. But why be ashamed of Lisp?
+<p></p>
+<p><a href='#8772'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Whither Self <a name="8776">&nbsp;</a><a href='#8776' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/18/2003; 7:57:09 AM (reads: 609, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>We all have someone back in our family tree we might not want to parade around. But why be ashamed of Lisp?</em><p>
+
+Nevermind, I was just being a prig.<p>
+
+Let's just say I like Schemers more than Lispers.
+<p></p>
+<p><a href='#8776'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Luke Gorrie</a> - Re: Whither Self <a name="8789">&nbsp;</a><a href='#8789' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/20/2003; 1:36:53 AM (reads: 551, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Present company excepted I hope. :-)
+<p></p>
+<p><a href='#8789'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Whither Self <a name="8791">&nbsp;</a><a href='#8791' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/20/2003; 7:01:12 AM (reads: 560, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>Present company excepted I hope. :-)</em><p>
+
+For the sake of general amity, let's say yes---on the condition that present company promise not to invoke Philip Greenspun's tenth "law" or any of that other nonsense, in which case all bets are off and I'll ride their ass like a cowboy on a bronco. :)
+<p></p>
+<p><a href='#8791'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Patrick Logan</a> - Re: Whither Self <a name="8792">&nbsp;</a><a href='#8792' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/20/2003; 11:44:04 AM (reads: 526, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>...in which case all bets are off and I'll ride their ass like a cowboy on a bronco. :)</i><p>
+
+I'm in line. I'm in line. Mum's the word.
+<p></p>
+<p><a href='#8792'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Whither Self <a name="8797">&nbsp;</a><a href='#8797' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">9/21/2003; 4:54:31 AM (reads: 542, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+haha. You're a good sport, Patrick.<p>
+
+Sorry if I went overboard there.
+<p></p>
+<p><a href='#8797'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

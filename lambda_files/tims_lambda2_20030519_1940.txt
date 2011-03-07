@@ -1,0 +1,15 @@
+http://lambda-the-ultimate.org/classic/message6788.html
+http://lambda-the-ultimate.org/classic/message6788.html#6920
+0531076
+Don Box on C# generics vs. C++ generics
+Re: Don Box on C# generics vs. C++ generics
+<blockquote><div>Some might argue that this is just one more argument against mutable values... </div></blockquote>
+
+<p>
+Mutable values can be made to work safely, but a safe implementation doesn't look quite like C++, C#, or Java.  The pure functional view of mutables is that the "heap" is passed in and out of every function; all code is executed eagerly in a well-defined order (i.e. normal order evaluation); there is a "ptr(t)" type constuctor describing the type of pointers to items of type t; the only heap operations are "new pointer from value", "read from pointer", "write to pointer" and in the presence of subtyping, for any pair of unequal types t and u, the types ptr(t) and ptr(u) are disjoint, even when t and u are in a subtyping relationship.</p><p>
+
+In this framework, the mysterious notions of lvalues, rvalues, mutable variables, null pointers, value identity vs referential identity, and mutable array coercions all go away.</p><p>
+
+Obviously one wouldn't implement a real runtime by passing a heap in and out of every function, but if you take this conceptual view of mutability, then it's easy to understand exactly how C# and Java differ from this model and how doing so breaks static type safety.</p><p>
+
+It's an interesting project to start with a safe system like the above and, purely with syntactic sugar and typesafe program transformations, how close you can get to the "look and feel" and performance of Java and C# mutability.  It turns out you can get pretty close, and that the things you can't quite mimmic turn out to be unsafe or not well-defined.</p>

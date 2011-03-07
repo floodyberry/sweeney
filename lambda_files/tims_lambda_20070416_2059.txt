@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2198
+http://lambda-the-ultimate.org/node/2198#comment-29059
+1050774
+Twitter and  Rails brouhaha
+Translation
+<p>MVF = Model-View-Controller (oops)<br />
+ST = SmallTalk</p>

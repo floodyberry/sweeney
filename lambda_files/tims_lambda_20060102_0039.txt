@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1201
+http://lambda-the-ultimate.org/node/1201#comment-13067
+1049777
+Duck typing vs Structural Subtyping
+Extensional Polymorphism
+<p>I don't fully understand G'Caml, but I'm not a fan of its basic thesis (that abandoning parametricity brings real benefits).  For example, the author's really cool generic printing example can be achieved with union types provided that one can distinguish between obviously disjoint types -- e.g. knowing that integers are not lists, and lists are not floating point values.  That certainly doesn't require violating parametricity.
+</p><p>I'm a fan of the view that a nominal type just bundles up a value of some type (such as an integer) with some sort of name (in the spriit of LISP atoms).  Haskell's "data" declarations do something like this.  As an aside, most of the literature on nominal types confuses names with pointer-like identity and runs into confusion over dependent functions, e.g. should List(Int) differ from List(Int) because they're separate function calls generating different type names?  That is silly, of course.
+</p><p>So in my worldview, you only need structural types, names, and a means for bundling up types and values with names, from which you can derive nominal types.</p>

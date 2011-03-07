@@ -1,0 +1,18 @@
+http://lambda-the-ultimate.org/classic/message11297.html
+http://lambda-the-ultimate.org/classic/message11297.html#11307
+0535585
+Finalization  (CLR)
+Re: Finalization  (CLR)
+<p>Supporting finalization in a garbage-collected environment leads to a significant number of issues with performance, non-determinism, and collector inefficiency.</p><p>
+
+Rather than going down that path, I would much prefer to see significant R&amp;D effort put into the development of imperative-style data structures and algorithms in a way that doesn't require finalization.  I have experimented with some of these issues myself.</p><p>
+
+Here are some thoughts.</p><p>
+
+File handles: If you are going to just open a file, do a bunch of operations, and close it, you could use a monad encapsulation similar to the way Haskell's State works, enabling opening the file, performing operations, and closing it, in a way that's guaranteed to result in the file being closed when exiting the lexical scope in which it was created.</p><p>
+
+But much more interesting is the possibility of using memory mapped files, and treating file-opening calls as returning a (possibly mutable) array of bytes which you can operate on.  Then the memory mapped file would be closed when the array is eventually garbage collected.  The big problem here is that in current file-mapping implementations, holding a file handle isn't referentially transparent: another process can observe whether the file is locked.  This could be remedied by adding support in the OS for "tear-off" file mappings which memory map the file and then make it appear to the outside world that the file is closed (for example, so another process could modify it or delete it without a sharing violation).  In this case, the OS paging mechanism would need to implement a copy-on-write-or-delete scheme for torn-off file handles, so the referential transparency requirements of both the file-using process and the outside world are satisfied.</p><p>
+
+Network sockets: Sockets for protocols like TCP are not amenable to finalization-free garbage collectors, because the process of closing a socket has non-referentially-transparent IO effects that ought not occur nondeterministically.  But a language could expose higher level protocols that are more suitable, for example creating the illusion of monadic persistent connections between processes.</p><p>
+
+Note that all of these considerations aren't terribly relevant in a runtime like .NET which doesn't have a first-class concept of referential transparency.  There, any variable in any object might change at any time because other functions to which you have passed the object could at any time modify any variable in another thread or through reflection.  But in an environment with a functional subset or just a means of specifying and verifying limits on the scope of effects of computations, it becomes very important to avoid observable side-effects of garbage collection.</p>

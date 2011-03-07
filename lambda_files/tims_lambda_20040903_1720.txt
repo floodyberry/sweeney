@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/237
+http://lambda-the-ultimate.org/node/237#comment-1767
+1048813
+A Deeper Look At Metafunctions
+Templates = Lame Dependent Types
+<p>Isn't it somewhat silly to embed a limited language with bizarre syntax into existing languages for the purpose of executing code at compile time?  Dependent types and compile-time partial evaluation provide a much more general and flexible means for doing this sort of thing.</p>

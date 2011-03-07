@@ -1,0 +1,19 @@
+http://groups.google.com/group/sci.math/browse_thread/thread/b3873b111368b584/720e3aa69b5569b1?lnk=st&rnum=64&hl=en#720e3aa69b5569b1
+[sci.math] Constructing the integers from set theory without equivalance classes
+
+There exist many simple ways to construct the natural numbers from set theory, such as:
+
+0   = {}
+n+1 = {n,{n}}
+
+Then one typically constructs the integers from equivalance classes of pairs of natural numbers, such that:
+
+{a0,{a1}}={b0,{b1}} iff a0+b1=a1+b0
+
+Is there a simple way to construct the integers directly from set theory, without making use of equivalance classes?  In other words, I'm looking for a simple representation of the integers such that each integer is represented by a unique set, rather than an equivalance class of sets.
+
+As a bonus it would be nice if the representation admitted a straightforward definition of addition, subtraction and multiplication.
+
+Thanks,
+
+Tim Sweeney 

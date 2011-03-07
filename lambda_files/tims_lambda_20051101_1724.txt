@@ -1,0 +1,14 @@
+http://lambda-the-ultimate.org/node/1085
+http://lambda-the-ultimate.org/node/1085#comment-11645
+1049661
+The Type-System-Feature-Creep Death Spiral
+&quot;Get rid of type declarations&quot;
+<p>One other thing I wanted to point out.  In the example above:
+</p><p>   let point(xval, yval) = tuple (x: xval, y: yval)
+</p><p>A formal way to make this work is to represent types as identity functions.  Then, every identity function represents both a type and a function (you can call it and use it to specify types), while non-identity functions have no interpretation as types.  And then, the "point" function above happens to just be an identity function.  Then you can think of "int" as both the integer type (and write f(x:int)=x+1) and the identity function on integers and call it with int(3).
+</p><p>So the answer to "can you unify types and functions" is affirmative, but the "should" variant of the question remains open.
+</p><p>Keep in mind that the unification above works because there is a unique isomorphism between the types and identity functions in a programming language.  This is the essential criteria that justifies unifying two constructs in a programming language.
+</p><p>When one syntactically unifies constructs that are conceptually distinct, the result is less justifyable.
+</p><p>One example is the unification of functions and lists in LISP - which creates some very interesting possibilities for introspection, but it means that functions carry around a lot of observable metadata that breaks foundational properties like parametricity and extensional equality.
+</p><p>Another example is Java and C#'s unification of value types (like int) and object types (like Int).  Though C#'s approach is more automatic, both create strange observable properties, such as exposing pointer equality on boxed Int's that differs from the underlying int equality.
+</p><p>In the long-run, such unification of disparate concepts will be recognized as "clever hacks" rather than valid programming language design practices.</p>

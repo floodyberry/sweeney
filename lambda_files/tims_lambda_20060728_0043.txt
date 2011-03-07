@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1641
+http://lambda-the-ultimate.org/node/1641#comment-20092
+1050217
+Generics as a Library
+Question
+<p>Can someone explain how this approach coexists with the parametricity theorem?
+</p><p>For example, if we can handle lists of characters in an ad-hoc manner, but lists of all other data types generically, then can't we use that to write a non-constant, univerally quantified function of IsChar :: forall t. t-&gt;Bool enabling us to distinguish between characters and values of any other type?  (Which is impossible in a language in which the parametricity theorem holds.)
+</p><p>Is the trick that only certain types have a representation typeclass Rep t enabling us to discriminate between values of those types, but not enabling us to discriminate between values of an arbitrary universally quantified type?  That seems workable, because we can just look at those representation types when choosing to implement special-cases.  This implies the existance of some sort of metasyntactic (e.g. aparametric) stage in compilation where these representation types are generated on behalf of the user for all or certain user-defined types, lest the user have to write boilerplate for each new user-defined datatype.</p>

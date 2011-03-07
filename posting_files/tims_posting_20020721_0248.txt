@@ -1,0 +1,13 @@
+http://groups.google.com/group/microsoft.public.dotnet.languages.csharp/browse_thread/thread/48d08b358d8d0811/fe0a7b7c24076ca4?lnk=st&rnum=55&hl=en#fe0a7b7c24076ca4
+[microsoft.public.dotnet.languages.csharp] Concatenate two arrays?
+Is there a reasonable way to concatenate two arrays in C#?  As far as I can see:
+
+1. There is no built-in operator to concatenate arrays.
+
+2. There is no way of writing a general array concatenation function because C# doesn't support templates (as one would use in C++) and doesn't support low-level hacking to work around the need for casts (as one would use in C).
+
+So, every time I want to concatenate two arrays, I have to create a new array of the proper length, then copy both arrays' data into the new array - something that takes 3 big complex lines of code, when I really want  to just say "a+b".
+
+Any thoughts?  (Please pardon me if I'm missing something obvious!)
+
+-Tim 

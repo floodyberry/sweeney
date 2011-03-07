@@ -1,0 +1,18 @@
+http://groups.google.com/group/sci.math/browse_thread/thread/d0c9e4b42551156f/5303fc3acdb47c79?lnk=st&rnum=78&hl=en#5303fc3acdb47c79
+[sci.math] Closed-form solutions of iterated functions?
+A few years ago, while experimenting with some fractal math, I wandered upon to the identity:
+
+if f(x) = 2x^2 - 1, then the nth iteration of f(x), i.e. f(f(f(...x))) = cos (2 ^ n * arccos(x)).
+
+This is easy to see from the identity:
+cos(2x) = 2 * cos(x)^2 - 1,
+cos(4x) = 2 * cos(2 * cos(x)^2 - 1)^2 - 1
+etc.
+
+In general, if F(x) = the inverse of f(x), the nth iteration of f(g(F(x))) is equal to f( the_nth_iteration_of_g(F(x))), where f(x)=cos(x), F(x)=arccos(x), and g(x)=2x.
+
+Interestingly, the general formula works for non-integer values of n, conveniently defining the value of the iterated function over *all* numbers.
+
+At the time, I was working with the Mandelbrot set, trying to find a closed-form solution for f(x) = x^2 + a, for any value of a.  Though I was utterly unable to generalize the above solution for 2x^2-1 (which can easily be transformed to x^2-1/2), I have always been curious as to whether a closed-form solution does indeed exist.  Any takers?
+
+-Tim Sweeney 

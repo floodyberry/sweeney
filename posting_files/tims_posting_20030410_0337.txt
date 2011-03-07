@@ -1,0 +1,19 @@
+http://slashdot.org/comments.pl?sid=60202&cid=5699615
+[slashdot] Already there
+If you're running a 3D-accelerated PC game or modelling application, the majority of your computer's FLOPS are already consumed by a non Von Neumann computing device.
+
+For better or worse, most of the PlayStation2's computing power is locked up in a non Von Neumann architecture.
+
+So the evolution of computing to non Von Neuman architectures isn't so much news as a gradual shift that began about 5 years ago with 3dfx, and is really starting to happen large-scale right now.
+
+The justification for FPGA's in consumer computing devices could be seen as a generalization of the rationale behind 3D accelerators: they bring you the ability to get a 10X-100X speedup in certain key pieces of code that are inherently very parallel and have very predictable memory access patterns.
+
+I think the timeframe for mainstream FPGA style devices is quite far off, though. They need to evolve a lot before they'll be able to beat the combination of a Von Neumann CPU augumented with several usage-specific non Von Neumann coprocessors (the GPU, hardware TCP/IP acceleration, hardware sound...)
+
+Here are the major issues:
+
+- You'll need a lot more local memory than these devices have now -- there is a very limited set of useful stuff you can compute given a 32K buffer (a la PS2) and significant setup overhead.
+
+- The big lesson from CPU's (and I expect from GPU's in the next few years) is that things REALLY flourish once you have virtualization of all resources, with a cache hierarchy extending from registers to L1 to L2 to DRAM to hard disk. For virtualization to make sense with FPGA's, Star Bridge's quoted reprogram times (40 msec) would need to improve by about 10,000X. Without this, you can really only run one task at a time, and that task can only have a fixed number of modules that use the FPGA.
+
+Even then, it's not clear whether the FPGA's will be able to compete with massively parallel CPU's. In 3 more process generations, you should be able to put 8 Pentium 4 class CPU's on a chip, each running at over 10 GHz, at the same cost as current .13 micron CPU. Such a system would be VERY easy to program, a couple orders of magnitude more so than an FPGA. So even though it wouldn't have as much theoretical computing power as an FPGA, massively parallel CPU's are likely to win out because they have the best cost/performance when you factor in development cost.

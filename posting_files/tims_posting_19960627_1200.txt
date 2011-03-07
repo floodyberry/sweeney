@@ -1,0 +1,7 @@
+http://groups.google.com/group/comp.graphics.algorithms/browse_thread/thread/d2c5d529b8ab443a/86617a6ebbbd97b6?lnk=st&rnum=85&hl=en#86617a6ebbbd97b6
+[comp.graphics.algorithms] Re: Sphere collisions with BSP
+[blockquote]Brian - Since it is a sphere, just compute the distance of the center(oid) of the circle to each of the surfaces.  It is a SINGLE check for each sphere (you can ignore all of it's faces since you are using a sphere approximation)[/blockquote]
+
+Though this seems to be the correct solution at first glance, it's only an approximation.  It overstates collision with convex edges.  To get an exact solution, you need to either use spherical subdivision or handle convex volume edges and vertices.  A better approach is probably "Don't try to do that". :-)
+
+-Tim 

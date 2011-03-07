@@ -1,0 +1,94 @@
+<h4>Latest Happenings</h4>
+
+<p>Since the Unreal 218 patch was released, the number of Unreal servers showing up in
+GameSpy has increased by 225%.&nbsp; A huge thanks to everyone who is running Unreal
+servers now.&nbsp; It's awesome to see the community grow and begin to reach critical
+mass.</p>
+
+<p>At any time, about 20% of the servers listed in GameSpy are shown as &quot;Not
+Responding&quot;.&nbsp; I've been looking into this, and there are three reasons for this.
+
+&nbsp;&nbsp; One, the server has been shut down or crashed but hasn't timed out and been
+removed from the list.&nbsp; Two, the server is switching levels, which prevents it from
+responding to GameSpy queries for 5-20 seconds.&nbsp; Third, the server is shown in
+GameSpy because a user running a LAN server (dedicated or non-dedicated) enabled the
+&quot;DoUplink&quot; option to publicise their server to the world without realizing the
+consequences, but either exited or is on a LAN blocked off by a firewall.&nbsp; We'll work
+with the GameSpy guys to adjust the timeouts so that fewer &quot;Not Responding&quot;
+servers are listed.</p>
+
+<h4>Status of Direct3d - All Drivers</h4>
+
+<p>Some issues across-the-board with switching between fullscreen and windowed mode, and
+switching resolutions during gameplay. We're looking into theses issues.</p>
+
+<h4>Riva TNT</h4>
+
+<p>Has lots of potential, but there are major problems with their Direct3D driver: rainbow
+colors, time-lag, w-buffering issues, missing textures.&nbsp; We are hoping nVidia will
+issue an updated driver soon.&nbsp; The ball is in their court now.</p>
+
+<h4>Riva 128</h4>
+
+<p>Their latest driver should run Unreal OK.&nbsp; The framerate isn't very good, and
+there will be a lot of &quot;stuttering&quot; since texture downloads are very slow on
+this hardware.&nbsp; Some users are reporting that creature polygons appear corrupted.
+&nbsp;&nbsp; Hopefully nVidia will fix thie error in their driver.</p>
+
+<h4>Intel i740</h4>
+
+<p>There are some problems with their currently-available Direct3D driver, but they have
+an internal beta driver which fixes many problems.&nbsp; Hopefully this will be ready for
+the public soon.</p>
+
+<h4>ATI Rage Pro</h4>
+
+<p>They have a beta Direct3D driver which runs Unreal pretty well (though it doesn't
+appear to be available for public release yet).&nbsp; Multitexturing currently isn't
+working with Unreal, because of a hardware limitation (it can't multitexture a paletted
+base texture map along with a non-paletted light map).</p>
+
+<h4>3dfx Voodoo2</h4>
+
+<p>There isn't any reason to use Direct3D for Voodoo2, since we support Glide natively and
+that tends to be more stable and faster, but their latest Direct3D driver does run Unreal
+pretty well.&nbsp; Their detail texture blending (D3DBLEND_DIFFUSEALPHA) doesn't work,
+which breaks detail textures.&nbsp; There are reports of missing lightmaps in some areas
+(not sure what's wrong).&nbsp; 3dfx could get a performance increase here by implementing
+subrect Blts and hardware triangle-fan setup.</p>
+
+<h4>S3 Savage 3D</h4>
+
+<p>Works well with their internal beta Direct3D driver.&nbsp; Not sure when this will be
+available via the web.</p>
+
+<h4>Matrox G200</h4>
+
+<p>Works pretty well.</p>
+
+<h4>Rendition</h4>
+
+<p>Works pretty well.</p>
+
+<h4>Permedia</h4>
+
+<p>Only supports monochrome lighting due to blending limitations.&nbsp; Explosions are
+displayed with a black background (due to a bug in the current Unreal code).&nbsp; Fairly
+slow texture downloading -- performance isn't great.</p>
+
+<h4>Drivers we consider playable, in best-to-worst order</h4>
+
+<ul>
+  <li>Voodoo2: Fastest of all. </li>
+  <li>Savage/G200: Reasonable performance. Not as fast a fill rate as Voodoo2, but texture
+    downloads are fast, and they support palettes, making for a steady frame rate. </li>
+  <li>Rage Pro/Rendition: Reasonable performance. High display quality in truecolor mode. </li>
+</ul>
+
+<p>The others should be playable pending public release of improved Direct3D drivers for
+their hardware.</p>
+
+<p>On Permedia, Riva 128, and Rendition, you may get better performance using Unreal's
+software renderer, especially if you have a Pentium II class processor.&nbsp; This isn't
+such a bad thing, because the software renderer supports all of Unreal's key features,
+including truecolor lighting and volumetric fog.</p>

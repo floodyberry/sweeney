@@ -1,0 +1,180 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Book and Course in Constraint Programming and Reasoning</b></font><br>
+<font color="white" size="-1">started 3/28/2003; 1:11:22 PM - last post 4/2/2003; 1:18:25 AM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Book and Course in Constraint Programming and Reasoning <a name="6346">&nbsp;</a><a href='#6346' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">3/28/2003; 1:11:22 PM (reads: 1460, responses: 4)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a6346"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://www.informatik.uni-ulm.de/pm/mitarbeiter/fruehwirth/pisa/">Book and Course in Constraint Programming and Reasoning</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			<small>(via comp.lang.prolog)</small><p>
+Course site related to a forthcoming <a href="http://www.springer.de/cgi-bin/search_book.pl?isbn=3-540-67623-6">Springer book</a>.<p>
+The site includes lecture slides, labs, and related links.<p><br>
+			<font size="-2"><b>Posted to <a href='logic-declarative.html'>Logic/Declerative</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 3/28/03; 1:14:19 PM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#6346'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Book and Course in Constraint Programming and Reasoning <a name="6355">&nbsp;</a><a href='#6355' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">3/31/2003; 6:37:50 PM (reads: 639, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+These languages seem very attractive because they make it look like you can specify a problem very concisely, and the language will automatically work out the solution for you.  Several comments:<p>
+
+- This doesn't really work in practice.  "Generate and test" is hopelessly exponential for problems of interesting size.<p>
+
+- However, constraints can be very useful as a feature in a type system in a more traditional language.  Being able to express things like "the type of natural numbers less than 31" and have the compiler perform range arithmetic as part of type checking as very useful.  This approach is the first step towards implementing real mathematics in type systems.  By "real mathematics", I mean mathematics where natural numbers are a genuine subtype of integers, which are a subtype of rationals, and when you perform common operations on numbers of certain types, the results are closed as you'd expect (i.e. integer*integer=integer), without mathematically unsound casts and coercions.<p>
+
+- I dislike the lack of structure in the example languages described; most of the research is being done in Prolog-style "everything is global".  Because of this, there is a huge gap between these R&amp;D languages and any future implementation that might appeal to mainstream programmers.  It's very interesting to explore these concepts in structured languages that include things like dependent-typed records.<p>
+
+- It even more interesting to apply CLP style constructs to a language that unifies types, sets, and nondeterminism into a single framework, such as McAllester's "Ontic" language.  Here, constraints just work automatically as part of the type system.  Also, you get first-class proof:proposition :: value:type, even when the constraints are intractable.  For example, you can express the type of pythagorean triples as:<p>
+
+t typedef {x:nat,y:nat,z:nat=sqrt(x*x+y*y)};<p>
+
+And whether or not the language is able to tell you anything useful about the type t, such as whether it's inhabited, and one or more solutions, you can always say:<p>
+
+x:t={3,4,5};<p>
+
+And the language accepts it.  Verifying that a deterministic element satisfies a (probably non-deterministic) set of constraints is a much easier problem than trying to solve the constraints in general, so it's reasonable to support logic constraints in a language even when the general case of typechecking/solving them  is incomplete or undecidable.
+<p></p>
+<p><a href='#6355'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Dominic Fox</a> - Re: Book and Course in Constraint Programming and Reasoning <a name="6359">&nbsp;</a><a href='#6359' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/1/2003; 1:03:49 AM (reads: 622, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<p>This seems to suggest that you could "smear" type-checking across the compile-time / run-time boundary. In the case of
+<pre>x:t={3,4,5};</pre>
+the values supplied can be checked at compile-time. In the case of
+<pre>x:t={p,q,r};</pre>
+where p, q and r are supplied at run-time, the checking would have to take place at run-time. In the case of
+<pre>x:t={3,4,r};</pre>
+the constraint affecting r (r=5) could be generated at compile-time from the constraint specified in the typedef, and then the narrowed/simplified constraint could be enforced at run-time. In effect, you would be generating a sub-type (to be checked at run-time) through partial specialisation (at compile-time) of an existing type.</p>
+<p>To what extent could you do this kind of thing with C++ templates? I say this because I've just this morning been browsing through Alexandrescu on compile-time assertions. In both cases you're pushing computation back out of the run-time environment and into the compiler, so that the questions of <i>what the language will accept</i> and <i>what programs will execute correctly</i> increasingly blend into each other.</p>
+<p></p>
+<p><a href='#6359'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Book and Course in Constraint Programming and Reasoning <a name="6378">&nbsp;</a><a href='#6378' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/1/2003; 2:51:33 PM (reads: 578, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Dominic,<p>
+
+In the style of code I was writing, there are three cases:<p>
+
+- Some constraints can be verified at compile time.  These simplify down to determinate terms.<p>
+
+- Some constraints can only be verified at runtime, so the compiler just marks them nondeterministic (i.e. the type may be inhabited by 0, 1, or many terms), and lets the runtime sort them out.<p>
+
+- Some constraints can't be verified due to limitations of the language or to undecidability in general.  These result in a compiler error.  For example, you can express Fermat's Last Theorem as "flt typedef {x:nat>0,y:nat>0,z:nat>0,n:nat>2,x^n+y^n=z^n}".  The compiler has no idea whether that statement is inhabited or not, but it's happy to accept the definition.  And if you supplied a deterministic value x, the compiler or runtime can tell you whether x is a witness to flt.<p>
+
+I have a compiler that accepts these kinds of expressions and can verify constraints.  For example with the above definitions, you can say:<p>
+
+x:t={3,4,r:nat}<p>
+
+And the term reduces to {3,4,5}.  This is just a simple case of filling in the blanks and forward-propagating values around terms.  This isn't an everything-is-global implementation like Prolog; everything can be arbitrarily nested in records, closures, arrays, etc.<p>
+
+The "=" operator performs unification.  In the case of deterministic terms (the only thing you can express in languages like C++), it works just like you'd expect, but given non-deterministic terms a and b, "a=b" denotes the set of values that a and b have in common.<p>
+
+You can't express this sort of thing in C++, because there's a syntactic distinction between templates (which are purely compile-time), and functions (which are a purely runtime).  So, for example, you can't write a simple function f(x) and template t&lt;i&gt; and refer to t&lt;f(x)&gt; for example.  You can't write a single "assert" that functions both at compile time and runtime.  You can't write a matrix(n,m) class which supports type-checked fixed-size matrices and unknown (at compile time) sized matrices.<p>
+
+So every C++ class library tends to implement stuff twice, once for the purely runtime case (i.e. for variable-size matrices) and again using templates for the purely compile-time case (i.e. for fixed-size matrices).<p>
+
+These limitations are understandable for a language that evolved from C, a "processor independent assembly language" from the 1970's.  But it's very unfortunate that modern efforts like the Java generics extensions, and the C# generic types proposal, still go that route.  Dependent types provide a natural and far more general solution than templates, allowing for checking at compile-time when possible, and at runtime otherwise.<p>
+
+-Tim
+<p></p>
+<p><a href='#6378'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Dominic Fox</a> - Re: Book and Course in Constraint Programming and Reasoning <a name="6383">&nbsp;</a><a href='#6383' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/2/2003; 1:18:25 AM (reads: 571, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<p>The other thing this puts me in mind of is <i>Design By Contract (tm)</i> - constraints of this kind could be used to express invariance, for instance.</p>
+<p>As far as I remember, DBC as practiced by Eiffel works in a sort of Aspect-Oriented way, with preconditions being verified at the start of a method call and postconditions and invariants being verified when it returns. But I think Eiffel also does some compile-time checking, so that verifiable infractions are caught early.</p>
+<p>Thanks for the Ontic examples; together with my own recent forays into Haskell, they've considerable enlarged my view of what type systems can encompass.</p>
+<p></p>
+<p><a href='#6383'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

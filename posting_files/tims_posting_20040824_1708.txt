@@ -1,0 +1,7 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/11133ea1107d70a4/297f46b310e6f2e2?lnk=st&rnum=9&hl=en#297f46b310e6f2e2
+[comp.lang.functional] Re: Combining lazy and eager evaluation of terms
+[blockquote]What about
+from n = Cons n (from (n+1))[/blockquote]
+This function is nonterminating (when called) in this evaluation scheme.  Every term is reduced to (an immutable reference to) a ground value.  This is done in such a way that circular terms like "x = Cons 3 x" are admitted, but unending computations are not.  For example, even "from n = Cons n (from n)" is nonterminating (when called), because "from n" is a function call that initiates a new reduction.
+
+However, I haven't rigorously investigated questions about the interaction between beta/eta reduction and recursion in a system like this. 

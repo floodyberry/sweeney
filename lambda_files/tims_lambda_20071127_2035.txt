@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2545
+http://lambda-the-ultimate.org/node/2545#comment-38387
+1051121
+Derivation trees for lambda-calculus
+Abstract syntax tree
+<p>That's just the abstract syntax tree resulting from parsing the lambda expression.  It's just another way of writing the same thing, and doesn't convey any new information.
+</p><p>Wikipedia has a page on inferring types from simple lambda terms: <a href="http://en.wikipedia.org/wiki/Type_inference">http://en.wikipedia.org/wiki/Type_inference</a></p>

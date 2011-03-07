@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1270
+http://lambda-the-ultimate.org/node/1270#comment-14050
+1049846
+Naked Objects
+Interesting
+<p>The Unreal engine has been using a similar approach since 1995.  Programmers define classes using the Java-style UnrealScript language, and use annotations to decide which of the member variables are exposed to designers.  The engine then exposes a quite powerful property-editing UI enabling designers to customize the properties of those objects.
+</p><p>Every datatype has a corresponding edit control.  Bytes are sliders, booleans are checkboxes, enumerations are drop-down combo boxes, structs create an expandable hierarchy with subcontrols for their components, etc.  There are some screenshots showing this here: <a href="http://www.unrealtechnology.com/html/technology/ue30.shtml">http://www.unrealtechnology.com/html/technology/ue30.shtml</a>
+</p><p>The resulting user interface is less polished than a typical modelling program (like 3D Studio Max or Maya) where a UI designer lays out every control manually.  But the productivity gains from fast turnaround time far outweigh the negatives in this case.</p>

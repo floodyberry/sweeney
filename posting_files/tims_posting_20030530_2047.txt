@@ -1,0 +1,9 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/15df38d3ffd117c5/0391b532f534f09f?lnk=st&rnum=36&hl=en#0391b532f534f09f
+[comp.lang.functional] Re: Is Strictness a Hack?
+In the presence of _|_, all types are inhabited and all values are type-theoretically equal.  In its absence, proofs-as-propositions works, and lazy evaluation is observationally equivalant to strict evaluation.  So, clearly, _|_ is the point of controversy, and not lazy vs strict.
+
+It would be good for future languages that aspire to be pure to allow a clear distinction between expressions that admit _|_ and expressions that disallow it.  The former can be used in propositional proofs, proof-carrying-code, and other metamathematical formulations regardless of evaluation strategy, while the later are necessary for many mainstream programming tasks.
+
+Effects are not monads and _|_ is not an effect.  We should view these concepts as if we have a languages with a base axiom system that doesn't admit _|_ or effects.  And then we have additional axioms that we can add in to the evaluation of terms in particular contexts, to capture the additional evaluation semantics.
+
+Adding axioms can sometimes make the type theoretic equality relationship more specific (for example, in allowing the distinction of terms which differ only in effects not visible under the base axioms), and sometimes narrow it, for example by collapsing it into a single term _|_. 

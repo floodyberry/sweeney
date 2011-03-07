@@ -1,0 +1,17 @@
+http://www.seas.upenn.edu/~sweirich/types/archive/1999-2003/msg00520.html
+[TYPES] Correspondence of Linear Logic &amp; Geometric Algebra
+While prototyping a compiler using Girard's Linear Logic as a type system and implementing, in it, a math library supporting the Geometric (Clifford) Algebra, I noticed a striking resemblance.  Are these two systems known to coincide?
+
+My conjecture: Linear Logic and Geometric Algebra are, in an axiomatic and semantic view, equivalant; as:
+
+[ul][li]The linear logic's "times" operator corresponds to the Geometric Algebra outer product.[/li][li]Linear "with" corresponds to the geometric product, with semantics analogous to the set-theoretic "exclusive or".[/li][li]"Par" matches the meet operator (the dual of the "times" and therefore of the outer product).[/li][li]"Plus" is the dual of the geometric product.[/li][li]"Nil", A_|_ corresponds to multiplication by the unit pseudoscalar.[/li][li]The "!" operator in linear logic appear to roughly correspond to the reverse of a multivector, and "?" to the conjugate of a multivector.[/li][li]The grade of a homogeneous multivector is analogous to the number of linear terms that appear in each conjunctive subterm of an expression.  GA operations which raise, lower, and retain the grade, are analogous to linear logic with respect to the number of linear assumptions.[/li][li]The GA interpretation of linear implication "A -o B" is (surprisingly) not an exponential, but in fact the inner product, seeing that it is the algebras' sole grade- (uniqueness count-) lowering operation.[/li][li]The entire duality of linear logic (between conjunction and disjunction, and so on) is carried out identically to the duality of Clifford Algebra, between outer products and the meet operation.[/li][li]The "1", "T", "_|_", and "0" of linear logic correspond to 1, the unit pseudoscalar, the unit pseudoscalar again, and zero.[/li][/ul]
+
+Going through Hestenes' book on Geometric Algebra and Girard et al's "Advances in Linear Logic", the correspondence runs so deep that I find it hard to believe the systems do not correspond.
+
+Interestingly, the development of Geometric Algebra was developed to treat spaces and their subspaces as first-class constructs in a single algebra, with the new geometric product bringing together terms of dimensionality; while Linear Logic was invented to treat uniqueness (in a certain view, a form of dimensionality) as a first-class construct, using the "with" (do-only-once) operator to formalize the uniqueness dimension of values.
+
+It would thus be delightful to see that these two operators, and perhaps the entire formalisms of GA and LL, contain the same substance, developed independently, as they were, almost a hundred years apart.
+
+I would be interested in a counterexample, or references on this correspondence if it is known.
+
+-Tim Sweeney

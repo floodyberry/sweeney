@@ -1,0 +1,564 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Don Box on C# generics vs. C++ generics</b></font><br>
+<font color="white" size="-1">started 5/12/2003; 12:35:47 AM - last post 5/19/2003; 7:40:58 PM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Dan Shappir</a> - Don Box on C# generics vs. C++ generics <a name="6788">&nbsp;</a><a href='#6788' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 12:35:47 AM (reads: 3318, responses: 17)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a6788"></a><table border="0" cellspacing="10" width="400">
+   <tr>
+      <td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://www.gotdotnet.com/team/dbox/default.aspx#nn2003-05-10T06:02:33Z">Don Box on C# generics vs. C++ generics</a></b></td>
+      </tr>
+   <tr>
+      <td align="left" valign="top">
+         <font color="blue"><i>C++ can get away with this very loose model as template instantiation is always done at compile-time and finding a member that "fits" can happen at a somewhat leisurely pace. <p>
+In contrast, type instantiation of a CLR generics happens at runtime, and things like speed and type-safe verifiability are the order of the day.</i></font><p>
+A short piece by Don Box demonstrating the difference between generics in C# and C++. Given the similarity in syntax, I wonder how MS will add .NET generics to C++.NET<br>
+         <font size="-2"><b>Posted to <a href='implementation.html'>implementation</a> by <a href='http://lambda-the-ultimate.org/'>Dan Shappir</a> on 5/12/03; 12:36:19 AM</b><br>
+         </font><br>
+         <font size="-2">  </font>
+         </td>
+      <td valign="top" align="right" width="15%">
+
+         </td>
+      </tr>
+   </table>
+<p>
+<p></p>
+<p><a href='#6788'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Don Box on C# generics vs. C++ generics <a name="6789">&nbsp;</a><a href='#6789' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 12:42:18 AM (reads: 2077, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+We talked about this a bit previously, when the generics for CLR paper was discussed, and I asked why should the VM know anything about genericity in the source code...
+<p></p>
+<p><a href='#6789'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Dan Shappir</a> - Re: Don Box on C# generics vs. C++ generics <a name="6790">&nbsp;</a><a href='#6790' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 2:17:34 AM (reads: 2072, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>why should the VM know anything about genericity in the source code</i><p>
+
+I'm not sure I understand your question. Are you asking why the VM should know about compile-time genericity, e.g. C++ templates, or why the VM should support run-time genericity?<p>
+
+With regard to C++ templates, I don't think the VM should be aware of them at all. The question I raised was that presumably MS will want to use a similar syntax for .NET genericity in C++.NET as they do in C#. However, that will conflict with the existing C++ syntax for templates.<p>
+
+Alternately, they could use the same facility with the compiler determining which type instantiations could (and should) be accomplished at compile-time and which must be differed to run-time.<p>
+
+Given the <a href='message6697.html'>previous thread</a> on the evolution of C++, and its relatively glacial pace, it's interesting to see just how many changes to that PL MS will package into C++.NET
+<p></p>
+<p><a href='#6790'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Don Box on C# generics vs. C++ generics <a name="6792">&nbsp;</a><a href='#6792' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 3:13:52 AM (reads: 2091, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+My question (or observation) was somewhere in between. For me genericity is a compile time mechanism. I am not sure I fully understand (or agree) with reasoning behind supporting generic types at runtime. But then, I never designed VMs...
+<p></p>
+<p><a href='#6792'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Bart van der Werf (Bluelive)</a> - Re: Don Box on C# generics vs. C++ generics <a name="6793">&nbsp;</a><a href='#6793' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 4:39:25 AM (reads: 2044, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Think from the viewpoint of java.
+If the template type information is lost at runtime, then we could assign a List&lt;String> to a List&lt;int>.
+Because there runtime type would be List, which would result in a collection containing elements which have another type then expected.
+When accessed this will probably result in CastExceptions comming from unexpected places.<p>
+
+You probably need to use same fancy casting or reflection to get this wrongfull assingment, but still.
+<p></p>
+<p><a href='#6793'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Don Box on C# generics vs. C++ generics <a name="6797">&nbsp;</a><a href='#6797' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 6:49:34 AM (reads: 2053, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Remarkably enough there are <a href="http://www.adaic.org">languages</a> that are type safe, support genericity (so you can easily build generic containers) and are compiled to standard machine code...
+<p></p>
+<p><a href='#6797'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Patrick Logan</a> - Re: Don Box on C# generics vs. C++ generics <a name="6800">&nbsp;</a><a href='#6800' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/12/2003; 7:50:28 AM (reads: 2008, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>You probably need to use same fancy casting or reflection to get this wrongfull assingment, but still.</i><p>
+
+Java is (and I suppose C# will be) increasingly used as a systems programming language (e.g. target of code generators, higher-level models, run-time manipulation, etc.) I would suggest reflection is increasingly used. And so type-defeating assignment is increasingly possible.<p>
+
+A good reason to have full type information available at run-time, since the time the failure is caught could be significantly after the time the error is made.
+<p></p>
+<p><a href='#6800'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Don Box on C# generics vs. C++ generics <a name="6815">&nbsp;</a><a href='#6815' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/13/2003; 12:53:59 AM (reads: 1926, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Type-safe genericity doesn't have to be terribly hard.  If you look at it from the C# or Java point of view, it's just a matter of disallowing any operations which aren't typesafe.  The problem with this simplistic approach is that it disallows many common things that programmers want to do, such as passing an array of integers to a function expecting an array of objects -- which at first glance seems reasonable because all integers are objects.  But the type of mutable integer cells is not a subtype of the type of mutable object cells, so such an "upcast" isn't safe.<p>
+
+So you have the following options:<p>
+
+- Keep the C#/Java style type system and disallow anything that's not statically sound.  Safe, but inconvenient.<p>
+
+- Allow such unsafe casts, and check for failure at runtime.  Convenient, but sometimes goes horribly wrong.<p>
+
+- Implement all of the language facilities you need to combine the best of both worlds, static safety and convenience.  This is more difficult than it first seems, especially when you try to implement such things with performance similar to C#/Java.  You need a type system and syntax that lets you express the (typewise) different concepts of "arrays of integers", "mutable arrays of integers", "arrays of mutable integers", "mutable arrays of integers", and all of their subtyping rules and fine structure.  This brings up the issues of structural vs nominal identity, etc.  You have to go way off the beaten C#/Java path to solve these problems.
+<p></p>
+<p><a href='#6815'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Daniel Bonniot</a> - Re: Don Box on C# generics vs. C++ generics <a name="6837">&nbsp;</a><a href='#6837' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/14/2003; 4:57:14 AM (reads: 1870, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Here is a useful idiom, that I found surprising when I discovered it:
+you don't need the concept of mutability when you already have polymorphic types. Instead of declaring an argument of type "immutable Type", you can declare it to have type T, where T is a type parameter with the bound Type. The type system then ensures that if you ever assign to that argument, it will be with a value of type T, and not Type. Still, when using the function, T can be instanciated to any subtype of Type. <p>
+
+Here is an example with "safe covariant arrays", using the syntax of Nice:
+<pre>
+  &lt;T> void printAll(T[] array) &#123; ... &#125;<p>
+
+  // usage:
+  int[] intArray = [ 1,2,3 ];
+  printAll(intArray);
+</pre><p>
+
+Actually, this is not exactly immutability: you can modify the elements, as long as you put the correct type. For instance, you can safely write a generic swap method:
+<pre>
+  &lt;T> void sawp(T[] array, int index1, int index2)
+  &#123;
+    T tmp = array[index1];
+    array[index1] = array[index2];
+    array[index2] = tmp;
+  &#125;
+</pre><p>
+
+In these examples, T has no bound (or the implicit Object bound if you prefer), but it works in exactly the same way with a bound.<p>
+
+So this idiom does not implement immutability. This would be the job of a 'const' specifier. But it gives the best of both worlds: type safety together with flexibility.<p>
+
+<p></p>
+<p><a href='#6837'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Toby Reyelts</a> - Re: Don Box on C# generics vs. C++ generics <a name="6839">&nbsp;</a><a href='#6839' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/14/2003; 7:25:45 AM (reads: 1836, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>Keep the C#/Java style type system and disallow anything that's not statically sound.</i><p>
+
+Java will surprise you sometimes. I'm not sure about C#, but Java sure doesn't provide static type-safety for arrays. As an example, this program compiles perfectly fine, but throws an ArrayStoreException at runtime.<p>
+
+<pre>public class UnsafeArray &#123;
+  public static void main( String[] args ) &#123;
+    Object[] obj = new String[ 10 ];
+    obj[ 0 ] = new Object();
+  &#125;
+&#125;</pre><p>
+
+C++, on the other hand, treats arrays much more safely - that code would never compile. Because you can express the same generic function as Daniel wrote, you also have the same flexibility.<p>
+
+
+On another note, I'm disappointed (but not surprised) to see that C# is going to treat generics in almost the exact same manner as Java. I personally have a hard time ascribing the term, "generic", to the virtual-subtyping generics systems in Java, C# (and apparently Eiffel too). I know I'm not on my own here, for example, PolyJ lets you express type parameter bounds through where constraints, and C++ programmers just laugh when shown Java's generics system. While languages like Smalltalk don't have an explicit generics system, they have a lot of the same power, without the static type-checking. (I find the structural conformance in C++ templates and message handling in Smalltalk to be surprisingly similar). How do other languages handle generics (i.e. Ada, Haskell, etc...)? Do other people find virtual-subtyping generics acceptable?
+<p></p>
+<p><a href='#6839'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Don Box on C# generics vs. C++ generics <a name="6841">&nbsp;</a><a href='#6841' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/14/2003; 7:53:39 AM (reads: 1801, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+      <pre>public class UnsafeArray &#123;
+  public static void main( String[] args ) &#123;
+    Object[] obj = new String[ 10 ];
+    obj[ 0 ] = new Object();
+  &#125;
+&#125;</pre><p>
+
+It does not seem so strange that this would pass the type-checker; it seemed stranger that it raises an exception. But when I asked my officemate about this he gave a variant where aliasing would render it unsafe:<p>
+
+<pre>public class UnsafeArray2 &#123;
+  public static void main( String[] args ) &#123;
+    String[] x = new String[ 10 ];
+    Object[] obj = x;
+    obj[0] = new Object();
+    String s = x[0] + x[0]; // kaboom!
+  &#125;
+&#125;</pre><p>
+
+<em>While languages like Smalltalk don't have an explicit generics system, they have a lot of the same power, without the static type-checking.</em><p>
+
+Like I always say, you can do <em>anything</em> in a dynamically typed language: that's the problem.<p>
+
+<em>How do other languages handle generics (i.e. Ada, Haskell, etc...)?</em><p>
+
+Haskell and ML have always had `generics' but there they are called parametric datatypes. I don't think any language has generics as powerful or convenient as Haskell's.
+<p></p>
+<p><a href='#6841'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Toby Reyelts</a> - Re: Don Box on C# generics vs. C++ generics <a name="6845">&nbsp;</a><a href='#6845' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/14/2003; 8:48:43 AM (reads: 1803, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>It does not seem so strange that this would pass the type-checker; it seemed stranger that it raises an exception.</i><p>
+
+It seems obvious to me that this raises an exception because an Object is not a String. Here's an equivalent representation of the same problem.<p>
+
+<pre>Collection&lt;String> strList = new ArrayList&lt;String>();
+strList.add( new Object() );</pre><p>
+
+Java is smart enough to recognize this as a type error at compile time, though.<p>
+
+<i>Like I always say, you can do anything in a dynamically typed language: that's the problem.</i><p>
+
+If you look through my posting history, you'll find that I strongly agree with you in matters of static typing. I was simply trying to survey and draw comparisons between the different means of producing generic code for different systems. In particular, I was trying to raise the aspect of structural conformance as a differentiating feature of generics systems.<p>
+
+<i>Haskell and ML have always had `generics' but there they are called parametric datatypes. I don't think any language has generics as powerful or convenient as Haskell's.</i><p>
+
+I wasn't trying to imply that neither Ada nor Haskell had generics - quite the contrary. I mentioned both languages, because I knew that both supported generics, but I have no idea how they support them. In general, I'm interested in knowing which languages support generics via virtual subtyping and which languages support generics via some other mechanism (i.e. structural conformance, where constraints, etc...)<p>
+
+It sounds like Haskell might be fun to investigate further.
+<p></p>
+<p><a href='#6845'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Don Box on C# generics vs. C++ generics <a name="6849">&nbsp;</a><a href='#6849' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/14/2003; 9:40:02 AM (reads: 1816, responses: 2)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>It seems obvious to me that this raises an exception because an Object is not a String.</em><p>
+
+No, but String is a subtype of Object. An easy-to-imagine semantics for:<p>
+
+<pre>Object[] obj = new String[ 10 ];</pre><p>
+
+is that each String gets upcasted to an Object either when the assignment is done or when each an element is read from the array. However, the first approach does not work because of aliasing, and the second does not work because something like:<p>
+
+<pre>obj[ 0 ] = new Object();</pre><p>
+
+would require being able to downcast.<p>
+
+But, what is `obvious' to one person is not necessarily obvious to another, so pardon my thick-headedness...<p>
+
+Your `equivalent' example, however:<p>
+
+<pre>Collection&lt;String> strList = new ArrayList&lt;String>();
+strList.add( new Object() );</pre><p>
+
+looks totally `inequivalent' to me. This is clearly unsafe because a client using strList expects a String. In your first example, a client of obj, however, only expects an Object, and String supports all the operations that Object does, so the problem is not obvious.<p>
+
+<em>If you look through my posting history, you'll find that I strongly agree with you in matters of static typing. I was simply trying to survey and draw comparisons between the different means of producing generic code for different systems. In particular, I was trying to raise the aspect of structural conformance as a differentiating feature of generics systems.</em><p>
+
+Maybe I don't understand something, then: How can there be any issue of generics in a dynamically typed language? Generics address a static typing problem.<p>
+
+<em>I wasn't trying to imply that neither Ada nor Haskell had generics - quite the contrary.</em><p>
+
+Yes, I know; I was trying to stimulate your interest.<p>
+
+<em>In general, I'm interested in knowing which languages support generics via virtual subtyping and which languages support generics via some other mechanism (i.e. structural conformance, where constraints, etc...)</em><p>
+
+Haskell supports them via parametric polymorphism (and qualified types, which is the name for the mechanism behind type classes, but I avoid type classes whenever possible).
+<p></p>
+<p><a href='#6849'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Matt  Hellige</a> - Re: Don Box on C# generics vs. C++ generics <a name="6851">&nbsp;</a><a href='#6851' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/14/2003; 10:16:16 AM (reads: 1821, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>But, what is `obvious' to one person is not necessarily obvious to another, so pardon my thick-headedness...</em><p>
+
+I don't think it's thick-headedness at all... This issue can lead to many subtle problems that only very thorough testing will identify. The upshot of the whole thing is that it's never <em>really</em> safe to assign to an array that you didn't create yourself, unless it's an array of a final class (e.g., a class that is guaranteed to have no subclasses). So, unless I'm willing to prove to myself that this is OK, and incur the risk that I might be wrong (or that another programmer might use this in an unanticipated way), I should never write anything like:
+<pre>
+void replaceAll(SomeNonFinalClass[] array)
+&#123;
+  for (int i = 0; i &lt; array.length; i++)
+    array[i] = new SomeNonFinalClass();
+&#125;
+</pre>
+In practice, things like this happen quite a lot. This is where, in Java programming, documentation of contracts becomes pretty important. The same problem can happen (and does, quite a bit more often) with non-generic Collection types.<p>
+
+Some might argue that this is just one more argument against mutable values...</pre>
+<p></p>
+<p><a href='#6851'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Don Box on C# generics vs. C++ generics <a name="6852">&nbsp;</a><a href='#6852' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/14/2003; 10:26:20 AM (reads: 1848, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>The upshot of the whole thing is that it's never really safe to assign to an array that you didn't create yourself, unless it's an array of a final class (e.g., a class that is guaranteed to have no subclasses).</em><p>
+
+Ah, good point!<p>
+
+<em>Some might argue that this is just one more argument against mutable values...</em><p>
+
+No way! I never use destructive update but even I wouldn't stoop to such an argument. This is a problem with the type system, not the dynamics.
+<p></p>
+<p><a href='#6852'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Toby Reyelts</a> - Re: Don Box on C# generics vs. C++ generics <a name="6854">&nbsp;</a><a href='#6854' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/14/2003; 10:51:25 AM (reads: 1791, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>Your `equivalent' example, however looks totally `inequivalent' to me.</i><p>
+
+Forgive me, the 'equivalent' example should have been:
+<pre>Collection&lt;Object> objList = new ArrayList&lt;String>();
+objList.add( new Object() );</pre><p>
+
+Again, this causes a compiler error. It assumes that there's supposed to be some implicit conversion between a container of one type to a container of another type.<p>
+
+<i>How can there be any issue of generics in a dynamically typed language? Generics address a static typing problem.</i><p>
+
+I don't know. I guess it depends upon what "generics" and dynamic typing means to a person. Do all dynamically typed languages check type based on the same level of structural conformance? I've had the experience where some languages like JavaScript (at least some implementations) will allow you to pass more parameters to a function then what it declares. In one sense, that makes the functions more generic.<p>
+
+<i>I was trying to stimulate your interest.</i><p>
+
+Goal achieved. :)<p>
+
+<i>Haskell supports them via parametric polymorphism</i> <p>
+
+Parametric polymorphism doesn't seem like a very precise way of describing a generics mechanism, considering that both C++ templates and Java generics fall under that umbrella, and they have practically nothing in common with one another.
+<p></p>
+<p><a href='#6854'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Toby Reyelts</a> - Re: Don Box on C# generics vs. C++ generics <a name="6855">&nbsp;</a><a href='#6855' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/14/2003; 12:05:23 PM (reads: 1777, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>I don't think it's thick-headedness at all...</i><p>
+
+Perhaps it's just my history with C++ that made this seem obvious to me. Apparently, because questions about this are commonly asked as people stumble across the typing errors, it's well documented in C++ circles.<p>
+
+<i>No way! I never use destructive update</i><p>
+
+Well, I guess we can't agree on everything. I was never very fond of programming in Lisp, because it felt that programming without side-effects was orders of magnitudes more constraining than any static typing I might ever face. (Not that I didn't know that destructive update was possible in Lisp - I just felt that it was the idiomatic way to program in that language).
+<p></p>
+<p><a href='#6855'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Don Box on C# generics vs. C++ generics <a name="6920">&nbsp;</a><a href='#6920' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/19/2003; 7:40:58 PM (reads: 1655, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+>> Some might argue that this is just one more argument against mutable values... &lt;&lt;<p>
+
+Mutable values can be made to work safely, but a safe implementation doesn't look quite like C++, C#, or Java.  The pure functional view of mutables is that the "heap" is passed in and out of every function; all code is executed eagerly in a well-defined order (i.e. normal order evaluation); there is a "ptr(t)" type constuctor describing the type of pointers to items of type t; the only heap operations are "new pointer from value", "read from pointer", "write to pointer" and in the presence of subtyping, for any pair of unequal types t and u, the types ptr(t) and ptr(u) are disjoint, even when t and u are in a subtyping relationship.<p>
+
+In this framework, the mysterious notions of lvalues, rvalues, mutable variables, null pointers, value identity vs referential identity, and mutable array coercions all go away.<p>
+
+Obviously one wouldn't implement a real runtime by passing a heap in and out of every function, but if you take this conceptual view of mutability, then it's easy to understand exactly how C# and Java differ from this model and how doing so breaks static type safety.<p>
+
+It's an interesting project to start with a safe system like the above and, purely with syntactic sugar and typesafe program transformations, how close you can get to the "look and feel" and performance of Java and C# mutability.  It turns out you can get pretty close, and that the things you can't quite mimmic turn out to be unsafe or not well-defined.
+<p></p>
+<p><a href='#6920'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

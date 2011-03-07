@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/977
+http://lambda-the-ultimate.org/node/977#comment-9711
+1049553
+Garbage Collection as a Lazy Algorithm
+Relationship
+<p>In a lazy language, there are 2-3 events in every values lifetime: thunk creation (via evaluation), thunk reduction (via forcing) - which may or may not occur, and thunk abandonment (via garbage collection).</p>

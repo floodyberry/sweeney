@@ -1,0 +1,40 @@
+http://lambda-the-ultimate.org/classic/message6587.html
+http://lambda-the-ultimate.org/classic/message6587.html#6650
+0530875
+Python Metaclass Programming
+Re: Python Metaclass Programming
+<p>Frank,</p><p>
+
+This has been a very useful discussion for my understanding of type system decisions.  I'm not making these arguments because I'm confident you're wrong, but because I'm worried that I'm wrong.</p><p>
+
+I've definitely encountered the broad outlines of the problems you mention, of naked equality (where 3='x' is a valid comparison, a useful degree of typechecking is lost), and of dependent types often being an unnecessarily complex solution to certain problems.</p><p>
+
+Just a few quick notes:</p>
+
+<blockquote><div> So you are saying that you want an array of b's indexed by a to be a "function-like thing" of type a~&gt;b?</div></blockquote>
+
+<p>
+Yes.
+</p>
+
+<blockquote><div>Then you would get no subtyping relationship between chararray(3) and chararray(4) at all.</div></blockquote>
+
+<p>
+Right; this one point is certainly sound and not speculative.  It turns out this is what you want for arrays, because given an array a~&gt;b where a is a bounded natural number type, one of the fundamental operations you want need is length-extraction.  If the domain is invariant, then you can decidably extract the length of any array value.</p><p>
+
+With this invariant domain approach, you can precisely specify the type of a 7-character array as "(x:nat&lt;7)-&gt;char", or an unknown-length array of characters precisely as (exists y:nat).(x:nat&lt;y)-&gt;char.</p><p>
+
+If the domain where contravariant, domain extraction would be more subtle (because the domain could be expanded to be anything), and array comparison would be undecidable.</p><p>
+
+Continuing this exercise, we have -&gt; for modelling contravariant-domain functions, and ~&gt; for modelling invariant-domain arrays.  What is the covariant-domain version of this?  From the subtyping rule, it's the dependent-pair type constructor!</p>
+
+<blockquote><div>How is that an argument for subtyping? Because it eliminates consideration of the "unnaturalness" I mentioned?</div></blockquote>
+
+<p>
+This doesn't do much to sell subtyping, it just counters the (true) argument that "modelling arrays as contravariant-domain functions leads to unnatural results" by providing a natural, subtyping-friendly way of modelling arrays.</p><p>
+
+Of course, as you point out, the big argument against subtyping isn't this, but that subtyping can be regarded as an arbitrary imposition, especially when viewed from a category theory point of view (as opposed to a types-as-sets-of-values point of view).</p><p>
+
+One final note with regard to subtyping: in a framework like Ontic, it's not really possible to avoid subtyping, because types don't exist as a separate concept, but only as "quoted" (the-set-of-all) nondeterministic collections of potential values.  From a categorical/iso point of view, I suppose this is heresy, but it seems the most powerful and natural way of modelling types if one takes a types-as-sets-of-values point of view.</p><p>
+
+I will definitely try to rekindle this argument in the future when I can present something much more concrete.</p>

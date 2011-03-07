@@ -1,0 +1,151 @@
+http://www.planetunreal.com/features/ut2interview/
+Tim Sweeney &amp; CliffyB Interview
+PlanetUnreal interviews Tim Sweeney and CliffyB
+PlanetUnreal
+PlanetUnreal
+
+<desc>Now that the hype surrounding the release of Unreal Tournament 2003 has subsided a little bit, we recently decided to ask Epic Games Lead Programmer Tim Sweeney and Lead Designer Cliff "CliffyB" Bleszinski a bunch of questions. Thankfully, Tim and Cliff graciously provided a bunch of answers. And here they are!</desc>
+
+<section>The Game</section>
+
+<q>UT2003 began life as Unreal Championship at Digital Extremes, right? Is it correct to say that UT2003 is almost a port of Unreal Championship, rather than the other way around?</q>
+
+<a>Tim Sweeney: Way back in 1998, we started on a multiplayer bonus pack for Unreal 1, which was initially going to be a free release, then a level pack, and then it turned into Unreal Tournament, a stand-alone game that way exceeded our expectations in terms of sales and the cool stuff the community did with it. So changing course during development is something we're quite accustomed to.
+
+As we moved to the PC, we and Digital Extremes redesigned the pieces of the game that didn't make sense in a competitive PC first-person shooter. The basic weapon designs, much of the art, and some of the levels were carried forward, but updated and tweaked. On the PC, the player movement speed is faster because the mouse gives you quicker and more precise control. On the Xbox, there is some weapon auto-aiming help. There are hundreds of little details like this where UT2003 was tweaked as a PC game, and UC is being tweaked as an Xbox game.</a>
+
+<q>Can you briefly explain why UT2003 shipped nearly half a year later than originally planned? What caused all the delays?</q>
+
+<a>That's how much longer it took to get the game to the point where we were really happy with it. :-)</a>
+
+<a CliffyB>We're really, really poor at predicting dates. This is something that we're continuing to work on and improve upon. It is important for a publisher to have a solid street date for a game in order to ramp up marketing and press awareness.</a>
+
+<q>What was the most difficult part of the UT2003 development process?</q>
+
+<a>A while back, we realized that developing both UC and UT2003 simultaneously wasn't optimal for either game and split the projects apart, with Digital Extremes focusing 100% on UC, and Epic focusing 100% on UT2003. That was a big change for us here at Epic, switching gears from early development work on an unannounced project, and going into crunch mode to bring UT2003 together. That was tough, but it was definitely the right thing to do, and both games are better for it.</a>
+
+<a CliffyB>Aw, this is like asking a mother to choose her favorite children!
+
+I'd have to say making the transition from simple 200 triangle environments to environments nearly 100 times the detail was a pretty Herculean task. Finding the balance between artistic clutter and smooth gameflow is an ongoing thing that we, and many other developers, are struggling with.</a>
+
+<q>What was the most valuable piece of feedback you received from the demo?</q>
+
+<a>Cliff and Steve Polge made a number of gameplay tweaks based on demo feedback, but that wasn't as clear-cut as you might expect. Everyone went through many thousands of message board comments, and tried to distill some consensus from them. There were perhaps 100 posts saying the minigun was too strong, and another 100 saying it was too weak, for example. The joke is that you're probably hitting the sweet spot when half the community complains that the weapon is too strong, and the other half complains that it's too weak! So we zeroed in on the feedback where a clear pattern emerged, for one example the requests to make the shock rifle alt-fire faster.
+
+On some topics, we actually decided to go against the consensus when the team felt that peoples' initial impression of the demo would change as they gained experience. The classic example is the rocket launcher, which tons of people felt was too powerful, but as more people learn to double-jump, wall-dodge, and so on, it will become less powerful. This remains controversial; we'll be watching how the feedback on these issues changes over time and see whether this turned out to be the right decision. One thing we've learned is to never expect to see much of a community-wide consensus -- everyone has their favorite weapons and their despised opposing tactics.
+
+The technical feedback and bug reports were quite clear and did a lot of good. UT2003 is the first game we've shipped with the new bug reporting code Jack Porter wrote: whenever the game crashes, you have the option of submitting an automatically-generated crash report giving us information on what went wrong. This enabled us to track down a lot of bugs that would have been very difficult or impossible if the user were just describing the symptoms in an email.
+
+The one area that still needs work is hardware compatibility. Like other games that have really pushed the hardware more than past games, if you have a motherboard problem, bad RAM, a heating problem, an overclocked PC, or an older graphics or sound driver, UT2003 is much more likely to surface the problem than previous games like UT or Quake 3. So one of the big things Dan Vogel has been doing lately is talking with users who have these problems, and compiling a list of fixes, such as downloading new drivers, or in some cases even increasing the cooling of your computer case, working with guys like ATI and VIA to track down various compatibility and stability issues, and working around issues in our code where possible. </a>
+
+<a CliffyB>There were some good weapon tweaks that the community wanted that we acted on quickly. It is hard balancing this, however, because a weapon that you may be good with in the first, second, and third week of playing a game may not be the weapon that you ultimately wind up best with. For instance, your average gamer would pick up the game and gravitate towards the rocket launcher. However, once aim improves, the gamer may find his tastes shifting more towards, say, the lightning gun.
+
+The other issue that we wrestle with in regards to weapon balance is that some weapons are more useful at lower pings whereas others are more useful at higher pings. There have been some grumblings about the power of the mingun, but our stance on that weapon has always been that, in the hands of a really skilled player that gun is a good, solid weapon. In the hands of your average player it is more of a "finishing" weapon. Tag someone once with splash damage from a rocket, or hit their body with the lightning gun and then quickly switch to the mini to finish them off. </a>
+
+<q>What aspect of UT2003 are you most proud of?</q>
+
+<a CliffyB>I'm proud of the fact that all of the game types in this game are enjoyable both offline and online. In the original UT, as cool as Assault and Domination were they never seemed to catch on. I really hope people give Bombing Run and Domination 2.0 a good, honest chance. They won't be let down. Digital Extremes really made great up-front choices with the game modes in the game.</a>
+
+<q>What UT2003 map is your personal favorite?</q>
+
+<a CliffyB>I'd have to say it is a tossup between BR-Skyline and DM-Antalus. The ways that skilled players move around in Antalus is nothing short of jaw dropping!</a>
+
+<q>Favorite mutator?</q>
+
+<a>Quad jump. It doesn't have as much impact on the gameplay as the others, but I really like things that give me more control over movement. The whole multiple-jump thing is one of those addictive features that, when you go back and play the original UT or Quake 3, you get frustrated that you can't do it, just like you long for mouselooking when you go back and play DOOM 1.</a>
+
+<a CliffyB>Quadjump baby! Once you try it, you'll never go back.</a>
+
+<section>The Engine</section>
+
+<q> If you had to pick one thing the UT2K3 Engine does better than any other engine out there, what would it be?</q>
+
+<a>The Unreal engine has always been just about the opposite of a "does one thing better than the others" engine. Nowadays we have support for very high polygon-count geometry in the form of meshes and terrain; very realistic physics using the Karma physics engine for ragdoll player collision, vehicles (see the little vehicletest map in UT2003), and arbitrary rigid body dynamics; the Matinee cinematic editing tool (used in creating the UT2003 single-player intro), particle systems, improved networking, export plug-ins for 3D Studio Max and Maya, great mod support, a huge documentation site (see http://udn.epicgames.com), ...
+
+The modern expectation of an engine is that it provides nearly all of the technology that relevant games will need, so in business terms I don't think there's much of a market for an engine that does one single thing much better than everyone else. It's much more a matter of providing a good, consistent, and complete framework. </a>
+
+<q>How different is editing for UT2003 compared to editing for UT?</q>
+
+<a>Well, everything you could do in UT, you can also do in UT2003, so the community should be able to get started with it very quickly. However, taking advantage of most of the cool improvements that have come since the original UT requires a significant change in workflow.
+
+In UT, the only primitive you could build real world geometry out of was the BSP brush. In UT2003, there are also static meshes -- which are rendered with far higher triangle throughput, and are instanced so they can be far more detailed, and terrain -- for creating large outdoor areas. Creating great looking static meshes requires a modelling program like Maya or Max -- which is why we prioritized shipping Maya Personal Learning Edition with UT2003 so highly. Some level designers will be good at this, but for those who aren't, we provide a huge set of prefabs, all of the static meshes in the shipping UT2003 levels, which you can use as building blocks.
+
+These new features make the ideal pipeline for building mods in UT2003 quite different from that in UT. You benefit from more of a division of labor, where the modellers who are the most artistic create lots of static meshes, and those who are more gameplay-focused build levels using those static meshes as building blocks, as well as terrain and BSP. With this approach, the end result can be far better than the original UT visually, but doing highly custom-looking levels requires more effort than in the past. </a>
+
+<q>Epic has released several editing utilities in addition to UnrealED (including UPaint, the Unreal Development Environment, and others). Are these tools that Epic used in-house, or were they created expressly for the user community?</q>
+
+<a>These are provided by our partners and are geared towards the community. For example, Maya costs several thousand dollars, and that's actually a great value if you're a pro developer, but way out of the price range of most enthusiasts. So Maya Personal Learning Edition ships on the CD for free, and provides nearly all the functionality of the full version, but only exports to UT2003.</a>
+
+<q>What modeling/animation packages are used at Epic?</q>
+
+<a>We use both Max and Maya. Digital Extremes uses those and Lightwave as well. Various guys have other modelling programs and utilities, but those are the major ones.</a>
+
+<q>How difficult is it to integrate static-mesh prefabs into the map?</q>
+
+<a>It's pretty straightforward once you're familiar with the static meshes that are available, and learn how they can fit together with each other and with nearby BSP geometry.</a>
+
+<a CliffyB> It is certainly a different way of thinking. For the bonus pack we're trying some variations on this approach, for instance, the other day I did just a simple BSP layout in a map and handed it over to an artist to fill in "the pretty." Still, making sure there's enough elbow room so that when additional detail comes in is a tricky thing. Curse 3 sure was tight. :-)
+
+You have several ways of going about this if you're a designer. You can build the BSP first and then retro-fit meshes in the level, either by using existing ones or by building your own in max or maya. (there's a map t3d importer for max floating around somewhere...) Another way to build the level is to compose the static meshes first and to then build the simple BSP around them.
+
+Even then, if you've got lots of time on your hands you can move towards building large sections custom in max/maya and splitting them up before import, importing, and tweaking from there. </a>
+
+<q>It appears that many of the UT2K3 maps are comprised almost entirely of prefabs (such as DM-Gael), with BSP brushes used only to hollow out the basic shape of the level. Other levels (like BR-TwinTombs) use a great deal more BSP surfaces. Are there times when one form of architectural creation is preferable to the other, or is it more left up to designer discretion and preference?</q>
+
+<a>It's up to the designer. On one extreme like CTF-Magma, Shane Caudle created the entire map from scratch, with almost everything being custom. The benefit of this approach is that you can get the absolute best visual quality possible, but the drawback is that it's very time-consuming and doesn't result in many prefabs that other level designers can reuse. The majority of the maps are a combination of unique BSP and terrain, with prefabs placed throughout.</a>
+
+<a CliffyB> I'd have to say this is up to the designer, his preference, and his pipeline. If you're just a guy in your basement building stuff then build whatever works for you. If you work at a game company and you're a licensee you may have a pipeline that you have to adhere to.</a>
+
+<section>The Community</section>
+
+<q>Epic has already shown a dedication to supporting the mod community with tools and tutorials. Are there future plans for continued support, such as continued additions to the UDN, or further tool creation/releases?</q>
+
+<a>Oh yes! Expanding the tutorials on UDN is the top priority. Besides that, we'll be tweaking the tools with each patch. The current tool set is remarkably complete (UnrealEd for level design, now also useful for cinematic creation, UnrealScript for programming, Maya PLE for high-poly modelling and characters, UPaint for art and skinning, KAT for physics setup), so in the next year or so the focus will be on polish rather than shaking things up too severely.</a>
+
+<q>What types of user-created mods would you like to see?</q>
+
+<a>I won't mention the obvious well-known categories like tactical mods, and focus on unique things I'd love to see:
+
+# Vehicle mods. The Karma physics support in the engine now is incredibly complete and powerful, but all we had time to put in was the little vehicletest map with a hastily-constructed vehicle. With Karma, you can do arbitrarily complex vehicles with independent suspensions like tanks, buggies, tractor-trailers, go-karts, bulldozers, etc.
+
+# An RTS mod. You could have an above-the-world-looking-down view zoomed out similarly to recent 3D RTS games, having both vehicles and foot soldiers. Gameplay could give the player control over how much detail he wants to get into...you could either give orders to your troops, or go into first-person view and micromanage them.
+
+Also, there is going to be a very, very big mod contest for UT2003, which won't be announced for another few weeks, but the scope is unprecedented, and there will be lots of opportunities for community recognition, for projects of all sizes and complexities.</a>
+
+<a CliffyB>Be creative and move the camera already! I want more top down/isometric mods, if you don't have to worry about the horizon line you have less to worry about in regards to overdraw and triangle count!</a>
+
+<q>What is the number one mistake you think amateur mod developers make?</q>
+
+<a>To make a great mod, you need a small team of really talented core contributors who do the bulk of the work, and work together closely, and perhaps a few others who make valuable but less frequent contributions. You don't need to recruit a ton of people. Many mod teams seem to be unrealistically large, with the majority of members not being core contributors, making it hard to focus. Stay lean and don't be afraid to get rid of dead weight.
+
+Also, it would benefit the best mod teams to be more aggressive about recruiting the most talented guys from other teams and the community in general (not just the Unreal community; there are a lot of mod teams still working with Quake 3 and Half-Life 1, which as 1999 games aren't growing any younger). There are various teams out there with incredibly talented members, who just aren't shipping very good mods, due to whatever internal management problems. For productive and efficient teams to thrive, they need to go after these kinds of talented but underutilized individuals.
+
+That may all sound Machiavellian, but many mod teams will have the opportunity to transform into pro game development studios over the coming few years, and it makes sense to run the more serious mod teams like businesses, even before they're earning money at it or pursuing business deals. </a>
+
+<a CliffyB>In mod groups, I'd say the biggest mistake is hooking up with the wrong people.</a>
+
+<q>Do you think the Unreal fan community sometimes takes things too seriously?</q>
+
+<a CliffyB>Nah. They're fans of our games and while it may seem frustrating sometimes we understand that they're passionate and their hearts are always in the right place.</a>
+
+<section>The Future</section>
+
+<q>What do you see as the future of the competitive first-person genre?</q>
+
+<a>I don't buy that these are a genre anymore. Among first-person shooters, there are now single-player focused games like Unreal 2 and (I assume) Half-Life 2, tactical-focused games like Counterstrike and Battlefield 1942, and the more traditional Deathmatch/CTF style genre pioneered by Quake 3 and Unreal Tournament. This looks like at least three genres, with the lines between them still somewhat blurred, such as with BF1942 or Medal of Honor.
+
+With UT2003, we made a conscious effort to steer the game a bit in the direction of a sport, with DE's new Bombing Run game type, which is inspired somewhat by American football, and with other things like the UT2003 single-player intro cinematic, which is somewhat WWF-inspired, and the new worldwide stats tracking (http://ut2003stats.epicgames.com). In some areas, this probably went a bit too far. Ok, I've admitted it, so can everyone please stop sending us flames regarding the announcer voice? :-) In other areas, like Bombing Run, the new style of play is really catching on. </a>
+
+<q>What kind of content can we expect from the bonus packs?</q>
+
+<a>More of it! :-)</a>
+
+<a CliffyB> "More." This bonus pack currently has over 170 megs of new art content. We're compiling much of the test artwork that was done to figure out our pipeline over the past year and giving it out to everyone. People are going to go crazy with this content, and the maps we ship with the pack will be top notch!</a>
+
+<q>It seems as though UT2003 is a step in the direction of successful sports franchises such as the Madden series, which indicates yearly installments. Will there be a UT2004?</q>
+
+<a CliffyB>Undecided at this point.</a>
+
+<q>Okay... spill it: What's the deal with Unreal Warfare? ;)</q>
+
+<a CliffyB> I can honestly say that there is no "Unreal Warfare" at this time. :-)</a>

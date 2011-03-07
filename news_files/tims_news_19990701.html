@@ -1,0 +1,27 @@
+<h4>226 Progress</h4>
+
+<p>Testing of 226a brought in mixed results: Direct3D performance improved for most
+testers, but some had crashes and other weirdness.&nbsp; I'm looking into all of this now;
+I think most of the problems are driver/hardware related, but I should be able to work
+around most of them in the code.&nbsp; We'll definitely go through a couple more internal
+test versions before releasing 226 though.</p>
+
+<p>I'm also adding a new &quot;wizard&quot; based user-interface for switching 3D drivers
+and changing &quot;safe mode&quot; settings, to improve the user-friendlyness of the
+Direct3D/OpenGL/Glide/Software switching.</p>
+
+<h4>Recommended Reading</h4>
+
+<p><a href="http://www.amazon.com/exec/obidos/ASIN/0387947752/002-3430157-9555648">A Theory of Objects</a> is an excellent book for people trying to design
+object-oriented programming languages (or just learn the theoretical background of OOP).
+&nbsp; It does get pretty technical, defining a lambda-calculus variant in terms of
+objects, and analyzing OOP concepts within that framework.&nbsp; But it sheds a lot of
+light on the general language-design problems that UnrealScript faced.</p>
+
+<p>After writing a big piece of code like the UnrealScript compiler, it's cool to examine
+some of the design decisions that I made without <span class="italic">really</span> knowing what I was doing,
+only to discover there's a well-developed theoretical foundation for what I basically
+hacked together until I felt it worked right.&nbsp; For example, it turns out that
+UnrealScript's type-compatibility checking (the rules for determining whether a variable
+is compatible as an assignment parameter or function call parameter), exactly follow the
+rules of type covariance, contravariance, and invariance.&nbsp; </p>

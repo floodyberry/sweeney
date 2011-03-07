@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1588
+http://lambda-the-ultimate.org/node/1588#comment-19313
+1050164
+Securing the .NET Programming Model
+Unexpected behavior
+<p></p><blockquote><div>The point is that a malicious agent can cause unexpected behaviour in security critical code. He has a foot in the door. Whether or not the attacker can escalate this into a full-scale compromise is a matter of luck and the attacker's skill.</div></blockquote><p>
+</p><p>This opens a wonderful can of worms!
+</p><p>Given bool b, should C#'s type system assure that (b!=true &amp;&amp; b!=false) is never true?  Should it assure that given int a,b with a&gt;0 and b&gt;0, that a+b&gt;0?  That given "object a=3,b=3" that a==b?  None of those properties hold in C#, due to various historical accidents that most programmers educated in this decade don't intuitively understand.</p>

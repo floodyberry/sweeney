@@ -1,0 +1,11 @@
+http://groups.google.com/group/comp.graphics.algorithms/browse_thread/thread/6579317aadce8bfe/168b7f51a213ef31?lnk=st&rnum=82&hl=en#168b7f51a213ef31
+[comp.graphics.algorithms] Re: Optimized custom math library for Pentium under Watcom C
+[blockquote]All routines are optimized specificly for Pentium (Pentium, Pentium Pro, Pentium with MMX and Pentium Pro with MMX). Optimizations include code that hurts performance on 486(487?) and 387 processors, however such code is kept to a minimum (compared to some FPU code I have seen).
+
+Most functions in the library are very close to optimal. Short operations, such as a vector dot product, suffer a lot of stalls due  to the fact that there generally aren't many parallel operations in such  short operations. However longer operations like matrix multiplies  (equivalent to 3 or more parallel dot products) usually only have a few  stalls of 1 or 2 cycles.[/blockquote]
+
+You should check out Visual C++'s optimizer.  It generates stall-free code for vector and matrix operations floating point ops.  I used VC++ to create a 3-component vector class and defined all of the operators - add, subtract, scalar multiply, dot product, matrix transform, etc.  This makes 3D math really easy -- "trade ease of implementation for speed", I thought. 
+
+To my utter surprise, I checked the assembly code output by VC++ and its floating point was perfectly pipelined for the Pentium.
+
+-Tim 

@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/1741
+http://lambda-the-ultimate.org/node/1741#comment-21220
+1050317
+Is &quot;post OO&quot; just over?
+AOP is only successful in
+<p>AOP is only successful in that many researchers have received funding to investigate it.  In the real world, AOP is entirely unsuccessful: No mainstream programming language has integrated major AOP features.  And this is the correct state of affairs because, as the author more eloquently states, the techniques that are unique to AOP are a collection of dangerous hacks.
+</p><p>Fortunately, many of the original goals of AOP (implementing features that cross-cut data types and programs) are more soundly satisfied by the latest work on generic programming, Haskell typeclasses, etc.</p>

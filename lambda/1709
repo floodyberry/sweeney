@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Constant Values as Types | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1709" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Constant Values as Types</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >This is probably one of those naive I should first finish the Pierce book kind of questions, but here goes anyway: </p>
+<p >Are there languages where a constant value, such as 42, can act is its own type? </p>
+<p >So putting this in real-world terms, in the Cat language I can write the following function with a type annotation: </p>
+<pre >
+define the_answer : ()-&gt;(int) 
+{ 
+  42 
+}
+</pre>
+<p >However, it seems that I am being too general by saying it returns an int in the type annotation because it always returns 42 (edit: which we could say is a subtype of int). So ... shouldn't the type annotation be: </p>
+<pre >
+define the_answer : ()-&gt;(42) 
+{
+  42
+}
+</pre><p >
+So the more general question is: what is good / bad about this? </p> </div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at 09/02/2006 - 23:59 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1712" title="Small Value Set Types">previous forum topic</a> | <a href="node/1710" title="FringeDC- New Washington DC Organization for Fringe Programming Languages">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1709" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 583 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1709" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1709" />
+<a id="comment-20922"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20922" class="active">In a dependently typed language</a></h3>
+ <div class="content"><p >You could have a type Exists(x:Int)(x == 42), consisting of an integer together with a proof that that integer equals 42. The proof in this case would just be one axiom, the canonical element of the type (42 == 42).</p>
+<p >Introducing subtyping to this sort of type system seems tricky to do without losing other desirable properties - or so I concluded from a quick read of 'Type theory and functional programming' - I'm sure one of the regulars here knows better :)</p></div>
+ <div class="links">By <a href="user/1147" title="View user profile.">citylight</a> at Sun, 09/03/2006 - 00:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20923"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20923" class="active">More thoughts -</a></h3>
+ <div class="content"><p >I suspect that when you ask 'what is good / bad about this?', you're effectively asking 'what's good / bad about dependent types', and their pros and cons have, I think, been well-discussed in other threads here.</p>
+<p >I say this because I suspect a full-on turing-complete theorem-proving type system with some kind of dependent types would be necessary to handle this sort of thing. But I may be wrong. Perhaps a weaker type system could still infer these sorts of types in very limited circumstances?</p></div>
+ <div class="links">By <a href="user/1147" title="View user profile.">citylight</a> at Sun, 09/03/2006 - 00:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20931"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20931" class="active">Dependent Types</a></h3>
+ <div class="content"><p >I spent the morning reading up on dependent types, thanks for having brought this to my attention. </p>
+<p >So AFAIU C++ templates act as a limited form of dependent types within the context of a weak type system. For example the work of Tood Veldhuizen ( <a href="http://osl.iu.edu/~tveldhui/papers/Template-Metaprograms/meta-art.html">http://osl.iu.edu/~tveldhui/papers/Template-Metaprograms/meta-art.html</a> ) has apparently made good use of them. </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Sun, 09/03/2006 - 18:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20924"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20924" class="active">singleton types</a></h3>
+ <div class="content"><p >Dylan had these (and so I expect CLOS has them too -- I'm not a Lisper so I don't know), so you could define factorial with the following sort of multimethod:</p>
+<p >define method factorial( n ::  ) ...<br >
+define method factorial( n :: singleton(0) ) ...</p>
+<p >There is even a bit of sugar for it in method definitions:<br >
+define method factorial( n == 0 ) ...</p>
+<p >A dynamically-typed language obviously doesn't have to worry about any difficulties in type-checking this feature. I suspect (with no evidence whatsoever) that singleton types wouldn't cause the kind of undecidable-type-checking headache that more general kinds of dependent types do.</p></div>
+ <div class="links">By <a href="user/2716" title="View user profile.">Tim Foley</a> at Sun, 09/03/2006 - 01:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20928"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20928" class="active">I think it would be undecideable</a></h3>
+ <div class="content"><p >For example, to type-check a function</p>
+<p >f : Int -&gt; Singleton(0)</p>
+<p >would require proving that f returns zero for every single input. For general f, this would be undecideable - see Rice's theorem.</p>
+<p >For example, say we write the function f above so it returns 1 if its argument is an even number greater than two which doesn't exist as a sum of two primes, or 0 otherwise. If the type-checker terminates then it looks like we've settled Goldbach's conjecture!</p>
+<p >Really I'm wondering what the proposed use-case is for types like these. What kind of properties of programs would you hope to be able to check at compile-time with these types, that can't be checked using simpler type systems? I can only see them being inferred for trivially constant functions, the sort of thing which I expect pure functional compilers can optimize away already without needing to involve the type system. But quite likely I'm missing something.</p></div>
+ <div class="links">By <a href="user/1147" title="View user profile.">citylight</a> at Sun, 09/03/2006 - 14:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20929"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20929" class="active">Overambitious Type Systems</a></h3>
+ <div class="content"><blockquote ><p >
+For example, say we write the function f above so it returns 1 if its argument is an even number greater than two which doesn't exist as a sum of two primes, or 0 otherwise. If the type-checker terminates then it looks like we've settled Goldbach's conjecture!
+</p></blockquote>
+<p >I would approach this problem by having the type-checker reject any program which even suggests the possibility of returning 1.</p>
+<blockquote ><p >
+I can only see them being inferred for trivially constant functions, the sort of thing which I expect pure functional compilers can optimize away already without needing to involve the type system. But </p></blockquote>
+<p >If I can formalize this within the type system, then I can write more interesting metaprograms. </p>
+<p >Of course you can't always infer that a function returns a singleton value, but in these cases, you can simply infer that it returns an int. Inference is not the goal however, I simply view it as a tool.  </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Sun, 09/03/2006 - 16:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20934"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20934" class="active">Right</a></h3>
+ <div class="content"><p >Such a type system is generally undecidable, but it can typecheck all programs that typecheck in simpler decidable type systems, plus lots of additional programs written using more powerful and expressive constructs (but not all of them!)</p>
+<p >I'm certainly an advocate of gaining more expressive type systems at the expense of decidability.</p>
+<p >After all, what you really care about is the following: If your compiler accepts a program successfully, then the program is type-safe.  If it's not type-safe, then you might get an error message, or a stack overflow, or a core dump, or whatever -- but in no case will you see the compiler accept a program that's not type-safe.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Sun, 09/03/2006 - 23:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20939"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20939" class="active">I see what you&#039;re saying</a></h3>
+ <div class="content"><p >Yes adding extra expressiveness sounds like a good idea, even if it's not decideable in the general case. I guess my issue is this (in a pure functional language, at least):</p>
+<p >In what situation would it be useful to declare a singleton type in a function signature? If I already know when writing the program which exact value the function argument must always be, or which value the function will always return, then why bother having it as an argument or return value in the first place? It would make the type system more expressive, I just can't immediately see where that extra expressiveness would come in useful.</p>
+<p >On the other hand, if the system can infer these types in some situations, then that could help the compiler optimize away constant functions. But like I said, I don't see the need to get the type system involved here, unless there's a practical use for the extra expressiveness. Which perhaps there is - I'm just curious if you had anything particular in mind.</p></div>
+ <div class="links">By <a href="user/1147" title="View user profile.">citylight</a> at Mon, 09/04/2006 - 10:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-20940"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20940" class="active">Now I think about it</a></h3>
+ <div class="content"><p >I can see these being useful in the context of an even-richer type system. Perhaps that's where you're coming from.</p></div>
+ <div class="links">By <a href="user/1147" title="View user profile.">citylight</a> at Mon, 09/04/2006 - 10:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20925"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20925" class="active">Singleton types</a></h3>
+ <div class="content"><p >Singleton types are the simplest answer, so you could have the typing 42:singleton(42).</p>
+<p >You might also want to have an uninhabited type.  Call it "nothing".</p>
+<p >You might also want to have the type of all singleton subtypes of integer.  If you have the later type, you can call it option(t) or ?t, and then you have the typings singleton{32}:?int, and nothing:?int.  If you support types as first-class values in a programming language, then option types, singleton types, and the uninhabited type have a serendipitous relationship, as you can use them as types, as values, and in combination for a proofs-as-programs style.</p>
+<p >This is the approach I'm taking in my programming language R&amp;D work.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Sun, 09/03/2006 - 03:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20930"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1709#comment-20930" class="active">Thanks Tim, this makes a lot</a></h3>
+ <div class="content"><p >Thanks Tim, I like this approach a lot. It helps me frame my ideas with more standard nomenclature.</p>
+<p >In general what you describe is very much like what I was planning to do with Cat. I am designing the Cat type system to be dynamic by default (everything is a variant), with types as first class values. If the language is compiled then the the compiler infers where values are constants (or a small set of possibilities) and precomputes as much code as possible. </p>
+<p >This precomputation phase effectively performs static type-checking. by pre-evaluating expressions involving types at compile-time.</p>
+<p >This way the type-system is as expressive as the programming language itself. </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Sun, 09/03/2006 - 16:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/08/04" title="Previous month">«</a> September 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/9/1" title="1 post">1</a></td>
+  <td class="day-link"><a href="archive/2006/9/2" title="2 posts">2</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/9/3" title="2 posts">3</a></td>
+  <td class="day-today">4</td>
+  <td class="day-future">5</td>
+  <td class="day-future">6</td>
+  <td class="day-future">7</td>
+  <td class="day-future">8</td>
+  <td class="day-future">9</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">10</td>
+  <td class="day-future">11</td>
+  <td class="day-future">12</td>
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+  <td class="day-future">15</td>
+  <td class="day-future">16</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+ </tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1684" title="135 comments">Closures for Java or money back</a></li><li><a href="node/1705" title="22 comments">Dynamic Semantics</a></li><li><a href="node/1712" title="4 comments">Small Value Set Types</a></li><li><a href="node/1709" title="11 comments" class="active">Constant Values as Types</a></li><li><a href="node/1710">FringeDC- New Washington DC Organization for Fringe Programming Languages</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1712" title="4 comments">Small Value Set Types</a></li><li><a href="node/1710">FringeDC- New Washington DC Organization for Fringe Programming Languages</a></li><li><a href="node/1709" title="11 comments" class="active">Constant Values as Types</a></li><li><a href="node/1705" title="22 comments">Dynamic Semantics</a></li><li><a href="node/1704" title="1 comment">Joe Armstrong&#039;s Blog</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

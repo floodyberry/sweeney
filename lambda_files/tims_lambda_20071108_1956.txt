@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/2527
+http://lambda-the-ultimate.org/node/2527#comment-38032
+1051103
+Universal Type System
+Incompleteness vs The Halting Problem
+<p>That's a great question.  Does anybody know the answer?
+</p><p>Godel showed that given any axiom system as powerful as ZF, there exist theorems which can neither be proven nor refuted.
+</p><p>Turning showed that given any computer as powerful as a Turing Machine, there exist programs whose termination can neither be proven nor refuted.
+</p><p>I think the answer is: There exist type systems as powerful as ZF which are not Turing-complete, so Godel's theorem gives us insight into systems where Turing's theorem is inapplicable.  We can't construct a model of a Turing machine in ZF, because the axiom of comprehension is insufficiently powerful to represent general recursion.  But on a Turing machine, we can write a ZF axiom prover that terminates for any axiom that is provable or refutable -- but it might not halt.</p>

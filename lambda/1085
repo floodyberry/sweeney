@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>The Type-System-Feature-Creep Death Spiral | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1085" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>The Type-System-Feature-Creep Death Spiral</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >(This is my first post on LtU, so please tell me if I do anything wrong!)</p>
+<p >I've been chewing on this question for a while: How did Glasgow Haskell's type system get so complex? Miranda had a relatively simple Hindley-Milner-style type system. It could do a lot, so people started applying it to more complex tasks, and eventually bumped up against limitations. Haskell added type classes, and they overcame many of these limitations. After a few more iterations of this, we have multi-parameter type classes with functional dependencies. Similar extensions have occured across the language, though few as dramatic as the type class situation. </p>
+<p >Haskell's extended type system is Turing-complete. This is rather disturbing, because now Haskell is not one language, but two; one on each side of the :: sign. </p>
+<p >Would adding basic data types like lists and integers to the type system be a useful extension? Probably; it would assist with doing compile-time computation, something that many Haskellers have been (ab)using their type system for. How about adding I/O capabilities to the type system? Could come in handy. Who's to say what you can and can't do with types? </p>
+<p >The conclusion, chillingly, is that carrying the type system idea to its logical conclusion would leave us with two languages, each with the same capabilities. Each time you added something to one language, you would want to add it to the other. You would have to update the compiler in two places. Any language design effort would be doubled. </p>
+<p >This is an extreme example of what could happen, of course, but it definitely makes you ask: Is there a better way? Lisp has shown us that preprocessing code with code in the same language is a big win, both in terms of simplicity and expressive power. I propose that we do the same thing with the type system, and, in fact, that a type system will not be satisfactory until it is the same as the language it types. </p>
+<p >I wish I had a paper to present on this; I don't. It just hit me an hour or so ago, and I need feedback on the idea before I can write a paper. So: What do you think? I am I totally off-target? Have you been thinking on the same lines, and, if so, have you got any more specific ideas? </p> </div>
+ <div class="links">By <a href="user/2418" title="View user profile.">jesuswaffle</a> at 10/30/2005 - 05:06 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1094" title="Jakarta Commons Monad, er, Chain">previous forum topic</a> | <a href="node/1091" title="Curry/Howard and Disjunction">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1085" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2949 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1085" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1085" />
+<a id="comment-11545"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11545" class="active">I think you&#039;re trying to rein</a></h3>
+ <div class="content"><p >I think you're trying to reinvent dependant types (types dependant on terms - so you get your type-level list by just using an ordinary list, for example). And yes, I do think they're the way to go - faking them with GHC-Haskell gets a little too painful.</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Sun, 10/30/2005 - 09:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-11560"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11560" class="active">What About Polymorphism?</a></h3>
+ <div class="content"><p >I'm sorry, I forgot to mention this: I'm a dynamic-typing kind of person; that is, watertight type-checking at compile-time isn't very important to me; without polymorphism, I wouldn't bother with a type system at all. (With a sufficiently expressive type system, I wouldn't be opposed to static checking, though!)</p>
+<p >While dependent types look very cool, and solve a lot of unsolved problems, it doesn't look like they help with polymorphism. (I haven't read the entire paper, so please tell me off if it does!)</p>
+<p >Allow me to clarify what I mean: The sort of thing I envision is being able to implement, say, type classes, as a sort of "type system macro," in a library, where they can be changed. This would make type system research easier, because you could just change the library, instead of hacking GHC; this would also keep feature creep out of the compiler. </p>
+<p >Aside from this, I envision real-world programmers overcoming type system limitations with these "type system macros," a bit like Lisp programmers overcome limitations of their runtime language using macros. </p></div>
+ <div class="links">By <a href="user/2418" title="View user profile.">jesuswaffle</a> at Sun, 10/30/2005 - 15:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-11555"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11555" class="active">partial evaluation</a></h3>
+ <div class="content"><p>Imagine programming in an untyped language. Eek! You try to make it typesafe, at least dynamically, by creating structures with a type-tag and a value. You program with these and your own versions of the language primitives that always check the type tags and report type errors at run time.</p>
+
+<p>So far, so slow. So you run your source code through a partial evaluator. It will execute and eliminate much of your type checking code. Perhaps some will remain, to do with tagged unions. Perhaps other code will remain to handle potential run-time type errors.</p>
+
+<p>If the consequence of partial evaluation is that the code for handling run-time type errors gets deleted as unreachable you know that your code passes static type checking.</p>
+
+<p>So I think you could put the static typing issue into the larger context of partial evaluation. Would the attempt to produce a sufficiently capable partial evaluator lead to fame and fortune or obscurity and ruin?</p></div>
+ <div class="links">By <a href="user/2337" title="View user profile.">Alan Crowe</a> at Sun, 10/30/2005 - 13:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-11558"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11558" class="active">Make it partial computation</a></h3>
+ <div class="content"><p >If you actually go and read Futamura's own papers on the topic (see <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Futamura:Yoshihiko.html">his DBLP entries</a>), you'll see he was already there in at least 1988, and probably before that.  His paper on the prototype implementation WSDFU (<a href="http://www.diku.dk/topps/bibliography/2002.html">paper</a> available as D-489 from the <a href="http://www.diku.dk/topps/">TOPPS</a> group.</p>
+<p >The only caveat: you need both a full-fledged automated theorem prover and a full-fledged symbolic computation system to make it work!  Much worse though is the fact that some of these ideas are encumbered by <b >patents</b>.  Futamura has gotten some fame from his scientific work, but I somehow really doubt that his patents have made him a fortune.</p></div>
+ <div class="links">By <a href="user/1094" title="View user profile.">Jacques Carette</a> at Sun, 10/30/2005 - 14:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-11561"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11561" class="active">Let me see if I get what you&#039;</a></h3>
+ <div class="content"><p >Let me see if I get what you're suggesting: The language has no intrinsic type checking, users implement it themselves, and the compiler moves type-checking forward to compile-time where it can. </p>
+<p >This solution is pretty far from what I was picturing: In this solution, type-checking code is intermingled with the rest of the code; in the solution I was envisioning, type-checking is separate from run-time code. </p>
+<p >That's not to say it's a bad idea; I think it's a great idea. It blurs the line between type-checking code and non-type-checking code; it becomes "what we can do at compile-time" and "what we can do at runtime."</p></div>
+ <div class="links">By <a href="user/2418" title="View user profile.">jesuswaffle</a> at Sun, 10/30/2005 - 16:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-11570"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11570" class="active">This sort of thing (in a hand</a></h3>
+ <div class="content"><p >This sort of thing (in a handwavy wort of way) is also used in non-functional languages.</p>
+<p >IIRC (hopefully I do as I took a unit on runtime systems this semester), the MMTk people use techniques like this to make the performance of their memory management stuff not suck. MMTk is a memory management toolkit implemented (for the most part) in Java. Some of their stuff works by getting the compiler to magic away dead code paths, type checks, etc. at compile (or JIT) time.</p></div>
+ <div class="links">By <a href="user/101" title="View user profile.">Thomas Sutton</a> at Sun, 10/30/2005 - 19:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-11577"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11577" class="active">More links</a></h3>
+ <div class="content"><p >I started a similar <a href="http://lambda-the-ultimate.org/node/view/795">thread</a> on the subject of partially evaluated latent types which contains links to further reading.</p></div>
+ <div class="links">By <a href="user/1296" title="View user profile.">Greg Buchholz</a> at Mon, 10/31/2005 - 00:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-11562"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11562" class="active">Goes deep into part of the probem</a></h3>
+ <div class="content"><p>Thankyou for the links. Futamura's work is very advanced. He is transforming the seventy-one function
+<pre>
+f(u) = if u > 70 then u else f(f(u+1)) fi
+</pre>
+into
+<pre>
+f(u) = if u > 70 then u else 71 fi
+</pre>
+That is way more ambitious than seeing that if u is an integer you can carry out the recursions with type checks and just write in "integer" to the results type tag.</p>
+
+<p>He also focusses on strict, functional languages, which is perhaps a necessary restriction if you want to make such deep simplifications to the program. Less ambitious work might apply more widely. I imagine that one could get a long way on removing dynamic type checks simply by propagating the constants that are set by object initialisers.</p>
+</div>
+ <div class="links">By <a href="user/2337" title="View user profile.">Alan Crowe</a> at Sun, 10/30/2005 - 16:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-11582"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11582" class="active">Type Specialization</a></h3>
+ <div class="content"><p >IIUC the <a href='http://www.cs.chalmers.se/~rjmh/pubs.htm'>type specialization</a> technique could give this result.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Mon, 10/31/2005 - 11:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-11573"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11573" class="active">Good Question!</a></h3>
+ <div class="content"><p >You may find Tim Sweeney's <a href="http://lambda-the-ultimate.org/classic/message6641.html">post</a> regarding David McAllester's "Ontic" system worthwhile. Ontic very definitely does represent one approach to unifying types and terms in a consistent framework. More of Tim's thinking about types, influenced by Ontic, can be found in <a href="http://lambda-the-ultimate.org/classic/message6587.html#6615">this</a> post.</p>
+<p >The Ontic specification is one of those papers that I keep going back to repeatedly, as I learn more about type theory: it's actually very approachable to anyone who's willing to work through the material in, say, Pierce's "<a href="http://www.amazon.com/exec/obidos/tg/detail/-/0262162091/qid=1130706070/sr=8-1/ref=pd_bbs_1/104-7932957-3465541?v=glance&amp;s=books&amp;n=507846">Types and Programming Languages</a>", and I agree with Tim's assertion that "There's something fundamentally new happening here that hasn't been seen in strongly-typed programming languages: a general means of combining types and values into a single Turing-complete framework that gains the expressive power of functional, logic, and constraint logic programming."</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sun, 10/30/2005 - 21:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-11575"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11575" class="active">Sweet!</a></h3>
+ <div class="content"><p >This is exactly the sort of thing I had in mind. Thanks for the tip! </p>
+<p >(Incidentially, I made a few false starts on a system a lot like this a while back; I'm glad to see my attempts weren't completely misdirected.)</p></div>
+ <div class="links">By <a href="user/2418" title="View user profile.">jesuswaffle</a> at Sun, 10/30/2005 - 22:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-11579"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11579" class="active">Ontic Spec link</a></h3>
+ <div class="content"><p >The new correct link is <a href="http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps">http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps</a>.</p></div>
+ <div class="links">By <a href="user/118" title="View user profile.">Jim Apple</a> at Mon, 10/31/2005 - 02:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-11583"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11583" class="active">The solution is simple: get rid of type declarations...</a></h3>
+ <div class="content"><p>...and use plain ordinary functions as type declarators. For example, a <code>point</code> type could be defined by this piece of code (in an imaginary language of mine):</p>
+
+<pre>
+let point(xval, yval) = tuple (x: xval, y: yval)
+</pre>
+
+<p>Then the <code>point</code> function could be used both as a type and a function. When used as a type, it would mean the result of the function for specific arguments. The compiler would be forced to evaluate the function, in order to calculate the type, thus solving the problem you describe.</p>
+
+<p>For example:</p>
+
+<pre>
+let point1 : point(integer, integer) = point(0, 0)
+let point2 : point(real, real) = point(0.0, 0.0)
+</pre>
+
+<p>This solution solves the problem you mention and also makes the type system richer. For example, arrays could be declared as functions over tuple concatenations:</p>
+
+<pre>
+let array(t, n) = tuple (t) :: array(t, n - 1)
+let array(t, 0) = tuple ()
+let n = array(integer, 10)
+let matrix3x3(t) = array(array(t, 3), 3)
+</pre>
+
+<p>Primitive data types would also be functions, allowing them to be used as conversion functions from one primitive type to another for example:</p>
+
+<pre>
+let n = real(integer(string(3)))
+</pre>
+
+</div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Mon, 10/31/2005 - 12:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-11584"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11584" class="active">This is the goal, but whither termination?</a></h3>
+ <div class="content"><p >Both Epigram and Ontic have this sort of goal, to unify functions and types. Epigram gets really close to unifying them, there's almost no difference between a type and a function. Ontic I haven't looked at yet.<br ><br >
+But you have some problems there. One important goal of type systems is termination. You want to know that your type system will stop at some point. Therefore, type systems are not Turing complete, because termination of Turing complete systems cannot be guaranteed.<br ><br >
+For that reason, Epigram is not Turing complete.<br ><br >
+Hopefully some bright cookie will discover some way around this sort of problem.</p></div>
+ <div class="links">By <a href="user/1177" title="View user profile.">shapr</a> at Mon, 10/31/2005 - 14:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-11587"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11587" class="active">naive question, but why should we be interested in termination?</a></h3>
+ <div class="content"><p>We just want to extract the form of a value from a function; therefore, we compute the value in compile-time (i.e. execute the function) and store the resulting form as a type. We are not interested in proving that the function terminates for all types of values, but only for the values at the point of usage.</p>
+
+<p>For example, we may have the following function that searches a list for a specific number, then returns that number:</p>
+
+<pre>
+let findNumber(number, head::tail) = if number == head then number else findNumber(number, tail)
+let findNumber(number, []) = nil
+</pre>
+
+<p>It's obvious that we can't prove the function terminates. But we aren't really interested in that. If we use the function as a type, we may write:</p>
+
+<pre>
+let someFunction(a : findNumber(10, [20, 10, 40])) = a + 1
+</pre>
+
+<p>In the above function, the function <code>findNumber</code> is executed with the given data in order to find the type of parameter <code>a</code>.</p>
+
+<p>In the same line of thought, we use the function <code>point</code> (see my post above) either for <code>real</code> or for <code>integer</code> or for any other type, primitive or not.</p>
+
+<p>Anyway, I am probably saying something stupid here, so please feel free to correct me.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Mon, 10/31/2005 - 16:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-11597"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11597" class="active">More to the point:</a></h3>
+ <div class="content"><p >What's the worst that happens if a (compile-time) typechecker fails to terminate?  And what about type inference algorithms (or functions used to define dependent types) which terminate but are non-polynomial?   What if I encode Ackermann's function using C++ templates?  (Ignoring the eventual and quick overflow on practical hardware?)</p>
+<p >Such problems may be annoying; but I'd rather have the program enter an endless loop or unbounded recursion at <i >my</i> desk than at the customer's...</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Mon, 10/31/2005 - 18:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-11632"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11632" class="active">That&#039;s what I am also saying.</a></h3>
+ <div class="content"><p >Executing a function at compile time will make the compiler understand if the function terminates or not. There is no need to prove, by a mathematical theorem, that a function really terminates for all possible input.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Tue, 11/01/2005 - 12:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-11634"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11634" class="active">No, making the compiler execu</a></h3>
+ <div class="content"><p >No, making the compiler execute a non-terminating function will only result in the compiler running for ever (ie not terminating).</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Tue, 11/01/2005 - 13:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-11636"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11636" class="active">And furthermore, many functio</a></h3>
+ <div class="content"><p >And furthermore, many functions have an infinity of possible inputs - so any time you're running them on unknown input (user-derived input, perhaps), exhaustive testing cannot possibly terminate!</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Tue, 11/01/2005 - 14:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-11637"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11637" class="active">The point...</a></h3>
+ <div class="content"><p >...I believe, is that since it is executing *at compile time*, the *programmer* can decide whether the *build stage* is taking longer than he wants.  Then, he can either decide that his compiler is crappy, or consider whether he managed to write a non-terminating type expression and try to debug his types.  But since he won't get an executable to ship to his customer until he makes typechecking succeed, it's only his own time wasted.</p></div>
+ <div class="links">By <a href="user/2166" title="View user profile.">David B. Held</a> at Tue, 11/01/2005 - 15:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-11641"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11641" class="active">Maybe I&#039;m missing the point...</a></h3>
+ <div class="content"><p >...but is there any difference between compile-time and run-time when you are talking about evaluating functions?  Perhaps some functions are evaluated only at compile time and some only at run time, but in essence all you've done is staged the run-time.</p>
+<p >So the question back is what difference does it make when the function is evaluated.  Evaluating a function has the same problem no matter what stage you want to evaluate it, unless there's a limiting syntax.</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Tue, 11/01/2005 - 15:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-11644"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11644" class="active">I think you are</a></h3>
+ <div class="content"><p >A non-terminating function fails to terminate at both compile time and runtime.  This is true.  But at runtime, you don't have the luxury of terminating the function manually while it's running on your client's machine.  But presumably compile time is completely within your domain, so you do have that luxury.  Which is why you really don't want non-terminating behavior in an executable image, but it's tolerable during a build stage.  Another option is for the compiler to simply stop after a large number of iterations and say: "I really think this type evaluation should have finished by now.  Are you sure you want to continue?"  That's essentially what happens in C++ when you blow the template instantiation stack.</p></div>
+ <div class="links">By <a href="user/2166" title="View user profile.">David B. Held</a> at Tue, 11/01/2005 - 16:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-11679"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11679" class="active">Exactly.</a></h3>
+ <div class="content"><p >I totally agree with your posts above. If a function does not terminate after a specific amount of time, the compiler would have to stop the compilation. </p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Wed, 11/02/2005 - 09:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-11680"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11680" class="active">but..</a></h3>
+ <div class="content"><p >Real men compile at runtime too.</p></div>
+ <div class="links">By <a href="user/465" title="View user profile.">Luke Gorrie</a> at Wed, 11/02/2005 - 09:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-11686"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11686" class="active">I think it&#039;s all the same. Staging happens.</a></h3>
+ <div class="content"><p >Frank Atanassow made a neat observation a few days back. Roughly paraphrased, he said: "Static languages are just dynamic languages with a libary that implements a static type system. This library lets you use a language in two stages, where the values of the first stage are types and the terms of the second stage are typed terms."<br ><br >
+To me, that implies that there isn't any difference between compile and run time for function evaluation. I think that most of the runtime work of dynamically checked languages could be done statically, and that partial evaluation is probably the most extreme case of that.<br ><br >
+Is there anything more static than partial evaluation?<br ><br >
+Is there anything more dynamic than dynamically checked languages?</p></div>
+ <div class="links">By <a href="user/1177" title="View user profile.">shapr</a> at Wed, 11/02/2005 - 13:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-11692"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11692" class="active">Stageable dynamically checked</a></h3>
+ <div class="content"><p >Stageable dynamically checked languages're more dynamic still, but we've had lisp a long time now. Eval might even predate proper type checks in lisp for all I know.</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Wed, 11/02/2005 - 15:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-11694"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11694" class="active">Not everyone likes VMs</a></h3>
+ <div class="content"><p >Ultimately, your processor only understands one language.  The buck stops here.  Unless you want to dynamically compile to machine code, you need a VM, and not everyone likes VMs or is willing (or allowed!) to use them in code.  No, not every large program contains a bad Lisp implementation.</p></div>
+ <div class="links">By <a href="user/2166" title="View user profile.">David B. Held</a> at Wed, 11/02/2005 - 15:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-11695"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11695" class="active">Compile-time is but a stage.</a></h3>
+ <div class="content"><p >Compile-time is but a stage. Nothing stops you running the checking stage just once, building the output and shipping that.</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Wed, 11/02/2005 - 15:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-11700"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11700" class="active">Compilers are just programs</a></h3>
+ <div class="content"><p >Some programs generate programs in various other languages - assembly, byte-codes, or even in the same language as original program being compiled.  Some compilers are written in the same language as that which they are compiling (e.g., C compilers are usually written in C, with some tweaks here and there for the target environment).</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Wed, 11/02/2005 - 17:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-11595"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11595" class="active">Ohmu</a></h3>
+ <div class="content"><p >You might check out work by Delesley Hutchins, <a href="http://lambda-the-ultimate.org/node/view/799">which I've referenced here before.</a><br >
+In the language he describes, the expression 1+1 returns 2, but the expression 1+Integer returns Integer, i.e. you can compute with types just as with values. Includes partial evaluation, etc..</p>
+<p ><a href="http://portal.acm.org/citation.cfm?id=949350"> The power of symmetry: unifying inheritance and generative programming</a> (ACM subscription required)</p>
+<p >The author, DeLesley Hutchins, is a student of Philip Wadler.</p>
+<p >"The Ohmu model unifies functions, classes, instances, templates, and even aspects into a single construct - the structure. Function calls, instantiation, aspect-weaving, and inheritance are likewise unified into a single operation - the structure transformation"</p></div>
+ <div class="links">By <a href="user/1560" title="View user profile.">James McCartney</a> at Mon, 10/31/2005 - 18:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-11635"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11635" class="active">I think Hutchins is blogging</a></h3>
+ <div class="content"><p >I think Hutchins is blogging at http://delesley.blogspot.com/.</p>
+<p >I've been playing (amateurly) with function/type systems myself, trying to feel my way around the problem.  </p>
+<ul >
+<li >5 is Integer | Constant</li>
+<li >5.2 is Double | Constant</li>
+<li >Constant is Function[0]</li>
+<li >Value[t] is Function[0]:t</li>
+<li >Variable[t] is Value:t | Function[1,t]:This</li>
+<li >Integer is Number</li>
+<li >Double is Number</li>
+<li >Byte is Number</li>
+<li >Sin(Number) is Double | Unary[Number]:Double</li>
+<li >Unary[t] = Function[1,t]:r</li>
+<li >LargeNumber = (Number - Byte)</li>
+<li >Add(Number, Number) is Binary[Number,Number]:Number</li>
+<li >Binary[Number,Number] is Function[2,Number,Number]:Number</li>
+<li >Data is Function[0]:This</li>
+<li >Name is Value[String]</li>
+<li >Address is Variable[String]</li>
+<li >Birthday is Variable[String]</li>
+<li >Budget is Variable[Number]</li>
+<li >Person is Data with Name, Address, Birthday</li>
+<li >Company is Person without Birthday with Budget</li>
+<li >Soundex(String) is Function[1,String]:String</li>
+<li >Variable ross = Person().Name("Ross").Address("home");</li>
+<li >Variable sndx = ross.Name.Soundex;</li>
+</ul>
+<p >The idea is that constants are functions, types are functions, records are functions, and types are combined by set mathematics, and can be parameterized.  This has been a tough problem for me to get my head around -- my goal is to yield something like (what I think) Epigram does...create the most general definitions possible and be able to have the system show what it can "figure out" how to do, and where you need to fill in the blanks.  </p></div>
+ <div class="links">By <a href="user/1683" title="View user profile.">rossjudson</a> at Tue, 11/01/2005 - 13:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-11638"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11638" class="active">What does it mean...</a></h3>
+ <div class="content"><p >...for a type to be a function?  I see some things that look like types-as-functions in your list, but I'm not sure what the implications are of making types *actually* functions.</p></div>
+ <div class="links">By <a href="user/2166" title="View user profile.">David B. Held</a> at Tue, 11/01/2005 - 15:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-11691"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11691" class="active">In my little system functions</a></h3>
+ <div class="content"><p >In my little system functions can be <i >instantiated</i> with ();  they are stateful.  Types are parameterized and can be invoked with [], which returns a new type, as do the union (|) and other type-set operators.</p>
+<p >SimpleNumberCollection = Collection[Number - Currency]</p>
+<p >[Number - Currency] is an anonymous type.  I could also have said:</p>
+<p >SimpleNumber = Number - Currency<br >
+SimpleNumberCollection = Collection[SimpleNumber]</p></div>
+ <div class="links">By <a href="user/1683" title="View user profile.">rossjudson</a> at Wed, 11/02/2005 - 15:01 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-11602"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11602" class="active">PTS / Haskell Modules</a></h3>
+ <div class="content"><p >A couple of other people have recognized the passing similarity between a types-language and an expression-language.  It turns out that LAMBDA (upper-case) from the second-order polymorphic lambda calculus is a replication of the lambda (lower-case) with Galois-connected abstractions of the type and value domains see <a href="http://doi.acm.org/10.1145/263699.263744">Cousot's 1997 POPL keynote</a>.</p>
+<p >Of course, this can be generalized to N levels, yielding pure type systems---see <a href="http://formal.cs.uiuc.edu/stehr/thesis.pdf">Stehr's thesis</a> and monadic type systems---see <a href="http://dx.doi.org/10.1016/S1571-0661(05)80691-7">Barthe et al. 1998</a>.</p>
+<p >In a more practical sense, the same idea infuses the idea of using Haskell as its own module language---see Shields and Peyton-Jones' <a href="http://research.microsoft.com/Users/simonpj/Papers/first-class-modules/first_class_modules.pdf">First-class Modules paper</a>.</p>
+<p >I think it also gives a formal description of effects, using the layered monad translation approach in Filinski's POPL 1999 paper on <a href="http://doi.acm.org/10.1145/292540.292557">layered monads</a>.  My take on the question is how does multi-staged programming fit into this general languages structure?</p></div>
+ <div class="links">By <a href="user/1276" title="View user profile.">ChrisD</a> at Mon, 10/31/2005 - 19:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-11611"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11611" class="active">partial evaluation</a></h3>
+ <div class="content"><p >I think Alan has the ultimate answer on the question of typing:</p>
+<p ><span class="strong"> So I think you could put the static typing issue into the larger context of partial evaluation. Would the attempt to produce a sufficiently capable partial evaluator lead to fame and fortune or obscurity and ruin? </span></p>
+<p >Partial evaluation (or abstract interpretation) is indeed the most general intersection between evaluation and typechecking.  Building a language around this realization is quite a challenge, though.  All of the issues of termination and partiality that are fairly simple in languages like Haskell become compile-time problems and require careful treatment of head normalization and partial approximation, and some degree of implicit or explicit staging.</p>
+<p >I do believe this is the next big step in computing. From machine code to Algol/C was the previous big step - the moves from C to C++, Java, C#, and Python are small steps in comparison. But actual attempts at implementing this are few and far between.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Mon, 10/31/2005 - 21:01 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-11645"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11645" class="active">&quot;Get rid of type declarations&quot;</a></h3>
+ <div class="content"><p >One other thing I wanted to point out.  In the example above:</p>
+<p >   let point(xval, yval) = tuple (x: xval, y: yval)</p>
+<p >A formal way to make this work is to represent types as identity functions.  Then, every identity function represents both a type and a function (you can call it and use it to specify types), while non-identity functions have no interpretation as types.  And then, the "point" function above happens to just be an identity function.  Then you can think of "int" as both the integer type (and write f(x:int)=x+1) and the identity function on integers and call it with int(3).</p>
+<p >So the answer to "can you unify types and functions" is affirmative, but the "should" variant of the question remains open.</p>
+<p >Keep in mind that the unification above works because there is a unique isomorphism between the types and identity functions in a programming language.  This is the essential criteria that justifies unifying two constructs in a programming language.</p>
+<p >When one syntactically unifies constructs that are conceptually distinct, the result is less justifyable.</p>
+<p >One example is the unification of functions and lists in LISP - which creates some very interesting possibilities for introspection, but it means that functions carry around a lot of observable metadata that breaks foundational properties like parametricity and extensional equality.</p>
+<p >Another example is Java and C#'s unification of value types (like int) and object types (like Int).  Though C#'s approach is more automatic, both create strange observable properties, such as exposing pointer equality on boxed Int's that differs from the underlying int equality.</p>
+<p >In the long-run, such unification of disparate concepts will be recognized as "clever hacks" rather than valid programming language design practices.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 11/01/2005 - 17:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-11681"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1085#comment-11681" class="active">Types and functions are not disparate concepts.</a></h3>
+ <div class="content"><p >Functions are computations, types are forms that are the results of computations. Every expression creates a type of some kind. Every line of code is a type, with its own requirements.</p>
+<p >The real advantage of using functions as type constructors is that a programming language can be minimized (i.e. requiring no special syntax for types) while being truly versatile, and at the same time minimize the compiler's work.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Wed, 11/02/2005 - 09:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

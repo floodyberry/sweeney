@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Securing the .NET Programming Model | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1588" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Securing the .NET Programming Model</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p ><a href="http://research.microsoft.com/research/pubs/view.aspx?type=article&amp;id=1216">Securing the .NET Programming Model</a>. Andrew J. Kennedy. <br >
+<blockquote ><p >
+The security of the .NET programming model is studied from the standpoint of fully abstract compilation of C#. A number of failures of full abstraction are identified, and fixes described. The most serious problems have recently been fixed for version 2.0 of the .NET Common Language Runtime.<br >
+</blockquote>
+<p >
+This is highly amusing stuff, of course. Some choice quotes:<br >
+<blockquote ><p >
+if source-language compilation is not fully abstract, then there exist contexts (think ‘attackers’) in the target language that can observably distinguish two program fragments not distinguishable by source contexts. Such abstraction holes can sometimes be turned into security holes: if the author of a library has reasoned about the behaviour of his code by considering only source-level contexts (i.e. other components written in the same source language), then it may be possible to construct a component in the target language which provokes unexpected and damaging behaviour.<p >
+One could argue that full abstraction is just a nicety; programmers don’t really reason about observations, program contexts, and all that, do they? Well, actually, I would like to argue that they do. At least, expert programmers...<p >
+"A C# programmer can reason about the security properties of component A by considering the behaviour of another component B written in C# that “attacks” A through its public API." -<br >
+This can only be achieved if compilation is fully abstract.</blockquote>
+<p >
+To see the six problems identified by thinking about full abstraction you'll have to go read the paper... </p> </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 06/26/2006 - 11:17 | <a href="taxonomy/term/8">Implementation</a> | <a href="taxonomy/term/14">OOP</a> | <a href="taxonomy/term/29">Semantics</a> | <a href="taxonomy/term/21">Type Theory</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1588" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2775 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1588" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1588" />
+<a id="comment-19137"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19137" class="active">The C in CLR</a></h3>
+ <div class="content"><p >The CLR is supposed to support other languages besides C#. Thus the compilation to the CLR Intermediate Language (IL) should by fully abstract for each and every language compiled.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Mon, 06/26/2006 - 11:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-19164"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19164" class="active">Full abstraction in multi-language runtimes</a></h3>
+ <div class="content"><p >Full abstraction would be a difficult feat to achieve in a multi-language runtime.  For example, languages in which the parametricity theorem holds require an additional set of abstraction properties.  What about a language with abstraction properties based on dependent types?  Proof carrying code?  Many features unique to certain languages would require additional CLR-level support to maintain full abstraction, so much that this doesn't seem a reasonable property to expect in a multi-language runtime.</p>
+<p >Of course, since C# is the cannonical language of CLR, it makes sense to tighten the system to the point where full abstraction does hold for C#, without expecting this of other languages implemented on top of CLR.</p>
+<p >For example, if you were going to build a serious proof-carrying code framework to implement further degrees of security, you would expect the proofs to be checked and the abstraction properties to hold at runtime in some higher-level translator from your language to CLR, rather than expecting them to actually hold in CLR.</p>
+<p >Thus CLR may eventually prove "too tight" for high-performance languages that employ proofs and more advanced type systems, since the source language can often eliminate array out-of-bounds checks, null pointer checks, and implicitly thread-parallelize code, while the CLR itself cannot and thus incurs runtime penalties.  But this isn't so much a complaint about CLR (which seems to be exactly what it should be), but a statement that it's not the last language runtime the world will ever need.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 06/27/2006 - 00:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19184"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19184" class="active">Multi-language holes?</a></h3>
+ <div class="content"><blockquote ><p >
+Of course, since C# is the cannonical language of CLR, it makes sense to tighten the system to the point where full abstraction does hold for C#, without expecting this of other languages implemented on top of CLR.
+</p></blockquote>
+<p >Would that not mean that components written in other languages could provide "holes", allowing attacks against C# components?  (Assuming that the other languages do not provide stronger guarantees than C#.)</p></div>
+ <div class="links">By <a href="user/1579" title="View user profile.">mcguire</a> at Tue, 06/27/2006 - 16:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19190"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19190" class="active">I think you&#039;ve got it backwards</a></h3>
+ <div class="content"><blockquote ><p >Would that not mean that components written in other languages could provide "holes", allowing attacks against C# components? (Assuming that the other languages do not provide stronger guarantees than C#.)</p></blockquote>
+<p >Guarantees made by high-level language are irrelevant.  The only guarantees that count are ones honoured by the CLR.  This is the source of the problem.</p>
+<p >For instance, if the semantics of C# state that an object is immutable, a programmer might assume that it is safe to pass it to untrusted code.  If the CLR does not honour this, there is a security hole.</p>
+<p >"Full abstraction holds" is another way of saying "guarantees made by the semantics of the high-level language are always honoured at runtime", which is the property needed to write secure code <em >regardless</em> of the attackers choice of language.</p></div>
+ <div class="links">By <a href="user/2028" title="View user profile.">Peter McArthur</a> at Tue, 06/27/2006 - 18:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19248"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19248" class="active">You&#039;re right.</a></h3>
+ <div class="content"><p >So a language intrinsically weaker than C# could not be implemented as-is on the CLR---it would get the semantics of the stronger guarantees.  For example, a component in a language with only mutable objects would get an error when it tried to modify an immutable object passed to it.</p>
+<p >On the other hand, a language making stronger guarantees than C# could not allow trust in any components written in C# or weaker languages, since the CLR will not guarantee the stronger semantics.</p>
+<p >"Full abstraction" for all languages supported by the CLR seems to be a hard problem.  And "Common" seems a little off, too, in this scenario.</p></div>
+ <div class="links">By <a href="user/1579" title="View user profile.">mcguire</a> at Wed, 06/28/2006 - 17:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19459"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19459" class="active">Yup</a></h3>
+ <div class="content"><p >At least, that's what my understanding is.</p></div>
+ <div class="links">By <a href="user/2028" title="View user profile.">Peter McArthur</a> at Wed, 07/05/2006 - 18:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19453"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19453" class="active">Definition</a></h3>
+ <div class="content"><p ><i >"Full abstraction holds" is another way of saying "guarantees made by the semantics of the high-level language are always honoured at runtime", which is the property needed to write secure code regardless of the attackers choice of language.</i></p>
+<p >Thanks, that's the best definition I've found of full abstraction so far.</p></div>
+ <div class="links">By <a href="user/1802" title="View user profile.">David Teller</a> at Wed, 07/05/2006 - 14:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-19166"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19166" class="active">Can we do better than bug-squishing?</a></h3>
+ <div class="content"><p >This is news to me!  Wasn't .NET supposed to be the panacea for all our untrusted vs trusted code headaches?  Did this dream die?</p>
+<p ><i >[Apologies to those for whom this is old news.  Please indulge my ignorance.]</i></p>
+<p >With 20 20 hindsight it's easy to spot the flaw.  The permissions afforded by the CLR must, by necessity, be a superset of the permissions required by each high-level .NET language.  Thus, code written in, say, C# can be interacted with in ways forbidden by the semantics of C#, and unspeakable mayhem follows.</p>
+<p >In his paper, Kennedy finds and fixes six failures of full abstraction in C#, as if they were bugs to be squished.  It strikes me that, as bugs go, failures of abstraction must be elusive, and the fixes kludgy.  Is there a better way?  Are our PL Theory tools up to the task?</p></div>
+ <div class="links">By <a href="user/2028" title="View user profile.">Peter McArthur</a> at Tue, 06/27/2006 - 00:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-19187"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19187" class="active">Holes</a></h3>
+ <div class="content"><blockquote ><p >Would that not mean that components written in other languages could provide "holes", allowing attacks against C# components? (Assuming that the other languages do not provide stronger guarantees than C#.)</p></blockquote>
+<p >I think that could be avoided completely with small refinements to the CLR.  For example, if the CLR supported a genuine bool type and enforced that it only contained true and false (and not other byte values like 67), then other languages could interoperate with C# without breaking the abstraction property in C#.</p>
+<blockquote ><p >This is news to me! Wasn't .NET supposed to be the panacea for all our untrusted vs trusted code headaches? Did this dream die?</p></blockquote>
+<p >The behavior that Kennedy et all have pointed out are not security holes in the traditional sense, e.g. of what Internet Explorer is littered with.  These findings offer no way to overwrite random memory, corrupt the stack, hijack a computer, etc.</p>
+<p >Rather, they just show that certain ideal properties of the C# language don't hold in the CLR, and suggest ways to improve this.  For example, there exist bool values v where v!=true &amp;&amp; v!=false.</p>
+<p >I only wish the rest of the industry (and of Microsoft!) were as open and respectable about identifying limitations and potential security issues and working publically to study and address them.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 06/27/2006 - 17:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19215"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19215" class="active">Holes</a></h3>
+ <div class="content"><blockquote ><p >I only wish the rest of the industry (and of Microsoft!) were as open and respectable about identifying limitations and potential security issues and working publically to study and address them.</p></blockquote>
+<p >Hear, hear!</p>
+<blockquote ><p >The behavior that Kennedy et all have pointed out are not security holes in the traditional sense, e.g. of what Internet Explorer is littered with. These findings offer no way to overwrite random memory, corrupt the stack, hijack a computer, etc.</p></blockquote>
+<p >Ah... I don't entirely agree with you on that point.  You're not comparing like with like.</p>
+<p >The .NET framework is supposed to allow us to run untrusted code in the same runtime as trusted code.  If I were running untrusted code in the same runtime as Internet Explorer, flaws in IE would be the least of my security concerns!</p>
+<p >The point is that a malicious agent can cause unexpected behaviour in security critical code.  He has a foot in the door.  Whether or not the attacker can escalate this into a full-scale compromise is a matter of luck and the attacker's skill.</p>
+<p >Indeed, from a certain perspective, this is <span class=\"italic\">worse</span> than an IE buffer overflow.  Buffer overflows happen because of sloppy coding, and we might reasonably expect that a more careful, security conscious programmer would not make the same mistakes (for some value of "reasonably").  We are, however, demanding much more of the programmer if we expect him to anticipate attacks that arise from the failure of the CLR to respect the semantics of his programming language.</p></div>
+ <div class="links">By <a href="user/2028" title="View user profile.">Peter McArthur</a> at Tue, 06/27/2006 - 22:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-19313"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19313" class="active">Unexpected behavior</a></h3>
+ <div class="content"><p ><blockquote ><p>The point is that a malicious agent can cause unexpected behaviour in security critical code. He has a foot in the door. Whether or not the attacker can escalate this into a full-scale compromise is a matter of luck and the attacker's skill.</blockquote></p>
+<p >This opens a wonderful can of worms!</p>
+<p >Given bool b, should C#'s type system assure that (b!=true &amp;&amp; b!=false) is never true?  Should it assure that given int a,b with a&gt;0 and b&gt;0, that a+b&gt;0?  That given "object a=3,b=3" that a==b?  None of those properties hold in C#, due to various historical accidents that most programmers educated in this decade don't intuitively understand.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 06/30/2006 - 18:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19330"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19330" class="active">Let&#039;s eat worms</a></h3>
+ <div class="content"><p >Again, I don't think you are making a fair comparison.</p>
+<p >The latter examples are instances of programmer confusion <em >within</em> the semantics of the language.  One could make a case that this is a flaw in the design of the language (why do we encourage programmers to think of an <code >int</code> as if it was an integer?) but the behaviour can be anticipated just by consulting the standard, and language designs can be improved.</p>
+<p >The example of <code >(b != true &amp;&amp; b != false)</code> evaluating to <code >true</code> is a different can of worms entirely.  The standard has been violated.  It's like asking an engineer to deal with violations of the Laws of Physics.  There's no point in fixing the standard if the standard isn't honoured!</p></div>
+ <div class="links">By <a href="user/2028" title="View user profile.">Peter McArthur</a> at Sat, 07/01/2006 - 14:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19471"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19471" class="active">You&#039;re right</a></h3>
+ <div class="content"><p >You're right.  (b != true &amp;&amp; b != false) is an example of weird, semantically incorrect behavior while given int a&gt;0,b&gt;0, having a+b less than zero is weird, semantically correct behavior.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 07/06/2006 - 17:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19505"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1588#comment-19505" class="active">Um...</a></h3>
+ <div class="content"><p >... have we reached a consensus here?  :-)</p></div>
+ <div class="links">By <a href="user/2028" title="View user profile.">Peter McArthur</a> at Sat, 07/08/2006 - 10:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

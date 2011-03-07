@@ -1,0 +1,16 @@
+http://lambda-the-ultimate.org/classic/message8055.html
+http://lambda-the-ultimate.org/classic/message8055.html#8074
+0532343
+Theorems for free!
+Re: Theorems for free!
+<p>Keep in mind that this "free theorem" business isn't universal, but depends on the particular type theory used.  In particular, that the type theory doesn't admit types as terms and doesn't provide any operations on types besides sum, product, and exponential.  Haskell is one of the few practical language where it holds.</p><p>
+
+For example, if your type theory exposed a function inhabited :: type -&gt; bool which returned true if the type were inhabited and false if empty, then not every universal quantification would have such a free theorem.  For example, forall a.[a]-&gt;[bool] would exist but wouldn't be invertible.</p><p>
+
+In my view, the reorganization of type theory into category theory has been very harmful to the subject.  It has reinforced the separation of types and terms, leaving few researchers to ponder systems combining the two or to even consider the possibility that such systems might be valid and useful.  Why?  Category theory's focus on isomorphism (instead of equality) doesn't scale.  John Baez's writings on things such as "the category of all categories" and "the category of all categories of all ..." illustrate the near-hopeless complexity of isomorphisms-of-categories perfectly.  As a result, simple notions like "the type of the type of all inhabited subtypes of the type of natural numbers" seem incomprehensibly difficult in category theory and hence in type theory.</p><p>
+
+Category theory brought useful advances to topology.  No surprise here, because topology is precisely the study of isomorphisms between geometric objects.  Type theory, as it applies to any sort of actual programming system, just needs to answer the question, "which values are allowed in this context?" and there is no benefit to dragging isomorphism into this picture.</p><p>
+
+The state of type theory today seems to me to like a set theory where most refuse to acknowledge the possibility that sets might themselves contain sets, or the existence of functions from sets to sets, from values to sets, or from sets to values.  Sure, the current approach brings some simplifications to reasoning about types, but only at the expense of a wealth of new tools for expressing, refining, and reasoning about types.</p><p>
+
+This conclude's today's rant. :-)</p>

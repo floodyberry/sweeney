@@ -1,0 +1,870 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Arc is released | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2643" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Arc is released</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Make of it what you will, but <a href="http://arclanguage.org/">Arc</a> is now <a href="http://paulgraham.com/arc0.html">officially released</a>.<p >
+This part of Graham's announcement is a gem:<br >
+<blockquote ><p >
+I worry about releasing it, because I don't want there to be forces pushing the language to stop changing. Once you release something and people start to build stuff on top of it, you start to feel you shouldn't change things. So we're giving notice in advance that we're going to keep acting as if we were the only users. We'll change stuff without thinking about what it might break, and we won't even keep track of the changes.
+<p >
+I realize that sounds harsh, but there's a lot at stake. I went to a talk last summer by Guido van Rossum about Python, and he seemed to have spent most of the preceding year switching from one representation of characters to another. I never want to blow a year dealing with characters. Why did Guido have to? Because he had to think about compatibility. But though it seems benevolent to worry about breaking existing code, ultimately there's a cost: it means you spend a year dealing with character sets instead of making the language more powerful.<br >
+</blockquote>
+<p >
+This sure made me smile...</p> </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 2008-01-30 07:07 | <a href="taxonomy/term/6">General</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2643" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 13204 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2643" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2643" />
+<a id="comment-39698"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39698" class="active">I love Alan Perlis&#039; epigram</a></h3>
+ <div class="content"><p >I love Alan Perlis' epigram #19: "A language that doesn't affect the way you think about programming, is not worth knowing."</p>
+<p >There certainly seem to be interesting new variants of Lisp (here's a <a href="http://lambda-the-ultimate.org/node/2631">worthy-sounding avenue of exploration</a>) but from the tutorial it's not obvious what makes Arc one of them.  So what makes Arc worth knowing?</p></div>
+ <div class="links">By <a href="user/243" title="View user profile.">Roly Perera</a> at Wed, 2008-01-30 08:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39741"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39741" class="active">Bah</a></h3>
+ <div class="content"><p >[[I love Alan Perlis' epigram #19: "A language that doesn't affect the way you think about programming, is not worth knowing."]]</p>
+<p >Bah, this is obviously an 'ivory tower' remark: Java, D doesn't affect much the way you think about programing over C++, yet they're worthy to learn, the first one because it may get you a job, the second one because it's an improvement over C++..</p></div>
+ <div class="links">By <a href="user/1458" title="View user profile.">renox</a> at Thu, 2008-01-31 06:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39747"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39747" class="active">Mu</a></h3>
+ <div class="content"><p >[When I started this comment, I disagreed much more with you than I do now :)]</p>
+<blockquote ><p >
+Java, D doesn't affect much the way you think about programing over C++,
+</p></blockquote>
+<p >I agree that neither Java nor C++ affect much the way I am thinking about programming <em >in general</em>, and this is how I interpret "Perlis' Razor". (I left out D because I have not done anything substantial in it.)</p>
+<p >However, note that (t)his view is philosophical, as it implies that only expressivity counts.  So, yes, this is perhaps indeed what you call "ivory tower" remark. But that means your economics argument ("yet they're worthy to learn, the first one because it may get you a job") is orthogonal to the discussion, and that only muddies the waters here, really.</p>
+<p >(As an aside, I do design and program quite differently in Java than in C++ (and other languages, too), so they very much affect the way I think <em >while</em> programming.)</p>
+<p >I wish Perlis would have said "concept" instead of "language".  I think there is not really any programming language in particular that is worth knowing, but concepts like (in no particular order) iteration, recursion, closures, objects, condition systems, continuations, monads, macros, all sorts of polymorphism, types, concurrency, etc..  All these do affect how I think about solutions when shaping them.</p></div>
+ <div class="links">By <a href="user/1471" title="View user profile.">michaelw</a> at Thu, 2008-01-31 09:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39800"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39800" class="active">Software has no price...</a></h3>
+ <div class="content"><p >...when your time has no value.</p></div>
+ <div class="links">By <a href="user/4466" title="View user profile.">grettke</a> at Fri, 2008-02-01 18:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-39699"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39699" class="active">Keeping track of the changes</a></h3>
+ <div class="content"><p >I like Paul and his writings, but I had to admit that I really cringed when I read "and we won't even keep track of the changes".  Unless, that is, his goal is to make sure that nobody ever uses Arc, in which case he's doing the right thing ;-)</p>
+<p >The language spec, which I have yet to fully read, has a few things I like (such as a neat concise syntax for a kind of lambda expressions), and some things I didn't like (such as an automatic indexing of data structures when you use the data structure as a function).  Overall, though, I see little to get excited about.  It's a more concise dialect of lisp, but that's about it AFAICT.  But time will tell.</p></div>
+ <div class="links">By <a href="user/373" title="View user profile.">Michael Vanier</a> at Wed, 2008-01-30 08:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39703"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39703" class="active">Spec</a></h3>
+ <div class="content"><p ><i >The language spec, which I have yet to fully read, has a few things I like</i>...</p>
+<p >Do you mean <a href="http://ycombinator.com/arc/tut.txt">the tutorial<a >?</p></div>
+ <div class="links">By <a href="user/918" title="View user profile.">Charles Stewart</a> at Wed, 2008-01-30 13:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39729"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39729" class="active">Spec</a></h3>
+ <div class="content"><p >Yup.</p></div>
+ <div class="links">By <a href="user/373" title="View user profile.">Michael Vanier</a> at Wed, 2008-01-30 23:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-39702"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39702" class="active">No hygiene</a></h3>
+ <div class="content"><p >According to the announcement, arc's macros are not hygienic (no surprise), but it also has no module system.  How does arc avoid hygiene problems? </p></div>
+ <div class="links">By <a href="user/918" title="View user profile.">Charles Stewart</a> at Wed, 2008-01-30 13:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39705"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39705" class="active">With symbol generation</a></h3>
+ <div class="content"><p >Or maybe the answer is "what problems?"  Here's a quote (taken from <a href="http://www.paulgraham.com/popular.html">here</a>) from Paul Graham:</p>
+<blockquote ><p >
+Classic macros are a real hacker's tool-- simple, powerful, and dangerous. It's so easy to understand what they do: you call a function on the macro's arguments, and whatever it returns gets inserted in place of the macro call. Hygienic macros embody the opposite principle. They try to protect you from understanding what they're doing. I have never heard hygienic macros explained in one sentence. And they are a classic example of the dangers of deciding what programmers are allowed to want. Hygienic macros are intended to protect me from variable capture, among other things, but variable capture is exactly what I want in some macros.
+</p></blockquote></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Wed, 2008-01-30 14:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39706"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39706" class="active">gensym isn&#039;t enough</a></h3>
+ <div class="content"><p >This is a classic misunderstanding of macros and hygiene. There are cases where <code >gensym</code> is simply not expressive enough to do what hygienic macros can do. If I have a macro that expands into</p>
+<pre >(list 1 2 3)</pre><p >and someone else wants to use it in a context where <code >list</code> has been shadowed, there's nothing the client can do, and <i >nothing I can do</i>, to get the macro to work.</p>
+<p >"So what?" you say. Maybe you write your macro only to expand into fully-qualified module-resolved names that--depending on what language you're using--may not be shadowable. Or maybe you just expand into obfuscated names that nobody's likely to shadow... Nice try, but that doesn't work when you write macro-defining macros like <code >define-inline</code>.</p>
+<p >Paul makes two points that are true: 1) Sometimes you want to capture. True, but anyone familiar with real hygienic macro systems knows that this is perfectly possible; you can selectively capture with hygienic systems like <code >syntax-case</code>. 2) Nobody knows how to explain hygiene well. This is definitely an issue, in part because as a research community we're still getting a handle on the subject. (My <a href="http://www.ccs.neu.edu/home/dherman/research/papers/esop08-hygiene.pdf">forthcoming ESOP paper</a> with Mitch Wand is work in that direction.)</p></div>
+ <div class="links">By <a href="user/825" title="View user profile.">Dave Herman</a> at Wed, 2008-01-30 15:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39709"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39709" class="active">Dear Mr. Graham,</a></h3>
+ <div class="content"><blockquote ><p >I have never heard hygienic macros explained in one sentence.</p></blockquote>
+<p >An hygienic macro is one where the meanings of symbols that aren't parameters to the macro are bound at the definition site rather than the expansion site.</p>
+<p >-------------</p>
+<p >Okay, a bit flip, and there is real complexity in explaining what any particular hygienic system promises and what it doesn't.  So maybe he was saying that he's never heard any specific hygienic system explained accurately in one sentence.</p>
+<p >I wonder why he would be opposed to a macro system that supports selective capture.  I mean, besides the explanation bit.</p></div>
+ <div class="links">By <a href="user/4902" title="View user profile.">James Iry</a> at Wed, 2008-01-30 16:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39745"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39745" class="active">James&#039; definition of hygiene</a></h3>
+ <div class="content"><p ><i >An hygienic macro is one where the meanings of symbols that aren't parameters to the macro are bound at the definition site rather than the expansion site.</i></p>
+<p >Very nice. </p></div>
+ <div class="links">By <a href="user/918" title="View user profile.">Charles Stewart</a> at Thu, 2008-01-31 08:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39750"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39750" class="active">An hygienic macro is one</a></h3>
+ <div class="content"><p >&gt; An hygienic macro is one where the meanings of symbols that aren't<br >
+&gt; parameters to the macro are bound at the definition site rather than the<br >
+&gt; expansion site.</p>
+<p >That's a *very* LISP-based definition of hygiene.</p>
+<p >I think part of the problem with hygiene is that in common usage it conflates two entirely separate concepts. Put simply: hygiene says there shouldn't be unintended variable capture (where "unintended" varies from language to language); referential transparency says that variables in a macro that are lexically bound in that scope should remain lexically bound to that scope even when they're inserted elsewhere.</p>
+<p >If you want to a see a different approach to these issues that's different than the traditional CL/syntax-case approach, have a look at my <a href="http://convergepl.org/">Converge</a> language. I don't know whether Converge's approach is the best possible approach, because ultimately this is a language design issue more than it is a fundamental theoretical issue.</p></div>
+ <div class="links">By <a href="user/1322" title="View user profile.">Laurence Tratt</a> at Thu, 2008-01-31 13:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39755"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39755" class="active">parameters to the macro</a></h3>
+ <div class="content"><p >That notion is commonly used as a sort of best-approximation heuristic for understanding hygiene, but it's more like a rule of thumb than a specification. In fact, the notion of "provided as a parameter to the macro" isn't even well specified. For example, let's say I want to write an unhygienic loop macro:</p>
+<pre >
+(loop (begin
+        (when (prime? i)
+          (break i))
+        (set! i (+ i 1))))
+</pre><p >Why's it unhygienic? By your definition, it's because <code >break</code> is captured by the macro, but it's not provided as an argument to the macro. So this is impossible to write in a totally hygienic macro system like <code >syntax-rules</code>, right?</p>
+<p >But! The body of the loop <i >is</i> an argument to the macro. So you can't really claim that <code >break</code> wasn't provided as an argument. It's just buried somewhere inside the body. If the macro can find an instance of the identifier <code >break</code> in the body, it can copy that identifier into a binding position, thereby "hygienically" implementing an "unhygienic" macro. (Deriving &perp; is left as an exercise for the reader.)</p>
+<p >This isn't an academic point -- the <code >loop</code> macro was thought to be impossible to implement in <code >syntax-rules</code> until <a href="http://groups.google.com/group/comp.lang.scheme/msg/5438d13dae4b9f71">Al Petrofsky showed how in 2001</a>.</p>
+<p >I claim there is a more precise but still relatively simple intuition for what hygiene means:</p>
+<p ><b >Hygienic macro expansion preserves &alpha;-equivalence.</b></p>
+<p >One sentence, even!</p>
+<p >Don't get me wrong -- making this formal and precise is still hard. The tricky part is defining precisely what &alpha;-equivalence means for programs with macros. See my aforementioned paper for a formal treatment of the subject.</p>
+<p >But intuitively, the idea of "intended" vs. "unintended" variable capture has to do with the binding structure of a macro. If you can make that intention explicit by providing a specification of the binding structure of your macros, then you can actually define &alpha;-equivalence and provide a correctness criterion for hygienic expansion. Without such specifications, we are left with heuristics. Essentially, what existing algorithms do is dynamically (i.e., at expansion time) infer this binding structure.</p></div>
+ <div class="links">By <a href="user/825" title="View user profile.">Dave Herman</a> at Thu, 2008-01-31 15:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39801"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39801" class="active">To poster</a></h3>
+ <div class="content"><p >+1</p></div>
+ <div class="links">By <a href="user/4466" title="View user profile.">grettke</a> at Fri, 2008-02-01 18:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39746"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39746" class="active">PG on hygiene</a></h3>
+ <div class="content"><p >I think it is fair enough to say that implementations of hygiene are not trivial, but there is a tradeoff.  Best practice in CL for macro writing results in macro definitions that are generally significantly more obtuse and verbose than comparable macros in scheme (possible with syntax-case), and which still have some subtle hygiene risks.  Will Clinger has opined that CL does not run into problems with hygiene because of its module system (he was one of the architects of the CL module system).   The tradeoff seems to be between ease of understanding the implementation on the one hand, and simplicity and brevity of code on the other.</p>
+<p >What PH has written so far does not reassure me that he has not made a mistake here.  I'd like to know more about how much code has been written in arc, and whether arc faces problems with macros in practice that CL does not.</p></div>
+ <div class="links">By <a href="user/918" title="View user profile.">Charles Stewart</a> at Thu, 2008-01-31 09:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39849"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39849" class="active">Felleisen on toys</a></h3>
+ <div class="content"><p >Felleisen blogged about this pre&euml;mptively over at the
+<a href="http://lambda-the-ultimate.org/node/2236">PLT Scheme
+blog</a> almost a year ago.  If you accept his premise...</p>
+
+
+<ol >
+
+  <li >The macro system of Common Lisp (and, by extension, Arc) is
+    totally lame compared to that of PLT Scheme. [I am
+    paraphrasing here, see his
+    <a href="http://blog.plt-scheme.org/2007/05/macros-matter.html#c1884380977658768810">post</a>
+    for the exact wording.]
+  </li>
+
+  <li ><em >Because we support macros-as-abstractions, implementing
+  <a href="http://www.ccs.neu.edu/scheme/pubs/#aplas06-fff">classes,
+  mixins, and traits as macros</a> is not only feasible, it's a
+  joy. Indeed,
+  implementing <a href="http://lambda-the-ultimate.org/node/2214">an
+  entire language, such as Arc</a> is doable and is no just a toy
+  (as it would be if implemented in a primitive macro system).
+  </em>
+  </li>
+</ol>
+
+<p >... then the inescapable conclusion is that Arc's own macro
+system is too feeble to implement Arc itself.  Pretty amusing, if
+you ask me.</p>
+
+<p >What's even more amusing is that Arc's current implementation
+does <a href="http://blog.plt-scheme.org/2007/05/macros-matter.html#c902222653534759526">not</a>
+seem to use any of the Scheme macrology:
+</p>
+
+<blockquote ><pre >$ curl -O http://ycombinator.com/arc/arc0.tar 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  150k  100  150k    0     0   336k      0 --:--:-- --:--:-- --:--:--  513k
+$ tar xf arc0.tar 
+$ grep -cE 'syntax-(rule|case)' arc0/*.scm
+arc0/ac.scm:0
+arc0/as.scm:0
+arc0/brackets.scm:0
+</pre></blockquote></div>
+ <div class="links">By <a href="user/1114" title="View user profile.">el-vadimo</a> at Sun, 2008-02-03 14:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-39707"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39707" class="active">Backwards Compatability</a></h3>
+ <div class="content"><p >Languages aren't the only thing that suffer when they have to think about being compatible with previous versions.  I'm sure that many applications have had their ability to innovate stifled by having to consider the release already out on people's machines.  It will be interesting to see just how painful it will be to migrate from one version of ARC to the next, and whether the frequent changes were worth the cost.</p></div>
+ <div class="links">By <a href="user/5257" title="View user profile.">Ethan Vizitei</a> at Wed, 2008-01-30 16:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39708"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39708" class="active">Early alpha</a></h3>
+ <div class="content"><p >This is clearly not meant to be the final answer.  From the site:</p>
+<blockquote ><p >Number one, expect change. Arc is still fluid and future releases are guaranteed to break all your code. In fact, it was mainly to aid the evolution of the language that we even released it.</p></blockquote></div>
+ <div class="links">By <a href="user/4902" title="View user profile.">James Iry</a> at Wed, 2008-01-30 16:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-39717"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39717" class="active">ASCII Only?</a></h3>
+ <div class="content"><p >Doesn't good language design more to do with learning from the weaknesses of other languages than coming up with cool new ideas? </p>
+<p >Does it really bode well for a language to announce your language with a quote about someone else's character-support mistake while proudly supporting only ASCII? (Isn't this a little like the American electoral tendency to vilify learning and wisdom?)</p>
+<p >Unicode isn't perfect, but can anybody argue it's a bad thing? Haven't we had Unicode libraries and support long enough that implementation is a significant issue? Can anyone really claim that only supporting plain ASCII when you're building a language from scratch has any virtue (except maybe laziness and impatience)? </p></div>
+ <div class="links">By <a href="user/5258" title="View user profile.">sarah_a180</a> at Wed, 2008-01-30 18:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39718"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39718" class="active">Not offended, but certainly not interested</a></h3>
+ <div class="content"><p ><i >I realize that supporting only Ascii is uninternational to a point that's almost offensive, like calling Beijing Peking, or Roma Rome (hmm, wait a minute). But the kind of people who would be offended by that wouldn't like Arc anyway.</i></p>
+<p >I'm not offended by his choosing to support only ASCII, but the kinds of apps I'm writing often deal with non-English data.  It isn't political incorrectness that would keep me from ever using Arc, it's that it is <em >intentionally designed</em> to be the wrong tool for my problem domains.</p>
+<p >(What kind of people does that make me?)</p></div>
+ <div class="links">By <a href="user/1479" title="View user profile.">ned</a> at Wed, 2008-01-30 19:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39721"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39721" class="active">As an aside...</a></h3>
+ <div class="content"><p >English isn't the only language which refers to foreign locales by names other than what the locals call 'em.  The French refer to Germany as "Allemagne".  The Chinese call themselves "zhong guo" (middle kingdom), and the US "mei guo" (a sort of transliteration of "America").  And "Peking" isn't really incorrect; it just is a spelling that uses a now-deprecated system of romanizing the Chinese language.  </p>
+<p >I suspect that arc not supporting Unicode may relate to the difficult of case-folding semantics in many other languages; which have nastier rules than does English.  Most LISPs are case-insensitive, so Unicode support would either have to break with a longstanding LISP convention to do cleanly, or be messy and nasty.  Unicode identifiers and normalization is a nasty enough problem as it is.  </p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 2008-01-30 20:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39722"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39722" class="active">and I should mention...</a></h3>
+ <div class="content"><p >that the Germans, of course, call their own country "Deutschland".  Just to be PC and all.  :)</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 2008-01-30 20:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39740"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39740" class="active">Is ASCII good enough for *anybody*?</a></h3>
+ <div class="content"><blockquote ><p >the kinds of apps I'm writing often deal with non-English data.</p></blockquote>
+<p >
+I'm English.  I live in England.  I usually only develop websites and applications used by English people living in England.  ASCII isn't even good enough for <em >me</em> because it doesn't include the currency symbol used by English people in England, '£'.
+</p>
+<p >
+Even if you only care about Anglophones, ASCII <em >still</em> isn't suitable.
+</p></div>
+ <div class="links">By <a href="user/5263" title="View user profile.">Bogtha</a> at Thu, 2008-01-31 05:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39742"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39742" class="active">One should remember what ASCII stands for:</a></h3>
+ <div class="content"><p ><B >American</b> Standard Code for Information Interchange.</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Thu, 2008-01-31 06:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39773"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39773" class="active">Extended ASCII?</a></h3>
+ <div class="content"><p >I'm a little surprised, because I naively assumed that pg meant extended ASCII - which does indeed contain the £ character.  But after a simple test, it seems I'm wrong, as this is the result of a test:</p>
+<p ><code >arc&gt; ("1£2" 1)<br >
+#\?</code></p>
+<p >I'm curious why it doesn't at least support code page 437 or ISO-8859-1.  Requiring only one more bit, and without as many gotchas as UTF-8 (correct me if I'm wrong), it doesn't seem like it should be so difficult to implement.</p></div>
+ <div class="links">By <a href="user/5265" title="View user profile.">Daniel Waechter</a> at Thu, 2008-01-31 20:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39723"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39723" class="active">ASCII Only?</a></h3>
+ <div class="content"><p >I can sympathize with that decision, as it avoids bloating a language specification with the mess that is Unicode.  For example, the specification of "valid unicode string" is too complex to express in most type systems, whereas a valid ASCII string is simply an array of ASCII characters.  There's also the question of encoding: Do you expand all characters to 32 bits using UTC-32?  Even then you still have to deal with combining characters, etc, so that one UTC-32 element doesn't coincide exactly with one character.  Or do you use a UTF-8 style encoding, where the notion of 'character' is ill-defined, since a character may require multiple UTF-8 elements.  Even if those problems didn't exist, Unicode doesn't define a mapping to glyphs, so yet another layer of translation is required to manipulate or display them.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Wed, 2008-01-30 20:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39726"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39726" class="active">Except...</a></h3>
+ <div class="content"><p >In this case Paul Graham doesn't need to decide anything, as the infrastructure he uses, PLT Scheme, already has a full Unicode implementation.  In fact given that PLT Scheme supports Unicode, and Paul states &ldquo;For example, Arc's read is MzScheme's&rdquo; he must have done extra work just to break Unicode support!</p></div>
+ <div class="links">By <a href="user/354" title="View user profile.">Noel</a> at Wed, 2008-01-30 21:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39923"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39923" class="active">MzScheme supports unicode in</a></h3>
+ <div class="content"><p >MzScheme supports unicode in one way, but not necessarily the best one: it represents strings as sequences of codepoints, so glyphs made up from several composing characters will be represented as several Scheme characters. Which is kind of painful -- look to comp.lang.scheme for much gnashing of teeth as R6RS made the same decision.</p>
+<p >I think this is exactly what Graham is getting at: hacking up _a_ unicode implementation is easy enough, but developing the best one requires lots of work, and the consequences of prematurely standardising on an inferior approach are unfortunate.</p></div>
+ <div class="links">By <a href="user/4186" title="View user profile.">Vilhelm Sjoberg</a> at Wed, 2008-02-06 18:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-39957"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39957" class="active">Factor..</a></h3>
+ <div class="content"><p >.. has recently added support for 24 bit strings capable of representing all unicode code points.  <a href="http://factor-language.blogspot.com/2008/02/24-bit-strings-are-in.html">Details here</a>.</p>
+<p >Seems like a decent way to do this to me.  Also, another contributor is writing a unicode library.</p>
+<p >But the language is 4 years old.. hmm.</p></div>
+ <div class="links">By <a href="user/3695" title="View user profile.">Gavin Harrison</a> at Thu, 2008-02-07 14:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39728"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39728" class="active">The mess that is Unicode...</a></h3>
+ <div class="content"><p >...is unfortunately, necessary.  At least much of it is.  </p>
+<p >Likeitornot, there are many thousands of useful symbols used round the world, many of which look similar and have different meanings.  Many different locales have different conventions for case folding, string sorting, what constitutes a "letter"--ch, ll, and rr are all considered single "letters" in Spanish, whereas in English they are digraphs.  Then there's "backwards" scripts such as Hebrew, bidirectional scripts, and vertical scripts.  I'm sure you're all aware of this.</p>
+<p >(Though I'm curious:  How does Epic handle internationalization of its games?)</p>
+<p >Unicode is messy because natural language is messy and political.  It may not be an optimal solution, but it is a satisfactory one; given the politics inherent in representing the world's natural languages (and the symbolic languages of many non-computer problem domains), I'm not sure that an optimal solution is possible.  *That* is one wheel that I'm more than willing to have a committee invent once, rather than having to deal with myself.  I'm unaware of any clean alternatives to Unicode which don't achieve their cleanliness by discarding whole swaths of human communication.</p>
+<p >Many useful things in the domain of real life can't be expressed in toto by the type systems of most languages.  That to me is an argument for stronger type systems, not for taking Occam's razor to reality just so it can be more easily coded.</p>
+<p >One of the nice things about Unicode--especially at the level that most PLs operate--is that most of the work is already done for you.  The Unicode consortium already has lots of helpful suggestions as to what level of normalization should be applied to identifiers, etc.  </p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 2008-01-30 22:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39732"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39732" class="active">PG took a decision that</a></h3>
+ <div class="content"><p >PG took a decision that seems to be unpopular, but I completely understand: multiple character sets should be managed by the application, not by the language. </p>
+<p >Languages are complex beasts, and there is no consensus in the world about how to develop multiple language applications. Languages are too cultural to be defined by a Unicode committee. I'm grateful Unicode created some standards but some of the decisions they took define a way of working (we can call it framework) I dislike. Sometimes I would prefer to manage myself the mess of having multiple languages.</p>
+<p >Obviously if you think PG point of view is wrong I recommend you not to use Arc in your next multi language development, but I'm sure if you want to develop an English and Chinese application it will be much more helpful to have some Chinese programmers in the team than some Unicode experts.</p>
+<p >Finally, what happens when languages change? In Spanish ch and ll are not letters since 1994 -- we changed the grammar (rr was never a letter) Of course all of them are digraphs.</p></div>
+ <div class="links">By <a href="user/1627" title="View user profile.">rogersm</a> at Wed, 2008-01-30 23:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-39733"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39733" class="active">Actually...</a></h3>
+ <div class="content"><p >...internationalization is best handled by a combination of programming languages, the platform (including components such as the OS, the UI framework/environment, web browser, or whatever else you have), and the application.  Mostly the middle part.</p>
+<p >Languages should provide means of representing characters (symbols), and strings thereof.  If you provide a means of representing characters, the encoding should be defined (or be parametrically variable)--being agnostic on this point is dangerous.  Certain operations on strings, likewise, may need to be provided by the language for its own purpose.</p>
+<p >I'll wholly agree that a "core" programming language (i.e. a set of constructs sufficient to define any program concisely--excluding domain-dependent or higher level services) shouldn't need to worry about how to render Chinese or Arabic properly.  That sort of stuff can be handled by other parts of the software stack (though the application shouldn't do it--it's specialized common code that should be shared by whatever apps run on a given platform).</p>
+<p >But Graham could have (and should have, IMHO) undertaken the basic steps to make Arc Unicode-friendly.  Unicode is here to stay--the debate as to its merits was settled years ago.  Program readers should understand UTF-whatever.  The storage for a single character should not be limited to 8 bits.  Perhaps Arc won't have problems migrating in the future, I don't know.  </p>
+<p >But PL support for Unicode isn't difficult.  It really isn't.  And much of the code and tables you need to do it can be downloaded for free <a href="http://www.unicode.org/onlinedat/online.html">here</a>.</p>
+<p >Pity that Arc isn't, and apparently won't be, on <a href="http://www.unicode.org/onlinedat/products.html#5">this list</a></p>
+<p >And I respectfully disagree that there is "no consensus" on how to develop multi-lingual applications.  Perhaps there isn't unanimous agreement, but if you write apps for Windows, there *is* a way to do it.  'Twas dictated FTMP by Microsoft, but there it is.  Likewise in the FOSS world.  Likewise in the Java software stack.  Likewise in the browser/Javascript environment.  International software is a reality today.  It works.  And on every modern platform you can think of where internationalization of a global nature is found (i.e. not just Western European stuff, not just the local language + English)--you will find Unicode.</p>
+<p >A programming language of a modern design which ignores Unicode is like a PL of twenty years ago deciding to ignore ASCII.  Bad move.</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Thu, 2008-01-31 00:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-39751"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39751" class="active">I&#039;m surprised this interestest in low level thinking...</a></h3>
+ <div class="content"><p >...it seems the problem is the limitedness of 8 bits storage for a single character.</p>
+<p >Internationalization is not a technical problem, it's a cultural problem. </p>
+<p >I'm not interested how a single character is stored. I want to have enough data types to develop multi language application without being limited by the Unicode Framework: too heavy, too complex, and difficult to develop with it. Having <i >Unicode only strings</i> is something I'm not interested in.</p>
+<p >For developers working in applications with western languages there is no problem developing an application in English, French, German and Spanish without Unicode. Cyrillic languages (and modern Greek) are slightly more problematic but mainly because the programmer has no idea of their alphabet.</p>
+<p >As soon as you move to Semitic languages things get incredibly harder. The right to left nature of these languages create some problems Unicode is not able to solve (and it should not) and the ligatures in Arabic script is a problem not solved by the anyone in the computer science/engineering world.</p>
+<p >My only experience with Asian languages is Korean, a fairly easy language to work with. But I'm think Asian speakers are not completely happy with Unicode.</p>
+<p >Unicode gives me a single character set. This is enough for me. I'm happy with a UTF-<i >whatever</i> data type so all my applications can interoperate.</p>
+<p >Unicode support at library/application level is the right equilibrium between usefulnesses and complexity. Moving Unicode to language definition creates a lot of problems I'm not interested in solving.</p>
+<p >And no, I don't think it is a programmer's right to be able write diacritical marks in your source code variables if your Italian.</p></div>
+ <div class="links">By <a href="user/1627" title="View user profile.">rogersm</a> at Thu, 2008-01-31 13:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-39841"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39841" class="active">Lions, Tigers and Bears -- Oh My!</a></h3>
+ <div class="content"><blockquote ><p >
+...if you want to develop an English and Chinese application it will be much<br >
+more helpful to have some Chinese programmers in the team than some Unicode<br >
+experts.
+</p></blockquote>
+<p >This is something of a strawman -- you don't need "Unicode experts" in either<br >
+case. If you use Unicode, you just need programmers that understand a little<br >
+about it.</p>
+<p >Internationalizing an application by hiring staff from all over the world for<br >
+each version does not strike me as a good use of time -- or talent. Most of<br >
+your core logic is the same in the English and Chinese versions (as well as<br >
+the Korean and Gaelic and Gothic versions). So these "Chinese programmers"<br >
+would end up being translators, unless there were some serious programming<br >
+problems introduced by the Chinese character set -- the kind of problems that<br >
+might come up if your language did not have pervasive Unicode support.</p></div>
+ <div class="links">By <a href="user/2907" title="View user profile.">Jason Dusek</a> at Sun, 2008-02-03 07:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39734"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39734" class="active">The mess that is Unicode...</a></h3>
+ <div class="content"><p >I agree that international language support requires a standard with a large character set with far more complex handling of case, directionality, display, and order than ASCII.</p>
+<p >But Unicode ought to have defined an unambiguous encoding rather than suggesting that different strings of e.g. UTC-32 codes can produce the same character point.  IEEE 754 made a similar mistake in defining +0 and -0 as "distinct but equal" values.  These specs are incompatible with extensional equality.</p>
+<p >Also, Unicode doesn't define any sort of mapping to glyphs, which to me is one of the important things such standard ought to do.</p>
+<blockquote ><p >Many useful things in the domain of real life can't be expressed in toto by the type systems of most languages.</p></blockquote>
+<p >This is true, but character strings are a simple enough domain that they could be precisely characterized by simple types.  So, it really sucks that the standard defines it in such a way that this can't be done.</p>
+<p >To answer your question: We store all text as UCS-16, and went to great effort a while back to move everything from ASCII to 16-bit Unicode, right before the consortium realized that 16 bits wasn't enough.  Nowadays, Windows doesn't support UCS-32 nor UTF-8, so we're stuck with too 2X bloat yet still not enough bits to represent all characters directly.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 2008-01-31 01:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-39735"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39735" class="active">Tim wrote:But Unicode ought</a></h3>
+ <div class="content"><p >Tim wrote:</p>
+<blockquote ><p >But Unicode ought to have defined an unambiguous encoding rather than suggesting that different strings of e.g. UTC-32 codes can produce the same character point. IEEE 754 made a similar mistake in defining +0 and -0 as "distinct but equal" values. These specs are incompatible with extensional equality</p></blockquote>
+<p >I'm assuming you are referring to the issue of combined forms, such as &agrave;, vs combing a with a grave accent modifier?  To me, obviously, the use of combining forms ought to be preferred (they're more flexible); but many scripts that Unicode has to be backwards compatible with (Latin-1 for instance) have precombined forms.</p>
+<p >Fortunately, even though two Unicode strings (encoded in the same representation) aren't bitwise comparable; they are normalizable; the normalized forms can be bitwise-compared.  </p>
+<p >I won't get into +/-0 in IEEE754; 'tis beyond my numerical chops to comment on that.</p>
+<blockquote ><p >Also, Unicode doesn't define any sort of mapping to glyphs, which to me is one of the important things such standard ought to do.
+</p></blockquote>
+<p >Unicode does give "suggestive" glyphs for printable code points, but even coming up with an "idealized" glyph for a code point has to take markup into account.  Font specification and rendering is a nontrivial problem in itself; a glyph for a 12-point font at a given DPI generally won't look good when blown up at a higher point size.  You want a different glyph.  Scalable fonts do a lot more stuff than just expand glyphs, after all.</p>
+<blockquote ><p >
+To answer your question: We store all text as UCS-16, and went to great effort a while back to move everything from ASCII to 16-bit Unicode, right before the consortium realized that 16 bits wasn't enough. Nowadays, Windows doesn't support UCS-32 nor UTF-8, so we're stuck with too 2X bloat yet still not enough bits to represent all characters directly.</p></blockquote>
+<p >Are you using characters outside the basic multi-lingual plane (or that otherwise can't be represented by a single 16-bit number in UTF-16)?  Given the  storage demands of multimedia elements within a modern videogame, I'm surprised that two bytes per character of text seems to be regarded as an extravagance.  I do embedded systems work with a fraction of the resources that you have available; yet UTF-16 works fine for what I do.  And besides--complaints about mandatory UTF-16 on your development platform of choice ought to be taken up with MS, not the Unicode committee.  (What do you use on non-Windows platforms like the PS3, Linux, or OSX?)</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Thu, 2008-01-31 02:01 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39786"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39786" class="active">Performance.</a></h3>
+ <div class="content"><p >If you do a lot of text processing, Unicode support blows your performance - Regexp matching etc gets VERY slow compared to extended ASCII handling.</p>
+<p >Also, according to what I'm told, you need shift handling ANYWAY, according to the people that live in the affected areas (asian countries.)</p></div>
+ <div class="links">By <a href="user/1396" title="View user profile.">Eivind Eklund</a> at Fri, 2008-02-01 12:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39842"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39842" class="active">shift handling</a></h3>
+ <div class="content"><p >What do you mean, "shift handling"? You mean, handling upper case and lower case Chinese characters? I don't understand what that means.</p></div>
+ <div class="links">By <a href="user/2907" title="View user profile.">Jason Dusek</a> at Sun, 2008-02-03 07:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-39720"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39720" class="active">I Guess it Scratches Paul Graham&#039;s Itch...</a></h3>
+ <div class="content"><p >...so, good for him. But I certainly don't see how this advances Lisp at all.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Wed, 2008-01-30 20:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39731"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39731" class="active">Agree</a></h3>
+ <div class="content"><p >I couldn't have put it any more clearly than you just did.</p></div>
+ <div class="links">By <a href="user/373" title="View user profile.">Michael Vanier</a> at Wed, 2008-01-30 23:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-39724"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39724" class="active">Ahh, the burdens of supporting a userbase.</a></h3>
+ <div class="content"><p >Must be the reason that the best programming languages (or, to quote Bjarne Stroustrup, the ones that nobody complains about) are those which nobody uses.  </p>
+<p >Alpha-releases are well and good.  Arc will be better off if Graham considers the feedback of users--and it might even be more better off were he to have released it even earlier; inertia <i >is</i> a barrier to improvement (or at least to change; not all changes are improvements).</p>
+<p >But at some point, the language will have to stabilize (and have changes follow a disciplined strategy) if it is to succeed.  (What "success" will mean for Graham, I don't know).</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 2008-01-30 20:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-39730"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39730" class="active">Any good summary yet...</a></h3>
+ <div class="content"><p >of the differences between Arc and other Lisp dialects?  In what way is it an improvement (for some tangible class of applications--changes which are globally better are unfortunately rare) over CL or Scheme?  Looking at the tutorial, some surface differences (i.e. <code >if </code> instead of cond) stand out... but that's hardly compelling.</p>
+<p >The main advantage (or possible advantage) which comes to mind for Arc is a (as yet) single implementation (something which has greatly enabled Python, Perl, and similar)--as opposed to multiple implementations with known compatibility issues, as is the case of both CL and Scheme.  But that assumes that a) the language attracts users to begin with, and b) Graham has the technical and organizational skills to permit the language to evolve gracefully and serve the needs of its users.  The technical skills, I've no doubt.  The organizational skills...that is the big reason why guys like Linus Torvalds, Guido, and Larry Wall have succeeded in leading wildly successful projects, whereas other projects that are arguably technically superior have failed.  It's why Jimbo Wales was the right guy to lead Wikipedia and Larry Sanger wasn't, despite the latter's far superior academic credentials.  </p>
+<p >If Arc is to succeed, Graham must, at some point, <b >let it go</b>.  And that might be the hardest challenge for a brilliant guy who is a well-known perfectionist with a well-chronicled dislike for compromise.</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Wed, 2008-01-30 23:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-39748"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39748" class="active">Maybe I&#039;m new here...</a></h3>
+ <div class="content"><p >Here's why Arc is great:  because we're all talking about it here and so is everyone else.  It's great because I am excited to try it.  Can you remember the last time you felt that way about a dialect of Lisp?  Was it recently?</p>
+<p >Unicode vs. ASCII:</p>
+<p >I felt like it was pretty clear that PG put out this version of Arc with the idea that it was *not* finished and further that it was a way to flesh out programs quickly and do some exploratory programming.  The combination of those two things makes it not having Unicode support a non-issue for me.  I don't prototype a program to support 20 languages.  I don't expect something that is brand new and actively stated as being unfinished to be finished and polished.  Why does everyone else?  And finally, if you want Unicode support so bad, get to work, PG has already said on the Arc site that he will roll your changes into the next version.  What more could you want?  If you're a Lisp programmer are you really telling me that you expect someone else to do all the dirty work for you?  Isn't the point of Lisp that you get to do your own dirty work and at 10 times the speed?</p></div>
+ <div class="links">By <a href="user/5264" title="View user profile.">jdvolz</a> at Thu, 2008-01-31 09:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39752"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39752" class="active">But it doesn&#039;t even slice bread!</a></h3>
+ <div class="content"><blockquote ><p >
+I felt like it was pretty clear that PG put out this version of Arc with the idea that it was *not* finished<br >
+...<br >
+I don't expect something that is brand new and actively stated as being unfinished to be finished and polished. Why does everyone else?
+</p></blockquote>
+<p >
+Hey, don't go making sane comments around here! ;)  That's a good question, which I was thinking about myself.
+</p><p >
+The most specific answer in the Unicode case is that Graham's announcement wasn't particularly tactful on this front.  If he had said "we don't have Unicode support yet, but &lt;something about the future Unicode strategy&gt;", the response might have been more muted.  But really, because of Unicode PCness, he would probably have still had to justify that decision further, which is part of what he did in the announcement.  Faced with the certainty of criticism about Unicode support, perhaps a preemptive strike against complainers is as rational a strategy as any.
+</p><p >
+Slightly more generally, Arc just had so much by way of expectations built up amongst some people, that anything short of a revolution in language design &mdash; one which was immediately and obviously recognizable as brilliant and attractive &mdash; would have been a disappointment.  Plus of course there are a lot of people who just reflexively criticize anything done by someone with Graham's reputation (i.e. tall poppy syndrome).
+</p><p >
+An even more general problem, which provides a backdrop for both of the above points, is that most people are very bad at understanding the concept of a work in progress.  The whole idea of alpha and beta software is still new, historically speaking.  Most people don't actually ever create anything significant themselves, so have little concept of the incompleteness, rough edges and slow progress that characterize the development of almost anything non-trivial.  When they actually get to see something in an early stage of development, warts and all, they don't know what to make of it, and we see the results of that confusion in the various strange reactions.
+</p><p >
+That's not to say that there aren't any legitimate questions that can be raised about the purpose of Arc and some of the technical decisions that have been made.  I'm a bit suspicious of the non-hygienic macro thing myself, but again, there are definite pragmatic reasons for not trying to solve the macro problem once and for all before releasing a new language.  CL is evidence that dirty macros may be good enough from a "worse is better" perspective, especially if you decide you're not going to rely as heavily on macros as e.g. PLT Scheme does.
+</p><p >
+Arc doesn't seem to be providing (or claiming to provide, afaict) any major technical breakthroughs.  The focus seems to be on language usability for a particular type of user.  What will make it most interesting, as others have suggested, is if it attracts enough of a userbase to turn it into a "popular Lisp", with a single implementation, which would be quite an achievement.
+</p><p >
+On the question of "how this advances Lisp", I think it can be seen as similar to the venture capital model of advancing the economy: you create a large number of experiments, exploring the solution space, and although many of the experiments are failures, they can still teach us a lot.  There've been plenty of Lisp dialects in the past that haven't gone anywhere but are interesting to study for various reasons.  How <i >else</i> is Lisp going to advance?  (Of course, there's a faction of CL users who think the language attained perfection sometime in the past couple of decades, but they don't read LtU.)
+</p><p >
+I agree with Scott's point that for Arc to achieve significant popularity, some "letting go" will ultimately be necessary &mdash; e.g. I think that a barrier to wider popularity for some Scheme implementations is that they're still controlled in a somewhat cathedral-like way by their creators, even if they're open source; or else the implementations are "too advanced" and not as hackable by ordinary mortals as some of the more popular open source languages.  Releasing Arc at this relatively early stage seems like a good step in the direction of letting go, and it seems premature to speculate further on that.
+</p><p >
+[Edit: I think <a href="http://weblog.raganwald.com/2008/01/david-heinemeier-hansson-step-aside.html">Raganwald's take</a> on this is pretty good.]</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Thu, 2008-01-31 13:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39758"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39758" class="active">Arc == Total Perspective Vortex</a></h3>
+ <div class="content"><blockquote ><p >
+The focus seems to be on language usability for a particular type of user.
+</p></blockquote>
+<p >Looks like that user would be...</p>
+<p >Paul Graham!</p></div>
+ <div class="links">By <a href="user/1485" title="View user profile.">glennehrlich</a> at Thu, 2008-01-31 17:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39764"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39764" class="active">That&#039;s the stated spec</a></h3>
+ <div class="content"><p >Yes, he has said that in so many words.  Anyone who's surprised by that now wasn't paying attention.  The kibbitzers are as responsible as anyone for the perspective vortex in this case.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Thu, 2008-01-31 18:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39754"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39754" class="active">Quite recently</a></h3>
+ <div class="content"><blockquote ><p >...because I am excited to try it. Can you remember the last time you felt that way about a dialect of Lisp? Was it recently?</p></blockquote>
+<p ><a href="http://lambda-the-ultimate.org/node/2622">Incredibly recently.</a><br >
+<a href="http://lambda-the-ultimate.org/node/2547">Quite recently.</a><br >
+<a href="http://lambda-the-ultimate.org/node/707">And not really that long ago.</a></p>
+<p >But still, I get your point, you're talking about a possible benefit whereby Arc increases interest in Lisps and Lisp-like concepts in general.  That's not totally out of the realm of LtU, it's just less of core interest than programming language theory, design, and implementation.  So you won't see quite as much discussion about what role Arc might play in increasing awareness of functional programming, syntactic abstraction, "code as data", etc.</p>
+<blockquote ><p >Unicode vs. ASCII: I felt like it was pretty clear that PG put out this version of Arc with the idea that it was *not* finished</p></blockquote>
+<p >Some of the wording in the announcement is a little vague.  It's not clear if he meant "it's just ASCII for now and that's a good thing since it allows us to get it out the door fast" vs "it's just ASCII and that's a good thing because that's all Arc needs for its long term design goals and anything else will just be a waste of time."  A lot of people are taking it to mean the later and trying to hash out why that could possibly be a good design decision.</p></div>
+ <div class="links">By <a href="user/4902" title="View user profile.">James Iry</a> at Thu, 2008-01-31 13:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39756"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39756" class="active">redefined</a></h3>
+ <div class="content"><p ><em >"Here's why Arc is great: because we're all talking about it here and so is everyone else."</em></p>
+<p >I think you have redefined <em >great</em> to mean - this weeks new toy.</p></div>
+ <div class="links">By <a href="user/674" title="View user profile.">Isaac Gouy</a> at Thu, 2008-01-31 16:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39770"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39770" class="active">We&#039;re ALL talking about it?</a></h3>
+ <div class="content"><p >No, we're not <i >all</i> talking about it. I bet not even most PLT people in either the industry or the academia are talking about it (there were things like <a href="http://www.langnetsymposium.com/">2008 Lang.NET symposium</a> going on). Programmers in industry are definitely not talking about it. </p>
+<p >It seems to me that the only people who are talking about it are those who have followed Paul Graham's writings over the years and wanted to see what <b >it</b>, <b >the thing</b>, <b >the real deal</b> would look like.</p>
+<p >"This is it?" is what some ask. No, it's not because of lack of unicode, which is a total distraction.</p></div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at Thu, 2008-01-31 19:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-39775"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39775" class="active">Not that big a deal...</a></h3>
+ <div class="content"><p >Start with a lexically-scoped Lisp-1.  Toss in setf, only call it =.  Shorten a few other function/special form names.  Change the syntax on some binding forms and a few commonly used control structures.  Mix in non-hygienic macros and a few items that support web-based dispatch and transformation.</p>
+<p >Oh yeah!  ASCII only :-).</p>
+<p >Wrap in lots of hype, ship.</p>
+<p >Almost all Lisp users build/modify their own Lisp environments at one time or another in their lives.  In most cases, these forays into the new are not treated like the second coming of McCarthy.  Nothing particularly interesting here.</p></div>
+ <div class="links">By <a href="user/1863" title="View user profile.">fadrian</a> at Thu, 2008-01-31 20:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39778"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39778" class="active">Ya know</a></h3>
+ <div class="content"><blockquote ><p >second coming of McCarthy.</p></blockquote>
+<p >Too bad. If it was, he might have a chance to <a href="http://www-formal.stanford.edu/jmc/">meet himself.</a></p></div>
+ <div class="links">By <a href="user/4902" title="View user profile.">James Iry</a> at Thu, 2008-01-31 21:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39785"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39785" class="active">What have other languges done?</a></h3>
+ <div class="content"><p >What have other languges done in the last years that has nothing to do with types?</p></div>
+ <div class="links">By <a href="user/5221" title="View user profile.">matthias becker</a> at Fri, 2008-02-01 12:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39796"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39796" class="active">Well...</a></h3>
+ <div class="content"><p >there's concurrency... mobile code... proof-carrying code... stronger and better module systems... metaprogramming... increased use of deductive rather than inductive reasoning... </p>
+<p >Lots of interesting directions in PLT research besides type systems.</p>
+<p >And on the indsustrial side of things, many newer languages have combined the lessons learned from theory with increasingly powerful toolsets.  Things like O'Caml, Scala, or F# aren't all that interesting to theorists--but as they help bring new techniques to the masses, they are useful nonetheless.</p>
+<p >So many languages have accomplished many things new.  Right now, the main compelling thing about Arc seems to be the faint glimmer of hope that legions of CL and Scheme hackers (or even the users of one of these) will abandon the several mutually-incompatible versions of both, and re-unite the Lisp community, or some segment thereof, on a single implementation.  Other than that, it appears to be another Lisp dialect.  Nothing wrong with that, but many people seem to be expecting more from Paul Graham, given the time he took and his reputation.  </p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Fri, 2008-02-01 17:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39798"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39798" class="active">Er...</a></h3>
+ <div class="content"><p >Concurrency, mobile code, proof-carrying code, module systems, and metaprogramming are "besides type systems?"</p>
+<p >OCaml and Scala aren't all that interesting to theorists?</p>
+<p >Are we on the same LtU? :-)</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 2008-02-01 18:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-39802"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39802" class="active">Touche...</a></h3>
+ <div class="content"><p >to call the things I mentioned "besides" type systems, is perhaps a bit of a stretch.  All of them are, of course, informed or improved by type theory research.</p>
+<p >But, they are axes of PL improvement/capability that are interesting even not considering their type-theorietical aspects.  Plus, they are all routinely done (and studied) in the context of dynamically typed (or untyped, if you prefer) systems.  Erlang, Javascript, Smalltalk, Ruby--oh, and numerous flavors of Lisp--are all interesting languages for various reasons listed above, and these are all dynamically typed.</p>
+<p >*That* is what I meant.  </p>
+<p >Occasionally one encounters the (rather provincial IMHO) view that CL and/or Scheme represent the pinnacle of PL research; and that the interest that PL theorists have in powerful type systems and such is ultimately unproductive and uninteresting.  The question "what have other languages done in the last years that has nothing to do with types" can either be interpreted as an innocent query as to the fruits of PLT labors; or as a derisive putdown of PLT.  I assumed the former in answering the question; I mention the latter possibliity to you only in explaination.  :)</p>
+<p >Regarding O'Caml, etc.... perhaps I got a bit ahead of myself.  PLT research *is* done using these, and/or extensions to these.  OTOH, much of their value is in moving established ideas from research to production environments.  Which is not a bad thing.  Of course, the same can be said about Java itself--despite the fact that Java is not a terribly interesting language from a theoretical point of view (I think I'm on firmer ground here); it's a great tool for experimentation due to the infrastructure that exists all around it.  </p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Fri, 2008-02-01 19:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39793"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-39793" class="active">I&#039;ll go with that summary. </a></h3>
+ <div class="content"><p >I'll go with that summary.  He might as well have called it Yarc, where RC expands into any noun phrase suggestive of mild underwhelmingness.</p></div>
+ <div class="links">By <a href="user/243" title="View user profile.">Roly Perera</a> at Fri, 2008-02-01 14:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-40097"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-40097" class="active">Move on -- nothing to see here</a></h3>
+ <div class="content"><p >This could be a test of how willing geeks are to follow a selfdeclared guru who does nothing more than every hacker is doing all day at home.</p>
+<p >come on... renaming some stuff and adding prehistoric html output, doesnt makes a new language.</p>
+<p >What we see here is just the result of some spare time killing of a bored millionaire, imho.</p></div>
+ <div class="links">By <a href="user/5340" title="View user profile.">bonk</a> at Thu, 2008-02-14 15:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-40109"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-40109" class="active">how do i sign up to do that gig?</a></h3>
+ <div class="content"><p >!</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Thu, 2008-02-14 20:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-40134"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2643#comment-40134" class="active">How to become a bored millionaire.</a></h3>
+ <div class="content"><p >First, you'll need to go make a million dollars...</p>
+<p >(OK, its an old joke but I couldn't resist).</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Fri, 2008-02-15 19:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="
+http://wiki.squeak.org/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2008/01/15" title="Previous month">«</a> February 2008  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2008/2/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2008/2/2" title="1 post">2</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/2/3" title="3 posts">3</a></td>
+  <td class="day-link"><a href="archive/2008/2/4" title="2 posts">4</a></td>
+  <td class="day-link"><a href="archive/2008/2/5" title="3 posts">5</a></td>
+  <td class="day-link"><a href="archive/2008/2/6" title="5 posts">6</a></td>
+  <td class="day-link"><a href="archive/2008/2/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2008/2/8" title="1 post">8</a></td>
+  <td class="day-normal">9</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/2/10" title="1 post">10</a></td>
+  <td class="day-link"><a href="archive/2008/2/11" title="1 post">11</a></td>
+  <td class="day-normal">12</td>
+  <td class="day-link"><a href="archive/2008/2/13" title="4 posts">13</a></td>
+  <td class="day-link"><a href="archive/2008/2/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2008/2/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2273" title="56 comments">&quot;Practical&quot; advantages of lazy evaluation </a></li><li><a href="node/2666" title="4 comments">Qis of the Future</a></li><li><a href="node/2673" title="17 comments">Recursive Algorithms that cannot be expresses with Tail-Recursion?</a></li><li><a href="node/2674" title="5 comments">PL Related Blogs</a></li><li><a href="node/2665" title="5 comments">10 Years of Purely Functional Data Structures</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2674" title="5 comments">PL Related Blogs</a></li><li><a href="node/2673" title="17 comments">Recursive Algorithms that cannot be expresses with Tail-Recursion?</a></li><li><a href="node/2672" title="2 comments">Java the language vs. Java the ecosystem</a></li><li><a href="node/2670" title="4 comments">MACLISP Manual Comes To The Web</a></li><li><a href="node/2669" title="1 comment">Sake = Rake for Smalltalk</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

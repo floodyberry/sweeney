@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/464
+http://lambda-the-ultimate.org/node/464#comment-3423
+1049040
+Links (Wadler)
+A major event
+<p>This announcement perhaps marks one of the major events in programming language history, which go on to shape the field for decades to come.  It's wonderful to see Philip Wadler at the center of this effort; he is one of the few who have the broad experience and credibility to make it a success.
+</p><p>I certainly hope that the Links syntax will be inspired by the C/Java/Pascal/Python school rather than Haskell, ML, Scheme, or (worse) XML.  The later languages are far from mainstream programming practice and would needlessly inhibit the language's adoption by the practical folks who are its target audience.
+</p><p>It is certainly unrealistic to expect that a pure functional language would succeed in the mainstream.  A better tradeoff is a language with monadic effects types (but retaining mainstream syntax -- not Haskell "do" notation) which enable general imperative programs to be written naturally, and the scope of their effects clearly delimited so that the language retains a powerful and usable functional core.</p>

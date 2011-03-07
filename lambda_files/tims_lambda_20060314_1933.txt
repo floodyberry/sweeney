@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1323
+http://lambda-the-ultimate.org/node/1323#comment-15385
+1049899
+Rich resource site for the programming language &quot;K&quot;
+There are two things here
+<p>There are two things here which impede my understanding of "cross:(,/,/:\:)/(),/:".
+</p><p>The most obvious is that I don't have an intuition of how this is parsed, e.g. where the symbol boundaries lie and how they are joined together into programming constructs.  From reading and mathematics, we all have an elaborate intuition of how to parse things like "myfunc(x,a)=x*2+a".  That intuition doesn't help us with complex new symbols and precedence rules are introduced.
+</p><p>The other impediment also exists in reading Haskell code written in the "point-free" style, where functions are defined as compositions and higher-order functions of other functions such as "f = map (sin . cos)".  Here, I can easily parse this definition, but it's harder to see the meaning given just prerequisite knowledge of math and other programming languages.  To me, this definition is much clearer when function arguments and the underlying computation are written explicitly, such as "f(xs)=[sin(cos(x)) | x in xs]".</p>

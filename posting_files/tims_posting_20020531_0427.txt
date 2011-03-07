@@ -1,0 +1,52 @@
+http://groups.google.com/group/sci.fractals/browse_thread/thread/2a195cfbdd0d5c03/7a0bf6929038e14e?lnk=st&rnum=63&hl=en#7a0bf6929038e14e
+[sci.fractals] The nth iteration of f(x)=x^2+c
+Here I will use the notation f^-1(x) for the inverse function of f(x), and in general f^n(x) for the nth iteration of f(x).  For example, f^3(x) = f(f(f(x))).
+
+Some obvious identities involving iterated functions are:
+
+   if f(x)=x+c then f^n(x)=x+nc
+   if f(x)=x*c then f^n(x)=x*c^n
+
+A few more identities can be derived in closed form, such as f(x)=a*x+b.  However, deriving a general formula for f^n(x) turns out to be remarkably hard, even for simple f.
+
+Now, given f(x)=g(h(g^-1(x))), it's easy to see that f(f(x))=g(h(h(g^-1(x))).
+
+And more generally, f^n(x)=g(h^n(g^-1(x))).
+
+This identity is useful for determining the nth iteration of a function f(x), when we can represent f(x) as a composition of the functions g and h, where h is a function simple enough to determine h^n(x) directly.
+
+For example, we know that
+
+   2*cos(x)^2-1=cos(2*x)
+
+Replacing x with arccos(x), we have
+
+   2*x^2-1=cos(2*arccos(x))
+
+Now, cos(2*arccos(x)) is of the form g(h(g^1(x))) where g(x)=cos(x) and h(x)=2x.  Therefore, we derive
+
+   if f(x)=2*x^2-1    then f^n(x)=cos(2^n*arccos(x))
+
+When I derived this result 13 years ago, it went a great way towards understanding the behaviour of chaotic dynamic systems: in iterating 2*x^2-1 many times, one quickly notices that small perturbations of the input value have a dramatic effect on later results.  The mechanism for this becomes much less mysterious when you consider the equation cos(2^n*arccos(x)) as n grows large: the function is zooming through oscillations of the cosine function at an exponential rate.
+
+With some simple scaling that doesn't affect the end results, one can transform these equations to
+
+   f(x)=x^2-1/2
+
+Which just happens to be a point on the Mandelbrot set (defined by iterations of f(x)=x^2+c) where c=-1/2+0i.
+
+So, I have a few questions related to this topic:
+
+1. Are there any studies or research papers on the general study of determining f^n(x) for various functions?
+
+2. Is a closed-form solution known for f^n(x) given f(x)=x^2+c?
+
+3. Are there any studies or general results on f^n(x) where n is:
+
+   - Rational.  Such a notation is clearly meaningful, i.e. f^2/3(x) is the function g(x) such that f(f(x))=g(g(g(x))).
+
+   - Real, i.e. f^pi(x).  The iterative meaning of such a notation isn't obvious but from the obvious example of f(x)=x+c implying that f^n(x)=x+n*c it seems that such an extension could be defined.
+
+Thanks,
+
+Tim Sweeney 

@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/1641
+http://lambda-the-ultimate.org/node/1641#comment-20187
+1050217
+Generics as a Library
+Parametricity in Haskell
+<p></p><blockquote><div>So the interesting question, related to yours, is: does the parametricity theorem yield in Haskell?</div></blockquote><p></p><p>
+My understanding is that parametricity holds in all referentially transparent Haskell code that does not use explicit forcing via "seq".  Code using "seq" is "parametric mod _|_".  Haskell does support code that isn't referentially transparent via unsafePerformIO and I'm not sure what implications this has on parametricity.</p>

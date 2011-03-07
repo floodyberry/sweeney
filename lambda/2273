@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>&quot;Practical&quot; advantages of lazy evaluation  | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2273" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>&quot;Practical&quot; advantages of lazy evaluation </h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Hi all,<br >
+i am new to functional programming paradigm. One thing that i have doubt about is lazy evaluation. I dont know how much it is useful in practical sense of programming? Is it useful, because it allows us to be less careful at the time of writing the  program ( by not giving syntax errors) and then crashing suddenly during actual execution of the function .. i am not sure. Can you please explain a little on this topic.</p>
+<p >regards<br >
+chinmay</p> </div>
+ <div class="links">By <a href="user/3959" title="View user profile.">chinu</a> at 2007-05-30 11:20 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/2276" title="CONTEXT07. Delimited contexts in OS">previous forum topic</a> | <a href="node/2166" title="Terminology: Thunking vs Quoting">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2273" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 1638 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2273" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2273" />
+<a id="comment-33667"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33667" class="active">optimization: unused arguments are not evaluated</a></h3>
+ <div class="content"><p >Say you have a function which doesn't use some of its arguments, because of a certain condition. Without lazy evaluation these arguments are always evaluated, which might be an expensive operation.  </p></div>
+ <div class="links">By <a href="user/2598" title="View user profile.">bokel</a> at Wed, 2007-05-30 12:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-33706"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33706" class="active">That&#039;s the theory</a></h3>
+ <div class="content"><p >That's the theory, but it would be good to see non-contrived examples where this is a significant win, examples that balance out the overhead of lazy evaluation.</p>
+<p >(Sorry if I sound picky here.  I've just been noticing that the performance benefits of lazy evaluation are often cited, but rarely supported with samples from real code projects.)</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Fri, 2007-06-01 17:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-33707"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33707" class="active">What, inefficiently</a></h3>
+ <div class="content"><p >What, inefficiently generating an infinite list of primes is too contrived? ;)</p>
+<p >Seriously, I think the supposed performance benefits of laziness are a red herring.  In a bit of recent real-world coding (generating DNA datasets), I found that once I adjusted to thinking in terms of streams, laziness made some styles of programming elegant and concise where they would be awkward in an eager language.  I guess this succinctness could encourage to algorithmic improvements sometimes, but with either strict or lazy evaluation, you have to be doing something weird to do anything but just the work you wanted.</p></div>
+ <div class="links">By <a href="user/199" title="View user profile.">sean</a> at Fri, 2007-06-01 17:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-33708"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33708" class="active">Generating queries and</a></h3>
+ <div class="content"><p >Generating queries and projections from large graphs or similar structures, when the user's only looking at a small chunk of the data at a time.</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Fri, 2007-06-01 18:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-33668"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33668" class="active">What type of laziness?</a></h3>
+ <div class="content"><p >There are two sorts of laziness out there.  The first is optional laziness, such as is found in Ocaml.  In this case, most of the program is evaluated eagerly, but some computations can be marked as lazy (in Ocaml, the 'lazy' keyword introduces a lazy evaluation, that can be forced with a call to Lazy.force).</p>
+<p >This level of laziness is usefull in developing purely purely functional data structures.  I did a short introduction <A href="http://enfranchisedmind.com/blog/archive/2007/01/01/177">here</A> on the usefullness of lazy lists, even in an eager language like Ocaml.</p>
+<p >The other "style" of laziness is pervasive laziness, like Haskell.  This does bring some advantages- for example, laziness has kept Haskell pure, and made it easier for Haskell to parallelize (unlike, for example, Ocaml).  Also, it opens up possibilities for high level optimizations which are either incredibly difficult to do or generally not worth it in a language like Ocaml.  For example, it is always true in Haskell that <code >map f (map g lst)</code> is the exact same as <code >map (f . g) lst </code>.  This is true for all functions f and g, and all lists, in Haskell- it is not true for all functions and all lists in Ocaml (hint: what happens if f or g has side effects?).  And thus Haskell doesn't have to perform tricky and complicated tests to see if the transformation is safe.  In addition to eliminating the intermediate data structure, this transformation has also opened up new optimization possibilities (the function <CODE >(f . g)</CODE> can be specialized and inlined in many cases).</p>
+<p >There are downsides to pure laziness as well.  For example, based on results from the Great Computer Language Shootout (where Haskell is performance competitive with Java and C#), laziness costs about as much as executing in a virtual machine.  Plus, you have the problem of space leaks.</p></div>
+ <div class="links">By <a href="user/1625" title="View user profile.">bhurt-aw</a> at Wed, 2007-05-30 13:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-33680"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33680" class="active">Purity</a></h3>
+ <div class="content"><p >All of the advantages you list have to do with purity and not at all with laziness.  As discussed in the <a href="http://research.microsoft.com/~simonpj/papers/haskell-retrospective/index.htm">Haskell retrospective</a>, perhaps the primary benefit of laziness, as you said, is to have kept Haskell pure.</p>
+<p >The big issue in practice so far as I've seen for laziness is not performance exactly*, but simply that the "radically different" performance characteristics.  Code must simply be written differently in a lazy-by-default language as opposed to an eager-by-default language; it is not something that you can think about when you want to.  <a href="http://www.haskell.org/hawiki/StackOverflow">StackOverflow</a> on the (old) Haskell wiki, describes one instance (though it isn't explicitly addressing this point.)</p>
+<p >* I doubt laziness is the "issue" for GHC's performance in the shootout.  And space leaks are related to the fact that you must program differently in a lazy language, but I will admit that understanding the space/retention behaviour of a lazy program is objectively harder in general.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Wed, 2007-05-30 22:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-33686"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33686" class="active">I&#039;m not sure</a></h3>
+ <div class="content"><p >Enforced purity is an advantage, I'll agree.  But I'm not sure that deforrestation is always correct in an eager language.</p>
+<p >Actually, here's an example.  Say we have an original list such that g throws exception G on the third element, and f throws an exception F on the first element of <CODE >map g lst</CODE>.  In an eager language, then, the code <CODE >map f (map g lst)</CODE> throws exception G- as the first thing it does is evaluate <CODE >map g lst</CODE> to completion, at which point on the third element g with throw the exception G, and f will never evaluate a single function.  On the other hand, the code <CODE >map (f . g) lst </CODE> throws exception F- as in an eager language it will evaluate <CODE >f . g</CODE> on the first element of the list, at which point f will throw exception F, and g will never be evaluated on the third element.</p>
+<p >Note that in a lazily evaluated language, both code samples will always throw F, wether the optimization is applied or not.</p>
+<p >In an eager language, it might be possible to either type of inspect both f and g and insure at least one doesn't throw an exception, and that if this is the case, it's possible to apply this optimization anyways.  But that's a lot more difficult than the situation Haskell is in, where it can just apply the optimization without having to check anything.</p></div>
+ <div class="links">By <a href="user/1625" title="View user profile.">bhurt-aw</a> at Thu, 2007-05-31 12:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-33690"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33690" class="active">Exceptions are impure</a></h3>
+ <div class="content"><p >...at least by common definition. And the example you show is one of the reasons.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Thu, 2007-05-31 16:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-33691"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33691" class="active">Purity again</a></h3>
+ <div class="content"><p >Actually, oftentimes fusion has rules on the strictness that would not be a problem in a strict language. A recent example is the stream fusion rule eliminating fromStream . toStream.</p>
+<p >As for your example, it is, again, a purity issue.  Exceptions are effects.  Nor is it guaranteed which would be thrown in a non-strict (as opposed to lazy) language, which Haskell is.  This is why you can't catch (these) exceptions in Haskell 98 and the semantics for exceptions for GHC is "imprecise".</p>
+<p >Finally, laziness does not technically enforce purity, but have fun understanding your code in an impure lazy language.</p>
+<p >[Edit: Actually, the problem is the mix of laziness and strictness.]</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Thu, 2007-05-31 17:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-33699"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33699" class="active">Deforesting strict languages</a></h3>
+ <div class="content"><blockquote ><p >But I'm not sure that deforrestation is always correct in an eager language.</p></blockquote>
+<p >If you are talking about full blown deforestation by Wadler et. al., it might introduce termination. Given<br >
+<code ><br >
+f x = y<br >
+</code><br >
+and applying Wadler's deforestation on "f bottom" it will yield y, which terminates. Changing the deforestation algorithm this can be avoided, but I haven't found anything published on it. </p></div>
+ <div class="links">By <a href="user/2050" title="View user profile.">Peter A Jonsson</a> at Fri, 2007-06-01 08:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-33704"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33704" class="active">Thank-you so much</a></h3>
+ <div class="content"><p >Thank-you so much for writing that blog post discussing the usefulness of lazy lists. I think that I actually understand now. Of course, I had heard the phrase "separating generation from selection" before, but that didn't really mean anything to me. If anyone reading this is even slightly fuzzy on why lazy lists are so great, read that post!</p>
+<p >PS: First post. I've lurked here for a while, but this is the first thing that's made me feel the overwhelming need to write a comment. Thanks again, bhurt-aw!</p></div>
+ <div class="links">By <a href="user/4244" title="View user profile.">nobodysbusiness</a> at Fri, 2007-06-01 16:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-33705"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33705" class="active">One advantage not mentioned</a></h3>
+ <div class="content"><p >One advantage not mentioned by anyone (including me) so far is that laziness (with purity of course) gives you an unrestricted beta rule.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Fri, 2007-06-01 16:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-33670"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33670" class="active">Lazyness in C</a></h3>
+ <div class="content"><p >When you know a bit C or Java already just look at the evaluation of conditions like this:</p>
+<p ><code ><br >
+if(A &amp;&amp; (B || C))<br >
+{<br >
+   // do something<br >
+}<br >
+</code><br >
+It is an example of lazy evaluation since not every subterm of the condition is evaluated before the whole term evaluates and finally the if-block gets evaluated. The conditional expression is evaluated from left outermost to innermost. This can be quite crucial when you program defensively:<br >
+<code ><br >
+if( A &amp;&amp; A[0] == 1)<br >
+{<br >
+   // do something<br >
+}<br >
+</code><br >
+So lazyness is a matter of fact also in nonpure, imperative languages. </p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Wed, 2007-05-30 14:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-33671"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33671" class="active">Advantages</a></h3>
+ <div class="content"><p >The benefit of lazy evaluation is that it allows the language runtime to discard subexpressions that don't determine the end result of your program.  Often, when you have lots of temporary computations and conditionals, some work can be discarded this way.  As a result, lazy evaluation can sometimes reduce the combinatorial time complexity of an algorithm.</p>
+<p >The drawback to lazy evaluation is that it forces the runtime to suspend the evaluation of subexpressions until it is certain that they determine the end result of your program, in order to guarantee that an unevaluated subexpression that diverges doesn't cause the program itself to diverge.  This must be done by creating thunks containing the suspended state of a subexpression.  In a garbage-collected language, this can sometimes increate the space complexity of an algorithm.</p>
+<p >Lazy evaluation also increases expressiveness, as it enables you to access components of data structures out-of-order as you're initializing them, as long as you don't create any circular dependencies.</p>
+<p >There are intermediate schemes such as lenient evaluation that bring some of the benefits of lazy evaluation without some of the drawbacks.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Wed, 2007-05-30 15:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-33681"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33681" class="active">Erroneous values</a></h3>
+ <div class="content"><p >Also just to add on to this, one thing I enjoy about Haskell is that you can not only discard temporary computations, but you can also pass around erroneous values (such as _|_) in datastructures lazily.  These too will be discarded without escalating into exceptions (assuming of course that your code is correct and doesn't actually evaluate them!)</p>
+<p >This tends to remove many checks and hacks related to edge conditions and border cases in algorithms.  Say you have a calculation that's meaningless on the leaf nodes of a tree (it ends up attempting a division by zero on those nodes), and you have another algorithm that ignores the leaf nodes anyway.  In a lazy language you don't have to worry about checking for this case, inventing some spontaneous data structure to hold a bogus value, or catching any kind of arithmetic exception (since the actualy division by zero never occurs.)</p></div>
+ <div class="links">By <a href="user/4237" title="View user profile.">lodi</a> at Thu, 2007-05-31 04:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-33684"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33684" class="active">But is that what you are</a></h3>
+ <div class="content"><p >But is that what you are talking about really a property of lazy evaluation? I remember the time when I used CAS intensively and <i >thunked</i> terms were pervasive in symbolic manipulations. An unbound name never lead to a failure and expressions and not only values were often endproducts of computations. However there was just very rudimentary lazy evaluation ( as in my C example ) available.</p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Thu, 2007-05-31 10:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-33672"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33672" class="active">Infinite data structures</a></h3>
+ <div class="content"><p >There are lots of cool things about being able to work with infinite data structures, which is something lazy evaluation gives you. </p>
+<p >For a mathematician who's used to thinking of the natural numbers as a single object ℕ, being able to say "[0..]" in Haskell is priceless.  Writing the Sieve of Eratosthenes to get the prime numbers is pretty much just writing down its description.</p>
+<blockquote ><p >
+primes :: [Int] -&gt; [Int]<br >
+primes (n:ns) = n : primes (filter (\v -&gt; v `mod` n /= 0) ns)
+</p></blockquote>
+<p >In an imperative language, you have to think hard for a while to figure out how to implement it.  You need to think about when the subparts are going to be calculated and how to allocate space for them.  </p>
+<p >The cleanest implementations usually fake it with iterators, but even so, the added layer of notation and implementation makes it harder to think about.  (Exercise for the reader: implement "iterator&lt;int&gt; primes();" in C++.)</p>
+<p >Automatic backtracking is another nice feature that naturally falls out of lazy evaluation.</p></div>
+ <div class="links">By <a href="user/1479" title="View user profile.">ned</a> at Wed, 2007-05-30 16:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-33709"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33709" class="active">What about space?</a></h3>
+ <div class="content"><p >I'm mostly clueless about Haskell, but I think I've heard that while some things are easy to write down, they can also lead to - possibly surprising to the lay user - large requirements in space. How many thunks get generated, etc. for various things which are easily transliterated into Haskell?</p>
+<p >So presumably as with all things a) there are trade-offs to understand and b) the end purpose matters; if you want to kick some ideas around and don't have particular performance bounds in mind vs. writing the next game server / stock trader.</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Fri, 2007-06-01 20:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-33673"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33673" class="active">If you haven&#039;t read it,</a></h3>
+ <div class="content"><p >If you haven't read it, check out <a href="http://lambda-the-ultimate.org/classic/message10106.html">Why Functional Programming Matters</a>.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Wed, 2007-05-30 18:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-33678"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33678" class="active">Why Functional Programming Matters</a></h3>
+ <div class="content"><p >Let me reemphasize this.  This is one the best motivating papers for lazy evaluation and higher order functions even 23 years after it's creation.  The most significant feature missing from it's treatment of laziness is circular programming, a.k.a. <a href="http://www.haskell.org/hawiki/TyingTheKnot">tying the knot</a>.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Wed, 2007-05-30 22:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-33674"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33674" class="active">It seems that no one</a></h3>
+ <div class="content"><p >It seems that no one responsed the mention of syntax erros by the original poster. It may be worth noting that lazy evaluation, in the sense discussed here, has nothing to do with not catching syntax errors or type errors at compile time. Laziness refers to the timing of the evaluation of arguments passed to functions.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Wed, 2007-05-30 18:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-33675"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33675" class="active">Suppose you want to perform a number of...</a></h3>
+ <div class="content"><p >...steps on a long list of data in a strict language. You could try to write modular code that looks something like this:</p>
+<p >list' = step1(list)<br >
+list'' = step2(list')<br >
+list''' = step3(list'')</p>
+<p >But this entails having the entire list sitting in memory at one time so it can be passed in and out of the steps. In order to avoid this overhead you could write your code as</p>
+<p >for each element in list:<br >
+   element' = op1(element)<br >
+   element'' = op2(element')<br >
+   element''' = op3(element'')<br >
+   append element''' to result</p>
+<p >But the individual steps are no longer encapsulated. We've had to crack each one open so that the individual operations can be interleaved.</p>
+<p >However, if we are working with lazy lists, we can write code that looks like the former, but behaves like the latter, because each element in the list is only created and processed as it is needed. We no longer have to write interleaved code.</p>
+<p >This gives a kind of orthogonality between modularity of code and modularity of execution. That the code is expressed in terms of acting on entire lists doesn't entail that it actually processes entire lists. This decoupling of modularities (if I can call it that) can be very useful in writing efficient and yet readable and maintainable code.</p></div>
+ <div class="links">By <a href="user/1545" title="View user profile.">sigfpe</a> at Wed, 2007-05-30 19:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-33683"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33683" class="active">Two Kinds Of Laziness</a></h3>
+ <div class="content"><p >It strikes me that the overwhelming majority of the benefits of Lazy Evaluation actually involve large (potentially infinite) data structures.  So by making data constructors non-strict (e.g. the list constructor ':') you automatically gain the majority of the benefits, (which are of course extremely worthwhile).</p>
+<p >The downside to Laziness is large numbers of thunks being created and then immediately evaluated because more often than not function application needs to be Eager.</p>
+<p >It is simple enough to force function application to be Eager, but in our new massively multi-core world we are more likely to have spare CPU cores available than not, so I can't help but think that the default for function application should be Eager Evaluation rather than Lazy, along with the option of making it Lazy should it be useful.</p>
+<p >Having said that, it is quite likely that I am missing something important, in which case I would love to be enlightened.</p>
+<p >(N.B. I know the Haskell standard actually states "non-strict", but I believe every major implementation is Lazy and it is Laziness being discussed).</p></div>
+ <div class="links">By <a href="user/39" title="View user profile.">David B. Wildgoose</a> at Thu, 2007-05-31 10:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-33685"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33685" class="active">We should all know by now</a></h3>
+ <div class="content"><p >We should all know by now that <a href="http://www.cs.indiana.edu/cgi-bin/techreports/TRNNN.cgi?trnum=TR44">CONS should not Evaluate its Arguments</a>...</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Thu, 2007-05-31 11:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-33702"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33702" class="active">Laziness is avoiding work</a></h3>
+ <div class="content"><p >We recently had a situation at "work" where laziness would have been useful.  We were generating lists of email addresses to add as mailto: links on a student information system.  Querying the database and generating the text took quite some time to do, and 99% of the time the link is not followed.  The obvious optimisation was to only generate the mailing list when requested -- lazy computation.  This isn't the first time we've made such an optimisation.  No doubt if our language was lazy by default I'd be reporting the reverse!</p></div>
+ <div class="links">By <a href="user/354" title="View user profile.">Noel</a> at Fri, 2007-06-01 13:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-33688"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2273#comment-33688" class="active">Parallel Call By Need</a></h3>
+ <div class="content"><p >This may be of interest:</p>
+<p ><A href="http://cs.anu.edu.au/people/Clem.Baker-Finch/Research/par-cbn-tr/">An Operational Semantics for Parallel Call-by-Need.</A></p></div>
+ <div class="links">By <a href="user/39" title="View user profile.">David B. Wildgoose</a> at Thu, 2007-05-31 16:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2007/05/03" title="Previous month">«</a> June 2007  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-normal">1</td>
+  <td class="day-link"><a href="archive/2007/6/2" title="3 posts">2</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-today"><a href="archive/2007/6/3" title="2 posts">3</a></td>
+  <td class="day-future">4</td>
+  <td class="day-future">5</td>
+  <td class="day-future">6</td>
+  <td class="day-future">7</td>
+  <td class="day-future">8</td>
+  <td class="day-future">9</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">10</td>
+  <td class="day-future">11</td>
+  <td class="day-future">12</td>
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+  <td class="day-future">15</td>
+  <td class="day-future">16</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+ </tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2279" title="1 comment">Merging Functions, Modules, Classes, the whole nine yards...</a></li><li><a href="node/2280">How the Chicken Scheme compiler works</a></li><li><a href="node/2277" title="5 comments">IM IN UR COMPUTER, HAXIN UR CODE</a></li><li><a href="node/2276">CONTEXT07. Delimited contexts in OS</a></li><li><a href="node/2273" title="26 comments" class="active">&quot;Practical&quot; advantages of lazy evaluation </a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2280">How the Chicken Scheme compiler works</a></li><li><a href="node/2279" title="1 comment">Merging Functions, Modules, Classes, the whole nine yards...</a></li><li><a href="node/2277" title="5 comments">IM IN UR COMPUTER, HAXIN UR CODE</a></li><li><a href="node/2276">CONTEXT07. Delimited contexts in OS</a></li><li><a href="node/2275">Correctness of Parsers</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

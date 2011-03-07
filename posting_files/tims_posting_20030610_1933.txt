@@ -1,0 +1,15 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/5052cd7f5788f790/cad2288b208de06f?lnk=st&rnum=31&hl=en#cad2288b208de06f
+[comp.lang.functional] Re: local variables don't cause side effects
+Marshall,
+
+This is actually a great question.  Pay no attention to the functional programming curmudgeons (referential transparency isn't a religion, it's a tool).
+
+From the outside, a function that has no side-effects or dependence on external state or I/O is referentially transparent and can be treated uniformly regardless of whether its internal implementation is purely functional or locally imperative.
+
+From the inside -- when you get to evaluating the function's body -- whether the code is purely functional or (at least partly) imperative has a huge impact on your evaluation strategy.  For example, lazy evaluation can be a reasonable strategy when evaluation functional code, whereas evaluation order must be precise and explicit in imperative code.
+
+In a language that supports both paradigms, being able to distinguish "functional functions" and "imperative functions" is very valuable. For one example, in an implicitly parallelizing compiler, a call to a purely functional function can be handed off to another thread; if many such calls exist in a region of code with no intermingled side-effects, then N calls can be handed off to N independent CPU's without worrying about their global evaluation order -- even if those functions happen to use locally imperative code internally (for example, by manipulating a local heap that's discarded upon return).
+
+I've been able to mix and match both paradigms in an experimental compiler and am very happy with the results.  My feeling is that for real-world development projects carried out by mainstream programmers (i.e. games, graphical user interfaces, large-scale server apps), imperative features are essential to a language's success.
+
+But allowing both functional and imperative approaches to be mixed, in the local-vs-global approach you suggest, gives you the best of both worlds. 

@@ -1,0 +1,26 @@
+http://groups.google.com/group/fa.haskell/browse_thread/thread/7f445301cdb6dd7d/7f5bf4dde29d71da?lnk=st&rnum=33&hl=en#7f5bf4dde29d71da
+[fa.haskell] Re: Safe and sound STRef [Was Implementing RefMonads in Haskell without ST,IO]
+Oleg,
+
+This is a very neat solution to providing coercion-free references in a local environment.
+
+I'm trying to generalize this to some sort of Monad-like typeclass, where there is a nice mapping from Monad's to this new and more powerful typeclass, so that one can combine typed references, IO, etc., into a single framework.
+
+It seems to me that your approach couldn't be generalized in this way in Haskell, because the type of the resulting reference-using "computation" depends on the precise set of heap operations performed there.  So, for example, you couldn't do something like:
+
+[code]
+..
+a <- newRef Int 123
+b <- if (some conditional) then (newRef Int) else (a)
+..
+[/code]
+
+Because the heap types propagated out of the conditional's two branches differ.
+
+The only way I can see generalizing your technique to support this sort of thing requires a type system supporting both dependent types and subtyping. Think the reference monad as looking somewhat like the state monad; instead of a single piece of state, it propagates a dependent-typed pair of (heapTypeFunc,heapValueFunc) similar in spirit to your PList construct, with the type guaranteeing that any heap operation returns an output heapTypeFunc that's a contravariant extension of its input heapTypeFunc.
+
+Conjecture: Implementing type-safe (coercion-free), composable computations over typed references isn't possible in Haskell.  By composable I mean that some operator similar in spirit to >>= on Monads can be implemented and that computations with differing effects can occur in if-branches.
+
+But then again, I had not thought the problem you solved using PList to be solveable in Haskell, and am very eager to be proven wrong!
+
+-Tim 

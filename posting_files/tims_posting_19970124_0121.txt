@@ -1,0 +1,9 @@
+http://groups.google.com/group/comp.graphics.algorithms/browse_thread/thread/28d294d39c4b0753/1fa490b23eb5976c?lnk=st&rnum=76&hl=en#1fa490b23eb5976c
+[comp.graphics.algorithms] Direct Fourier or DCT texture mapping?
+I was thinking about the logistics of writing a texture mapper which maps textures from 2D Fourier or DCT space, directly onto the screen.  This approach would seem to have many advantages, such as the ability to perform anisotropic texture filtering, by convolving the texture with an anisotropic filter kernel (a simple operation since convolution in the texture doman corresponds to multiplication in the Fourier doman).
+
+It's trivial to write a texture mapper which renders an nxn texture directly from Fourier space using n^2 multiplies per pixel. With an FFT operation a faster execution time should be possible, i.e. n * log(n) for a FFT.  However, that operation works for arbitrary pixels, and it seems that a much faster operation might be possible, by exploiting the fact that texture mapping involves tracing a spatially linear (though not necessary temporally linear, due to perspective correction) path through a texture.
+
+Has anyone tried this? Is anyone aware of past work on this topic? Does this seem like a good idea, or can someone with more experience in Fourier transforms find fault with this approach?
+
+-Tim Sweeney, Epic MegaGames, Inc. 

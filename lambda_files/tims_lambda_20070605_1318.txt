@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2279
+http://lambda-the-ultimate.org/node/2279#comment-33750
+1050855
+Merging Functions, Modules, Classes, the whole nine yards...
+Merging stuff
+<p>You can do that, but you have a problem here.  Now, what does it mean for two functions to be equivalent?  Ordinarily, you choose either extensional equality (functions are equivalent iff for all inputs they produce the same result) or the weaker intensional equality.  But allowing "extension" like this exposes all the local variables of a function as part of that function's identity.
+</p><p>It's probably better to factor that sort of code into a class (which you can inherit from and extend by overriding existing fields and adding new ones), and a function that constructs an element of that class and then returns the member coinciding to the "return" value.  This scheme doesn't require stretching the notions of extension and equivalence.</p>

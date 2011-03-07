@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>foundations for J, APL etc | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2549" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>foundations for J, APL etc</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >i have been playing around with Haskell, and finding ADTs a little *choke* restrictive. it seems every evaluation has to be done in the order of creation. </p>
+<p >i am wondering if there is a non-functional approach to pattern-matching that can handle abstract operations on arrays and other complex data structures.</p>
+<p >i am thinking in the direction of APL, but more a language where the APL primitives can be built from scratch.</p>
+<p >from a scan of his pubs, Barry Jay's pattern calculus might be a good fit.</p>
+<p >maybe i can do this with Haskell and just don't realise? perhaps 'active patterns' will save me?</p>
+<p >Alix</p> </div>
+ <div class="links">By <a href="user/3728" title="View user profile.">alix</a> at 2007-11-29 12:13 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/2491" title="Examples of large-scale functional language projects">previous forum topic</a> | <a href="node/2545" title="Derivation trees for lambda-calculus">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2549" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 1132 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2549" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2549" />
+<a id="comment-38437"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2549#comment-38437" class="active">A recommendation</a></h3>
+ <div class="content"><blockquote ><p >
+it seems every evaluation has to be done in the order of creation
+</p></blockquote>
+<p >Not sure what you mean by this. (Or even if this will end up being on topic for LtU).</p>
+<p >I would recommend that you give a snippet of code showing what you are trying to do and how existing language features prevent you from doing it, and then at least we can assess the question.</p>
+<p >(Depending on the issues, this may be a question for the Haskell mailing list.)</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Thu, 2007-11-29 15:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-38438"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2549#comment-38438" class="active">I don&#039;t really understand what&#039;s being asked...</a></h3>
+ <div class="content"><p >However, it sounds like you're asking for generic functions as in Common Lisp or Factor (and others), possibly.</p></div>
+ <div class="links">By <a href="user/3695" title="View user profile.">Gavin Harrison</a> at Thu, 2007-11-29 16:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-38441"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2549#comment-38441" class="active">I mean that the encoding of</a></h3>
+ <div class="content"><p >I mean that the encoding of any data type entails dealing with that data type in a specific way.</p>
+<p >eg.<br >
+<code ><br >
+data Tree = Empty<br >
+          | Leaf Int<br >
+          | Node Tree Tree<br >
+</code><br >
+<br ></p>
+<p >An algorithm that processes the tree needs to decompose the tree in terms of the given structure, and must proceed from the root or a known branch.</p>
+<p >There is no way to pattern match against arbitrary structures within the tree, for example all nodes at a certain level, without evaluating from the top. And then i wonder how to deal with arbitrary perspectives on multi-dimensional arrays.</p>
+<p >I guess in the system I am describing, there is no concrete encoding, only inferred structure. The description of the data, and how the data is evaluated, is worked out by the compiler.</p>
+<p >I hope that makes sense. Maybe I need to look into relational theory again.</p>
+<p >Until next time...</p></div>
+ <div class="links">By <a href="user/3728" title="View user profile.">alix</a> at Thu, 2007-11-29 22:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38444"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2549#comment-38444" class="active">It seems like you want something like a view</a></h3>
+ <div class="content"><p >See <a href="http://www.informatik.uni-bonn.de/~ralf/publications/UU-CS-2001-09.pdf">A simple implementation technique for priority search queues</a> for an example. <a href="http://citeseer.ist.psu.edu/150346.html">Views for Standard ML</a> is something I haven't looked at yet.</p>
+<p >There are probably newer techniques for using these types of things, I haven't looked too much into it.</p></div>
+ <div class="links">By <a href="user/3656" title="View user profile.">stevechy</a> at Fri, 2007-11-30 00:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-38442"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2549#comment-38442" class="active">APL and vector-like data types</a></h3>
+ <div class="content"><p >So, for most scalar operations in APL, the compiler lets you to apply the operation to a vector data type, with the appropriate lifting.  One Haskell analogy is having the programmer writing "f xs" and the compiler interpreting it as "map f xs" when xs is a list.</p>
+<p >I spent some time investigating APL-like lifting of functions to vectors, arrays, etc, in a more general programming language setting.</p>
+<p >In general, that doesn't work, because the resulting system is ambiguous.  For example, say that you define a+b on integers to indicate addition, and s+t on arrays to indicate concatenation.  How should the compiler interpret a+b on arrays of integers?  It could be either an element-wise vector addition, or array concatenation.</p>
+<p >Now you're probably thinking the compiler could define some precedence rules to disambiguate such an expression.  That would be unpredictable -- a feature that works in some cases confusingly wouldn't work in others.  Depending on context, maybe the compiler would interpret a-b as elementwise subtraction, but a+b as concatenation.  Worse, given strong implicit typing features (Java generics, Haskell typeclasses), the general case can't be disambiguated for lack of concrete context.</p>
+<p >So this aspect of APL is a clever trick for code reduction, but it's unsound and inappropriate in a general programming language.  There, we need to clearly specify how we want to lift a function (using map, fold, etc, or explicit recursion and case decomposition) when applying it to a collection data type.</p>
+<p >Note that languages like Haskell could make this process simpler than they do.  For example, when you define a datatype like "Tree t = Leaf t | Node (Tree t) (Tree t)" which is structured as a covariant functor, the compiler could automatically generate the map function for that type, as it's uniquely determined by the type's structure.  When you define a recursive datatype as a fixed point of a functor, the compiler could automatically generate the fold function.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 2007-11-29 23:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38443"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2549#comment-38443" class="active">Shape polymorphism?</a></h3>
+ <div class="content"><p ><cite >In general, that doesn't work, because the resulting system is ambiguous. For example, say that you define a+b on integers to indicate addition, and s+t on arrays to indicate concatenation. How should the compiler interpret a+b on arrays of integers? It could be either an element-wise vector addition, or array concatenation.</cite></p>
+<p >Addition and concatenation aren't really semantically equivalent. It would be more useful to describe addition for arrays as ... something. Obviously the meaning of (+) is still heavily overloaded, which is why I am interested in composing the exact meaning, sans evaluation.</p>
+<p ><cite >So this aspect of APL is a clever trick for code reduction, but it's unsound and inappropriate in a general programming language. There, we need to clearly specify how we want to lift a function (using map, fold, etc, or explicit recursion and case decomposition) when applying it to a collection data type.</cite></p>
+<p >That is the kind of thing that I want to do, but without the evaluation mechanism implied by map and fold. Maybe interpreting a functional language as declarative would be the way to go...</p></div>
+ <div class="links">By <a href="user/3728" title="View user profile.">alix</a> at Fri, 2007-11-30 00:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38446"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2549#comment-38446" class="active">A better example? (and Trenchard More&#039;s Array Theory)</a></h3>
+ <div class="content"><blockquote ><p >
+For example, say that you define a+b on integers to indicate addition, and s+t on arrays to indicate concatenation. How should the compiler interpret a+b on arrays of integers? It could be either an element-wise vector addition, or array concatenation.
+</p></blockquote>
+<p >Tim, your example seems to include an aspect of ad-hoc polymorphism (overloading of +) that may be clouding the issue. For a purely parametric example, consider instead the reversal of a list of lists (in APL2, an array of arrays). We could either reverse each of the inner structures or reverse the outer one. In some sense the behavior of things like + on vectors in APL constitutes the application of an implicit map (called "each" in APL2), so the question is, why not apply it implicitly in the case of reverse?</p>
+<p >In APL2 the "ambiguity" of reversal is resolved in favor of the outer structure and we can recover the other behavior via the each operator: this is similar to the way that an explicit map would be necessary in Haskell (or Miranda, or ML). There is no question of an <i >implicit</i> map in the modern languages, but in APL2 we need to account for when and how these implicit operators/coercions are applied.</p>
+<p >The general behavior in APL2, as exhibited by reversal, +, and operators of other "rank", is actually something like "seek the first appropriate depth". (In "vanilla" APL there is no inner/outer distinction, but slicing allows one to specify an axis other than the default first one for multi-dimensional arrays.)</p>
+<p >I think you can make a consistent story out of this, given that you will still have to resolve the ambiguities somehow (via explicit map/each/whatever). I had this ultimate goal in mind when I started my dissertation work, but first had to address the issue of non-array data structures, i.e. basically algebraic data types; this was my (too!) early version of what is now called polytypism or generics (in the Haskell sense). </p>
+<p >Satish Thatte (my advisor) did some work on the APL-style implicit map (zips would also be needed, and some related things perhaps), but I don't think it was ever implemented. (Google indicates that <a href="http://www.mail-archive.com/haskell@haskell.org/msg07326.html">Tim has already been pointed</a> toward Satish's <a href="http://portal.acm.org/citation.cfm?id=138491.138497">A Type System for Implicit Scaling</a> by Andrew Kennedy back in 2000. There <i >still</i> doesn't seem to be a copy available on-line, though.) </p>
+<p >But for a reasonably formal account that best honors APL sensibilities, I would look toward Trenchard More's Array Theory (which was crucial to APL2 and Nial): this was an attempt to give a formal foundation to nested arrays comparable to (and perhaps in competition with) set theory. The latter goal was perhaps not very realistic, but influenced the development in a positive way.</p>
+<p >I haven't really looked at Array Theory in 25-30 years, so I can't vouch for it, but I believe that the "depth-seeking implicit map" behavior was accounted for quite well there, at least in terms of an arrays-only perspective. </p></div>
+ <div class="links">By <a href="user/1235" title="View user profile.">fruehr</a> at Fri, 2007-11-30 09:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38448"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2549#comment-38448" class="active">Rank</a></h3>
+ <div class="content"><p >J has a explicit mechanisms to control rank, as well as implicit rules to determine rank of various phrasal forms ("trains", "hook", "forks"), which are essentially point free style definitions. So I suggest looking at J before giving up on this project...</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Fri, 2007-11-30 20:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38449"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2549#comment-38449" class="active">Generics</a></h3>
+ <div class="content"><blockquote ><p >the compiler could automatically generate the map function for that type</Blockquote><br >
+As I'm sure you already know, there's no shortage of papers on how to do this in Haskell. The catch is that all but one (that I know of) require extensions to Haskell 98. Here's a <a href="http://people.cs.uu.nl/johanj/publications/ComparingGP.pdf">survey of methods</a> that looks at your map example in particular. There's also Hinze's <a href="http://www.informatik.uni-bonn.de/~ralf/publications/ICFP04.pdf">Generics for the Masses</a> but that still requires some boilerplate.</p></div>
+ <div class="links">By <a href="user/1545" title="View user profile.">sigfpe</a> at Fri, 2007-11-30 22:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38450"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2549#comment-38450" class="active">That survey is exactly what</a></h3>
+ <div class="content"><p >That survey is exactly what I've been looking for, thanks! LTU is very timely sometimes. :-)</p>
+<p >[Edit: <a href="http://people.cs.uu.nl/johanj/publications/ComparingGpFinal.pdf">this is the updated link</a> for that report]</p></div>
+ <div class="links">By <a href="user/2352" title="View user profile.">naasking</a> at Fri, 2007-11-30 22:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="
+http://wiki.squeak.org/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2007/11/10" title="Previous month">«</a> December 2007  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2007/12/1" title="1 post">1</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2007/12/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2007/12/3" title="2 posts">3</a></td>
+  <td class="day-link"><a href="archive/2007/12/4" title="3 posts">4</a></td>
+  <td class="day-link"><a href="archive/2007/12/5" title="4 posts">5</a></td>
+  <td class="day-link"><a href="archive/2007/12/6" title="2 posts">6</a></td>
+  <td class="day-link"><a href="archive/2007/12/7" title="2 posts">7</a></td>
+  <td class="day-normal">8</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-normal">9</td>
+  <td class="day-today"><a href="archive/2007/12/10" title="1 post">10</a></td>
+  <td class="day-future">11</td>
+  <td class="day-future">12</td>
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+  <td class="day-future">15</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2566" title="18 comments">A Growable Language Manifesto</a></li><li><a href="node/2562" title="70 comments">poll: syntax</a></li><li><a href="node/2568" title="64 comments">functions, statements, expressions</a></li><li><a href="node/2556" title="5 comments">Subtext 2 Video</a></li><li><a href="node/2567">Haskell, Turned Up To Eleven</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2568" title="64 comments">functions, statements, expressions</a></li><li><a href="node/2567">Haskell, Turned Up To Eleven</a></li><li><a href="node/2566" title="18 comments">A Growable Language Manifesto</a></li><li><a href="node/2565" title="4 comments">Weak normalisation theorem for typed lambda-calculus</a></li><li><a href="node/2562" title="70 comments">poll: syntax</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

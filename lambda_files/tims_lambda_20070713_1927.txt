@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/2340
+http://lambda-the-ultimate.org/node/2340#comment-35056
+1050916
+Simply Easy! (An Implementation of a Dependently Typed Lambda Calculus)
+Proof-Carrying Code
+<p>For security, it just means that non-total type expression can't be erased, but must be evaluated at runtime to preserve the semantics.  It's a performance hit, probably not a huge one.</p>

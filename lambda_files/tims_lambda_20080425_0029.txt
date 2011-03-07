@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2785
+http://lambda-the-ultimate.org/node/2785#comment-41459
+1051361
+ Species: making analytic functors practical for functional programming
+Thanks!
+<p>Thanks for elaborating on the definitions.  As I spend more time with this, I'd be happy to provide more feedback directly if you'd like (just email me: tim@epicgames.com).
+</p><p>There is an impressive amount of information in this paper.  This is an important field for future data structure work, so I see a lot of value in presenting the material in a way that's accessible to technical people in other disciplines.</p>

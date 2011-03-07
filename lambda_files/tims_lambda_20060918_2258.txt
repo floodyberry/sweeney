@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1733
+http://lambda-the-ultimate.org/node/1733#comment-21120
+1050309
+Why Johnny can&#039;t code
+Early programming languages
+<p>Early programming languages like BASIC were line-oriented because the user's interface to them was a teletype.  Back then, there were also line-oriented text editors, where you'd type a bunch of lines, and then edit by saying "on line 3, replace 'teh' by 'the'".
+</p><p>Soon after actual video display terminals arose, text editors became screen-oriented, and programming languages became file-oriented.  Seems like progress.
+</p><p>Nowadays you'd just learn Visual Basic, Java, JavaScript, or Python rather than line-oriented BASIC.  If you really want to go retro, download the old BASICA interpretter, or an Apple II emulator.</p>

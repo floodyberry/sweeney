@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Overloading : Why do some languages leave it out? | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1655" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Overloading : Why do some languages leave it out?</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >In some ML style languages there is no way for a function to be overloaded. Why is this? I have to assume it is related to the type inference engine. </p> </div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at 08/03/2006 - 15:39 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1661" title="automatic theorem proving">previous forum topic</a> | <a href="node/1142" title="Network Transparent languages">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1655" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2500 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1655" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1655" />
+<a id="comment-20240"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20240" class="active">In what sense?</a></h3>
+ <div class="content"><p >Overloaded based on type, or overloaded based on number of arguments?</p>
+<p >Variant types are an answer to the former, and default values (at least in O'Caml) are something of an answer to the latter.  Perhaps not the answers you're looking for, though.</p></div>
+ <div class="links">By <a href="user/1811" title="View user profile.">Chris Dutton</a> at Thu, 08/03/2006 - 15:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20243"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20243" class="active">Overloaded based on type ...</a></h3>
+ <div class="content"><p >Overloaded based on type. I can see how to use variant types to overcome the problem of not having type, but as you indicated that isn't the question. </p>
+<p >The question is why are they left out. The reason I ask, is that I am working on a type inference engine for Cat (a stack based language), and I can't, for the life of me, figure out a good reason to leave out function overloading based on type. </p>
+<p >It appears to be hard to do so, but not intractable, unless there is something that I have overlooked. </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Thu, 08/03/2006 - 16:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20246"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20246" class="active">G&#039;Caml</a></h3>
+ <div class="content"><p >Check out <a href="http://web.yl.is.s.u-tokyo.ac.jp/~furuse/gcaml/">G'Caml</a>.  It's a fork of O'Caml with function overloading.  Just judging from its type annotations, it's easy to see how complicated the type of a generic can become, especially when higher-order functions and functions which call generics come into play.</p></div>
+ <div class="links">By <a href="user/1983" title="View user profile.">Chris King</a> at Thu, 08/03/2006 - 16:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20253"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20253" class="active">Thanks for pointing that out</a></h3>
+ <div class="content"><p >Thanks for pointing that out to me, I'll definitely take a careful look at it. </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Fri, 08/04/2006 - 04:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20241"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20241" class="active">Yes. Implement a simple ML</a></h3>
+ <div class="content"><p >Yes. Implement a simple ML typechecker (it's not too hard) and you'll rapidly see why. There're ways around, but none of them're trivial.</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Thu, 08/03/2006 - 15:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-20249"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20249" class="active">Overloading is hard</a></h3>
+ <div class="content"><p >Overloading is frequently neglected because it is difficult.  The more advanced your type system, the more difficult overloading can be.  Key problems:</p>
+<p >In type systems supporting coercions and conversions between disjoint types (e.g. C's automatic casting from char to int), ambiguities arise regarding which combination of coercions and overloads should be effective for a given function invocation.  C++ deals with this by specifying a set of priority rules to determine the "best" overload.</p>
+<p >In type systems supporting universal quantification over types (implicit or explicit), overloading isn't an entirely local feature.  For example, if we defined (Haskell syntax) overloads f::int-&gt;int and f::string-&gt;string, we could then define g x = f.  To write a type signature for that, you need additional type system features (intersection types are one solution).  You likely also need the ability to represent polymorphic values at runtime (e.g. values of the union of the types int and string) and cast them, because at a given declaration site, you don't know which particular types are effective.</p>
+<p >In general, the type of the overloaded function f could be expressed (int-&gt;int)*(string-&gt;string) where * is the type intersection operator.  Or you could write it "exists(t=int|string) t-&gt;t" where we existentially quantify over the two choices for t, int and string.  There are many other workable solutions.</p>
+<p >In type systems with the parametricity property, overloading is required to be implemented "honestly".  In general, you can only support overloading over types whose values are unambiguously distinguishable.  For example, if function spaces are contravariant, then you can't overload f::(int-&gt;int)-&gt;bool and f::(string-&gt;string)-&gt;bool, because you can't distinguish int-&gt;int and string-&gt;string -- they both include larger functions such as forall t. t-&gt;t.</p>
+<p >To me, the key to sane overloading in a language is the ability for your compiler to implement it as syntactic sugar, and translate it into simpler primitives in a core language.  In other words, given two definitions f::t-&gt;u=.. and f::v-&gt;w=.., the compiler should be able to output an equivalant single function f=.. which is semantically equivalant to the overloaded function -- it must accept the same parameters either functions accepts, reject any functions both reject, produce the proper result with no unexpected side effects, and give a suitable error if the overload is ambiguous.</p>
+<p >That this isn't possible in most languages is an indication of their failures to implement a "complete" type system.</p>
+<p >What does "complete" mean?  For a simple type system with invariant functions, you need union types and casting to implement overloading. This is the easy case. </p>
+<p >The translation is more tricky with contravariant functions, because some overloads become ambiguous.  Universal quantification complicates it further -- now you need the ability to combine multiple universal quantifications into one, over a function in which only some of the quantifiers can be implicitly instantiated.  Existential types add another layer of complexity, as do dependent types, etc.</p>
+<p >But I think it is vital for a programming language to choose a feature set that is complete with respect to overloading, lest its expressiveness be crippled in surprising ways.  For every advanced type system feature you expose, you need to say exactly how it works (or doesn't) in the presence of overloading.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 08/03/2006 - 18:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20252"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20252" class="active">Thanks for the detailed response!</a></h3>
+ <div class="content"><p >What a wonderfully complete and detailed reply! I really appreciate that you took the time to share that with me. </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Fri, 08/04/2006 - 02:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20278"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20278" class="active">For every advanced feature...</a></h3>
+ <div class="content"><p >It would be interesting to see a list of what "basic" things language designers should use to validate their new fancy-pants features. To some degree it comes down to preference (presumably not everybody really cares deeply personally about having overloading), but having a short list of "miner bird" feature requirements would be neat. My personal beef is debugging; if humans can't realistically step through systems you've created, then you've created something unrealistic (again, personal desire/bias/domain/opinion). The funny thing is that even debugging threaded C++ or C# in expensive MS tools is a bad joke, as far as I can tell.</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Fri, 08/04/2006 - 20:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20255"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20255" class="active">One more reason</a></h3>
+ <div class="content"><p >For those who desire a simpler language, adding an overloading feature <i >makes the language worse</i>.  Makes it fractionally easier to write code while making it distinctly harder to read code.  I'm not sure whether I'm in that category, but I do believe that it's not an insignificant percentage of programmers / language designers.</p></div>
+ <div class="links">By <a href="user/499" title="View user profile.">scruzia</a> at Fri, 08/04/2006 - 06:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20267"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20267" class="active">Overloading in C++</a></h3>
+ <div class="content"><p >Overloading in C++ is essential for compile-time polymorphism. For example there is an implementation of sorting which works for any sequence type which satisfies the given interface.</p>
+<p >While there are other means possible for archieving the dispatch (like higher order functions, Haskell classes, ML functors, OOP-style polymorphism, dynamic typing with generic functions), overloading makes C++ a better language, not worse. Compile-time polymorphism is an important and useful feature of C++.</p></div>
+ <div class="links">By <a href="user/1547" title="View user profile.">Qrczak</a> at Fri, 08/04/2006 - 14:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20268"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20268" class="active">not really</a></h3>
+ <div class="content"><p >C++ overloading is more or less premature optimisation, considering the fact that, given a general overloading mechanism, it's fairly trivial to optimise it down to compile-time dispatch in the correct cases.</p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Fri, 08/04/2006 - 16:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20280"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20280" class="active">C++ provides too many ways</a></h3>
+ <div class="content"><p >C++ provides too many ways to achieve polymorphism. Parametric polymorphism can be achieved by template functions, but you cannot guarantee a function is truly parametric. Then, to get ad hoc polymorphism you have to choose between templates, subclassing, overloading or specialisation. Why can't we just have two interfaces: one to parametric polymorphism, one to ad hoc?</p></div>
+ <div class="links">By <a href="user/3038" title="View user profile.">Steven Woodhouse</a> at Fri, 08/04/2006 - 20:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20270"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20270" class="active">Overloading in C++ is</a></h3>
+ <div class="content"><blockquote ><p >
+Overloading in C++ is essential for compile-time polymorphism. For example there is an implementation of sorting which works for any sequence type which satisfies the given interface.
+</p></blockquote>
+<p >That has relatively little todo with overloading, this is todo with templates and the word/term static/compile-time polymorphism in the context of C++ is used to specifically refer to templates. It's used to refer to the fact the one can do a form of compile-time duck-typing.</p>
+<p >The only time overloading may come into play with implementations of the C++ standard library generic algorithms is when a more efficent implementation exists depending on some critieria which is known at compile-time. On template instantiation, if the criteria matches the more efficient/specific version is selected. The information exists in types &amp; compile-time constants, the technique is called compile-time <a href="http://www.boost.org/more/generic_programming.html#tag_dispatching"> tag dispatching</a>. One could consider this as a static/compile-time form of predicate dispatching.</p>
+<p >C++'s <strong ><i >overload resolution</i></strong> is static<br >
+multimethods is overloading where <strong ><i >overload resolution</i></strong> is dynamic.</p>
+<p >"Overriding" is just a special case of overloading where <strong ><i >overload resolution</i></strong> is dynamic.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Fri, 08/04/2006 - 16:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20281"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20281" class="active">Huh?</a></h3>
+ <div class="content"><blockquote ><p >The only time overloading may come into play with implementations of the C++ standard library generic algorithms is when a more efficent implementation exists depending on some critieria which is known at compile-time</p></blockquote>
+<p >No. The implementation of an algorithm which uses iterators relies on the fact that expressions like <code >++it</code>, <code >*it</code>, <code >it1 == it2</code>, <code >it+N</code>, <code >it[N]</code> etc. are defined and have a particular abstract meaning. It's often a <em >single</em> implementation usable with various iterator types.</p>
+<p >Tag dispatching is a more specific usage: here <em >different</em> code is used for different choices of driving types, found with overloading or template specialization. Often each implementation is still overloaded for a family of types sharing particular properties. But overloading is used even if there is a single implementation which calls overloaded functions.</p></div>
+ <div class="links">By <a href="user/1547" title="View user profile.">Qrczak</a> at Fri, 08/04/2006 - 20:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-20289"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20289" class="active">No. The implementation of</a></h3>
+ <div class="content"><blockquote ><p >
+No. The implementation of an algorithm which uses iterators relies on the fact that expressions like ++it, *it, it1 == it2, it+N, it[N] etc. are defined and have a particular abstract meaning. It's often a single implementation usable with various iterator types.
+</p></blockquote>
+<p >... Yes i know, i'm not saying that and again as i said before <strong >this has nothing to do with C++ style overloading</strong>, overloading doesn't come into play with this part except when you're actually using overloaded functions <strong ><i >within a template definition</i></strong>.</p>
+<p >C++ ISO standard defines a set of <strong >*Concepts*</strong> for the C++ standard library which you where refering to as *interfaces* but there not really interfaces there more richer than that, There not dynamic entities. <strong >As of current</strong> Concepts are only conceptual entities until C++0x comes with Concepts as first-class entities this will give templates a form of <strong >bounded quantification</strong>. Similar to extending interfaces or type classes one can make <strong >refinements</strong> of other Concepts e.g.</p>
+<p >Forward Iterator <strong >Concept</strong> is a <strong ><i >refinement of</i></strong> the Input &amp; Ouput Iterator <strong >Concepts</strong><br >
+ these Concepts do not exist in code (not until C++0x comes with Concepts as first-class entities).</p>
+<p >Similar to type classes where a type can be an instance of a "class" one makes a type <strong >a model of</strong> a particular Concept by implementing the required operations e.g.</p>
+<p >std::vector::iterator is <strong ><i >model of</i></strong> the Random Access Iterator *Concept*.</p>
+<p >However <strong >as of current</strong> making these relationships ("model of", "refinement of", etc, et) are not explicit because Concepts in current C++ are only conceptual.</p>
+<p >Now when one wants a generic algorithm to do something different from the <strong >generic routine</strong> one can write code to introspect at compile-time information such as the concreate <strong ><i >kind</i></strong> of iterator Concept an iterator "type instance" <strong ><i >models</i></strong> this is done by using the <strong ><i >iterator category tag type</i></strong>, which uses C++ subtyping to descern between <strong ><i >refinements</i></strong> and overloading for compile-time matching and/or dispatching.</p>
+<p >The only othertime where C++ style overloading may occur in the context of template functions is when you are actually using overloaded functions <strong ><i >within the definition of template function</i></strong> but this has nothing to do with what C++ terminology of compile-time/static polymorphism is referring to and this term isn't used to refer to C++ style overloading either.</p>
+<p >Consider this:</p>
+<p >struct foo { void bar() {} };<br >
+struct scooby { void bar() {} };</p>
+<p >template &lt; typename T &gt;<br >
+void foobar(const T&amp; v) {<br >
+    v.bar();<br >
+}</p>
+<p >int main() {<br >
+    foobar(foo());<br >
+    foobar(scooby());<br >
+}<br >
+</code></p>
+<p >Are you telling me this has anything to do with overloading? well it isn't, maybe on the conceptual level but that is all. What is happening in foobar is what is refered to as compile-time/static polymorphism in C++ terminology.</p>
+<blockquote ><p >
+Tag dispatching is a more specific usage: here different code is used for different choices of driving types, found with overloading or template specialization. Often each implementation is still overloaded for a family of types sharing particular properties.
+</p></blockquote>
+<p >Isn't that what i just told you previously or what i'm trying to tell you...</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Sat, 08/05/2006 - 08:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20297"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20297" class="active">That has relatively little</a></h3>
+ <div class="content"><blockquote ><p >
+That has relatively little todo with overloading, this is todo with templates and the word/term static/compile-time polymorphism in the context of C++ is used to specifically refer to templates. It's used to refer to the fact the one can do a form of compile-time duck-typing.
+</p></blockquote>
+<p >Function overloading can be defined as providing more than one implementation for a function with the same fully qualified name, but varying on the number and/or type of arguments. Marcin is completely correct in his statement. </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Sat, 08/05/2006 - 22:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-20300"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20300" class="active">Function overloading can be</a></h3>
+ <div class="content"><blockquote ><p >
+Function overloading can be defined as providing more than one implementation for a function with the same fully qualified name, but varying on the number and/or type of arguments. Marcin is completely correct in his statement.
+</p></blockquote>
+<p >Are you just ignoring everything i wrote or not bothering to read? clearly you've misunderstood what i'm trying to say.</p>
+<p >Lets begin with what i'm arguing with, this is the part that he/she said that i'm arguing is an incorrect statement:</p>
+<blockquote ><p >
+... For example there is an implementation of sorting which works for any sequence type which satisfies the given interface.
+</p></blockquote>
+<p >He/she is referring to the generic algorithm std::sort, here is one of it's prototypes (std::sort itself is overloaded):</p>
+<p ><code ><br >
+namespace std {<br >
+  // ....<br >
+  template &lt; typename RandomAccessIterator &gt;<br >
+  void sort(RandomAccessIterator first, RandomAccessIterator last);<br >
+  // ...<br >
+};<br >
+</code></p>
+<p >std::sort can take any iterator type that is a model of the Random Access Iterator *Concept*. <i ><strong >For the last time the fact that it can take almost any iterator *type* has nothing todo with C++ style overloading</i></strong>.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Sun, 08/06/2006 - 13:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-20309"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20309" class="active">Whoah, take a deep breath.</a></h3>
+ <div class="content"><p >Whoah, take a deep breath. :-)</p>
+<blockquote ><p >
+For the last time the fact that it can take almost any iterator *type* has nothing todo with C++ style overloading.
+</p></blockquote>
+<p >I partially agree with this statement, however I took Marcin's statement to mean that the sort implementation expects that certain functions, like operator&lt;, are going to need to be overloaded for it to work properly. </p>
+<p >The reason I don't completely agree with your statement is that in C++ when a function template is instantiated with different types, it effectively creates an overloaded function. Functions templates in C++ are in fact little more than macros.  </p></div>
+ <div class="links">By <a href="user/1261" title="View user profile.">cdiggins</a> at Sun, 08/06/2006 - 19:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-20311"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20311" class="active">I partially agree with this</a></h3>
+ <div class="content"><blockquote ><p >
+I partially agree with this statement, however I took Marcin's statement to mean that the sort implementation expects that certain functions, like operator</blockquote>
+<p >Yes the first overload of std::sort expects the contained type to support the relational less than operator while the second overload has an extra argument that takes a binary predicate, but again this isn't necessarily todo with C++ style overloading look at my previous code example which proves that. The same would hold if user-defined operators are <strong ><i >member functions</i></strong> in two different, completely unrelated classes/structs.</p>
+<p >The term operator overloading is such a horrible term because one can say they have overloaded an operator and also have overloaded versions of that operator overload, baffles the mind. Personally i just call it "user-defined operators" to prevent confusion/ambiguity.</p>
+<blockquote ><p >
+The reason I don't completely agree with your statement is that in C++ when a function template is instantiated with different types, it effectively creates an overloaded function. Functions templates in C++ are in fact little more than macros.
+</p></blockquote>
+<p >This is just on the conceptual level from a user's point-of-view and just <strong ><i >an artifact of the implementation of templates</i></strong> from a compiler vendor's point-of-view, this isn't C++ style overloading itself.</p>
+<p >Template functions themselfs are also considered in C++ overload resolution (you can check the C++ ISO standard) and template functions can be overloaded with other template functions too.</p>
+<p >As i said before if you want to talk about C++ style overloading this isn't it, what you guys are talking about is just <strong ><i >an artifact of an implemenation of parametric polymorphism in C++</i></strong>.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Sun, 08/06/2006 - 20:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20258"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20258" class="active">Type classes</a></h3>
+ <div class="content"><p >Since nobody has mentioned it yet: by far the sanest way to date for adding overloading to an ML-style type system still are type classes a la Haskell. After all, a clean approach to overloading was their original motivation. Of course, their expressive power has since been discovered to stretch lightyears beyond that simple goal.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Fri, 08/04/2006 - 09:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20261"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20261" class="active">but not the only solution</a></h3>
+ <div class="content"><p >A recent post here to LtU pointed to a paper showing that type classes and Ocaml-style functors are equivelent (which, IMHO, proves your point about type classes wide applicability and power).</p>
+<p >The important point here is that there is more than one way to skin this cat- overloaded operators is one, type classes a second, and functors a third.  I'll admit to not being very familiar with type classes and haskell, but I am familiar with both C++ style operator overloading and Ocaml style functors, and I'll take functors over operator overloading any day.  The advantage functors have is that the explicitly list which operators are needed for a given operation.  In Ocaml, any point where you start wanting operator overloading, what you really want is a functor.</p></div>
+ <div class="links">By <a href="user/963" title="View user profile.">Brian Hurt</a> at Fri, 08/04/2006 - 13:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20264"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20264" class="active">The important point here is</a></h3>
+ <div class="content"><blockquote ><p >
+The important point here is that there is more than one way to skin this cat- overloaded operators is one, type classes a second, and functors a third. I'll admit to not being very familiar with type classes and haskell, but I am familiar with both C++ style operator overloading and Ocaml style functors, and I'll take functors over operator overloading any day. The advantage functors have is that the explicitly list which operators are needed for a given operation. In Ocaml, any point where you start wanting operator overloading, what you really want is a functor.
+</p></blockquote>
+<p >I think you're slightly confusing things, the discussion is on ad-hoc polymorphism (the overloading kind) and not user-defined operators (which may also be overloaded themselfs).</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Fri, 08/04/2006 - 14:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20265"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20265" class="active">For the right definition of equivalent</a></h3>
+ <div class="content"><p >I seem to have missed that post, but I would say that it is a bit of a stretch to say that they are equivalent. Of course, there are encodings in either direction, but considering expressive power based on the Felleisen definition, type classes and modules are certainly incomparable, i.e. neither subsumes the other.</p>
+<p >There is a large overlap, but how large exactly depends heavily on what extensions to the type class system you are considering, and what semantics you assume for modules. For example, applicative functors bring you closer to type classes but are themselves incomparable in expressive power to generative functors.</p>
+<p >A <A href="http://www.cs.cmu.edu/~rwh/papers.htm#mtc">recent paper</A> looks at extending a quite general ML module calculus to express type classes. It requires significant additional machinery.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Fri, 08/04/2006 - 14:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20298"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20298" class="active"> Applicative translucent functors in Haskell</a></h3>
+ <div class="content"><p ><a href='http://www.haskell.org/pipermail/haskell/2004-August/014463.html'>This</a> may be of some interest.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Sat, 08/05/2006 - 23:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20279"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20279" class="active">Regarding Haskell type classes</a></h3>
+ <div class="content"><p >It's such a shame that the authors of the Haskell prelude mucked it up by putting +,-, and * in the same type class as abs and signum - so that if you want to overload +,-,* for matrix or polynomial arithmetic, say, then you have to think up some kludge meaning for abs, signum in that context.</p></div>
+ <div class="links">By <a href="user/3104" title="View user profile.">DavidA</a> at Fri, 08/04/2006 - 20:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20282"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20282" class="active">subtyping</a></h3>
+ <div class="content"><p >No. If two objects (type classes) aren't related, they shouldn't share the same interface, period. In a perfect world, this would be all fine and dandy, however, mathematicians are possibly the laziest people I have ever seen. They tend to overload the common symbols and names with conflicting operations, e.g. numerical multiplication vs. matrix multiplication. This generally doesn't matter too much when you're just dealing with equations, but once you start carrying this over to programming, you start to degrade the compiler's ability to check your program because you're providing conflicting information. </p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Fri, 08/04/2006 - 21:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20299"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20299" class="active">In defence of mathematicians</a></h3>
+ <div class="content"><p >You make it sound like mathematicians are simply profligate with notation, using the same notation for all sorts of different things out of laziness. Well, that's not the way mathematicians see it. They have abstraction called a "ring", a generalisation of the integers, which is basically any class for which +,-,* are defined and obey certain rules - for example, matrices, polynomials. There's nothing unprincipled about this - it's the same sort of abstraction that programmers make all the time. The problem with the Haskell prelude is that it doesn't cut up mathematical space in the right way - the way that generations of mathematicians have found to be the most useful. For mathematicians, the arithmetic operations +,-,* are logically a different abstraction from the magnitude operation abs, and the order operation signum.<br >
+(Google for "Haskell numeric prelude" for more on this.)</p>
+<p >Later: To clarify, the point I'm making is that operator overloading is a desirable feature because it can make code much more readable. But if type classes cut up the space in the wrong way, then they get in the way of valid uses of operator overloading (such as defining +,-,* for matrices).</p></div>
+ <div class="links">By <a href="user/3104" title="View user profile.">DavidA</a> at Sun, 08/06/2006 - 08:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-20301"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20301" class="active">
+You make it sound like</a></h3>
+ <div class="content"><blockquote ><p >
+You make it sound like mathematicians are simply profligate with notation, using the same notation for all sorts of different things out of laziness. Well, that's not the way mathematicians see it. They have abstraction called a "ring", a generalisation of the integers, which is basically any class for which +,-,* are defined and obey certain rules - for example, matrices, polynomials. There's nothing unprincipled about this - it's the same sort of abstraction that programmers make all the time.
+</p></blockquote>
+<p >Correct. I'd forgotten that matrix multiplication does share some properties with numeric multiplication.</p>
+<blockquote ><p >
+The problem with the Haskell prelude is that it doesn't cut up mathematical space in the right way - the way that generations of mathematicians have found to be the most useful. For mathematicians, the arithmetic operations +,-,* are logically a different abstraction from the magnitude operation abs, and the order operation signum.<br >
+(Google for "Haskell numeric prelude" for more on this.)
+</p></blockquote>
+<p >I'm not too fluent in haskell, so I can't really comment on this. Specifically, you are correct in that different abstractions would be needed for the different uses.</p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Sun, 08/06/2006 - 15:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-20307"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20307" class="active">The problem with the</a></h3>
+ <div class="content"><p ><cite ><br >
+The problem with the Haskell prelude is that it doesn't cut up mathematical space in the right way - the way that generations of mathematicians have found to be the most useful. For mathematicians, the arithmetic operations +,-,* are logically a different abstraction from the magnitude operation abs, and the order operation signum. (Google for "Haskell numeric prelude" for more on this.)<br >
+</cite>
+<p >I'm interested in learning more about this. Specifically, how might one encode what "generations of mathematicians have found to be the most useful" into a programming language, and also what language features might best support that.
+<p >Can you (or anyone) recommend further reading? A good book on abstract algebra, perhaps? I'll google the supplied string, but I'm also interested in broader issues. Thanks.</p></div>
+ <div class="links">By <a href="user/2398" title="View user profile.">marshall</a> at Sun, 08/06/2006 - 19:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-20308"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20308" class="active">The Mathematics Space</a></h3>
+ <div class="content"><p >For universal algebra, a good free introduction can be found <a href="http://www.math.uwaterloo.ca/~snburris/htdocs/ualg.html">here</a>.</p>
+<p >I also recommend Pierce's <a href="http://www.amazon.com/gp/product/0262660717/104-0619079-4895102?v=glance&amp;n=283155">Basic Category Theory for Computer Scientists</a>, but only after a bit of work in universal algebra, because Pierce says things like "Another class of familiar algebraic structures, monoids, also forms the basis of a category:" and that's on page four. Gulp&mdash;I had no idea what a "monoid" was when I read that. In fact, I still don't. :-)</p>
+<p >Finally, a great way (IMHO) to learn this kind of material is interactively, with a good proof assistant supporting essentially the entirety of constructive mathematics at your fingertips. I like <a href="http://coq.inria.fr">Coq</a> a lot so far, both because of the software itself and because of <a href="http://www.labri.fr/perso/casteran/CoqArt/index.html">Coq'Art</a>, which is proving quite enjoyable to work through.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sun, 08/06/2006 - 19:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-20312"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20312" class="active">At risk of going off-topic,</a></h3>
+ <div class="content"><p >At risk of going off-topic, a monoid is a combination of a set (which I'll call S for now), a binary operation closed on S (* for now) and a distinguished element of S (which I'll call i), such that * is associative and i is an identity under *. For example, the naturals form a monoid with addition and 0, and with multiplication and 1. Strings also form a monoid, with concatenation as the operation and the empty string as identity.</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Sun, 08/06/2006 - 22:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-20320"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20320" class="active">Monoids</a></h3>
+ <div class="content"><p >You forgot the most important example and the one easiest to relate to categories: (endo)functions form a monoid with the multiplication composition and id as the identity.  In fact, all monoids can be viewed this way (we can lift a monoid via m |-&gt; \x.m*x).  One computational example is a state machine.</p>
+<p >I have and do highly recommend <a href="http://folli.loria.fr/cds/1999/library/pdf/barrwells.pdf">Barr and Well's Category Theory Lecture Notes for ESSLLI</a> for an intro to category theory that uses these examples but provides definitions and is of a very computational bent.  If you (Paul, or anyone else for that matter) have read it before, but it's been a while you may want to give it another read.  That said, I have an issue with this and most other introductory material for category theory available online in that some notions that are extremely useful in actually doing category theory are left unmentioned, e.g. ends, indexed limits and Kan extensions.  So I've wanted to write my own.  I do have most of what I want on paper, but I need to get it into a computer sooner or later (and it better be sooner).  Originally it was going to be just brutal and formalistic and not without basic category theory prerequisites, but as it got longer I decided to make it self-contained.  In the mean time, the lecture notes <a href="http://www.cl.cam.ac.uk/~gw104/">here</a> are closest (of what's online) to what I want.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Mon, 08/07/2006 - 21:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-20314"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20314" class="active">Cutting up mathematical space</a></h3>
+ <div class="content"><p ><i ><br >
+[H]ow might one encode what "generations of mathematicians have found to be the most useful" into a programming language, and also what language features might best support that<br >
+</i></p>
+<p >Type classes can be used for what I had in mind. All I meant is that a type class groups several different functions (or operator overloads) together, and the numeric type classes in the Haskell Prelude don't group in the way that mathematicians would prefer.</p>
+<p >In brief, the type classes I would define would look something like this:<br >
+Ring: (+), (-), (*)  -- Similar to existing Num class<br >
+Field: (/)           -- Similar to existing Fractional class<br >
+Normed space: abs    -- abs is asking how big something is<br >
+Total order: signum  -- signum is asking whether the element is before or after zero in the ordering</p>
+<p >The point is simply that arithmetic properties, geometric properties, and order properties should be separate abstractions (ie separate type classes) - because in general you can have any one without the others.</p>
+<p >For further reading - this is undergraduate maths, but the books I read as an undergraduate are probably out of print now - but for starters you could look at:<br >
+<a href="http://mathworld.wolfram.com/Ring.html">http://mathworld.wolfram.com/Ring.html</a><br >
+<a href="http://mathworld.wolfram.com/Field.html">http://mathworld.wolfram.com/Field.html</a><br >
+<a href="http://en.wikipedia.org/wiki/Normed_vector_space">http://en.wikipedia.org/wiki/Normed_vector_space</a><br >
+<a href="http://en.wikipedia.org/wiki/Metric_space">http://en.wikipedia.org/wiki/Metric_space</a><br >
+<a href="http://mathworld.wolfram.com/NormedSpace.html">http://mathworld.wolfram.com/NormedSpace.html</a><br >
+<a href="http://mathworld.wolfram.com/MetricSpace.html">http://mathworld.wolfram.com/MetricSpace.html</a></p></div>
+ <div class="links">By <a href="user/3104" title="View user profile.">DavidA</a> at Mon, 08/07/2006 - 08:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-20315"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20315" class="active">Book in print</a></h3>
+ <div class="content"><p >A book that is still in print is Fraleigh's <a href="http://www.amazon.co.uk/gp/product/0321156080/026-5837566-9858823?v=glance&amp;n=266239">A First Course in Abstract Algebra</a> which gives a clear and concise presentation of the subject. It seems to be used in the first course in abstract algebra in many universities. </p></div>
+ <div class="links">By <a href="user/2050" title="View user profile.">Peter A Jonsson</a> at Mon, 08/07/2006 - 12:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-20319"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20319" class="active">Haskell Numeric classes</a></h3>
+ <div class="content"><p >See <a href="http://www.haskell.org/docon/">DoCon</a> and the <a href="ftp://ftp.botik.ru/pub/local/Mechveliani/basAlgPropos/">Basic Algebra Proposal</a> for alternative setups.  I'm fairly certain there are some older discussions on the Basic Algebra proposal in the Haskell mailing list archives to give you an idea of some of the forces in the situation.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Mon, 08/07/2006 - 21:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-20325"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20325" class="active">Is anything going to be done about it?</a></h3>
+ <div class="content"><p >This confirms that I'm not the first mathematician to complain about this, and I won't be the last.<br >
+I happen to think that the Basic Algebra Proposal is a bit over the top. There's another project tackling this - <a href="http://darcs.haskell.org/numericprelude/">Haskell numeric prelude</a> - I don't know how good it is.<br >
+But it's all a bit futile unless someone among the Haskell great and good is going to take some notice.</p></div>
+ <div class="links">By <a href="user/3104" title="View user profile.">DavidA</a> at Tue, 08/08/2006 - 08:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-20348"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20348" class="active">Probably not</a></h3>
+ <div class="content"><p >First off, there is nothing keeping you from using these libraries now, but as I said, both of these have been discussed before (dig around the haskell mailing list).  There may be some changes with <a href="http://hackage.haskell.org/trac/haskell-prime">Haskell'</a>, but probably nothing too dramatic.  Probably just getting rid of the most egregrious things.  If no existing library is satisfactory for you, you can also easily make your own.  It is no trouble to qualify the Prelude (+), (-), etc. and to make your own.  I do understand that this is less convenient than having it in the standard library and doesn't help when working with existing libraries.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Tue, 08/08/2006 - 21:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20259"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1655#comment-20259" class="active">Unrestricted overloading in</a></h3>
+ <div class="content"><p >Unrestricted overloading in the style of C++ isn't the best approach, and allows the expected semantics of operations to be altered.</p>
+<p >What seems like the sanest approach as people have already hinted at is that a function has exactly one type, and overloaded functions are built up with intersection types or open variant types, which Haskell's type classes are similar to.</p></div>
+ <div class="links">By <a href="user/3038" title="View user profile.">Steven Woodhouse</a> at Fri, 08/04/2006 - 10:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

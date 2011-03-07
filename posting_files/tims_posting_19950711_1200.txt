@@ -1,0 +1,24 @@
+http://groups.google.com/group/comp.graphics.algorithms/browse_thread/thread/5d1b5126f58b0cb0/678a25d057424270?lnk=st&rnum=89&hl=en#678a25d057424270
+[comp.graphics.algorithms] Re: BSP Tree Balancing
+
+When picking a splitter polygon, rank all polygons based on a function like this:
+
+[code]
+   Score =
+      (
+      (FLOAT)Balance *       (FLOAT)(OurAbs(Front-Back)) +
+      (FLOAT)(100-Balance) * (FLOAT)Splits
+      );
+[/code]
+
+Where:
+
+Balance = 0-100, tendency to balance tree rather than minimize cuts, 15-25 works well.
+
+Front  = polygons in front 
+Back   = polygons in back 
+Splits = polygons split
+
+For typical complex objects, the polygon count only increases by 20-30% after BSP'ing.
+
+-Tim Sweeney, Epic MegaGames, Inc.

@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/1450
+http://lambda-the-ultimate.org/node/1450#comment-16662
+1050026
+A note on distributed computing
+Is this a political dissertation?
+<p>The authors paper over the usability benefits of a single object representation supporting both local and distributed computation.  Such a representation is required because software developers require a uniform, simple programming model.
+</p><p>(Biased writing style taken from the paper itself.)</p>

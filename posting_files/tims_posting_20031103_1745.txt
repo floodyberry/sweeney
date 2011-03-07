@@ -1,0 +1,14 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/a369b30c8b7e149d/6ac5b94e3f820642?lnk=st&rnum=19&hl=en#6ac5b94e3f820642
+[comp.lang.functional] Re: Object Identity
+[blockquote]*Copying* may not be meaningful, but identity is.
+
+[blockquote](2) Identity breaks observational equivalence.[/blockquote]
+
+Not true.  It depends on the equivalence predicate.[/blockquote]
+By comparing functions "by pointer" (or, more generally, by their internal representation), you can sometimes determine that two functions *are* observationally equivalant.  But you can't generally determine that two functions *aren't* observationally equivalant.  Two functions might have different internal representations, while still representing the same function, from an extensional equivalance point of view.
+
+In theory, this matters whenever a language's equality predicate corresponds to observational equivalance, a.k.a. Leibniz equality.
+
+In practice, this matters wherever a language runtime might perform runtime code specialization (optimizing some occurances of a function but not others, thus changing some internal representations), might serialize the function for sending across the network, etc.
+
+One should be very careful with any piece of code that claims to compare two functions for equality.  If in a Turing-complete language such an equality predicate exists on functions, then there are cases where it's going to either throw an exception or return false when in theory it should return true.  Such an equality can be a useful engineering tool, but it's not mathematical equality. 

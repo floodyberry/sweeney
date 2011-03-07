@@ -1,0 +1,15 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/ea865a2841e6c2b5/a7ca8bc2278b6649?lnk=st&rnum=57&hl=en#a7ca8bc2278b6649
+[comp.lang.functional] Re: Extending Church Numerals to integers, rationals
+I wasn't expecting someone to mention ZZT here! :-)  Once in a while I take a short break from game programming and work on an interesting side-project.  Currently I'm fascinated with the applications of type theory, and am experimenting with extensions that increase expressiveness at the expense of decidable typechecking and possibly even reduction.
+
+Regarding Church Numerals, another thought along these lines is to extend the lambda calculus with a new primitive "-1", not itself definable as a finite lambda term, and define a new (possibly incomplete) reduction rule for it which captures the essence of a negative church numeral: that for all terms f and x, f(-1(f)(x))=-1(f)(f(x))=id.
+
+It was mentioned that -1 is the fixed point of y=y+y+1, but that leads to an infinite expansion that does not appear to be computationally useful.
+
+It is interesting to restate a problem such as "y such that f(y) = x", as -1(f)(x).  Not that this causes a solution to magically appear! But it does move the problem from solving an equation to evaluating an expression in a lambda calculus augumented with the primitive "-1".
+
+The notion of negative Church Numeral terms makes varying degrees of sense in different calculi.  It is most interesting in a logic programming framework supporting terms with multiple "potential" values such as McAllester's Ontic: http://www.autoreason.com/.  In this sort of framework, it seems that every function has a unique and perfectly sensible (though possibly multivalued, and not necessarily computable) inverse.
+
+Regarding exponentiation ("a^b = lambda(f).lambda(g).g(f)"), this agrees with convention for all natural numbers, except for the somewhat questionable case of 0^0=0.
+
+[Disclaimer: I'm presenting this experimentally and have not attempted to prove the soundness of the proposed extensions.] 

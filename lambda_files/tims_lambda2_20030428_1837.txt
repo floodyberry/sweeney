@@ -1,0 +1,28 @@
+http://lambda-the-ultimate.org/classic/message6587.html
+http://lambda-the-ultimate.org/classic/message6587.html#6640
+0530875
+Python Metaclass Programming
+Re: Python Metaclass Programming
+<p>Kimberley:</p><p>
+
+One researchy attempt along these lines is McAllester's Ontic (<a href="http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps">http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps</a>).</p><p>
+
+Unfortunately I've never seen any compilers that apply these concepts to real-world programming languages, but I'm trying to implement one.  My experience so far is that it's achievable, but is difficult to nail down all of the proper typechecking rules and to model real-world programming constructs (like inheritance and open-world programming) from such low-level primitives.</p><p>
+
+Re counting sheep:</p><p>
+
+Real-world programming is more about sheep than isomorphisms of sheep.  Are two sheep the same sheep?  Given two sets of sheep, are the sets the same?  Given a set of sheep and a sheep, does the sheep belong to the set of sheep?  What elements belong to the set of all subsets of the set of all sheep?  These are useful concepts for typechecking.</p><p>
+
+Hiding equality and forcing programmers to deal with explicit isomorphisms is a strictly less useful technique than directly exposing subtyping and type equality.</p><p>
+
+First, because compilers are capable of pretty impressive verification of subtyping properties, even for really powerful languages (where, though the general problem is undecidable, there is a very expressive decidable subset of the language).  Verifying anything related to isomorphisms is far harder.  Have you tried doing this for serious programming languages?  In a practical implementation, I think you end up with progammers writing a ton of explicit coercions which are claimed to be isomorphisms but in practice are just a bunch of arbitrary functions the programmer hopes are correct isomorphisms.</p><p>
+
+Second, because most of practical programming practice today requires subtyping.  Any serious app written in C++, Java, or C# would become way more verbose if subsumption were explicit, with explicit coercions all over the place.</p><p>
+
+I mention that my philosophy on this topic is very much a result of studying McAllester's papers in the past year.  In (mostly minor) language work I did in the 15 years previous to that, my thinking was very similar to yours, that in the ideal type system, types are an utterly distinct from values, that concepts like type equality don't necessarily follow from value equality, etc.</p><p>
+
+Since then, I've looked at the basic constructs in McAllester's paper as the basic building blocks of future type systems: a type-forming "the-set-of-all" construct, an element extraction construct "an-element-of", types as values, types-of-types available in a structured way ("a-subset-of"), etc.  Sadly the terminology and programming style there tends to obscure the fundamental breakthroughs there.</p><p>
+
+Re array subtyping:</p><p>
+
+You had pointed the unnaturalness of "{0..3} &lt; {0..4}" leading to the conclusion that "chararray(4) &lt; chararray(3)".  You used it as an example of the arbitrarity of subtyping.  An alternative view is that subtyping is fine, but there are really two different kinds of function-like things, one where a-&gt;b &lt;: c-&gt;d iff b&lt;:d and c&lt;:a, and the other (call it ~&gt;) where a~&gt;b &lt;: c~&gt;d iff b&lt;:d and c=a.</p>

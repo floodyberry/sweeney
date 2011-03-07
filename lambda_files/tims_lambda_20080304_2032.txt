@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2697
+http://lambda-the-ultimate.org/node/2697#comment-40512
+1051273
+Pure, Declarative, and Constructive Arithmetic Relations
+Retreating from pure Horn clauses
+<p>That's the big question.  It appears unlikely that pure Horn clauses will lead to something comparable in expressive power to Constraint Logic Programming.  So, we need more power.  But can we still avoid introspection (var/1) and unsoundness (Mercury modes)?   Options include negation, cut, or moving to a more powerful base language with quantifiers and/or lambdas.
+</p><p>Also, what subset of problems would a more complete solution have, given the undecidability of the general case?</p>

@@ -1,0 +1,11 @@
+http://www.seas.upenn.edu/~sweirich/types/archive/1999-2003/msg01419.html
+[TYPES] Type theory vs floating-point arithmetic
+I'm looking for pointers to attempts to reconcile the differences between type theories and the data types and functions defined by the IEEE 754 floating-point standard.
+
+For example, IEEE 754 defines equality over floating point numbers in a way that conflicts with Leibniz equality.  There exist two IEEE "zeros", -0 and +0, and the standard requires that they compare as if they are as equal, though there exist functions that distinguish between them.  Additionally, IEEE defines a class of "not-a-number" values x such that x=x is deemed false.
+
+This would seem to require that a language either expose two equality operators (a natively-supplied Leibniz equality operator, and a "IEEE 754 numerical equality" operator which differs at some values), or that the language disobey the floating-point standard with regard to equality.  Java takes the later route, while C/C++ and the Haskell report appears to be silent on the issue.
+
+There is a further problem regarding subtyping.  It might first appear that the type of 32-bit floating point values is a subtype of the type of 64-bit floating point values.  Though one can losslessly convert from 32-bit to 64-bit and back, performing a 32-bit arithmetic operation on such 32-bit numbers can produce a different result than performing a 64-bit arithmetic operation on their 64-bit extensions, and then converting back.  So from a type theoretic point of view, the types of 32-bit and 64-bit floating point numbers must be disjoint.
+
+Finally, IEEE 754 mandates that a compliant computer architecture and language pair expose a mechanism for reading and writing a set of "sticky flags" which indicate whether any imprecise, overflowed, or invalid operations have been encountered since the flags were last reset; and a set of "rounding modes" affecting subsequent operations.  These concepts seem incompatible with referential transparency and lazy evaluation.

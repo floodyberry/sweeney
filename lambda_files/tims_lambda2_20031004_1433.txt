@@ -1,0 +1,20 @@
+http://lambda-the-ultimate.org/classic/message8936.html
+http://lambda-the-ultimate.org/classic/message8936.html#8953
+0533224
+CLR Exception Model
+Re: CLR Exception Model
+<p>Ehud,</p><p>
+
+Would you consider it uncontroversial for a language in the general spirit of C++/C#/Java to expose exceptions as follows?</p><p>
+
+- There are two kinds of functions, clearly distinguishable by syntax: imperative functions (which may have side effects and other referentially non-transparent behaviour) and pure functions (referentially transparent).</p><p>
+
+- Pure functions default to being able to throw no exceptions.  To widen the set of exceptions throwable by a pure function, you need to add an extra keyword, like "throws(int,string)", or (in the most general case) "throws(any)".</p><p>
+
+- Imperative functions default to being able to throw exceptions of all types.  To narrow the set of exceptions throwable by an imperative function, you need to add an extra keyword, such as "throws(int,string)" or (in the most narrow case) "throws(none)".</p><p>
+
+- A type of functions f may only be a subtype of a type of functions g if f throws the a subset of the exceptions of g.</p><p>
+
+My thinking is that this approach satisfies the largest possible audience, giving you the capability of expressing any possible exception widening / narrowing behaviour, but defaulting to what is typically wanted: pure functions where exception support is narrow and may only be widened explicitly, and imperative functions where exception support is universal and only be narrowed explicitly.</p><p>
+
+Thoughts?</p>

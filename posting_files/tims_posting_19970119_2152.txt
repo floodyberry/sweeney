@@ -1,0 +1,27 @@
+http://groups.google.com/group/comp.graphics.api.opengl/browse_thread/thread/7a581eb29592a0b3/4f8f2fff07f7f8f5?lnk=st&rnum=77&hl=en#4f8f2fff07f7f8f5
+[comp.graphics.api.opengl] future OpenGL features?
+[blockquote]IMO it's not very realistic to cite one shader in a game and start suggesting extentions would have improved performance, particularly when you consider that it's one arbitrary (and very impressive) example of many possibilities. If you need commodity hardware acceleration for those features then using more complex shaders could be considered a disadvantage for some time to come.[/blockquote]
+
+If we make the assumption that the most high-performance 3D apps will be geared towards rendering *realistic 3d environments*, then Quake is a very good example of what's needed in the short term. I think that "realistic 3d  environments" is a safe and necessary assumption, since that's the most taxing widespread use of 3d hardware, especially at the consumer level. This means specializing the library a bit, but that's a time honored tradition (much as special case CPU performance was improved by caching and instruction pipelining - things which don't help all apps, but which greatly help the most common apps).
+
+In a realistic 3D environment, the main polygon-level capabilities that are sorely needed now are:
+
+* Multipass texture rendering, for:
+[ul] [li]Texture maps[/li] [li]Detail textures/microtextures[/li] [li]Bump maps[/li] [li]Light/shadow maps[/li] [/ul]
+
+* Vertex lighting options for:
+[ul] [li]Gouraud shading[/li] [li]Specular highlighting[/li] [/ul]
+
+High end hardware already does the vertex lighting, so the main area that needs improvement in OpenGL for the next few years is multipass texture rendering, and more advanced texture options (like bump mapping).  This is a good direction for OpenGL, because it lets us get a huge (i.e. 5X-10X) improvement in apparent detail, just by adding multiple simultaneous texture mapping support to 3d hardware - something that is well defined and much easier to do in hardware than, for example, improving straight polygon rendering speed by 5X-10X.
+
+I think you do need one texture matrix per simultaneous texture map you're rendering (whether the multi-pass rendering is done with multiple passes, or it's done simultaneously).  The Quake case of light maps aligned 16:16 on texture maps is too special case, especially when one wants to extend it to dynamic lighting/shadow maps, where different coordinate systems are favorable.
+
+In reality, this just means that each polygon vertex needs one (x,y,z) value and multiple texture (u,v,r,g,b) values (pardon the probably incorrect representation, I'm a newbie to hardware, I'm referring to two texture coordinates and an RGB lighting value). So hardware just needs the ability  to interpolate "n" pairs of (u,v,g) coordinates, when n is small, i.e. 1-4.
+
+The only major question is - what blending operations are needed between the multiple texture sources, color sources, and screen?  For guidance, one can just look at the coolest raytraced, radiosity rendered, and other computer generated scenes around, and you don't need that many operations to capture 99% of the most common elements:
+
+[ul] [li]Shadowing (multiply texture map texel by light map texel)[/li] [li]Bump mapping (multiply computed bump-map light value by light map texel).  Bump mapping could be achieved by generating a very low res (i.e. 16x16) specular highlight texture at each triangle vertex, and doing an (ugh) 5-way (i.e. bilinear -> trilinear -> 4-way -> 5-way) interpolation[/li]  [li]Fogging (multiplying for attenuation then adding fog)[/li] [li]Alpha blending with interpolated or texture-lookup alpha for transparent and reflective surfaces[/li] [/ul]
+
+There are probably a few others, but the number of supported combinations can be kept small, by limiting the support to options which are very useful in rendering realistic environments.
+
+-Tim 

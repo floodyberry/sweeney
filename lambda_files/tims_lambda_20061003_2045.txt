@@ -1,0 +1,11 @@
+http://lambda-the-ultimate.org/node/1753
+http://lambda-the-ultimate.org/node/1753#comment-21399
+1050329
+Relationship between access modifiers and type
+What are access modifiers?
+<blockquote><div>This got me thinking about what exactly the relationship between access modifiers and a class's type is.</div></blockquote>
+<p>For first-class reasoning about this, you need a fairly powerful type theory.  The cleanest way of reasoning about this is to say that a class is a record whose set of fields is existentially quantified with a known lower-bound.  Or, for more advanced access, several staged lower bounds, one for each sort of context in which the class can be seen (e.g. within the class scope, in the same package as the class, in an external package).
+</p><p>In other words, represent class {public: int x,y; private: int z;} as something like: exists(s:set&gt;=set{'x','y'} = set{'x','y','z'}) lambda(field:s) case(field) of {'x'-&gt;int,'y'-&gt;int,'z'-&gt;int}.  Here, "outside of the definition" you only know the set of fields includes 'x' and 'y' and since you don't know whether or not 'z' belongs you cannot access it; while "inside the definition" you know the exact set of fields is x, y, and z.
+</p><p>With more advanced staging constructs, code in different contexts could see different lower bounds, enabling Java "protected" access within a package, etc.
+</p><p>The best way to reason about features like this is to translate them into a core language with a powerful type theory, rather than building up ad-hoc theories of types-with-access-protection, etc as is typically done when reasoning about object oriented languages.
+</p><p>With this approach, questions like "How do I abstract over access modifiers?" and "Is this thing a subtype of that thing with the same fields but different access modifiers?" are easy to answer by referring back to the core language translation, in which everything is a term which may be analyzed and abstracted over.</p>

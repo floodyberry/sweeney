@@ -1,0 +1,58 @@
+http://lists.tunes.org/archives/gclist/1999-July/001632.html
+[gclist] Games and Realtime Garbage Collection
+Hi,
+
+I'm a game developer who is interested in garbage collection.  The most recent game engine I worked on (Unreal, see http://www.unreal.com/) contains a built-in scripting language quite similar to Java, that is based on garbage collection for memory management.  See http://unreal.epicgames.com/unrealscript.htm for an overview of my little language -- it's pretty simplistic, but it does implement some neat object-oriented features such as language-level support for dynamic state (a.k.a. mode) switching and scoping of functions.
+
+My current garbage collector is based on a simplistic and non-optimized "mark and sweep" routine that isn't performed in realtime.  Once every few minutes (when the game's level changes), I just go off and perform a full, no-conservative garbage collection pass.  It's a simple routine, because I do it at a known point in my code where I know there aren't any references to objects on the stack, and I have a single root object through which all active references can be traced.  Object orientation is cool for games and 3D environments -- my root object is sort of a "pointer to the 3d world". My script language maintains class "meta-data" listing all variables and their references, so it is a simple process to determine where object references reside in other objects.
+
+For reference, I typically have 10,000 separate objects in memory.  A typical object is a few hundred bytes, and references a few other objects. About 80% of my objects are known to be unchanging at runtime, for example game data like sounds, music, texture graphics, and animation data.
+
+Anyway, for my next game, I want a much more general-purpose, realtime garbage collector.  I've read a few books on garbage collection, and looked at links on the web, so I have a general idea of what's possible.  But I was wondering if anybody might give me guidance on some topics:
+
+1. Since >80% of my objects are constant at runtime, I can be clever and precompute information about their internal references and cycles (since they're known not to change after construction), and not have to ever check them in realtime for my garbage collector.  Is this a generally known / researched technique, or did I invent something here? :-)
+
+2. Since I'm defining my own language, I thought of using a new "visitor" keyword (that puts constraints on an object-reference variable), that means "this local variable (or function parameter) refers to an object, but it's not allowed to 'gain roots', so you can't assign it to a global variable, instance variable, or static variable".  This is analogous to the meaning of "const Typ* Ptr" in C++, "Ptr points to an object, but you can't change it". The idea behind this is that it enables the compiler to detect that I don't need to do any garbage collection work on a temporary object.  For example:
+
+[code]
+// Transform a point by a matrix.
+// Here we promise not to "root" p or m.
+void transformPointByMatrix( visitor point p, visitor matrix m )
+...
+
+// Do some stuff.
+point p = new point(1,2,3);
+matrix m = new matrix(1,2,3,4,5,6,7,8,9); // create a new 3x3 matrix.
+transformPointByMatrix(p,m);
+return;
+[/code]
+
+In this case, assume that the transformPointByMatrix function is defined in some other module, so I can't compile-time inline it.  But with the "visitor" keyword, the compiler *can* realize that the objects "p" and "m" can't possibly gain any roots in the code above, so it can be explicitly destructed, without any GC overhead.  Whereas, without the "visitor" keyword, both "p" and "m" become garbage and the collector eventually has to deal with them.
+
+The other thing I like about this "visitor" limitor is that it helps programmers avoid making stupid memory management mistakes, keeping objects referenced that shouldn't be.  For example, think about Windows screen painting "device context" objects, temporary objects which are passed into a function for rendering purposes.  These objects are only safe/usable for the duration of that function, after which they become invalidated.  So I'd like the language to make it *impossible* for a programmer to sneakily "save off a copy of the object".
+
+Also seems neat for "secure client" languages like Java, where you might want to pass in a high-level object to a function, but prevent it from being retained.
+
+Is this a theoretically sound technique?
+
+3. I'm a huge OOP proponent, but one aspect of OOP that I'm still uncomfortable with is the concept of "object lifetimes".  In C++, object lifetimes were explicitly controlled by the app (for better or for worse). But there are lots of cases where that's very desirable, for example:
+
+- A class encapsulating the TCP socket.  The TCP socket might be closed at any point, after which the socket object is invalid.  Without explicit object lifetime management, you have to write a lot of special case code to prevent these invalid objects from being used wrong, for example if( i_havent_been_closed ) {do normal logic}else{just ignore the call}.
+
+- GUI windows that might be closed at any time.
+
+- Objects in a game. When the game logic determines their life is over (i.e. if you kill a player), you remove it from the world and you *don't* want any references to them to remain!
+
+Has anyone found a way to implement "explicitly managed object lifetimes" in OOP soundly?
+
+For example, I was thinking about a specialized kind of object with the semantics "all references to this object must be weak; the object isn't garbage collected; it must be explicitly destroyed; when destroyed, all weak references to it are set to NULL, and an optional notification function for each reference is called".  These would involve some extra overhead, such as maintaining backpointers at all times, but it seems like it might work.
+
+4. References between objects in my game (and in 3D environments in general) tend to be clusered: they form groups, where objects within a group contain tons of references to other objects in the group, but objects in a group contain a fairly small number of references to *other* groups.  So I've been trying to devise a GC algorithm that takes this into account.  Any suggestions?
+
+5. Can anyone point me to techniques I can use in my language / compiler to make garbage collection simpler or faster?  I'm lucky to have freedom over designing the language, compiler, and runtime, so anything is possible. And I need to manage thousands objects in realtime and 60 frames per second, so performance is important.
+
+6. Since this is a game, realtime performance is more important than anything else.  I can afford to waste a certain percentage of available memory for garbage objects, and I can afford the time to maintain reference counts and incrementally scan to collect garbage, but I *can't* afford to have any long pauses -- and here in game land, spending more than 1 msec on garbage collection per 15 msec frame is the limit of acceptability.  So, what is the best incremental "do a little bit of GC work at a time" approach?  Note that I don't have to worry about "references to objects stored on the stack", since I can design my game to do garbage collection once per frame, in my update loop where I'm 100% sure there are no references to object on the stack.
+
+Thanks for any help!
+
+-Tim

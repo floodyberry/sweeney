@@ -1,0 +1,65 @@
+http://www.firingsquad.com/features/sweeney_interview/
+Tim Sweeney 64-bit Interview
+Tim Sweeney 64-bit Interview
+Firing Squad
+Brandon "Sandman" Bell
+
+<desc>Epic’s Unreal and Unreal Tournament game engines are used extensively in today’s latest games. Therefore, when AMD <a href="http://firingsquad.gamers.com/news/newsarticle.asp?searchid=4569">demonstrated a 64-bit version of Unreal Tournament 2003</a> running on its Athlon 64 processor at Comdex last year, the entire gaming world took notice. For further insight into Epic’s 64-bit plans and their thoughts on AMD’s 64-bit approach, we turned to Epic lead programmer Tim Sweeney</desc>
+
+<q>Can you describe the process involved in migrating to AMD's 64-bit architecture? Has the transition been a difficult one?</q>
+
+<a>Since our code is pure C++ and already ran on 32-bit Windows and Linux, the only work required was to make the code 64-bit safe. No Hammer-specific work was necessary to get the port up and running; what we did for Hammer is the same thing that would be needed to run on 64-bit PowerPC or 64-bit Itanium.
+
+In the case of the Unreal codebase, about 99.9% of the code was already 64-bit safe and didn't need touching. Of course, with a million-line codebase, the remaining 0.1% left a hundred or so places in the code that needed updating because of assumptions we made years ago before we'd thought about 64-bit. It was a relatively straightforward process, and took Ryan Gordon about 10 days of hard work.</a>
+
+<q>Will you be adding any special features to 64-bit Unreal Tournament 2003 in particular?</q>
+
+<a>No. Our goal in porting UT2003 to 64-bit was to show that it can be done without much work, that the platform is stable, and that it's ready for gaming. We're not doing anything that really takes advantage of over 4 gigs of RAM or the large virtual address space.
+
+The next generation of the Unreal engine is where we'll be taking major advantage of 64-bit in a very visible way, in the 2005 timeframe. We expect to support 32-bit and 64-bit clients and servers for gameplay, but might require 64-bit for content creation, because of the significant requirements of our new content development tools.
+
+Because of our new content tools, we're already feeling a very strong need for 64-bit internally right now, and by year's end I expect we'll look at 64-bit as something that we couldn't possibly do our jobs without. We expect this sentiment to carry over to other game developers in the next 12 months, to high-end consumers over the next 24 months, and the wide mainstream all the way down to the lowest end of the market within 36 months.</a>
+
+<q>What kind of performance benefits are you seeing with the 64-bit codebase and AMD's 64-bit processor in general? Are there any additional advantages to 64-bit?</q>
+
+<a>The extra registers can give you a significant performance gain in loops which currently have to spill over into memory. The on-die memory controller reduces the path for uncached reads significantly, which is a huge win for applications like Unreal which are memory-limited. On the other hand, pointers grow from 4 bytes to 8, so traversal of linked data structures takes an additional bandwidth hit. I think you'll probably see a clock-for-clock improvement over Athlon XP of around 30% in applications like Unreal that do a significant amount of varied computational work over a large dataset.</a>
+
+<q>You've said in the past that: "On a daily basis we're running into the Windows 2GB barrier with our next-generation content development and preprocessing tools." How important a role has the additional memory capacity played in your development efforts and can you provide any specific examples?</q>
+
+<a>In Unreal Tournament 2003, we built 2000-polygon meshes, texture map them, and use them in-game with diffuse lighting. That was a simple process, which didn't require any memory beyond that taken up by the mesh and texture maps.
+
+In our next-generation technology, we are building 2,000,000-polygon meshes, and running them through a preprocessing program that analyzes the geometry and self-shadowing potential of the mesh based on thousands of incident lighting direction using per-pixel floating point math, and compresses all of this data down to texture maps, bump maps, and 16-component spherical harmonic maps at as high a resolution as possible.
+
+This process uses many gigabytes of memory, and implementing it on 32-bit CPU's places a lot of constraints on the size of meshes we can preprocess and the resolution of maps we can generate. With onerous programmer gymnastics, this kind of algorithm could be made disk-based or Address Windowing Extensions aware, but these approaches require an order of magnitude more development effort, and aren't practical given the frequency with which we change and improve our algorithms.
+
+So, overall, we've found 32-bit adequate for prototyping new content, but for serious development will only be possible with 64-bit.</a>
+
+
+<q>Which operating systems will the 64-bit Unreal Tournament 2003 port support and when will they be made available?</q>
+
+<a>We've been up and running on 64-bit Linux for months, and will release it publically at the consumer Opteron launch. Stay tuned for news regarding a 64-bit Windows version.</a>
+
+<q>What are your thoughts on the Athlon 64 and Opteron micro-architecture? How important is the integrated memory controller and 64-bit architecture and which feature do you feel is the most significant?</q>
+
+<a>Doubling the number of registers is a big and unquestionable win.
+
+I see the onboard memory controller as a big win architectually, because it makes it possible to reduce system memory latency in half. Most people don't realize it, but system memory latency has only improved about 20X since the Apple ][. Relative to CPU speed, it has worsened by 200X, so that now it takes 350 CPU cycles to read an uncached memory address.
+
+Of course, having the memory controller on-die means that AMD had better be able to update the core frequently enough to track speed boosts in available memory. If AMD's memory controller is stuck at 333 MHz when 533 MHz memory is readily available and supported on Intel motherboards, that's going to put it at a disadvantage.</a>
+
+
+<q>How do you feel AMD's 64-bit efforts compare to Intel's 64-bit Itanium family?</q>
+
+<a>Hammer follows the PC CPU pricing model. It's going to be very reasonably priced for the moderate high-end at launch, and over the next year will go down in price so that Hammer can ship in high-end, mid-range, and low-end PC's in all existing pricing segments, consumer, workstation, and server, desktop and mobile. It runs all existing 32-bit software and OS's extremely well, better than existing AMD processors, and will run future 64-bit software and OS's extremely well.
+
+Itanium isn't anything like that. You might as well be comparing Hammer to PA-RISC or SPARC. These are CPU's from a world alien to PC users, where you buy a $10,000 workstation containing a pair of $4000 CPU's and you only run the one or two CAD programs you bought your workstation for, because you can't run existing software at any reasonable level of performance. It's an interesting architecture, but it doesn't have anything to do with me or you.</a>
+
+<q>How important a role will the 64-bit instructions play in your next generation engine? Will you be adding exclusive features for 64-bit users?</q>
+
+<a>There's a good chance 64-bit will likely be mandatory for content development. Since we release the Unreal level editor and scripting framework to users, this affects gamers and not just us internally.
+
+For playing the game, we'll support both 32-bit and 64-bit. Depending on how much content we end up with, there's a good chance that we'll expose high-detail modes that will require 64-bit, giving you higher texture detail, for example. But there won't be any divergence in the gameplay itself.</a>
+
+<q>What kind of development support have you received from AMD so far? Do you feel AMD is actively supporting the game development community with its 64-bit launch?</q>
+
+<a>Yeah, AMD is really standing behind the platform, not just providing early hardware, but also assuring that all of the development tools and OS components are in place and available to developers.</a>

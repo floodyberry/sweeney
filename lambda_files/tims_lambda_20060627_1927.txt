@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/1583
+http://lambda-the-ultimate.org/node/1583#comment-19195
+1050159
+Petition for adding garbage collection to C++.
+Tim Sweeney
+<p></p><blockquote><div>The best thing that can be said for garbage collection is that it's the ideal tool for 110-IQ programmers and half-baked designs.</div></blockquote><p>
+</p><p>You're essentially claiming that programmers with high IQs prefer to solve problems in difficult, unproductive ways.
+</p><p>In large software projects with complex data relationships and multiple programmers, garbage collection yields very significant productivity gains compared to manual memory management.  A whole class of bugs (dangling pointers, memory leaks) and impediments to understanding (exactly who should free which object when) are eliminated.
+</p><p>A practical, productivity-focused programmer -- of whatever IQ -- will welcome any areas where basic language features can improve productivity and software reliability.  And he will outperform higher-IQ programmers who stick with lower-productivity solutions.</p>

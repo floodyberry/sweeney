@@ -1,0 +1,23 @@
+http://lambda-the-ultimate.org/classic/message9564.html
+http://lambda-the-ultimate.org/classic/message9564.html#9573
+0533852
+Longhorn Markup Language (code-named "XAML") Overview
+Re: Longhorn Markup Language (code-named
+<p>C# is a wonderful programming language with support for meta-data attributes and reflection, great features for associating properties with UI controls.  Yet instead of exploiting this, they define a new dialect of XML, a very programmer-unfriendly language that maps poorly onto the C#/.NET type system.</p><p>
+
+Worse, to do any actual event handling, they actually embed C# into XML, resulting in code like their example:</p>
+
+<pre class="code_box">&lt;Canvas ID="root"
+xmlns="http://schemas.microsoft.com/2003/xaml"
+xmlns:def="Definition"&gt;
+&lt;Button ID="button1" Click="Clicked"&gt;Click Me!&lt;/Button&gt;
+&lt;def:Code&gt;
+&lt;![CDATA void Clicked(object sender, ClickEventArgs args)
+      {
+      button1.Content = "Hello World";
+      }
+]]&gt;
+&lt;/def:Code&gt;
+&lt;/Canvas&gt;</pre>
+
+<p>How horrid.</p>

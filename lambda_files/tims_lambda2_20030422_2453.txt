@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/classic/message6587.html
+http://lambda-the-ultimate.org/classic/message6587.html#6591
+0530875
+Python Metaclass Programming
+Re: Python Metaclass Programming
+<p>Type theorists put the question, "What is the type of a type?", on a solid theoretical footing years ago and provided many useful models for answering such questions.  Metaclasses aren't one of these answers.  The superstition that metaclasses have something to do with types of types does the world more harm than good.</p>

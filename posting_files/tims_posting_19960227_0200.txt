@@ -1,0 +1,19 @@
+http://groups.google.com/group/comp.graphics.algorithms/browse_thread/thread/9aeef3592b98ffb9/35daf11dd7a53e6f?lnk=st&rnum=88&hl=en#35daf11dd7a53e6f
+[comp.graphics.algorithms] Re: Bump Mapping/Texture Mapping
+[blockquote]I've looked in Watt and Watt, FvD, Graphics Gems I-III, etc. and I have the original paper written by Blinn.  However, I have yet to see an implementation of the original algorithm proposed by Blinn. Frankly, every time I've seen Bump Mapping mentioned in any text, it's just glossed over.  I understand it pretty much, I just would like to see an actualy implementation.  I guess my real question would be, how do you find the partial derivative of the bump function when your "bump function" is just a b/w bump map with varying heights.  This is the way I would like to implement this as opposed to procedural bump mapping.[/blockquote]
+
+An easy way is to store your bump map as a set of 2D normal vectors. Then, you can find the angle of incidence each lightsource against it with a dot product.  A bump map texture could be something like
+
+[code]
+typedef struct
+ {
+ float UNormal; // 0=facing straight out
+ float VNormal;
+ } BumpMapTexture[USize][VSize];
+[/code]
+
+Of course, for space reasons, it would be best to store bump components as bytes or words.
+
+You'd determine the UNormal from a greyscale texture by taking the X differences, i.e. (Texture[U+1][V] - Texture[U][V])/Max, and the VNormal from the Y differences.
+
+-Tim 

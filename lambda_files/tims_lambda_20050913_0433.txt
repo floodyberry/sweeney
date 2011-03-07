@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/962
+http://lambda-the-ultimate.org/node/962#comment-9490
+1049538
+Distributive laws for the Coinductive Solution of Recursive Equations
+Difficult to read
+<p>It's a shame to see important papers like this written so abstractly as to be unreadable by most language designers and implementors.  
+</p><p>For example, one example of distributive laws of monads is the natural transformation from "arrays of dictionaries of t" to "dictionaries of arrays of t", and another is the transformation zip :: [t]*[t] -&gt; [t*t].  The structure here is very interesting and one can see the outline of applications, such as extensions to Haskell's monad comprehension constructs that deal with distributions.
+</p><p>But the author immediately jumps to "Lambda-bialgebras" with maps a:T(X)-&gt;X and b:X-&gt;F(x) and I'm lost. I'd love to see a concrete example of this because I don't see how to arrive at anything useful from an instance of e.g. a::[t]-&gt;t.
+</p><p>The general conclusion of the paper seems to be that certain guarded recursive equations over functions are guaranteed to have a unique solution.  This is a topic I have been investigating on my own in implementing an experimental compiler and I wish I could follow the author's reasoning to that point.</p>

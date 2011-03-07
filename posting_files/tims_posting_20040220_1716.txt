@@ -1,0 +1,7 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/f55bdebb099e3853/bc6a6a4018caa93d?lnk=st&rnum=11&hl=en#bc6a6a4018caa93d
+[comp.lang.functional] Re: My take on Monads
+Monads are a purely functional technique for doing what you just described, but also a lot more.  In Haskell, the language on which much of the development of monads has been focused, the IO monad is the monad that implements this "pass the state of the world in and out of every function" pattern.
+
+Many other interesting programming patterns are possible with monads.  For example, Haskell's State monad enables you to write self-contained blocks of code using exceptions and heap allocations whose access is guaranteed to be constrained within that block of code, so that a function implemented this way is purely functional "on the outside", though it uses many imperative-style techniques "on the inside".
+
+Also check out Haskell's Array monad (for computations producing multiple values) and Maybe monad (for computations that may return an optional failure code) to get a feeling for some very different programming techniques encapsulated by monads. 

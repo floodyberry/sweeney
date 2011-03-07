@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Generics as a Library | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1641" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Generics as a Library</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p ><a href="http://web.comlab.ox.ac.uk/oucl/work/bruno.oliveira/Generics.pdf">Generics as a Library</a>. Oliveira, Hinze and L&ouml;h.</p>
+<blockquote ><p >A generic function is a function that is defined on the structure of data types: with a single definition, we obtain a function that works for many data types. In contrast, an ad-hoc polymorphic function requires a separate implementation for each data type. Previous work by Hinze on lightweight generic programming has introduced techniques that allow the definition of generic functions directly in Haskell. A severe drawback of these approaches is that generic functions, once defined, cannot be extended with ad-hoc behaviour for new data types, precluding the design of a customizable generic programming library based on the se techniques. In this paper, we present a revised version of Hinze's Generics for the masses approach that overcomes this limitation. Using our new technique, writing a customizable generic programming library in Haskell 98 is possible.</p></blockquote>
+<p >Pushing forward the state of the generics art in Haskell 98. They also discuss the application of their technique to the expression problem.</p>
+<p >(Thanks to Jacques Carette for <a href="http://lambda-the-ultimate.org/node/786#comment-20058">pointing</a> in this direction.)</p> </div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at 07/27/2006 - 16:28 | <a href="taxonomy/term/11">Functional</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1641" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2072 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1641" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1641" />
+<a id="comment-20084"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20084" class="active">[getting OTish already? sorry] Re: the expression problem</a></h3>
+ <div class="content"><p >Is it funny, depressing, or sobering that the expression problem sounds like it shouldn't be a big deal when somebody first describes it in high-level terms, but quickly shows itself to be more trouble (ignoring O'Caml, Scala, etc. of course)? Does it mean most of our languages have large blind spots that most "main stream" folks don't understand, or just never run into and thus don't care?</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Thu, 07/27/2006 - 17:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20086"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20086" class="active">Expression problem</a></h3>
+ <div class="content"><p >I think most programmers do encounter the expression problem, do understand it and do care. I think that what most programmers lack is a good vocabulary for characterizing the difficulty, and perhaps a broad enough perspective to see its incarnations in various languages as instances of the same thing. </p>
+<p >Most OO programmers, for instance, recognize the trade-offs between leaving a design open to data extension and leaving it open to operational extension. This results in a proliferation of patterns and best practices, and lots of folklore about which side to come down on for any particular software design problem, as well as various ad hoc ways of partially straddling the line.</p>
+<p >Functional programmers are certainly aware of the difficulty in adding a new variant to a type, having to chase down functions all over the place adding cases, and the lack of static safety implied by non-exhaustive matches.</p>
+<p >But I do think that for the most part the existence of this problem is taken for granted (probably one of the reasons it wasn't given a name earlier). So maybe the other thing that programmers often "lack" is the ability or desire to imagine making a fundamental change to the language in order to solve this problem. In lots of cases, this isn't really a deficiency... I'm definitely in favor of programmers spending time thinking critically about their tools, but if you're using Java for a project, well, too much time spent thinking about its deficiencies won't change anything, and you'll still be left with the same choice. So taking the existence of the expression problem as an axiom is fairly pragmatic.</p>
+<p >Incidentally, I don't think this is OT. The expression problem is an important part of the motivation for this work, and assessing its actual importance to programmers is highly relevant. In fact, I have other concerns about solutions to the expression problem, but I'll save them for later...</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Thu, 07/27/2006 - 17:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20092"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20092" class="active">Question</a></h3>
+ <div class="content"><p >Can someone explain how this approach coexists with the parametricity theorem?</p>
+<p >For example, if we can handle lists of characters in an ad-hoc manner, but lists of all other data types generically, then can't we use that to write a non-constant, univerally quantified function of IsChar :: forall t. t-&gt;Bool enabling us to distinguish between characters and values of any other type?  (Which is impossible in a language in which the parametricity theorem holds.)</p>
+<p >Is the trick that only certain types have a representation typeclass Rep t enabling us to discriminate between values of those types, but not enabling us to discriminate between values of an arbitrary universally quantified type?  That seems workable, because we can just look at those representation types when choosing to implement special-cases.  This implies the existance of some sort of metasyntactic (e.g. aparametric) stage in compilation where these representation types are generated on behalf of the user for all or certain user-defined types, lest the user have to write boilerplate for each new user-defined datatype.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 07/28/2006 - 00:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20112"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20112" class="active">Here&#039;s how it co-exists. So,</a></h3>
+ <div class="content"><p >Here's how it co-exists. So, suppose that you have a dependently typed language, and define an ordinary datatype like:</p>
+<pre >
+datatype tag = 
+  | IntTag
+  | BoolTag
+  | PairTag of tag * tag
+</pre><p >
+So what we have is just a regular algebraic datatype of tags. For each tag, we want to put a languagel-level type in correspondence with it, and we do this with a "large elimination", which is a type operator that deconstructs a data value and constructrs at type.</p>
+<pre >
+val typeof : tag -&gt; type
+
+fun typeof IntTag          = int
+  | typeof BoolTag         = bool
+  | typeof PairTag(t1, t2) = (typeof t1) * (typeof t2)
+</pre><p >
+Now, the type of a generic function is something like:</p>
+<pre >
+val print : (t:tag) -&gt; (typeof t) -&gt; string
+
+fun print IntTag n               = print_int n
+  | print BoolTag b              = if b then "true" else "false"
+  | print PairTag(t1,t2) (e1,e2) = 
+      "(" + (print t1 e1) + ", " + (print t2 e2) + ")"
+</pre><p >
+So far, none of this breaks parametricity, because we're not looking at a type; we're getting a tag and computing a function of a type based on the tag. In polytypic languages, what they do is </p>
+<p >a) bake in a definition of tags and their interpretation, and<br >
+b) make the type inference system smart enough to understand tags and infer the tag arguments to function applications. </p></div>
+ <div class="links">By <a href="user/1111" title="View user profile.">neelk</a> at Fri, 07/28/2006 - 17:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20121"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20121" class="active">Parametricity Theorem</a></h3>
+ <div class="content"><p >Can you suggest a good introduction to this theorem? One that's available online (unlike the 1983 paper by Reynolds).</p></div>
+ <div class="links">By <a href="user/1545" title="View user profile.">sigfpe</a> at Fri, 07/28/2006 - 22:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20122"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20122" class="active">Theorems for free from the</a></h3>
+ <div class="content"><p ><a href='http://homepages.inf.ed.ac.uk/wadler/topics/parametricity.html'>Theorems for free</a>, from the ever insightful Philip Wadler. It was discussed <a href='http://lambda-the-ultimate.org/classic/message8055.html'>here</a> (warning the link from that discussion doesn't work anymore).</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Sat, 07/29/2006 - 00:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20330"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20330" class="active">Coincidentally, I&#039;ve been</a></h3>
+ <div class="content"><p >Coincidentally, I've also been wondering about the parametricity theorem in the presence of representation types (like Rep t) and, more generally, for other GADTs.</p>
+<p >I've recently given a <a href="http://www.cis.upenn.edu/~sweirich/talks/param-gadt.pdf">talk</a> on my work in progress. This talk adds representation types to System F and looks at the "Free Theorems" that result. (Note: It would be a good idea to read "Theorems for Free" first, as I don't include much of that background in this talk.)</p></div>
+ <div class="links">By <a href="user/2121" title="View user profile.">Stephanie Weirich</a> at Tue, 08/08/2006 - 14:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20183"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20183" class="active">The parametricity theorem holds (if it holds in Haskell)</a></h3>
+ <div class="content"><p >Indeed you already got the right answer. If you wanted to have the function <code >IsChar</code> that distinguishes between characters and values of other types, you would need something with the following type: <code >IsChar :: forall t . Rep t =&gt; t -&gt; Bool</code></p>
+<p >As you mention this does not allow us to discriminate values of an arbitrary universally quantified type. Instead it either implies that the user needs to provide some boilerplate code (instances of <code >Rep</code>) for each datatype that is representable, or it implies that we have an extra mechanism in the compiler that generates this for us.</p>
+<p >When we refer to <em >lightweight generic programming</em> we typically have the first, since the intention is that we use an existing programming language without any modifications. This can be, of course, a bit painful since we need to provide some boilerplate, but it shows that generic programming can be implemented solely using alredy existing concepts such as parametric polymorphism or type classes (and specially constructor classes).</p>
+<p >An advantage of doing it this way (as opposed to create a new programming language with special support for generic programming) is that we can assume all the properties of the language in which we are building the library. For example, the parametricity theorem holds for generic functions if it holds in Haskell.</p>
+<p >So the interesting question, related to yours, is: does the parametricity theorem hold in Haskell?</p></div>
+ <div class="links">By <a href="user/3223" title="View user profile.">boliver</a> at Tue, 08/01/2006 - 15:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-20123"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20123" class="active">Expression Problem</a></h3>
+ <div class="content"><p >Mainstream programmers tend to primarily write very domain-specific code rather than the sort of high-level frameworks and libraries where the expression problem mainly shows up.  Improved generic support will result in a more expressive language that better empowers framework and library writers (thus leading to better frameworks and libraries).  But I don't suppose the typical everyman programmer will make a lot of use of it directly.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Sat, 07/29/2006 - 01:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-20187"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20187" class="active">Parametricity in Haskell</a></h3>
+ <div class="content"><p ><blockquote ><p >So the interesting question, related to yours, is: does the parametricity theorem yield in Haskell?</blockquote><p>
+My understanding is that parametricity holds in all referentially transparent Haskell code that does not use explicit forcing via "seq".  Code using "seq" is "parametric mod _|_".  Haskell does support code that isn't referentially transparent via unsafePerformIO and I'm not sure what implications this has on parametricity.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 08/01/2006 - 18:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-20190"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20190" class="active">Side effects and parametricity</a></h3>
+ <div class="content"><p >It for the most part destroys it.  First off, lacking the value restriction, polymorphism and state lead to an unsound type system, but ignoring that, an infinity of values is added to every type, e.g. forall a.a -&gt; a no longer contains the few (one, two or three depending on how "ideal" you want to make it) values it currently has, but instead it contains things like \x -&gt; unsafePerformIO (putStrLn "Hello" &gt;&gt; return x) and the endless variations on that theme.  There is a close connection between parametricity and (categorical) naturality; a transformation, &tau;, is natural if fmap f . &tau; = &tau; . fmap f, which is exactly the "free theorem" of a polymorphic function (for one argument).  This fails miserably in the face of side effects.  However, all this said, the actual action on the input and output is still much the same, at least for completely polymorphic arguments, i.e. forall a.a -&gt; a will still return the same argument that it is given, assuming it returns, no matter what else it does.  I believe Haskell implementors assume parametricity holds.  GHC certainly does if for no other reason than fusion.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Tue, 08/01/2006 - 19:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-20192"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1641#comment-20192" class="active">Also...</a></h3>
+ <div class="content"><p >Take a look at the discussion of parametricity (with respect to <code >seq</code>) in section 10.3 of the <a href="http://lambda-the-ultimate.org/node/1623">History of Haskell</a> paper. The upshot is:</p>
+<blockquote ><p >
+We have sacrificed parametricity in the interests of programming agility and (sometimes dramatic) optimisations. GHC still uses short-cut deforestation, but it is unsound...
+</p></blockquote></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Tue, 08/01/2006 - 21:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

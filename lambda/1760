@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>A Very Modal Model of a Modern, Major, General Type System | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1760" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>A Very Modal Model of a Modern, Major, General Type System</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p ><a href="http://www.cs.princeton.edu/~appel/papers/modalmodel.pdf">A Very Modal Model of a Modern, Major, General Type System</a>, by Andrew W. Appel, Paul-Andre Mellies, Christopher D. Richards, and Jerome Vouillon. Preliminary version of August 10, 2006.<br >
+<blockquote >We wish to compile languages such as ML and Java into typed intermediate languages and typed assembly languages. These TILs and TALs are particularly difficult to design,  because in order to describe the program transformations applied in the course of compilation, they require a very rich and expressive type system... Putting all these type ingredients together in a low-level language is an intricate exercise. A formal proof of soundness any well-typed program does not go wrongis thus recommended for any type system for such TILs and TALs.</blockquote>
+<p >
+It has been awhile since we discussed work in this area. The current paper is quite intriacte, it seems, and I don't have the time to read it carefully. Maybe someone else would care to elaborate. The paper makes a few technical innovations, and uses several interesting techniques. Soundness is not proved syntactically, but rather semantically.<p >
+Some LtU member will be happy to see that the authors use Coq to formalize their proofs.</p> </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 10/08/2006 - 13:16 | <a href="taxonomy/term/8">Implementation</a> | <a href="taxonomy/term/21">Type Theory</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1760" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2202 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1760" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1760" />
+<a id="comment-21451"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1760#comment-21451" class="active">I&#039;m disappointed the</a></h3>
+ <div class="content"><p >I'm disappointed the abstract isn't in iambic octameter.</p></div>
+ <div class="links">By <a href="user/1182" title="View user profile.">DougOrleans</a> at Sun, 10/08/2006 - 20:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-21455"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1760#comment-21455" class="active">Gilbert would have been proud!</a></h3>
+ <div class="content"><p >Gilbert would have been proud! (...or turning in his grave.)</p></div>
+ <div class="links">By <a href="user/172" title="View user profile.">Kaushik Sridharan</a> at Mon, 10/09/2006 - 03:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-21457"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1760#comment-21457" class="active">Paper of the month</a></h3>
+ <div class="content"><p >For the title alone... I haven't read it yet.</p></div>
+ <div class="links">By <a href="user/2584" title="View user profile.">plragde</a> at Mon, 10/09/2006 - 16:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-21463"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1760#comment-21463" class="active">Heh</a></h3>
+ <div class="content"><p >I haven't read the paper yet, but I agree that the title alone is priceless. And yes, it's gratifying that more people are seeing the value of tools to help with formalization, whether it's Coq or Twelf or what have you.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 10/10/2006 - 16:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-21464"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1760#comment-21464" class="active">Quantifiers</a></h3>
+ <div class="content"><p >This is the first paper I've seen that explicitly defines universal quantifiers and existential quantifiers as dependent type intersections and unions indexed over the quantifier's domain type.  (Is this fact obvious to type theorists? It took me quite a lot of stumbling to recognize the connection myself.) There are a lot of other interesting things to be found in this paper.  It's been clear to me for a while that implementing proof-carrying code on top of mainstream (powerful and complex) programming languages will require something quite a lot like the system described here.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 10/10/2006 - 17:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21465"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1760#comment-21465" class="active">Quantifiers and Dependent Types</a></h3>
+ <div class="content"><p >I hadn't seen the connection (between quantifiers and dependent types) either until a couple of days ago when I first worked my way through the <a href="http://coq.inria.fr/doc/tutorial.html">Coq tutorial</a> that was posted in one of the comments.  </p>
+<p >From the tutorial: </p>
+<p >"Actually, universal quantification, implication, as well as function formation, are all special cases of one general construct of type theory called dependent product."</p></div>
+ <div class="links">By <a href="user/1988" title="View user profile.">Gavin Mendel-Gleason</a> at Tue, 10/10/2006 - 18:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21466"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1760#comment-21466" class="active">Re: Quantifiers</a></h3>
+ <div class="content"><blockquote ><p >Is this fact obvious to type theorists?</p></blockquote>
+<p >I'm no expert in Martin-Löf type theory, but I think it's well-known. You might try</p>
+<pre >@incollection{ barendregt92lambda,
+    author = "Henk Barendregt",
+    title = " Lambda Calculi with Types ",
+    booktitle = "Handbook of Logic in Computer Science, Volumes 1 (Background: $
+    volume = "2",
+    year = "1992",
+    url = "citeseer.nj.nec.com/barendregt92lambda.html" }</pre><p >or <a href="http://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">Simon Thompson's textbook</a>.</p>
+<p >There seem to be a couple more references in <a href="http://lambda-the-ultimate.org/node/1299">this LtU thread</a>.</p></div>
+ <div class="links">By <a href="user/825" title="View user profile.">Dave Herman</a> at Tue, 10/10/2006 - 19:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21467"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1760#comment-21467" class="active">Goedel-Loeb logic</a></h3>
+ <div class="content"><p >Only just skimmed the abstract &amp; intro, but what I've skimmed suggests logical depth: wondering what sense of "modal" the title alluded to, I see that they use the Goedel-Loeb logic of provability to give them a means of capturing properties that hold over any finite number of reductions without the (notationally &amp; computationally) expensive formal overhead of using quantification over classes of reduction paths.  Not an original insight, but not a widely known trick either: it adds a touch of class.  I look forward to finding time to look over this paper properly...</p></div>
+ <div class="links">By <a href="user/918" title="View user profile.">Charles Stewart</a> at Tue, 10/10/2006 - 20:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21471"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1760#comment-21471" class="active">It seeme that the SEP has a</a></h3>
+ <div class="content"><p >It seems that the SEP has a nice <a href="http://plato.stanford.edu/entries/logic-provability/">entry</a> on Provability Logic. I am not sure what would be a good (online) starting point for those interested in Modal Logic, possible world semantics and Kripke structures, since my route to this topics was a bit strange (it all began with distributed algorithms and the classic book Reasoning about Knowledge... Well, maybe it did not begin there, since I did know some modal logic before, but it was a big step).</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Wed, 10/11/2006 - 10:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/09/21" title="Previous month">«</a> October 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/10/1" title="1 post">1</a></td>
+  <td class="day-link"><a href="archive/2006/10/2" title="1 post">2</a></td>
+  <td class="day-link"><a href="archive/2006/10/3" title="1 post">3</a></td>
+  <td class="day-link"><a href="archive/2006/10/4" title="1 post">4</a></td>
+  <td class="day-link"><a href="archive/2006/10/5" title="3 posts">5</a></td>
+  <td class="day-link"><a href="archive/2006/10/6" title="2 posts">6</a></td>
+  <td class="day-normal">7</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/10/8" title="2 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/10/9" title="2 posts">9</a></td>
+  <td class="day-link"><a href="archive/2006/10/10" title="1 post">10</a></td>
+  <td class="day-link"><a href="archive/2006/10/11" title="2 posts">11</a></td>
+  <td class="day-link"><a href="archive/2006/10/12" title="1 post">12</a></td>
+  <td class="day-link"><a href="archive/2006/10/13" title="3 posts">13</a></td>
+  <td class="day-normal">14</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/10/15" title="2 posts">15</a></td>
+  <td class="day-link"><a href="archive/2006/10/16" title="1 post">16</a></td>
+  <td class="day-link"><a href="archive/2006/10/17" title="4 posts">17</a></td>
+  <td class="day-link"><a href="archive/2006/10/18" title="2 posts">18</a></td>
+  <td class="day-link"><a href="archive/2006/10/19" title="2 posts">19</a></td>
+  <td class="day-link"><a href="archive/2006/10/20" title="1 post">20</a></td>
+  <td class="day-today">21</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1780" title="25 comments">Ralph Griswold died</a></li><li><a href="node/1776" title="6 comments">Delevoping a new language...</a></li><li><a href="node/1782" title="9 comments">Constraint based hybrid typing and the Curry Howard Isomorphism</a></li><li><a href="node/1783" title="1 comment">Question on terminology</a></li><li><a href="node/1779" title="4 comments">FP vs. JSP</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1783" title="1 comment">Question on terminology</a></li><li><a href="node/1782" title="9 comments">Constraint based hybrid typing and the Curry Howard Isomorphism</a></li><li><a href="node/1781" title="3 comments">System-level Static Analysis</a></li><li><a href="node/1780" title="25 comments">Ralph Griswold died</a></li><li><a href="node/1779" title="4 comments">FP vs. JSP</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

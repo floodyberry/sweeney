@@ -1,0 +1,36 @@
+http://lambda-the-ultimate.org/classic/message6587.html
+http://lambda-the-ultimate.org/classic/message6587.html#6627
+0530875
+Python Metaclass Programming
+Re: Python Metaclass Programming
+<p>Having these discussions reinforces how much one's choice of type theory is a matter of opinion and choice rather than "right or wrong".</p><p>
+
+Frank:</p><p>
+
+Ok, let's see if I understand what you're advocating.  In your type system, given an integer x, I should be able to compare it to the integer constant 7, similarly if both are rational numbers.  But if I have an integer x and a rational number y, your compiler would say something like "You can't compare integers and rational numbers, because they're not the same type"?</p><p>
+
+So, given an integer x, to convert it to a rational number, you'd need to call some function (perhaps in the same module number where the abstract "natural number" type where declared) to convert it.</p><p>
+
+I'm coming from the opposite perspective, where I want type relationships (like subtyping) to directly correspond to what people expect in the given domain.  For example, in mathematics, the set inclusion hierarchy between natural numbers, integers, rationals, imaginaries, complex numbers, etc.  I want the type system to directly reflect this, so you can pass integers to functions that expect rationals directly, without any conversions.</p><p>
+
+This approach needn't prevent one from using abstract types.  It's actually sound to mix structural subtyping and nominal subtyping in very interesting ways (though, as far as I've found, this is quite difficult and not very well studied).</p><p>
+
+What I mean concretely is that you can hide the implementation of "rational numbers" in a module that exposes certain operations (comparison, arithmetic, etc), exposes the constrant that they are a supertype of the integers, yet still hiding their representation type.  So, given such abstract defintions of integers and rationals, you can freely pass integers to functions expecting rationals, but not vice-versa.  However, even if rational numbers are implemented as (for example) a pair of integers in some cannonical form (in lowest terms, etc), this fact is hidden outside the module, so that you can't (for example) compare a rational number to a naked pair of integers.</p><p>
+
+With this approach, I think you get the best of both worlds: You can hide the implementations of things, yet expose the subtyping relationships that users would expect in the problem domain.</p><p>
+
+The only drawback I've found to this approach so far is that naked (non-abstract) values in this type system can be compared in ways that programmers don't expect in other languages.  For example, you can write code like "fac(x:int):int=&gt;if x='0' then 1 else x*fac(x-1)" where you're comparing x to the character '0' instead of the number 0, and this is a valid comparison which always evaluates to false.</p><p>
+
+To be sure this isn't taken out of context, I'm only proposing this approach from a high-level language point of view.  The programmer would see integers as a subtype of rationals.  When the compiler and linker get down to actually translating such code into efficient runnable form, things are implemented quite traditionally, with inlining, boxing, and conversions/coercions to (for example) extend integers into equivalant rational numbers, and so on.</p><p>
+
+Regarding the array subtyping issue you mention:</p><p>
+
+I've found practical advantages to exposing both contravariant functions and invariant functions.  Invariant functions behave like arrays from a typing perspective: they can only be equal if their domains are equal.  Contravariance gives you record-style subtyping and the ability to extend a function "+" from integers to rational numbers while maintaining compatibility (so, for example, you can have "the ring of integers" be a subtype of "the field of rationals" -- great, but contravariance has two big disadvantages:</p><p>
+
+1. In a type system that admits some comparisons to be undecidable and some decidable, any values of record or array type built from contravariant functions much necessarily be incomparable, because the domain of any value not known precisely at compile time may be extended in a way that allows returning incomparable values.  So if you build arrays out of contravariant functions, it's impossible to compare them.</p><p>
+
+2. From a user's perspective, having {1,2,"x",9.5} &lt;: {1,2} is not something one expects of arrays.</p><p>
+
+Invariant functions allow you to write arrays which are guaranteed to be comparable given comparable range and comparable finite domain, and make {1,2,"x",9.6} distinct from {1,2}.</p><p>
+
+Taking this further, you can then have invariant functions be subtypes of identically declared contravariant functions, and think of contravariant functions (conceptually) as an infinite union of the identical invariant function with every possible extension of its domain.</p>

@@ -1,0 +1,17 @@
+http://www.seas.upenn.edu/~sweirich/types/archive/1999-2003/msg01235.html
+[TYPES] Re: Classifying the cardinalities of types
+Hi David,
+
+Here are the practical reasons:
+
+1. Since my programming language is aimed at practical applications, I require that all complete programs be deterministic -- in other words, any non-determinism (multivaluedness or zerovaluedness) is limited to internal computations, and not the observable results of running the program.  This requires verifying that the program's type is of cardinality 1.
+
+2. Like Ontic, I use nondeterminism to express the idea that a term has more than one potential value.  Thus lambda(x 1|2|3|4).x+7 is a function whose domain is the range of integers from 1-4.  This particular expression can't reduce any further: we can't evaluate "x+7" because we don't know what value x will take on.  However, we can reduce the function lambda(x 3).x+7 to lambda(x 3).10, because we know that "x" can only take on the value 3.  In general, whenever reading a function parameter, or a "recursive self-value", I need to examine the cardinality in order to determine whether a reference (formally, a de Bruijn index) can be released or whether it needs to remain there in the normal-form.  This is why the potential cardinality set {0,1,m} works well for my application: all the language rules intimiately care about is whether a term is uninhabited, single-valued, or multivalued.  There is no compiler logic special-cased, for example, for cardinality-2 elements.
+
+By "recursive self-value", I mean an expression like {x 3|5|7,y x+3}.  I represent such things as arrays with a special kind of de Bruijn index referring back to the enclosing function, rather than its parameter.  This turns out to be a very expressive notation, allowing object-oriented data structures a la James Hickey's "Very Dependent Types" -- a type can not only depend on function parameters, but also on recursive values that aren't precisely known at specification time.  For example {t:type,n:nat,a[n]:t} is an array containing a type t, a natural number n, and an array of n elements of type t.  It's of cardinality m, but unifies with (for example) {char,7,"
+
+3. The language takes the Curry-Howard isomorphism literally, and is the first language I know of that attempts this.  (Whether this is a good idea remains to be proven).  In it, "false" represents the 0-element type.  For every type "t" (which is inherently a single-valued thing), the term ":t" means "the set of potential values of that type".  Thus :false is of cardinality 0, :unit is cardinality 1, :int is of cardinality m (multivalued), etc.
+
+My conditional expressions "if a then b else c" actually branch based on the cardinality of the condition.  So there is no special boolean type along the lines of Haskell's "type Bool = True | False".  If the cardinality is known at compile-time, the conditional expression reduces to one of its branches. Otherwise (i.e. if the cardinality is 0|1|m), it remains in normal form.
+
+This brings up another topic of having to determine, at compile-time, for expressions whose cardinality is multivalued, whether the runtime is capable of reducing it to a known cardinality -- something that doesn't have to be done perfectly; any conservative approximation is fine.  In other words, if you say "if {fermat's last theorem} then 2 else 3", the compiler gives you an error indicating that the condition is undecidable by the compiler.

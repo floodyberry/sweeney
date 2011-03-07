@@ -1,0 +1,17 @@
+http://groups.google.com/group/sci.math/browse_thread/thread/bfcf2fe19cecbb66/0477de21406fecd4?lnk=st&rnum=25&hl=en#0477de21406fecd4
+[sci.math] Computational algebraic integers
+Two motivating examples:
+
+- One can construct a finitary computational model of the integers in many ways.  One way is to represent them as a string of binary digits, with the classic two's-completement algorithms for binary addition, subtraction, multiplication, division, and comparison.  If the representation is constrained to have no redundent leading digits, then the mapping from integers to representations is bijective.
+
+- Given a computational model of the integers, one can construct a finitary model of the rational numbers, by representing each rational number as a pair (numerator,denominator).  The elementary operations can be defined in the obvious way, i.e. (a,b)+(c,d)=(a*d+b*c,b*d).  If the representation is constrained to be in lowest terms with positive denominator, the mapping from rational numbers to representations is bijective.
+
+Now a few questions:
+
+- Does there exist a finitary computational model of the algebraic numbers, such that there exists a bijection between mathematical algebraic numbers and their model, and there exist terminating algorithms for addition, subtraction, multiplication, division, and comparison?  To clarify "finitary" here, I mean a representation such that if you start with a finite set of rational numbers and perform a finite sequence of field operations and polynomial-solving operations on them, then the result is guaranteed to be representable in finite space.
+
+- Does there exist a halting algorithm that, for every finite set of polynomial coefficients (a0+a1*x+a2*x^2+..=0), can determine all of its solutions in the algebraic numbers in such a representation?
+
+- Any references to computer implementations of the above?
+
+Thanks for any pointers.  

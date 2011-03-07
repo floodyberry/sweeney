@@ -1,0 +1,12 @@
+http://www.digitalmars.com/d/archives/40.html#N344
+[D] Persistance
+If a language has complete support for introspection (discovering all fields of objects at runtime), then it's easy for users to implement arbitrary persistence algorithms, such as XML or various binary formats.  So a desire for persistence can be simplified into a more general desire for complete (perhaps Java-style) introspection support.
+
+-Tim
+
+"Charles Hixson" <charleshixsn earthlink.net> wrote in message news:3B7BF417.5030509 earthlink.net...
+[blockquote]It would be desireable if D provided support for the implementation of persistant objects.  Basically some way of reading back in as objects of the same type that they were when they were stored, and then using them as objects of that type.
+
+As far as I can tell, this requires that "virtual" objects be allowed to be called by any function, and that they raise a "Does Not Understand" exception if the object that they actually turn out to be doesn't understand the method.  Since type identification information is already being stored with each object, a large part of the necessary is already in place.
+
+N.B.:  I am not saying that D should implement these features.  Merely that it would be desireable if the support for them were designed into the language, so that if they were implemented as libraries, they would fit in smoothly.[/blockquote]

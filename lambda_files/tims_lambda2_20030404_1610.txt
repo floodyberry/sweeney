@@ -1,0 +1,12 @@
+http://lambda-the-ultimate.org/classic/message6391.html
+http://lambda-the-ultimate.org/classic/message6391.html#6413
+0530679
+J. McCarthy: Towards a Mathematical Science of Computation
+Re: J. McCarthy: Towards a Mathematical Science of Computation
+<p>The problem with proving programs correct is that, in all systems produced to date, the proofs are far larger and more complicated than the programs they're proving correct.  Even the proposition (the type of the proof) tends to be more complex than the actual program, for example the proposition that qsort returns its argument stably sorted, compared to the implementation of qsort.</p><p>
+
+The pattern I've seen informally looking at the research are factors like 1:2:40.  For each line of program code, you need 2 lines of specification code, and 40 lines of proof code.</p><p>
+
+The end result is that it's easier to eyeball your program and guess that it's probably correct, than to eyeball the proposition being proved and guess that it's probably proving the right thing.  So, as far as shipping quality code is concerned, you get 40X better cost/benefit from writing code than from trying to prove stuff about it.</p><p>
+
+Proof techniques would need to come a very, very long way before this situation changes.</p>

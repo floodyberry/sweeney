@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/913
+http://lambda-the-ultimate.org/node/913#comment-8834
+1049489
+large imperative code --&gt; functional
+Display Lists
+<p>Immediate mode OpenGL is gratuitously imperative.  Keep in mind that the approach described above isn't functional; it's an imperative program abstracted over Haskell's IO Monad.
+</p><p>A pure functional approach would be to regard graphics rendering as a pure operation Render :: DisplayList -&gt; FrameBuffer, where a DisplayList is a list of elements of an algebraic datatype describing all OpenGL operations, and FrameBuffer is perhaps a 2D array of RGBA pixel values.  Rendering, at that level, is purely functional, in that the output of Render should (at least for a sane device) be a referentially transparent function of its parameter.</p>

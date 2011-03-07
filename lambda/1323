@@ -1,0 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Rich resource site for the programming language &quot;K&quot; | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1323" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Rich resource site for the programming language &quot;K&quot;</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >I don't remember how I stumbled upon <a href="http://www.nsl.com/">this</a>, but I've been interested in <a href="http://www.kx.com">K</a> for quite some time but could not find much in way of information and examples (outside of the Kx Systems commercial site).</p> </div>
+ <div class="links">By <a href="user/113" title="View user profile.">Todd Coram</a> at 02/23/2006 - 16:00 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1357" title="Diesel a successor to the Cecil language">previous forum topic</a> | <a href="node/1352" title="Contract Verification and Structural Subtyping of Interfaces">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1323" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 3596 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1323" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1323" />
+<a id="comment-14947"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-14947" class="active">Yes, Stevan Apter&#039;s site is wonderful</a></h3>
+ <div class="content"><p >Lots of good language design materials there, too, in regard to concatenative languages built in K (such as XY).</p>
+<p >Sadly, if ever there was a language hampered by licensing issues, K is it.</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Thu, 02/23/2006 - 17:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14948"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-14948" class="active">k is nice, have you seen q?</a></h3>
+ <div class="content"><p >q is the next generation from Kx. Personally I prefer it to k.</p>
+<p >http://kx.com/q/d/q.htm</p></div>
+ <div class="links">By <a href="user/2772" title="View user profile.">stunt programmer</a> at Thu, 02/23/2006 - 18:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-15316"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15316" class="active">anagram problem in k and q</a></h3>
+ <div class="content"><p >the anagram problem discussed on comp.lang.lisp <a href="http://groups.google.com/group/comp.lang.lisp/browse_thread/thread/6504beb28b625479/db0593e5a6180ad4?lnk=st&amp;q=conciseness+is+power&amp;rnum=1#db0593e5a6180ad4"> here</a> has the k solution (by mackenzie straight):</p>
+<blockquote >
+<pre >{x g@&amp;1&lt;#:'g:={x@&lt;x}'x}</pre></p></blockquote>
+<p >and the q solution:</p>
+<blockquote >
+<pre >desc count each group asc each</pre></p></blockquote>
+<p >q and k are semantically equivalent.  q is just an alternative parser for k.</p></div>
+ <div class="links">By <a href="user/2773" title="View user profile.">stevanapter</a> at Sat, 03/11/2006 - 13:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14953"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-14953" class="active">Previously on LtU</a></h3>
+ <div class="content"><p >The NSL site has been mentioned <a href="http://lambda-the-ultimate.org/node/787#comment-7319">previously on LtU</a>, but only in passing.</p></div>
+ <div class="links">By <a href="user/1142" title="View user profile.">Neil Madden</a> at Thu, 02/23/2006 - 21:01 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14959"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-14959" class="active">no stinking loops</a></h3>
+ <div class="content"><p >thanks all - i'm glad you find the site useful.</p>
+<p >any questions i can (try to) answer?</p>
+<p >and yes, i too prefer k4 (q) to k (k2/3).  atw has made several subtle, but powerful extensions.  i've included a couple of k4 solutions on my site, viz., the two sudoku solvers by atw and roger hui, and two of the raytracers, one by atw (scalar), and one by me (vector.)</p></div>
+ <div class="links">By <a href="user/2773" title="View user profile.">stevanapter</a> at Fri, 02/24/2006 - 03:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-15295"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15295" class="active">licensing</a></h3>
+ <div class="content"><p >Stevan,</p>
+<p >why did Kx pull the free evaluation download from their site? Any chance of getting it sometime?</p></div>
+ <div class="links">By <a href="user/2277" title="View user profile.">Vladimir Slepnev</a> at Fri, 03/10/2006 - 15:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-15311"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15311" class="active">evaluation copy</a></h3>
+ <div class="content"><p >hi vlad</p>
+<p >you can write to simon@kx.com and request a copy for personal use.</p></div>
+ <div class="links">By <a href="user/2773" title="View user profile.">stevanapter</a> at Fri, 03/10/2006 - 23:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-15314"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15314" class="active">Thanks!
+I wrote to</a></h3>
+ <div class="content"><p >Thanks!</p>
+<p >I wrote to info@kx.com yesterday, no answer yet. Will wait more.</p>
+<p >Tried to email simon@kx.com today, got a "your message was considered SPAM" response :-)</p></div>
+ <div class="links">By <a href="user/2277" title="View user profile.">Vladimir Slepnev</a> at Sat, 03/11/2006 - 11:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-15236"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15236" class="active">Not to be confused with the other Q...</a></h3>
+ <div class="content"><p >That would be the Q Equational Programming Language, based on term rewriting:</p>
+<p ><a href="http://q-lang.sourceforge.net/">http://q-lang.sourceforge.net/</a></p></div>
+ <div class="links">By <a href="user/816" title="View user profile.">Dan Moniz</a> at Sun, 03/05/2006 - 10:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-15293"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15293" class="active">K intro on kuro5hin</a></h3>
+ <div class="content"><p >Jjayson on kuro5hin wrote a good K <a href="http://www.kuro5hin.org/?op=displaystory;sid=2002/11/14/22741/791">intro</a>.</p></div>
+ <div class="links">By <a href="user/1891" title="View user profile.">dbremner</a> at Fri, 03/10/2006 - 13:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-15346"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15346" class="active">Yikes</a></h3>
+ <div class="content"><p >Yikes, ASCII art languages. From the site:</p>
+<pre>
+    ,/|\'(&amp;x)_ y
+    x[ ,/&amp;\'(&amp;x)_ y
+    sa:{x[ il:{(#x)#+\0,x}
+    {,/x+' d:{[n;f]:[n;_f[n-1;f]';f]}
+    (x,"*")[(#x)&amp;
+</pre>
+<p >The notation here does not seem particularly helpful to understanding the intention behind the code.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Mon, 03/13/2006 - 00:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-15353"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15353" class="active">a data point</a></h3>
+ <div class="content"><p >I've been trying to read and write K for a grand total of 1 day now. The constructs I have learned to date - about 10 built-in verbs and adverbs - are in fact very readable and stick to memory like a charm. I can easily make sense of many K examples from the site... </p>
+<p >Keep in mind that I have no previous experience with vector languages at all, and very limited experience with functional languages :-)</p></div>
+ <div class="links">By <a href="user/2277" title="View user profile.">Vladimir Slepnev</a> at Mon, 03/13/2006 - 08:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-15368"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15368" class="active">Program LOD</a></h3>
+ <div class="content"><p >I've always thought that the trick to these kinds of languages was going to be a formal multiple representation model, where the "text" of a program can cleanly, losslessly be transformed between verbose and terse representations, or anything in between.  There is a natural intersection between ZUI techniques and this notion; zooming in on or requesting enhancement for a given area of a program would result in successively more information.</p>
+<p >It's like LOD for programs.  Same problem as the kind of stuff you do.  ;)</p>
+<p >An AST is roughly like a geometric model.  Do we insist that artists create their work by manipulating text?  Nope!</p></div>
+ <div class="links">By <a href="user/1683" title="View user profile.">rossjudson</a> at Mon, 03/13/2006 - 20:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-15369"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15369" class="active">k notation</a></h3>
+ <div class="content"><p >k notation isn't the problem.  on the contrary, it is the most compact and perspicuous notation for describing k algorithms.</p>
+<p >consider, for example, the code for computing the cross-concatenation of a list of lists:</p>
+<pre >  cross:(,/,/:\:)/(),/:
+  cross(1 2;3 4 5;6)
+(1 3 6
+ 1 4 6
+ 1 5 6
+ 2 3 6
+ 2 4 6
+ 2 5 6)</pre><p >
+the function contains one verb:</p>
+<pre >x,y  x joined with y</pre><p >
+one constant</p>
+<pre >()   the empty list (null)</pre><p >
+and three adverbs:</p>
+<pre >/:   each-right
+\:   each-left
+/    over
+</pre><p >
+would it help to spell things out?</p>
+<pre >cross:(join over join each-right each-left)over null join each-right</pre><p >
+i don't think so!</p>
+<p >perhaps it would help some to break the function into smaller named pieces:</p>
+<pre >raze:,/
+crossjoin:,/:\:
+listeach:(),/:
+cross:(raze crossjoin@)/listeach@</pre><p >
+a little, but not much.</p>
+<p >the problem is how to duplicate in the mind of the reader the thoughts of the writer - a kind of diagram of the actions of the parts and how they contribute to the action of the whole.  and that information simply isn't available in the definition of the function.</p>
+<p >i think of k as a hypothesis:  given this set of primitives, and this notation for fitting them together into larger wholes, we will discover novel and surprising algorithms.  as problems emerge which defeat the hypothesis, we may consider (with great care!) how and whether to extend the language by adding new primitives, or extending their behavior, or (but rarely!) modifying the notation.</p>
+<p >but i think you're on the right track by observing the analogy between programming and painting.</p></div>
+ <div class="links">By <a href="user/2773" title="View user profile.">stevanapter</a> at Mon, 03/13/2006 - 23:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-15373"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15373" class="active">Cross Concatenation in Haskell</a></h3>
+ <div class="content"><p >Getting off-topic, but I thought I'd try a version of cross-concatenation in Haskell...</p>
+<pre >
+cross     []  = [[]]
+cross  (x:xs) = [a:b| a &lt;- x, b &lt;- cross xs]
+</pre><br ></div>
+ <div class="links">By <a href="user/1296" title="View user profile.">Greg Buchholz</a> at Tue, 03/14/2006 - 02:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-15375"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15375" class="active">Or just use &#039;sequence&#039;</a></h3>
+ <div class="content"><p >I just thought I'd point out that the standard prelude function 'sequence' already does this, ie. </p>
+<pre >cross = sequence</pre><p > It's easy to miss that because sequence is abstracted over arbitrary monads rather than just lists.<br >
+Your version nicely shows how it can be done from first principles though.</p></div>
+ <div class="links">By <a href="user/1417" title="View user profile.">leemarks</a> at Tue, 03/14/2006 - 02:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-15380"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15380" class="active">Would it help to spell</a></h3>
+ <div class="content"><p >Would it help to spell things out?  Given your example, yes!  :)  I have no problem with terse notations; they make sense once essential familiarities have been gained.  The problem is not how to duplicate the  thoughts of the writer in the mind of the reader; it is to convey understanding.  Each punctuation mark in K has a meaning; those meanings are _named_ and _defined_ in the K reference manual; readers of K code must perform several tasks to gain understanding: Translate symbol to name, recall the definition of the name, then understand the effect of that definition in the usage context.  When you read K, does your internal voice say "comma, comma, colon" or does it say "join, each-left, cross"?  It's probably the latter.  I argue only that the terse representation is not the only relevant notation.</p>
+<p >The most interesting thing about K is decidedly not its notation; what interests me about K is the set of operations it defines, and the seamless way it handles arguments of different shape.  And the K tree.  And the dependency system.  You get the idea.  ;)</p></div>
+ <div class="links">By <a href="user/1683" title="View user profile.">rossjudson</a> at Tue, 03/14/2006 - 15:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-15381"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15381" class="active">The notation is important</a></h3>
+ <div class="content"><p >K is like regexps. Terse, but useful. And just like regexps, making it more verbose would spoil the fun.</p>
+<p >Have you actually tried reading and writing K? For me, one day was enough to stop complaining about the notation and start loving it.</p></div>
+ <div class="links">By <a href="user/2277" title="View user profile.">Vladimir Slepnev</a> at Tue, 03/14/2006 - 16:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-15378"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15378" class="active">exactly so</a></h3>
+ <div class="content"><p >which supports the view that haskell notation is well-suited for expressing algorithms which "follow the grain" of that language.</p>
+<p >in k, we want the primitives to do the looping implicitly (and that includes (or precludes) recursion.)</p></div>
+ <div class="links">By <a href="user/2773" title="View user profile.">stevanapter</a> at Tue, 03/14/2006 - 11:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-15386"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15386" class="active">It takes a matter of minutes</a></h3>
+ <div class="content"><p >It takes a matter of minutes to knock up a set of such primitives in Haskell and then start working with them.</p>
+<p >Applicative and compositional styles both work effectively in haskell regardless of what the chosen primitives actually do.</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Tue, 03/14/2006 - 19:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-15387"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15387" class="active">Transliterating to Language &quot;X&quot;</a></h3>
+ <div class="content"><p >Is there a quick cheat sheet for that explains K in terms a Haskell, Scheme, etc. programmer would understand?  The <a href="http://lambda-the-ultimate.org/node/1323#comment-15386">examples</a> on Kuro5hin aren't quite enough.  It looks like "<code >/:</code>" and "<code >\:</code>" are related to <code >map</code> and "<code >/</code>" might be like <code >foldl1</code> and "<code >,</code>" is <code >cons</code>,  but that can't quite be right, because then "<code >,/</code>" would be a no-op.</p></div>
+ <div class="links">By <a href="user/1296" title="View user profile.">Greg Buchholz</a> at Tue, 03/14/2006 - 20:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-15389"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15389" class="active">some examples</a></h3>
+ <div class="content"><p >I'll give a few examples, though be warned that these are not giving you functions with the same generality as the k ones (also my k is limited, I'm more used to its successor q). Comments will be k and the rest will be haskell.</p>
+<p >Given the lists:</p>
+<pre >
+-- x:10 30 20 40
+-- y:13 34 25 46
+
+x = [10,30,20,40] 
+y = [13,34,25,46] 
+
+-- x,y
+x ++ y 
+
+-- x,'y 
+zip x y
+
+-- x,\: y 
+
+map (\ z -&gt; [z] ++ y) x
+</pre><p >
+or like so:</p>
+<pre >
+eachleft (++) x y
+where eachleft f x y = map (\ z -&gt; [z] `f` y) x
+</pre><br >
+<pre >
+-- x,/: y 
+map (\ z -&gt; x ++ [z]) y
+</pre><p >
+or like so:</p>
+<pre >
+eachright (++) x y
+where eachright  f x y = map (\z -&gt; x `f` [z]) y
+</pre><p >
+I suppose you could write a limited form of raze:</p>
+<pre >
+-- ,/
+raze = foldl (++) []
+</pre><p >The point free style in haskell was more common when the Bird-Meertens Formalism was cool, but I think it quickly leads to unreadable code when over used. I find the haskell definition of cross given in a previous comment to be quite pleasing. </p>
+<p >Offhand I think you'd struggle to write functions quite as general as the k ones in haskell due to the mismatch between the type systems, and the way apl family languages let functions written over scalars to be automatically generalized to arrays and nested arrays.</p></div>
+ <div class="links">By <a href="user/2772" title="View user profile.">stunt programmer</a> at Tue, 03/14/2006 - 21:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-15392"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15392" class="active">Generality</a></h3>
+ <div class="content"><p ><cite >Offhand I think you'd struggle to write functions quite as general as the k ones</cite><br >
+I agree. You could get kind of close by defining a "K" type class and then instantiating that for lists, arrays, arrays of lists, etc. but obviously thats going to get pretty tedious. Perhaps a future version of haskell with support for say polytypism or some other more expressive type-level programming could automate that though.</p></div>
+ <div class="links">By <a href="user/1417" title="View user profile.">leemarks</a> at Tue, 03/14/2006 - 22:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-15394"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15394" class="active">Generality</a></h3>
+ <div class="content"><p >Yes, I think you could get a lot closer to k using polytypic extensions, but - just thinking out loud - I wonder if you'll run into problems where you have to apply to nested datatypes as well as regular?</p></div>
+ <div class="links">By <a href="user/2772" title="View user profile.">stunt programmer</a> at Tue, 03/14/2006 - 23:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-15397"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15397" class="active">another example, from q to sac</a></h3>
+ <div class="content"><p >The standard function rotate in q:</p>
+<pre >
+rotate:{,/|(0;mod[x;#y])_y}
+</pre><p >
+which you would use like so:</p>
+<pre >
+a:key 10  / This sets a to be the list 0 1 2 3 4 5 6 7 8 9 
+rotate [4;a] / This evals to 4 5 6 7 8 9 0 1 2 3
+</pre><p >
+We might write a SAC function, working on any shape array of ints like so (this is based on a half remembered paper I read on defining APL style operators and I don't have the SAC compiler handy to verify):</p>
+<pre >
+int[] rotate(int d, int n, int[] A) { 
+  maxrotate = shape(A)[d]; 
+  n = n % maxrotate; 
+  if (n &lt; 0) n += maxrotate; 
+  offset = modarray(0*shape(A), [d], n); 
+  sliceShape = modarray(shape(A), [d], n); 
+  result = with (offset &lt;= i—vec &lt;= shape(A)­-1) 
+           modarray(A, i_vec, A[i_vec—­offset]); 
+  result = with (0*sliceShape &lt;= i_vec &lt;= sliceShape-­1) 
+           modarray(result, i_vec, A[shape(A)-­sliceShape+i_vec]); 
+  return(result);
+} 
+</pre><p >
+Aside: I've been thinking a lot about the problem of programming architectures like Cell, where as nice as interpreters like k or q are, highly optimizing compilation from a language like SAC would be a far better bet for producing good code. So that is what I've been mostly concentrating on, but I wonder if there is a market for interactive tools on them as well. </p></div>
+ <div class="links">By <a href="user/2772" title="View user profile.">stunt programmer</a> at Tue, 03/14/2006 - 23:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-15385"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15385" class="active">There are two things here</a></h3>
+ <div class="content"><p >There are two things here which impede my understanding of "cross:(,/,/:\:)/(),/:".</p>
+<p >The most obvious is that I don't have an intuition of how this is parsed, e.g. where the symbol boundaries lie and how they are joined together into programming constructs.  From reading and mathematics, we all have an elaborate intuition of how to parse things like "myfunc(x,a)=x*2+a".  That intuition doesn't help us with complex new symbols and precedence rules are introduced.</p>
+<p >The other impediment also exists in reading Haskell code written in the "point-free" style, where functions are defined as compositions and higher-order functions of other functions such as "f = map (sin . cos)".  Here, I can easily parse this definition, but it's harder to see the meaning given just prerequisite knowledge of math and other programming languages.  To me, this definition is much clearer when function arguments and the underlying computation are written explicitly, such as "f(xs)=[sin(cos(x)) | x in xs]".</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 03/14/2006 - 19:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-15393"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1323#comment-15393" class="active">k syntax</a></h3>
+ <div class="content"><p >syntax categories:</p>
+<pre >
+nouns: 10 "abc" `foo ...
+verbs: + * , % ...
+adverbs: / \ ' /: \: ':
+</pre><p >
+binding strengths and result categories:</p>
+<pre >
+nnn
+vvv
+nvn
+nmn
+mnv
+vna vva       
+</pre><p >
+For example, mnv means that you get a monad (a function of one argument) if you've got a noun next to a verb.</p>
+<p >the table also gives the relative binding strengths of pairs:  nn has lowest binding strength.  na and va have highest binding strength.</p>
+<p >the algorithm for parsing is simple:  start at the end and scan left until the binding strength between pairs drops (or you hit the beginning).  at that point, bind the pair on the right and go back to the end and continue scanning left.</p>
+<p >example:</p>
+<pre >
+(+/'q*-10 20 30+s)%/:(+/c)*/:t+s
+ vaanvvn───────vn va─ van va─nvn
+ v─ m─ m────────  v── v─  v──m─
+ v──   n─────────     n──    n──
+      n──────────    m───────
+    n────────────    n──────────
+ n───────────────
+m────────────────────
+n───────────────────────────────
+</pre><br >
+<pre >
+(,/,/:\:)/(),/:
+ vava─a─ an va─
+ v─v──      v──
+   v────  m────
+ n──────
+v─────────
+</pre><p >
+a little parser for pure k is <a href="http://www.nsl.com/k/kparse.k"> here </a></p>
+<p >because k parses right to left, you read it left to right.  for example,</p>
+<pre >
+a+-b*+/c
+</pre><p >
+a + the value of everything to the right =<br >
+- the value of everything to the right =<br >
+b* the value of everything to the right =<br >
++/ the value of everthing to the right =<br >
+c</p></div>
+ <div class="links">By <a href="user/2773" title="View user profile.">stevanapter</a> at Tue, 03/14/2006 - 22:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

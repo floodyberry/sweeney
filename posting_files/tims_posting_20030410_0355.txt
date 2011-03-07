@@ -1,0 +1,26 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/f93d7ace40c24ad5/1ca8f6587013f45a?lnk=st&rnum=40&hl=en#1ca8f6587013f45a
+[comp.lang.functional] Re: curried function calling
+In any ordinary programming situation, functions of the form a->b->c are isomorphic to functions of the form (a,b)->c.  In other words, you can trivially translate functions and calls from one form to the other and back without losing any information or changing the semantics.
+
+So the only practical question is, which form is more convenient for a given situation?
+
+- Map tends to be more convenient in curried form because often you're looking for a function [a]->[b], and can conveniently obtain the right one with map(f).  Whereas, in uncurried form, you would need to express this as lambda(x::[a])->map(f,x) which is more verbose.
+
+- For functions like addition, you almost always call it with two both arguments present, so add(a,b) may be more convenient than add(a)(b). Some languages bring additional benefits to uncurried form.  For example, with support for variable-length arrays, you could just as easily define "add" to take an array of numbers and have add(a,b,c,d)=a+b+c+d, add(a,b)=a, add(a)=a, and add()=0 which are often convenient.
+
+[blockquote] I suppose the type signature of # would be # : (() -> A) -> A except it's really a special operator, and not a function according to this system. [/blockquote]
+
+In LISP, that kind of operator is useful because you can first-class write code (in your language itself, not just in the compiler) that traverses these "unevaluated expressions" and transforms them in interesting ways.  This is so powerful in LISP because it's done in an untyped way: you can traverse an expression and turn it into anything imaginable, and if there are any type violations, they only show up at runtime.  Thus compile-time typechecking doesn't impose any limitations on how you can traverse stuff.
+
+In a strongly-typed and simply-typed language like Haskell, your # operator can be implemented directly in the language as "call :: lambda(f::t->u)->lambda(x::t)->f(x)", which obeys the rule "call(f)(x)=f(x)" and therefore "call(f)=f" -- so it turns out to just be the identity function.  So, it doesn't add any expressive power to the language.  The type system restricts you to only writing code that's well-typed, so the neat expression-traversal features of LISP go away.
+
+Overall, I think the conclusion is that the "#" operator brings your language new capabilities if and only if your language is untyped.
+
+[blockquote]This is ugly, I know.  I only ask because I'm interested in language features and I'm just thinking about different ways to construct functions, and this idea came up.[/blockquote]
+
+LISP from the 1970's pretty much represents the apex of untyped languages. It does all of the interesting things that are doable and does them very simply, leaving most of the further debate to subjective issues like syntax.
+
+The really interesting and hard problems outstanding in language design are in extending the power of strongly-typed languages.  Here are some cool papers I recommend checking out, covering language features that do add significant new expressive power:
+
+http://www.cs.caltech.edu/~jyh/papers/fool3/default.html 
+http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps

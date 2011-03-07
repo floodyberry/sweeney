@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Behaviour Diffing | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2089" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Behaviour Diffing</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Alrighty, another question for which I'm not sure how to start looking for answers. Don't worry, this will probably be the last one for awhile.</p>
+<p >The idea for this one is that you have version 1 of a program, and you make a change to it. Now how does version 2 differ from version 1? Or put another way, what inputs/test cases end up returning different results from before?</p>
+<p >The purpose of this is to develop a tool that will help to ensure one is not introducing any bugs. I'm aware that there are some computability issues. I'm not asking for anything that solves the halting problem. I think that such a tool could still be useful.</p>
+<p >I've been studying static analysis and formal verification. With more study I think I could answer this question for myself, but that's going to take forever :)</p>
+<p >And, on a more general note, are there any heuristics for figuring out what to look for when one wants to answer a question like this? Or is it you just keep studying and following leads until you get somewhere? I don't mind the latter, it's just a lot of work that I'd rather avoid if I could :)</p> </div>
+ <div class="links">By <a href="user/3845" title="View user profile.">Holgly Morgan</a> at 2007-02-25 22:56 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/2101" title="How to Evaluate Lambda Expressions">previous forum topic</a> | <a href="node/2091" title="MapReduce">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2089" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 1229 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2089" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2089" />
+<a id="comment-25694"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-25694" class="active">Automated Debugging</a></h3>
+ <div class="content"><p >Take a look at the literature about automated debugging. There are plenty of (pragmatic) approaches to capture program behavior; however, most of them are dynamic. Relevant (software engineering) conferences are ICSE, ESEC/FSE, ASE, and AADEBUG. </p></div>
+ <div class="links">By <a href="user/480" title="View user profile.">Christian Lindig</a> at Mon, 2007-02-26 12:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-25801"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-25801" class="active">Regression testing work</a></h3>
+ <div class="content"><p >This question comes up in regression testing, also. One person who has done work on this in regression testing is Gregg Rothermel at U-Nebraska-Lincoln. You can get to his pubs <a href="http://cse.unl.edu/~grother/">here</a>. Check the older work, '93 through about '98. He has the abstracts up, so  I would hope you can get an idea by reading them.</p>
+<p >Jim</p></div>
+ <div class="links">By <a href="user/2355" title="View user profile.">jlaw</a> at Tue, 2007-02-27 15:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-25813"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-25813" class="active">Behavior diffing</a></h3>
+ <div class="content"><p >For simple programs that are recursive in nature (e.g. compilers), I wrote a hierarchical logging library to generate a log of program activity as an text file with varying levels of indentation, and use a standard diff tool to compare them.</p>
+<p >This is an area where development tools could provide a lot of value.  Determining when the execution two versions of a program diverge is an extremely labor-intensive task to carry out manually for complex programs.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 2007-02-27 18:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25864"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-25864" class="active">denotational semantics and bisimulation</a></h3>
+ <div class="content"><p >Related to this are denotational semantics and bisimulation. The former brings us the idea of specifying the effects of a program as a set of traces, so we can compare the set for both old and new versions to see what changed. The latter show us that we can call two programs equivalent if they are equal up to bisimulation (i.e. there can be foung no state transition that produces different effects). These are the theoretical foundations to Tim's approach.<br >
+Now the trick is producing and verifying these program traces. AFAIK the most successful approach is to use abstract interpretation, but the field is too young right now.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Wed, 2007-02-28 04:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25870"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-25870" class="active">operational vs. denotational semantics</a></h3>
+ <div class="content"><p >I think you mean <i >operational</i> semantics, which is indeed a set of traces - <i >denotational</i> semantics is where you specify the meaning of a program via some meaning function.</p></div>
+ <div class="links">By <a href="user/1417" title="View user profile.">leemarks</a> at Wed, 2007-02-28 06:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-25948"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-25948" class="active">operational vs. denotational semantics in process calculi</a></h3>
+ <div class="content"><p >Although I'm not sure exactly what Daniel had in mind, in the world of process calculus/algebra (whence bisimulation originates), the denotational semantics of a particular calculus is typically defined as a function for mapping process expressions to sets of (among other things) event traces: the "meaning" of a process is the set of sequences of events (inputs and outputs) the process might produce. The operational semantics for a calculus defines the meaning of a process as a transition system. </p></div>
+ <div class="links">By <a href="user/1670" title="View user profile.">Allan McInnes</a> at Thu, 2007-03-01 04:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-26032"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-26032" class="active">Better late than never</a></h3>
+ <div class="content"><p >I didn't read LtU for some time, but Allan answer was exactly what I had in mind (and would answer). Thanks.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Sun, 2007-03-04 17:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-25814"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-25814" class="active">Ample for Java</a></h3>
+ <div class="content"><p ><i >This is an area where development tools could provide a lot of value. Determining when the execution two versions of a program diverge is an extremely labor-intensive task to carry out manually for complex programs.</i></p>
+<p >You might find our Eclipse plugin <a href="http://www.st.cs.uni-sb.de/ample/">Ample</a> interesting. It instruments Java code such that for all objects short sequences of incoming method calls are collected in one set per class (in memory). These sets are compared across passing and failing unit tests. Classes that differ the most are suggested as potentially buggy.</p>
+<p >One of our unrealised ideas is to use this mechanism as a trigger in a debugger. Observe one run and then halt the debugger every time we see a method sequence that we haven't observed in the previous run.</p></div>
+ <div class="links">By <a href="user/480" title="View user profile.">Christian Lindig</a> at Tue, 2007-02-27 19:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25816"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-25816" class="active">logical vs statistical</a></h3>
+ <div class="content"><p >In limited languages, change impact analyses can be very useful (and the changes, verifiable).</p>
+<p >Alice Zheng and Ben Liblit employed machine learning techniques in some neat work using data like that from Ample as a basis.</p>
+<p >I think it's cool :)</p></div>
+ <div class="links">By <a href="user/2585" title="View user profile.">lmeyerov</a> at Tue, 2007-02-27 19:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25902"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-25902" class="active">The cites</a></h3>
+ <div class="content"><p >The paper is available from <a href="http://www.cs.cmu.edu/~alicez/">Alice's homepage</a> along with many other interesting papers in a similar vein.  If you're super keen, the <a href="http://ase.csc.ncsu.edu/dmse/setasks.html">Mining Software Engineering Data Bibliography</a> has a bazillion other related papers.</p>
+<p >In my opinion approximate and statistical reasoning is the great unexplored frontier of programming lang. theory.</p></div>
+ <div class="links">By <a href="user/354" title="View user profile.">Noel</a> at Wed, 2007-02-28 12:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-25944"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2089#comment-25944" class="active">neat</a></h3>
+ <div class="content"><p >Trailing slash in the link ( http://ase.csc.ncsu.edu/dmse/setasks.html ). That page is great, I had only seen a couple from each category before. Thanks!</p>
+<p >- Leo</p></div>
+ <div class="links">By <a href="user/2585" title="View user profile.">lmeyerov</a> at Wed, 2007-02-28 21:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2007/02/07" title="Previous month">«</a> March 2007  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2007/3/1" title="1 post">1</a></td>
+  <td class="day-link"><a href="archive/2007/3/2" title="1 post">2</a></td>
+  <td class="day-link"><a href="archive/2007/3/3" title="1 post">3</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2007/3/4" title="1 post">4</a></td>
+  <td class="day-link"><a href="archive/2007/3/5" title="1 post">5</a></td>
+  <td class="day-link"><a href="archive/2007/3/6" title="1 post">6</a></td>
+  <td class="day-today"><a href="archive/2007/3/7" title="2 posts">7</a></td>
+  <td class="day-future">8</td>
+  <td class="day-future">9</td>
+  <td class="day-future">10</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">11</td>
+  <td class="day-future">12</td>
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+  <td class="day-future">15</td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+ </tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1973" title="168 comments">Why people don&#039;t use functional programming?</a></li><li><a href="node/2085" title="19 comments">Dao, a new programming language</a></li><li><a href="node/2105" title="1 comment">Metalua</a></li><li><a href="node/1914" title="34 comments">Why do we need finally in try?</a></li><li><a href="node/2104" title="1 comment">Suse 9.3, vc++, automated buid</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2105" title="1 comment">Metalua</a></li><li><a href="node/2104" title="1 comment">Suse 9.3, vc++, automated buid</a></li><li><a href="node/2103" title="2 comments">Implementation Inheritance</a></li><li><a href="node/2101" title="2 comments">How to Evaluate Lambda Expressions</a></li><li><a href="node/2099" title="14 comments">Non-Applicative Functional Languages</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

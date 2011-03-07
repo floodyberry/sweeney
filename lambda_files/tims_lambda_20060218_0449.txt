@@ -1,0 +1,10 @@
+http://lambda-the-ultimate.org/node/1311
+http://lambda-the-ultimate.org/node/1311#comment-14799
+1049887
+Gilad Is Right
+No
+<p>In Bracha's work here, and in Microsoft's work on C# 3.0, I sense an undercurrent dragging the language model toward the LISP/Smalltalk "ideal" of metadata-intensive, introspective, dynamic, loosely-typeable programming programming.
+</p><p>This is misguided, for two reasons.  First, the demands of secure, robust software imply a need to verify more program at compile-time, not less; this means you need a strong type system or even a non-partial Curry-Howard style proof language as a subset of your language.  Second, the increasing importance of robust concurrency implies the need for strong typing to isolate constant storage from mutable storage and effect-free code from effectful code via type annotations.
+</p><p>Of course, it's easy to see how this undercurrent arises.  When you release a language, you receive complaints from users about all the things they want to do and can't, and the ultimate way to satisfy all of these requests is to expose all metadata: make it extensible, make objects dynamic, and allow the possibility of completely dynamic typing.  The end of the road here looks an awful lot like LISP and SmallTalk.
+</p><p>If you go this route, one day you'll realize you evolved the ultimate hacker language, and it became a godawful mess for writing real programs.
+</p><p>More specifically here, the paper understates the number of important properties that break in an untyped language.  If the developer of a popular library adds a new field (function or variable) named "x" to one of his classes, then he breaks all previously-released applications (both source and binary) that have inherit from it and added their own member named "x".  Conclusion: modular object-oriented programming really isn't feasible in this model.  What else goes wrong?  Since (the lack of) typechecking can't change behavior -- the essential point of the paper -- all data-hiding is lost, your objects are open to introspection attacks, and you need to hack on some arbitrary runtime security checking to prevent that.</p>

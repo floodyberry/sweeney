@@ -1,0 +1,18 @@
+http://lambda-the-ultimate.org/classic/message8378.html
+http://lambda-the-ultimate.org/classic/message8378.html#8404
+0532666
+Closures and mutability
+Re: Closures and mutability
+<p>Good points.  The ideal const/mutable distinction really depends on the typical programming language you're working in.</p><p>
+
+C, C++, Java, Python, and C# exist in a nice local optima where you can write and modify imperative code very productively without putting a lot of thought into mutable vs constant values.  For this style of language, I wouldn't advocate Erik Meijer's approach, because it adds verbosity in order to make distinctions that typical code seldom requires.</p><p>
+
+Once you generalize your language's feature set a bit, constant vs mutable issues become much more central.  The key areas are:</p><p>
+
+- If a language supports structural subtyping, then the lack of a subtype relationship between int/object and int / const int become very painful.  This isn't noticed in the above languages because their type systems (i.e. C structs, C++/Java classes) are purely nominal.</p><p>
+
+- If a language supports dependent types, then ad-hoc mutability interacts very poorly.  Consider something like {t:type:=int; x:t:=7; t:=string;}.  In general, this is why features like C++ templates and the upcoming C# generics are purely static.  In a fully general dependent-typed language like Cayenne with a clear separation between functional and imperative types, you don't need templates/generics as a feature, because you can simply write a function that takes some type parameters, that returns a function or data type as a result.</p><p>
+
+- If you want a language with a clean functional subset, in order to take advantage of compile-time term evaluation (important once you have dependent types), implicit parallelism, or lazy evaluation, then it's vital for your language to be able to distinguish (both for types and values) imperative code from functional code, and to default to functional for common constructs.</p><p>
+
+- In the presence of type deduction, type systems that think in terms of variables being const or mutable behave strangely, because for each term you need to decide whether you mean the actual term, or the implicitly reference-read-coerced version of it, and these end up in a tangled set of interdependencies.  When every reference-read is explicit, and every "mutable term" is instead a constant term of reference type, there is no ambiguity.</p>

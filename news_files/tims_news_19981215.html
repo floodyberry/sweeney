@@ -1,0 +1,99 @@
+<h4>Unreal Networking Code: Status</h4>
+
+<p>Unreal 220 incorporates the majority of the low-level bandwidth optimizations I've been
+planning for Unreal 1 and Unreal Tournament.&nbsp; I was just looking back at the initial
+shipping version of Unreal and comparing packets, and realized that we've achieved a
+bandwidth usage improvement of over 250% in both directions.</p>
+
+<p>This doesn't mean we're going to stop now...there are some minor protocol improvements
+planned, and also high-level game play optimizations that Steve and Brandon are working
+on, moving more logic to the client-side to reduce lag and save bandwidth.&nbsp; But, the
+foundation is now very solid, and the rest of our work mostly consists of building on that
+foundation.</p>
+
+<p>The cool thing about Unreal's networking support is that we brought the real-world
+Internet play performance up to the state-of-the-art without sacrificing generality.
+&nbsp; When I first posted the <a href="http://unreal.epicgames.com/Network.htm">Unreal Networking Architecture</a>,
+it was simultaneously praised for being a powerful and very general framework, and flamed
+because Unreal's initial Internet play performance was below gamers' expectations. &nbsp;
+The critics were delighted to claim, &quot;this networking engine is a Grand Scheme that
+will never perform well in the real world&quot;.&nbsp; They sure were wrong! &nbsp; Iit
+turned out that all the performance bottlenecks were in the low-level protocol, and were
+all completely fixable given sufficient R&amp;D time.</p>
+
+<p>It took a lot of hard work to identify all of the inefficiencies in the protocol and
+come up with solid, general solutions.&nbsp; The key problems in game networking are data
+compression, error correction, and latency reduction.&nbsp; They turn out to be mutually
+opposing: </p>
+
+<ul>
+  <li>Standard data compression schemes (i.e. Huffman and arithmetic coding) work best when
+    you have a large, well-known compression window, and large symbol tables.&nbsp; Sending
+    symbol tables isn't practical when you have a low-bandwidth, high-latency connection, and
+    when your window history is questionable due to transmission errors.</li>
+  <li>Error correction schemes are tough to implement when you have low-bandwidth, high packet
+    loss conditions (for example., most gamers' modem-based Internet connections!)&nbsp; I
+    went through 6 separate error correction schemes in Unreal, 5 of which all fell apart in
+    various conditions.&nbsp; One big trap is getting into a feedback loop that saps away
+    bandwidth and increases ping times.&nbsp; Another trap is retransmitting time-sensitive
+    data when it gets lost, causing lag.&nbsp; These issues are tricky in bandwidth-intensive
+    action games, because you need to support multiple tiers of reliability in packets, and
+    some level of sequencing between them.</li>
+
+  <li>Latency reduction is another tricky issue, because of the way modems queue data: &nbsp;
+    The larger a packet is sent, the more latency is induced in the buffering scheme. &nbsp;
+    So, you want to send small packets to keep latency down.&nbsp; But, UDP packets have
+    significant built-in overhead, so you want to send large packets to keep bandwidth up.</li>
+</ul>
+
+<p>In the end, I opted to go with several a custom bit-encoding compression scheme, which
+adapts itself to the type of data being sent, and intelligently crams it into the least
+amount of bits possible.&nbsp; This has worked very well, because the previously large
+overhead present in packet headers (which identify the game objects being updated) was
+reduced very significantly.</p>
+
+<p>My initial attempts at error correction were based on sliding-window schemes. &nbsp;
+These are still supported in the protocol, because they are great for sending
+latency-insensitive data, for example when you download a map upon entering an Unreal
+server.&nbsp; However, for the far majority of game data, I use an asynchronous
+scatter-gather data replication scheme which guarantees that game objects will all be
+updated correctly under all packet-loss conditions, sacrificing guaranteed ordering of
+updates in order to improve bandwidth usage.</p>
+
+<p>To trade off latency and bandwidth, I adjust packet sizes based on the bandwidth
+available, and hand-tuned the factors to get an acceptable tradeoff.</p>
+
+<p>Behind the scenes, we've also optimized a lot of the prioritization logic. &nbsp;
+Visible objects are now updated based on a priority queue that is weighted according to a
+viewing probability, and a predictor/corrector algorithm which updates the objects which
+&quot;need it most&quot; (based on extrapolated position error and gameplay priority).</p>
+
+<p>To test everything, I wrote an &quot;ISP From Hell&quot; simulator into Unreal that
+lets you toy around with various packet loss, variable packet lag, and packet disordering
+combinations, and the &quot;STAT NET&quot; display.&nbsp; There's also an option built in
+(C++ source required) which writes an extremely detailed network traffic analysis to the
+log file.&nbsp; Having and using these visualization tools turned out to be invaluable.
+&nbsp; Without the tools, the wasted bits, complex feedback loops, and race conditions in
+the protocol would have never have been found.</p>
+
+<p>So, where do we go from here?&nbsp; The majority of the network-related improvements
+coming in the Unreal Tournament timeframe (still unannounced) are high-level, in areas
+like gameplay rules, client-side prediction, ease of use, and user interface.</p>
+
+<p>Further off in the future, there are a lot of new possibilities that can be directly
+extrapolated from the <a href="http://unreal.epicgames.com/Network.htm">Unreal Networking Architecture</a> document.
+&nbsp; Unreal 1 networking can be described simply as &quot;a small number of game clients
+connected to a single server&quot;.&nbsp; However, the protocol's low-level design is
+peer-to-peer rather than client-server.&nbsp; You might say that Unreal just <span class="italic">looks</span>
+like a client-server engine, because our Unreal 1 game code favors the server's logic over
+the client's.&nbsp; For the next-generation engine, I'm going to experiment with a lot of
+new networking configurations.&nbsp; For example, the protocol could be used for a
+server-to-server backbone, enabling servers to be clustered together with objects moving
+seamlessly between them--can you say Ultima Online 3D?&nbsp; There are also other
+interesting possibilities for servers, such as a spanning-tree chat backbone similar to
+IRC, or UnrealScript application servers (for example, managing user accounts on one
+machine, chatting on a second, skin repository on a third, supporting a cluster of
+dedicated game servers).&nbsp; These aren't promised features at this point, just
+possibilities...but to me, very exciting possibilities.</p>
+
+<p>-Tim</p>

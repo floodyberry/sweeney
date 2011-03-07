@@ -1,0 +1,41 @@
+http://lists.seas.upenn.edu/pipermail/types-list/2004/000340.html
+[TYPES] Combining lazy and eager evaluation of terms
+In an attempt to combine some of the benefits of lazy and eager evaluation, I have implemented a language with an evaluation strategy which is strict with respect to divergence, but performs lazy evaluation on certain intermediate subterms to allow a more expressive use of recursion.
+
+To be more precise:
+
+- By "strict with respect to divergence", I mean that for every possible function or data constructor f, f(bot)=bot. Thus for lists, Cons(bot,x)=Cons(x,bot)=bot.
+
+- Performing "lazy evaluation on intermediate subterms" enables one to successfully express recursive data structures like x=Cons(3,x) for an infinite list, or r:=NewRef(Cons(3,r)) for a circular linked list.
+
+- Unlike lazy languages supporting strictness declarations, and strict languages supporting lazyness declarations, this language has no such declarations and always follows a single evaluation scheme.
+
+Currently, my implementation constructs thunks for all potentially recursive terms, traversing them in applicative-order yet deferring access to the value of any reentered thunk (a thunk whose evaluation is already in progress) until its value is strongly required according to normal-order evaluation rules.  Thus every subterm is always fully evaluated eventually, but certain recursive terms are supported which would, in an eager language, either be disallowed or result in access to uninitialized data.
+
+The benefits of this approach are are:
+
+- Recursion and self-reference can be used much more expressively than in traditional eager languages.
+
+- The far majority of "traditional" eager functional and imperative code can be automatically deemed safe for unboxed eager evaluation by the compiler at performance comparable with a mainstream language.  In particular, any code block which exhibits only backward references, or for which a topological sort can be automatically derived.  Note that any code for which this property doesn't hold could, in a language like C++ or Java, access uninitialized variables.
+
+- The complex process of class/module loading and runtime linking in languages like Java and C# can be implemented as plain old execution of the modules' top-level code, for example with proper resolution of circular module references that construct constants.  Recent papers on Java class loaders in purely eager environments indicate that this process is somewhat contrived in the absence of general support for thunked evaluation.
+
+- The scheme can be combined with an effects-tagging and "applicative-order readyness-tagging" strategy to support the free intermixing of functional and imperative constructs, with effects-free terms potentially evaluating in arbitrary order (due to recursion or compiler optimizations) while guaranteeing that imperative effects only execute sequentially, with any recursive sequentiality violations sometimes being statically detectable, but always being dynamically detectable.  Such an imperative framework can be implemented either in a monadic Haskell-style IO/fixIO "top-level" framework, or in a more traditional imperative language.
+
+The drawbacks are:
+
+- To a programmer reading a piece of code, it is not always obvious whether that code will invoke thunked evaluation, yet this distinction may have a significant impact on the resulting performance.
+
+- The evaluation scheme is more complex than either a traditional normal-order or applicative-order evaluator, in particular in its treatment of transitions between thunked lazy evaluation and unboxed eager evaluation.
+
+- Every intermediate term (except for the untaken branch a conditional) is fully evaluated.  This leads to more work than a pure lazy evaluator, which discards intermediate terms which don't contribute to the final result.  I do not consider this drawback significant to a mainstream programming audience, however it rules out the use of some techniques popular among lazy functional programmers, such as infinite non-circular lists and streams.
+
+The interesting problems related to this approach are:
+
+- The conservative, compile-time detection of suberms where a traditional eager runtime evaluation strategy may be safely invoked to maximize performance.  This is a more lenient problem than traditional strictness analysis, because there are no functions for which f(bot)!=bot.  Thus the question is not "Can this term be evaluated to ground here?" but "Can this term be evaluated without reaching any unevaluated circular dependencies?"  Note that the recursion operator is the only construct that can prevent a program from being evaluated with the optimized eager scheme, but that some uses of recursion are detectably safe under an unboxed strict evaluation scheme, such as "x=Cons(3,Cons(Head(x),Nil))".
+
+- The runtime unboxing of thunked values at all transition points where a subterm requiring internal thunk-based evaluation moves into a context allowing eager evaluation.  For example, in "x=Cons(3,x),y=Head(x)", we can evaluate x using thunks, unbox the results, and evaluate y traditionally.  This unboxing process becomes tricky with function closures; in the general case, two versions of a closure's environment and code pointer need to be kept around to support its evaluation in both both thunked and unboxed contexts, and in some cases only the thunked version may be safely invoked.  There are various optimizations possible here -- such as dynamically generating a closure's thunked environment when only an eager environment is available -- but the tradeoffs are quite complex.
+
+Does anybody have any references to work on similar evaluation schemes?
+
+Tim Sweeney

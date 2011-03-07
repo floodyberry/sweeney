@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Naked Objects | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1270" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Naked Objects</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >The <a href="http://www.nakedobjects.org/static.php?content=no-approach.html">Naked Objects Approach</a> is not a sleazy way to make a quick buck,  but a framework for writing business applications that does away with the usual Model-View-Controller architecture.  To quote the website:</p>
+<blockquote ><p >In the naked objects approach ... writing a business application implies writing only the business domain objects themselves. All business functionality is implemented as behaviours or methods on those objects - the objects can be described as being 'behaviourally complete'. These business objects are then presented directly and automatically to the user, by means of a completely generic viewing mechanism. Similarly, the persistence layer can be generated completely automatically from the domain object definitions (manual mapping will still be required if the objects must interface with existing databases).</p></blockquote>
+<p >Sounds like <a href="http://lambda-the-ultimate.org/node/1160">polytypic programming</a> to me! Ruby on Rails has something similar with <a href="http://wiki.rubyonrails.com/rails/pages/Scaffold">scaffolding</a>, and the Django framework in Python  does <a href="http://www.djangoproject.com/documentation/tutorial2/">the same</a>.</p>
+<p >It's nice to see application of theory, though I'm virtually certain those doing the applying wouldn't recognise it as such.</p> </div>
+ <div class="links">By <a href="user/354" title="View user profile.">Noel</a> at 01/31/2006 - 16:25 | <a href="taxonomy/term/15">Meta-Programming</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1270" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 3030 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1270" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1270" />
+<a id="comment-14043"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14043" class="active">Previously on LtU</a></h3>
+ <div class="content"><p ><a href="http://lambda-the-ultimate.org/classic/message6998.html">Previously on LtU, 2003</a></p></div>
+ <div class="links">By <a href="user/674" title="View user profile.">Isaac Gouy</a> at Tue, 01/31/2006 - 17:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14049"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14049" class="active">It&#039;s nice to see theory</a></h3>
+ <div class="content"><p >It's nice to see theory starting to address real-life practice, though I'm virtually certain those doing the theorising wouldn't recognise it as such.</p></div>
+ <div class="links">By <a href="user/1104" title="View user profile.">nat</a> at Tue, 01/31/2006 - 17:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14078"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14078" class="active">:-)</a></h3>
+ <div class="content"><p >Fair point.</p></div>
+ <div class="links">By <a href="user/354" title="View user profile.">Noel</a> at Tue, 01/31/2006 - 22:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14050"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14050" class="active">Interesting</a></h3>
+ <div class="content"><p >The Unreal engine has been using a similar approach since 1995.  Programmers define classes using the Java-style UnrealScript language, and use annotations to decide which of the member variables are exposed to designers.  The engine then exposes a quite powerful property-editing UI enabling designers to customize the properties of those objects.</p>
+<p >Every datatype has a corresponding edit control.  Bytes are sliders, booleans are checkboxes, enumerations are drop-down combo boxes, structs create an expandable hierarchy with subcontrols for their components, etc.  There are some screenshots showing this here: http://www.unrealtechnology.com/html/technology/ue30.shtml</p>
+<p >The resulting user interface is less polished than a typical modelling program (like 3D Studio Max or Maya) where a UI designer lays out every control manually.  But the productivity gains from fast turnaround time far outweigh the negatives in this case.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 01/31/2006 - 17:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14083"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14083" class="active">More About UnrealScript, Please?</a></h3>
+ <div class="content"><p >Hi Tim! Long time, no talk. It's a shame things didn't work out for me to join Epic, but I continue to look forward to forthcoming Unreal technology. :-)</p>
+<p >One thing that I've always found fascinating about UnrealScript is that, like Java to some extent, it's a statically-typed language, but without full type erasure: it obviously supports some level of reflection and/or introspection, and all this while being well-integrated with C++ so that you can have native functions, latent functions, and so forth. I remember trying to explain to my stepson why it was impressive that, from the Unreal console, you can say something like "summon xweapons.redeemerpickup" and have a Redeemer pop into the world in front of you. So I'm wondering if you have any (more) comments about reflection and introspection, type erasure, etc. in the context of your current thoughts on type theory and language design. Perhaps more specifically, to the extent that your thinking is influenced by Ontic and doesn't make a strong distinction between types and values in the first place, what do "type erasure" and/or "reflection/introspection" even mean? And how would all of this be integrated with C++? Or would answering these questions give away too much of the farm?</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 01/31/2006 - 22:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14081"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14081" class="active">Scaffolding in Rails</a></h3>
+ <div class="content"><p >I'm not so sure that Ruby on Rails scaffolding is really Naked Objects.  It's boiler-plate code code-generation to help get one started on an app, something that works well as example code, but not much beyond that.
+<p >
+There is no "completely generic viewing mechanism" (either with or without scaffolding), and "the persistence layer can be generated completely automatically from the domain object definitions" sounds very much like another Ruby Web framework, <a href='http://www.nitrohq.com/'>Nitro</a>, but the antithesis of Rails.</p></div>
+ <div class="links">By <a href="user/2007" title="View user profile.">James Britt</a> at Tue, 01/31/2006 - 22:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14089"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14089" class="active">and &quot;the persistence layer</a></h3>
+ <div class="content"><p ><cite >and "the persistence layer can be generated completely automatically from the domain object definitions" sounds very much like another Ruby Web framework, Nitro, but the antithesis of Rails.</cite><br >
+I thought that it sounded very much like ActiveRecord and the way it automatically picks up the particulars of classes from the database schema. Admittedly RoR isn't terribly automatic for anything but quite simple schemata, but it does do a lot of work by itself. </p></div>
+ <div class="links">By <a href="user/101" title="View user profile.">Thomas Sutton</a> at Tue, 01/31/2006 - 23:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14226"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14226" class="active">Objects &lt;-&gt; DB</a></h3>
+ <div class="content"><p >But in Rails, the persistence layer must exist *first*, in order to derive the the domain object definitions, which is the reverse of what was described for Naked Objects: "persistence layer can be generated completely automatically from the domain object definitions."</p>
+<p >Nitro (well, Og, actually) generates the persistence layer (usually a database and tables) from the domain object definitions (the Ruby code for the models).</p>
+<p >(Though I wonder if we have different ideas of what "persistence layer" and "domain object definitions" map to.)</p></div>
+ <div class="links">By <a href="user/2007" title="View user profile.">James Britt</a> at Thu, 02/02/2006 - 18:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14111"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14111" class="active">Introspection</a></h3>
+ <div class="content"><p >Languages built on modern type theories guarantee many universal properties which assure that your program does what it says it's going to do.  One example is the parametricity theorem (see Wadler's "Theorems for Free").  It guarantees that a program cannot decompose values belonging to a universal type, an important security property enabling you to (for example) call functions in another module with the assurance that they can't do anything malicious with the data.</p>
+<p >Introspection, reflection, and even support for unconstrained casting (e.g. from Object to Integer in Java) all violate that property.  Therefore, unlimited introspection is not a desirable property in a secure language.  (C, C++, Java, C#, and Python aren't secure languages in this regard.)</p>
+<p >However, explicit programmer-controlled introspection is a good and reasonable feature.  For example, when defining a data type, it would be nice if a language offered a mechanism for specifying that associated metadata should be generated that describes the structure of that data, which may only be directly accessed by the module that contains the definition, but may be passed around to other modules explicitly by the programmer.</p>
+<p >More concretely, when I define a type T in the local scope, I should be able to syntactically specify that the compiler should generate a data structure describing T's layout (call it T.metadata, for example), and to make that data public or private.  I can then pass that metadata around to dependent-typed functions along with values of that type so that it can be deconstructed -- if I explicitly allow it to be.  But, given just a value of some arbitrary type, one should not be able to extract its "type", since that notion violates many universal properties (such as the subtyping property).</p>
+<p >Haskell typeclasses enable one to explicitly (not automatically) define metadata associated with a type in this way, and in the Haskell world this is done without violating the language's universal properties.  A more automated mechanism ("deriving TypeInfo"?) would make this more user-friendly.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Wed, 02/01/2006 - 02:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14130"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14130" class="active">Traversal etc.</a></h3>
+ <div class="content"><p >So the main point I take from this is that arbitrary introspection/reflection should be disallowed.  That seems reasonable.  PLT Scheme has one take on it with it's <a href="http://download.plt-scheme.org/doc/301/html/mzscheme/mzscheme-Z-H-4.html#node_sec_4.5">inspectors</a>.</p>
+<p >However, reading the posts the prior posts the main criticisms boil down to: you need more customisation than these automated procedures provide.  This is where, I think, PL theory can make the largest contribution.</p>
+<p >Imagine the process of constructing a GUI from a type definition.  This process is a fold over the type.  Simple stuff.  Now how about customisation?  We want to replace some parameters of the fold with our own functions.  Again, fairly simple.  Now what if there are dependencies between elements?  We might need to alter the traversal order, and so on.  Structuring all of this cleanly is what we can get from the theory.  <a href="http://www.cs.vu.nl/Strafunski/">Strategic programming</a>, and <a href="http://www.stratego-language.org/Stratego/WebHome">Stratego</a> are the first places I'd look for ideas.</p>
+<p >A lot of application development is just writing a nice front-end to a database (say, about 90% of websites are just this).  If this could be made this really easy, and yet really customisable, it would be a great tool.</p></div>
+ <div class="links">By <a href="user/354" title="View user profile.">Noel</a> at Wed, 02/01/2006 - 13:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14134"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14134" class="active">Oleg Again :-)</a></h3>
+ <div class="content"><p >Noel: <i >Imagine the process of constructing a GUI from a type definition. This process is a fold over the type. Simple stuff. Now how about customisation? We want to replace some parameters of the fold with our own functions. Again, fairly simple. Now what if there are dependencies between elements? We might need to alter the traversal order, and so on. Structuring all of this cleanly is what we can get from the theory.</i></p>
+<p >This sounds like Oleg Kiselyov's work on <a href="http://okmij.org/ftp/Scheme/enumerators-callcc.html">General Ways to Traverse Collections</a>. I still think his "Zipper qua delimited continuation reified as a data structure" is the most important CS result of 2005. I'm still waiting on an O'Caml implementation, however, as I don't yet understand the module system well enough to develop my own. I really should keep trying, though.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Wed, 02/01/2006 - 15:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14143"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14143" class="active">And a bit more</a></h3>
+ <div class="content"><p >I think there is bit more here than just a universal traversal.  Composition is the main additional problem.  I don't want to specify my traversal as one monolithic lump.  I want to specify individual rules which might require bottom-up and top-down traversal and have some smart system combine them into one uber-fold.  Perhaps Oleg addresses this -- I haven't read all his work -- but it isn't in the work I have read.  I seems like a neat problem very related to existing work in deforestation, so I wouldn't be surprised if someone has implemented it.</p></div>
+ <div class="links">By <a href="user/354" title="View user profile.">Noel</a> at Wed, 02/01/2006 - 17:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14155"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14155" class="active">Re: metadata is dangerous</a></h3>
+ <div class="content"><p ><i >But, given just a value of some arbitrary type, one should not be able to extract its "type", since that notion violates many universal properties (such as the subtyping property).</i></p>
+<p >That doesn't make sense to me, but I am a caveman when it comes to PLT. Perhaps "the subtyping property" explains why I'm being dumb. Pattern matching isn't considered evil so why shouldn't I be able to get the metadata for something and then have my code take different paths based on that? (The main argument I can think of: a better design is to make that kind of stuff more explicit at the regular type level, rather than relying on metadata.) As long as the code isn't trying to change the metadata it should be safe, no?</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Wed, 02/01/2006 - 19:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14156"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14156" class="active">Re: Theorems for Free</a></h3>
+ <div class="content"><p ><a href="http://obfusco.com/tmp/wadler-free.pdf">PDF</a></p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Wed, 02/01/2006 - 19:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14164"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14164" class="active">Typeable</a></h3>
+ <div class="content"><p ><code >deriving <a href='http://www.haskell.org/ghc/docs/latest/html/libraries/base/Data-Typeable.html'>Typeable</a></code> does what you're thinking?</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Wed, 02/01/2006 - 20:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14182"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14182" class="active">The Subtyping Property</a></h3>
+ <div class="content"><p >raould: By "given just a value of some arbitrary type, one should not be able to extract its 'type', since that notion violates many universal properties", I mean:  In the presence of subtyping, a value is expected to be a member of every type that contains it.  In a language with subtyping, singleton types, and a top type, what can you say about "the type of 3"?  Well, 3 belongs to every type that contains 3.</p>
+<p >The least such type is the singleton type containing 3, and the greatest is the top type.  These are the only two universal answers we could hope to give, and neither one yields any usable information.  This is unlike Java's o.getClass() function on objects, which yields nontrivial information.  If we consider Object as a universal type (which Java and C# encourage), then these languages are obviously aparametric.  So then they pile on all sorts of extra security features in order to regain just a few of the guarantees that parametricity could have provided.</p>
+<p >Daniel: Excellent, thanks for pointing out "deriving Typeable".  So Haskell implementations do indeed solve the introspection problem safely. I learn something new about Haskell every day.</p>
+<p >So the intuition here is that if I declare a type "deriving Typeable", then I'm explicitly choosing to expose its internal details.  But abstract datatypes not declared that way remain abstract such that it's physically impossible for an outside function to break the abstraction barrier.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 02/02/2006 - 00:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14183"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1270#comment-14183" class="active">So the intuition here is</a></h3>
+ <div class="content"><blockquote ><p >So the intuition here is that if I declare a type "deriving Typeable", then I'm explicitly choosing to expose its internal details. But abstract datatypes not declared that way remain abstract such that it's physically impossible for an outside function to break the abstraction barrier.</p></blockquote>
+<p >Actually, <a href='http://www.haskell.org/ghc/docs/latest/html/libraries/base/Data-Typeable.html#t%3ATypeable'>Typeable</a> just provides a way to compare two types for equality. To do introspection, you need <a href='http://www.haskell.org/ghc/docs/latest/html/libraries/base/Data-Generics-Basics.html#t%3AData'>Data</a>.</p>
+<p >In other words, a value of type ∃a.a is completely opaque; a value of type ∃a. Typeable a ⇒ a lets you check whether a is a type you're familiar with, but doesn't give you any extra information if it isn't; and ∃a. Data a ⇒ a lets you look at the internal structure.</p></div>
+ <div class="links">By <a href="user/1242" title="View user profile.">Dave Menendez</a> at Thu, 02/02/2006 - 01:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

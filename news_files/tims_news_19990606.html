@@ -1,0 +1,19 @@
+<h4>Direct3D Improvements</h4>
+
+<p>Since Riva TNT users are reporting that Direct3D is more than 30% faster than OpenGL on
+their cards, I've been spending some more time improving the D3D code, adding better
+support for video mode switching, and optimizing the texture management code a bit more.</p>
+
+<p>Another motivation for the Direct3D improvements is the Matrox G400.&nbsp; I just
+received one, and it's an awesome video card--fast fill rate, great graphics quality, and
+decent texture management performance.&nbsp; The G400 has a great Direct3D driver, but
+their OpenGL is hideously bad.</p>
+
+<p>One interesting new feature I managed to implement in Direct3D is recursive, fractal
+detail textures.&nbsp; With this feature enabled in Direct3D, you never see any individual
+texels, no matter how close you get to a surface.&nbsp; It's a really interesting contrast
+to the blurry bilinear filtering you see near surfaces in most games.&nbsp; Considering
+how fast current 3D hardware has become, there's no reason for games to reveal any
+individual texels anywhere.</p>
+
+<p>-Tim</p>

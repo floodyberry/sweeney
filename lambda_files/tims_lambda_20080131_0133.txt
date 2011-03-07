@@ -1,0 +1,11 @@
+http://lambda-the-ultimate.org/node/2643
+http://lambda-the-ultimate.org/node/2643#comment-39734
+1051219
+Arc is released
+The mess that is Unicode...
+<p>I agree that international language support requires a standard with a large character set with far more complex handling of case, directionality, display, and order than ASCII.
+</p><p>But Unicode ought to have defined an unambiguous encoding rather than suggesting that different strings of e.g. UTC-32 codes can produce the same character point.  IEEE 754 made a similar mistake in defining +0 and -0 as "distinct but equal" values.  These specs are incompatible with extensional equality.
+</p><p>Also, Unicode doesn't define any sort of mapping to glyphs, which to me is one of the important things such standard ought to do.
+</p><blockquote><div>Many useful things in the domain of real life can't be expressed in toto by the type systems of most languages.</div></blockquote><p>
+</p><p>This is true, but character strings are a simple enough domain that they could be precisely characterized by simple types.  So, it really sucks that the standard defines it in such a way that this can't be done.
+</p><p>To answer your question: We store all text as UCS-16, and went to great effort a while back to move everything from ASCII to 16-bit Unicode, right before the consortium realized that 16 bits wasn't enough.  Nowadays, Windows doesn't support UCS-32 nor UTF-8, so we're stuck with too 2X bloat yet still not enough bits to represent all characters directly.</p>

@@ -1,0 +1,15 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/5052cd7f5788f790/cca69d7d02f4ae1f?lnk=st&rnum=30&hl=en#cca69d7d02f4ae1f
+[comp.lang.functional] Re: local variables don't cause side effects
+[blockquote]If you can construct references to local variables, and allow assignments via references, a function can indeed modify variables outside its scope, so you have to be rather careful about what you allow programmers to do with locals. But let me assume that all mechanisms that might modify a nonlocal variable were disabled, to keep the answer interesting ;-)[/blockquote]
+
+For those interested, there is a great body of research on this topic, the general idea being that multiple heaps can exist; pointers carry around "which heap do I point to" information, and one is prevented (at the typechecking level) from writing to someone else's heap. Google for "Typed Regions".
+
+[blockquote]But you don't need them. To transform an imperatively-written function into a functional version:
+1) Whenever the imperative code reassigns to a local variable, just create another variable that will take up the new value.
+2) Whenever there's a loop, move the loop body into a recursive helper function. (Note most loops that you'll encounter can be transformed into higher-order functions which will do the recursion for you. You don't have to reinvent the wheel in every case.)[/blockquote]
+
+This works for the case of loops within a single function which "update" loop variables during iteration.  Such constructs can always be translated into tail-recursive functions quite easily.
+
+But that's not the case, in general, with imperative code.  For example, if one desires the ability to dynamically allocate local objects within a function and manipulate those objects as well as mutable references to them, in that function, and in other nested functions, with the general ability to update such references through closures, then the translation to purely functional code is far more complex.  Haskell has solved the problem in purely functional exposure of a behind-the-scenes native implementation quite elegantly (google "Haskell IO Monad" and "RefMonad").  But the case of a purely functional typesafe verifyably divergence-free mechanism is an open research problem that probably requires a more advanced type system to solve.
+
+Overall, I think the notion of "translating arbitrary imperative programs into purely functional ones" is a very valuable way of conceptualizing, theorizing, and reasoning about things like mutable references and exceptions.  But it shouldn't be considered an implementation technique, because it's vastly more complex and less efficient than just exposing imperative functionality in the language itself. 

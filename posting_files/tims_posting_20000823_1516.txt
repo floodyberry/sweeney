@@ -1,0 +1,42 @@
+http://groups.google.com/group/fa.haskell/browse_thread/thread/8801d22ed11f076d/d7733b32fb979e20?lnk=st&rnum=72&hl=en#d7733b32fb979e20
+[fa.haskell] Higher-order function application
+In Haskell, only a single notion of "function application" exists, where a function f::t->u is passed a parameter of type t, returning a result of type u.  Example function calls are:
+
+    1+2
+    sin 3.14
+    map sin [1:2:3]
+
+However, a higher-order notion of function application seems sensible in many cases.  For example, consider the following expressions, which Haskell rejects, despite an "obvious" programmer intent:
+
+    cos+sin        -- intent: \x->((cos x)+(sin x))
+    cos(sin)       -- intent: \x->cos(sin(x))
+    (cos,sin)(1,2) -- intent: cos(1),sin(2)
+    (+)(1,2)       -- intent: (+)(1)(2)
+    cos [1:2:3]    -- intent: map cos [1:2:3]
+
+From this intuition, let's postulate that it's possible for a compiler to automatically accept such expressions by translating them to the more verbose "intent" listed above, using rules such as:
+
+1. Operator calls like (+) over functions translate to lambda abstractions as in the "cos+sin" example.
+
+2. A pair of functions f::t->u, g::v->w acts as a single function from pairs to pairs, (f,g)::(t,u)->(v,w).
+
+3. Translating function calling into function composition, like "cos(sin)".
+
+4. Automatic currying when a pair is passed to a curried function.
+
+5. Automatic uncurrying when a function expecting a parameter of type (t,u) is passed a single value of type t.
+
+6. Applying a function f:t->u to a list x::[t] translates to "map f x".
+
+I wonder, are these rules self-consistent?  Are they unambiguous in all cases?  Are there other rules we can safely add?
+
+It also seems that every statement above is simply a new axiom at the type checker's disposal.  For example, to describe the general notion of "cos+sin" meaning "\x->(cos(x)+sin(x))", we say:
+
+    for all types t,u,v,
+    for all functions f,g :: t->u,
+    for all functions h ::u->u->v,
+    h (f,g) = \x->h(f(x),g(x)).
+
+Is this "higher order function application" a useful notion, and does any research exist on the topic?
+
+-Tim 

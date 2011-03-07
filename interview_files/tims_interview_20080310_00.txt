@@ -1,0 +1,214 @@
+http://www.tgdaily.com/content/view/36390/118/1/1/
+Unreal creator Tim Sweeney: "PCs are good for anything, just not games"
+Theo Valich interviews Tim Sweeney at GDC2008
+TG Daily
+Theo Valich
+
+<desc>We got a chance to sit down with one of the sparkling celebrities of the IT industry during the the Game Developers Conference 2008: Tim Sweeney is founder and CEO of Epic Games, creator of the famous Unreal game engines.
+
+TG Daily editor Theo Valich spoke with Sweeney about the future of the PC as a game platform, the role of the next-generation of game consoles, the next Unreal engine as well as the future of Epic.
+
+We have known Sweeney for several years and are always looking forward to his view on the state of the gaming industry, which he is not afraid to discuss openly. In this first part of our three-part interview, Sweeney takes on the PC, which he believes is in trouble and can't keep up with game consoles, mistakes in Windows Vista and the integrated graphics dilemma.</desc>
+
+<section>PCs are good for anything, just not games</section>
+
+<q>Tim, Unreal has grown into a big success much because of the PC as a great gaming platform. We have heard about a new gaming PC alliance that wants to promote gaming on the PC versus gaming on the console. What is your view on that, especially on those stunningly expensive gaming rigs?</q>
+
+<a>There are many overpriced computers out there. It's like sports cars. They are everywhere, everybody writes about them, but there are only a few who can afford them. There isn't a great amount of people that will spend large amounts of money on that. In the case of PCs, they mostly don't deliver that amount of performance that you would expect to justify that cost. You pay twice as much money for 30% more performance... That is just not right.</a>
+
+<q>What about those high-end features? Do you think that industry is actually sending the wrong message when it comes to gaming? Do you feel that the hardware industry went with wrong message when it started to talk about 3-Way SLI and other high-end things, while they did not work on expanding the PC gaming message to masses?</q>
+
+<a>Absolutely. That was a terrible mistake. Marketing people believe that there is a small number of people who are gamers and who can afford spending good amount of money on buying high end hardware.</a>
+
+<q>You have to admit, the margin is obviously there.</q>
+
+<a>Agreed. But it is very important not to leave the masses behind. This is unfortunate, because PCs are more popular than ever. Everyone has a PC. Even those who did not have a PC in the past are now able to afford one and they use it for Facebook, MySpace, pirating music or whatever. Yesterday's PCs were for people that were working and later playing games. Even if those games were lower-end ones, there will always be a market for casual games and online games like World of Warcraft. World of Warcraft has DirectX 7-class graphics and can run on any computer. But at the end of the day, consoles have definitely left PC games behind.</a>
+
+<q>But we mostly talk about conventional retail sales. Do you see an increasing divide between the Pc and consoles?</q>
+
+<a>Retail stores like Best Buy are selling PC games and PCs with integrated graphics at the same time and they are not talking about the difference [to more capable gaming PCs]. Those machines are good for e-mail, web browsing, watching video. But as far as games go, those machines are just not adequate. It is no surprise that retail PC sales suffer from that. Online is different, because people who go and buy games online already have PCs that can play games. The biggest problem in this space right now is that you cannot go and design a game for a high end PC and downscale it to mainstream PCs. The performance difference between high-end and low-end PC is something like 100x.</a>
+
+<q>In other words: Too big?</q>
+
+<a>Yes, that is huge difference. If we go back 10 years ago, the difference between the high end and the lowest end may have been a factor of 10. We could have scaled games between those two. For example, with the first version of Unreal, a resolution of 320x200 was good for software rendering and we were able to scale that up to 1024x768, if you had the GPU power. There is no way we can scale down a game down by a factor of 100, we would just have to design two completely different games. One for low-end and one for high-end.
+That is actually happening on PCs: You have really low-end games with little hardware requirements, like Maple Story. That is a $100 million-a-year business. Kids are addicted to those games, they pay real money to buy [virtual] items within the game and the game.</a>
+
+<q>Broken down, that means today's mainstream PCs aren't suitable for gaming?</q>
+
+<a>Exactly. PCs are good for anything, just not games.</a>
+
+<section>Intel's integrated graphics just don't work. I don't think they will ever work</section>
+
+<q>Well, we do have a fancy new operating system on the PC, which is actually heavily promoted as a gaming platform. What are your thoughts about Windows Vista?</q>
+
+<a>I really don't know why they kept the 32-bit version of Vista. I was surprised when they decided to keep the 32-bit version, I expected that they would push the 64-bit version exclusively. It would have been the perfect time for that.</a>
+
+<q>Considering that almost all the computers that can run Vista in fact support the x86-64extensions, that choice belongs to The Twilight Zone of the IT industry.</q>
+
+<a>Let's be clear with it. The switch to exclusively 64-bit would clean up all the legacy viruses and spyware programs that have been plaguing us for years. The requirement for much more system memory cannot be an excuse, because most owners of 64-bit processors have at least 1 GB of system memory installed.</a>
+
+<q>It would have been a soft switch when we compare it to the Mac, right? Almost all of our 32-bit software for Windows would continue to perform as it used to?</q>
+
+<a>Yes, we would have liked something like that to happen. In terms of Apple, there's a new PC in your future. In the case of Vista that would have gone 64-bit only, you would have ended up with five year old computers that still would have been able to run the 64-bit operating system.</a>
+
+<q>Let's go back to the gaming PC. What would you think if everyone would pursue a sort of an ease-of-use approach? For instance, in last two years, there were efforts to bring external graphics to life. It was supposed to be a compact box that would have a powerful discrete card inside. But in the end, it turned out that Vista's driver mode (LDDM) was incompatible with that.</q>
+
+<a>External graphics?</a>
+
+<q>A year ago, the PCI-SIG certified the PCI External standard, which enabled the conventional PCI slot to extend through several different cables. There were several Taiwanese companies such as Asus and MSI that demonstrated products based on different cards. In the end, you simply needed to plug the external box into a notebook or a desktop. Prototypes were using the ExpressCard interface.</q>
+
+<a>Oh... that's cool. Actually, this would be a really good idea. We always joked that there will come a day when you won't be plugging a graphics card into a computer, but you would connect the computer into an Nvidia box, because they were quite loud and using a lot of power. But this idea would be really good. I didn't know there was actually a development in that area. Sadly, this would not solve a problem that we have today, and that is the fact that every PC should have a decent graphics card. A PC should be an out-of-the-box workable gaming platform.</a>
+
+<q>What about notebooks?</q>
+
+<a>For notebooks this could be a really good solution. There is no room to put a fast GPU into that compact form.</a>
+
+<q>With that much background and knowledge about what PCs make sense and which do not, I'd be interested to learn what PC you are using.</q>
+
+<a>My work computers are Dell workstations. Currently, I have a dual-CPU setup, dual-quad cores for a total of eight cores, and 16 GB of memory. We at Epic tend to go to the high-end of things. Until recently, we used to buy high-end consumer PCs, simply because they tend to deliver the best performance. However, as time goes by, we constantly run into stability problems with CPUs and graphics, so we decided to switch to workstations. We just need very, very stable computers and they perform very well.</a>
+
+<q>So, you aren't really after the highest benchmark numbers obviously.</q>
+
+<a>Part of the problem we see with these systems is that that they are ultra-fast, but often we see our PCs running under full load for 16 hours a day on various projects. We are constantly loading the systems, for instance using Radiosity. These computing tasks are extremely hardware extensive. Most of the high-end systems we worked on are just not engineered to support that.</a>
+
+<q>What are your thoughts on the future of the PC as a gaming platform? Is scalability the future - we hear AMD talking about Spider and Nvidia is selling Triple SLI that will keep us upgrading over the next several years. Or did the industry lose its focus?</q>
+
+<a>PC gaming is in a weird position right now. Now, 60% of PCs on the market don't have a workable graphics processor at all. All the Intel integrated graphics are still incapable of running any modern games. So you really have to buy a PC knowing that you're going to play games in order to avoid being stuck with integrated graphics. This is unfortunate, and this is one of main reasons behind the decline of the PC as a gaming platform. That really has endangered high-end PC game sales. In the past, if you bought a game, it would at least work. It might not have been a great experience, but it would always work.</a>
+
+<q>Can that scenario change?</q>
+
+<a>Yes, actually it might. If you look into the past, CPU makers are learning more and more how to take advantage of GPU-like architectures. Internally, they accept larger data and they have wider vector units: CPUs went from a single-threaded product to multiple cores. And who knows, we might find the way to get the software rendering back into fashion.
+Then, every PC, even the lowest performing ones will have excellent CPUs. If we could get software rendering going again, that might be just the solution we all need. Intel's integrated graphics just don't work. I don't think they will ever work.</a>
+
+<q>These are harsh words. It looks like Intel has a lot of things coming down the pipe.</q>
+
+<a>They always say "Oh, we know it has never worked before, but the next generation ..." It has always been the next generation. They go from one generation to the next one and to the next one. They're not faster now than they have been at any time in the past.</a>
+
+<section>DirectX 10 is the last relevant graphics API</section>
+
+<desc>In the second part of our interview Tim Sweeney discusses the challenges and dramatic changes that are just ahead for game developers and gamers: Graphics rendering may change completely and Microsoft's DirectX interface may become less important. The successors of the Xbox 360 and Playstation 3, due in 2012, could be running entirely on software pipelines.
+
+The idea of extremely powerful graphics processors being used for general purpose applications is a much debated topic in the games industry as well - and Sweeney believes that the GPU and CPU will be heading into a battle for the dominant position in a computer - and either one could be pushed out of the market.</desc>
+
+<q>In the first part of our interview you implied that software rendering might be coming back. Daniel Pohl, who rewrote Quake 3 and Quake 4 using ray-tracing [and is now working as Intel's research scientist] recently showed ray-tracing on a Sony UMPC, an ultraportable device equipped with a single-core processor. True, the resolution was much lower than on PCs of today, but it looked impressive. What are your thoughts on ray-tracing? How will 3D develop in the next months and years?</q>
+
+<a>Ray-tracing is a cool direction for future rendering techniques. Also, there is rendering and there is the ray scheme of dividing the scene into micro-polygons and voxels. There are around five to ten different techniques and they are all very interesting for the next-generation of rendering.
+
+Rendering can be done on the CPU. As soon as we have enough CPU cores and better vector support, these schemes might get more practical for games. And: As GPUs become more general, you will have the possibility of writing a rendering engine that runs directly on the GPU and bypasses DirectX as well as the graphics pipeline. For example, you can write a render in CUDA and run it on Nvidia hardware, bypassing all of their rasterization and everything else.
+
+All a software renderer really does is input some scene data, your position of objects, texture maps and things like that - while the output is just a rectangular grid of pixels. You can use different techniques to generate this grid. You don't have to use the GPU rasterizer to achieve this goal.</a>
+
+<q>What kind of advantage can be gained from avoiding the API? Most  developers just utilize DirectX or OpenGL and that's about it. How does the Unreal Engine differ from the conventional approach?</q>
+
+<a>There are significant advantages in doing it yourself, avoiding all the graphics API calling and overhead. With a direct approach, we can use techniques that require wider frame buffer, things that DirectX just doesn't support. At Epic, we're using the GPU for general computation with pixel shaders. There is a lot we can do there, just by bypassing the graphics pipeline completely.</a>
+
+<q>What is the role of DirectX these days? DirectX 10 and the Vista-everything model promised things like more effects and direct hardware approach, claiming that lots of new built-in technologies would enable a console-like experience. DirectX 10.0 has been on the market for some time and the arrival of DirectX 10.1 is just ahead. What went right, what went wrong?</q>
+
+<a>I don't think anything unusual happened there. DirectX 10 is a fine API. When Vista first shipped, DirectX 10 applications tended to be slower than DirectX 9, but that was to be expected. That was simply the case because the hardware guys were given many years and hundreds of man-years to optimize their DirectX 9 drivers. With DirectX 10, they had to start from scratch. In the past weeks and months, we have seen DX10 drivers catching up to DX9 in terms of performance and they're starting to surpass them.
+
+I think that the roadmap was sound, but DirectX 10 was just a small incremental improvement over DX9. The big news items with DirectX 9 were pixel and vertex shaders: You could write arbitrary code and DX10 just takes that to a new level, offering geometry shaders and numerous features and modes. It doesn't change graphics in any way at all, unlike DX9. That was a giant step ahead of DirectX 7 and DirectX 8.</a>
+
+<q>Since you are a member of Microsoft's advisory board for DirectX, you probably have a good idea what we will see next in DirectX. What can we expect and do you see a potential for a segmentation of APIs - all over again?</q>
+
+<a>I think Microsoft is doing the right thing for the graphics API. There are many developers who always want to program through the API - either through DirectX these days or a software renderer in the past. That will always be the right solution for them. It makes things easier to get stuff being rendered on-screen. If you know your resource allocation, you'll be just fine. But realistically, I think that DirectX 10 is the last DirectX graphics API that is truly relevant to developers. In the future, developers will tend to write their own renderers that will use both the CPU and the GPU - using graphics processor programming language rather than DirectX. I think we're going to get there pretty quickly.
+
+I expect that by the time of the release of the next generation of consoles, around 2012 when Microsoft comes out with the successor of the Xbox 360 and Sony comes out with the successor of the PlayStation 3, games will be running 100% on based software pipelines. Yes, some developers will still use DirectX, but at some point, DirectX just becomes a software library on top of ... you know.</a>
+
+<q>Hardware?</q>
+
+<a>GPU hardware. And you can implement DirectX entirely in software, on the CPU. DirectX software rendering always has been there.  
+
+Microsoft writes the reference rasterizer, which is a factor of 100 slower than what you really need. But it is there and shows that you can run an entire graphics pipeline in software. I think we're only few years away from that approach being faster than the conventional API approach - and we will be able to ship games that way. Just think about the Pixomatic software rendering.</a>
+
+<q>That technique was awesome.</q>
+
+<a>Yes, up to DirectX 8, we were actually able to use Pixomatic software rendering. In Unreal Tournament 2003, you could even play the game completely in software, running off the CPU. It was completely independent from whatever graphics hardware you had. It is only a matter of time before that level of performance is there in new variants of DirectX. On a quad-core CPU, you should be able to do that sort of thing again - completely software based DirectX rendering. Over time, I think that the whole graphics API will become less relevant, just like any other Microsoft API. There are hundreds of them in Windows, file handling, user interface and things like that. It is just a layer for people who don't want direct access to hardware.</a>
+
+<section>Running Linux on a GPU is not a pipe-dream</section>
+
+<q>If your vision comes true, it looks like graphics will take the best from the CPU and the GPU, with graphics hardware continuing its evolution from a fixed function pipeline into what are basically arrays of mini-processors that support almost the same data formats as floating point units on the CPU today.</q>
+
+<a>It is hard to say at what point we are going to see graphics hardware being able to understand C++ code. But data will be processed right on the GPU. Then, you are going to get the GPU's computational functionality to a point where you can - not that this is useful, but it will be a very important experiment - recompile the kernel for a GPU and actually run the Linux kernel off the GPU - running entirely by itself. Then, the boundary between the CPU and the GPU will become just a matter of performance trade-offs.</a>
+
+<q>General purpose GPUs competing with CPUs? Do you already have any idea who might win this battle?</q>
+
+<a>Hard to say at this time. Both can run any kind of code, GPUs are just much better optimized for highly parallel vector computing. CPUs are better for authorized out-of-order, branching, and operating system type of things. Once they both have a complete feature-set, things will get very interesting there. We could see the CPU pushing GPUs out of the market entirely, if the integration of highly parallel computing influences future designs. Or, we could see GPU vendors start pushing actual CPUs out of the market: Windows or any other operating system could run directly on a GPU. There are lots of possibilities.</a>
+
+<q>In some way, this is already happening in the handheld world. STMicro recently launched a chip that integrates the ATI z460 GPU a.k.a.  
+mini-Xenos [a trimmed-down version of the Xbox 360 GPU -ed]. Nvidia launched the APX2500, a system-on-a-chip product that uses an ARM11 core for CPU-type computing and an ULP GeForce for the rest of the system. Intel is talking about such SoCs for the consumer electronics segment. Will we see something similar on the desktop?</q>
+
+<a>It is unclear what these products actually are. As they become actual silicon, we will be able to see how far the miniaturization can go.</a>
+
+<q>There are signs that a whole new market segment might reveal itself, enabling 3D performance with CPU-type computing on handheld-type devices, which so far provided pathetic a 3D GUI experience for users.</q>
+
+<a>Well, if we look at the iPhone, we can see that these low-power devices can actually be very important part of our lives. Now you can really browse the Web on a handheld - I mean you can actually browse the web in a decent fashion. Look at my Blackberry [8700]. There is a crappy little web browser thrown in to provide the simple functionality and it just sucks. It is a horrible web experience. Apple's version is really good, it is usable. The video player and the YouTube integration are excellent. I definitely see those devices becoming a much more important part of our lives. For that reason, we need more and more compute power inside the same size package.</a>
+
+<q>But realistically, will it ever be possible to run a high-end game on a handheld platform?</q>
+
+<a>The way people go online and do things replaced a lot of things we used to do on our PCs, but not everything, of course. You don't use your handheld and write a document in word processing software. You don't spend hours playing a game on a handheld because the battery won't last. And these are tiny screens. Why would you play on a handheld, if you can play on large screens and enjoy the full experience of a game?
+
+These [small] devices are important and I feel they will grow over time, as processing capabilities increase. I believe that the next generation of mobile gaming will be quite impressive. I think we're only few years away from really good user experience [in all segments]. If you look at the PlayStation Portable or Nintendo's handhelds, they are so low-end and so low-performance that they are just not interesting to mainstream game developers. But with another generation or two, they will have enough power to run a scaled down version of a high-end game console or PC game. Reduce the level of detail, lower the resolution and you will get the same game running on these devices.</a>
+
+<q>Then, it would not be a far-fetched call to see games based on next-gen engines such as Unreal Engine 4, even 4.5 or 5 or something like that, running on a device that fits in your pocket?</q>
+
+<a>That is the great thing about this scalable factor. On a 320x200 pixel screen, you have 30 times less pixels than on the highest-end PC monitor that is currently available. When you look at the performance figures, the actual scale is within reach. It should be possible to create a compelling next-gen experience on consoles, PC and handhelds.</a>
+
+<desc>In the final part of our our interview, we wrap up with and outlook into the future of video gaming. What will be the next generation of game consoles bring? What can we expect from the next Unreal game engine? What about all those fancy brain-computer-interface devices and future game controllers that will allow you to control your character in a game with your body, rather than with a controller in your hand? Join us listening to Sweeney's answers to those questions and get insight in how video games will change over the course of the next four, five years.</desc>
+
+<section>Unreal Engine 4.0 aims at next-gen console war</section>
+
+<q>Throughout GDC, there have been several companies that were presenting game controllers that are so-called brain-computer interfaces. A while ago, I used OCZ's NIA device in Unreal Tournament 2004 and was blown away by the usability of that device. How do you see the interface between us, humans, and the computer evolving, given the fact that Nintendo has seen such a huge success with its Wii-mote?</q>
+
+<a>I think the key challenge here is to look at all the cool things engineers are developing and identify which ones are just gimmicks, which ones are cool ideas that might benefit one part of the market, but aren't fundamental changes and which ones are things that really change the way we work with computing interfaces. I still think that motion controllers, such as the Wii controller, have a limited purpose, sort of a gimmicky thing. Standing there and holding a bunch of devices and moving them around wildly is great for party games, but I don't think that will fundamentally change the way people interact with computers. Humans are tactile beings, so things such as touchscreens fundamentally improve the user interface.</a>
+
+<q>That brings us back to the iPhone, which we talked about earlier. Apple appears to have made a lot of progress in this area.</q>
+
+<a>I agree. You are not just bringing up the map on the screen, but you move it with your fingers, you zoom in and zoom out. It's incredible that nobody thought of that earlier. With 3D editing tools, the touchscreen approach would be an excellent thing. You can grab vertices and drag them in different directions. A touchscreen could really improve and change things. I think that we might see that technology migrating to Maya. It is hard to tell how exactly that will pan out, but I see that as a very big improvement in computing versus the motion stuff. These are just neat toys.
+
+The other big direction is head tracing - cameras built into consoles. They watch you and detect, for example, your arm movement. It is just more natural, because it is somewhat annoying to hold a bunch of wired plastic do-adds, wireless things you have to pick up and recharge them every once in a while. To me, it's more compelling to just use free-form movement and have computers recognize your gestures.</a>
+
+<q>You mean behavior analysis?</q>
+
+<a>Yes, but I do not know how that will work out. We humans don't have great motion control, when it comes to moving arms around in free space, while we have astonishing control over fine movement - when we touch an object, for example. If you look at people, what we are optimized for is manipulating objects. That is what separates us from animals: We can manipulate with toys and bulletins and interact with complicated objects. Anything that is useful in that space is going to give computers precise tactile feedback and enable us to be in touch with objects. That said, it is very hard to say how the user interface will evolve. I am not an expert in those areas.</a>
+
+<q>At the end of the day, we all go back to basics at some point. According to one of those industry legends, Bill Gates and Microsoft engineers were roaming inside Apple, at a time when these two companies were friends. Gates asked Mac engineers how they managed to develop hardware to control the mouse movement. It turned out that Apple's engineers wrote software to control it. When we take a look at input devices of today, it seems that we are repeating the same thing what happened early 1980s.</q>
+
+<a>Five years into development of personal computers we exhausted all the major ideas such as keyboard, mouse, joystick and gamepad. But then you see something like Apple's multi-touch, or you see that YouTube video on a big screen based interface where people walk around and just start manipulating objects that are projected there. That is new stuff, that's entirely new. No one really has done that before and it is clear that there are still a lot of major ideas that haven't surfaced yet. Yet. As the technology improves, one thing is certain: As you increase complexity of the user interface, you need more processing power.</a>
+
+<section>The development of Unreal Engine 4 has begun </section>
+
+<q>Let's talk about your game visions for the future and the next Unreal Engine? Where is EPIC going with the Unreal Engine 3.5 and 4.0?</q>
+
+<a>The Unreal engine is really tied to a console cycle. We will continue to improve Unreal Engine 3 and add significant new features through the end of this console cycle. So, it is normal to expect that we will add new stuff in 2011 and 2012. We're shipping Gears of War now; we're just showing the next bunch of major tech upgrades such as soft-body physics, destructible environments and crowds. There is a long life ahead for Unreal Engine 3. Version 4 will exclusively target the next console generation, Microsoft's successor for the Xbox 360, Sony's successor for the Playstation 3 - and if Nintendo ships a machine with similar hardware specs, then that also. PCs will follow after that.
+
+Also, we continuously work on transitions, when we go through large portions of the engine. We completely throw out parts and create large subsystems from the ground up, while we are reusing some things that are still valid.</a>
+
+<q>Like ...?</q>
+
+<a>The Internet bandwidth. In five years, the bandwidth isn't going to be more than 5-6 times higher than it is today. So the network code we have in the engine now will stay the same. Our tools are still valid, but we will rewrite large sections of the engine around it, as the new hardware develops.</a>
+
+<q>What part of the engine will need a completely new development?</q>
+
+<a>Our biggest challenge will be scaling to lots and lots of cores. UE3 uses functional subdivision and paths, so we have the rendering thread that handles all in-game rendering. We have the gameplay thread that handles all game-plays and uses AI. We have some hopper threads for physics. We scale very well from dual-core to quad-core, and actually you can see a significant performance increase when you run UT3 on a quad-core when compared to a dual-core system.
+
+Down the road, we will have tens of processing cores to deal with and we need much, much finer grain task-parallelism in order to avoid being burdened by single-threaded code. That, of course, requires us to rewrite very large portions of the engine. We are replacing our scripting system with something completely new, a highly-threadable system. We're also replacing the rendering engine with something that can scale to much smaller rendering tasks, in- and out-of-order threads. There is a lot of work to do.</a>
+
+<q>You already have started working on Unreal Engine 4.0?</q>
+
+<a>We have a small Research & Development effort dedicated to the Unreal Engine 4. Basically, it is just me, but that team will be ramping up to three to four engineers by the end of this year - and even more one year after that. In some way, we resemble a hardware company with our generational development of technology. We are going to have a team developing Unreal Engine 3 for years to come and a team ramping up on Unreal Engine 4. And then, as the next-gen transition begins, we will be moving everybody to that. We actually are doing parallel development for multiple generations concurrently.</a>
+
+<q>Stepping back, what do you see as the most significant technology trends these days?</q>
+
+<a>When it comes to the PC, Intel will implement lots of extensions into the CPU and Nvidia will integrate many extensions into the GPU by the time next-gen consoles begin to surface. We are going to see some CPU cores that will deal with gameplay logic, some GPU stuff that will run general computing...  and two different compilers. One for the GPU and one for the CPU. The result will be a reduction of our dependence on bloated middleware that slows things down, shielding the real functionality of the devices.
+
+It would be great to be able to write code for one massively multi-core device that does both general and graphics computation in the system. One programming language, one set of tools, one development environment - just one paradigm for the whole thing: Large scale multi-core computing. If you extract Moore's Law, you see that with the number of cores that Microsoft put in Xbox 360, it is clear that around 2010 - at the beginning of the next decade - you can put tens of CPU cores on one processor chip and you will have a perfectly usable uniform computing environment. That time will be interesting for graphics as well.
+
+At that time, we will have a physics engine that runs on a computing device, we will have a software renderer that will be able to do far more features that you can do in DirectX as a result of having general computation functionality. I think that will really change the world. That can happen as soon as next console transition begins, and it brings a lot of economic benefits there, especially if you look at the world of consoles or the world of handhelds. You have one non-commodity computing chip; it is hooked up directly to memory. We have an opportunity to economize the system and provide entirely new levels of computing performance and capabilities.</a>
+
+<q>Let's close the circle and return to the beginning of our interview: What does that mean for the PC?</q>
+
+<a>Well, that trend could also migrate to the PC, of course. I can definitely see that at the beginning of next decade: PCs will ship with a usable level of graphics functionality without having any sort of graphics hardware in the system. Your graphics hardware will be a VGA and a HDMI-out connector and that's about it. The same thing happened with sound. All the time, you had these high-end, ultra-expensive sound cards and different levels of sound acceleration. And then look at what happened when Vista arrived. Poof! It is 100% software based and with one operating system, all that hardware acceleration was gone. We now have software sound and all that hardware is now used for digital to analog conversion. That is a great approach, because now there is a lot more flexibility: Now you have sound algorithms, treble control, you we got rid of all the hardware incompatibility issues that were the result of complicated fixed-function hardware and poorly written drivers. Things are much cleaner now and much more economical.
+
+Simplifying the development process and making more efficient computer hardware is going to be the next big step for us all.</a>
+
+<q>Thank you for your time.</q>

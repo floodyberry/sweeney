@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Virtual Machines, Language Runtimes, and the Future of Objective C | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1350" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Virtual Machines, Language Runtimes, and the Future of Objective C</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >In a series <a href="http://arstechnica.com/staff/fatbits.ars/2005/9/27/1372">of</a> <a href="http://arstechnica.com/staff/fatbits.ars/2005/9/30/1393">three</a> <a href="http://arstechnica.com/staff/fatbits.ars/2005/10/3/1412">articles</a> last year, John Siracusa at arstechnica argued that Apple has an impending crisis on its hands because it doesn't have "A memory-managed language and API" like Java or Microsoft's CLR.  My question is less about whether this is true, and more about what it means to be "managed".</p>
+<p >Specifically, there seems an implicit assumption that Java or .NET type architectures represent what "safe", garbaged-collected systems should look like.</p>
+<p >In the case of Apple, couldn't some new, hypothetical system language(s) be based on the existing Objective C runtime?  Or more generally, do the runtimes for systems written in lower-level languages like GObject/GTK or Objective C (if garbage collected) provide enough services and metadata to build more dynamic languages on top of them, and still provide object compatibility-- to not require an FFI to communicate with the older existing framework?</p>
+<p >If that were in fact the case, wouldn't it be possible to gradually turn systems like Objective-C/Cocoa or C/GTK into something closer to Smalltalk or (god forbid) Java?</p> </div>
+ <div class="links">By <a href="user/2820" title="View user profile.">akopa</a> at 03/12/2006 - 09:43 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1352" title="Contract Verification and Structural Subtyping of Interfaces">previous forum topic</a> | <a href="node/1349" title="Choosing Conferences">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1350" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 1593 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1350" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1350" />
+<a id="comment-15344"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1350#comment-15344" class="active">A real problem?</a></h3>
+ <div class="content"><p >This isn't a real problem.  Both Java and .NET are available on Mac.  And if they weren't, it wouldn't really matter because major multiplatform applications simply aren't written in Java or .NET (by applications, I mean applications - not servelets, scripts, in-house database front-ends, etc which are plentiful on Java and C#).</p>
+<p >Why aren't major applications written in Java or .NET?  Because Java, the Sun Vendor Agenda Language, is seen as the bastard stepchild language on Windows.  And .NET, the Microsoft Vendor Agenda Language, is avoided by people writing multiplatform applications.  So, ultimately, everyone avoids using Vendor Agenda Languages for major applications.</p>
+<p >So it really doesn't matter.</p>
+<p >Also bear in mind that the implicit memory management of Java and C# provide a productivity gain for developers, of something like 20-30%.  This isn't anything fundamental, and if porting a .NET language to Linux or Mac turns out to be a major effort, then that 20-30% can easily be lost.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Mon, 03/13/2006 - 00:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-15348"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1350#comment-15348" class="active">Not Only That...</a></h3>
+ <div class="content"><p >...but the 800 lbs. gorilla here that keeps getting glossed over is OS API bindings. There are plenty of worthwhile "memory-managed" languages, whether you believe Java and C# are among them or not. But without comprehensive, high-quality bindings to the various platforms' APIs, particularly for building GUIs, they won't see mainstream commercial use. Contrast, for example, the quality of anything done for Mac OS X with <a href="http://pyobjc.sourceforge.net">PyObjC</a> vs. Java + even <a href="http://www.eclipse.org/swt/">SWT</a>, nevermind Swing.</p>
+<p >So in some sense, what's being asked for is a return to the days of the Lisp Machine, when the entire OS, from device drivers to UI, was in something other than C or assembly language. That's a thought that I can get behind, but who knows if/when we'll ever see the like commercially again? In the meantime, we rely on memory-managed languages to offer high-quality FFIs, and on someone to use those FFIs to provide high-quality wrappers for our platforms of choice.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Mon, 03/13/2006 - 01:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-15359"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1350#comment-15359" class="active">major multiplatform applications?</a></h3>
+ <div class="content"><p >Please provide some examples of what you mean by "major multiplatform applications".</p></div>
+ <div class="links">By <a href="user/674" title="View user profile.">Isaac Gouy</a> at Mon, 03/13/2006 - 15:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-15347"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1350#comment-15347" class="active">LLVM?</a></h3>
+ <div class="content"><p >I'm not sure whether it's a relevant point, but several of the main developers of <a href="http://llvm.org">LLVM</a>, including Chris Lattner, now work at Apple.  It appears that <a href="http://llvm.cs.uiuc.edu/docs/GarbageCollection.html">LLVM has decent support for GC.</a>.</p></div>
+ <div class="links">By <a href="user/499" title="View user profile.">scruzia</a> at Mon, 03/13/2006 - 00:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-15355"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1350#comment-15355" class="active">Non-issue</a></h3>
+ <div class="content"><p >From the Apple GCC manpage:</p>
+<pre >
+       -fobjc-gc
+           Enable garbage collection (GC) for Objective-C objects.  The
+           resulting binary can only be used on Mac OS X 10.5 (Leopard) and
+           later systems, due to additional functionality needed in the (NeXT)
+           Objective-C runtime.
+
+           When the -fobjc-gc switch is specified, the compiler will replace
+           assignments to instance variables (ivars) and to certain kinds of
+           pointers to Objective-C object instances with calls to interceptor
+           functions provided by the runtime garbage collector.  Two type
+           qualifiers, "__strong" and "__weak", also become available.  The
+           "__strong" qualifier may be used to indicate that assignments to
+           variables of this type should generate a GC interceptor call, e.g.:
+
+                     __strong void *p;  // assignments to 'p' will have intercep
+tor calls
+                     int *q;            // assignments to 'q' ordinarly will not
+                       ...
+                     (__strong int *)q = 0;   // this assignment will call an in
+terceptor
+
+           Conversely, the "__weak" type qualifier may be used to suppress
+           interceptor call generation:
+
+                     __weak id q;      // assignments to 'q' will not have inter
+ceptor calls
+                     id p;             // assignments to 'p' will have intercept
+or calls
+                       ...
+                     (__weak id)p = 0;   // suppress interceptor call for this a
+ssignment
+</pre><br ></div>
+ <div class="links">By <a href="user/46" title="View user profile.">Brian Rice</a> at Mon, 03/13/2006 - 10:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-15361"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1350#comment-15361" class="active">This could be viewed as a stop-gap.</a></h3>
+ <div class="content"><p >I was aware that ObjC was getting garbage collection.  This could be viewed as a stop-gap measure, or "good-enough" for Apple. </p>
+<p >However, I was hoping to get more feedback (since I am honestly curious about this) about the object models provided by the likes of GObject, the Objective C runtime, and even Qt, and their suitablity in supporting higher level languages.  Can that be bolted on, or does it have to be designed in in the first place?</p></div>
+ <div class="links">By <a href="user/2820" title="View user profile.">akopa</a> at Mon, 03/13/2006 - 16:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

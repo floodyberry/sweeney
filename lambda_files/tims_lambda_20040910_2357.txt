@@ -1,0 +1,10 @@
+http://lambda-the-ultimate.org/node/228
+http://lambda-the-ultimate.org/node/228#comment-1834
+1048804
+Apple Flunks First Grade Math
+rational bignums as the default
+<p>Couldn't agree more!  Floating-point math is a useful but very quirky engineering tool and ought not be in such plain view of ordinary users.</p><p>
+
+I'd definitely like to see, in future languages, data types for integers, natural numbers, bounded natural numbers, and rational numbers that are in the obvious subtype relationship: 0..0 &lt;: 0..1 &lt;: 0..n &lt;: nat &lt;: int &lt;: rat -- and that obey all of the laws of arithmetic.  You know, those laws the ancient Greeks invented a few millenia ago, not the fixed-width twos-complement approximation that CPU's use internally.</p><p>
+
+My experience is that this can be done without significant performance compromises.  For example, in Unreal, about 95% of the occurances of integer math are used for indexing into arrays; the bounded natural number types can always be safely used there and fit into traditional operations.  The key realization here is that any number that can safely index into an array that exists in memory can be stuffed losslessly into the machine word size without sacrificing performance in all reasonable cases where real bignums aren't required.  This is a decision a compiler ought to make rather than forcing programmers to decide, as C# does, "Which one of the language's 12(!) built-in numeric data types do I want to use in THIS situation?"</p>

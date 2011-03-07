@@ -1,0 +1,40 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/15df38d3ffd117c5/6ec5a8de1a837646?lnk=st&rnum=35&hl=en#6ec5a8de1a837646
+[comp.lang.functional] Re: Is Strictness a Hack?
+[blockquote]I *think* I understand and agree with you when you say that the point of controversy is _|_ rather than lazy vs strict, but I am unclear why "all values are type-theoretically equal" in the presence of _|_.  Can you please elaborate?[/blockquote]
+
+This isn't something you run into when writing and running programs in languages like Haskell.  Rather, it comes up when trying to prove properties about them in a manner independent of the evaluation rules.  If a language admits _|_, then you can write a function that polymorphically "returns" an element of any type (here, I mean it claims to return such a thing, but actually never returns).  For example, if unbounded recursion is allowed, then you can write:
+
+[code]f(t:type):t = f(t)[/code]
+
+Given that, you can "produce" an element of an uninhabited type. Specifically, if t is the type of propositions that a=b, then f(t) is a proof that a=b, for any possible a and b.  So, when a type system allows _|_, you can prove anything.
+
+[blockquote][blockquote]It would be good for future languages that aspire to be pure to allow a clear distinction between expressions that admit _|_ and expressions that disallow it.  The former can be used in propositional proofs, proof-carrying-code, and other metamathematical formulations regardless of evaluation strategy, while the later are necessary for many mainstream programming tasks.[/blockquote] Do you mean to exchange "former" and "latter" in the second sentence above?  Assuming so, I believe Daniel Wang and I both agree with you.[/blockquote]
+
+Oops, yes.
+
+[blockquote]I also believe Daniel Wang and I both agree with the rest of your post, except there seems to be a difference in terminology definition when you say that
+
+[blockquote]Effects are not monads and _|_ is not an effect.[/blockquote]
+
+It is quite clear to me that _|_ is a monad (namely the monad taking each type x to x + unit).  The term "effect" is rather vague, and while I am happy to take monads to be a technical approximation to the intuitive notion, I am also happy to entertain alternative definitions. Can you explain yours a bit more?[/blockquote]
+
+Well, you could model the notion of "a term that is either _|_ or a pure value" using Haskell's Maybe monad.  This is similar to the notion of _|_ that comes up when considering functions that throw exceptions (without associated values) that can be caught upstream in a program, as some parser combinators do.
+
+But, _|_ comes up in other situations where Maybe doesn't capture the essence of what's happening.  Consider the type of (potentially infinite recursive) functions from integers to integers, for example. If you model these as f :: int->Maybe int, then you would expect to be able to write code like
+
+[code]
+a = f 7
+b = case a of
+    Nothing -> ..
+    Maybe x -> ..
+[/code]
+
+Here, we've tried to hide _|_ (the low-level potential for no-return) in the Maybe monad.  We would expect "f" to be a pure function that is certain to return in finite time, and to either return a value or a Nothing tag.  How do you generate such an "f" from a traditional recursive function definition?  That would require solving the halting problem.
+
+Of course, that's not possible, so any language that tries to hide _|_ in a monad like Maybe is either impossible to implement, or would have to be incapable of expressing general recursion.
+
+BUT:
+
+If you were to modify the Haskell compiler, you could still use such a monad to encapsulate terms that potentially evaluate to _|_.  You'd probably just do this with a newtype aliasing the identity monad, and only allowing calling of generally recursive functions using that monad.
+
+This situation would be similar to the RefMonad parts of IO and ST. There is some consensus (still unproven) that it's not possible to actually implement typesafe references directly with Haskell monads. But monads do provide a clean way of exposing built-in runtime features like this and limiting the scope where they can be used. 

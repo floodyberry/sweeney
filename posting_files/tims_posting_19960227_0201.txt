@@ -1,0 +1,5 @@
+http://groups.google.com/group/comp.graphics.algorithms/browse_thread/thread/4f3b3a5035052b86/633e60cf48517582?lnk=st&rnum=87&hl=en#633e60cf48517582
+[comp.graphics.algorithms] Re: HYPERBOLIC MAPPING, complete explanation
+This is a very clever trick.  I was working on a method similar to this a few months ago, but dropped it after a few hours of experimentation because of temporal problems.  It produced great stills, but moving textures jiggled.  I might have been missing something, though.  Have you run your texture mapper at realtime speeds?  Does it have this aliasing problem?
+
+-Tim 

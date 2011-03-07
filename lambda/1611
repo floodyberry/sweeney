@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Socially Responsive, Environmentally Friendly Logic | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1611" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Socially Responsive, Environmentally Friendly Logic</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p ><a href="http://web.comlab.ox.ac.uk/oucl/work/samson.abramsky/sandu.pdf">Socially Responsive, Environmentally Friendly Logic</a><br >
+by Samson Abramsky</p>
+<blockquote ><p >
+We consider the following questions: What kind of logic has a natural semantics in<br >
+multi-player (rather than 2-player) games? How can we express branching quantifiers, and<br >
+other partial-information constructs, with a properly compositional syntax and semantics?<br >
+We develop a logic in answer to these questions, with a formal semantics based on multiple<br >
+concurrent strategies, formalized as closure operators on Kahn-Plotkin concrete domains.<br >
+Partial information constraints are represented as co-closure operators. We address the<br >
+syntactic issues by treating syntactic constituents, including quantifiers, as arrows in a<br >
+category, with arities and co-arities. This enables a fully compositional account of a wide<br >
+range of features in a multi-agent, concurrent setting, including IF-style quantifiers.
+</p></blockquote>
+<p >This paper seems to unify multiple interesting directions - logic, game semantics, concurrent constraint programming (and concurrent programming in general).</p>
+<p >At the same time it remains very accessible, without overwhelming amount of math, so can be hopefully useful not only for academics. I, for one, was waiting for exactly this kind of paper for two years (and my interest is very practical).</p>
+<p >Multiplayer Curry-Howard correspondence, anyone? Or Curry-Howard for web services?</p> </div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at 07/10/2006 - 17:28 | <a href="taxonomy/term/22">Category Theory</a> | <a href="taxonomy/term/13">Logic/Declarative</a> | <a href="taxonomy/term/29">Semantics</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1611" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2198 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1611" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1611" />
+<a id="comment-19550"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1611#comment-19550" class="active">Some links</a></h3>
+ <div class="content"><p >See <a href="http://lambda-the-ultimate.org/classic/message9112.html">A Revolution in Logic?</a> for a discussion on IF, and <a href="http://lambda-the-ultimate.org/node/204">Introduction to computability logic</a> for an introduction to another project that builds logic of computation.</p>
+<p >[on edit: note that IF paper suggests a way of living with G&ouml;del's first incompleteness<br >
+theorem, thus winning my simpathy for IF itself and any adopters of it]</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Mon, 07/10/2006 - 17:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19553"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1611#comment-19553" class="active">Please expand short, rarely-used acronyms ...</a></h3>
+ <div class="content"><p >... especially when they're ambiguous.  Last time "I.F." showed up on LtU, it meant <a href="http://lambda-the-ultimate.org/node/1554">"interactive fiction"</a>.  This time, it took a couple of clicks to locate the expansion as "Independence-Friendly".  Thanks for the link, Andris.</p></div>
+ <div class="links">By <a href="user/499" title="View user profile.">scruzia</a> at Mon, 07/10/2006 - 19:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-19555"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1611#comment-19555" class="active">What does it do for you?</a></h3>
+ <div class="content"><blockquote ><p >
+I, for one, was waiting for exactly this kind of paper for two years (and my interest is very practical).
+</p></blockquote>
+<p >I'd be interested to hear more about your practical interests in this style of logic, and what it does for you that you find lacking in other formalisms.</p>
+<p >Ever since that "Revolution in Logic?" thread, I've been trying to determine if there is something deep going on here or if it is just another formulation of certain substructural logics and proof-theoretic ideas. (Abramsky's comment about the relationship with Linear Logic and the surprising treatment of implication are the kinds of things that lead me in this direction.)</p>
+<p >Understanding why it works for you might help me work this out for myself.</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Mon, 07/10/2006 - 20:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19562"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1611#comment-19562" class="active">It does not work yet</a></h3>
+ <div class="content"><blockquote ><p >
+Understanding why it works for you might help me work this out for myself.
+</p></blockquote>
+<p >I didn't put it into good use yet, but I have some ideas. Prepare for a brain dump.</p>
+<p >On my day job I worked for several years on BPM and similar topics, and the state of the art amazed me (and not because of its great achievements). Abundance of standards for definition of business processes, orchestrations, and choreography is probably even more pronounced than in other parts of IT industry. I tried to use some formalism instead of standard, and found that pi and join calculi are far from satisfying requirements. As strange as it may sound I needed types, even more - I needed contracts or protocols. I played with linear logic a bit (Curry-Howard to the rescue). It seemed almost the right thing. Then I stumbled upon <a href="http://www.csc.villanova.edu/~japaridz/study.html">computational logic</a> (CL). At about the same time I got interested with the notion of computability, Turing machines of all sorts, G&ouml;del's theorems, ..., so CL looked very interesting. Another attractive property of CL was its approach of starting from semantic (unlike linear logic). I had some sentiments about CL not covering multiplayer games, as that would be handy in business cases.</p>
+<p >Having said that, I plan to try and extend the ideas from OP paper a bit (as far as non-academic can :) ). One thing is reflection and interpretation (particularly reflective towers) - how can it be described by game semantics? Who are the players?<br >
+Another thing is not of practical interest for me, but more of a hobby (though it might help me to understand distributed computing) - what constraints on the structure of the game make it compatible with relativistic physics, thus yielding the notion of relativistic computability?<br >
+The last thing is quite minor, but looks useful for practice: I consider to replace permutation of roles by a function (probably not even injective) of role mapping for purpose of modularity and reuse. The question is, how this would affect the properties of the logic?<br >
+[on edit: almost forgot about this important feature - cancellation and "garbage collection" of cancelled (irrelevant) moves]</p>
+<p >As you can see, my interest, while avid, is based on very raw ideas.<br >
+Hope some of them might be interesting to somebody else.</p>
+<p >PS: I speculate that at least couple of LtU readers might find the OP ideas useful for game development :)</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Tue, 07/11/2006 - 06:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-19588"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1611#comment-19588" class="active">Weird</a></h3>
+ <div class="content"><p >I so don't see what this has to do with anything.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 07/11/2006 - 23:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19594"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1611#comment-19594" class="active">Rough Guesses</a></h3>
+ <div class="content"><p >I suspect, but am not competent to prove, that this is related to Modal Logics, particularly those discussed in <a href="http://www.amazon.com/gp/product/0262562006/qid=1152683620/sr=2-1/ref=pd_bbs_b_2_1/104-0619079-4895102?s=books&amp;v=glance&amp;n=283155">Reasoning About Knowledge</a>. If so, there are several potential application domains, e.g. economics and distributed systems generally. I'm also reminded of <a href="http://philosophy.eldoc.ub.rug.nl/root/BKOOI/Two-envelopeproblem/">the two-envelope problem</a>, about which these authors say "We conclude that the two-envelope problem does not allow a satisfactory solution," which seems to me to be addressed by Pollock in <a href="http://oscarhome.soc-sci.arizona.edu/ftp/publications.html">Thinking about Acting: Logical Foundations for Rational Decision Making</a>, where he notes:</p>
+<blockquote ><p >
+In chapter eight, it is argued first that actions cannot be evaluated in terms of their expected values as ordinarily defined, because that does not take account of the fact that a cognizer may be unable to perform an action, and may even be unable to try to perform it. An alternative notion of "expected utility" is defined to be used in place of expected values. In chapter nine it is argued that individual actions cannot be the proper objects of decision-theoretic evaluation. We must instead choose plans, and select actions indirectly on the grounds that they are prescribed by the plans we adopt. However, our objective cannot be to find plans with maximal expected utilities. Plans cannot be meaningfully compared in that way.
+</p></blockquote>
+<p >Of course, it's worth noting the last comment in the paper above:</p>
+<blockquote ><p >
+The logic and semantics we have developed appears to flow from very natural intuitions.<br >
+These should be supported by a range of convincing examples and applications.
+</p></blockquote>
+<p >Yes. Yes, they should.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Wed, 07/12/2006 - 05:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-19605"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1611#comment-19605" class="active">WOT</a></h3>
+ <div class="content"><p >Way of topic: reading the title, I guess it should have been posted to the Community Enforcement Discussion thread.</p></div>
+ <div class="links">By <a href="user/1360" title="View user profile.">marco</a> at Wed, 07/12/2006 - 20:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-19606"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1611#comment-19606" class="active">Me too...</a></h3>
+ <div class="content"><p >Me too...</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Wed, 07/12/2006 - 20:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-19613"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1611#comment-19613" class="active">Ideas?</a></h3>
+ <div class="content"><p >Is it criticism of the title, or of its appearance on the front page?</p>
+<p >Do you suggest I change the title of the paper? :)</p>
+<p >Just in case somebody have responded without reading at least the first page of the paper - it IS about logic, game semantics, and concurrency. And some category theory is used, as well.<br >
+It just happens to have a bit too frivolous title.</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Thu, 07/13/2006 - 08:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-19614"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1611#comment-19614" class="active">No, no. It just tells you</a></h3>
+ <div class="content"><p >No, no. It just tells you something about the state LtU at the moment, that the title was a bit confusing.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Thu, 07/13/2006 - 09:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

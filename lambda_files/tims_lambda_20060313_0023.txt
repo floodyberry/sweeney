@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/1350
+http://lambda-the-ultimate.org/node/1350#comment-15344
+1049926
+Virtual Machines, Language Runtimes, and the Future of Objective C
+A real problem?
+<p>This isn't a real problem.  Both Java and .NET are available on Mac.  And if they weren't, it wouldn't really matter because major multiplatform applications simply aren't written in Java or .NET (by applications, I mean applications - not servelets, scripts, in-house database front-ends, etc which are plentiful on Java and C#).
+</p><p>Why aren't major applications written in Java or .NET?  Because Java, the Sun Vendor Agenda Language, is seen as the bastard stepchild language on Windows.  And .NET, the Microsoft Vendor Agenda Language, is avoided by people writing multiplatform applications.  So, ultimately, everyone avoids using Vendor Agenda Languages for major applications.
+</p><p>So it really doesn't matter.
+</p><p>Also bear in mind that the implicit memory management of Java and C# provide a productivity gain for developers, of something like 20-30%.  This isn't anything fundamental, and if porting a .NET language to Linux or Mac turns out to be a major effort, then that 20-30% can easily be lost.</p>

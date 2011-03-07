@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/1760
+http://lambda-the-ultimate.org/node/1760#comment-21464
+1050336
+A Very Modal Model of a Modern, Major, General Type System
+Quantifiers
+<p>This is the first paper I've seen that explicitly defines universal quantifiers and existential quantifiers as dependent type intersections and unions indexed over the quantifier's domain type.  (Is this fact obvious to type theorists? It took me quite a lot of stumbling to recognize the connection myself.) There are a lot of other interesting things to be found in this paper.  It's been clear to me for a while that implementing proof-carrying code on top of mainstream (powerful and complex) programming languages will require something quite a lot like the system described here.</p>

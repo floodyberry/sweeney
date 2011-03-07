@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/1588
+http://lambda-the-ultimate.org/node/1588#comment-19164
+1050164
+Securing the .NET Programming Model
+Full abstraction in multi-language runtimes
+<p>Full abstraction would be a difficult feat to achieve in a multi-language runtime.  For example, languages in which the parametricity theorem holds require an additional set of abstraction properties.  What about a language with abstraction properties based on dependent types?  Proof carrying code?  Many features unique to certain languages would require additional CLR-level support to maintain full abstraction, so much that this doesn't seem a reasonable property to expect in a multi-language runtime.
+</p><p>Of course, since C# is the cannonical language of CLR, it makes sense to tighten the system to the point where full abstraction does hold for C#, without expecting this of other languages implemented on top of CLR.
+</p><p>For example, if you were going to build a serious proof-carrying code framework to implement further degrees of security, you would expect the proofs to be checked and the abstraction properties to hold at runtime in some higher-level translator from your language to CLR, rather than expecting them to actually hold in CLR.
+</p><p>Thus CLR may eventually prove "too tight" for high-performance languages that employ proofs and more advanced type systems, since the source language can often eliminate array out-of-bounds checks, null pointer checks, and implicitly thread-parallelize code, while the CLR itself cannot and thus incurs runtime penalties.  But this isn't so much a complaint about CLR (which seems to be exactly what it should be), but a statement that it's not the last language runtime the world will ever need.</p>

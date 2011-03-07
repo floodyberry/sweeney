@@ -1,0 +1,57 @@
+http://lists.tunes.org/archives/gclist/1999-July/001634.html
+[gclist] Unreal
+[blockquote][blockquote]My script language maintains class "meta-data" listing all variables and their references, so it is a simple process to determine where object references reside in other objects.[/blockquote] To satisfy the curious (and to cut down on suggestions about things you already know about), it would be interesting to tell the list from which source you drew your meta-objects; for instance, CLOS (e.g. _Art of the Meta-Object Protocol_) or Smalltalk or one of its variants, like the late lamented Actor from Whitewater which provided Borland (nee Inprise) with ObjectWindows.[/blockquote]
+
+Actually, the way UnrealScript handles "metaclass data" is very cool!  When I saw the Java language spec, I thought their handle of metaclass data was a big hack, i.e. "Let's define a bunch of fixed-length data structures in the .class file to describe the contents of this object".  So, Java is a beautiful object-oriented language, that is stored in a great contradiction of hardcoded "C" style data structures.
+
+In UnrealScript, each unique class is described in a unique object of class "UClass".  The UClass contains the name of the class, a packaging info, a list of all functions, all consts, all variables, etc.
+
+Functions are described by UFunction objects.
+
+Variables are described by UProperty objects.  There are specific UProperty objects for various data types:
+
+UIntProperty (a 32-bit integer variable)
+UFloatProperty (a 32-bit floating point value)
+UStringProperty (a variable length string -- I treat these as variables, *not* references to objects like Java does).
+UReferenceProperty (a reference to an object).
+
+In addition, UProperties can be parameterized.  For example, a fixed length array of integers of is parameterized by a UFixedArrayProperty object that contains a UIntProperty object.  I plan to extend this to constrained generic types (like C++ templates) for our next project.
+
+This ends up naturally exposing complete introspection to the language, so something like the Java reflection API isn't needed.  Just access your "class" object and its "variable" objects directly...I wish Java worked that way.
+
+But from the garbage collector's point of view, I just do a recursive mark-sweep of active objects, starting at the root.  It's like (oversimplified a bit):
+
+[code]
+MarkSweep( UObject* Obj )
+{
+	if( Obj==NULL || Obj->AlreadyMarked )
+		return;
+	Obj->AlreadyMarked = 1;
+	UClass* Cls = Obj->GetClass(); // Gets pointer to class metadata.
+	for( UProperty* Prop=Cls->FirstProperty; Prop!=NULL; Prop=Prop->Next )
+		if( Prop->IsAReferenceToObject )
+			MarkSweep( (UObject*)((BYTE*)this + Prop->Offset) );
+}
+[/code]
+
+[blockquote]Unreal definitely requires large (by general consumer standards) amounts of physical memory, and one of the questions you no doubt spend a lot of time considering is how much effort to go to to deal with the fact that the Win32 platforms do such a bad job of managing VM.[/blockquote]
+
+;-)
+
+[blockquote]I haven't done UnrealScript programming, so I'm not entirely certain quite what "compile time" means for you (as opposed to "link time" or "load time"), but... your compiler can fairly easily do "escape analysis" on code to determine what parameters passed to methods _cannot_ result in capturing a reference, since you don't permit long-lasting closures or continuation capture. In the long run, your compiler will be better at it than most humans (and it will work with existing code).[/blockquote]
+
+UnrealScript is like Java in this regard: it's based on the "open world" hypothesis: base interfaces are assumed to never change, but implementations can change and new classes can be added anywhere in the hierarchy without losing binary compatibility.
+
+So there isn't any way to tell that "the object reference I'm passing to a function won't become rooted" except by actually calling it and seeing (because you might be calling a new subclass's version of the function that does something evil).
+
+[blockquote]Are you familiar with Eiffel? While we often think about such things (handles which need immediate reclamation) in storage management terms, that's not really always appropriate. Eiffel's precondition/postcondition model puts he issue of whether e.g. a window is open or closed into a much wider realm of correctness guarantee based on preconditions and postconditions.
+
+Now, Eiffel uses a lot of static analysis to make the condition checking useful, and Eiffel doesn't have a C-like separate compilation model either. But Meyer's contract-driven model of design is a powerful one. I doubt whether your target audience would enjoy such things, but if the bulk of hat they are doing is re-using your basic UnrealScript objects (which is what I would suspect) then it may be practical.[/blockquote]
+
+I've been reading up on Eiffel a lot recently and I'm actually really excited about the "programming by contract" possibilities (please don't tell any other game programmers, they'll laugh at me!)
+
+Can you help me understand something about pre/postconditions?  I understand the Eiffel syntax, but I don't understand how they relate to the compiler: are pre/postconditions actually analyzed and/or proven by the compiler?  My C/C++ background leaves me pretty skeptical, guessing they'll just be translated into runtime assertions.  With Unreal's distribution model (10 partner companies using the engine for creating their own games, and hundreds of enthusiasts programming modifications and releasing them on the internet [check out http://www.planetunreal.com/, it's cool what users are doing nowadays]), when it comes to issues like object lifetimes and referential integrity constraints, I try to avoid making any assumptions that the language can't catch at compile-time and give you an error message about...because people are doing too much crazy stuff with the code.
+
+Thanks a lot for all the help, it's greatly appreciated!
+
+-Tim

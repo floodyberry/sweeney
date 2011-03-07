@@ -1,0 +1,34 @@
+http://groups.google.com/group/fa.haskell/browse_thread/thread/ad76cc2a78623604/7e0624dbabe2c1a9?lnk=st&rnum=17&hl=en#7e0624dbabe2c1a9
+[fa.haskell] Re: lifting functions to tuples?
+In case this is of interest, there is another novel way that a language might support liftTup in full generality.  Example code:
+
+[code]
+> LiftTup(f:function)(a:f.dom,b:f.dom)={f(a),f(b)}
+> f(x:int)=x+1
+> LiftTup(f)(3,7)
+
+{4,8}
+
+> LiftTup(caps)("Hello","Goodbye")
+
+{"HELLO","GOODBYE"}
+[/code]
+
+Here, the type system supports full set-theory-style subtyping, with functions subtyping such that a->b <: c->d iff b<:d and c<:a; an empty type "false" containing no elements, and the "function" type the type of functions with empty domain and thus a supertype of every function type. Thus "LiftTup" above takes a parameter f which may be a function of any domain and range.
+
+The "f.dom" notation extracts the (dependent) domain type of the function f, which depends on the actual function being passed.  Thus the code above is statically typecheckable, and the program, i.e. LiftTup(caps)(3,7) would fail, because "caps" is a function from strings (arrays/tuples of characters) to strings.
+
+Though, in my language, tuples are merely dependent-typed arrays of known size, which themselves are a subtype of the type of dependent-typed arrays of unknown (i.e. existentially quantified) size, which are expressed syntacticall as, i.e. []:int.  So the above can be rewritten more generally:
+
+[code]
+> Map(f:function)(a[]:dom.f)=array(i:nat<a.len)f(a)
+> Map(f)(3,7,9,12)
+
+{4,8,10,13}
+[/code]
+
+Where the "array" notation is an array lambda expression, and a.len extracts the length of an unknown-sized array.
+
+This language allows quite a bit more generality and type precision in function and data type definitions, though code tends to lack the conciseness made possible by Haskell type deduction.
+
+-Tim 

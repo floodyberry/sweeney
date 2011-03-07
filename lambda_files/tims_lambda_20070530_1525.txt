@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/2273
+http://lambda-the-ultimate.org/node/2273#comment-33671
+1050849
+&quot;Practical&quot; advantages of lazy evaluation 
+Advantages
+<p>The benefit of lazy evaluation is that it allows the language runtime to discard subexpressions that don't determine the end result of your program.  Often, when you have lots of temporary computations and conditionals, some work can be discarded this way.  As a result, lazy evaluation can sometimes reduce the combinatorial time complexity of an algorithm.
+</p><p>The drawback to lazy evaluation is that it forces the runtime to suspend the evaluation of subexpressions until it is certain that they determine the end result of your program, in order to guarantee that an unevaluated subexpression that diverges doesn't cause the program itself to diverge.  This must be done by creating thunks containing the suspended state of a subexpression.  In a garbage-collected language, this can sometimes increase the space complexity of an algorithm.
+</p><p>Lazy evaluation also increases expressiveness, as it enables you to access components of data structures out-of-order as you're initializing them, as long as you don't create any circular dependencies.
+</p><p>There are intermediate schemes such as lenient evaluation that bring some of the benefits of lazy evaluation without some of the drawbacks.</p>

@@ -1,0 +1,56 @@
+http://lambda-the-ultimate.org/classic/message6587.html
+http://lambda-the-ultimate.org/classic/message6587.html#6615
+0530875
+Python Metaclass Programming
+Re: Python Metaclass Programming
+<p>Well, I made similar design mistakes in past languages I shipped.  In UnrealScript (<a href="http://unreal.epicgames.com/unrealscript.htm">http://unreal.epicgames.com/unrealscript.htm</a>), as in Java, there is a "Class" class which stores metadata about classes; its class is also "Class", and its superclass is "Object".</p><p>
+
+I didn't know much about type theory then.  Now that I do, I recognize this model as unnatural, and think we can get MUCH better end results by exposing a real type-theoretic notion of types, and that this would only make the language more powerful and practical for everyday programming.</p><p>
+
+Here's how I look at types now:</p><p>
+
+- A type describes a set of values.  The set may be empty, finite, or infinite.  In this interpretation, the "int" type is shorthand for "the type containing ..,-1,0,1,2,..".</p><p>
+
+- A type doesn't "contain" any more information than the set of values it describes.  It's not like a record or struct type that contains member functions, member variables ("the type's name"), etc.</p><p>
+
+- Two types are equal if they describe the same set of values, unequal otherwise (full extensionality).  However, comparing two types need not be a decidable operation.</p><p>
+
+- The operations allowed on types depend on your language:</p><p>
+
+* In the most basic example, simply typed lambda calculus, there are no operations on types.  The only way that types are used is to limit the values which the compiler accepts in a certain place (for example, in a function application for a given function).  This information is statically checked at compile-time, and erased by runtime, therefore no aspects of types are visible at runtime.</p><p>
+
+* Some languages allow dynamic casts, the ability to see whether an arbitrary value, known precisely only at runtime, belogs to a certain type.  This needn't imply dynamic typing; there are constructs like "ifcast(x,value,type) then a{x} else b" which maintain static type safety in the presence of casts.  Here types, can't be completely erased, so some aspects of the type systems are exposed to the runtime.</p><p>
+
+* More advanced languages support dependent types, intersections of types, non-disjoint unions of types, testing types for inhabitance/emptyness dynamically, etc. </p><p>
+
+- It's valid to talk about subtyping in full generality.  For example, there is (at least conceptually) "the type of all integers except -3 and 7", and it's a subtype of the type of integers.</p><p>
+
+- For general purpose programming, you tend to want an empty type containing no values - you might call this "uninhabited" - note there can be only one by extensionality, and a universal type (conceptually) containing every value that is valid in the language - you might call this "object".</p><p>
+
+- For any type t, there is such a thing as "the type containing all the subtypes of t, and nothing else" (similar to the powerset from set theory).  If you have a universal type "object", then the type of all types is precisely the type of all types that are subtypes of object.  You can iterate this process to obtain "the type of all types of types" and the result is valid and non-circular.  Each iteration you're narrowing the set of values you're talking about, and each time you're just dealing with a subtype of object and nothing fancier than that.</p><p>
+
+- For sufficiently advanced type theories, we need to accept undecidable typechecking (i.e. for dependent typing in the presence of recursion, the type system is Turing-complete).  This doesn't mean that we have to accept unsafe typing, it means the compiler may have to reject some programs that are actually safe, and users may have to work around these limitations.</p><p>
+
+- It's valid to talk about functions that take types as parameters, and return types as results.  These are considered functors in stratified type systems, but if you see types as just a certain kind of value, then you only have functions, and not any special "forall" quantifiers or type-level lambdas.</p><p>
+
+- This level of generality isn't unreasonable for future languages.  For example, see McAllester's Ontic for a framework that combines most of these concepts.</p><p>
+
+- Practical programmers want metadata, reflective capabilities, the ability to mix and match open-world and closed-world programming models to fit their needs, a combination of nominal and structural typing capabilities, and a mechanism for reusing implementations (i.e. inheritance or encapsulation).  These features can all be supported in a sound type framework, but we mustn't confuse metadata and types.  Metadata is something that you want certain record-like data structures to contain, so that you can use reflective programming techniques.</p><p>
+
+Here's how I'd redesign a modern language like Java in this light:</p><p>
+
+- Java uses "object" to denote "the type of things that contain fields".  Change this name to "record", a more specific term that's generally recognized as meaning "something that contains fields".</p><p>
+
+- Java uses "int" to denote "the type of integers", and "Int" to denote "the type of integers that have been boxed up into a record".  In Java, "int" is not a subtype of "object", but "Int" is.  Ok, we blew it here.  Keep "int" as-is and eliminate "Int".  We won't need "Int".</p><p>
+
+- Add a new type "object" which, this time around, really means "the type of all objects", not just "the type of all records".  Now EVERY type is a subtype of object.  "int" is a subtype of object, "char", etc.</p><p>
+
+- "object" doesn't have any member functions or other fields (remember, it's not a record type now).  Given an object, you can't do anything with it, except try to cast it to other types.</p><p>
+
+- Expose functions as first-class language values, with proper variance rules for their parameters and return types.  Add a new base type "function", the type of all functions.  It's a subtype of objects.  Now you can pass around functions freely.</p><p>
+
+- Eliminate any thought of this C# "automatic boxing" concept.  Now we see this is a just a flawed workaround to a previous language flaw: what it's really doing is encapsulating ints (which are now objects) as records, which was only necessary then because we didn't have a real type theoretic "object" type previously, so if we wanted to pass stuff around polymorphically, we had to stick it in a record.</p><p>
+
+- Add a new "type" type, to mean "the type of all types".  "int" is a value of type "type", as is "record", "string", and so on.  Eliminate "class".</p><p>
+
+- Then, add a metadata framework to allow optionally attaching reflective metadata to records.  This could look a whole lot like the current Java class / reflection approach, but we would stop pretending that classes had something to do with types, and recognize them as optional metadata tacked onto records.</p>

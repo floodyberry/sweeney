@@ -1,0 +1,14 @@
+http://lambda-the-ultimate.org/node/1323
+http://lambda-the-ultimate.org/node/1323#comment-15346
+1049899
+Rich resource site for the programming language &quot;K&quot;
+Yikes
+<p>Yikes, ASCII art languages. From the site:
+</p><pre class="code_box">
+    ,/|\'(&amp;x)_ y
+    x[ ,/&amp;\'(&amp;x)_ y
+    sa:{x[ il:{(#x)#+\0,x}
+    {,/x+' d:{[n;f]:[n;_f[n-1;f]';f]}
+    (x,"*")[(#x)&amp;
+</pre><p>
+</p><p>The notation here does not seem particularly helpful to understanding the intention behind the code.</p>

@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/2719
+http://lambda-the-ultimate.org/node/2719#comment-40695
+1051295
+Variation of C&#039;s inline conditional 
+Conditional
+<p>I think D exposed c?:b, meaning "c? c: b".  In C++, you could also redefine "a||b" to mean "a? a: b", which agrees with the existing bool operator||(bool,bool), but naturally extends to any type that has a conversion to bool.  Also, see Icon, which does some even more interesting stuff separating conditional failure from boolean values.</p>

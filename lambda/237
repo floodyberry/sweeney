@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>A Deeper Look At Metafunctions | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F237" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>A Deeper Look At Metafunctions</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p>In this <a href="http://www.artima.com">Artima</a> article, David Abrahams and Aleksey Gurtovoy take
+<a href="http://www.artima.com/cppsource/metafunctions.html">a deeper look at metafunctions</a>, and introduce the Boost metaprogramming library.</p>
+<p>The article is an extract from the authors' forthcoming <a href="http://www.amazon.com/exec/obidos/ASIN/0321227255/">C++ Template Metaprogramming</a>.</p>
+<p>The authors' example application of C++ metafunctions is compile-time dimensional analysis. Higher order metafunctions, partial metafunction application and lazy evaluation are also discussed.</p>
+<p style="font-size: xx-small">Wouldn't an Amazon sponsored link to the book be a good idea here?</p> </div>
+ <div class="links">By <a href="user/813" title="View user profile.">Dominic Fox</a> at 09/02/2004 - 10:22 | <a href="taxonomy/term/15">Meta-Programming</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/237" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2095 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="237" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="237" />
+<a id="comment-1765"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1765" class="active">It&#039;s interesting that C++ tem</a></h3>
+ <div class="content"><p >It's interesting that C++ templates can be parameterised by values as well as types. I don't think you can do that in Haskell.</p>
+<p >You can, of course, create types that represent integers, and use classes with fundeps to represent operations. But it's a bit of a hack:</p>
+<p >data Zero;<br >
+data Succ a;</p>
+<p >class Add a b ab | a b -&gt; ab, ab a -&gt; b;<br >
+instance Add Zero a a;<br >
+instance (Add a b ab) =&gt; Add (Succ a) b (Succ ab);<br >
+etc.</p>
+<p >Anyone at Microsoft reading this? Ralf L&auml;mmel is giving a talk on doing this sort of thing in Haskell today at 3:30pm at MSR.</p></div>
+ <div class="links">By <a href="user/993" title="View user profile.">Ashley Yakeley</a> at Fri, 09/03/2004 - 07:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-1767"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1767" class="active">Templates = Lame Dependent Types</a></h3>
+ <div class="content"><p >Isn't it somewhat silly to embed a limited language with bizarre syntax into existing languages for the purpose of executing code at compile time?  Dependent types and compile-time partial evaluation provide a much more general and flexible means for doing this sort of thing.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 09/03/2004 - 17:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1769"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1769" class="active">Silliness</a></h3>
+ <div class="content"><p >It is a bit silly. It was an accident, however.</p></div>
+ <div class="links">By <a href="user/118" title="View user profile.">Jim Apple</a> at Fri, 09/03/2004 - 17:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-1772"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1772" class="active">Accident, er, Types</a></h3>
+ <div class="content">Jim Apple: <i>It is a bit silly. It was an accident, however.</i>
+<p>
+It was an accident that it's Turing-complete, not that it's a limited language with bizarre syntax for doing compile-time programming. I'm with Tim: now that the concept's been proven, in much the same fashion that Java made garbage collection (and really <em>awful</em> garbage collection at that!) acceptable to the masses, it's time for the next language that takes these lessons, among others, and does them right.</div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 09/03/2004 - 19:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-1773"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1773" class="active">Roughly my feeling</a></h3>
+ <div class="content"><p>I think, "cool that you can do this", but also, "C++ templates suck as a way of doing this" (I thought that all the way through Alexandrescu, which was a lot funnier the second time after I'd learned a bit of Scheme).</p>
+<p>So, what's a better way - or rather, of the various better ways that no doubt exist, what's a likely candidate for inclusion in the language-for-the-masses of tomorrow?</p></div>
+ <div class="links">By <a href="user/813" title="View user profile.">Dominic Fox</a> at Fri, 09/03/2004 - 20:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-1774"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1774" class="active">Not Going All The Way Into It Again, But...</a></h3>
+ <div class="content"><p ><a href="http://www.metaocaml.org">MetaOCaml</a></p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 09/03/2004 - 21:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-1776"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1776" class="active">The Tragic vs. the Comic View</a></h3>
+ <div class="content">Dominic Fox: <i>I think, "cool that you can do this", but also, "C++ templates suck as a way of doing this" (I thought that all the way through Alexandrescu, which was a lot funnier the second time after I'd learned a bit of Scheme).</i>
+<p>
+It transitions from comedy to tragedy once you know a <em>lot</em> of Scheme. It's the difference between "Godspell" and "Jesus Christ, Superstar," which I think should only be seen back-to-back. :-)</div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 09/03/2004 - 21:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-1775"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1775" class="active">Time to move on</a></h3>
+ <div class="content"><p ><em >it's time for the next language that takes these lessons, among others, and does them right.</em></p>
+<p >Agreed.</p>
+<p >Something like Lisp?</p>
+<p >Ha, ha. Seriously though, whenever I thing about that, I think about something that's "turtles all the way down," like ECC or Fw, so we can abstract over our abstractions.</p></div>
+ <div class="links">By <a href="user/118" title="View user profile.">Jim Apple</a> at Fri, 09/03/2004 - 21:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-1777"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1777" class="active">Next?</a></h3>
+ <div class="content">Jim Apple: <i>Agreed.
+<p>
+Something like Lisp?
+<p>
+Ha, ha. Seriously though, whenever I thing about that, I think about something that's "turtles all the way down," like ECC or Fw, so we can abstract over our abstractions.</i>
+<p>
+Lisp got many things significantly right. Even McCarthy has expressed his surprise that the whole parenthesis-as-syntax-and-list-representation turned out to be a feature rather than a bug, and this excellent start arrived at some kind of local maximum with Scheme's hygenic macros. Most popular languages would do well to study Scheme's results when they contemplate syntactic extension.
+<p>
+It becomes very interesting, though, to think about what some of the alternatives are. For example, see &lt;<a href="http://scala.epfl.ch/intro/targettyping.html">http://scala.epfl.ch/intro/targettyping.html</a>>, which offers an example of how Scala can create new syntax using just libraries, thanks to its support of automatic type-dependent closure generation and operators being usable in either infix or postfix contexts. My current favorite day-to-day language, O'Caml, has the camlp4 preprocessor, which can be extended with custom expanders. You end up working with actual ASTs rather than strings, which is nice.
+<p>
+But to your point about "turtles all the way down" and working with full-on ECC or F<sub>&omega;</sub>, systems that allow that kind of blend of specification/implementation do exist. I'm very keenly interested in <a href="http://www.metaprl.org">MetaPRL</a>, but other very nice-sounding candidates include <a href="http://maude.cs.uiuc.edu">Maude</a> and <a href="http://kindsoftware.com/products/opensource/OBJ3">OBJ3</a>. As far as choices of formalisms are concerned, I'm especially intrigued by the <a href="http://formal.cs.uiuc.edu/stehr/occ_eng.html">Open Calculus of Constructions</a>, which I stumbled across while researching explicit substitution calculi and finding <a href="http://formal.cs.uiuc.edu/stehr/cinni_eng.html">CINNI</a>.
+<p>
+As I'm very much on a type theory/formal methods/blending-specification-and-implementation kick myself, I'm most interested in sharing any learning materials/processes/experiences/results with others of similar interests. In fact, I'd be delighted to form some kind of distributed LtU workshop that touches on these subjects, if any others are interested.
+<p>
+Finally, let's not forget that Tim Sweeney has publically discussed, on this forum, a new language that he's designing that sounds very much like it will have some features that many of us would like. I don't know how much more Tim wants to say about it, however.</div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 09/03/2004 - 21:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-1778"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1778" class="active">It becomes very interesting,</a></h3>
+ <div class="content"><p ><i >It becomes very interesting, though, to think about what some of the alternatives are. For example, see , which offers an example of how Scala can create new syntax using just libraries, thanks to its support of automatic type-dependent closure generation and operators being usable in either infix or postfix contexts</i></p>
+<p >I'm stupid, sorry if I don't get this at first time:<br >
+There is a difference beetween scala's system and blocks as seen in smalltalk or ruby ?</p>
+<p >Ruby even offers statement modifiers, just like scala. , and actually some control structures such as repeat_until are just a block + a postfix while.</p></div>
+ <div class="links">By <a href="user/1216" title="View user profile.">gab</a> at Sat, 09/04/2004 - 12:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-1779"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1779" class="active">No Uniqueness Claim</a></h3>
+ <div class="content">gab: <i>I'm stupid, sorry if I don't get this at first time: There is a difference beetween scala's system and blocks as seen in smalltalk or ruby ?  Ruby even offers statement modifiers, just like scala. , and actually some control structures such as repeat_until are just a block + a postfix while.</i>
+<p>
+I don't believe you're stupid! I think you're imputing a uniqueness claim for Scala that I didn't make. Having said that, I haven't seen a Smalltalk implementation that has features for defining new syntax around blocks, but this is hardly surprising, as Smalltalk's notion of "syntax" is, at least to a first approximation, just naming messages and things that accept messages, and being a dynamic language, it can get away with closures not being "type-dependent," with everything that that implies in terms of the safety of applying the closure. Ruby is similar in some sense, but because its syntax is more clearly Algol-derived, it did have to worry about allowing infix/postfix operators. We still see the difference, though, in the Ruby construct being "repeat_until" instead of "repeat ... until." That is, Scala does, in fact, offer a level of syntactic flexibility that's lacking in languages that don't offer the combination of features that make this possible in Scala, and more to the point, it does so by means other than a macro or "metaprogramming" system.</div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sat, 09/04/2004 - 16:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-1786"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1786" class="active">ok</a></h3>
+ <div class="content"><p >Oh, sorry, now I see what you mean.<br >
+Btw, ruby does allow repeat.. while, cause it allows if/unless/while/rescue as postifx statements:</p>
+<pre >
+ &gt;&gt; def repeat
+ &gt;&gt;  yield
+ &gt;&gt; end
+ =&gt; nil
+ &gt;&gt; i=10
+ =&gt; 10
+ &gt;&gt; repeat do
+ ?&gt;  print i
+ &gt;&gt;  i+=1
+ &gt;&gt; end while i <p >Anyway it is quite limited related to scala.. You can't define you own postfix statement modifiers :/</p></div>
+ <div class="links">By <a href="user/1216" title="View user profile.">gab</a> at Mon, 09/06/2004 - 19:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1768"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/237#comment-1768" class="active">Arrows == self-specializing by value?</a></h3>
+ <div class="content"><p >Do the self-optimizing parsing arrows of Swierstra and Duponcheel fit into this somewhere?</p>
+<p >I don't know much about C++ templates, but I know parsing arrows can be optimized by 'values accepted.'</p>
+<p >Is that related?</p></div>
+ <div class="links">By <a href="user/1177" title="View user profile.">shapr</a> at Fri, 09/03/2004 - 17:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

@@ -1,0 +1,29 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/15df38d3ffd117c5/624639a115515c9b?lnk=st&rnum=32&hl=en#624639a115515c9b
+[comp.lang.functional] Re: Is Strictness a Hack?
+Neel: Google for "RefMonad", "newIORef", "readIORef", etc.  The notion is that RefMonad encapsulates typesafe references to mutable values stored on a heap, passed around in Monadic style using IO or ST, which are instances of a new typeclass RefMonad denoting "monads capable of storing references".
+
+[blockquote]To make the discussion clearer I think it would be better to use some name other than 'Maybe' for this monad, perhaps 'NT' for non-termination.
+
+Haven't you tried to write a function b of type
+
+NT Int -> Int
+
+or something similar?  Surely this is no more possible than writing a function of type
+
+IO Int -> Int
+
+The point of wrapping it up in a monad is that you cannot then try to pattern-match or otherwise 'escape' from the nontermination.  Yes, Maybe is a monad, but it is a data type first and the monad machinery is just a syntactically convenient way of handling it.
+
+(There could be an unsafePerformComputation function of type NT x -> x as an analogue unsafePerformIO.  You'd use it when you were certain that a computation really would terminate, despite its being in the NT monad.)[/blockquote]
+
+This works, but to do this meaningfully, you'd need to modify the Haskell compiler to assure that it's impossible to write potentially infinite-recursive functions unless you're computing within an NT monad, right?
+
+The problem is, that rules out the use of general fixpoint recursion, so you'd have to expose some other kinds of constructs for more limited recursion schemes, such as primitive recursion.  This makes it VERY hard to write programs.  For example, this definition is no longer allowable:
+
+[code]
+fac :: integer -> integer
+fac 0 = 1
+fac n = n * fac (n - 1)
+[/code]
+
+Such a framework might be useful for proofs-as-programs research, but I can't imagine writing significant software without general recursion. 

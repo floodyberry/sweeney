@@ -1,0 +1,248 @@
+/* <pre> */
+
+ #head { 
+    background: url(Two_bg_top.gif) 0 0 no-repeat; 
+    background-color: #eeeef7; 
+    } 
+  
+ #pagedefault { 
+    margin-top: 5px;
+    background-color: #ffffff; 
+    } 
+  
+ #maincol { 
+    background: url(Two_bg_bot.gif) 0 0 no-repeat; 
+    } 
+  
+ #webbgTwo, #footer, #tooltop { 
+    background-color: #9ca4be; 
+    } 
+  
+ #tooltop { 
+    color: #ffffff; 
+    } 
+  
+ #tooltext, #tooltexttwo { 
+    background-color: #b6bdde; 
+    } 
+  
+ #toolbottom { 
+    } 
+  
+ #footer { 
+    color: #fff; 
+    } 
+
+/* GLOBAL GLOBAL GLOBAL */
+
+#head {
+   height: 112px;
+   }
+
+.logo {
+   padding-left: 10px;
+   float: left;
+   }
+   
+#title {
+   margin: 0;
+   padding: 31px 0 0 159px;
+   }
+   
+#nav {
+   margin: 0;
+   padding-left: 10px;
+   /* padding: 11px 0 0 140px; */
+   }
+
+#maincol {
+   background-color: transparent;
+   padding: 10px 30px 30px 30px;
+   height: 100%;
+   }
+
+#footer {
+   padding: 4px 4px 30px 0;
+   font-size: .85em;
+   text-align: right;
+   }
+
+/* MAIN-HOME MAIN-HOME MAIN-HOME */
+
+
+/* TOOLBOX TOOLBOX TOOLBOX */
+
+#tool {
+   float: right;
+   width: 215px;
+   margin: 10px 0 0 20px;
+   padding: 0;
+   }
+
+#toolbottom {
+   width: 215px;
+   height: 12px;
+   padding: 0;
+   margin: -1px 0 0 0;
+   }
+   
+#tooltop {
+   background-repeat: no-repeat;
+   width: 215px;
+   padding: 1px 0;
+   margin: 0;
+   font-family: tahoma, arial, sans-serif;
+   font-size: 1em;
+   font-weight: bold;
+   text-align: center;
+   }
+
+#tooltext, #tooltexttwo {
+   font-size: .85em;
+   padding: 10px 10px 0 10px;
+   margin: 0;
+   }
+   
+/* FONT-SIZE FONT-SIZE FONT-SIZE */
+
+body {
+   font-family: verdana, tahoma, arial, helvetica, sans-serif;
+   font-size: 12px;
+   }
+   
+
+/* LINKS LINKS LINKS */
+
+a:link, a:active {
+   background-color: transparent;
+   color: #000000;
+   text-decoration: underline;
+   }
+
+a:visited {
+   background-color: transparent;
+   color: #444444;
+   text-decoration: underline;
+   }
+
+a:hover   {
+   color: #000000;
+   text-decoration: none;
+   text-decoration: underline;
+   }
+   
+   
+.strong {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+/* BASICS BASICS BASICS */
+
+body {
+   color: #000000;
+   margin: 0;
+   padding: 0;
+   line-height: 1.5em;
+   
+   background-color: #9ca4be; 
+   margin: 0 20px 0 20px;
+   padding: 0;
+   width: auto;
+   }
+   
+pre  {
+    font-weight: normal;
+    font-family: monospace;
+   font-size: 100%;
+   }
+   
+h1, h2, h3, h4, h5, h6 {
+   font-family: tahoma, arial, sans-serif;
+   font-weight: bold;
+   color: #123161;
+   letter-spacing: .05em;
+   }
+   
+h1, h2 {
+   font-weight: normal;
+   }
+   
+h2 {
+   margin-top: 1.5em;
+   }
+
+h3 {
+   margin-top: 1.5em;
+   }
+
+h1   {
+   font-size: 1.8em;
+   line-height: 1.2em;
+   }
+
+h2   {
+   padding-top: .5em;
+   font-size: 1.5em;
+   }
+
+h3   {
+   font-size: 1.3em;
+    }
+
+h4   {
+   font-size: 1.1em;
+   }
+
+img, a:link img, a:visited img {
+   border-style: none;
+   text-decoration: none;
+   }
+   
+blockquote {
+  background: transparent url(quoleft.gif) left top no-repeat;
+}
+blockquote div {
+  padding: 5px 34px 5px 34px;
+  background: transparent url(quoright.gif) right bottom no-repeat;
+}
+
+/* INTERVIEW */
+
+.question {
+}
+
+.answer {
+	background-color: #eeeef7;
+	padding: 9px;
+	border-bottom: 1px solid black;
+}
+
+.section {
+	padding-top: 20px;
+	/* border-bottom: 2px solid black; */
+	text-align: center;
+}
+
+/* PLAN/NEWS */
+.plan {
+}
+
+.plan_alternate {
+	background-color: #eeeef7;
+	padding: 9px;
+	border-bottom: 1px solid black;
+}
+
+.code_box {
+	margin:0px; 
+	padding:6px; 
+	border-top:1px dashed;
+	border-left:1px dashed;
+	border-bottom:1px dashed;
+	font-size: 13px;
+	font-family: Courier New,Arial;
+}

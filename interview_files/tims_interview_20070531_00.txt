@@ -1,0 +1,63 @@
+http://www.pcgameshardware.de/?article_id=602522
+Exclusive Interview with Epic's Tim Sweeney on Unreal Engine 3 and UT 3
+PC Games Hardware interviews Tim Sweeney
+PC Games Hardware
+PCGH
+
+<desc>The original printed version was first published in issue 06/2007 of the german PC Games Hardware magazine. Here you'll find the unabridged interview of PCGH with Tim Sweeney. The Interview was conducted via email by Frank Stower on behalf of PC Games Hardware, all rights reserved. (2007)</desc>
+
+<q>You rescheduled the game to Q3 in 2007. Was one of the reasons behind this that you had to do some technical changes with the engine or that you found ways to improve your game technology?</q>
+
+<a>We didn't reschedule anything. UT3 has always been about being done when it's done. We're taking our time with the game because the UT franchise is very important to us and we want to get it right for this, the third generation in the series.</a>
+
+<q>You are using deferred shading. Will there be any chance to get FSAA working with DX9-Level-cards? What about DX10-cards?</q>
+
+<a>Unreal Engine 3 uses deferred shading to accelerate dynamic lighting and shadowing. Integrating this feature with multisampling requires lower-level control over FSAA than the DirectX9 API provides. In Gears of War on Xbox 360, we implemented multisampling using the platform's extended MSAA features. On PC, the solution is to support multisampling only on DirectX 10.</a>
+
+<q>Can you at this point of development tell our readers what kind of hardware will be required to play the game with all detail in 1024x768 (No FSAA/AF) and 1.600x1.200 (with 4xFSAA - if available - and 8:1 AF)? Will there be any fallback modes for gamers with older hardware like Shader 2.0 cards?</q>
+
+<a>Optimization is still ongoing, so these numbers change on a daily basis. In general, our Unreal Engine 3 games run quite well on DirectX9 class hardware that NVidia and ATI released in 2006 and later, and amazingly well on the high-end cards including DirectX 10 cards. We also support Shader Model 2.0 hardware with minimal visual difference.</a>
+
+<q>Can player speed up performance remarkably by buying a second card for a SLI- or Crossfire system? Have you already measured/experienced differences between those two systems?</q>
+
+<a>We test on SLI configurations on a regular basis. There impact at higher resolutions is significant so if you want to experience the full beauty at high resolutions this is a great way to preserve performance while doing so. We haven't had a chance to run on Crossfire yet, but would expect similar results.</a>
+
+<q>Could you in a couple of sentences sum up the technical as well as the visual highlights of the Unreal Engine 3 and especially UT 3 that will make your product superior to other competitors like Crytek (Cry Engine 2) id (DooM 3 Engine with megatexture technique)?</q>
+
+<a>We let our games speak for themselves.</a>
+
+<q>When did you get your first next-gen-hardware (DX 10-cards) to fiddle apart from console stuff?</q>
+
+<a>Our early access to hardware is generally covered by non-disclosure agreement.</a>
+
+<q>What is your experience with Nvidia's and Ati's next generation graphics hardware? Could you already make a statement which card will be better for UT 3, the 8800 GTX or the Radeon 2900 XTX?</q>
+
+<a>The relative performance scores between NVidia's and ATI's best cards vary from day to day as we implement new optimizations. But, for the past year, NVidia hardware has been ahead fairly consistently, and a few months ago we standardized on Dell XPS machines with GeForce 8800 GTX's for all of our development machines at Epic.</a>
+
+<q>Are there any plans at Epic to upgrade the engine for DX 10? Have you already made experience with Microsoft's new API?</q>
+
+<a>Yes, we'll ship Unreal Tournament 3 with full DirectX 10 support. Support for multisampling is the most visible benefit. We're also able to use video memory more efficiently on Windows Vista under DirectX 10, enabling a given machine to use higher-detail texture settings than are possible in Windows Vista under DirectX 9. Most of Unreal Engine 3's effects are bound by fill-rate rather than by higher-level features like hardware geometry processing, so the real impact of DirectX 10 is incrementally better performance rather than entirely new features.</a>
+
+<q>Do UT 3 gamers profit from a 64 Bit environment? Will there be a 64 Bit version? What are the advantages of the 64 Bit version? Are there any differences as far as visuals or performance is concerned?</q>
+
+<a>We're testing Unreal Tournament 3 with Windows Vista 64-bit to assure compatibility, but we're planning to wait for the OS and application base to mature before doing anything further to really exploit 64-bit.
+
+We were the first developer to port to the 64-bit environment back in 2004, with 64-bit Windows XP and Unreal Tournament 2004. We were very eager to embrace Windows Vista 64-bit also, and hoped to have moved all of our development machines over to it by now. Unfortunately, the software and driver compatibility still isn't quite there. The base OS is very stable, and it's a joy to work with in isolation. But, then, you need to print something, or run Max or Maya along with a collection of third-party plug-ins, and it all unravels. I'm sure the issues will be worked out with service packs and app updates within the Windows Vista generation, as machines with 4-8GB are finally becoming economical, and could be mainstream in the next 12 months.</a>
+
+<q>How important will main memory be for the overall performance? How much memory would you recommend?</q>
+
+<a>We require at least 512MB, and you'll want at least 2 gigabytes for optimal performance and detail. Unreal Engine 3 is very scalable in terms of memory usage, so it runs well on low-memory machines at the low texture-detail setting.</a>
+
+<q>It is well known that your engine supports multi core CPUs. What is the maximum number of threads the engine can calculate? What is the performance gain when you play UT 3 with a quad core CPU? Will the engine even support future CPU with more than four cores?</q>
+
+<a>Unreal Engine 3's threading support is quite scalable. We run a primary thread for gameplay, and a secondary thread for rendering. On machines with more than two cores, we run additional threads to accelerate various computing tasks, including physics and data decompression. There are clear performance benefits to quad-core, and though we haven't looked beyond that yet, I expect further gains beyond quad-core in future games within the lifetime of Unreal Engine 3.</a>
+
+<q>Can UT 3 be played with full detail on a single core machine?</q>
+
+<a>You can play UT3 at any detail level on any machine; the dependent variable is the frame rate! If you have a fast GPU (and thus aren't GPU-bound), then you'll notice significant performance gains going from a single-core PC to a dual-core PC, and incremental improvements in going to quad-core, at a constant clock rate.</a>
+
+<q>Are there any things you learned while developing Gears of War for next gen consoles that you can now benefit from when finalizing UT 3 for the PC?</q>
+
+<a>The Gears of War experience on Xbox 360 taught us to optimize for multi-core, and to improve the low-level performance of the key engine systems. This has carried over very well to PC. The division of UE3's rendering and gameplay into separate threads, implemented originally for 360, has brought even more significant gains on PC where there is a more heavyweight hardware abstraction layer in DirectX, hence more CPU time spent in rendering relative to gameplay.
+
+Also, the 360 work we did resulted in an engine that also runs well on low-end and mid-range PCs. This is very important for games today; the high-end PC gaming market alone is not big enough to support next-generation games with budgets in the $10-20M range. You need to run on ordinary mass-market PCs as well. In reading PC gaming websites, one might get the impression that everyone owns a dual-core PC with a pair of $600 GPUs in SLI configuration, but the reality is very different. More than 80% of PCs sold today are still single-core, and have very low-end DirectX9 graphics capabilities. Unreal Engine 3 supports those configurations well.</a>

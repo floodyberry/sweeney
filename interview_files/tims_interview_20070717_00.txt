@@ -1,0 +1,62 @@
+http://www.evga.com/gaming/gaming_news/gn_100.asp
+EVGA Gaming Q&amp;A with Tim Sweeney
+EVGA Gaming interviews Tim Sweeney
+EVGA Gaming
+EVGA
+
+<desc>EVGA Gaming recently sat down with Tim Sweeney of Epic Games, for some technical Q&amp;A on their upcoming release, Unreal Tournament 3, which uses the revolutionary Unreal Engine 3 technology.</desc>
+
+<q>Recently you spoke of Unreal Tournament 3 (UT3) using DirectX 10 rendering features. How will this differ from the DirectX 9.0 graphical effects, is this just for a speed increase? How is the geometry shader being used with DirectX 10 hardware and UT3?</q>
+
+<a>We're primarily using DirectX 10 to improve rendering performance on Windows Vista. The most significant benefit is that, on Vista, DirectX 10 enables us to use video memory more efficiently than DirectX 9 and thus use higher-res textures.
+
+The most visible DirectX 10-exclusive feature is support for MSAA on high-end video cards. Once you max out the resolution your monitor supports natively, antialiasing becomes the key to achieving higher quality visuals.</a>
+
+<q>Does Unreal Tournament 3 take advantage of over 512MB of video memory?</q>
+
+<a>We're going to significant lengths to take advantage of 512MB video cards and PCs with lots of memory. On PC, we're shipping lots of 2048x2048 textures, a higher resolution than we can support pervasively on console platforms. However, PCs running 32-bit Windows XP or Vista run up against a glass ceiling pretty quickly above 512MB of video memory. Because of the way the OS maps video memory into the 32- bit address space, going beyond 512MB doesn't really increase the overall usable memory. Thus, we're not focusing on exploiting more than 512MB video cards.
+
+That situation will change over the next few years as Windows Vista 64-bit adoption takes off, because the 64-bit OS eliminates the address space bottlenecks and enables video cards to scale way up in usable video memory. But, if you look at the latest data on what gamers are actually using, e.g. with Valve's excellent survey of gamer hardware ( http://www.steampowered.com/status/survey.html), it's clear that 64-bit Vista isn't taking off yet. Give the industry a couple years, and this will change.</a>
+
+<q>Which next generation graphical features do you think will make the biggest impact on gaming?</q>
+
+<a>I feel like the evolution of gaming and graphics could almost be decoupled at this point. Today's engines and rendering feature sets are sufficient for building just about any type of game, just as today's movie cameras as sufficient for filming any kind of movie. This isn't to say that we're done! Graphics quality will continue to improve at an impressive and scary rate, and I feel that we're still 10,000X short of having "enough" computing power for rendering 100% realistic scenes. But I think the days when "rendering feature X enables gaming innovation Y" are mostly over. This is why the use of middleware engines has increased so significantly - because one tech codebase can indeed satisfy the needs of maybe 80% of the types of games being built.
+
+On the rendering side, I'm looking forward to the convergence of CPU and GPU programming models around next-generation uniform computing chips that are capable of both tasks. Such a convergence will enable a long string of software innovations that have thus far been held up by the Microsoft/NVidia/ATI obsession with adding new fixed-function features to the rendering pipeline. That's my wild prediction for the next decade! I believe many of the things that were hinted at in the late 1990's will finally start to happen - very efficient deferred software renderers, sub-pixel triangle rendering, analytic antialising, and novel new rendering schemes around voxels, frequency-space volumetric rendering, pseudo-realtime radiosity solvers, and so on.</a>
+
+<q>How will Unreal Tournament 3 use multiple cores on a CPU? Does it take advantage of Quad Core CPU's? If so, how/what task is assigned to each core?</q>
+
+<a>Unreal Engine 3 is a transitional multithreaded architecture. It runs two heavyweight threads, and a pool of helper threads.
+
+The primary thread is responsible for running UnrealScript AI and gameplay logic and networking. The secondary thread is responsible for all rendering work. The pool of helper threads accelerate additional modular tasks such as physics, data decompression, and streaming.
+
+Thus UE3 runs significantly faster on CPUs which support two or more high-performance threads. This includes dual-core Intel and AMD PC CPUs, the Xbox 360 (which sports 3 CPU cores and 2 hardware threads per core), and PlayStation 3 (with 1 CPU core running 2 high-performance hardware threads per core.)
+
+Beyond two cores or hardware threads, UE3 performance continues to scale up, as the additional threads accelerate physics and decompression work. However, not all scenes are performance-bound by such things, so there are diminishing returns as you go beyond 4 cores. By the time CPUs with large numbers of cores are available - thinking 16-core and beyond - we'll be on the start of a new engine generation, with some significant changes in software architecture to enable greater scaling.</a>
+
+<q>Does Unreal Tournament 3 use the "Subsurface Scattering" lighting effect?</q>
+
+<a>It's all about approximations! Unreal Engine 3 approximates of subsurface scattering using artist-created transmission masks, specifying the amount of light transmission through the back of a surface, and a color modifier. This enables us to achieve the most visible effects of scattering, such as the fine details of a character's face under complex lighting and shadowing details.</a>
+
+<q>What are your feelings on displacement mapping?</q>
+
+<a>Much ado is made about this feature, but ultimately displacement mapping is a form of geometry compression, and to realistically assets its benefits and drawbacks we must compare it to other geometry-compression schemes. In that regard, it's a pretty crappy form of geometry compression! It requires a parameterization of the underlying surface (which itself imposes significant burdens on artists to create an artifact-minimizing mapping), and to hide the seams, and has a directional bias often unrelated to the underlying geometry.
+
+Indeed, there will someday be a revolution in fine tessellation of objects with sub-pixel triangle rendering, but displacement mapping won't be the magical feature that empowers it. More realistically, GPU makers talk about displacement mapping because it's a thing they know how to easily fit into their existing pipeline. Much of the modern graphics pipeline is derived from such expedience rather than a thorough analysis of how we might maximize rendering detail with the minimum hardware cost.</a>
+
+<q>Last year you mentioned that there possibly may be blood/water effects with physical properties assigned to it. Is this still planned to be implemented? Does Unreal Tournament 3 have any special effects for water/liquid effects?</q>
+
+<a>Stay tuned to upcoming press demos of UT3 for news.</a>
+
+<q>Does Unreal Tournament 3 support EAX? Does it use OpenAL like UT2004?</q>
+
+<a>On PC, Unreal Engine 3 uses OpenAL for sound, and takes advantage of the major 3D sound features available in hardware, or in the OpenAL software driver.</a>
+
+<q>Does Unreal Tournament 3 support HDR rendering with Anti-aliasing?</q>
+
+<a>Yes, on Windows Vista. On all PC platforms, we support running with 16-bit-per-component frame buffer (64 bits total). MSAA anti-aliasing support is only enabled on DirectX 10, because the deferred rendering techniques used by the engine require some capabilities not included in DirectX 9.</a>
+
+<q>Any plans to support cross-platform play in Unreal Tournament 3?</q>
+
+<a>Support for cross-platform play in Unreal Tournament 3 is a gameplay decision and a business decision that the development team is still considering. However, the underlying engine fully supports this capability to the extent that the underlying console platform allows communication with PC-based servers.</a>
+<a><a>

@@ -1,0 +1,79 @@
+<h4>Unreal Direct3D</h4>
+
+<p>Our Direct3D performance and stability have increased significantly since version 225.
+&nbsp; For the past few days, I've been swapping 3D cards in and out, tuning Unreal's
+Direct3D performance on all of them.&nbsp; I'm not in the benchmarking biz, so I'm just
+going to give my personal reaction from playing, and say that the Riva TNT, TNT2, Matrox
+G400, and ATI Rage 128 are all very nice for playing Unreal now!</p>
+
+<p>(Don't ask about the Riva 128, Rage Pro, and Permedia 2, they are worse for gameplay
+than Unreal's software renderer).</p>
+
+<p>Everyone's complaint with Direct3D support in past versions of Unreal, on good cards
+like the TNT, has been &quot;the average frame rate and benchmark numbers are fine, but
+there is major hitching and pausing during gameplay&quot;.&nbsp; This was due to several
+factors, which I tracked down and fixed with help and advice from some driver writers.
+&nbsp; The key improvements are: </p>
+
+<ol>
+  <li>Dramatically less memory usage.&nbsp; My Direct3D code wasted tons of hidden,
+    &quot;behind the scenes&quot; memory while swapping textures into video memory, leading to
+    lots of virtual-memory swapping.</li>
+
+  <li>New texture management code, better optimized for Unreal's texture usage patterns.
+    &nbsp; I had been relying on Direct3D's built-in texture manager, which is slowed down by
+    its generality.</li>
+</ol>
+
+<p>The next patch (&quot;when it's done&quot;) will incorporate the new Direct3D code.
+&nbsp; This will be out before Unreal Tournament ships, and we'll be looking for feedback
+from players on its performance and stability.</p>
+
+<p>I'd like to thank Ben de Waal, Sim Dietrich, and Doug Rogers at NVidia; Sameer Nene at
+Microsoft; and Eric Le at Matrox for providing cool advice and performance tips.</p>
+
+<h4>Summary of things I learned about Direct3D</h4>
+
+<p>Never ever Lock() a video memory surface. That is <span class="italic">amazingly</span> slow, especially
+on TNT cards.&nbsp; When I went to a pure Blt() based texture handling scheme, my
+worst-case frame rate went from 8 fps to 20 fps.</p>
+
+<p>Games that use large amounts of textures, palettized textures especially, should not
+use DDSCAPS2_TEXTUREMANAGE.&nbsp; Write your own texture manager, and optimize it around
+your game's usage patterns.&nbsp; You can get much better performance than using the
+general-purpose one that's built in.</p>
+
+<p>Realize that DDSCAPS2_TEXTUREMANAGE makes system-memory copies of all your textures as
+backing-store for the ones cached in video memory temporarily.&nbsp; If your native
+textures are palettized and the 3D card doesn't support paletted textures (a very common
+case with Unreal), realize that you're going to end up with major memory waste. &nbsp;
+Unreal 225 and earlier kept around (a) its own 8-bit copy of each texture, (b) the D3D
+texture manager's 16-bit copy of each texture, and (c) the 16-bit video memory copy.
+&nbsp; In Unreal in some cases, this wasted 40+ megs of system RAM!&nbsp; When I dumped
+DDSCAPS2_TEXTUREMANAGE, I went down to about 12 megs of system RAM.&nbsp; Better yet, a
+lot of cool new cards like the TNT2 and G400 have 32 megs of video memory, so you can
+effectively store all your textures there, and free the system memory copies (which I do),
+to bring the waste down to 0.&nbsp; This improves smoothness very significantly by
+reducing virtual memory usage.</p>
+
+<p>Realize that DDSCAPS2_TEXTUREMANAGE can potentially do evil stuff to your frame rate,
+for example if it tries to free many small textures to make room for a big texture. &nbsp;
+
+(It's totally general-purpose, so it has to handle all the bizarre inputs you might throw
+at it).</p>
+
+<p>Never allocate or free video-memory textures during gameplay in Direct3D.&nbsp; This
+operation is slow.&nbsp; Do it at init time.&nbsp; I do this in Unreal now, caching all
+textures into fixed-size bins in video memory.&nbsp; I swap textures into the bins in
+realtime, but never reallocate the bins.</p>
+
+<p>Don't be afraid to constrain your engine, texture formats, texture sizes, etc to get
+optimal Direct3D performance.&nbsp; GENERAL==SLOW, especially when dealing with texture
+management, where you are already pushing RAM and memory bandwidth limits.</p>
+
+<p>Overall, Direct3D has come a long way.&nbsp; The API and drivers are quite stable now.
+&nbsp; In my 100 hours of rewriting the Direct3D code and testing it on 10+ different 3D
+cards under Windows 98, I had 5 lockups.&nbsp; This is about the same as my experience
+with OpenGL on Windows NT.</p>
+
+<p>-Tim</p>

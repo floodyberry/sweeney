@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/1526
+http://lambda-the-ultimate.org/node/1526#comment-17774
+1050102
+The Weird World of Bi-Directional Programming
+Excellent presentation
+<p>Agreed, it's such an excellent presentation that it has me interested in a subject from which I would have otherwise run away screaming.
+</p><p>There are a great many cases where it is valuable to be able to statically express and verify algorithms that are bijective or fit elsewhere in Pierce's "Lens Bestiary".</p>

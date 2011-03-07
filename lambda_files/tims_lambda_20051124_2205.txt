@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/648
+http://lambda-the-ultimate.org/node/648#comment-12411
+1049224
+Anyone remember Russell (the language, that is)?
+Thankfully, the full paper is
+<p>Thankfully, the full paper is online: <a href="http://portal.acm.org/citation.cfm?id=3987">http://portal.acm.org/citation.cfm?id=3987</a>.  This requires an ACM subscription, which is well worth the cost.</p>

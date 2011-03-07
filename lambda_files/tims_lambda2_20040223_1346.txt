@@ -1,0 +1,12 @@
+http://lambda-the-ultimate.org/classic/message11326.html
+http://lambda-the-ultimate.org/classic/message11326.html#11330
+0535614
+Python 'for' as Scheme 'let'
+Re: Python 'for' as Scheme 'let'
+<p>I've been trying to sort out these similarities too.  There is also a notion of a Monad with a "cut" operator similar to the Prolog cut operation discarding prior choice points; something along these lines may be valuable in modelling a array monad analogy to the "break" command in C for loops.  (The "continue" command is already modelled by the array monad's zero.)</p><p>
+
+The presence of operations with side effects in things like list comprehensions complicates their interpretation as monads.  One approach I find promising is to model all imperative operations in a program literally as IO monads, and to have a syntactic translation of things like for loops or list comprehensions whose contents have side effects into a simple composition of the Array or Maybe monad with the IO monad.  Obviously this translation will only work for a predetermined set of monads (because not every monad can be composed with IO so as to yield a true monad as a result), but it would be nice to be able to model all imperative constructs and looping constructs with a mainstream-style syntax (as opposed to Haskell syntax) with the monad translation being automatic.</p><p>
+
+Note that in a suitable type system, you can construct a "TypeMonad" whose map functor takes the (exact) image of a supplied function over a supplied type, unit generates a singleton type containing just the supplied element, join is type union, and zero is the empty type.</p><p>
+
+The really neat thing is that comprehensions in the TypeMonad correspond to constructing new types elementwise from existing types, i.e. for(a:at, b:bt)[a,b] is the type of pairs containing elements from the types at and bt.  And in the IdentityMonad, comprehensions correspond to lets: for(a:x, b:y)a+b is just x+y.  So, many of the leading edge syntactic constructs in languages can be represented as comprehensions over a suitable monad.</p>

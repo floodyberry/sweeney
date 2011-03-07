@@ -1,0 +1,18 @@
+http://lambda-the-ultimate.org/classic/message8721.html
+http://lambda-the-ultimate.org/classic/message8721.html#8740
+0533009
+Whither Self
+Re: Wither Self
+<p>"Self" or "this" only work nicely in languages that don't support nesting in a fully general way.  For example, in C++, "this" is unambiguous because there is at most one class lexically enclosing the current block of code.  But in Java, you have to be very careful to modify occurances of "this" as you move code between inner classes and outer classes.</p><p>
+
+When defining functions that may include recursive lexically enclosed lambda expressions, the name you associate with a function ("Fac" in the author's example) provides an unambiguous way to refer to that function, while "self" would beg the question: which self?  The nearest one lexically, or the outermost one?  Obviously, a language could pick one convention or another, but then the meaning of "self" would change if you, i.e., move an expression in or out of a given lambda.</p><p>
+
+The same problem exists for classes and records when you support nesting them (for example, with inner class or virtual class semantics): It's no longer obvious which "this" you're referring to.  In languages that support a "thistype" construct, the same problem exists there.</p><p>
+
+You could solve this by making "self" constructs indexed: instead of "self", you only have "self[0]", "self[1]", etc.  But then you have reinvented de Bruijn indices and, though they work well for procedural manipulation of terms, they aren't very human-friendly.</p><p>
+
+If one's language supports nesting in a fully general way, I think it is worth considering eliminating any "this" or "self" as standalone constructs, and instead require that any such things be referred to by name.</p><p>
+
+In the case of functions, this is unambiguous (mod shadowing of variable names): "f" refers to the enclosing function f.</p><p>
+
+In the case of classes, it's trickier because, depending on your language, there may be up to three things that a name refers to: the current instance (like C++ "this"), the current instance's type (like some languages' "thistype"), and the literal type (like referring to class name directly in C++).  Possible syntaxes for these are "c.this", "c.thistype", and "c".</p>

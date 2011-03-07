@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/212
+http://lambda-the-ultimate.org/node/212#comment-1634
+1048788
+Implementing Declarative Parallel Bottom-Avoiding Choice
+List Monad vs Amb
+<p>The only differences between a list comprehension and a similar computation involving amb are that list comprehensions are explicitly ordered, and duplicate items remain distinct.  Amb values are set-like and don't have any inherent order or multiplicity to them; (2 amb 3) is equivalant to (3 anb 2) and (2 amb 2) is equivalant to 2.</p><p>
+
+If you ignore the underlying order and multiplicity of lists, you can use the list monad to precisely model the behaviour of amb.  You can actually define a "set monad" this way.  For example, the set monad's join is the union (of a set of sets); its zero is the empty set; its unit forms singleton sets; its plus takes the union of a pair of sets; it's map takes the image of a given function under a given set...each of the monad laws in the set monad happens to be a ZFC axiom.</p>

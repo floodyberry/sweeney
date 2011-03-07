@@ -1,0 +1,11 @@
+http://lambda-the-ultimate.org/node/2527
+http://lambda-the-ultimate.org/node/2527#comment-38003
+1051103
+Universal Type System
+Universal Type System
+<p>The set of typing rules in a type system is equivalent to the set of axioms in a logic.  Therefore, there is a direct translation of Godel's incompleteness theorem, saying: Any sufficiently powerful type system is either unsound (all types are equivalent), or incomplete (there exist programs whose correctness can't be proven or disproven within the type system).
+</p><p>So, we can't hope to construct one sound type system that contains all other type systems.
+</p><p>However, we can certainly construct a type system that can represent a great number of existing popular type systems.  Much of the practical work in type theory consists of showing that one type system contains another in this way, and this can be directly applied in representing types from different programming languages within a single type system.
+</p><p>So, one can make great progress in unifying type systems, though it's not possible to "finish" the task.
+</p><p>Fortunately, incompleteness generally doesn't manifest itself when typechecking programs a person would ordinary write.  Incompleteness arises from tricky arguments involving infinities and non-inductive recursion, which require the introduction of new axioms to prove or refute.
+</p><p>The logic analogy shows that this shouldn't be surprising: 2500 years passed from the time philisophers began stating recognizable mathematical axioms and proving theorems, to the time mathematicians realized that all such axiom systems were incomplete.</p>

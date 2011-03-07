@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/1573
+http://lambda-the-ultimate.org/node/1573#comment-18848
+1050149
+Variance and Generalized Constraints for C# Generics
+Tension
+<p>Excellent work from the authors, as always.  There is much tension in exposing variance specifiers in a language that assumes mutability everywhere and has no means of specifying constant references and constant operations.  The use of "where" constraints further implies complex nonlocal reasoning both in typechecking and on the human side when we read the code and try to understand why it works.  These extensions stretch the C language family to an impressive new local optima, but at some point the world is going to have to move away from this imperative-everywhere, broken-const model of programming.</p>

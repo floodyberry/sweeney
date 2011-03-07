@@ -1,0 +1,16 @@
+http://groups.google.com/group/comp.lang.c/browse_thread/thread/ed47f72918a296b8/56555e5bdee9fa2b?lnk=st&rnum=70&hl=en#56555e5bdee9fa2b
+[comp.lang.c] Re: Parity of a number
+Aw, c'mon guys.  For n bits, you only need log2(n) xors and shifts.
+
+[code]
+uint16_t d;
+uint16_t t0,t1,t2,t3;
+int parity;
+
+t0=d^(d>>8);
+t1=d^(d>>4);
+t2=d^(d>>2);
+t3=d^(d>>1);
+parity=t3&1;
+[/code]
+-Tim 

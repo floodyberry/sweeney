@@ -1,0 +1,27 @@
+http://lambda-the-ultimate.org/node/268
+http://lambda-the-ultimate.org/node/268#comment-2003
+1048844
+Fresh O&#039;Caml
+Generalization?
+<p>This seems like an extremely special-case feature to add to a programming language.  When presented with something like this, it's useful to consider what would be needed to be able to write this sort of code in a more general language without special-case support.</p><p>
+
+I see two things here.  First, there are the scope properties of the name-binders.  These could be expressed with dependent types, such that only scope-consistent expressions typecheck.  The resulting code would likely be significantly more verbose, though.</p><p>
+
+Second, there are the equivalance properties of values involving name binders.  There are a number of possibilities for implementing this in a more general programming language.  You could write a "mod-alpha-conversion" equivalance test that operates on such terms, treating this as a wider relation than equality (where some alpha-equivalant terms would be considered unequal).</p><p>
+
+Or, if your language supported finite circular terms (with recursive equality implemented internally via bisimulation), you could recognize all alpha-equivalant terms as equal.  I implemented this recently and verified that it works, though I'm not sure it's a good idea.  Some pointers on this topic are summarized in <a href="http://lists.seas.upenn.edu/pipermail/types-list/2004/000352.html">http://lists.seas.upenn.edu/pipermail/types-list/2004/000352.html</a>.</p><p>
+
+Specifically, you could implement binder data types (with alpha-equivalance but not dependent typing) like this:
+
+</p><pre class="code_box">
+term:=union
+   lambda:term
+   application:type{func:term,parm:term}
+   reference:term // A name reference, possibly circular.
+   const:int
+myterm:=lambda(application(reference(myterm),const(7)))
+</pre><p>
+
+Zena Ariola, in <a href="http://www.cs.uoregon.edu/~ariola/cycles.ps">http://www.cs.uoregon.edu/~ariola/cycles.ps</a>, describes this representation of name references as the "Bourbaki" style, refering to mathematical texts where graphs of lambda terms were drawn with lines between lambda terms instead of using traditional names for variables.</p><p>
+
+Alternatively, there is the possibility of using first-class equivalance types, though I can't see how one would implement this in a way that doesn't require programmers to constructively prove horrific things in their code.</p>

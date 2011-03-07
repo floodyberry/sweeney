@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/1085
+http://lambda-the-ultimate.org/node/1085#comment-11611
+1049661
+The Type-System-Feature-Creep Death Spiral
+partial evaluation
+<p>I think Alan has the ultimate answer on the question of typing:
+</p><p><span class="strong"> So I think you could put the static typing issue into the larger context of partial evaluation. Would the attempt to produce a sufficiently capable partial evaluator lead to fame and fortune or obscurity and ruin? </span>
+</p><p>Partial evaluation (or abstract interpretation) is indeed the most general intersection between evaluation and typechecking.  Building a language around this realization is quite a challenge, though.  All of the issues of termination and partiality that are fairly simple in languages like Haskell become compile-time problems and require careful treatment of head normalization and partial approximation, and some degree of implicit or explicit staging.
+</p><p>I do believe this is the next big step in computing. From machine code to Algol/C was the previous big step - the moves from C to C++, Java, C#, and Python are small steps in comparison. But actual attempts at implementing this are few and far between.</p>

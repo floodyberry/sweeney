@@ -1,0 +1,18 @@
+http://mail.python.org/pipermail/python-list/2003-October/231297.html
+[comp.lang.python] Re: Python from Wise Guy's Viewpoint
+[blockquote]THE BAD:
+
+1. f(x,y,z) sucks. f x y z  would be much easier to type (see Haskell) 90% of the code is function applictions. Why not make it convenient?
+
+9. Syntax for arrays is also bad [a (b c d) e f] would be better than [a, b(c,d), e, f][/blockquote]
+Agreed with your analysis, except for these two items.
+
+#1 is a matter of opinion, but in general:
+
+- f(x,y) is the standard set by mathematical notation and all the mainstream programming language families, and is library neutral: calling a curried function is f(x)(y), while calling an uncurried function is f(x,y).
+
+- "f x y" is unique to the Haskell and LISP families of languages, and implies that most library functions are curried.  Otherwise you have a weird asymmetry between curried calls "f x y" and uncurried calls which translate back to "f(x,y)".  Widespread use of currying can lead to weird error messages when calling functions of many parameters: a missing third parameter in a call like f(x,y) is easy to report, while with curried notation, "f x y" is still valid, yet results in a type other than what you were expecting, moving the error up the AST to a less useful obvious.
+
+I think #9 is inconsistent with #1.
+
+In general, I'm wary of notations like "f x" that use whitespace as an operator (see http://www.research.att.com/~bs/whitespace98.pdf).

@@ -1,0 +1,14 @@
+http://lambda-the-ultimate.org/classic/message5989.html
+http://lambda-the-ultimate.org/classic/message5989.html#5996
+0530277
+Call-by-name is dual to call-by-value
+Re: Call-by-name is dual to call-by-value
+<p>Related to non-deterministic extensions of the lambda calculus, have you seen McAllester's Ontic?</p><p>
+
+<a href="http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps">http://ttic.uchicago.edu/~dmcallester/ontic-spec.ps</a></p><p>
+
+Here the 'amb' operator is used both to express potential values of terms, and to express types, interesting because it enables one to express types and values in the same term language.</p><p>
+
+I've been implementing a language using this approach and it seems very fruitful.  Amb-style nondeterminism needn't be incompatible with call-by-future, as long as the reduction system is aware of the sharing semantics.</p><p>
+
+-Tim</p>

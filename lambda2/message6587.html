@@ -1,0 +1,1528 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Python Metaclass Programming</b></font><br>
+<font color="white" size="-1">started 4/22/2003; 10:30:53 AM - last post 5/2/2003; 5:50:44 PM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Python Metaclass Programming <a name="6587">&nbsp;</a><a href='#6587' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/22/2003; 10:30:53 AM (reads: 3784, responses: 27)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a6587"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://www.onlamp.com/pub/a/python/2003/04/17/metaclasses.html">Python Metaclass Programming</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			<font color="blue"><i>as ordinary instances (objects) are built out of classes, classes themselves are built out of metaclasses. Most of the time, you do not need to worry about the implicit metaclass (named type in Python) that is used in class construction, but occasionally, deliberate control of a class' metaclass can produce powerful effects. For example, metaclasses allow "aspect oriented programming," meaning you can enhance classes with features like tracing capabilities, object persistence, exception logging, and more. </i></font><p>
+Python remains the language techniques laboratory for the masses.<p>
+Other approaches for experimenting with this sort of thing would be implementing an object system in Scheme/Lisp, using CLOS, or playing with Smalltalk MOP.<p><br>
+			<font size="-2"><b>Posted to <a href='python.html'>Python</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 4/22/03; 10:31:31 AM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#6587'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Python Metaclass Programming <a name="6591">&nbsp;</a><a href='#6591' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/22/2003; 12:53:53 PM (reads: 2208, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Type theorists put the question, "What is the type of a type?", on a solid theoretical footing years ago and provided many useful models for answering such questions.  Metaclasses aren't one of these answers.  The superstition that metaclasses have something to do with types of types does the world more harm than good.
+<p></p>
+<p><a href='#6591'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Chris</a> - Re: Python Metaclass Programming <a name="6599">&nbsp;</a><a href='#6599' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/22/2003; 7:23:55 PM (reads: 2174, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+What is the type of a type? That's a good question. I'm not a well-studied language designer, but I was recently creating a compiler for a toy object-oriented language. Imagine my confusion when I realized I didn't know whether the type of the "Class" object should be "Class" (recursively) or "Object".  &lt;:-)
+<p></p>
+<p><a href='#6599'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Patrick Logan</a> - Re: Python Metaclass Programming <a name="6602">&nbsp;</a><a href='#6602' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/22/2003; 11:41:41 PM (reads: 2141, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Tim - in this case you have to accept Python for what it is, a pieced together scripting language. It is popular and productive, in spite of its lack of solid theoretical foundation.<p>
+
+And so in this light, this report is really about making power Python programmers more productive. It has almost nothing to do with theory.<p>
+
+Perhaps the next revolution will belong to a more pure language. I am not as crazy about Python as I am even other "dynamic" languages. But I have come to accept Python's popularity and utility.
+<p></p>
+<p><a href='#6602'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Python Metaclass Programming <a name="6605">&nbsp;</a><a href='#6605' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/23/2003; 4:40:45 AM (reads: 2169, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+In theory, there is no difference between theory and practice, but in practice there is.
+<p></p>
+<p><a href='#6605'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Matt  Hellige</a> - Re: Python Metaclass Programming <a name="6609">&nbsp;</a><a href='#6609' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/23/2003; 8:17:20 AM (reads: 2165, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>What is the type of a type? That's a good question. I'm not a well-studied language designer, but I was recently creating a compiler for a toy object-oriented language. Imagine my confusion when I realized I didn't know whether the type of the "Class" object should be "Class" (recursively) or "Object".</em><p>
+
+This is a good question... I'll explain this based on my current understanding, both to help clarify it in your mind and in the hope that someone can correct me when I go wrong.<p>
+
+Typically, all values in a language are given types. If the language provides some way of reifying type information about a value as another value, these values too have types. Java, for example, provides a limited form of this which corresponds to your example above. I can write, for any object foo:<p>
+
+<pre>  Class classOfFoo = foo.getClass();</pre><p>
+
+I'm left with a Class object, which is an Object like anything else, and is an instance of a class (the class Class, to be precise). classOfFoo is a regular value, with a regular type, just like everything else. In effect, I've pulled foo's type information down to the level of values.<p>
+
+Types of types are something different. I've always seen them referred to as "kinds", but there may be other jargon as well. By definition, types are meta-information about values, and thus cannot be manipulated directly by the programmer, without somehow converting them to ("reifying them as") values (which then have types of their own). Types are typically manipulated by some other (usually considered "higher") layer of the language, and if this layer is sophisticated enough to warrant its own type system, then kinds are introduced and you may end up with kind-checking, kind-inference, and all the familiar baggage.<p>
+
+In a language like SML the distinction between these two layers is clearly specified: the Definition of Standard ML contains separate chapters on "static semantics" (the type layer), and "dynamic semantics" (the value layer). The type layer is simple enough, AFAIK, not to warrant the use of kinds.<p>
+
+I hope this helps, rather than just confusing you more. I'm sure I haven't explained this clearly, and I'm equally sure I've made mistakes. But I encourage you to read more about it, as it's a pretty fascinating subject.<p>
+
+I'm particularly interested in systems that flatten the distinction between these two layers, and in flattening them, telescope from a 2-level system to an infinite-level system. What I have in mind is a system whose language for manipulating types is identical to its language for manipulating values, which of course would also be true then for the languages of kinds, kinds of kinds, and so on. This is analogous to the famous "meta-circular reflective tower" model of Lisp meta-programming, and I'm really curious about how far this goes. Could such a system be implemented? Would it be usable? I mean, could one actually write comprehensible programs? If so, would it be useful? What new idioms would be suggested? What, exactly, is the relationship between the type-language reflective tower and the macro-expansion reflective tower, if any? My guess is that this is probably nothing new for many people on LtU, and I'd really appreciate thoughts or pointers to related work...
+<p></p>
+<p><a href='#6609'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Neel Krishnaswami</a> - Re: Python Metaclass Programming <a name="6610">&nbsp;</a><a href='#6610' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/23/2003; 9:48:40 AM (reads: 2085, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Metaclasses do have something to do with types! They are precisely Russell's paradox encoded as a programming language feature. Type theory was invented precisely to forbid this possibility, by keeping people from constructing self-referential propositions, as you can do in naive set theory. However, self-reference is extremely useful in practice, which is why metaclasses keep showing up. And not all uses of self-reference will lead to unsoundness, so there's no reason to be unreasonably biased against it. There's probably some kind of weirdo category-theoretic kung fu you can use to avoid Russell's paradox without forbidding self-reference in toto. I've run across references to something called "monadic reflection", which would seem to have the right combination of buzzwords :), but I don't know enough to say for certain whether this is what we want. <p>
+
+Certainly, things like dynamic loading, (un)marshalling, and anything else that changes the program at runtime will need some kind of reflection to work right....
+<p></p>
+<p><a href='#6610'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Chris</a> - Re: Python Metaclass Programming <a name="6611">&nbsp;</a><a href='#6611' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/23/2003; 9:51:17 AM (reads: 2076, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Ruby differentiates between type and class. The <b>type</b> of an object is defined by, and only by, the way that it responds to messages. <b>Classes</b> and <b>modules</b> define reusable implementations but do not constrain the types of subclasses. Apparently in Ruby, type is not meta-information that cannot be changed by the programmer. Just the opposite, type is simply the observed run-time behavior of an object.<p>
+
+<a href="http://www.rubygarden.org/ruby?TypesInRuby">http://www.rubygarden.org/ruby?TypesInRuby</a>
+<p></p>
+<p><a href='#6611'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>andrew cooke</a> - Re: Python Metaclass Programming <a name="6613">&nbsp;</a><a href='#6613' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/23/2003; 12:22:16 PM (reads: 2113, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Does this mean anything other than "we define 'type' to be 'the semantics of the object' and so can't do anything useful with it"?
+<p></p>
+<p><a href='#6613'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>andrew cooke</a> - Re: Python Metaclass Programming <a name="6614">&nbsp;</a><a href='#6614' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/23/2003; 12:32:53 PM (reads: 2053, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+To save people Googling on "Monadic Reflection":<p>
+
+<a href="http://citeseer.nj.nec.com/filinski94representing.html">Filinski - Representing Monads</a> (<em>corrected</em> the main paper, as far as I can tell).<p>
+
+Applications in <a href="http://www.dcs.ed.ac.uk/home/aof/papers/CE-abstract.html">ML</a> and <a href="http://www.cs.indiana.edu/~jsobel/Parsing/explicit.html">Scheme</a>.
+<p></p>
+<p><a href='#6614'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Python Metaclass Programming <a name="6615">&nbsp;</a><a href='#6615' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/23/2003; 5:07:42 PM (reads: 2092, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Well, I made similar design mistakes in past languages I shipped.  In UnrealScript (<a href="http://unreal.epicgames.com/unrealscript.htm">http://unreal.epicgames.com/unrealscript.htm</a>), as in Java, there is a "Class" class which stores metadata about classes; its class is also "Class", and its superclass is "Object".<p>
+
+I didn't know much about type theory then.  Now that I do, I recognize this model as unnatural, and think we can get MUCH better end results by exposing a real type-theoretic notion of types, and that this would only make the language more powerful and practical for everyday programming.<p>
+
+Here's how I look at types now:<p>
+
+- A type describes a set of values.  The set may be empty, finite, or infinite.  In this interpretation, the "int" type is shorthand for "the type containing ..,-1,0,1,2,..".<p>
+
+- A type doesn't "contain" any more information than the set of values it describes.  It's not like a record or struct type that contains member functions, member variables ("the type's name"), etc.<p>
+
+- Two types are equal if they describe the same set of values, unequal otherwise (full extensionality).  However, comparing two types need not be a decidable operation.<p>
+
+- The operations allowed on types depend on your language:<p>
+
+* In the most basic example, simply typed lambda calculus, there are no operations on types.  The only way that types are used is to limit the values which the compiler accepts in a certain place (for example, in a function application for a given function).  This information is statically checked at compile-time, and erased by runtime, therefore no aspects of types are visible at runtime.<p>
+
+* Some languages allow dynamic casts, the ability to see whether an arbitrary value, known precisely only at runtime, belogs to a certain type.  This needn't imply dynamic typing; there are constructs like "ifcast(x,value,type) then a{x} else b" which maintain static type safety in the presence of casts.  Here types, can't be completely erased, so some aspects of the type systems are exposed to the runtime.<p>
+
+* More advanced languages support dependent types, intersections of types, non-disjoint unions of types, testing types for inhabitance/emptyness dynamically, etc. <p>
+
+- It's valid to talk about subtyping in full generality.  For example, there is (at least conceptually) "the type of all integers except -3 and 7", and it's a subtype of the type of integers.<p>
+
+- For general purpose programming, you tend to want an empty type containing no values - you might call this "uninhabited" - note there can be only one by extensionality, and a universal type (conceptually) containing every value that is valid in the language - you might call this "object".<p>
+
+- For any type t, there is such a thing as "the type containing all the subtypes of t, and nothing else" (similar to the powerset from set theory).  If you have a universal type "object", then the type of all types is precisely the type of all types that are subtypes of object.  You can iterate this process to obtain "the type of all types of types" and the result is valid and non-circular.  Each iteration you're narrowing the set of values you're talking about, and each time you're just dealing with a subtype of object and nothing fancier than that.<p>
+
+- For sufficiently advanced type theories, we need to accept undecidable typechecking (i.e. for dependent typing in the presence of recursion, the type system is Turing-complete).  This doesn't mean that we have to accept unsafe typing, it means the compiler may have to reject some programs that are actually safe, and users may have to work around these limitations.<p>
+
+- It's valid to talk about functions that take types as parameters, and return types as results.  These are considered functors in stratified type systems, but if you see types as just a certain kind of value, then you only have functions, and not any special "forall" quantifiers or type-level lambdas.<p>
+
+- This level of generality isn't unreasonable for future languages.  For example, see McAllester's Ontic for a framework that combines most of these concepts.<p>
+
+- Practical programmers want metadata, reflective capabilities, the ability to mix and match open-world and closed-world programming models to fit their needs, a combination of nominal and structural typing capabilities, and a mechanism for reusing implementations (i.e. inheritance or encapsulation).  These features can all be supported in a sound type framework, but we mustn't confuse metadata and types.  Metadata is something that you want certain record-like data structures to contain, so that you can use reflective programming techniques.<p>
+
+Here's how I'd redesign a modern language like Java in this light:<p>
+
+- Java uses "object" to denote "the type of things that contain fields".  Change this name to "record", a more specific term that's generally recognized as meaning "something that contains fields".<p>
+
+- Java uses "int" to denote "the type of integers", and "Int" to denote "the type of integers that have been boxed up into a record".  In Java, "int" is not a subtype of "object", but "Int" is.  Ok, we blew it here.  Keep "int" as-is and eliminate "Int".  We won't need "Int".<p>
+
+- Add a new type "object" which, this time around, really means "the type of all objects", not just "the type of all records".  Now EVERY type is a subtype of object.  "int" is a subtype of object, "char", etc.<p>
+
+- "object" doesn't have any member functions or other fields (remember, it's not a record type now).  Given an object, you can't do anything with it, except try to cast it to other types.<p>
+
+- Expose functions as first-class language values, with proper variance rules for their parameters and return types.  Add a new base type "function", the type of all functions.  It's a subtype of objects.  Now you can pass around functions freely.<p>
+
+- Eliminate any thought of this C# "automatic boxing" concept.  Now we see this is a just a flawed workaround to a previous language flaw: what it's really doing is encapsulating ints (which are now objects) as records, which was only necessary then because we didn't have a real type theoretic "object" type previously, so if we wanted to pass stuff around polymorphically, we had to stick it in a record.<p>
+
+- Add a new "type" type, to mean "the type of all types".  "int" is a value of type "type", as is "record", "string", and so on.  Eliminate "class".<p>
+
+- Then, add a metadata framework to allow optionally attaching reflective metadata to records.  This could look a whole lot like the current Java class / reflection approach, but we would stop pretending that classes had something to do with types, and recognize them as optional metadata tacked onto records.
+<p></p>
+<p><a href='#6615'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>andrew cooke</a> - Re: Python Metaclass Programming <a name="6617">&nbsp;</a><a href='#6617' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/24/2003; 6:15:16 AM (reads: 2026, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Almost all of that makes sense to me, except that types seem to be two very different sets, depending on which part of the text I'm reading.  In some places type is a set of values, in others a set of sub types.<p>
+
+The first definition makes sense, but the second might have problems because you seem to then include type as a subtype of type.  This can lead to inconsistencies and I don't think you really need to do it (you can use "kinds" instead, as described earlier).
+<p></p>
+<p><a href='#6617'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Python Metaclass Programming <a name="6618">&nbsp;</a><a href='#6618' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/24/2003; 7:41:01 AM (reads: 1994, responses: 4)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I don't share Tim's perspective on types. Without implying any criticism of his views, here is my view formulated as a response to his post:<p>
+
+<em>A type describes a set of values.</em><p>
+
+Types are not sets, they are algebras. The underlying representation, be it a set or a poset or a doowhatsit is irrelevant: all we care about is how it behaves.<p>
+
+<em>A type doesn't "contain" any more information than the set of values it describes.</em><p>
+
+The additional information is the operations supported by the type, and the equations they obey.<p>
+
+<em>Two types are equal if they describe the same set of values, unequal otherwise (full extensionality).</em><p>
+
+Since we never care about the underlying representation, the values, we never talk about type equality, except trivial equality, but rather type isomorphism: types are isomorphic iff they behave the same way.<p>
+
+<em>In the most basic example, simply typed lambda calculus, there are no operations on types.</em><p>
+
+The arrow operator is a binary operator on types in simply typed lambda-calculus.<p>
+
+<em>The only way that types are used is to limit the values</em><p>
+
+Types don't <em>limit</em> values: they <em>enable</em> operations.<p>
+
+<em>Some languages allow dynamic casts, the ability to see whether an arbitrary value, known precisely only at runtime, belogs to a certain type.</em><p>
+
+Every `value' belongs to exactly one type, which never changes; talking about run-time types is meaningless.
+<p></p>
+<p><a href='#6618'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Python Metaclass Programming <a name="6619">&nbsp;</a><a href='#6619' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/24/2003; 8:01:08 AM (reads: 2031, responses: 3)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I am with Frank on this one. A type is not "how many bits" but rather "how does these bit supposed to behave".
+<p></p>
+<p><a href='#6619'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Python Metaclass Programming <a name="6620">&nbsp;</a><a href='#6620' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/24/2003; 11:03:41 AM (reads: 1938, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Frank:<p>
+
+> Every `value' belongs to exactly one type, which never changes; talking about run-time types is meaningless. &lt;<p>
+
+Doesn't this view deny the existance of subtypes?  For example, what one type does the value 7 belong to?  The type of rational numbers, the type of integers, the type of natural numbers, the universal type?<p>
+
+In a type system supporting full powerset style subtyping, 7 belongs to, and only to, every type that is a supertype of the type containing just 7.  Full subtyping can be useful in practical programming.  For example, if you have arrays of fixed length, it's useful to have "the type of natural numbers less than n" for every n, so that you can index into arrays with the type system guaranteeing indices are in range (rather than runtime checks that throw exceptions.)<p>
+
+> Since we never care about the underlying representation, the values &lt;<p>
+
+This implies an absolute separation between types and values, which is the norm in most popular type systems.  But this separation limits the expressiveness of the type system, and I want to go beyond this and be able to intermix values and types freely, for example in dependent types, type-forming operations, and value extraction operations.  This can be done soundly, but requires breaking down the "don't care about underlying values" barrier.<p>
+
+Concretely: I want to be able to write functions that take any mix of types and values as parameters, and return any mix of types and values as results.  I want to cartesion-dependent-product up types and values in arbitrary ways.  If you have a natural number i, be it statically known or only dynamically known at runtime, I want to be able to form the type of natural numbers less than i, and use it dynamically, for example in runtime casts, and I want the compiler to verify that everything I do is decidable and typesafe.<p>
+
+> we never talk about type equality, except trivial equality, but rather type isomorphism: types are isomorphic iff they behave the same way. &lt;<p>
+
+This is certainly the mainstream view.  I prefer to see extensional type equality exist and be exposed as a first-class operation, though it's undecidable in the general case.  (If a compiler is going to accept undecidability in some aspects of typechecking, why not go all the way?)<p>
+
+Consider finite types, for example.  Do you consider "the type containing just 3 and 7" to be isomorphic to "the type containing just 'x' and 'z'"? It's easy to come up with a bijection between them, as it is between many conceptually different types (integers and character strings, for example). I don't think type isomorphism gives you much useful information from a type system perspective.<p>
+
+On the other hand, knowing whether two types are extensionally equal (or in a subtype relationship) gives you useful information about which values are allowed in which contexts.<p>
+
+Andrew:<p>
+
+There are logical pitfalls with notions from naieve set theory, such as a universal type ("the type of all values allowed in the language"), a type-of-all-types (itself a type), and Russell's paradox ("T is the type containing all types that don't contain themselves. Does T contain itself?").<p>
+
+There are various ways of resolving these problems:<p>
+
+- The simplest is to disallow such constructs entirely, which is sound, but reduces the power of the type system.  For practical programming, it's really useful to have a universal type; for dependent-typed programming a "type of all types, itself a type" is very useful.  So foregoing these constructs has a cost.<p>
+
+- These is a little bit of work on non-wellfounded set theory and related type theories that eliminate the paradoxes by changing the underlying axiom systems.  Applying such systems to programming languages would be quite speculative.<p>
+
+- Type systems like the one in McAllester's Ontic paper achieve a middle ground by exposing tiered types that are sound and almost as useful for practical purposes, but have some limitations.<p>
+
+- Finally, if you've accepted the presence of undecidability in your type checker, you can expose true universal types, while masking the paradoxes behind the vale of undecidability.  For example, you can form a "type containing all types that don't contain themselves", and verify that simple types belong to it and that the universal type doesn't belong to it, but it's impossible to decide or prove (within the type system's axioms) whether it belongs to itself.  Not much formal work has been done in this area, but I think it can be made sound, though using such constructs in practice feels quite subversive.
+<p></p>
+<p><a href='#6620'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>andrew cooke</a> - Re: Python Metaclass Programming <a name="6622">&nbsp;</a><a href='#6622' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/24/2003; 12:07:39 PM (reads: 2077, responses: 2)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Can someone point me to a definition of "an algebra", please?!
+<p></p>
+<p><a href='#6622'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Python Metaclass Programming <a name="6624">&nbsp;</a><a href='#6624' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/24/2003; 1:43:18 PM (reads: 2145, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+You will find rigorous definitions in universal algerba texts. See this <a href="http://www.thoralf.uwaterloo.ca/htdocs/ualg.html">online book</a>, for example (it's definition 1.3).<p>
+Simply put an algebra is a set coupled with operations on that set. Example: A ring is an algebra &lt;R,+,.,-,0> where + and . are binary operations, and - is unary. 0 can be seen as a 0 arity function. The operations specified for the ring must satisfy certain axioms.<p>
+<p></p>
+<p><a href='#6624'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>andrew cooke</a> - Re: Python Metaclass Programming <a name="6625">&nbsp;</a><a href='#6625' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/24/2003; 3:51:39 PM (reads: 2164, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Thanks - that's what i was guessing (at some level :o).  So that means that it's Tim's set <em>plus</em> operations (A ring by itself isn't a type, but a ring over (on? of?) integers is, for example) (the alternative would imply that you could add an integer and a polynomial).  Maybe that was obvious, but your comment about it not being "how many bits" seemed to imply that it was algebra <em>or</em> set, rather than set extended to algebra (so it's which bits <em>and</em> how the behave).<p>
+
+<small>(This is what threw me about embedded and implemented - one is a subset of the other, afaik).</small><p>
+
+So if a ring (alone) is a kind, rather than a type, does that mean a Java interface is a kind (all I mean here is that it's like a partial type specification and so a way of unifying several types)?  Or is Java just too broken to make the comparison?  Or am I wrong somewhere (I presume so, but it has a strange logic to it)?  (and please ignore me if I'm posting too much - it's been a boring day at work).
+<p></p>
+<p><a href='#6625'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Python Metaclass Programming <a name="6626">&nbsp;</a><a href='#6626' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/25/2003; 2:26:37 AM (reads: 1899, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Tim:<p>
+
+<em>Doesn't this view deny the existance of subtypes?</em><p>
+
+It depends on what you mean by subtype. It is not hard to formulate a notion
+of subtype in this framework, but instead of a subtype of A being a subset of
+A, you have a subtype being an equivalence class of injections into A. A
+virtue of this framework is that you can define this notion of subtype for
+things which are not sets, though.<p>
+
+<em>For example, what one type does the value 7 belong to? The type of
+rational numbers, the type of integers, the type of natural numbers, the
+universal type?</em><p>
+
+That depends: are you talking about the rational number 7, the integer 7 or
+the natural number 7? :)<p>
+
+<em>In a type system supporting full powerset style subtyping, 7 belongs to,
+and only to, every type that is a supertype of the type containing just
+7. Full subtyping can be useful in practical programming. For example, if you
+have arrays of fixed length, it's useful to have "the type of natural numbers
+less than n" for every n, so that you can index into arrays with the type
+system guaranteeing indices are in range (rather than runtime checks that
+throw exceptions.)</em><p>
+
+Yes, but my framework can support this. A difference is that, in your
+framework the way in which the elements of different-sized arrays are numbered
+will be fixed by the way you define arrays, whereas in my framework it is a
+separate concern.<p>
+
+For example, suppose you define character arrays of length n as functions from
+the naturals less than n to the type char:<p>
+
+<pre>chararray(n) = {0..n-1} -&gt; char</pre><p>
+
+Then, since {0..3} &lt; {0..4}, presumably:<p>
+
+<pre>chararray(4) &lt; chararray(3)</pre><p>
+
+Suppose you pass a value of type chararray(4) to a context expecting a
+chararray(3), which tries to get the first element by applying 0 to the
+array. Your array elements have to be numbered the same way for subsumption to
+work, and this is a global condition which must be respected by all programs.<p>
+
+However, there are many ways of injecting {0..3} into {0..4}, corresponding to
+reordering the indices and forgetting one of them. In my framework this is
+additional information which is required to coerce chararray(4) into a type of
+chararray(3); alternately, you can omit the information if you are passing to
+a context which behaves the same way no matter how array indices are chosen to
+be ordered (for example, a function which sums the elements).<p>
+
+<em>This implies an absolute separation between types and values, which is the
+norm in most popular type systems.</em><p>
+
+Yes, it definitely does.<p>
+
+<em>But this separation limits the expressiveness of the type system, and I
+want to go beyond this and be able to intermix values and types freely, for
+example in dependent types, type-forming operations, and value extraction
+operations.</em><p>
+
+I don't care about mixing values and types, because that isn't an end in
+itself. However, I do want to be able to treat types <em>as if</em> they were
+values, to do computations with them, and that is possible in my framework.<p>
+
+<em>This can be done soundly, but requires breaking down the "don't
+care about underlying values" barrier.</em><p>
+
+Then you are taking a step backwards modularity-wise.<p>
+
+<em>Concretely: I want to be able to write functions that take any mix of
+types and values as parameters, and return any mix of types and values as
+results. I want to cartesion-dependent-product up types and values in
+arbitrary ways. If you have a natural number i, be it statically known or only
+dynamically known at runtime, I want to be able to form the type of natural
+numbers less than i, and use it dynamically, for example in runtime casts, and
+I want the compiler to verify that everything I do is decidable and
+typesafe.</em><p>
+
+Well, this is sort of what I want too, but I want to retain the ability to
+have abstract datatypes.<p>
+
+<em>Consider finite types, for example. Do you consider "the type containing
+just 3 and 7" to be isomorphic to "the type containing just 'x' and 'z'"?</em><p>
+
+If by `type' you mean set, then certainly.<p>
+
+<em>I don't think type isomorphism gives you much useful information from a
+type system perspective.</em><p>
+
+Do you think lists are useful? Or trees? Inductive datatypes in general? They
+are all defined by type isomorphisms.<p>
+
+How about products, sums and function types? They are also all defined by
+isomorphisms, as are continuation types and just about everything else.<p>
+
+<em>On the other hand, knowing whether two types are extensionally equal (or
+in a subtype relationship) gives you useful information about which values are
+allowed in which contexts.</em><p>
+
+First, I have a feeling that your extensional equality relation is obtainable
+from the iso relation by quotienting and making a global choice.<p>
+
+Second, the <em>iso relation</em> gives you less information. But the <em>iso itself</em> gives you more, because it tells you precisely how values are related. So, on the contrary, extensional equality gives you <em>less</em> information
+because it only tells you when two types are represented the same way, not
+when they are related in a more complicated fashion. For example, consider polar and cartesian
+coordinates, different associations or symmetries of a product or sum, curried
+and uncurried versions of a function type.<p>
+
+Andrew:<p>
+
+<em>So that means that it's Tim's set plus operations</em><p>
+
+It need not be a set. This is an important fact in practice, actually, since
+you need to use algebras over things other than sets if you want to allow for
+non-terminating programs. Tim's framework is not limited to sets either;
+anything sufficiently "set-like" will do. Technically, these set-like
+collections have to form what is called a topos.<p>
+
+<em>A ring by itself isn't a type, but a ring over (on? of?) integers is, for
+example)</em><p>
+
+Well, it depends on your type system, of course, but a ring could conceivably
+be a type in itself, just as polymorphic lists are a type in themselves, and
+you don't need to mention the element type.<p>
+
+<em>the alternative would imply that you could add an integer and a
+polynomial</em><p>
+
+No, it wouldn't, just like you can't append a list of integers to a list of
+booleans in ML.<p>
+
+<em>So if a ring (alone) is a kind, rather than a type</em><p>
+
+First, it isn't really meaningful to speak of something being a type or a kind
+in isolation; you need to specify a type system.<p>
+
+Second, it isn't really meaningful to say that rings are kinds or a types, any
+more than it is meaningful to say that a `box' is made of cardboard. Some
+boxes are made of cardboard, and some are made of aluminum, but those aren't
+intrinsic to the notion of `box'.<p>
+
+[I just thought of a better analogy. Is a disc an object in 2-space or 3-space? To describe a disc, you need at least two dimensions, so you can say it is a 2-dimensional object, but certainly you can talk of discs existing in 3-space, provided you give them a certain orientation.<p>
+
+Incidentally, the difference between Tim's framework and mine can be thought of in these terms. A value is like a 3-dimensional object and a type is like a 2-dimensional object. He allows computing with values and types in exactly the same way, whereas I require that any type which is used like a value must be equipped with additional information. The geometric analogy is that he picks a default way of embedding 2D objects in 3-space, whereas I require an explicit embedding for each object. He needs to make more global decisions than I do because the default is global.]<p>
+
+In type frameworks like Tim's, you can speak of rings whose carriers are types
+and rings whose carriers are values. (The carrier is the collection of
+`elements': integers, or polynomials, for example.)<p>
+
+On the other hand, in my framework a ring would always be a type. (Even this
+isn't entirely true, though. My framework actually subsumes Tim's, and could
+admit all his features at the price of desirables like decidability.)  There
+is an analagous, weaker structure at the kind level called a 2-rig, though.<p>
+
+<em>does that mean a Java interface is a kind</em><p>
+
+No, in Java, an interface is definitely a type. Java has no notion of kind,
+AFAIK.
+<p></p>
+<p><a href='#6626'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Python Metaclass Programming <a name="6627">&nbsp;</a><a href='#6627' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/25/2003; 4:29:48 PM (reads: 1856, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Having these discussions reinforces how much one's choice of type theory is a matter of opinion and choice rather than "right or wrong".<p>
+
+Frank:<p>
+
+Ok, let's see if I understand what you're advocating.  In your type system, given an integer x, I should be able to compare it to the integer constant 7, similarly if both are rational numbers.  But if I have an integer x and a rational number y, your compiler would say something like "You can't compare integers and rational numbers, because they're not the same type"?<p>
+
+So, given an integer x, to convert it to a rational number, you'd need to call some function (perhaps in the same module number where the abstract "natural number" type where declared) to convert it.<p>
+
+I'm coming from the opposite perspective, where I want type relationships (like subtyping) to directly correspond to what people expect in the given domain.  For example, in mathematics, the set inclusion hierarchy between natural numbers, integers, rationals, imaginaries, complex numbers, etc.  I want the type system to directly reflect this, so you can pass integers to functions that expect rationals directly, without any conversions.<p>
+
+This approach needn't prevent one from using abstract types.  It's actually sound to mix structural subtyping and nominal subtyping in very interesting ways (though, as far as I've found, this is quite difficult and not very well studied).<p>
+
+What I mean concretely is that you can hide the implementation of "rational numbers" in a module that exposes certain operations (comparison, arithmetic, etc), exposes the constrant that they are a supertype of the integers, yet still hiding their representation type.  So, given such abstract defintions of integers and rationals, you can freely pass integers to functions expecting rationals, but not vice-versa.  However, even if rational numbers are implemented as (for example) a pair of integers in some cannonical form (in lowest terms, etc), this fact is hidden outside the module, so that you can't (for example) compare a rational number to a naked pair of integers.<p>
+
+With this approach, I think you get the best of both worlds: You can hide the implementations of things, yet expose the subtyping relationships that users would expect in the problem domain.<p>
+
+The only drawback I've found to this approach so far is that naked (non-abstract) values in this type system can be compared in ways that programmers don't expect in other languages.  For example, you can write code like "fac(x:int):int=>if x='0' then 1 else x*fac(x-1)" where you're comparing x to the character '0' instead of the number 0, and this is a valid comparison which always evaluates to false.<p>
+
+To be sure this isn't taken out of context, I'm only proposing this approach from a high-level language point of view.  The programmer would see integers as a subtype of rationals.  When the compiler and linker get down to actually translating such code into efficient runnable form, things are implemented quite traditionally, with inlining, boxing, and conversions/coercions to (for example) extend integers into equivalant rational numbers, and so on.<p>
+
+Regarding the array subtyping issue you mention:<p>
+
+I've found practical advantages to exposing both contravariant functions and invariant functions.  Invariant functions behave like arrays from a typing perspective: they can only be equal if their domains are equal.  Contravariance gives you record-style subtyping and the ability to extend a function "+" from integers to rational numbers while maintaining compatibility (so, for example, you can have "the ring of integers" be a subtype of "the field of rationals" -- great, but contravariance has two big disadvantages:<p>
+
+1. In a type system that admits some comparisons to be undecidable and some decidable, any values of record or array type built from contravariant functions much necessarily be incomparable, because the domain of any value not known precisely at compile time may be extended in a way that allows returning incomparable values.  So if you build arrays out of contravariant functions, it's impossible to compare them.<p>
+
+2. From a user's perspective, having {1,2,"x",9.5} &lt;: {1,2} is not something one expects of arrays.<p>
+
+Invariant functions allow you to write arrays which are guaranteed to be comparable given comparable range and comparable finite domain, and make {1,2,"x",9.6} distinct from {1,2}.<p>
+
+Taking this further, you can then have invariant functions be subtypes of identically declared contravariant functions, and think of contravariant functions (conceptually) as an infinite union of the identical invariant function with every possible extension of its domain.
+<p></p>
+<p><a href='#6627'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Kimberley Burchett</a> - Re: Python Metaclass Programming <a name="6632">&nbsp;</a><a href='#6632' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/27/2003; 8:25:39 AM (reads: 1726, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Tim, are there any language implementations that have a type system close to the one you're describing?  It sounds like you've had some practical experience with your ideas, and I'm wondering whether this experience was gained on paper on by writing actual executable programs.
+<p></p>
+<p><a href='#6632'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Python Metaclass Programming <a name="6633">&nbsp;</a><a href='#6633' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/27/2003; 11:28:06 AM (reads: 1660, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<em>In your type system, given an integer x, I should be able to compare it to
+the integer constant 7, similarly if both are rational numbers. But if I have
+an integer x and a rational number y, your compiler would say something like
+"You can't compare integers and rational numbers, because they're not the same
+type"?</em><p>
+
+Of course it all depends on the type of the function you are using to
+`compare' them but, yes, there is generally no default way of comparing values
+of distinct types for equality. If I wanted a language which supported such a
+thing, I would be using assembler. Put differently, the whole pointing of
+assigning distinct types to distinct values is that there is no default way of
+comparing them.<p>
+
+<em>So, given an integer x, to convert it to a rational number, you'd need to
+call some function (perhaps in the same module number where the abstract
+"natural number" type where declared) to convert it.</em><p>
+
+Yes.<p>
+
+But you are looking at it the wrong way. Why would I want to convert an
+integer (let's say natural instead) to a rational? There must be a larger
+reason for it, a context, and that context will influence which coercion I
+want to use. For example, in some cases I might want the obvious embedding
+which takes the natural 3 to the rational 3, but in some other cases I might
+want the embedding to be Cantor's diagonalization function (which takes, as I
+recall, 3 to 1/2).<p>
+
+I am not really opposed to subtyping <em>per se</em>, and I want to be able to
+model your `mathematical' inclusion hierarchy mentioned below. What I am
+opposed to is a <em>global</em> subtyping hierarchy, because any such
+hierarchy is artificial and, as I explain below, I think placing an artificial
+emphasis on numbers is counterproductive.<p>
+
+In any case, though with simple and well-known kinds of numbers like integers
+and complex numbers there is a good case for subtyping because of a historical
+accident, when you get to more exotic, and even not-so-exotic, kinds of data I
+really think that searching for and instituting one particular coercion as the
+`default' one is counterproductive.<p>
+
+For example, here is an example from Paul Taylor's book `Practical
+Foundations'. The powerset of a set forms a complete semilattice w.r.t. set
+inclusion. By forgetting some of the structure at each step, you can regard
+such a powerset as a poset, a set and finally a relation (the equality
+relation on the set's elements), but every powerset is also equivalent to
+another relation, the subset membership relation. Which should be the
+`default'? There is no obvious choice. For more exotic structures, the
+possibilities are even more obscure. In other words, I don't think subtyping
+scales.<p>
+
+<em>I'm coming from the opposite perspective, where I want type relationships
+(like subtyping) to directly correspond to what people expect in the given
+domain.</em><p>
+
+People expect lots of things, some of which are inconsistent, so this is not
+highest on my list of priorities. For example, they expect that if they write
+something like:<p>
+
+<pre>f :: Int -> Int
+f x | x == 0 = 1
+    | x /= 0 = 2
+</pre><p>
+
+that the compiler will be able to check that the function is total, yet we
+know that that is generally undecidable.<p>
+
+<em>For example, in mathematics, the set inclusion hierarchy between natural
+numbers, integers, rationals, imaginaries, complex numbers, etc.</em><p>
+
+This hierarchy is overspecified and, I think, old-fashioned and ultimately
+wrong-headed.<p>
+
+It's overspecified because, for example, there is nothing intrinsic about the
+naturals which justifies forcing them to be a subset of the integers, when it
+is just as good to say that the naturals are isomorphic to such a subset.<p>
+
+It's old-fashioned because modern algebra has moved from the emphasis of the
+subject from the study of sets to the study of homomorphisms, and there one no
+longer finds much benefit in forcing subalgebras to be subsets.<p>
+
+And finally, it's wrong-headed because (and this may sound heretical, but bear
+with me) no one really cares about numbers themselves: they are just a means
+to an end. Here is an example I learned from Paul Taylor (or maybe it was John
+Baez) which illustrates that point, and how numbers are typically used to
+encode phenomena which can be represented more directly if you recognize the
+algebraic structure instead.<p>
+
+Suppose I'm a shepherd and I want to make sure after a day's work that I
+haven't lost any of my flock. You might tell me that I should count (using the
+natural numbers) how many I have in the morning and again at night and compare
+the two numbers for equality.<p>
+
+But do I care about the numbers? No, what I care about is that I have as many
+sheep at the end of the day as I did at the start. I'm not a mathematician,
+I'm just Joe Q. Shepherd, I can't even count, and all I want is to make sure I
+have enough to eat at the end of the month.<p>
+
+To do my job, all I need to do is establish an isomorphism between the flock I
+had at the morning and the flock I have at night. By counting my flock in the
+morning, I am assigning to each sheep a number; by counting my flock in the
+evening, I am assigning to each sheep another number. And note that if I want
+to regard the equality check as the identity, then I have to make sure I
+assign the <em>same</em> number to the <em>same</em> sheep both in the morning
+and at night.<p>
+
+By counting the flocks twice, I am mapping from the morning flock to the
+natural numbers by conjuring up a linear order, to the natural numbers again
+via an iso (which may be the identity), and then to my night flock via another
+artificial linear order. That is a perfectly <em>correct</em> way of doing
+things, but not only does it involve an indirection but it also depends on two
+artificial linear orders which have nothing to do with the problem, only your
+solution. You can eliminate one ordering if you regard the equality check as
+an identity but then again you are overspecifying the problem, because you have
+to assign the same number to the same sheep both times. But who cares about
+how my sheep are numbered? Only an accountant.<p>
+
+The <em>direct</em> way to do this is to forget about the natural numbers, and
+just recognize that what I said at the beginning, that all I need to do is
+establish an iso between the morning and night flock, is basically saying that
+a flock of sheep behaves for my purposes algebraically just like a set. This
+immediately leads to a solution which doesn't require me to know how to count,
+or remember which sheep is assigned which number: every morning tie a rope to
+each sheep and tether one end inside the sheep pen (or to yourself); to check
+that you haven't lost any sheep, just rein each rope in and untie it until there are
+no ropes left. (An eminently constructive solution, don't you think?)<p>
+
+So, the point of this story is that, though you may feel that I am
+complicating things by refusing to identify things unnecessarily, even when
+they are treated that way traditionally, in fact I think I am doing just the
+opposite, and treating them more directly. Just as the shepherd doesn't need
+to know how to count to use this method, a programmer won't have to know
+anything about, say, the theory of ordinals to use a module which implements
+container objects.<p>
+
+<em>This approach needn't prevent one from using abstract types.</em><p>
+
+It doesn't prevent it, but it isn't sufficient to enable it. I suspect that
+the type framework I've outlined provides almost exactly the additional
+conditions which are necessary to do that enabling. In other words, I think
+that if you generalized your framework to allow any type to be made
+abstract, you would basically get my framework (modulo undecidability, which I
+am not willing to admit).<p>
+
+<em>What I mean concretely is that you can hide the implementation of
+"rational numbers" in a module that exposes certain operations (comparison,
+arithmetic, etc), exposes the constrant that they are a supertype of the
+integers, yet still hiding their representation type.</em><p>
+
+So then you get a type, <code>rational</code>, which is isomorphic to a type,
+the representation, yet the representation type is not a subtype of
+<code>rational</code>, or vice versa, so you need to stick in a coercion
+whenever converting back and forth, so you get the same issue you objected to
+in my framework.<p>
+
+<em>Regarding the array subtyping issue you mention:</em><p>
+
+I'm afraid I didn't understand this bit. How did we get to talking about
+variance? My point was that any choice of a subsumption relation (which I
+understand to be the effect of subtyping on values, <em>i.e.</em>, the
+coercion involved) artificially restricts the ways you can implement functions
+which operate on types involved in the subtyping relation.
+<p></p>
+<p><a href='#6633'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Python Metaclass Programming <a name="6640">&nbsp;</a><a href='#6640' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/28/2003; 6:37:34 PM (reads: 1509, responses: 2)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Kimberley:<p>
+
+One researchy attempt along these lines is McAllester's Ontic (<a href="http://www.autoreason.com/ontic-spec.ps">http://www.autoreason.com/ontic-spec.ps</a>).<p>
+
+Unfortunately I've never seen any compilers that apply these concepts to real-world programming languages, but I'm trying to implement one.  My experience so far is that it's achievable, but is difficult to nail down all of the proper typechecking rules and to model real-world programming constructs (like inheritance and open-world programming) from such low-level primitives.<p>
+
+Re counting sheep:<p>
+
+Real-world programming is more about sheep than isomorphisms of sheep.  Are two sheep the same sheep?  Given two sets of sheep, are the sets the same?  Given a set of sheep and a sheep, does the sheep belong to the set of sheep?  What elements belong to the set of all subsets of the set of all sheep?  These are useful concepts for typechecking.<p>
+
+Hiding equality and forcing programmers to deal with explicit isomorphisms is a strictly less useful technique than directly exposing subtyping and type equality.<p>
+
+First, because compilers are capable of pretty impressive verification of subtyping properties, even for really powerful languages (where, though the general problem is undecidable, there is a very expressive decidable subset of the language).  Verifying anything related to isomorphisms is far harder.  Have you tried doing this for serious programming languages?  In a practical implementation, I think you end up with progammers writing a ton of explicit coercions which are claimed to be isomorphisms but in practice are just a bunch of arbitrary functions the programmer hopes are correct isomorphisms.<p>
+
+Second, because most of practical programming practice today requires subtyping.  Any serious app written in C++, Java, or C# would become way more verbose if subsumption were explicit, with explicit coercions all over the place.<p>
+
+I mention that my philosophy on this topic is very much a result of studying McAllester's papers in the past year.  In (mostly minor) language work I did in the 15 years previous to that, my thinking was very similar to yours, that in the ideal type system, types are an utterly distinct from values, that concepts like type equality don't necessarily follow from value equality, etc.<p>
+
+Since then, I've looked at the basic constructs in McAllester's paper as the basic building blocks of future type systems: a type-forming "the-set-of-all" construct, an element extraction construct "an-element-of", types as values, types-of-types available in a structured way ("a-subset-of"), etc.  Sadly the terminology and programming style there tends to obscure the fundamental breakthroughs there.<p>
+
+Re array subtyping:<p>
+
+You had pointed the unnaturalness of "{0..3} &lt; {0..4}" leading to the conclusion that "chararray(4) &lt; chararray(3)".  You used it as an example of the arbitrarity of subtyping.  An alternative view is that subtyping is fine, but there are really two different kinds of function-like things, one where a-&gt;b &lt;: c-&gt;d iff b&lt;:d and c&lt;:a, and the other (call it ~&gt;) where a~&gt;b &lt;: c~&gt;d iff b&lt;:d and c=a.
+<p></p>
+<p><a href='#6640'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Python Metaclass Programming <a name="6645">&nbsp;</a><a href='#6645' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/29/2003; 6:50:01 AM (reads: 1518, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I can see that this discussion is going nowhere and you would need a more
+concrete exposition to be convinced (not surprising), so this will probably be
+my last post on this subject here.<p>
+
+<em>Real-world programming is more about sheep than isomorphisms of
+sheep.</em><p>
+
+First, "real-world" programming as opposed to what?<p>
+
+Second, my type system is much closer to the type systems of ML and Haskell,
+which have been used successfully for many years in practice, than yours,
+which has only seen serious use in theorem provers, and never been applied to
+writing larger applications.<p>
+
+Third (and this is approaching the level of a comedy now, but), my little
+story was not about "isomorphisms of sheep", which makes no sense, but rather
+isomorphisms of sets.<p>
+
+<em>Given two sets of sheep, are the sets the same? Given a set of sheep
+and a sheep, does the sheep belong to the set of sheep? What elements belong
+to the set of all subsets of the set of all sheep? These are useful concepts
+for typechecking.</em><p>
+
+Useful, perhaps, but not sufficient.<p>
+
+For example, the notion of graph isomorphism is more useful than the notion of
+graph equality because, though one may care about what set of nodes and edges
+a graph possesses, the point of forming them into a graph is to express a
+structure which is essentially parametric in the choice of particular
+representatives for nodes and edges, namely the adjacencies.<p>
+
+Equality, membership and containment of objects are problems one wants to
+solve when the objects involved are values. But when the objects involved
+possess additional structure, as is the case with `collections' of
+inter-related objects such as types, the problems one needs to solve naturally
+become more complex.<p>
+
+This is a well-established principle not only in semantics and category
+theory, but also in physics and topology. But, believe me, I know that
+programmers and even many type theorists are not comfortable with it.<p>
+
+<em>Hiding equality and forcing programmers to deal with explicit isomorphisms
+is a strictly less useful technique than directly exposing subtyping and type
+equality.</em><p>
+
+First, I am not necessarily saying that equality is unavailable, but rather
+that the equalities which are imposed on types are all trivial. However, I
+suppose that from your point of view this is the same thing, because the
+equalities you regard as intrinsic I regard as extrinsic. Hence you speak of
+"exposing" subtyping, whereas I regard it as "imposing".<p>
+
+Second, I believe that in my framework I could also force extra
+equalities as you do, without compromising the ability to deal with things up
+to iso, but then I would end up with the same undecidability issues as
+you. So, if you prefer, you can tack on the additional equalities in a
+hypothetical implementation. (However, if I ever implement such a thing, it
+will likely be the last feature I add.)<p>
+
+Third, and most importantly, the point is absolutely <em>not</em> to force
+programmers to deal explicitly with isomorphisms. Indeed, just the
+opposite. It is in <em>your</em> framework that all isomorphisms must be dealt
+with explicitly; to compensate for this fact, you try to <em>avoid the
+need</em> to deal with them by rendering them as equalities
+whenever possible (and it isn't always possible, BTW), and consequently you
+end up limiting your choices of representations and stumbling into
+undecidability problems.<p>
+
+In contrast, in my framework the type checker is aware of a certain class of
+type transformations which preserve a certain class of polymorphic isos which
+are inferrible from their typings. For example, the iso (which I am sure is
+not an equality even in your framework):<p>
+
+<pre>forall a,b,c. (a * b) * c -> a * (b * c)</pre><p>
+
+Because these isos are inferrible from types, they can be inserted
+automatically by the type checker, and hence behave <em>as if</em> they were type
+equations. Because they are <em>uniquely</em> determined, the language of
+types behaves <em>as if</em> it were an equational language, and consequently
+one can compute with types <em>as if</em> they were values, though they are
+not. The price of this is that, if you want to force a type to have a
+particular representation, you must insert an iso explicitly: obviously,
+because you need to specify which representation you wish. OTOH, it becomes
+possible to write code which operates uniformly over all isomorphic
+representations, so if you never force a particular rep, or only force a rep
+at the "beginning" or "end" of your code, you are hardly paying any price at
+all.<p>
+
+<em>First, because compilers are capable of pretty impressive verification of
+subtyping properties, even for really powerful languages (where, though the
+general problem is undecidable, there is a very expressive decidable subset of
+the language). Verifying anything related to isomorphisms is far harder.</em><p>
+
+Sure, checking whether two objects are isomorphic is more difficult than
+checking if they are equal. That's partly why it's a problem worth
+tackling.<p>
+
+<em>Have you tried doing this for serious programming languages?</em><p>
+
+It has already been done for polymorphic lambda-calculus. The problem is not
+computing the isos, but rather figuring out how to factor them out of the rest of
+the type system.<p>
+
+So far, I can do it for non-commutative linear languages, and I think I now
+see how to do it for intuitionistic ones like simply-typed lambda-calculus. From
+there the step to polymorphic lambda-calculi will probably not be too
+difficult.<p>
+
+<em>In a practical implementation, I think you end up with progammers writing
+a ton of explicit coercions which are claimed to be isomorphisms but in
+practice are just a bunch of arbitrary functions the programmer hopes are
+correct isomorphisms.</em><p>
+
+No, the isos are not implemented by the programmer; they are generated by the
+compiler, since they are computable from the types, if you are careful
+to design your type system suitably. I am not interested in all isos, anyway:
+only a certain class called coherence morphisms.<p>
+
+The idea of trusting programmers to write correct code is too horrible to
+contemplate. It has never been part of my plan; the whole idea for the type
+system is partly founded on the fact that these isos are computable.<p>
+
+<em>Second, because most of practical programming practice today requires
+subtyping.</em><p>
+
+Because the only languages practitioners use are ones which make subtyping
+mechanisms convenient, and alternative mechanisms inconvenient, and
+because practitioners are only taught how to exploit subtyping mechanisms.<p>
+
+<em>Any serious app written in C++, Java, or C# would become way more
+verbose if subsumption were explicit, with explicit coercions all over the
+place.</em><p>
+
+Don't program in C++, Java or C# with explicit coercions then. I wouldn't
+try doing higher-order functional programming in these languages either.<p>
+
+Clearly you are fixated on subtyping, but you should know by now that I am
+not. I am not particularly fond of subtyping for the reasons I've already
+indicated, though I'm willing to use it where it makes sense. I did OO
+programming for several years (in industry), and have taught Java to students,
+but I've been programming for many years now in languages like ML and Haskell
+and have found few cases where exploiting subtyping would have led to a
+genuinely better program. So I don't really find arguments predicated on the
+idea that subtyping must be ubiquitous convincing, especially when subtyping
+does not preserve behavior.<p>
+
+<em>I mention that my philosophy on this topic is very much a result of
+studying McAllester's papers in the past year. In (mostly minor) language work
+I did in the 15 years previous to that, my thinking was very similar to yours,
+that in the ideal type system, types are an utterly distinct from values, that
+concepts like type equality don't necessarily follow from value equality,
+etc.</em><p>
+
+Then your experience is opposite to mine, since when I started getting
+interested in PL theory I also thought that dependent types were the bee's
+knees, but as I got deeper into the subject and more widely read, and in
+particular when I started getting into non-elementary category theory, I
+realized that there are more subtle and practical alternatives which (I was
+surprised to learn [and continues to surprise me]) fit quite well with extant
+type systems like ML's, which are used in practice.<p>
+
+Nowadays, dependent types and impredicativity are used like a
+sledgehammer. Whenever someone runs into a problem with their type system,
+immediately you hear, "...but this problem could be solved with dependent
+types." (The same sort of situation holds for partial evaluation.) For
+example, for years people thought that to support printf in a typesafe way
+required dependent types; then Olivier Danvy published 
+<a href="http://www.brics.dk/RS/98/12/">Functional Unparsing</a>.
+The number of
+situations in which dependent types are genuinely required gets smaller every
+year.<p>
+
+It's really not so different from the phenomenon wherein dynamic typing
+advocates complain of the restrictiveness of static type systems. Because they
+sense (perhaps correctly) that one type system is inadequate for expressing a
+particular solution, they declaim static type systems altogether. Every static
+type system will be inadequate for some particular program; we know that. But
+the depths of even relatively restrictive type systems like that of, say, core
+ML (compared to full ML), are not plumbed by most applications written in a
+conventional style, though if you try to carry in conventions
+like optional arguments from dynamic languages, you are certain to run into
+problems. A change of mindset to some degree is necessary.<p>
+
+I think the same situation exists vis-a-vis your framework and
+mine. Undoubtedly my framework is inadequate in some way (actually, I can
+think of one now) that your framework can handle, since decidable type
+checking (and inference) restricts a system's expressiveness in some way. But,
+if you changed your techniques a little bit and thought about programming
+problems a bit differently, I think you would find the limitations are not so
+great in practice.<p>
+
+<em>Since then, I've looked at the basic constructs in McAllester's paper as
+the basic building blocks of future type systems: a type-forming
+"the-set-of-all" construct, an element extraction construct "an-element-of",
+types as values, types-of-types available in a structured way ("a-subset-of"),
+etc. Sadly the terminology and programming style there tends to obscure the
+fundamental breakthroughs there.</em><p>
+
+Maybe I don't know all the details, and I only glanced through McAllester's
+paper, but frankly I have yet to see any way in which your system differs
+significantly from existing dependent type systems like the Calculus of
+Constructions. (The nondeterminism aspect in McAllester's paper seems novel,
+but you haven't mentioned that bit.) If you want to do programming with
+dependent types, you can do it today, with systems like
+<a href="http://pauillac.inria.fr/coq/coq-eng.html">Coq</a>,
+<a href="http://www.dcs.ed.ac.uk/home/lego/">LEGO</a>,
+<a href="http://www.cs.kun.nl/~janz/yarrow">Yarrow</a> or
+<a href="http://www.cs.chalmers.se/~augustss/cayenne">Cayenne</a>. Yarrow even
+supports subtyping. They aren't industrial-strength compilers, but surely you
+can prototype with them and test your ideas. I think you will find that
+dependent typing is better in theory than in practice.<p>
+
+The system I've been describing, OTOH, would be genuinely new. It's largely
+based on ideas from cutting-edge research in higher-dimensional weak category
+theory, developed by some of the smartest people in the world, and has yet to
+bubble down through the computer science community. Some of that work has even
+been motivated by issues in the dependent type systems above, though you will
+have to wade through reams of category theory to discover that fact. It also
+has real applications in other fields, like physics and topology, which shows
+that it is a robust idea.<p>
+
+<em>You had pointed the unnaturalness of "{0..3} &lt; {0..4}" leading to the
+conclusion that "chararray(4) &lt; chararray(3)". You used it as an example of
+the arbitrarity of subtyping. An alternative view is that subtyping is fine,
+but there are really two different kinds of function-like things, one where
+a-&gt;b &lt;: c-&gt;d iff b&lt;:d and c&lt;:a, and the other (call it ~&gt;) where a~&gt;b &lt;: c~&gt;d
+iff b&lt;:d and c=a.</em><p>
+
+So you are saying that you want an array of b's indexed by a to be a
+"function-like thing" of type a~&gt;b? Then you would get no subtyping
+relationship between chararray(3) and chararray(4) at all. How is that an
+argument for subtyping? Because it eliminates consideration of the
+"unnaturalness" I mentioned?<p>
+
+I would rather have a system which was unnatural in the way I mentioned than
+one which puts arbitrary restrictions on array subtyping. Or is there another
+reason you want to restrict the variance of arrays which I didn't get?<p>
+
+I still don't understand things like this (for example):<p>
+
+<em>Invariant functions behave like arrays from a typing perspective: they can
+only be equal if their domains are equal.</em><p>
+
+I think you are confusing the variance of -&gt; with the variance of its
+values.<p>
+
+The type of updateable arrays has to be invariant in the type of elements but
+contravariant in the type of indices/domain, precisely the opposite of your
+~&gt;. (N.B. I did not assume that chararrays are updateable in my earlier post.)
+This means that the type of updateable arrays of elements of type b and
+indices of type a is a subtype of the function type a-&gt;b.<p>
+
+This has nothing to do with the variance of a function used to represent a
+non-updateable array, which information presupposes that the indices and
+elements themselves carry an order, which is sensible for the indices, of
+course since they are usually linearly ordered, but not generally the case for
+the elements.
+<p></p>
+<p><a href='#6645'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Python Metaclass Programming <a name="6646">&nbsp;</a><a href='#6646' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/29/2003; 7:17:10 AM (reads: 1548, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<i>this will probably be my last post on this subject here.</i><p>
+The Silence of the Lambs?<p>
+Could you summarize (with bullets...) how what you envision is different  than the type systems in current functional languages?
+<p></p>
+<p><a href='#6646'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Python Metaclass Programming <a name="6650">&nbsp;</a><a href='#6650' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">4/29/2003; 1:35:27 PM (reads: 1479, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Frank,<p>
+
+This has been a very useful discussion for my understanding of type system decisions.  I'm not making these arguments because I'm confident you're wrong, but because I'm worried that I'm wrong.<p>
+
+I've definitely encountered the broad outlines of the problems you mention, of naked equality (where 3='x' is a valid comparison, a useful degree of typechecking is lost), and of dependent types often being an unnecessarily complex solution to certain problems.<p>
+
+Just a few quick notes:<p>
+
+>> So you are saying that you want an array of b's indexed by a to be a "function-like thing" of type a~>b? &lt;&lt;<p>
+
+Yes.<p>
+
+>> Then you would get no subtyping relationship between chararray(3) and chararray(4) at all. &lt;&lt;<p>
+
+Right; this one point is certainly sound and not speculative.  It turns out this is what you want for arrays, because given an array a~>b where a is a bounded natural number type, one of the fundamental operations you want need is length-extraction.  If the domain is invariant, then you can decidably extract the length of any array value.<p>
+
+With this invariant domain approach, you can precisely specify the type of a 7-character array as "(x:nat&lt;7)-&gt;char", or an unknown-length array of characters precisely as (exists y:nat).(x:nat&lt;y)-&gt;char.<p>
+
+If the domain where contravariant, domain extraction would be more subtle (because the domain could be expanded to be anything), and array comparison would be undecidable.<p>
+
+Continuing this exercise, we have -&gt; for modelling contravariant-domain functions, and ~&gt; for modelling invariant-domain arrays.  What is the covariant-domain version of this?  From the subtyping rule, it's the dependent-pair type constructor!<p>
+
+>> How is that an argument for subtyping? Because it eliminates consideration of the "unnaturalness" I mentioned? &lt;&lt;<p>
+
+This doesn't do much to sell subtyping, it just counters the (true) argument that "modelling arrays as contravariant-domain functions leads to unnatural results" by providing a natural, subtyping-friendly way of modelling arrays.<p>
+
+Of course, as you point out, the big argument against subtyping isn't this, but that subtyping can be regarded as an arbitrary imposition, especially when viewed from a category theory point of view (as opposed to a types-as-sets-of-values point of view).<p>
+
+One final note with regard to subtyping: in a framework like Ontic, it's not really possible to avoid subtyping, because types don't exist as a separate concept, but only as "quoted" (the-set-of-all) nondeterministic collections of potential values.  From a categorical/iso point of view, I suppose this is heresy, but it seems the most powerful and natural way of modelling types if one takes a types-as-sets-of-values point of view.<p>
+
+I will definitely try to rekindle this argument in the future when I can present something much more concrete.
+<p></p>
+<p><a href='#6650'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: Python Metaclass Programming <a name="6673">&nbsp;</a><a href='#6673' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/2/2003; 5:51:40 AM (reads: 1407, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Tim:<p>
+
+<em>This has been a very useful discussion for my understanding of type system
+decisions. I'm not making these arguments because I'm confident you're wrong,
+but because I'm worried that I'm wrong.</em><p>
+
+It's big of you to say that. As I recall, you're in the games industry (is
+<a href="http://www.amd.com/us-en/Corporate/VirtualPressRoom/0,,51_104_5707_7823%5E8320,00.html">this</a>
+you?), and I applaud anyone working in the programming industry who takes a
+serious interest in advanced programming languages (not least because I
+hate buggy games and the modern release-then-patch-ad-infinitum style of
+software development :).<p>
+
+I have the advantage now that I can spend all my time studying and thinking
+about this stuff and also bounce ideas of other people who are interested and
+knowledgeable about PL theory, but I know how hard it is to be an autodidact,
+since I also got into PL theory when I was still in industry.<p>
+
+So, my hat's off to you.<p>
+
+<em>It turns out this is what you want for arrays, because given an array a~>b
+where a is a bounded natural number type, one of the fundamental operations
+you want need is length-extraction. If the domain is invariant, then you can
+decidably extract the length of any array value.</em><p>
+
+It seems a odd to have to fix the variance of the function type just to
+support length extraction, but OK.<p>
+
+Still, your representation of arrays seems rather complex. If it were me,
+working in your system, I would start with the obvious fact that an array of
+b's of length n should be representable as an n-fold product of b', where b'
+is isomorphic to b. (The iso probably needs to be there if you want to nest
+arrays.)  Then I would write a function which takes any type and returns its
+"length" n as a value, and conversely a function which takes a natural and a
+type b and converts it to a type, an n-fold product of b'. And finally
+implement the projections and tuplings.<p>
+
+<em>From a categorical/iso point of view, I suppose this is heresy, but it
+seems the most powerful and natural way of modelling types if one takes a
+types-as-sets-of-values point of view.</em><p>
+
+Category theory is not a religion, so there is no possibility of heresy. :) CT
+is perfectly adequate for treating types up-to-equality, though it is not the
+preferred way of handling things, and indeed there is no shortage of
+categorical models of dependent type systems.<p>
+
+Ehud:<p>
+
+<em>Could you summarize (with bullets...) how what you envision is different
+than the type systems in current functional languages?</em><p>
+
+Probably not. If I had a clearer idea, I would already have an implementation
+running. At the moment, what I know is:<p>
+
+<ul><p>
+
+<li>there is a redundancy in ML-style type systems which can be factored
+out, shifting a burden on the programmer to one on the compiler.<p>
+
+<li>the redundancy is that certain isos are inferrible.<p>
+
+<li>eliminating the redundancy permits writing programs at the type level in
+a way analagous to programs at the value level.<p>
+
+<li>eliminating the redundancy doesn't compromise existing semantic features
+of an ML-like language, but may change the syntax (so I am not 100% sure it
+can be formulated as a backwards-compatible extension).<p>
+
+<li>eliminating the redundancy probably involves introducing a primitive
+notion of `structure', which is a collection of values, collectively typed by
+an environment.<p>
+
+<li>certain lawful datatypes (datatypes which satisfy invariants) can be
+expressed <em>declaratively</em> as programs on types. The type of a type is a
+kind, so these are actually datakinds; certain functions between these kinds
+model rewrites of a normalizing rewrite system which implements the
+laws/invariants.<p>
+
+<li>linearity and monads are essential concepts for realizing this
+semantically, but might be avoidable in the syntax.<p>
+
+</ul></em>
+<p></p>
+<p><a href='#6673'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Python Metaclass Programming <a name="6685">&nbsp;</a><a href='#6685' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/2/2003; 5:50:44 PM (reads: 1389, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+>> Still, your representation of arrays seems rather complex. If it were me, working in your system, I would start with the obvious fact that an array of b's of length n should be representable as an n-fold product of b', where b' is isomorphic to b. &lt;&lt;<p>
+
+In my experimental compiler and type system, I have arrays and n-fold products not only being isomorphic but identical: they are extensional, invariant-domain functions from natural numbers less than some bound to the product's type.<p>
+
+In the case of uniformly typed products, these are simple functions, and in the case of arbitrary products (say int*string*char), they are dependent-typed functions.<p>
+
+The theory of the all this is debatable, but it does work nicely from a practical programming point of view.  Here's a quick view of this in my actual syntax (a blend of C constructs with Pascal-style declarations, in other words very non-Haskell/ML style).<p>
+
+The type of functions from integers to integers.<p>
+
+(:int):int<p>
+
+A function from integers to integers.<p>
+
+(x:int)x+3<p>
+
+Same as above, but with an optional type declaration.<p>
+
+(x:int):int=>x+3<p>
+
+The type of functions from natural numbers in the range 0..3 to integers.<p>
+
+(x:nat&lt;4):int<p>
+
+An actual function like the above.<p>
+
+(x:nat&lt;4):int=>x+7<p>
+
+Recursive function.<p>
+
+f(x:int):int=>if x=0 then 1 else x*f(x-1)<p>
+
+The type of arrays of 4 integers. Arrays are like functions, but the domains subtype invariantly, and they evaluated and typed extensionally.<p>
+
+[:nat&lt;4]:int<p>
+
+Alternate syntax for the same thing.<p>
+
+{:int,:int,:int,:int}<p>
+
+You can give the elements of the array names.<p>
+
+{x:int,y:int,z:int,w:int}<p>
+
+A concrete array of 4 integers.<p>
+
+{3,6,9,12}<p>
+
+Equivalant way of expressing the above. Like lambdas, but for arrays.<p>
+
+[x:nat&lt;4]x*3<p>
+
+A non-uniform array type.<p>
+
+{x:int,y:string}<p>
+
+Equivalant way of expressing that. Note type-dependence.<p>
+
+[i:nat&lt;2]if i=0 then :int else :string<p>
+
+Combining some of the above: A function from 2-element arrays of integers to integers.<p>
+
+(x:int,y:int):int=>(x-1)*(y-1)<p>
+
+Arrays can have recursive value dependence. See Hickey's "Very Dependent Types" paper for elaboration. For example, {4,2} is an element of this type and {5,6} is not.<p>
+
+{x:nat,y:nat&lt;x}<p>
+
+Equivalant to the above.<p>
+
+f{:nat,:nat&lt;f[0]}<p>
+
+Equivalant to the above.<p>
+
+f[i:nat&lt;2]if i=0 then :nat else :nat&lt;f[0]<p>
+
+The type of all pythagorean triples.<p>
+
+{x:nat,y:nat,z:nat=sqrt(x*x+y*y)}<p>
+
+My thinking here is that, without diverging too much from mainstream applications programming language style, you can gain remarkably more statically typecheckable expressiveness by unifying some of the constructs.  Java/C# notions of functions, arrays, structs, and open-world objects are all represented as different sorts of functions differing in domain variance, extensionality, and dependence.
+<p></p>
+<p><a href='#6685'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

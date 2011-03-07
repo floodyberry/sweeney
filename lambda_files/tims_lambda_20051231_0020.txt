@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/1206
+http://lambda-the-ultimate.org/node/1206#comment-13011
+1049782
+Return of the Global Variables?
+Same hack, new name
+<p>Right, public static variables in a class have all of the same semantics as global variables.  It was an interesting tradeoff that the Java designers decided to allow static public variables in classes, but not global variables in packages - because they're essentially the same thing.
+</p><p>It's a good practice to avoid the unnecessary use of global variables and static public class member variables, though they are often hard to avoid.  The Unreal codebase has a number of global variables, including a particularly onerous one named UglyHackFlags.</p>

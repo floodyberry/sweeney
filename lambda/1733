@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Why Johnny can&#039;t code | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1733" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Why Johnny can&#039;t code</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Not particularly academic so hope this isn't too off-topic, but thought this article in the non-geek media (salon.com) might interest some here:</p>
+<p ><a href="http://www.salon.com/tech/feature/2006/09/14/basic/">Why Johnny can't code</a></p>
+<p >'BASIC used to be on every computer a child touched -- but today there's no easy way for kids to get hooked on programming.'</p>
+<p >I have to say that, much as I love more modern higher-level languages (why else would I be here), BASIC was what I grew up on, and really was ideal for picking up a first understanding of what programming is all about. With its global variables, GOTOs and all. It gets the computer obeying your command and following your logic with the absolute minimum learning curve. You don't have to learn any more abstractions than are absolutely necessary in order to feel that power (wow, it actually does what I tell it to, step by step!) and get yourself hooked. </p> </div>
+ <div class="links">By <a href="user/1147" title="View user profile.">citylight</a> at 09/18/2006 - 22:21 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1738" title="SSA + Type Inference = &amp;quot;Compile time&amp;quot; dynamic typing, &amp;quot;runtime&amp;quot; static typing?">previous forum topic</a> | <a href="node/1742" title="What Makes Erlang Processes Tick?">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1733" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2808 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1733" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1733" />
+<a id="comment-21120"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21120" class="active">Early programming languages</a></h3>
+ <div class="content"><p >Early programming languages like BASIC were line-oriented because the user's interface to them was a teletype.  Back then, there were also line-oriented text editors, where you'd type a bunch of lines, and then edit by saying "on line 3, replace 'teh' by 'the'".</p>
+<p >Soon after actual video display terminals arose, text editors became screen-oriented, and programming languages became file-oriented.  Seems like progress.</p>
+<p >Nowadays you'd just learn Visual Basic, Java, JavaScript, or Python rather than line-oriented BASIC.  If you really want to go retro, download the old BASICA interpretter, or an Apple II emulator.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Mon, 09/18/2006 - 22:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21123"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21123" class="active">Nowadays you&#039;d just learn</a></h3>
+ <div class="content"><blockquote ><p >Nowadays you'd just learn Visual Basic, Java, JavaScript, or Python rather than line-oriented BASIC. If you really want to go retro, download the old BASICA interpretter, or an Apple II emulator.</blockquote>
+ Too true -- every high school CS/IT classroom I've been in lately has used VB (most) or Java (few). I'm currently developing a high-school course for Prolog in an attempt to help broaden at least some student's horizons, though I won't be able to try it out in a classroom until some time next year.</p></div>
+ <div class="links">By <a href="user/101" title="View user profile.">Thomas Sutton</a> at Mon, 09/18/2006 - 23:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21127"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21127" class="active">Logo&#039;s fine and imho much</a></h3>
+ <div class="content"><p >Logo's fine and imho much better. I had a painful time growing up on BASIC, I soon realized that I needed to be saved. I taught myself some logo, played with turtles for a while and then felt much better after making recursive drawings.</p>
+<p >I think for kids today, making pictures using programs is a very rich way to teach programming. </p></div>
+ <div class="links">By <a href="user/2917" title="View user profile.">Srikumar Subramanian</a> at Tue, 09/19/2006 - 09:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21128"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21128" class="active">+1 for Logo.</a></h3>
+ <div class="content"><p >+1 for Logo.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Tue, 09/19/2006 - 09:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21176"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21176" class="active">Actually yes</a></h3>
+ <div class="content"><p >I remember enjoying LOGO a lot too. It was never really taught (to me at least) as a programming language, though, more just as a drawing tool for kids to play with the fun robot turtle, and a way to help kids understand angles and geometry. Figuring out how to plot fractal trees with it was interesting, but it has a bit of a higher-level feel to it, and the control flow wasn't quite as blindingly obvious as BASIC's line-numbers and GOTOs. For me at least, as a kid.</p></div>
+ <div class="links">By <a href="user/1147" title="View user profile.">citylight</a> at Thu, 09/21/2006 - 15:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21129"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21129" class="active">For what ages are we talking?</a></h3>
+ <div class="content"><p >Logo might be suitable for younger children...as a teenager, I remember that having the option to use Logo or Basic on the Amstrad 6128, I chose Basic, because it felt a more 'mature' tool, and everything else was coded in Basic too.</p>
+<p >I think though that the Basic model (i.e. a program is a list of commands) is a very simple model that sits well with the young minds...other models like object orientated or functional programming are more complex and therefore maybe unsuitable for first teachings.</p>
+<p >On the other hand, starting with a pure functional language maybe is better in the long run, because the programmer's mind is not 'littered' with the imperative model. I think it is easier to go to imperative from functional than the other way around.</p>
+<p >I think that one of the reasons that 'Johny can't code' is because programming languages are not as accessible as they were. Today's languages include huge and scary IDEs, projects and solutions, huge APIs and a level of knowledge that is scary for beginners. Even the available Basic languages are not that simple. For example, in order to draw something on the screen, the programmer has to open a window, create a class, get a device context etc. And the plethora of choices does not help either.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Tue, 09/19/2006 - 10:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21135"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21135" class="active">Imperative programming has its benefits, too</a></h3>
+ <div class="content"><p ><i >On the other hand, starting with a pure functional language maybe is better in the long run, because the programmer's mind is not 'littered' with the imperative model. I think it is easier to go to imperative from functional than the other way around.</i></p>
+<p >For lots of beginner-type programming problems (e.g., converting a string to an integer), yes, I agree that pure functional programming would be better.  But there's definitely something to be said for incrementally updating data structures and interactively inspecting them.</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Tue, 09/19/2006 - 13:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21130"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21130" class="active">I&#039;ll admit to not reading the article...</a></h3>
+ <div class="content"><p >but I can't help but notice that I'm reading it using a web browser, a tool shipping on every computer and including a full-featured but pretty accessible programming environment (JavaScript).  I'm not sure how it could be said to be any worse than Basic for teaching young coders.  </p></div>
+ <div class="links">By <a href="user/1503" title="View user profile.">Dave Griffith</a> at Tue, 09/19/2006 - 11:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21132"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21132" class="active">Indeed. See here for more</a></h3>
+ <div class="content"><p >Indeed. See <a href="http://rc3.org/2006/09/the_golden_age.php">here</a> for more discussion along these lines.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Tue, 09/19/2006 - 11:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21139"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21139" class="active">JavaScript is not as accessible...</a></h3>
+ <div class="content"><p >Growing up I had regular access to an Apple //e and a TI-99/4A.  Both these computers presented a command prompt where I could play with BASIC commands (including graphical ones), write programs, and dissect and edit other programs.  Web browsers provide no such environment - at best, Firefox's JavaScript console provides a limited REPL, but it's hard to get any good interaction going without a knowledge of HTML and the browser's DOM.</p>
+<p >Of all languages, Python reminds me most of my years learning BASIC.  It provides a REPL, and other programs (including the standard library) can be dissected and learned from.  What's more, it provides online help and a "turtle" graphics interface.  The "RUR-PLE" environment grant mentioned below is a beautiful example of how Python can be used as a teaching tool.</p></div>
+ <div class="links">By <a href="user/1983" title="View user profile.">Chris King</a> at Tue, 09/19/2006 - 17:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21131"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21131" class="active">Logo (including StarLogo and</a></h3>
+ <div class="content"><p >Logo (including StarLogo, StarLogo TNG, and others), Squeak, Scratch, and even Microsoft's Kid's Programming Language are all excellent options for begginers programming environments.  See my related <a href="http://www.peerbox.com:8668/space/start/2006-09-14/1#Easy_Programming_for_Children_(w._pics)">blog entry</a>.</p></div>
+ <div class="links">By <a href="user/549" title="View user profile.">Kevin Greer</a> at Tue, 09/19/2006 - 11:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-21133"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21133" class="active">RUR-PLE</a></h3>
+ <div class="content"><p >I thought the python-based environment <a href='http://rur-ple.sourceforge.net/en/rur.htm'>RUR-PLE</a> looked promising.  It's an update (in spirit only) of the older 'Karel the Robot'.  Of course it's hard now to tell what makes sense to kids who know nothing about programming.</p></div>
+ <div class="links">By <a href="user/2481" title="View user profile.">grant</a> at Tue, 09/19/2006 - 13:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21141"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21141" class="active">Guido van Robot</a></h3>
+ <div class="content"><p >There's also <a href="http://gvr.sourceforge.net/about.php">Guido van Robot</a> which is rather similar but actually creates its own (extremely pythonic) simple language to do things. Stuff like this seems ideal for kids - it's problem solving and games, but involves programming to do it.</p></div>
+ <div class="links">By <a href="user/2373" title="View user profile.">Leland McInnes</a> at Tue, 09/19/2006 - 18:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21134"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21134" class="active">teaching outside of the box</a></h3>
+ <div class="content"><p >teaching to program at the hands of a full fletched programming language seems like teaching to read at the example of a joyce novel.</p>
+<p >modern educational tools like <a href="http://www.swisseduc.ch/compscience/karatojava/">kara</a> avoid this problem and allow entry level education at very young age. kara is a graphical interface for building finite state machines. it teaches the underlying concept of program evaluation (in obviously non-functional context) without the complexity of programming languages.</p>
+<p >the bottom line is:</p>
+<p >learning a programming language is simple. in the end, in comparison to natural languages, it is nothing else but a syntactically and semantically nearly trivial foreign language.</p>
+<p >learning the abstraction of (stateful) programming is the intractable task. there is no former knowledge to built upon for this for pupils.</p>
+<p >there are <a href="http://www.swisseduc.ch/informatik/karatojava/publications.html">english and german papers available</a> on kara and this topic at swisseduc, a highschool grade computer science education institute.</p></div>
+ <div class="links">By <a href="user/2535" title="View user profile.">peter steiner</a> at Tue, 09/19/2006 - 13:34 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-21136"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21136" class="active">Language is almost irrelevant</a></h3>
+ <div class="content"><p >What's important is having an easy to use graphics API. I don't mean easy like GLUT or SDL, say. I mean <em >easy</em>. On my BBC Micro years ago I could type a command to go into a 'high-res' graphics mode and then start interactively typing in graphics commands. Within 5 seconds of switching it on I could have graphics of my own creation on the screen. In a modern OS I have to write a few hundred lines of code just to grab a window reliably, and when I've done that, I can't experiment interactively. Kids need instant feedback. Even the kids of my generation, before ADD had been invented, needed instant feedback.</p></div>
+ <div class="links">By <a href="user/1545" title="View user profile.">sigfpe</a> at Tue, 09/19/2006 - 14:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21138"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21138" class="active">The canvas html element</a></h3>
+ <div class="content"><p >In Firefox, Opera or Safari this is now pretty easy with the canvas element.</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Tue, 09/19/2006 - 16:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-21148"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21148" class="active">Did some googling to find out more</a></h3>
+ <div class="content"><p >I found a canvas tutorial. The canvas is non-interactive (in the sense that you can't type commands into it on at a time and have them executed). You need to fire up a web browser at the same time as a text editor. Obviously you need to understand the concept of a file and a filesystem to actually get the data in the text editor to be the same data read by the web browser. And the simplest example involved several lines of HTML just to get a blank window. <em >I</em>'m happy with this stuff, but I have been programming computers for 30 years. I don't think it's what a young kid is looking for. On the other hand, I was impressed with the relative simplicity of <a href="http://developer.mozilla.org/samples/raycaster/RayCaster.html">this</a> demo. That took my right back to the good old days! So maybe the canvas element would make an excellent second stage after a simpler introduction.</p></div>
+ <div class="links">By <a href="user/1545" title="View user profile.">sigfpe</a> at Tue, 09/19/2006 - 23:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-21150"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21150" class="active">building block, not a solution</a></h3>
+ <div class="content"><p >It is simple to add a nicer interface on top of canvas and a javascript REPL in a single self-contained page. With the appropriate permissions, you can even save the program as a webpage, which I guess you could then upload to myspace, etc. Sounds like a nice weekend hack :)</p></div>
+ <div class="links">By <a href="user/1486" title="View user profile.">pkhuong</a> at Wed, 09/20/2006 - 00:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-21149"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21149" class="active">It&#039;s not that easy.</a></h3>
+ <div class="content"><p >Graphics on the BBC were very easy. Here is one of my first programs. Note that the exclamation marks are not optional:</p>
+<p >PRINT "[shift+f1][shift+f8]EDWARD RULEZ!!!!!!!!!!!!![shift+f0]"</p>
+<p >This printed a message about me in flashing red text. An addition of another [ctrl+f?] allows the text to be mixed with coarse graphics. This is particularly appealing, since it requires next to no knowledge, which is why it was one of my first programs. The next program propably proceeded that line with the SOUND command. </p>
+<p >My point is that the barrier to entry was so low that it was hard to get discouraged and give up.</p></div>
+ <div class="links">By <a href="user/3160" title="View user profile.">Edward Rosten</a> at Wed, 09/20/2006 - 00:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-21152"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21152" class="active">LogoWiki</a></h3>
+ <div class="content"><p >LogoWiki uses the canvas element. It's a neat example of an interactive programming environment in the browser:</p>
+<p ><a href="http://www.logowiki.net/">http://www.logowiki.net/</a></p></div>
+ <div class="links">By <a href="user/1129" title="View user profile.">doublec</a> at Wed, 09/20/2006 - 02:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-21156"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21156" class="active">Thanks for the link! I</a></h3>
+ <div class="content"><p >Thanks for the link! I searched in vain for something like this several times. A wiki like environment for interactively sharing  source code is part of the e-learning vision I articulated recently. Domain specific languages for learning specific subjects should support such a wiki infrastructure (called "wiki-source" in my slides, if you came across them - basically a wikipedia style repository, based on sharing the DSL code, and rendering it automatically). </p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Wed, 09/20/2006 - 07:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-21223"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21223" class="active">I searched a bit and</a></h3>
+ <div class="content"><p >I searched a bit and couldn't find them. Are the slides available somewhere? </p></div>
+ <div class="links">By <a href="user/2600" title="View user profile.">Rafael</a> at Sun, 09/24/2006 - 22:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-21230"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21230" class="active">The slides are here. Alas, I</a></h3>
+ <div class="content"><p >The slides are <a href="http://august.penguin.org.il/AUG5/pres-files/E-Learning-2.pps">here</a>. Alas, I don't think they are very helpful if you weren't there. My presentation mainly includes carious videos (not included in the slide deck), and the slides contain very little information in themselves. There's a bad transcript of the talk available - if you read Hebrew...</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Mon, 09/25/2006 - 12:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21187"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21187" class="active">Well, at least on OS X and</a></h3>
+ <div class="content"><p >Well, at least on OS X and Linux (haven't run windows in ages, I don't know if there's a free easy X11 setup for it), you get something fairly similar to that with tho OCaml graphics module.  Fire up your REPL, enter a <code >#load "graphics.cma";;</code> then <code >open Graphics;;</code> and you're good to go.  Granted, OCaml might be a bit tricky for a young kid (especially when they get to the int/float mismatch -- that makes grown men cranky), but I'd like to think a programming savvy parent could guide one along nicely.</p>
+<pre >open_graph " 600x600";;
+set_color yellow;;
+fill_circle 300 300 200;;
+set_color black;;
+fill_ellipse 225 375 35 50;;
+fill_ellipse 375 375 35 50;;
+set_line_width 5;;
+draw_arc 300 300 100 100 225 315;;
+draw_circle 300 300 200;;
+
+(* let's make a function... *)
+
+let draw_face x y r =
+  set_color yellow;
+  fill_circle x y r;
+  set_color black;
+  let offset = 3 * r / 8 in
+  fill_ellipse (x - offset) (y + offset) (r / 5) (r / 4);
+  fill_ellipse (x + offset) (y + offset) (r / 5) (r / 4);
+  set_line_width (max 1 (r/40));
+  draw_arc x y (r / 2) (r/2) 225 315;
+  draw_circle x y r;;
+
+draw_face 500 500 25;;
+
+(* and so on *)
+</pre><br ></div>
+ <div class="links">By <a href="user/34" title="View user profile.">William D. Neumann</a> at Fri, 09/22/2006 - 15:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21137"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21137" class="active">Teaching Via Programming</a></h3>
+ <div class="content"><p >I think it is worth noting that the ultimate goal of Logo wasn't to teach programming but rather to teach or develop mathematical thinking in kids <i >via</i> programming. I think that the notion of learning via programming can (and should) be extended to other domains. This was the subject of my talk I briefly mentioned <a href="http://lambda-the-ultimate.org/node/1664">here</a>. The approach I envision relies heavily on DSLs, tailored to learning and interacting with specific subjects.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Tue, 09/19/2006 - 15:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-21144"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21144" class="active">Learning</a></h3>
+ <div class="content"><p >I was reading over the comments to this story when it hit slashdot a few days ago.  Someone there (sorry, don't remember who) had made an excellent point as to, perhaps, the real nature of the problem the author was writing about:  simply knowing that's it's even possible.</p>
+<p >In a modern setting, you buy your new machine, take it home, and it boots up to Windows and you've got everything there in front of you to just click on stuff and make things happen.  In the good old days, you turned on the machine and were dropped at a prompt where you had to type commands just to load your favorite games.  That would naturally lead the curious into wondering what else they can type there.  Next thing you know, they're reading BASIC books and making cool little games or whatever.</p>
+<p >I think the author is really lamenting the fact that things aren't like that anymore and while he has the experience required to help his kid(s) get into the technical side of computers, I kind of took away from his article that a part of him is worried about the future as a whole.  What about all the kids who don't have technical parents or influences?  How will those kids even know they can have power over their machines in the first place?  That sort of thing.</p>
+<p >Is there a solution to that?  I don't know.  It's hard to say if it even needs an explicit solution because those who are driven will figure it out somehow.  I think there's enough information out there that simple google searches will lead down a path to programming enlightenment eventually.  It just might not be as obvious or easy as it was way back when.  Or perhaps it just isn't as obvious to those of us who grew up without GUIs.</p></div>
+ <div class="links">By <a href="user/201" title="View user profile.">BigZaphod</a> at Tue, 09/19/2006 - 19:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21153"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21153" class="active">BASIC romantics</a></h3>
+ <div class="content"><p >Glad to notice that at least one person got the point. </p>
+<p >The culture of programming in which BASIC was once a key element is just over. Instead deprived languages such as JavaScript are advocated here and elsewhere, not because they let people "feel the machine" - on the contrary: all <i >modern</i> programming languages are dedicated not to feel it but living in increasingly abstract phantasies instead - but they share some superficial similarities ( simplicity / being widespreaded ). "Controlling the machine" by a single individual is the ideal of another generation which lead not-surprisingly also the political discourse of emancipation. Today software is just another industrial product that requires division of labour for avoiding to be sub-standard. Even the creation of computer games will be guided by scientific theories. This way BASIC turns back as some kind of ghost and as a medieval romanticism: a crufty, spaghetti producing, dark age computing language that lead people less alienated and deprived after all.</p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Wed, 09/20/2006 - 06:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21158"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21158" class="active">Robotics</a></h3>
+ <div class="content"><p >As I understand it, this niche is being neatly filled by Lego Mindstorms and other robotics toys.  Evidently there's more of this going on than I thought, with junior-high robotics clubs and competitions becoming more common.  Robotics has a lot to recommend it over graphics for introductory programming: more interactive, less abstract, absurdly simple programming models, and problems ramping from the trivial to the mind-expanding.  </p></div>
+ <div class="links">By <a href="user/1503" title="View user profile.">Dave Griffith</a> at Wed, 09/20/2006 - 13:30 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-21162"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21162" class="active">Transterpreter</a></h3>
+ <div class="content"><p >This seems like a good time to provide a link to the <a href="http://www.transterpreter.org/wiki/Main_Page">Transterpreter</a>, a runtime that can be used to run programs written in occam on Mindstorms. Apparently they're looking at adding other language support too.</p></div>
+ <div class="links">By <a href="user/1670" title="View user profile.">Allan McInnes</a> at Wed, 09/20/2006 - 16:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21145"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21145" class="active">teach the child how to fish</a></h3>
+ <div class="content"><p >Although today's computers come with web browsers, which in turn come with Javascript, (and moreover most OSes come with gcc), they still omit one thing curiously, and it is also curiously missing in the foregoing discussion: introductory programming tutorials.</p>
+<p >Some of my first computers were BASIC-capable calculators, specifically Casio FX-702P and Sharp PC-1500. Their manuals taught very introductory programming, and some ideas taught were not language-specific. For example, the 702P manual taught flow charts; the 1500 manual advised you to "group only those statements which are conceptually related" (on writing like <code >40 stmt1 : stmt2 : stmt3</code>); both introduced <code >GOSUB</code> as a factoring construct. Each came with a second book full of programs, and one could have a lot to read. Each of course also suggested further, more serious programming books.</p>
+<p >Yes of course similar books are available at bookstores, in libraries, and on the Internet. But from the perspective of a child receiving the gift of a computer package for the first time: what is exposed visibly out of the box is influential to how you think you are expected to play with this new toy. If the manual does not showcase programming, if the desktop icons refer to just surfing and games, you will not be aware of its programmability for a long, long time.</p>
+<p >The solution is easy though. Give the gift of a programming book too (or a URL).</p></div>
+ <div class="links">By <a href="user/76" title="View user profile.">Albert Y.C. Lai</a> at Tue, 09/19/2006 - 19:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-21146"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21146" class="active">MIT&#039;s Lifelong Kindergarten</a></h3>
+ <div class="content"><p >MIT has a research program going on called <a href="http://llk.media.mit.edu/projects.php?id=783">Scratch</a>, a programming language for children.  It's a bit like Flash, with a much more user-friendly GUI.</p>
+<p >They're also developing tutorial videos for using the system <a href="http://llk.media.mit.edu/projects.php?id=1774">here</a>.</p>
+<p >--Bryan</p></div>
+ <div class="links">By <a href="user/2123" title="View user profile.">Bryan Turner</a> at Tue, 09/19/2006 - 19:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-21157"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21157" class="active">Structure editors</a></h3>
+ <div class="content"><p >Other kid-oriented structure editors I've seen are Carnegie Mellon's <a href="http://www.alice.org/">Alice</a> and Berkley's <a href="http://dewey.soe.berkeley.edu/boxer/">Boxer</a>. I do believe assisted realtime manipulation of the AST is the way forward here, providing a level of transparency and safety at input time that you just don't get with the dumb character buffer and separate parse-compile stage of older-style environments. For average computer users it'll be like the difference between DOS and Windows.</p>
+<p >Incidentally, I wonder if Apple might go this route if/when they eventually get around to replacing AppleScript, given that they're already dabbling in this general area with Automator and Quartz Composer. The major OS vendors are in the ideal position for getting these technologies from the research labs onto every user's desktop, after all. I guess the big question will be whether or not they've any motivation to do so.</p></div>
+ <div class="links">By <a href="user/3339" title="View user profile.">has</a> at Wed, 09/20/2006 - 12:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-21183"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1733#comment-21183" class="active">Elementary Pascal</a></h3>
+ <div class="content"><p >One of the more interesting attempts to introduce older programming concepts to young people was the 1982 text, "Elementary Pascal As Chronicled by John H. Watson" by Henry F. Ledgard, which employs the literary conceit of a series of Sherlock Holmes mysteries solved with an analytical engine whose programs were coded in Pascal.</p>
+<p >It would be a most interesting project to update the text to employ a modern language like Scheme if the appropriate copyright permissions could be secured.</p></div>
+ <div class="links">By <a href="user/1565" title="View user profile.">Peter J. Wasilko</a> at Thu, 09/21/2006 - 21:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/08/26" title="Previous month">«</a> September 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/9/1" title="1 post">1</a></td>
+  <td class="day-link"><a href="archive/2006/9/2" title="2 posts">2</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/9/3" title="2 posts">3</a></td>
+  <td class="day-normal">4</td>
+  <td class="day-normal">5</td>
+  <td class="day-normal">6</td>
+  <td class="day-normal">7</td>
+  <td class="day-link"><a href="archive/2006/9/8" title="1 post">8</a></td>
+  <td class="day-link"><a href="archive/2006/9/9" title="4 posts">9</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/9/10" title="1 post">10</a></td>
+  <td class="day-link"><a href="archive/2006/9/11" title="3 posts">11</a></td>
+  <td class="day-link"><a href="archive/2006/9/12" title="3 posts">12</a></td>
+  <td class="day-normal">13</td>
+  <td class="day-link"><a href="archive/2006/9/14" title="2 posts">14</a></td>
+  <td class="day-link"><a href="archive/2006/9/15" title="1 post">15</a></td>
+  <td class="day-link"><a href="archive/2006/9/16" title="2 posts">16</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/9/17" title="1 post">17</a></td>
+  <td class="day-link"><a href="archive/2006/9/18" title="3 posts">18</a></td>
+  <td class="day-normal">19</td>
+  <td class="day-link"><a href="archive/2006/9/20" title="1 post">20</a></td>
+  <td class="day-link"><a href="archive/2006/9/21" title="1 post">21</a></td>
+  <td class="day-link"><a href="archive/2006/9/22" title="1 post">22</a></td>
+  <td class="day-link"><a href="archive/2006/9/23" title="3 posts">23</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/9/24" title="2 posts">24</a></td>
+  <td class="day-normal">25</td>
+  <td class="day-today">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+ </tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1740" title="11 comments">Designing a Programming Textbook</a></li><li><a href="node/1720" title="6 comments">muSE - an embeddable scheme dialect</a></li><li><a href="node/1738" title="10 comments">SSA + Type Inference = &quot;Compile time&quot; dynamic typing, &quot;runtime&quot; static typing?</a></li><li><a href="node/1733" title="33 comments" class="active">Why Johnny can&#039;t code</a></li><li><a href="node/1742" title="5 comments">What Makes Erlang Processes Tick?</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1742" title="5 comments">What Makes Erlang Processes Tick?</a></li><li><a href="node/1740" title="11 comments">Designing a Programming Textbook</a></li><li><a href="node/1738" title="10 comments">SSA + Type Inference = &quot;Compile time&quot; dynamic typing, &quot;runtime&quot; static typing?</a></li><li><a href="node/1735" title="6 comments">Lectures on the Curry-Howard Isomorphism</a></li><li><a href="node/1734" title="4 comments">PeakStream - a multi-core stream processing model</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

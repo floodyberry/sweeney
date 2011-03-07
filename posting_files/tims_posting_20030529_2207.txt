@@ -1,0 +1,55 @@
+http://groups.google.com/group/fa.haskell/browse_thread/thread/d985329d03f17fc5/1a0282521a95b32f?lnk=st&rnum=37&hl=en#1a0282521a95b32f
+[fa.haskell] class MonadPlus m => MonadRing m
+[code]
+class MonadPlus m => MonadRing m where
+    mone :: m a
+    ** :: m a -> m a -> m a
+[/code]
+
+Does anybody have experience with a construct like MonadRing above?  I'm interested in prior implementations, examples of instances, and coherence rules.
+
+A conceptual example: consider ListMonad, used to implement "non-determinism", or computations that may produce multiple values.  In this context, the order or duplication of elements in a list is not significant; we think of them as sets of values:
+
+[code]
+From Functor:
+    fmap f xs -- apply a function to all elements in the set, and collect the results in a set
+
+From Monad:
+    xs>>=f -- apply a set-returning function to all elements of x, and merge all the results into a set
+    return xs -- generate a singleton set containing only x
+
+From MonadPlus:
+    mzero -- the empty set
+    xs++ys -- the union of sets xs and ys
+
+From MonadRing:
+    xs ** ys -- the intersection of the sets xs and ys.
+    mone -- the unit of **. conceptually, "the set of all sets". With
+[/code]
+
+Haskell's type system, this notion isn't feasible with ListMonad directly, but could be used with similar "set-like" monads containing elements drawn from a finite set.
+
+For set-like monads, there is then a further notion of a partial order relation defined by set inclusion.  This could be defined along the lines of "mcontains :: m a -> m b -> m bool".  For ListMonad, mcontains xs ys can be defined as true iff xs contains all elements of ys, in order, allowing arbitrary new elements that happen to occur between them.
+
+I'm not sure of the practical utility of these constructs in the Haskell world, but I've been working with them for a while in an experimental language and have found them very powerful, especially when coupled with first-class types with set-like functionality a la David McAllester "Ontic" language.  In my particular case, I have found the following syntactic sugar to aid a great deal in the readability of complex monad expressions:
+
+[code]
+-- Non-monad constructs:
+
+f(x) -- call function f with parameter x
+let x=v in e -- let-binding.
+
+-- Functor syntactic sugar:
+
+f($x) -- like map f x
+let x$=v in e -- like map (\x -> e) x
+
+-- Monad syntactic sugar:
+
+f(%x) -- like x >>= f
+let x%=v in e -- like v >>= \x -> e
+[/code]
+
+This could be considered a syntactic alternative to the "do" notation and list comprehension notation.
+
+-Tim Sweeney 

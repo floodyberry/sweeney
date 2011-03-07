@@ -1,0 +1,10 @@
+http://groups.google.com/group/comp.graphics.algorithms/browse_thread/thread/ccf2bf8c1b26b9cc/c767019b804af78e?lnk=st&rnum=79&hl=en#c767019b804af78e
+[comp.graphics.algorithms] Re: Direct 3D HAL????
+[blockquote]Hi
+Does anyone know how to bypass Direct3D and get straight to the HAL? This is because I want to support hardware acceleration without using  Direct3D.[/blockquote]
+
+I was looking into this, and I don't think it's possible. In immediate mode, you build "packets" which specify vertices, texture coordinates, and stuff. It looks very much like the D3D hardware driver just takes these packets and does the minimum translation needed to send it to the card. In order words, the HAL is the lowest layer whose inputs are hardware-independent. So, short of programming directly to the a specific piece of hardware, there's no lower level in Direct3D.
+
+Fortunately there doesn't seem to be much overhead in the D3D translation layer.
+
+-Tim 

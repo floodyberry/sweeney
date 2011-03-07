@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/962
+http://lambda-the-ultimate.org/node/962#comment-9534
+1049538
+Distributive laws for the Coinductive Solution of Recursive Equations
+Aha.
+<p>&gt; A List a-algebra over a carrier b is a function List a b -&gt; b 
+</p><p>That makes much more sense now.  Thanks.</p>

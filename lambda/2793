@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Automatic Patch-Based Exploit Generation | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2793" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Automatic Patch-Based Exploit Generation</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+Brumley, Poosankam, Song &amp; Zheng, 2008.  <a href="http://www.cs.cmu.edu/~dbrumley/pubs/apeg.pdf">Automatic Patch-Based Exploit Generation is Possible: Techniques and Implications</a>:
+<blockquote >The automatic patch-based exploit generation problem is: given a program P and a patched version of the program P′, automatically generate an exploit for the potentially unknown vulnerability present in P but fixed in P'. In this paper, we propose techniques for automatic patch-based exploit generation, and show that our techniques can automatically generate exploits for 5 Microsoft programs based upon patches provided via Windows Update. Although our techniques may not work in all cases, a fundamental tenet of security is to conservatively estimate the capabilities of attackers. Thus, our results indicate that automatic patch-based exploit generation should be considered practical. One important security implication of our results is that current patch distribution schemes which stagger patch distribution over long time periods, such as Windows Update, may allow attackers who receive the patch first to compromise the significant fraction of vulnerable hosts who have not yet received the patch.
+</blockquote>
+The technique is based on flow analysis, to test code that gets changed for boundaries where safety properties fail.  The limitations of the technique they have developed automatically generate vulnerabilities for only a small fraction of propagated updates.  Nonetheless I find it astonishing that such a simple analysis can provide such a payoff.  Via <a href="http://www.schneier.com/blog/archives/2008/04/reverseengineer.html">Bruce Schneier</a>. </div>
+ <div class="links">By <a href="user/918" title="View user profile.">Charles Stewart</a> at 2008-04-29 12:35 | <a href="taxonomy/term/6">General</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2793" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 706 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2793" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2793" />
+<a id="comment-41598"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2793#comment-41598" class="active">Ouch</a></h3>
+ <div class="content"><p >This is going to be a very painful revelation for a whole lot of software vendors.</p>
+<p >Given limited and variable bandwidth, the only effective solution is for auto-patching systems to roll out patches in encrypted form, force all online users to shut down the program, and then roll out the decryption keys to users as they (re)start the program or operating system.</p>
+<p >Valve's game distribution system, Steam, employs a similar system for streaming encrypted pre-release software, and then sending out the decryption keys on the release date, to enable staggered rollout without pre-release piracy.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 2008-04-29 20:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-41600"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2793#comment-41600" class="active">Not really; these techniques</a></h3>
+ <div class="content"><p >Not really; these techniques are very brittle in practice. If software can take the performance hit, the code probably can be obfuscated. [It is valid to argue automatic exploitation software will get better, but judging by the slow moving field of program analysis, I don't think that's realistic.]</p></div>
+ <div class="links">By <a href="user/2585" title="View user profile.">lmeyerov</a> at Tue, 2008-04-29 21:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-41601"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2793#comment-41601" class="active">investment v. return</a></h3>
+ <div class="content"><p >It doesn't matter how hard it is from an intuitive perspective.  All that matters is the empirical return on investment.</p>
+<p >-t</p></div>
+ <div class="links">By <a href="user/3938" title="View user profile.">Thomas Lord</a> at Tue, 2008-04-29 23:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="
+http://wiki.squeak.org/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2008/03/29" title="Previous month">«</a> April 2008  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2008/4/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2008/4/2" title="1 post">2</a></td>
+  <td class="day-link"><a href="archive/2008/4/3" title="1 post">3</a></td>
+  <td class="day-normal">4</td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/4/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2008/4/7" title="3 posts">7</a></td>
+  <td class="day-link"><a href="archive/2008/4/8" title="1 post">8</a></td>
+  <td class="day-link"><a href="archive/2008/4/9" title="2 posts">9</a></td>
+  <td class="day-link"><a href="archive/2008/4/10" title="2 posts">10</a></td>
+  <td class="day-link"><a href="archive/2008/4/11" title="3 posts">11</a></td>
+  <td class="day-link"><a href="archive/2008/4/12" title="2 posts">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/4/13" title="2 posts">13</a></td>
+  <td class="day-link"><a href="archive/2008/4/14" title="3 posts">14</a></td>
+  <td class="day-link"><a href="archive/2008/4/15" title="2 posts">15</a></td>
+  <td class="day-link"><a href="archive/2008/4/16" title="2 posts">16</a></td>
+  <td class="day-link"><a href="archive/2008/4/17" title="1 post">17</a></td>
+  <td class="day-link"><a href="archive/2008/4/18" title="1 post">18</a></td>
+  <td class="day-normal">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/4/20" title="3 posts">20</a></td>
+  <td class="day-link"><a href="archive/2008/4/21" title="2 posts">21</a></td>
+  <td class="day-link"><a href="archive/2008/4/22" title="1 post">22</a></td>
+  <td class="day-link"><a href="archive/2008/4/23" title="1 post">23</a></td>
+  <td class="day-link"><a href="archive/2008/4/24" title="2 posts">24</a></td>
+  <td class="day-link"><a href="archive/2008/4/25" title="3 posts">25</a></td>
+  <td class="day-link"><a href="archive/2008/4/26" title="1 post">26</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/4/27" title="1 post">27</a></td>
+  <td class="day-normal">28</td>
+  <td class="day-today"><a href="archive/2008/4/29" title="2 posts">29</a></td>
+  <td class="day-future">30</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2794" title="4 comments">A Cybernetics DSL?</a></li><li><a href="node/2791" title="14 comments">Is Halting Problem Valid for P?</a></li><li><a href="node/1096" title="7 comments">iPod-compatible SICP</a></li><li><a href="node/2754" title="30 comments">Static Analysis for Duck Typing</a></li><li><a href="node/1662" title="80 comments">Lisp Lovers, how would you fix Lisp or bring it up to date?</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2794" title="4 comments">A Cybernetics DSL?</a></li><li><a href="node/2792" title="3 comments">is there anybody knows about the origin &quot;Dope Vector&quot;?</a></li><li><a href="node/2791" title="14 comments">Is Halting Problem Valid for P?</a></li><li><a href="node/2790" title="1 comment">Dao 1.0 preview version is released</a></li><li><a href="node/2789" title="3 comments">Resume using continuations</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

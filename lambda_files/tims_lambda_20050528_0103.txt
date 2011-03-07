@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/740
+http://lambda-the-ultimate.org/node/740#comment-6694
+1049316
+Scrap your boilerplate with class:  extensible generic functions
+URL
+<p>The paper is <a href="http://research.microsoft.com/Users/simonpj/papers/hmap/">http://research.microsoft.com/Users/simonpj/papers/hmap/</a></p>

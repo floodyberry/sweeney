@@ -1,0 +1,43 @@
+http://lambda-the-ultimate.org/classic/message6587.html
+http://lambda-the-ultimate.org/classic/message6587.html#6620
+0530875
+Python Metaclass Programming
+Re: Python Metaclass Programming
+<p>Frank:</p>
+
+<blockquote><div>Every `value' belongs to exactly one type, which never changes; talking about run-time types is meaningless.</div></blockquote>
+
+<p>
+Doesn't this view deny the existance of subtypes?  For example, what one type does the value 7 belong to?  The type of rational numbers, the type of integers, the type of natural numbers, the universal type?</p><p>
+
+In a type system supporting full powerset style subtyping, 7 belongs to, and only to, every type that is a supertype of the type containing just 7.  Full subtyping can be useful in practical programming.  For example, if you have arrays of fixed length, it's useful to have "the type of natural numbers less than n" for every n, so that you can index into arrays with the type system guaranteeing indices are in range (rather than runtime checks that throw exceptions.)</p>
+
+<blockquote><div>Since we never care about the underlying representation, the values</div></blockquote>
+
+<p>
+This implies an absolute separation between types and values, which is the norm in most popular type systems.  But this separation limits the expressiveness of the type system, and I want to go beyond this and be able to intermix values and types freely, for example in dependent types, type-forming operations, and value extraction operations.  This can be done soundly, but requires breaking down the "don't care about underlying values" barrier.</p><p>
+
+Concretely: I want to be able to write functions that take any mix of types and values as parameters, and return any mix of types and values as results.  I want to cartesion-dependent-product up types and values in arbitrary ways.  If you have a natural number i, be it statically known or only dynamically known at runtime, I want to be able to form the type of natural numbers less than i, and use it dynamically, for example in runtime casts, and I want the compiler to verify that everything I do is decidable and typesafe.</p>
+
+<blockquote><div>we never talk about type equality, except trivial equality, but rather type isomorphism: types are isomorphic iff they behave the same way.</div></blockquote>
+
+<p>
+This is certainly the mainstream view.  I prefer to see extensional type equality exist and be exposed as a first-class operation, though it's undecidable in the general case.  (If a compiler is going to accept undecidability in some aspects of typechecking, why not go all the way?)</p><p>
+
+Consider finite types, for example.  Do you consider "the type containing just 3 and 7" to be isomorphic to "the type containing just 'x' and 'z'"? It's easy to come up with a bijection between them, as it is between many conceptually different types (integers and character strings, for example). I don't think type isomorphism gives you much useful information from a type system perspective.</p><p>
+
+On the other hand, knowing whether two types are extensionally equal (or in a subtype relationship) gives you useful information about which values are allowed in which contexts.</p><p>
+
+Andrew:</p><p>
+
+There are logical pitfalls with notions from naieve set theory, such as a universal type ("the type of all values allowed in the language"), a type-of-all-types (itself a type), and Russell's paradox ("T is the type containing all types that don't contain themselves. Does T contain itself?").</p><p>
+
+There are various ways of resolving these problems:</p><p>
+
+- The simplest is to disallow such constructs entirely, which is sound, but reduces the power of the type system.  For practical programming, it's really useful to have a universal type; for dependent-typed programming a "type of all types, itself a type" is very useful.  So foregoing these constructs has a cost.</p><p>
+
+- These is a little bit of work on non-wellfounded set theory and related type theories that eliminate the paradoxes by changing the underlying axiom systems.  Applying such systems to programming languages would be quite speculative.</p><p>
+
+- Type systems like the one in McAllester's Ontic paper achieve a middle ground by exposing tiered types that are sound and almost as useful for practical purposes, but have some limitations.</p><p>
+
+- Finally, if you've accepted the presence of undecidability in your type checker, you can expose true universal types, while masking the paradoxes behind the vale of undecidability.  For example, you can form a "type containing all types that don't contain themselves", and verify that simple types belong to it and that the universal type doesn't belong to it, but it's impossible to decide or prove (within the type system's axioms) whether it belongs to itself.  Not much formal work has been done in this area, but I think it can be made sound, though using such constructs in practice feels quite subversive.</p>

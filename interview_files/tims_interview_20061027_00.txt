@@ -1,0 +1,53 @@
+http://www.firingsquad.com/hardware/directx_10_graphics_preview/page8.asp
+DirectX 10 Preview: The Future of PC Graphics and Gaming
+Tim Sweeney Q&amp;A on DirectX 10
+Firing Squad
+FiringSquad
+
+<q>As a game developer who is used to working on the cutting edge, which new features in DirectX 10 excite you the most?</q>
+
+<a>I see DirectX 10's support for virtualized video memory and multitasking as the most exciting and forward-looking features. Though they're under-the-covers improvements, they'll help a great deal to bring graphics into the mainstream and increase the visual detail available in future games.</a>
+
+<q>Is there anything in DirectX 10 that you couldn't do in DirectX 9.0?</q>
+
+<a>Realistically, DirectX 10 doesn't introduce fundamentally new capabilities, but brings many new features that will enable developers to optimize games more thoroughly and thus deliver incrementally better visuals and better frame rates.
+
+If you look at the long-term graphics roadmap, there have only been a few points where we've gained fundamentally new capabilities. The most visible was the move from DirectX 6, 7 and 8, which in practice were fixed-function, 8-bit rendering APIs, to DirectX 9 with programmable shaders and support for high-precision arithmetic. Most of the in-between steps have brought welcome but incremental improvements, and DirectX 10 falls into that category.
+
+From here on, there is really only one major step remaining in the evolution of graphics hardware, and that's the eventual unification of CPU and GPU architectures into uniform hardware capable of supporting both efficiently. After that, the next 20 years of evolution in computing will just bring additional performance.</a>
+
+<q>A lot has been made about the speed boost DirectX 10 will bring over DX9. In part due to the new driver model and in part due to other efficiencies. In your position you get to work with the latest hardware; can you tell us without violating any NDAs if these speedups are realistic or not? Will we really see a 6X increase in games or is this all theoretical?</q>
+
+<a>We don't have hard data yet, but it looks like there's potential to reduce the CPU cost of submitting rendering by a factor of 2-4. Since DirectX9 games are often CPU-limited, this should lead to significant visible improvements in frame rate.
+
+More important, this lower overhead will enable us to render more objects per frame and increase the visual complexity of scenes in a more organic way than simply adding more polygons to existing objects.</a>
+
+<q>Based on what you've seen with DirectX 10, do you think it will be easier for game developers to program for than DirectX 9 was? If yes, which features really stand out?</q>
+
+<a>You can't really use the word "easier" in conjunction with supporting DirectX 10. Because it's only available on Windows Vista and not XP, all developers who support it will have to continue supporting DirectX9, and henceforth maintain two versions of the rendering code in their engine. It's worth doing this, and we're doing it for Unreal Engine 3. But, far from making our lives easier, it brings a considerable amount of additional development cost and overhead to PC game development.</a>
+
+<q>With games using higher resolution textures and screen resolutions also going up, memory bandwidth is sucked up quickly, particularly on lower-end cards with slower graphics memory. How big of a problem is this and should hardware developers be focusing more of their time on solving this problem than on adding more functions to the GPU such as physics?</q>
+
+<a>PC games deal with bandwidth differences between the high-end and low-end quite effectively by scaling our video resolutions. Today's games generally support resolutions from 640x480 up to 2560x1600, which means we can easily scale by a factor of 13 in frame buffer bandwidth.
+
+Talk of "adding physics features to GPUs" and so on misses the larger trend, that the past 12 years of dedicated GPU hardware will end abruptly at some point, and thereafter all interesting features -- graphics, physics, sound, AI -- will be software problems exclusively.
+
+The big thing that CPU and GPU makers should be worrying about is this convergence, and how to go about developing, shipping, marketing, and evolving a single architecture for computing and graphics. This upcoming step is going to change the nature of both computing and graphics in a fundamental way, creating great opportunities for the PC market, console markets, and almost all areas of computing.</a>
+
+<q>We know that Unreal Engine 3 was largely developed with shader model 3.0 in mind, but do you plan on adding any DirectX 10 aspects into Unreal Engine 3 and ultimately Unreal Tournament 2007 or is that coming in UE4?</q>
+
+<a>Unreal Engine 3 will make full use of DirectX 10, and many of our and our partners' games will ship in 2007 with full support for DirectX 10 and Windows Vista. But, despite the marketing hype, DirectX 10 isn't all that different from DirectX 9, so you'll mainly see performance benefits on DirectX 10 rather than striking visual differences.</a>
+
+<q>What are some of the things you would have liked to have seen Microsoft add to DirectX 10 that aren't in there currently?</q>
+
+<a>Microsoft made the right key decisions in developing DirectX 10. They invested heavily in a couple of bold operating-system-wide initiatives, including video memory virtualization and support for preemption, and introduced many welcome incremental improvements.
+
+Ultimately, the DirectX 10 feature set resulted from about 7 years of discussion with key game developers. A lot of major ideas were proposed, including a multi-year effort by John Carmack to lobby for video memory virtualization. The features that didn't make it into DirectX 10 either weren't particularly beneficial, or clearly weren't practical for this timeframe.</a>
+
+<q>We know that the first games that are capable of taking advantage of some of DX10's features will ship next year. But how long do you think it will take before games require DirectX 10? When should gamers really care about this new API, when will it really begin to affect them?</q>
+
+<a>Requiring DirectX 10 is tantamount to requiring Windows Vista, and we have a lot of historical data we can use as a guide to such transitions. 2006 is the first year where it became economical for developers to ship games that don't support Windows 98 and Windows ME, which implies that an operating system has a 6-year lifespan.
+
+Vista will ship in 2007, so mainstream games that require it should start appearing in 2012 or 2013. So much can happen in that kind of time period that we ought not even consider it.
+
+DirectX 10 is a good and solid step forward for graphics, but it's very much an evolutionary thing, and for a game shipping holiday 2007, DirectX10 will represent maybe 10% of a typical game's customer base, say 35% Xbox 360, 35% PC, 30% PS3 (which will still be ramping up then), with one-third of the PC owners having new computers running Windows Vista with DirectX10 GPUs, and the other two-thirds either running XP or running Vista on DirectX9 hardware. I want to point this out in advance, since the marketing around DirectX 10 exceeds the (good but not revolutionary) reality.</a>

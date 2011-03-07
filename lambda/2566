@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>A Growable Language Manifesto | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2566" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>A Growable Language Manifesto</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >This is my first LtU post, so I need a quick introduction.  I've been an LtU lurker for years.  My career has been very applications-focused, and the last compiler I wrote was in high school, but nonetheless I've always been interested in programming languages and their design.  In previous lives I worked with Mark Miller (at Xanadu and Electric Communities) and Doug Crockford (also at Electric Communities).</p>
+<p >Recently I've been seeing a large amount of interesting work on gradual typing, partial typing, aggressive alias analysis, type inference, static metaprogramming, extensible parsing, type qualifiers, modular grammars and compilers, and all kinds of other techniques.  It seems to me that a lot of these fields of research are actually very synergistic.  And moreover, it seems to me there's room for a language design that is based on these concepts from the ground up.  </p>
+<p >What would it look like to create an extensible grammar and declarative compiler environment that, for example, defined primitive integers as a modular type extension on top of a very small dynamic core, and built the whole language up incrementally?  Or that supported adding multiple varieties of type qualifiers as an integrated part of the compiler's basic type analysis?  Or that allowed type declarations to be inferred wherever possible, while letting the programmer choose whether to view the inferred types and/or augment them with explicit declarations (at module boundaries, perhaps)?  In other words, what if you rolled all these different techniques together?  What would you get?</p>
+<p >I've written a fairly weighty blog post, <a href="http://blog.robjsoftware.org/2007/12/growable-language-manifesto.html">A Growable Language Manifesto</a>, that tries to relate these various fields in a bit more depth.  The manifesto itself may or may not be persuasive -- I'm sure you'll tell me :-)  But hopefully, if nothing else, the references will be interesting; I've tried to cite a fairly wide variety of sources (many of which have appeared here, but not collected).  </p>
+<p >I'm interested in any and all pointers to similar work.  I'm not claiming originality here -- obviously these ideas are gaining traction in many places.   I'm just suggesting they may work together remarkably well.</p>
+<p >I also know that there are huge potential pitfalls with this kind of extensible system -- including rampant forking of the language (everyone creates their own mini-DSL and no one can read anyone else's code), inadequate explicit typing (if strong typing is optional people may not bother to use it at all and the inferencer may fall behind), and the "declarative penalty" (sometimes easy imperative optimizations or analyses are next to impossible to state declaratively).</p>
+<p >But even still, the vision is compelling.  (To me, anyway!)  As with all manifestos, the goal is to be thought-provoking.  I look forward to wherever the discussion goes!</p> </div>
+ <div class="links">By <a href="user/4979" title="View user profile.">RobJellinghaus</a> at 2007-12-07 00:38 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/2562" title="poll: syntax">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2566" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 1418 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2566" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2566" />
+<a id="comment-38572"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38572" class="active">Brief typo</a></h3>
+ <div class="content"><p >I had a typo in the URL for about ninety seconds.  Fixed.</p></div>
+ <div class="links">By <a href="user/4979" title="View user profile.">RobJellinghaus</a> at Fri, 2007-12-07 00:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-38575"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38575" class="active">What&#039;s really missing</a></h3>
+ <div class="content"><p >I disagree with much of this, but I can understand where you're coming from because I believed as you did not too long ago. The more I read and the more software I write, the more I realize that extensible grammars, partial type systems, and all forms of unchecked dynamism and partiality are actually a burden.</p>
+<p >I think there are only 3 features missing from statically typed languages which are preventing them from taking over the world:</p>
+<ol >
+<li ><strong >Standard support for safe dynamism and polytypism:</strong> by this I mean the ability to load and unload code and types dynamically, with the code properly checked against an expected type signature and safe failure semantics. Not a small thing to ask for, but very necessary. I group polytypism with dynamism, because many forms of dynamism can be achieved via polytypic functions. My personal opinion is that polytypism with runtime compilation subsumes all forms of dynamism, but I haven't proven that yet. ;-)</li>
+<li ><strong >Statically checked runtime compilation with garbage collected code:</strong> runtime compilation of some sort is becoming absolutely necessary for implementing certain types of efficient abstractions (embedded DSLs). This is somewhat related to #1, in that code loading can be achieved by runtime compiling a bytecode representation. MetaOCaml supports runtime codegen, but not garbage collected code; besides, it's still a research vehicle. In a non-multistaged language, this means the compiler is available at runtime as in Java/C#, but can be used safely. Oleg's recent <a href="http://lambda-the-ultimate.org/node/2438">Tagless Staged Interpreters for Simpler Typed Languages</a> shows the way.</li>
+<li ><strong >Safe concurrency and distribution:</strong> there is currently no statically checked language with a good story for concurrency. JoCaml has <em >just</em> started up again, but they're missing important features. Concurrent ML has been around for awhile, but who's really programming in that? And there's no distribution there. <a href="http://lambda-the-ultimate.org/node/2482">Manticore</a> looks promising, but they're just getting started. STM is a non-starter, because I think the problems of concurrency and distribution are so closely related, that you might as well solve both at once. This is also related to #1 and #2, in that distribution and mobility can be achieved via dynamism and runtime compilation.</li>
+</ol>
+<p >All of the above features are provided by mainstream languages, albeit via unsafe, ad-hoc mechanisms, ie. reflection, casting, runtime codegen, and threads and remoting respectively. No single statically typed language provides all of them, and any one feature that is available is incomplete, experimental and/or unsupported. This is not intended as a knock against these languages, just a description of the reality that people who want to use these languages for general programming face.</p>
+<p >If a language like OCaml maintains its current feature set and further provides the above features, there is absolutely no compelling reason to go with Java or C#, other than libraries; and we all know that the need for so many libraries is drastically reduced in a more expressive language like OCaml than in Java/C#.</p>
+<p >Even if added incrementally, each above feature will attract a large swath of attention on its own, just like dynamic code loading is for the upcoming OCaml release. I think the answers to the above challenges are: 1. bytecode representation for code load/unload and polytypic programming via representation types ala RepLib, 2. multistaging with runtime support for code GC, or at least reifying the compiler at runtime via Oleg's Symantics interface, 3. Join calculus for concurrency and distribution. Each is simple, safe, and orthogonal to the other features. The whole is greater than the sum of its parts.</p>
+<p >If you'll allow my soapbox for a moment, one issue which <em >no</em> language in widespread use gets right is security (E is not in widespread use ;-). Close the language's security holes as <a href="http://www.skyhunter.com/marcs/emilyWalnut.html">Emily does for OCaml</a> and I couldn't ask for anything more.</p>
+<p >As for extensible grammars, partial/optional typing, and any such form of non-structured extensibility: it degrades simplicity and the use of code to communicate ideas. If programming has taught me anything, it's taught me that a language should be simple, expressive, and safe.</p>
+<p >Try quantifying new features against those three properties. For instance, increasing the strength of typing can increase expressiveness and safety, but sometimes harms simplicity (see Haskell vs OCaml, or <a href="http://lambda-the-ultimate.org/node/174">first-class labels</a>); sometimes the tradeoff is worth it. Optional typing may sometimes increase expressiveness somewhat, but harms safety and simplicity. Extensible grammars again can slightly increase expressiveness while maintaining safety, but again deteriorates simplicity. Safe runtime compilation + safe dynamism is safe metaprogramming, so I'll agree with you on that point. :-)</p></div>
+ <div class="links">By <a href="user/2352" title="View user profile.">naasking</a> at Fri, 2007-12-07 02:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38581"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38581" class="active">Clean</a></h3>
+ <div class="content"><p >Perhaps you should take a look at Clean.</p></div>
+ <div class="links">By <a href="user/3240" title="View user profile.">lennart</a> at Fri, 2007-12-07 11:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38585"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38585" class="active">I have.</a></h3>
+ <div class="content"><p >I have.</p>
+<p >1. No runtime compilation.<br >
+2. Concurrency is not integrated in the standard compiler (according to their <a href="http://clean.cs.ru.nl/download/Clean20/doc/CleanRep2.0.pdf">language report</a>). I'm aware of Concurrent Clean, but if it's not integrated, it's of no use to most people. That language report says they're working on distribution and concurrency based on Dynamics, so hopefully we'll see something soon.</p>
+<p >I suspect the convenience of a portable bytecode may a big bonus for most people, but it's probably not strictly necessary. I'm also somewhat skeptical that a lazy language will go mainstream, but I don't think it's a show-stopper if they can make it safe enough (by which I mean, the developer can reason about resource use).</p>
+<p >I'm also skeptical of any non-free languages; given so many free alternatives, I think any language that requires a commercial license for commercial use will never become "mainstream". Which isn't to say the devs can't make a good living off it even if it stays a small player.</p>
+<p >[Edit: section 8 on Dynamics says runtime compilation and linking is necessary for full Dynamics support, but a) full Dynamics are not available yet, and b) there's no way to control compilation ala staging.]</p></div>
+ <div class="links">By <a href="user/2352" title="View user profile.">naasking</a> at Fri, 2007-12-07 14:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-38587"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38587" class="active">Clean is LGPL</a></h3>
+ <div class="content"><blockquote ><p >
+I'm also skeptical of any non-free languages; given so many free alternatives, I think any language that requires a commercial license for commercial use will never become "mainstream".
+</p></blockquote>
+<p >Clean has a <a href="http://clean.cs.ru.nl/Download/License_Conditions/license_conditions.html">dual license</a>. It's free under the <a href="http://www.gnu.org/copyleft/lesser.html">LGPL</a> license. Note that LGPL is more liberal than GPL under which many other systems are distributed.</p>
+<p >If you don't want to be bound by the LGPL conditions you can buy a commercial license, for example if you don't want to distribute your changes as source code.</p></div>
+ <div class="links">By <a href="user/1238" title="View user profile.">Ronny Wichers Schreur</a> at Fri, 2007-12-07 14:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-38589"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38589" class="active">I was under the impression</a></h3>
+ <div class="content"><p >For some reason I was under the impression that it was licensed similarly to Qt, LGPL for free software but with a commercial license for commercial software. I don't see that restriction on their <a href="http://clean.cs.ru.nl/Download/License_Conditions/license_conditions.html"> licensing page</a> though, so I believe you're right.</p></div>
+ <div class="links">By <a href="user/2352" title="View user profile.">naasking</a> at Fri, 2007-12-07 15:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-38592"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38592" class="active">My understanding of the LGPL...</a></h3>
+ <div class="content"><p >
+...is that means that as long as you don't modify the Clean runtime itself (those pieces of copyrighted code which are included in a standalone compiled Clean application), you can publish programs written in Clean in pretty much any fashion you like (GPL, proprietary, etc).  Changes to Clean itself, or to its libraries and such, must be redistributed as source per LGPL; otherwise you must purchase a license.</p>
+<p >Is that how the Clean developers understand things?  After all, the purpose of the LGPL is mainly to support free system libraries (OS, language runtime, etc) which don't constrain applications written on top of them; but to prevent proprietary forks of the underyling system.</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Fri, 2007-12-07 17:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-38601"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38601" class="active">3 and 4 from the perspective of mass adoption</a></h3>
+ <div class="content"><p >3. no debugger and no plans for one. (see ghci.)<br >
+4. the ide is... i'll just say quaint, at best. (see eclipse support for erlang, scala, etc.)</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Fri, 2007-12-07 19:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-38602"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38602" class="active">Debuggers are somewhat</a></h3>
+ <div class="content"><p >Debuggers are somewhat overrated, and safer languages reduce the need for such debuggers. Even a dynamically typed language like Ruby doesn't have a debugger, and it's garnering lots of attention.</p>
+<p >I admit that "intellisense" support in an IDE is pretty darn useful, but if the language is safe and useful without it, lack of an IDE won't prevent wider adoption.</p></div>
+ <div class="links">By <a href="user/2352" title="View user profile.">naasking</a> at Fri, 2007-12-07 20:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-38611"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38611" class="active">being pedantic re: Ruby</a></h3>
+ <div class="content"><blockquote ><p >Ruby doesn't have a debugger</p></blockquote>
+<p >I think Ruby has had a debugger kinda for ever via the "-rdebug" flag? And has even had <a href="http://blog.nanorails.com/articles/2006/07/14/a-better-rails-debugger-ruby-debug">development</a> in that area to improve things over time.</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Sat, 2007-12-08 01:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-38613"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38613" class="active">Re: Debuggers overrated</a></h3>
+ <div class="content"><p >It probably comes down to something of a semantics game regarding the idea of popular acceptance and up-take. My guess (based of course on my own list of things I require from a system) is that a system without a debugger won't be e.g. used for much serious production code these days. But I dunno that it can be much more than an "is too! is not!" kind of conversation?</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Sat, 2007-12-08 01:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38621"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38621" class="active">There are only 3 features missing</a></h3>
+ <div class="content"><p >naasking: <i >I think there are only 3 features missing from statically typed languages which are preventing them from taking over the world</i></p>
+<p >I totally agree with what you are saying - of course, because (sorry for the plug...) adding these features to an ML-like language in a safe and sane manner was precisely the motivation for the Alice ML project. :-) AFAICS, it provides most things from your list: type-safe module dynamism like you suggest, first-class components, lightweight concurrency and safe distribution, and also code pickling, mobility and garbage collection on the granularity of individual functions. What it doesn't have is staged compilation (but you can safely invoke the compiler at runtime), and full support for polytypism (it is there in a way, but not exposed to the programmer). And of course, we cannot really claim that it is a mature production-quality system.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Sat, 2007-12-08 09:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38657"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38657" class="active">[OT] Mac OS X PPC Alice Build</a></h3>
+ <div class="content"><p >Andreas, when you can spare a moment, could you possibly e-mail me whatever you may know about building Alice from source on Mac OS X PowerPC? Thanks!</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sun, 2007-12-09 16:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-38675"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38675" class="active">[OT] Email</a></h3>
+ <div class="content"><p >Paul, did you get my mail yesterday? I wasn't sure about the email address.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Mon, 2007-12-10 10:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38724"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38724" class="active">Nice counter-manifesto, naasking :-)</a></h3>
+ <div class="content"><p >Your reply was a not inconsiderable fraction of my manifesto, so I guess I succeeded in provoking some thoughts!</p>
+<p >Edit: I see you already agreed with me that safe runtime compilation + safe dynamism = safe metaprogramming.  So, yes, extensible static languages should support safe metaprogramming inherently.  In fact, one of the goals of my manifesto is to point out the basic similarity between safe metaprogramming and static language extension -- they are inherently very similar.</p>
+<p >I'm not familiar with the term "polytypism".  Can you give some good references there?</p>
+<p >Overall, I think one of my interests in extensible grammars / declarative compiler structures is just generally to facilitate easier  development of compilers themselves.  There's an interesting continuum between a compiler that is flexible enough to allow layered types (qualifiers, etc.) to be implemented using the compiler's own type structure, versus a compiler that is implemented with a declarative framework permitting new type systems to be implemented in that metalanguage.  That's one of the other points of my manifesto:  that extensible languages form a design space occupied at one point by the <a href="http://lcsd.cs.tamu.edu/2006/">C++-oriented library-centric software design</a> practitioners, and at another point by the extensible compiler work such as xtc, JastAdd, and Polyglot.</p>
+<p >So your main issue with my manifesto seems to be that I'm advocating gradual / partial typing as a key component of a growable language.  I agree this is probably the most contentious suggestion in there, and the one which raises the greatest risk, since it opens the door to voluntary divergence from almost all typing discipline.  I think a more fundamental point is that a truly growable language should build <i >all</i> of its static typing infrastructure in an extensible and modular way, even if that infrastructure is not optional once constructed.  (Another point is that partial typing enables undecidable type systems; I find the <a href="http://sage.soe.ucsc.edu/sage-tr.pdf">SAGE work on undecidable typing</a> fundamentally interesting here.)</p></div>
+ <div class="links">By <a href="user/4979" title="View user profile.">RobJellinghaus</a> at Tue, 2007-12-11 00:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-38726"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38726" class="active">I&#039;m not familiar with the</a></h3>
+ <div class="content"><p ><i >I'm not familiar with the term "polytypism". Can you give some good references there?</i></p>
+<p >Polytypism is also known as "datatype-generic programming" and "generics" (not C# generics which is really parametric polymorphism). Polymorphism generalizes a function to all types, and polytypism defines a generic function on the structure of types. So type-safe serialization, pretty printing, parsing, etc. are all polytypic operations. See: <a href="http://lambda-the-ultimate.org/node/1160">What is polytypic programming?</a></p>
+<p ><i >I think a more fundamental point is that a truly growable language should build all of its static typing infrastructure in an extensible and modular way, even if that infrastructure is not optional once constructed.</i></p>
+<p >Perhaps we have a disconnect in terminology then. <a href="http://lambda-the-ultimate.org/classic/message12290.html#12633">This post</a> may persuade you that a type system is essential to a language, rather than an add-on. If by "building a type system in a modular way", you mean being able to exploit the type system to verify certain invariants, you will be interested in <a href="http://lambda-the-ultimate.org/node/1635">Lightweight Static Capabilities</a>, and "refinement types". For the latter, you have to start with a powerful type system.</p></div>
+ <div class="links">By <a href="user/2352" title="View user profile.">naasking</a> at Tue, 2007-12-11 01:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-38604"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38604" class="active">Nice Manifesto</a></h3>
+ <div class="content"><p >But be careful with expectations of extensible types features, metareflection, and dynamic typing.  They conspire globally against counter type soundness and universal properties that are desirable for program verification and concurrency.</p>
+<p >Taken to their logical conclusion, you get things like LISP, SmallTalk, C# with LINQ and lose sight of the extensional meaning of your code as it's intractable intertwined its metareflective representation, pointer identities, the uncheckable exceptions it might throw, the interact with macros and syntax extensions which may transform it into something entirely different, etc.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 2007-12-07 21:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-38723"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2566#comment-38723" class="active">I wasn&#039;t advocating pure dynamism</a></h3>
+ <div class="content"><p >I tried to be somewhat clear that a growable language (in my manifesto's characterization) should promote <i >static</i> metaprogramming, not unrestrained dynamic runtime self-modification, for exactly the reasons you cite.</p>
+<p >It seems to me that extensible typing and static checking actually go hand in hand.  After all, ownership type systems,  integrated theorem provers (a la <a href="http://matt.might.net/papers/might2007lfa.pdf">Matthew Might's LFA analysis</a>, which you yourself provided the motivating example for!), and other kinds of augmented type systems are all conceptually extensions of the typechecker.  So I'm confused about how those kinds of extensions fundamentally "conspire globally against... universal properties that are desirable for program verification".  My entire point is that extensible type systems basically <i >are</i> layered program verifiers!</p>
+<p >Also, I'm not clear on why you bundle Smalltalk together with C#/LINQ.  Meijer is doing his best to <a href="http://research.microsoft.com/~emeijer/Papers/oopslafp017-bierman.pdf">formalize the C# / LINQ extensions</a> and clarify their static meaning; they explicitly are not implemented by arbitrary runtime code modifications (as with Smalltalk / Ruby / Python metaprogramming).  It's that kind of explicit, static internal transformation that seems to me to potentially <i >enhance</i> the language's extensional meaning.  </p>
+<p >Or are you saying that domain specific languages (e.g. SQL syntax mixed into VB.NET code) inherently compromise the extensional readability of your code?  That's an interesting argument, and one that my manifesto explicitly avoids... as I said in the original post here, I'm aware that readability fragmentation is an inherent risk, but I'm not convinced that makes the challenge untenable.</p></div>
+ <div class="links">By <a href="user/4979" title="View user profile.">RobJellinghaus</a> at Tue, 2007-12-11 00:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="
+http://wiki.squeak.org/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2007/11/10" title="Previous month">«</a> December 2007  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2007/12/1" title="1 post">1</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2007/12/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2007/12/3" title="2 posts">3</a></td>
+  <td class="day-link"><a href="archive/2007/12/4" title="3 posts">4</a></td>
+  <td class="day-link"><a href="archive/2007/12/5" title="4 posts">5</a></td>
+  <td class="day-link"><a href="archive/2007/12/6" title="2 posts">6</a></td>
+  <td class="day-link"><a href="archive/2007/12/7" title="2 posts">7</a></td>
+  <td class="day-normal">8</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-normal">9</td>
+  <td class="day-today"><a href="archive/2007/12/10" title="1 post">10</a></td>
+  <td class="day-future">11</td>
+  <td class="day-future">12</td>
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+  <td class="day-future">15</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2566" title="18 comments" class="active">A Growable Language Manifesto</a></li><li><a href="node/2562" title="70 comments">poll: syntax</a></li><li><a href="node/2568" title="64 comments">functions, statements, expressions</a></li><li><a href="node/2556" title="5 comments">Subtext 2 Video</a></li><li><a href="node/2567">Haskell, Turned Up To Eleven</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2568" title="64 comments">functions, statements, expressions</a></li><li><a href="node/2567">Haskell, Turned Up To Eleven</a></li><li><a href="node/2566" title="18 comments" class="active">A Growable Language Manifesto</a></li><li><a href="node/2565" title="4 comments">Weak normalisation theorem for typed lambda-calculus</a></li><li><a href="node/2562" title="70 comments">poll: syntax</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

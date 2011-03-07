@@ -1,0 +1,15 @@
+http://lambda-the-ultimate.org/classic/message7298.html
+http://lambda-the-ultimate.org/classic/message7298.html#7304
+0531586
+Sun, Zend push scripting for Java
+Re: Sun, Zend push scripting for Java
+<blockquote><div>Are we witnessing convergence in the field of programming languages?</div></blockquote>
+
+<p>
+You can compile any language down to 8086 assembler code.  When Intel released the 8086, did we witness convergence in the field of programming languages? :-)</p><p>
+
+What we're seeing is just Turing-completeness and a reasonable enough design so that translated code didn't suffer horrible performance penalties.  This is all that's really necessary for all existing languages to target your platform.</p><p>
+
+This is actually a good thing for language diversity.  If you're a language creator, you'll likely find it far easier to target these runtime environments than to generate assembly code, and you'll likely see far better performance from these runtimes (with their JIT compilation) than if you write your own interpretter.</p><p>
+
+But let's not read more into the CLR and JVM than is there.  They're just targets for which your compiler can generate object code, as are X86 and PowerPC.</p>

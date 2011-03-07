@@ -1,0 +1,25 @@
+http://groups.google.com/group/rec.games.programmer/browse_thread/thread/e902d7e328133ffd/e3d5df6eb10e3fc9?lnk=st&rnum=80&hl=en#e3d5df6eb10e3fc9
+[rec.games.programmer] Re: Elegant Crash in DirectX
+[blockquote]Hope I'm posting to the right place.  Does anyone know a way to elegantly crash in Win95 with DirectX running?  I find that when my app crashes (Release version) while having control of the screen, the user has to reboot to get his/her screen back.
+
+Is there a way to cast and catch an exception which leads to a code fragment for closing down directx?[/blockquote]
+
+[code]
+void main(void)
+{
+ // Set up DirectX here and go into fullscreen mode.
+ try
+ {
+  // Call your game here.
+ }
+ catch(...)
+ {
+ }
+ // Shut down DirectX here.
+
+}
+[/code]
+
+This will catch most problems. Crashes that are due to calling DirectX with invalid parameters, and some other hairy system level Win95 crashes, won't recover this way, but the above is the best that one can do in Win95.
+
+-Tim 

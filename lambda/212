@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Implementing Declarative Parallel Bottom-Avoiding Choice | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F212" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Implementing Declarative Parallel Bottom-Avoiding Choice</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<small><a href="http://citeseer.ist.psu.edu/rauberdubois02implementing.html">Implementing Declarative Parallel Bottom-Avoiding Choice</a>. Andre Rauber Du Bois, Robert Pointon, Hans-Wolfgang Loidl, Phil Trinder. Symposium on Computer Architecture and High Performance Computing (SBAC-PAD) 2002.</small><p>
+
+<blockquote>Non-deterministic choice supports efficient parallel speculation, but unrestricted non-determinism destroys the referential transparency of purely-declarative languages by removing unfoldability and it bears the danger of wasting resources on unncessary computations. While numerous
+choice mechanisms have been proposed that preserve unfoldability, and some concurrent implementations exist, we believe that no compiled parallel implementation has previously been constructed. This paper presents the design, smantics, implementation and use of a family of bottom-avoiding choice operators for Glasgow parallel Haskell. The subtle semantic properties of our choice operations are described, including a careful classification using an existing
+framework, together with a discussion of operational semantics issues and the pragmatics of distributed memory
+implementation. </blockquote><p>
+amb breaks referential transparency (e.g., think about (\x.x+x)(3 amb 5) - how many choice points are there?)<p>
+This paper presents the problems, and shows how to implementat bottom-avoiding choice  operators in Galsgow parallel Haskell (GPH).<p>
+The paper is worth checking out for the references alone, which can server as a useful guide to the subject of non-determinism in functional languages. Section 3 of the paper summarizes the semantic properties of the choice operators, and can be a good place to start reading if you are familiar with the subject. </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 08/25/2004 - 16:10 | <a href="taxonomy/term/11">Functional</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/212" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 1155 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="212" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="212" />
+<a id="comment-1611"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/212#comment-1611" class="active">Thoughts</a></h3>
+ <div class="content">In this area, I think the research community is missing the boat in some important ways.<P>
+
+First of all, with "amb", there are really two kinds of bottom that really ought to be distinct: the notion of "no values", and the notion of divergence due to a never-ending computation.  Call the former "nothing" and the later "bot" (Haskell folks write _|_ for bot.)<P>
+
+Computing with "nothing" is very simple and well-founded.  "nothing amb x" and "x amb nothing" are equivalant to "x".  McAllester's Ontic language takes the amb operator a lot further than McCarthy had original envisioned, and enables one to bundle up collections of amb values into set-like types.  Ontic's syntax for this is "the-set-of-all x".<P>
+
+This "the-set-of-all x" construct is the microscope under which "nothing" and "bot" are revealed to be distinct concepts.  In a type containing a bunch of amb values, some of which may be divergent, it's impossible to perform any useful operations except for positively verifying that an element is a member.  Membership can't be refuted, because that requires executing a divergent computation.  The only way bottom-avoiding choice can be made usable is with a Prolog-style Cut operator, whose results are nondeterministic and likely to be unpredictable and weird in practice.<P>
+
+Thus I'm a big believer in amb as a fundamental programming construct, and "nothing"-avoiding choice is trivial in this system, but "bot"-avoiding choice seems an impractical and unhelpful tool in language design.<P>
+
+Note on the poster's comment on amb breaking referential transparency: When amb is implemented correctly (with proper sharing of choice points), it's referentially transparent.<P>
+
+For example, (\x.x+x)(3 amb 5) beta-converts to let x=(3 amb 5) in x+x, which reduces to (let x=3 in x+x) amb (let x=5 in x+x), which reduces to 6 amb 10.<P>
+
+This can be summarized as "only single-valued terms evaluate to values; zero-valued or multi-valued terms must be treated as references to a single, shared choice point".<P>
+
+Another way of visualizing terms like (\x.x+x)(3 amb 5) is to translate them to Haskell comprehensions: [x+x | x &lt;- [3,5]].<P>
+
+Another example is "let x=nothing in 7" must evaluate to nothing, not 7.  This is obvious from the comprehension [7 | x&lt;-[]]. At first, this seems counterintuitive because we tend to think of any expression you can write as evaluating to a value, whereas with "amb", only single-valued terms evaluate to values; the ordinary substitution rules don't apply where multiple values are present.</div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 08/26/2004 - 00:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1618"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/212#comment-1618" class="active">Jan Kuper&#039;s thesis</a></h3>
+ <div class="content"><blockquote ><p >
+there are really two kinds of bottom that really ought to be distinct: the notion of "no values", and the notion of divergence due to a never-ending computation.
+</p></blockquote>
+<p >Jan Kuper's PhD thesis <a href="http://wwwhome.cs.utwente.nl/~jankuper/thesis/PhD.html"> "Partiality in Logic and Computation - Aspects of Undefinedness"</a> might interest you.</p></div>
+ <div class="links">By <a href="user/1238" title="View user profile.">Ronny Wichers Schreur</a> at Thu, 08/26/2004 - 07:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-1621"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/212#comment-1621" class="active">Don&#039;t Know vs. Don&#039;t Care Nondeterminism</a></h3>
+ <div class="content"><p >These concepts are explained nicely in Ehud Shapiro, <a href="http://doi.acm.org.ezproxy.openu.ac.il/10.1145/72551.72555">The family of concurrent logic programming languages</a> (alas, this requires ACM DL subscription). </p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Thu, 08/26/2004 - 09:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-1619"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/212#comment-1619" class="active">The list monad</a></h3>
+ <div class="content"><p >I was already thinking that the list monad works a bit like ambivalence. Now that I see you converting the amb operator to list comprehensions, I'm wondering: what are the differences?</p></div>
+ <div class="links">By <a href="user/175" title="View user profile.">sjoerd_visscher</a> at Thu, 08/26/2004 - 08:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-1634"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/212#comment-1634" class="active">List Monad vs Amb</a></h3>
+ <div class="content">The only differences between a list comprehension and a similar computation involving amb are that list comprehensions are explicitly ordered, and duplicate items remain distinct.  Amb values are set-like and don't have any inherent order or multiplicity to them; (2 amb 3) is equivalant to (3 anb 2) and (2 amb 2) is equivalant to 2.<P>
+
+If you ignore the underlying order and multiplicity of lists, you can use the list monad to precisely model the behaviour of amb.  You can actually define a "set monad" this way.  For example, the set monad's join is the union (of a set of sets); its zero is the empty set; its unit forms singleton sets; its plus takes the union of a pair of sets; it's map takes the image of a given function under a given set...each of the monad laws in the set monad happens to be a ZFC axiom.</div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 08/26/2004 - 16:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

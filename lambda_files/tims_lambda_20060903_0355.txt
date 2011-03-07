@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/1709
+http://lambda-the-ultimate.org/node/1709#comment-20925
+1050285
+Constant Values as Types
+Singleton types
+<p>Singleton types are the simplest answer, so you could have the typing 42:singleton(42).
+</p><p>You might also want to have an uninhabited type.  Call it "nothing".
+</p><p>You might also want to have the type of all singleton subtypes of integer.  If you have the later type, you can call it option(t) or ?t, and then you have the typings singleton{32}:?int, and nothing:?int.  If you support types as first-class values in a programming language, then option types, singleton types, and the uninhabited type have a serendipitous relationship, as you can use them as types, as values, and in combination for a proofs-as-programs style.
+</p><p>This is the approach I'm taking in my programming language R&amp;D work.</p>

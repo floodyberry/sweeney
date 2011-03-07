@@ -1,0 +1,18 @@
+http://lambda-the-ultimate.org/classic/message5779.html
+http://lambda-the-ultimate.org/classic/message5779.html#5784
+0530067
+Paul Graham: Accumulator Generator
+Re: Paul Graham: Accumulator Generator
+<p>From the site:</p>
+
+<blockquote><div>Note: (a) that's number, not integer, (b) that's incremented by, not plus. &lt;&lt;</div></blockquote><p>
+
+This is an interesting study of solutions to an ill-defined problem.</p><p>
+
+1. The term "number" is left undefined.  If the problem we posed in terms of "integers" or "natural numbers", it would be clear.  Are complex numbers, numbers?  Are p-adics and reals, numbers?  If you define "number" to include all of these different mathematical objects, then the problem is ill-typed because, for example, you can't add a p-adic to a real.  The problem doesn't define what should happen in this case; should it crash?  Return 7*pi?</p><p>
+
+2. You can't "increment a number". Adding 2 to 3 doesn't change the value of 3!  3 still remains 3.  Numbers, as defined by mathematics sense, are immutable.  One might correct this by indicating that your function should take a reference to an integer, and add a certain integer to the value referred to.  But is such a function actually a function?  Not in the mathematical sense.  What about the case where the reference is null, if the language supports such a concept?</p><p>
+
+What the article did succeed in doing, if you read through the code examples, is highlight the non-portability (across languages) of programs depending on ill-defined concepts like "references" and "numbers".  The problem as posed can't be solved minimally (with neither error cases nor behaviour beyond what is specified) in any of the languages shown!</p><p>
+
+-Tim</p>

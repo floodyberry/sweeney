@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/222
+http://lambda-the-ultimate.org/node/222#comment-1941
+1048798
+multidimensional arrays
+Arrays are functions?
+<p>Andrei, my experimental language treats arrays as functions with a domain of bounded natural numbers.  For example, {3,4,5} is a function with a domain of "the type of natural numbers less than 3".
+</p><p>In my experience, array comprehensions solve the problems of list slicing well.  I use a BASIC-inspired function mid(xs,i,n) for slicing which takes elements from the array as, and returns a new array containing just the n elements starting at element i.  Thus if a horizontal slice of a 2D array is mid(xs,i,n), a vertical slice is for(xs:xss)mid(xs,i,n).  This isn't quite as simple as special-case "multidimensional slicing" syntax could be, but it's reasonable and has the advantage of being very general-purpose.
+</p><p>I treat all arrays as 1D but nestable.  Thus there is no syntax like a[i,j] but instead a[i][j].  I think this is the "right way", because it makes higher-order operations like mapping and comprehensions simple -- they don't need to be specialized for arrays of different dimensions and choices of what indices are being iterated over.</p>

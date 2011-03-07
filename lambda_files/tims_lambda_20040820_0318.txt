@@ -1,0 +1,34 @@
+http://lambda-the-ultimate.org/node/202
+http://lambda-the-ultimate.org/node/202#comment-1478
+1048778
+Error handling strategies
+Failure as a first-class concept
+<p>It is interesting for languages to treat failure as a first-class language concept, requiring explicit handling of any failure conditions that may occur.  Java's (controversial) exception declarations provide one approach to this.  Icon provides another which is very expressive but quite different.
+</p><p>I'm not a fan of Icon's multi-valued semantics (which wrap a nested list comprehension around the entire program!)  But I like the basic style it encourages:
+</p><pre class="code_box">
+if(f:OpenFile("Log.txt"))
+   Write(f,"Some Text")
+else
+   Print("Failed to open file")
+</pre><p></p><p>Whereas, on the other hand, writing:
+</p><pre class="code_box">
+f:=OpenFile("Log.txt")
+Write(f,"Some Text")
+</pre><p></p><p>Is disallowed by the compiler because the "OpenFile" expression may fail, but isn't explicitly handled.
+</p><p>This technique can be combined with dependency and sequencing to allow some very expressive programming interesting idioms, such as:
+</p><pre class="code_box">
+if(c:ParseChar(),c&gt;='A',c
+</pre><p></p><p>Which not only tests some conditions, but also creates variable bindings.  For example, you can use this for type-aware casting to work in an environment with compile-time array bounds checking:
+</p><pre class="code_box">
+PrintElement(a:[]int,b:int):=
+   if(i:nat &lt;a len="b)" else</pre><p></p><p>
+In this example, we're casting the integer "b" to "the type of natural numbers less than the length of the array a", and binding a variable to the result which can then be safely used to index into the array.
+</p><p>A final example uses "?t" syntax (similar to Haskell "Maybe t") for the type of an optional element of type t, and "^t" for "Pointers to non-null elements of type t":
+</p><pre class="code_box">
+List:=type{x:int,next:^List}
+Display(a:List):void
+   Print("Value is ",a.x)
+   if(n:a.next)
+      Display(n^)
+</pre><p></p><p>This provides a clean type-theoretic solution to earlier discussion on "nullable pointers", by orthogonalizing the concepts of pointers and optional values, and assuring that in any context where an optional value is used, it must be explicitly tested with a conditional to guarantee that no runtime failure can occur.
+</p><p>I have implemented this on a fairly large scale in an experimental language and feel the results are promising.  I'd love to hear feedback on this approach, and also whether readers find this C-Pascal-Python hybrid syntax attractive or revulsive.</p>

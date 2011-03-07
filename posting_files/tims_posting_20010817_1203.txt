@@ -1,0 +1,16 @@
+http://www.digitalmars.com/d/archives/31.html#N340
+[D] *sigh*
+[blockquote]I personally miss the preprocessor when I use Java.[/blockquote]
+Agreed, but only because of Java's limitations (no templates, etc.), and not because I *want* to use macros.
+
+[blockquote]And templates! Yes they are complex stuff and I wish they were easier but... they allow you to do things that you would otherwise be unable to do, or have to pay dearly for.[/blockquote]
+Agreed 100%!  I would never consider writing a large-scale program in a language without template-style functionality.  It's really astounding how much simplification and generality one can attain with templates -- not just talking about the cannonical (and IMO poor) example of "container classes", but for complex related type hierarchies, parser tools, math structures, etc.
+
+The stigma of templates being useful just for container classes and a few other isolated cases (which a language could well implement as a special feature) is really unfortunate.  I suppose that's because container classes are the next obvious step for a C programmer.  But if you spend a few weeks experimenting with languages like Haskell (not useful for practical programming, but a GREAT thing to learn), you come back to C++ templates with a completely new perspective and start writing code in a much more compact and general way!
+
+(Here I'm advocating template-style functionality -- I actually think the C++ syntax for templates is pretty kludgy, but that's a minor issue in the grand scheme of things.)
+
+[blockquote]Unfortunately, right now in C++, it is difficult and unintuitive to do, but it is possible (there's a nice book that discusses some of these things, and you'll be amazed at what they can get templates to do - Generative Programming by Krzysztof Czarnecki, and Ulrich W. Eisenecker).[/blockquote]
+Agreed 101%!
+
+-Tim

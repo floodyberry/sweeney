@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1709
+http://lambda-the-ultimate.org/node/1709#comment-20934
+1050285
+Constant Values as Types
+Right
+<p>Such a type system is generally undecidable, but it can typecheck all programs that typecheck in simpler decidable type systems, plus lots of additional programs written using more powerful and expressive constructs (but not all of them!)
+</p><p>I'm certainly an advocate of gaining more expressive type systems at the expense of decidability.
+</p><p>After all, what you really care about is the following: If your compiler accepts a program successfully, then the program is type-safe.  If it's not type-safe, then you might get an error message, or a stack overflow, or a core dump, or whatever -- but in no case will you see the compiler accept a program that's not type-safe.</p>

@@ -1,0 +1,42 @@
+http://groups.google.com/group/fa.haskell/browse_thread/thread/8801d22ed11f076d/4698a07782a8d3a0?lnk=st&rnum=73&hl=en#4698a07782a8d3a0
+[fa.haskell] Tetration operator in functional programming
+There is a neat isomorphism between mathematics and type theory.  Using ~= to indicate isomorphism, we have (roughly):
+
+sum of numbers     ~= disjoint union of types
+product numbers    ~= cartesian product of types
+exponentiation     ~= function spaces
+"sigma" summations ~= dependent products
+"pi" products      ~= dependent functions
+successor function ~= "maybe" monad
+
+In mathematics, there is a progression between the operators of addition, multiplication, exponentiation, etc., known as the Ackermann hierarchy.
+
+The next operation in the sequence is often called "tetration" and refers to iterated exponentiation.  Let us write a^b for "a raised to the power of b", and then a-->b for b raised to its own power a times, i.e.:
+
+1-->b = b
+2-->b = b^b
+3-->b = (b^b)^b
+...
+
+Now I am trying to understand the type-theory analogy to tetration. Given "unit" as the one-valued type, "bool" as the two-valued type, "three" as the three-valued type (isomorphic to "maybe bool"), etc., clearly:
+
+unit-->t  ~= t
+bool-->t  ~= t->t
+three-->t ~= (t->t)->t
+four-->t  ~= ((t->t)->t)->t
+
+So, what is going on here?  "bool->t" is the type of identity functions on t; "three-->t" is especially interesting because it is the type of fixpoint operator from t->t to t.
+
+This hints that there may be some computational utility here.  Is there a useful type-theory interpretation of tetration?
+
+And is there a useful interpretation of tetration on infinitary types, like lists, i.e. list(nat)-->nat?  In particular, I am interested in defining the corresponding value-level operation whose type corresponds to a tetrant.  In other words, pardoning the pecular notation, fill in the blank:
+
+* An injection inl(123) or inr("a") is of sum type nat+string.
+
+* A pair (123,"a") is of product type nat*string.
+
+* A lambda \t->t+123 is of function type nat->nat.
+
+* A ______ is of tetrant type t-->u.
+
+-Tim 

@@ -1,0 +1,87 @@
+http://lambda-the-ultimate.org/classic/message6587.html
+http://lambda-the-ultimate.org/classic/message6587.html#6685
+0530875
+Python Metaclass Programming
+Re: Python Metaclass Programming
+<blockquote><div>Still, your representation of arrays seems rather complex. If it were me, working in your system, I would start with the obvious fact that an array of b's of length n should be representable as an n-fold product of b', where b' is isomorphic to b.</div></blockquote>
+
+<p>
+In my experimental compiler and type system, I have arrays and n-fold products not only being isomorphic but identical: they are extensional, invariant-domain functions from natural numbers less than some bound to the product's type.</p><p>
+
+In the case of uniformly typed products, these are simple functions, and in the case of arbitrary products (say int*string*char), they are dependent-typed functions.</p><p>
+
+The theory of the all this is debatable, but it does work nicely from a practical programming point of view.  Here's a quick view of this in my actual syntax (a blend of C constructs with Pascal-style declarations, in other words very non-Haskell/ML style).</p><p>
+
+The type of functions from integers to integers.</p><p>
+
+(:int):int</p><p>
+
+A function from integers to integers.</p><p>
+
+(x:int)x+3</p><p>
+
+Same as above, but with an optional type declaration.</p><p>
+
+(x:int):int=&gt;x+3</p><p>
+
+The type of functions from natural numbers in the range 0..3 to integers.</p><p>
+
+(x:nat&lt;4):int</p><p>
+
+An actual function like the above.</p><p>
+
+(x:nat&lt;4):int=&gt;x+7</p><p>
+
+Recursive function.</p><p>
+
+f(x:int):int=&gt;if x=0 then 1 else x*f(x-1)</p><p>
+
+The type of arrays of 4 integers. Arrays are like functions, but the domains subtype invariantly, and they evaluated and typed extensionally.</p><p>
+
+[:nat&lt;4]:int</p><p>
+
+Alternate syntax for the same thing.</p><p>
+
+{:int,:int,:int,:int}</p><p>
+
+You can give the elements of the array names.</p><p>
+
+{x:int,y:int,z:int,w:int}</p><p>
+
+A concrete array of 4 integers.</p><p>
+
+{3,6,9,12}</p><p>
+
+Equivalant way of expressing the above. Like lambdas, but for arrays.</p><p>
+
+[x:nat&lt;4]x*3</p><p>
+
+A non-uniform array type.</p><p>
+
+{x:int,y:string}</p><p>
+
+Equivalant way of expressing that. Note type-dependence.</p><p>
+
+[i:nat&lt;2]if i=0 then :int else :string</p><p>
+
+Combining some of the above: A function from 2-element arrays of integers to integers.</p><p>
+
+(x:int,y:int):int=&gt;(x-1)*(y-1)</p><p>
+
+Arrays can have recursive value dependence. See Hickey's "Very Dependent Types" paper for elaboration. For example, {4,2} is an element of this type and {5,6} is not.</p><p>
+
+{x:nat,y:nat&lt;x}</p><p>
+
+Equivalant to the above.</p><p>
+
+f{:nat,:nat&lt;f[0]}</p><p>
+
+Equivalant to the above.</p><p>
+
+f[i:nat&lt;2]if i=0 then :nat else :nat&lt;f[0]</p><p>
+
+The type of all pythagorean triples.</p><p>
+
+{x:nat,y:nat,z:nat=sqrt(x*x+y*y)}</p><p>
+
+My thinking here is that, without diverging too much from mainstream applications programming language style, you can gain remarkably more statically typecheckable expressiveness by unifying some of the constructs.  Java/C# notions of functions, arrays, structs, and open-world objects are all represented as different sorts of functions differing in domain variance, extensionality, and dependence.</p>

@@ -1,0 +1,16 @@
+http://lambda-the-ultimate.org/classic/message12542.html
+http://lambda-the-ultimate.org/classic/message12542.html#12565
+0536830
+Nullable Types
+Re: Nullable Types
+<p>The existance of the "null pointer" is a language design mistake dating back three decades.  Instead of keeping the notions of "pointers to elements of type t" and "type t extended with an additional 'null' value" separate, C combined the two orthogonal notions into a single type constructor: pointers that might be 'null'. C++ confused things further by defining references in a way that makes it look like they can't be null, though they actually can be!</p><p>
+
+There is a much cleaner way of implementing pointers:</p><p>
+
+- For every type t, the type ^t represents "the type of pointers to elements of type t".  These include only the actual pointers which can be safely dereferenced.</p><p>
+
+- For every type t, the type ?t represents "either an element of t or the special 'null' value".</p><p>
+
+- Then ?^t is the equivalant of "pointers that may be null".  Define a shortcut syntax for this: *t = ?^t, and there!  You have backwards compatibility and a more sensible type theory.</p><p>
+
+Unfortunately, C# confuses pointers and objects and mutability issues in so many other ways that such implementing this orthogonality is probably not worthwhile.</p>

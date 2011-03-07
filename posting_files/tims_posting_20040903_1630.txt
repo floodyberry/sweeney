@@ -1,0 +1,41 @@
+http://lists.seas.upenn.edu/pipermail/types-list/2004/000352.html
+[TYPES] Combining lazy and eager evaluation of terms
+Thanks to everyone who responded on and off the list to this query. Here is a summary of direct responses on combining lazy and eager evaluation of terms:
+
+Derek Dreyer pointed to his paper on supporting many useful forms of recursion in a call-by-value language, framed in the context of ML:
+
+[blockquote] "A Type System for Well-Founded Recursion" http://www-2.cs.cmu.edu/~dreyer/papers/recursion/popl.pdf
+
+In this paper I use a pure call-by-value evaluation, but I design the type system so that it ensures that when evaluating a recursive defintion (like val rec x = e), that x will not be *dereferenced* when evaluating e, although it may be *referenced*.  Dereferencing means you actually want to get at the underlying value (i.e. the value that e ends up evaluating to), whereas referencing simply means you want a "pointer" to that (as-yet-undefined) value.  (I say "pointer" because if the underlying value is already a boxed object, there's no need to rebox it in the underlying implementation.)  This is useful, for instance, for purposes of separate compilation, where each definition in a pair of mutually recursive definitions can be evaluated separately given a pointer to the other one.  However, no high-level language that I'm aware of actually makes a distinction between the notions of "referencing" and "dereferencing" of recursive variables. [/blockquote]
+
+Paul Hudak pointed out some undesirable properties of the evaluation strategy I proposed:
+
+[blockquote] A desirable property of most languages is that they have some kind of a "least fixed-point" semantics.  But yours seems to lack that.  In particular, you say:
+
+[italic]By "strict with respect to divergence", I mean that for every possible function or data constructor f, f(bot)=bot. Thus for lists, Cons(bot,x)=Cons(x,bot)=bot. But Performing "lazy evaluation on intermediate subterms" enables one to successfully express recursive data structures like x=Cons(3,x) for an infinite list, or r:=NewRef(Cons(3,r)) for a circular linked list.[/italic]
+
+But the least fixed-point of the equation x = Cons (3,x) is bottom, according to the first bullet, i.e. not the infinite list of 3's. [/blockquote]
+
+Henrik Pilegaard pointed out the Hope language described at http://www.soi.city.ac.uk/~ross/Hope/.  Hope performs eager evaluation of functions, but supports lazy data structures.
+
+[blockquote] Here are some other references that I found very useful:
+
+"Implementation of Non-Strict Functional Languages" Kenneth R. Traub http://www.amazon.com/exec/obidos/tg/detail/-/0262700425/qid=1094235827/ sr=1-1/ref=sr_1_1/104-9051043-1871907?v=glance&s=books
+
+This 1991 book covers a broad variety of topics on practical implementation, and describes a model known as "lenient evaluation", a non-strict evaluation model that makes efficiency gains by not supporting full lazyness.  In this model, parameters are be passed in to functions unevaluated when necessary to make progress on evaluation. This model can support cyclic data structures like "x:=Cons(x)" and dependent data structures like "x:=Pair(2,x.first+1)", but not acyclic infinite data structures such as "letrec f(n:int):=Cons(n,f(n+1)) in f(0)".
+
+"How much Non-strictness do Lenient Programs Require?" Klaus Schauser, Seth Goldstein www.cs.ucsb.edu/~schauser/papers/95-fpca.ps 
+
+This describes the lenient evaluation scheme of the Id90 functional language, designed for efficient execution of code on parallel architectures, and analyzes the expressive power of various forms of non-strictness.
+
+Guy Tremblay has a number of interesting papers on lenient evaluation at http://www.info.uqam.ca/~tremblay/. [/blockquote]
+
+Some final thoughts on the topic:
+
+Lenient evaluation appears to be an attractive model for future mainstream programming languages, because it enables much of the expressiveness of lazy evaluation (such as self-referential data structures) without running into many of the fundamental limitations of strictness analysis that prevent lazy languages from performing competitively with strict languages; and because it enables a more natural implementation of parallel evaluation than either lazy or strict languages.
+
+However, while implementations of lenient evaluation are widespread (in Id90, pH, Octopus, and others), I've been unable to find an analysis of the semantics of lenient evaluation.  This seems an important outstanding problem because, as Paul Hudak points out, there are real problems with a direct application of domain theory to such languages because all functions have the property f(bottom)=bottom.  Any pointers to papers on this topic would be quite welcome.
+
+Another worrying property of a lenient evaluation scheme is that, though infinite computations are prohibited, one can still construct cyclic values like x=Cons(3,Cons(4,x)).  In a traditional eager language, it is easy to prove that a function like Map (on lists) is convergent.  Here, convergence depends on the list being finitary.  This also implies that any built-in equality operation must either perform bisimulation (rather than simple recursive comparison) or also be potentially divergent.  Has there been any investigation into this topic?  I could imagine inserting tests, upon each reduction of a thunk to head-normal form, to assure that any non-finitary data structures cause divergence at creation-time, therefore assuring that functions like Map can count on only receiving acyclic inputs.  But this seems quite inefficient.
+
+Tim Sweeney

@@ -1,0 +1,13 @@
+http://lists.seas.upenn.edu/pipermail/types-list/2005/000724.html
+[TYPES] Parametricity with subtyping and a Top type
+Does subtyping and the existance of a Top type necessarily break parametricity?
+
+Parametricity guarantees that every function of type forall a. a->a->Bool is a constant function.  The same derivation appears applicable to forall a. a->a->Top also, implying that it too must be constant.  But \x.\y.x and \x.\y.y are distinct functions inhabiting forall a. a->a->Top.
+
+What has gone wrong here?
+
+Pierce's thesis touches on Top in F/\ but doesn't seem to address parametricity.
+
+Does there exist a systematic study of type system extensions known to be compatible or incompatible with parametricity?
+
+Tim Sweeney

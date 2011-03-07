@@ -1,0 +1,59 @@
+http://web.archive.org/web/20011121083307/http://www.tolstiy.ag.ru/what/sweeney.htm
+Next gen engines: Tim Sweeney interview
+Tolstiy interviews Tim Sweeney
+Tolstiy
+Tolstiy
+
+<q>Hi Tim! Please, tell us a bit about yourself and your work at Epic Games.</q>
+
+<a>I've been programming since I was 13. I founded Epic Games in 1991, and wrote several small shareware games, ZZT and Jill of the Jungle, before starting on the Unreal engine in 1996.</a>
+
+<q>Lets start from the past. First of all, tell us about your first engine you've ever created? And, don't forget to share some details with us, such as how did it pop up in your mind to create an engine, how did you do that, did anyone help you etc?</q>
+
+<a>Every game I've written has been an engine to a certain extent. My first shareware game was a simple text-mode action game, but it included a built-in editor and encouraged users to create their own levels. I released ZZT in 1991. It was very low-tech, and wasn't a big commercial success, but thousands of people have created levels for it and released them on the Internet. For example, see www.zzt.org -- some kids are STILL building levels for it!
+
+The Unreal engine inherited a lot more ideas from that game than you might think. The editor, the focus on making the entire game user-modifyable, the object-oriented design, these are all things I was doing 10 years ago. What's new is the technology, the 3D graphics, Internet play, and so on. </a>
+
+<q>When did you understand that the time to move to full 3D has come? What were your first thoughts on this subject?</q>
+
+<a>The first time I saw DOOM, I believe it was a pirate alpha version, around 1993, it was a huge leap over all past 3D graphics. Before that point, 3D games were fun but unrealistic. They were mostly flat-shaded, or boxy, and poorly lit. DOOM made it clear that 3D was the future. Of course, going from realizing "this is the future", and learning to program something competitive, took a long time.</a>
+
+<q>As I understand, you were the one who worked tightly with Unreal engine, you wrote it (was writing it for a long time, but the result was excellent - no doubt!). What were those corner stones that you have stumbled across, as a young developer who is only beginning his long way into full 3D? This question may be considered as a manual for those who are going to write their own engines for their games.</q>
+
+<a>With Unreal, the hardest aspect of the engine was the renderer. It's the component I rewrote 7 times over 18 months before coming up with something I was happy with. Less glamorous is the overall framework of the engine, the code that holds everything together. The hardest thing for any new programmer is to build a large piece of software without having it collapse because of its size and complexity. Unreal has held up pretty well, but I'd been programming for 10 years by the time I started writing Unreal.</a>
+
+<q>When you were working on the UT engine, what were you primary aims - what did you see in the end of your work?</q>
+
+<a>Our goal with Unreal Tournament was to focus on the gameplay, to make a better and more polished game. So, the technology didn't change much compared to the earlier game Unreal 1. The network code was better; level-of-detail support was added to the mesh rendering code. Most of the effort went into making the game better.</a>
+
+<q>Any technology growth leads to more troubles while working with tools built for these or that technology. As the result, this may cause many independent gamers who like to make mods and custom maps to give up saying - "Too hard to master!" Can you comment somehow on this one?</q>
+
+<a>I think mod makers will find the next-generation Unreal engine easier to work with than any past 3D engine, Unreal, Quake, or the original Half-Life engine included. The editor is easier and more stable, but also more powerful; the UnrealScript game code is cleaner; and we have far more documentation for the next-generation engine than ever in the past. I expect mod makers will find it very easy to create levels and simple mods.
+
+However, with very high-quality mods like CounterStrike (Half-Life) and TacOps (Unreal Tournament) available, it's becoming harder and harder to make a competitive mods. The best mods have dedicated teams of 10-20 people contributing. So, even if it's relatively easier to make mods with the new engine, there's now a lot more competition, and users' expectations are higher. </a>
+
+<q>By the way, your engines are usually used in shooters. And what other games you'd like to see basing on Epic's technology? May be strategies and quests? Is there any sense in such statement?</q>
+
+<a>Well, the Unreal engine was used for Deus Ex, an award-winning role-playing game from Ion Storm Austin, and for Digital Extremes' Adventure Pinball, a 3D pinball game. So, I'm not sure I'd say it's a shooter engine! Especially now that the next-generation engine supports 100X higher polygon counts than Unreal Tournament, and has much more powerful tools for getting 3D models and content into the engine, I think you'll see lots of non-shooters coming out. You could definitely use the new Unreal engine as a starting point for a realtime strategy game, an offroad racing game, a space combat game, or a massive multiplayer game.</a>
+
+<q>What is your opinion about the companies who license technologies and don't write from scratch their own engines? How good or bad is that for the final game look, in your opinion?</q>
+
+<a>Licensing an engine enables these companies to focus 100% on game design and gameplay, instead of reinventing the technology. In the hands of a talented team, it's a very powerful tool. But, it's just a tool. If a team isn't very good with gameplay or game design, then licensing an engine isn't necessarily going to make their game any better.</a>
+
+<q>How do you appraise the technology growth we all can see - is the pure Good or maybe there is something Evil in this?</q>
+
+<a>Moore's law is a powerful concept. Computers are perhaps a thousand times more powerful than they were 15 years ago. Eventually they'll be smarter than we are. What then?</a>
+
+<q>A question also connected with technology growth. How do you think, is it possible that some day such characteristic of video cards as 3D will disappear, like it was with 2D characteristic of video cards several years ago? Maybe developers will choose to make games, which will have software render, like it was with Unreal - is it really possible? What may help to achieve that?</q>
+
+<a>This is a very good point. You can really think of a graphics card as being a massively parallel but only somewhat programmable CPU, having around a 20X performance advantage for 3D rendering, but a significant disadvantage for computation. In the long-term, it's reasonable to expect that CPU's will become more parallel (using techniques like symmetric multithreading, or just brute-force single-chip multiprocessing), and GPU's will become more programmable. Thus they will become more similar over time.
+
+At some point in the future, we'll begin to question the value of having two separate and expensive chips in computers, the CPU and the graphics chip. Then what, will NVidia be trying to extend their pixel shaders and vertex shaders to achieve x86 compatibility? Will Intel be encouraging developers to go back to software rendering? These two industries are in for an interesting collision course in 5-10 years. </a>
+
+<q>Are you happy with the niche that EpicGames now has, looking from the standpoint of companies, which create great technologies and games?</q>
+
+<a>Yes, very happy with it. By creating one major game at a time, while working with a small number of partners who use our technology, we're able to remain a small, focused, and profitable company.</a>
+
+<q>How do you see the future of your company - are you going to stay true to PC games market, creating stunning games or you may switch to consoles, like many developers do these days (I can't imagine how one can play an FPS game with a joypad!!!)</q>
+
+<a>We'll never abandon the PC, but that doesn't mean we won't support consoles, too!</a>

@@ -1,0 +1,40 @@
+http://www.digitalmars.com/pnews/read.php?server=news.digitalmars.com&group=D&artnum=345
+[D] Getters and setters
+[blockquote]In D, get'ers and set'ers take advantage of the idea that an lvalue is a set'er, and an rvalue is a get'er:
+
+[code]class Abc
+{
+    int myprop;
+    void property(int newproperty) { myprop = newproperty; } // set'er
+    int property() { return myprop; } // get'er
+}[/code]
+which is used as:
+
+[code]Abc a;
+a.property = 3; // equivalent to a.property(3)
+int x = a.property; // equivalent to int x = a.property()[/code][/blockquote]
+Why??!? :-) In current reasonable languages "a.x" is a variable access and "a.f(x)" is a function call.
+
+Why complicate this so that "a.x" could either be a function call or a variable access, depending on its (possibly very complicated) context?
+
+Also, this seems to create ambiguity (or context-specific special-casing of sematics) with function pointers.  Given a reference to a function p taking a parameter, p=a could either mean calling it with a parameter of a, or initializing it to a.
+
+I know Bertrand Meyer advocated this approach in Eiffel, but this has been shown to be one of several areas (along with, i.e. covariant typing on function parameters) where Eiffel's type system is unsafe and problematic.
+
+[blockquote]Thus, in D you can treat a property like it was a simple field name. A property can start out actually being a simple field name, but if later if becomes necessary to make getting and setting it function calls, no code needs to be modified other than the class definition.[/blockquote]
+
+That breaks with open-world modules.  For example, given a module declaring a class like:
+
+[code]class c
+{
+    int a;
+};[/code]
+How can you subclass it later on in another module like:
+
+[code]class d: public c
+{
+    int a() {...}
+};[/code]
+The similar question comes up with binary-compatible evolution of modules (i.e. Java's list of rules, "You can do the following things to evolve a class without breaking existing precompiled modules that depend on it". That's an essential thing that's vital to writing real-world programs, such as applications supporting plug-ins.  The only sound solution to this is that every variable access in a program has to translate to a virtual function call, which obviously isn't reasonable.
+
+-Tim 

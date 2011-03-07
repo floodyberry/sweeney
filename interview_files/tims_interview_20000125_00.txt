@@ -1,0 +1,66 @@
+http://archive.gamespy.com/legacy/interviews/sweeney.shtm
+Beyond Unreal
+Talking with Tim Sweeny about the evolution of a game engine
+GameSpy
+Dave "Fargo" Kosak
+
+<q>The Unreal Engine has been out for over a year and a half -- how far do you think it's come since its release? What do you think are the biggest changes as it's evolved? Any surprises?</q>
+
+<a>There are four areas of improvement that really stand out in Unreal Tournament:
+
+Robustness: Since Unreal 1 shipped, we've looked at literally thousands of bug reports and requests from users and improved the engine's stability a huge amount. With Unreal 1, we made a huge leap in technology, but the end result was very rough in many areas, including network code, performance on low-end machines, and ease of use. The 18 months of testing and fine-tuning we've been doing during Unreal Tournament's development has led to tremendous improvements here.
+
+AI: While Unreal 1's "botmatch" AI was the first such feature to ship in a 3D game, Steve Polge wasn't satisfied with just that, and has taken it many steps further with Unreal Tournament's AI: now the bots know about team coordination; they're much more human-like in their fighting and strategic planning; and they're good enough now that you can start a 10-player CTF game, with you and four bots versus a team of five bots, and have a great teamplay experience, "no humans required".
+
+User interface: Unreal 1's interface was derivative of Quake, which was derivative of DOOM, which was derivative of Wolfenstein 3D. In the years from 1991 to 1998, really no substantial improvements occured in 3D game user interfaces -- sure, everyone added polish, but it was the same archaic keyboard-driven menu system. For Unreal Tournament, Jack Porter ripped out all that code and replaced it with a very modern, mouse-driven user interface, sort of a "windows on steroids". This has enabled us to expose a gigantic amount more functionality to users which wouldn't have been possible with an old-style interface. Now, picking maps, selecting game options, choosing mutators, and so on -- it opens up a whole new world of possibilities.
+
+Modifiability: Though Unreal 1 was arguably the most "open" game of its time (since we shipped the editor around 50,000 lines of scripts -- basically all the game code -- with the product), it was still pretty hard to create and use mods, because of the overall complexity of the system, and forcing users to unzip files to subdirectories. With UT, the guys invented a new type of mod called a "mutator", which lets you create new game variations with very minimal programming. On top of that, we expose the complete user-interface and HUD framework to mods so they can be quite elaborate graphically; and mods are now managed by a "mod installer" which takes care of all the installation details, so users are only a few mouse clicks away from downloading and using a mod. </a>
+
+<q>How do you feel about all the different licensees for the Unreal Engine? (Especially the non-game related projects?) What do you think of the different directions they've taken it?</q>
+
+<a>We're really happy with the different commercial and R&amp;D directions our partners have taken with the engine. On the game side, there are a few leading-edge action games (Unreal, UT, Duke Forever), some crossover titles incorporating major RPG elements (Deus Ex, Wheel of Time, X-Com Alliance), non-violent kids games (Nerf Arena Blast and Dr. Brain), and even a hunting game (TNN Outdoors Pro Hunter). On the R&amp;D side, the Virtual Notre Dame project and the Unrealty ("real estate walkthroughs" of course), are pushing the technology in new directions.
+
+When we started building the Unreal engine, a major goal was to make the technology applicable to other projects besides our own, but we had no idea how many widespread uses other teams would find for it. That has been a very pleasant surprise, and something we'll be even more focused on in the future. </a>
+
+<q>What kind of LOD support does Unreal Tourney have for characters and models? What kind of support are you looking at in the future?</q>
+
+<a>Erik de Neve wrote the engine's continuous LOD code. It uses a topologically weighted edge-collapsing scheme which scales polygon counts down almost linearly with distance. It was inspired by the research on continuous LOD by many others, including Hugues Hoppe (http://research.microsoft.com/~hoppe/).</a>
+
+<q>Will you add bump-mapping support?</q>
+
+<a>This will be a feature of the next-generation engine. Regarding bump mapping, it's one of those features that you really need to plan for from day one in order to support it thoroughly.
+
+Unfortunately, 3D card companies have been claiming to support bump mapping for years in their marketing hype, based on the fact that their current-generation chips support a grossly inaccurate approximation of the actual math...so most gamers don't appreciate the visual impact *real* bump-mapping will have when early 2001 hardware begins to support it. Stay tuned. </a>
+
+<q>What are the plans for building curved surface support into the game and editor?</q>
+
+<a>Next generation engine! We could have hacked curved surface support into the current engine, but our philosophy towards those kinds of features (curved surfaces and bump-mapping) is to only support it when we can do so in a fully general way. Quake 3 Arena shows that curved surfaces can look great, but there are many limitations on that approximation. For example, I expect to be able to build levels using CSG (constructive solid geometry) operations on everything; I want to have correct collision checking with all geometric primitives; I want to be able to apply decals to all geometry; I want all primitives to support dynamic, continuous level-of-detail. Tesselating bezier curves is easy; it's solving those other problems that is hard, and that will be one of the major focuses of the next engine.</a>
+
+<q>Any plans to do an engine with real-time light sourcing?</q>
+
+<a>We've had it since 1997. :-) If you're asking about real-time shadowing, that's something we'll be exploring in great depth.</a>
+
+<q>Skeletal animation?</q>
+
+<a>We already have skeletal animation up and running here in Epic MegaLabs(tm), though Unreal Tournament doesn't exploit it due to our development timing. We'll have the skeletal code in licensees' hands over the next few months, and it will be exploited in Unreal 2, being developed by Legend Entertainment.</a>
+
+<q>Do you ever think you'll tinker with a voxel engine, or combining a voxel and a polygon engine?</q>
+
+<a>I don't think voxels are going to be applicable for a while. My thinking on the evolution of realtime computer graphics is as follows:
+
+1999: Large triangles as rendering primitives, software T&amp;L.
+
+2000: Large triangles, with widespread use software-tesselated curved surfaces, limited hardware T&amp;L.
+
+2001: Small triangles, with hardware continuous tesselation of displacement-mapped surfaces, massive hardware T&amp;L.
+
+2002-3: Tiny triangles, full hardware tesselation of curved and displacement-mapped surfaces, limited hardware pixel shaders a la RenderMan.
+
+2004-5: Hardware tesselation of everything down to anti-aliased sub-pixel triangles, fully general hardware pixel shaders. Though the performance will be staggering, the pipeline is still fairly traditional at this point, with straightforward extensions for displacement map tesselation and pixel shading, which fit into the OpenGL/Direct3D schema in a clean and modular way.
+
+2006-7: CPU's become so fast and powerful that 3D hardware will be only marginally benfical for rendering relative to the limits of the human visual system, therefore 3D chips will likely be deemed a waste of silicon (and more expensive bus plumbing), so the world will transition back to software-driven rendering. And, at this point, there will be a new renaissance in non-traditional architectures such as voxel rendering and REYES-style microfacets, enabled by the generality of CPU's driving the rendering process. If this is a case, then the 3D hardware revolution sparked by 3dfx in 1997 will prove to only be a 10-year hiatus from the natural evolution of CPU-driven rendering.</a>
+
+<q>Have you ever considered, or are you considering, *gasp!* putting the Unreal Engine aside and starting fresh with a new next-generation engine from scratch?</q>
+
+<a>We will do that to a certain extent with the next-generation engine. Anything that's not up to our standards of what a year 2001 game should look like, we'll rip out and replace. 100% of the rendering code will be new. Most of the scripting will be new. Other parts of the code, like the networking and core, are now in really good shape and won't be replaced unless our R&amp;D reveals a significantly better approach.</a>
+

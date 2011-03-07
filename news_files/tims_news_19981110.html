@@ -1,0 +1,78 @@
+<h4>Latest News</h4>
+
+<p>The latest <a href="http://www.planetunreal.com/">PlanetUnreal</a>
+survey shows a significant gain in gamers' satisfaction with the latest 219 patch,
+compared to the previous ones.&nbsp; We're now hammering on version 220, which includes
+significant new Internet play improvements, plus some core game improvements that the rest
+of the team has been working on. 220 won't be out this week, but should be ready soon
+after.</p>
+
+<p>There seems to be one Internet problem in 219 that is affecting 10-15% of players.
+&nbsp;&nbsp;&nbsp; I haven't figured out the cause yet, but the symptom is a ping time
+(visible with STAT NET) that swings around wildly, going from 200 to 1000 or more over the
+course of several seconds.&nbsp; Many of these players report that other games like Quake
+2 don't exhibit the problem--which indicates it's not just a bad connection or ISP. &nbsp;
+I suspect packet-ordering problems, though I haven't been able to duplicate it here.</p>
+
+<h4>The Roadmap</h4>
+
+<p>In the remainder of 1998, we will be releasing: </p>
+
+<ul>
+  <li>Unreal 219: Latest version. Download <a href="http://unreal.epicgames.com/Versions.htm">here</a>.
+  </li>
+  <li>Unreal 220: Further Internet improvements, core game improvements, bug fixes. </li>
+  <li>Unreal 221: Incremental fixes </li>
+
+  <li>Unreal 222: Offical (non-beta) patch; shareware version will be released. </li>
+  <li>Additional patches as necessary. </li>
+</ul>
+
+<p>We also have some cool things in the works for 1999.&nbsp; Since Unreal first shipped,
+I've been working on Internet improvements and bug fixes, while the rest of the team has
+been working on a top-secret project we are referring to as &quot;Unreal Tournament&quot;.
+&nbsp;&nbsp; There have been a lot of rumors and speculation about what this project will
+be.&nbsp;&nbsp; Some of the rumors are completely incorrect. For example, we are <span class="italic">not</span>
+
+using any alien technology recovered from crashed spaceships on Tournament. (We're saving
+that for our <span class="italic">next</span> project).</p>
+
+<p>I'm also working on the new, enhanced UnrealEd, with lots of new features, improved
+stability, a plug-in interface, and other goodies. We don't have a date for this, but I'm
+expecting a public beta around new years, with final release early in 1999.</p>
+
+<p>At some point, we'll be publically releasing Unreal's C++ interface so the community
+can start on .dll plug-ins for Unreal and UnrealEd.&nbsp; This will happen no later than
+the new UnrealEd public beta.&nbsp; It might be possible to release it sooner, however
+there are changes in the works which won't be binary compatible, so user-created .dll's
+would break and need to be recompiled.</p>
+
+<p>What can you do with Unreal .dll's? Lots. Here are some examples: </p>
+
+
+<ul>
+  <li>Define new kinds of algorithmic textures that can be created in UnrealEd and used in
+    levels. </li>
+  <li>Expose anything you can do in C++ to UnrealScript, for example the file system, ActiveX,
+    more Internet functionality, etc. </li>
+  <li>Write performance-critical game support routines, such as AI. </li>
+</ul>
+
+<p>While it's also possible to write game code directly in C++, the preferable way to do
+that is UnrealScript, since there is already a lot of game support infrastructure built
+into the language.</p>
+
+<h4>Server Administration</h4>
+
+<p>Remote server administration isn't working in 219, but will be addressed shortly. 219
+does have a few new features for local server administration.&nbsp; While running a
+server, click on the Unreal server icon and choose &quot;Show log window&quot;. In the
+log, you can type: </p>
+
+<ul>
+  <li>SERVERTRAVEL &lt;levelname&gt;: Jump to a new server. </li>
+  <li>SAY &lt;message&gt;: Broadcast a message to all users. </li>
+
+</ul>
+
+<p>-Tim Sweeney</p>

@@ -1,0 +1,84 @@
+<h4>TNT Users, Try This!</h4>
+
+<p>Tweaks: </p>
+
+<ul>
+  <li>Play in 16-bit color, which is significantly faster than 32-bit color.</li>
+
+  <li>Turn the detail options down in the Preferences/Video menu.</li>
+  <li>Use the &quot;-&quot; key to reduce the HUD size.</li>
+  <li>In Preferences/Game, turn off the display of your weapon.</li>
+  <li>If you have enabled Advanced Options / Audio / Use3DHardware audio support, TURN IT OFF
+    for now! Big driver performance problems.</li>
+</ul>
+
+<p>Experimental improvement for the brave: </p>
+
+<ul>
+  <li>Try <a href="http://www.geforce-fr.com/drivers/win9x_nv3.34.exe">NVidia's
+    Beta Detonator 3.34 drivers</a> (thanks to <a href="http://www.anandtech.com/">Anandtech's</a> site for the link).</li>
+  <li>Try putting this new <a href="http://unreal.epicgames.com/D3DDRV.DLL">D3DDRV.DLL</a> into your \TournamentDemo\System directory. Please back up your existing one first!</li>
+
+</ul>
+
+<p>These two downloads are beta and haven't been rigorously tested yet, but in our
+gameplay sessions here, they're a huge improvement on low-RAM machines with the TNT, TNT2,
+and GeForce256.&nbsp;&nbsp;</p>
+
+<p>Please let us know how these work for you, by emailing <a
+href="mailto:utbugs@epicgames.com">utbugs@epicgames.com</a></p>
+
+<h4>Latest Findings</h4>
+
+<p>We've been benchmarking UT performance and memory usage on many 3D cards, and we've
+found the source of the performance problems on 64-96 meg machines with TNT/TNT2 cards.</p>
+
+<p>Our measurements indicate that the TNT/TNT2 drivers consume up to 25 megabytes of
+page-locked system memory with UT, while other Direct3D cards don't.&nbsp; On machines
+with 64-96 megs, that kills performance, as one would expect.&nbsp; The game runs, but
+data is swapped to the hard drive so frequently that playability is
+compromised.&nbsp;&nbsp; We've been comparing with other 3D cards and aren't seeing the
+issue on the Rage 128 or Voodoo3 under Direct3D.</p>
+
+<p>System-wide memory allocations measured with SYSMON.EXE on a 64-meg Celeron running
+Windows 98 SE: </p>
+
+<ul>
+  <li>TNT D3D: 51 MB baseline, 122 MB playing UT in 16-bit color, 134 MB playing UT in 32-bit
+    color.</li>
+  <li>Rage 128 D3D: 55 MB baseline, 107 MB playing UT in 16-bit color, 109 MB playing UT in
+    32-bit color.</li>
+  <li>Voodoo3 D3D: 51 MB baseline, 100 MB playing UT in 16-bit color.</li>
+</ul>
+
+<p>We're working with the NVidia guys to track down the source of the extra 25 megabytes
+of memory consumption.&nbsp; I'm going to hold off on posting our benchmarks till we've
+had a good chance to deal with the memory consumption issue, so everyone is on a level
+playing field.&nbsp;&nbsp; The NVidia cards already perform well on PC's with lots of RAM,
+so they should be in good shape once the memory issues are solved.</p>
+
+<h4>Links</h4>
+
+<p>Unreal Technology in the news: </p>
+
+<ul>
+  <li><a href="http://www.msnbc.com/news/318085.asp?cp1=1#BODY">The Little
+    Engine That Can Do More</a> - MSNBC</li>
+  <li><a href="http://www.newsday.com/plugin/ccov0929.htm">Playing With The
+    Big Kids</a> - Newsday</li>
+</ul>
+
+<p>Cool Sites: </p>
+
+<ul>
+  <li><a href="http://www.unreality.dk/">Unreality.dk</a> - Cool Unreal site
+    &amp; community host in Denmark.</li>
+  <li><a href="http://www.gamespy.com/">GameSpy.com</a> - The GameSpy
+    empire's new portal site.&nbsp; Check out their <a
+    href="http://www.gamespy.com/stats/index.shtm">live stats</a> page, where
+    Unreal Tournament is #6 and rising quickly.&nbsp; Hopefully someday we'll overtake that
+    3-year-old QuakeWorld thing. :-)</li>
+
+</ul>
+
+<p>-Tim</p>

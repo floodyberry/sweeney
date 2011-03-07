@@ -1,0 +1,16 @@
+http://lambda-the-ultimate.org/classic/message6697.html
+http://lambda-the-ultimate.org/classic/message6697.html#6762
+0530985
+The New C++: Trip Report, October 2002
+Re: The New C++: Trip Report, October 2002
+<p>int f(int a,char b,bool c[10]);</p><p>
+
+struct {int a; char b; bool c[10];}</p><p>
+
+template&lt;int a,char b,bool c[10]&gt; class c;</p><p>
+
+tuple&lt;int,char,bool[10]&gt;</p><p>
+
+void g(void) {int a; char b; bool c[10]; ..};</p><p>
+
+Spot the five completely different sets of grammar and semantics to represent the notion of "an integer, a character, and 10 booleans" in different contexts.</p>

@@ -1,0 +1,16 @@
+http://lambda-the-ultimate.org/node/2048
+http://lambda-the-ultimate.org/node/2048#comment-25151
+1050624
+Patrick Logan on Software Transaction Memory
+Can you help me understand
+<p></p><blockquote><div>Can you help me understand why message passing concurrency is implausible for your domain? Isn't the Opengl API itself a wrapper over a message passing architecture?</div></blockquote><p>
+</p><p>Consider a game like Grand Theft Auto, where 10,000 or more objects move around and interact independently.  Here, the objects are things like people, cars, weapons, props, etc.  Each object has attributes that change over time, such as position, damage, relationships with other objects (who's carrying what), etc.  At any point, any set of objects can potentially interact with each other in a stateful way, for example I can get in a car, drive it around, and run into a mailbox, damaging it.
+</p><p>Many of these interactions require atomic updates of groups of objects.  For example, to fire a weapon, I need to first determine whether I'm carrying the weapon, whether the weapon has any ammunition, and then I need to create a bullet object.  If a weapon has one bullet and two people tried to fire it simultaneously, non-atomic updates might lead both players to conclude that they can fire the weapon, so two bullets are created, and the gun is left with -1 bullets, an inconsistent state.
+</p><p>Basically, all of the atomicity arguments that have been applied to databases (e.g. the bank-transfer example) directly map onto the game example.
+</p><p>Therefore, you need some way to guarantee atomicity.  Candidates:</p>
+<ul >
+<li >We do this today (on 3-core CPUs) by simply single-threading this kind of code.</li>
+<li >You could implement this using message passing, but you'd be writing and debugging your own ad-hoc transactional protocol for each of the tens of thousands of updates and state transitions present in the program.</li>
+<li >If our game were sufficiently simple, we could multi-thread it by carefully locking and synchronizing the objects at the appropriate point, but as software complexity scales up, the analysis of whether the program might eventually deadlock is intractable.</li>
+</ul>
+<p>So, in this case, transactional memory is the most natural productive solution to this problem.  Keep in mind, we live in a comparatively simple world, since we always targeting a single multi-core CPU with shared coherent memory, and aren't concerned with databases, distributed computing, or fault-tolerance.</p>

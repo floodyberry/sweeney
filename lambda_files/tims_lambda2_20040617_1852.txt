@@ -1,0 +1,15 @@
+http://lambda-the-ultimate.org/classic/message12556.html
+http://lambda-the-ultimate.org/classic/message12556.html#12709
+0536844
+The view from the left
+Re: The view from the left
+<p>Frank,</p><p>
+
+Thanks for the info!  And pardon my butchering of Haskell syntax in those examples.  What I really meant is that from the array functor (in Haskell and elsewhere), one can derive several different monads, each with a different unit:</p>
+
+<pre class="code_box">unit :: t-&gt;[t]
+unit1 x = [x] -- The ordinary unit
+unit2 x = [] -- A trivial unit
+unit3 x = x:(x:[]) -- The "double consed" unit</pre>
+
+<p>And these different monads, except the trivial one, are isomorphic.  So in order to deal with types "up to isomorphism", it seems like one has to be able to deal with functors "up to natural isomorphism", and so on.  Sounds tricky, but valuable.</p>

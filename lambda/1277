@@ -1,0 +1,1343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>The Next Mainstream Programming Languages | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1277" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>The Next Mainstream Programming Languages</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >I didn't see anyone post them yet, so here are the slides from Tim Sweeney's POPL talk entitled "The Next Mainstream Programming Languages: A Game Developer's Perspective". I know Tim and I aren't the only game developers who follow LtU, and I figure even non-game developers might find them quite interesting!</p>
+<p ><a href="http://www.cs.princeton.edu/~dpw/popl/06/Tim-POPL.ppt">http://www.cs.princeton.edu/~dpw/popl/06/Tim-POPL.ppt</a></p> </div>
+ <div class="links">By <a href="user/1250" title="View user profile.">Per Vognsen</a> at 02/02/2006 - 02:52 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1632" title="Gamma formalism">previous forum topic</a> | <a href="node/1625" title="Advantages of Soft Typing">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1277" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 21042 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1277" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1277" />
+<a id="comment-14194"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14194" class="active">PDF Version of the slides?</a></h3>
+ <div class="content"><p >Are these slides available as PDF-Version as well?</p></div>
+ <div class="links">By <a href="user/2655" title="View user profile.">pintman</a> at Thu, 02/02/2006 - 08:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14196"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14196" class="active">PDF version</a></h3>
+ <div class="content"><p >I found <a href="http://www.st.cs.uni-sb.de/edu/seminare/2005/advanced-fp/docs/sweeny.pdf">a pdf version</a> on <a href="http://www.st.cs.uni-sb.de/edu/seminare/2005/advanced-fp/">the homepage</a> of the "Advanced Functional Programming" seminar course at Saarland University</p>
+<p >(I haven't been able to download the .ppt (server seems down), so I'm not sure it's exactly the same.)</p></div>
+ <div class="links">By <a href="user/1826" title="View user profile.">Adriaan Moors</a> at Thu, 02/02/2006 - 09:25 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14202"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14202" class="active">PDF of Tim Sweeney&#039;s POPL talk</a></h3>
+ <div class="content"><p >The PDF you found was created from the PowerPoint slides using Keynote -- so they are the same, except for animations. </p></div>
+ <div class="links">By <a href="user/480" title="View user profile.">Christian Lindig</a> at Thu, 02/02/2006 - 12:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14195"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14195" class="active">Good points...</a></h3>
+ <div class="content"><p >As an ex-game coder I agree with his empasis on concurrency, this is only going to be more and more important and not just in games. This is the major angle people interested in functional programming can leverage with people interested in performance.</p>
+<p >Then again the only success I had in getting functional code into a game engine was a scene-graph scripting language which would have been hell to debug if it had side-effects.</p>
+<p >Not sure about being able to eliminate all numerical/array index etc. exceptions though. A lot or most maybe but not all IMO.</p>
+<p >Also not sure about lenient eval' either.</p></div>
+ <div class="links">By <a href="user/2071" title="View user profile.">Daniel Slaney</a> at Thu, 02/02/2006 - 09:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14200"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14200" class="active">Very interesting and important stuff.</a></h3>
+ <div class="content"><p >The conclusion is that we need better 'type' systems that can catch more requirements and programmer assumptions. This ties in beautifully with the other thread about static vs dynamic typing. Programming languages should generally go the static way, doing as much as they can in compile time, but also leave the door open for dynamic stuff, should it be necessary. </p>
+<p >I agree with most of the points raised, but I have questions on the following:</p>
+<p >1) I do not see how variable length integers are that important for games. Wouldn't 64-bit integers be enough? what game value would go over 64 bits?</p>
+<p >2) bounds checking is not needed if the language makes indices be strong types. ADA has this feature very nicely done.</p>
+<p >3) I did not understand how horizontal subclassing will offer more than vertical subclassing, as the new features introduced by horizontal subclassing will not be used by the rest of the game engine anyway without modifying the engine.</p>
+<p >4) I do not agree that garbage collection is the end to memory management. I think there exists a 'calculus' for resource management (or effects management). After all, if we take a program and lay down its instructions one after the other, it is pretty obvious when an effect takes place.</p>
+<p >I liked the part that shows how ineffective "modern" programming languages are. In just 3 lines of code, there are 7 possible sources of error or uneccessary overhead. If only programmers could realize this...</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Thu, 02/02/2006 - 12:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14218"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14218" class="active">A few things</a></h3>
+ <div class="content"><p >Storage size is important for performance - smaller storage requirements improves usage of cpu caches and can help prevent paging and keep minimum sys requirements down.</p>
+<p >For some things just having a form of non-null reference would be handy. In fact wouldn't using C++ references prevent the problem that the parameters could be null here?</p></div>
+ <div class="links">By <a href="user/2660" title="View user profile.">Mike Hearn</a> at Thu, 02/02/2006 - 16:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14222"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14222" class="active">C++ refs: You&#039;d think so, wouldn&#039;t you?</a></h3>
+ <div class="content"><p >Consider the following code:</p>
+<pre >T* f() {...}
+void g(T&amp; y) {...}
+
+void h()
+{
+  T* x=f();
+  T&amp; y=*x;
+  g(y);
+}
+</pre><p >
+I've seen this happen, when <code >f()</code> and <code >g()</code> were written in different epochs of a team's development practices.  Say, the original developers didn't like references, so they wrote <code >f()</code> to return a pointer; later hires managed to get the culture changed, so new code, such as <code >g()</code>, was written to take references.  Then <code >h()</code> was written that had to talk to both.</p></div>
+ <div class="links">By <a href="user/1346" title="View user profile.">francis</a> at Thu, 02/02/2006 - 16:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14263"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14263" class="active">C++</a></h3>
+ <div class="content"><p >Null references are undefined behavior but they can still be created. <a href="http://groups.google.com/group/comp.lang.c++/browse_frm/thread/dda94c6b82bb1f47/f637444f6d0596d8#f637444f6d0596d8">An example</a></p></div>
+ <div class="links">By <a href="user/1891" title="View user profile.">dbremner</a> at Fri, 02/03/2006 - 06:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14262"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14262" class="active">Horizontal Subclassing</a></h3>
+ <div class="content"><blockquote ><p >3) I did not understand how horizontal subclassing will offer more than vertical subclassing, as the new features introduced by horizontal subclassing will not be used by the rest of the game engine anyway without modifying the engine.</p></blockquote>
+<p >I think the idea of "horizontal subclassing" is to enable modification, extension, and redefinition of an already existing class.  For example, altering an Actor to give it another field that *all* classes extending Actor will inherit and without editing the Actor source code.</p>
+<p >It seems to be a way to get around non-extensible classes in a static class world.</p>
+<p >Tim, am I close?</p></div>
+ <div class="links">By <a href="user/1299" title="View user profile.">Matt OConnor</a> at Fri, 02/03/2006 - 06:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14264"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14264" class="active">Open classes?</a></h3>
+ <div class="content"><blockquote ><p >
+I think the idea of "horizontal subclassing" is to enable modification, extension, and redefinition of an already existing class.
+</p></blockquote>
+<p >Is not this usually called open classes?</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Fri, 02/03/2006 - 07:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14268"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14268" class="active">How is it different from just adding new fields to class Actor?</a></h3>
+ <div class="content"><p >How is that different from just adding new fields to class Actor? If all classes extending Actor will need those new fields, then it makes sense to add the field to class Actor. Already compiled code will have no use for those fields anyway. If, on the other hand, only certain classes need those fields, a simple refactoring (i.e. a new base class inheriting from Actor with those fields) solves the problem.</p>
+<p >In either case, horizontal subclassing seems reduntant.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Fri, 02/03/2006 - 11:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14314"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14314" class="active">Modifying class Actor</a></h3>
+ <div class="content"><p >Modifying class Actor directly would solve the immediate problem, but remember that for a game developer using "UnrealEngine3," class Actor belongs to the engine code you liscensed from Epic. If two months later Epic comes out with "UnrealEngine3.1" with cool new features you want to use, then you have try to merge your local changes into the new code.</p>
+<p >I think Sweeny is arguing for "horizontal subclassing" so that liscensees of his engine can customize it to their liking while still being able to take advantage of future releases of the product.</p></div>
+ <div class="links">By <a href="user/2716" title="View user profile.">Tim Foley</a> at Fri, 02/03/2006 - 22:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14328"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14328" class="active">Hi!</a></h3>
+ <div class="content"><p >Hi!</p>
+<p >would a good version control system not solve Sweenys immediate problems?<br >
+(of changing the basecode of the Unreal Engine and then merge the Unreal Engine changes back into the old codebase.)</p>
+<p >Is there a version control system like Monticello (Smalltalk) for c++?</p></div>
+ <div class="links">By <a href="user/1562" title="View user profile.">HeikoWengler</a> at Sat, 02/04/2006 - 13:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14347"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14347" class="active">Merging: not a great solution</a></h3>
+ <div class="content"><p >(wince) I don't know about Monticello, but in my random experience merging code is time-consuming and error-prone, even with good tools. (I like Araxis Merge, combined with any decent version control system.)  Merging code is a common solution to a range of problems, but that doesn't mean it's pretty.</p>
+<p >Choice of programming language definitely affects one's ability to cope with change.  If programming language designers found better ways to support this (alternatives to merging), they'd be welcome.</p></div>
+ <div class="links">By <a href="user/2639" title="View user profile.">jorend</a> at Sun, 02/05/2006 - 03:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14427"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14427" class="active">My question is still not answered.</a></h3>
+ <div class="content"><p >I still do not understand how horizontal subclassing will solve the problem. What is the difference between horizontal subclassing and vertical subclassing? Sweeny's problem could be solved by introducing a class between Actor and Actor-derived classes. Changing all references of 'new Actor' to 'new MyActor' is a matter of using the right tool...</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Tue, 02/07/2006 - 10:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14505"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14505" class="active">Not That Easy</a></h3>
+ <div class="content"><p >It's really not that easy to modify a large class hierarchy in C++ (or, presumably, UnrealScript) in such a way that you don't risk introducing bugs when the base class changes, which, again, Tim has said happens with their licensees every couple of weeks! To gain a better understanding as to why that might be, read Oleg Kiselyov's excellent <a href="http://okmij.org/ftp/Computation/Subtyping">OOP Critique</a> or Peter Norvig's <a href="http://www.norvig.com/java-iaq.html">Java IAQ</a>. Virtual classes are a great solution to the problem, but are somewhat difficult to keep type-safe. The paper "On the (Un)reality of Virtual Types," mentioned elsewhere in this thread, contains an excellent explanation of the challenges inherent in a type-safe virtual class system while at the same time offering multiple type-safe solutions that are extremely easy to express in <a href="http://caml.inria.fr">O'Caml</a>. The executive summary is that any system with parametric polymorphism, structural typing, correct binary method typing, and open self-typing allows for the easy implementation of virtual classes. It's worth noting that <a href="http://scala.epfl.ch">Scala</a> also has no difficulty expressing virtual classes.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Thu, 02/09/2006 - 15:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14396"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14396" class="active">Sorry. Can you explain, what</a></h3>
+ <div class="content"><p >Sorry. Can you explain, what does "horizontal subclassing" and "vertical subclassing" means?</p></div>
+ <div class="links">By <a href="user/2362" title="View user profile.">zelych</a> at Mon, 02/06/2006 - 16:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14422"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14422" class="active">These aren&#039;t the normal</a></h3>
+ <div class="content"><p >These aren't exactly standard terms used, but...</p>
+<p >Vertical subclassing is normal subclassing.</p>
+<p >Horizontal subclassing is a method of altering and extending an already existing class without altering its source.</p></div>
+ <div class="links">By <a href="user/1299" title="View user profile.">Matt OConnor</a> at Tue, 02/07/2006 - 03:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14878"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14878" class="active">How does Ada do it?</a></h3>
+ <div class="content"><blockquote >
+2) bounds checking is not needed if the language makes indices be strong types. ADA has this feature very nicely done.
+</blockquote>
+
+<p >
+I looked around for information on Ada's solution, but couldn't find what I needed.  How does Ada do it?
+</p>
+
+<p >
+Dependently typed array bounds would guarantee no out-of-bounds accesses without having to perform any dynamic checks.
+</p></div>
+ <div class="links">By <a href="user/925" title="View user profile.">Kannan Goundan</a> at Tue, 02/21/2006 - 21:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14889"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14889" class="active">Run time...</a></h3>
+ <div class="content"><p >Not all bounds checking is static. The Ada model supports runtime checks for various error conditions, and array bounds are a part of this model. </p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Wed, 02/22/2006 - 10:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14205"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14205" class="active">&quot;Lenient&quot; evaluation</a></h3>
+ <div class="content"><p >-- versus eager or lazy.</p>
+<p >Can anyone point to more information about this?</p>
+<p >I see that there was a discussion of this about 1.5 years ago (<a href="http://lambda-the-ultimate.org/node/243">here</a>, which also makes mention of "the next mainstream programming language(s)"), but haven't seen much else.</p></div>
+ <div class="links">By <a href="user/1195" title="View user profile.">dbfaken</a> at Thu, 02/02/2006 - 14:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14211"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14211" class="active">&quot;How Much Non-strictness do Lenient Programs Require?&quot;</a></h3>
+ <div class="content"><p ><a href="http://www.cs.cmu.edu/~seth/lenient.pdf">How Much Non-strictness do Lenient Programs Require?</a></p>
+<p >While not dedicated solely to description of what is lenient evaluation strategy, this paper is the only (free) online resource I could find on the topic. I didn't look hard, so there may be others as well...</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Thu, 02/02/2006 - 15:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14345"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14345" class="active">Lenient</a></h3>
+ <div class="content"><p >Lenient evaluation is just non-stict, non-lazy implementation, aka:</p>
+<p >1.  Inputs to a function need not be defined/valid -- not strict</p>
+<p >2.  Unnecessary work may be performed -- not lazy</p>
+<p >My understanding is that most non-strict languages are "lenient" ones.</p></div>
+ <div class="links">By <a href="user/1925" title="View user profile.">jimdesu</a> at Sun, 02/05/2006 - 02:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14207"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14207" class="active">Bounds Checking and Array Comprehensions</a></h3>
+ <div class="content"><p >Check out <a href="http://www.sac-home.org/">SAC</a> for some good work on dimension intedependent array comprehensions and a type system for array indexes. </p></div>
+ <div class="links">By <a href="user/354" title="View user profile.">Noel</a> at Thu, 02/02/2006 - 14:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14230"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14230" class="active">The slides were interesting,</a></h3>
+ <div class="content"><p >The slides were interesting, but without hearing the lecture it is hard to understand the deatils. Nonetheless, I feel he is right about the importance on concurrency.</p></div>
+ <div class="links">By <a href="user/2403" title="View user profile.">Jonathan Allen</a> at Thu, 02/02/2006 - 19:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-14235"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14235" class="active">A couple of quotes I found interesting</a></h3>
+ <div class="content"><blockquote ><p >
+There is not a simple set of “hotspots” to optimize!
+</p></blockquote>
+<p >A lot of people falsely assume that in any project there's always a small core that needs to run fast, which can be coded in C, etc., but the rest can be written in your favorite but slow language.</p>
+<blockquote ><p >
+90% of integer variables in Unreal exist to index into arrays
+</p></blockquote>
+<p >Wow !</p>
+<blockquote ><p >
+Garbage collection should be the only option
+</p></blockquote>
+<p >This is very interesting coming from a game dev.</p></div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at Thu, 02/02/2006 - 21:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14237"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14237" class="active">Garbage collection could be controlled by game state.</a></h3>
+ <div class="content"><p >Garbage collection could be controlled by game state.</p>
+<p >Imagine if you will, you burst into a room. Monsters are everywhere and you have only a couple seconds to respond before you're toast. Do you want the GC to run now? Hell no!</p>
+<p >What if you could defere the GC run until the room was cleared. As soon as there are no monsters in sight, go ahead and process that long overdue memory sweep. Or run it whenever the player opens a menu or otherwise pauses the game.</p>
+<p >By defering the cost of memory deallocation until appropriate times, it seems possible to more than make up for the cost for GC. Obviously there will be times when a memory sweep cannot wait, but careful tunning should at least reduce those occurances.</p></div>
+ <div class="links">By <a href="user/2403" title="View user profile.">Jonathan Allen</a> at Thu, 02/02/2006 - 21:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14241"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14241" class="active">Real-time GC</a></h3>
+ <div class="content"><p >Presumably what you really need is some form of real-time garbage collection, to ensure that your frame-rates <i >never</i> drop too low. There's plenty of research in this area: you could try <a href="http://eprints.cs.vt.edu/archive/00000206/">here</a>, <a href="http://www.research.ibm.com/metronome/">here</a>, or <a href="http://portal.acm.org/citation.cfm?id=604155">here</a> as starting points, or just hit Google. </p></div>
+ <div class="links">By <a href="user/1670" title="View user profile.">Allan McInnes</a> at Thu, 02/02/2006 - 22:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14247"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14247" class="active">I like that idea. I wonder</a></h3>
+ <div class="content"><p >I like that idea. I wonder how users would react to a tip that they could increase performance of their game by occasionally pausing it.  Most people expect a pause while they quicksave their FPS game -perhaps a good time to GC as well.</p></div>
+ <div class="links">By <a href="user/1358" title="View user profile.">Ewan</a> at Fri, 02/03/2006 - 01:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14285"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14285" class="active">GC at the end of a level</a></h3>
+ <div class="content"><p >Some games with GC-ed scripting languages do a garbage collection between levels.  Obviously this means there needs to be an upper bound on how much garbage can be created, but I know of several shipped games that used this technique.  (The trend at the moment is to not have levels, though, and have a big seamless world.)</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Fri, 02/03/2006 - 16:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14305"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14305" class="active">GC would be fine here</a></h3>
+ <div class="content"><p >You're taking the performance of superscalar computers that can perform billions of operations per second and putting it into a very loose human frame of reference.  I'd say a long GC, provided you don't have an enormous heap or you're doing generational collections, would be 2 milliseconds.  That's less than 1/8th of a total frame at 60fps.  This would be completely fine in an action game like Quake.</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Fri, 02/03/2006 - 20:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14327"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14327" class="active">Especially with C++</a></h3>
+ <div class="content"><p >Yes, GC would probably be excellent - in a language like C++ where stack allocation is extensive you don't get the same problems as in Java/Python where nearly everything is an object and tons of temporary objects are created behind the scenes so putting excess load on the GC. A well managed game engine that kept allocation to a minimum combined with coarse-grained objects and stack-allocated temporary objects would probably require very few GCs, and they'd be very fast.</p></div>
+ <div class="links">By <a href="user/2660" title="View user profile.">Mike Hearn</a> at Sat, 02/04/2006 - 12:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14330"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14330" class="active">Note that there is research</a></h3>
+ <div class="content"><p >Note that there is research on Java compiler's optimisation to allocate objects on the stack when it can see that the object is not referenced at the end of the function.<br >
+This would reduce the pressure on the GC.</p></div>
+ <div class="links">By <a href="user/1458" title="View user profile.">renox</a> at Sat, 02/04/2006 - 20:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14355"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14355" class="active">Escape analysis</a></h3>
+ <div class="content"><p >Right, escape analysis can be used to prove that an object is stack allocatable, and this is the "clean" way to do it as it means the developer does not have to think about these things themselves. And actually the bulk of the proof is showing that it cannot be accessed by other threads. </p>
+<p >But, stack allocation is still not with us in production/shipping JVMs, and 10 years ago C++ developers were still benefiting from this. So you could argue that waiting around for the clean solution (in this and other ways) did Java a great deal of damage in the public eye, and unfortunately this damage is often genearlised out to all garbage collection.</p></div>
+ <div class="links">By <a href="user/2660" title="View user profile.">Mike Hearn</a> at Sun, 02/05/2006 - 16:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14394"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14394" class="active">And most other languages too</a></h3>
+ <div class="content"><p >Again, you're jumping to the "GC is slow in a human frame of reference" conclusion.  Tons of temporary objects is no big deal--provided you're using a compacting collector that  only cares about live objects.</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Mon, 02/06/2006 - 15:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14412"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14412" class="active">&quot;magic stack GC&quot;  versus live-object GC</a></h3>
+ <div class="content"><p >I'm not so sure:<br >
+  Allocating objects on the stack allows them to all be deallocated once you leave the stack frame ("free" GC) - as long as you <i >KNOW</i> they're not needed past that stack-frame (and thus don't need to scan them).  I find this very useful in C++, like alloca() in C.  (of course, it would be nice to have some guarantee about the "KNOW"ing :)</p>
+<p >..whereas allocating "Tons of temporary objects" is still taking up memory until your GC runs.</p>
+<p >If nothing else, I would think the latter would give more page-faults &amp; cache-misses, and not be favored by memory-bound apps.</p>
+<p >I suppose using the stack for objects with known lifetimes is something like "Linear Lisp", which I wish there were more of..</p></div>
+ <div class="links">By <a href="user/1195" title="View user profile.">dbfaken</a> at Mon, 02/06/2006 - 20:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14414"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14414" class="active">Region inference</a></h3>
+ <div class="content"><blockquote ><p > Allocating objects on the stack allows them to all be deallocated once you leave the stack frame ("free" GC) - as long as you KNOW they're not needed past that stack-frame (and thus don't need to scan them).</p></blockquote>
+<p >Region inference can do this kind of thing for you automatically in many cases and also generalizes the idea dramatically. It's been discussed on LtU several times in the past. A good primer on this material is <a href="http://www.diku.dk/forskning/topps/activities/kit2/summerschool/slides/mads/session1.ps.gz">Mads Tofte's introductory slides</a>.</p></div>
+ <div class="links">By <a href="user/1250" title="View user profile.">Per Vognsen</a> at Mon, 02/06/2006 - 21:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-14419"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14419" class="active">Programming with Regions in the MLKit</a></h3>
+ <div class="content"><p >I've been reading <a href="http://www.itu.dk/research/mlkit/index.php/Documentation">it</a> during the last couple of days (on the train to work and back). While regions (in MLKit) have some nice properties, there also seems to be some gotchas that the programmer needs to be aware of. I'm not sure I would want to give up the flexibility/freedom of expression that garbage collection gives (luckily MLKit offers both regions and gc). However, regions (without gc) might be an excellent approach in some special domains (real-time / embedded), where resources (time / space) are limited.</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Mon, 02/06/2006 - 23:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14238"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14238" class="active">Hot-spots</a></h3>
+ <div class="content"><blockquote ><p >A lot of people falsely assume that in any project there's always a small core that needs to run fast, which can be coded in C, etc., but the rest can be written in your favorite but slow language.</p></blockquote>
+<p >Yes, this is an all too common fallacy. I used to work for Tim on Unreal Engine 2 and 3 and other projects, and one of the programmers who often worked on optimizations, Dan Vogel, was fond of pointing out that UE2 had a basically flat profile. It didn't start out that way, but when you've been optimizing your code for a while it inevitably converges towards this performance profile. The reason many non-game apps don't experience this is that they have a very different idea of what "sufficient performance" means.</p></div>
+ <div class="links">By <a href="user/1250" title="View user profile.">Per Vognsen</a> at Thu, 02/02/2006 - 21:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14275"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14275" class="active">Sufficient performance</a></h3>
+ <div class="content"><p >I'm curious - by the time a game gets to the flat profile, does it usually have sufficient performance?  I can understand how repeated profiling would lead software to converge to a flat profile: if you always optimize the hotspots, then eventually there will <i >be</i> no hotspots, because they'll already be coded in C and tightly optimized.  But this is only a problem if you need to do further optimization - otherwise, you're done, and profiling has done its job.</p></div>
+ <div class="links">By <a href="user/1377" title="View user profile.">Jonathan Tang</a> at Fri, 02/03/2006 - 14:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14358"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14358" class="active">Sufficient performance</a></h3>
+ <div class="content"><p >Well, it better, or you're screwed! Like Tim mentioned, once all feasible code optimizations have been attempted/implemented, you generally start making compromises on the art/level content to increase performance.</p>
+<p >Another thing: for a console game the minimum bar is probably a rock solid frame-rate at around 25 Hz. But higher frame-rates generally lead to smoother, better looking experiences, so game programmers are often chasing them.</p>
+<p >By the way, there are forces at work that help to flatten the profile which I didn't mention. Especially when optimizing graphics code you are dealing with a pipelined architecture and thus a bottleneck in one of the pipeline stages means that you can shove more workload into the other non-bottlenecked stages without noticably decreasing performance. So, for instance, if you are fill-bound you can push more polygons for "free". Or if your GPU performance is memory bandwidth bound from fetching texture data, you can use more complicated pixel shaders (as long as the extra complexity is arithmetical and doesn't involve extra pixel fetches). Taking advantages of these kinds of oppurtunities also serves to flatten the performance profile.</p></div>
+ <div class="links">By <a href="user/1250" title="View user profile.">Per Vognsen</a> at Sun, 02/05/2006 - 17:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14277"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14277" class="active">Games can make compromises that others cannot though</a></h3>
+ <div class="content"><p >Remember we are talking about a game.  Games are not important. If my game spends 90% of its time in arcTangent() [which of course would use Newton's method or some variation to find results to many decimal places] I can write a new arcTangent() that isn't as accurate and call it good enough.  (most likely a lookup table)</p>
+<p >If my bridge simulation turns out to spend 90% of its time in arcTangent(), there may not be much I can do about it without risking a bridge collapsing. </p>
+<p >In the real world most programs are not bottlenecked by the CPU these days.   CPUs are fast, programmer time is expensive. Nobody cares.   So long as are are not stupid in choosing algorithms things will be fast enough.  </p></div>
+ <div class="links">By <a href="user/2287" title="View user profile.">Henry Miller</a> at Fri, 02/03/2006 - 15:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14242"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14242" class="active">GC for memory, ok but for resources?</a></h3>
+ <div class="content"><p >While 'GC only' for memory seems possible, there is also the problem when an object is used to control the access of some OS (scarse) resources such like files, in which case RAII seems (to me) the only sensible approach..</p>
+<p >So I'd say GC only seems to be too restrictive..</p>
+<p >PS:<br >
+Never heard before about 'lenient evaluation' interesting read even though I'm just starting.</p></div>
+ <div class="links">By <a href="user/1458" title="View user profile.">renox</a> at Thu, 02/02/2006 - 22:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14244"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14244" class="active">RAII</a></h3>
+ <div class="content"><blockquote ><p >While 'GC only' for memory seems possible, there is also the problem when an object is used to control the access of some OS (scarse) resources such like files, in which case RAII seems (to me) the only sensible approach..</p></blockquote>
+<p >RAII mixes together initialization, memory management and resource acquisition, which is an undeniably useful idiom in C++. In garbage collected languages you can still get much of the same effect. For instance, in Lisp-like languages it's common to use WITH-* macros. In C#/.NET you can implement the IDisposable interface for your class X and then do</p>
+<p >using (X x = f()) { ... }</p>
+<p >which will automatically call the Dispose() method on x when the section is exited. So there are plenty of ways to deal with resources that don't confound resource management with memory allocation.</p></div>
+ <div class="links">By <a href="user/1250" title="View user profile.">Per Vognsen</a> at Thu, 02/02/2006 - 22:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14417"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14417" class="active">On RAII in higher-order languages</a></h3>
+ <div class="content"><p >A shameless plug: <a href="http://groups.google.fi/group/comp.lang.functional/browse_frm/thread/5385c76d82a78171">how to do RAII in higher-order languages</a>.</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Mon, 02/06/2006 - 23:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14248"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14248" class="active">Using fxCop in addition to the C# compiler</a></h3>
+ <div class="content"><p >Sweeney's presentation lists a number of errors that could be detected at build time but currently aren't:</p>
+<ul >
+<li >Accessing arrays out-of-bounds</li>
+<li >Dereferencing null pointers</li>
+<li >Integer overflow</li>
+<li >Accessing uninitialized variables</li>
+</ul>
+<p >I wonder if he tried tools such as <b >fxCop</b> which can check for a number of these and can be extended to verify more.</p></div>
+ <div class="links">By <a href="user/792" title="View user profile.">Dumky</a> at Fri, 02/03/2006 - 01:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14879"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14879" class="active">FxCop can&#039;t be fully complete and sound.</a></h3>
+ <div class="content"><p >FxCop does what it can with what it's given, but you need more typing information to fully guarantee safety.</p></div>
+ <div class="links">By <a href="user/925" title="View user profile.">Kannan Goundan</a> at Tue, 02/21/2006 - 21:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14880"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14880" class="active">You can never fully</a></h3>
+ <div class="content"><p >You can never fully gaurantee safety.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Tue, 02/21/2006 - 21:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14252"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14252" class="active">Garbage collection</a></h3>
+ <div class="content"><p >Garbage collection performance in games:</p>
+<p >Though an Unreal Engine 3 game can easily consume 512MB memory (on console) or up to 2GB (on PC, in the editing tools), less than 10% of that memory consists of data that contains pointers.  The rest is bulk binary resources - like texture maps, sounds, animations, which don't require scanning for references.</p>
+<p >50MB of data is well within the range of a mark-and-sweep garbage collector taking a few milliseconds within a game running at 30 frames per second.  This is what we do.  Realtime garbage collection is another possibility, but we didn't want to try to implement that within a primarily C++ engine.</p>
+<p >Garbage collecting memory:</p>
+<p >I do believe this is completely practical as the sole memory management solution, even in a realtime application like a game.</p>
+<p >Garbage collecting resources (file handles, etc):</p>
+<p >This is a very different question, because resource freeing has observable consequences beyond performance and memory consumption -- unlike garbage collection, which is justified by the realization that if you don't have any pointers to a value in memory, then it can simply dissapear (or not) without observable consequences.</p>
+<p >For example, if you have a file handle open for writing, then other applications can't open that file.  You want such resource usage to be clear and deterministic, so that files don't just remain open for a random duration depending on the garbage collector's internals.</p>
+<p >In general, I would not advocate garbage collection of OS resources or any other thing requiring explicit cleanup.  For example, I think that Java/C# finalizers are a misguided idea, because they have observable, nondeterministic consequences.  That is exactly the sort of feature a high-level, secure language should avoid.  The bizarre finalization state diagrams for those languages should be enough to indicate that something is wrong here!</p>
+<p >For resource freeing, constructs which guarantee that every resource is freed look promising (think of wrapping a file handle in an abstraction like a Haskell State monad).  Or just plain old handles with explicit closing (and thus the risk of not closing a handle, closing it when it's not open, etc).</p>
+<p >FxCop:</p>
+<p >These sorts of tools are useful for analyzing code written in existing/legacy languages.  Microsoft has some scarily powerful analyzers along these lines that they use internally, as well.  But they're all built on the idea that you have code written in a language without strong safety guarantees, and you want to statically analyze them to figure out some of the things that might possibly go wrong at runtime.  That is useful, but it's not comparable to the guarantees one would have in a language with strong safety guarantees.</p>
+<p >I remember writing game code in assembly language a long time ago.  Then macro assemblers came out and made assembly code easier to write correctly.  But the eventual solution was C, which led to ~5X higher programming productivity and a comparable reduction in bugs.  Ultimately tools like this are just workarounds for legacy problems to which genuine solutions are known ... and on the verge of coming into commercial practice.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 02/03/2006 - 02:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14269"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14269" class="active">Garbage collection without type information?</a></h3>
+ <div class="content"><p >C++ garbage collection would greatly benefit if it was assisted by the compiler. During a scan, only pointers to objects need to be scanned. Unfortunately, it is not possible without assistance from the compiler. That is the reason third-party solutions are not good enough for performance-intensive applications.</p>
+<p >Memory management and resource management is not the same. Resources other than memory are usually few in a program and not interconnected. A program may have files, sockets, windows and other types of handles, but usually these handles are 'dead ends', i.e. they do not contain references to other handles. Memory, on the other hand, is a totally different beast: a block of memory usually contains references to other blocks of memory. So the idea of finalizers is a bad one, since resources other than memory should be freed by RAII techniques (for deterministic resource management), but memory should be handled by garbage collector.</p>
+<p >I will say it again, because no one seemed to notice it: could it be that there exists a "calculus" for resource management?</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Fri, 02/03/2006 - 11:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14276"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14276" class="active">Resource management calculus</a></h3>
+ <div class="content"><p >In general this is not possible in a Turing-complete language, because of the halting problem.  Presumably the goal of your resource management calculus is to determine if there is some statement within the program that can still access the resource, and free that resource iff there is not.  Now replace that statement with "halt()", and your resource management calculus can determine if any arbitrary Turing machine can halt.  But we know this is impossible, so such a resource management calculus cannot exist.</p>
+<p >Garbage collection, reference counting, RAII, and WITH-blocks are all conservative approximations.  They tell you if it's safe to delete a given resource, but they do not guarantee they'll always find <i >every</i> safe situation.  That's why it's still possible to leak memory in a GC'd app: just hold onto references longer than they're needed.  RAII and WITH-blocks can also fail, but they usually do this because the program went into an infinite loop within the stack frame in question, so you have bigger and more obvious problems.</p>
+<p >There may be better resource-management solutions (and personally I think <a href="http://www.eros-os.org/">Eros OS</a> has an interesting approach: the disk is just treated as one more level in the memory hierarchy, and everything is automatically persisted.  Wonder how they deal with garbage), but "perfect" resource management is impossible.</p></div>
+ <div class="links">By <a href="user/1377" title="View user profile.">Jonathan Tang</a> at Fri, 02/03/2006 - 14:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14430"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14430" class="active">How about a &#039;limited&#039; resource management calculus?</a></h3>
+ <div class="content"><p >Of course, it can not be determined if an algorithm halts or not, but I think it is doable to infer from the source code when some resource is no longer needed. </p>
+<p >First of all, humans do it, by running an approximation of the program in their brain. </p>
+<p >Secondly, I think it is possible to improve resource management by annotating (either manually or automatically by inference) if an object is stored in a temporary or another long-lived object.</p>
+<p >Here is an example of a double-linked List class that shows the above concept with annotations(in Java style). The annotation <b ><code >stored</code></b> means that an object is stored in another object; The annotation <b ><code >temp</code></b> means an object is not stored:</p>
+<pre >
+private class Node {
+    private Node m_prev;
+    private Node m_next;
+    Object m_object;
+}
+
+private class ListIterator implements Iterator {
+    public ListIterator(Node node <b >: stored</b>) {
+        m_node = node;
+    }
+
+    public boolean hasNext() {
+        return m_node.m_next != null;
+    }
+
+    public Object getNext() {
+        Object result = m_node.m_object;
+        m_node = m_node.m_next;
+        return result;
+    }
+
+    Node m_node;
+}
+
+public class List {
+    public Iterator find(Object object <b >: temp</b>) <b >: temp</b> {
+        for(Node node = m_first; node != null; node = node.m_next) {
+            if (((Comparable)node.m_object).compare(object) == true) return new ListIterator(node);
+        }
+        return null;
+    }
+
+    public void add(Object object<b >: stored</b>) {
+        Node node = new Node;
+        node.m_prev = m_last;
+        node.m_object = object;
+        if (m_count) m_last.m_next = node; else m_first = node;
+        m_last = node;
+        m_count++;
+    }
+
+    public void remove(Iterator t<b >: temp</b>) {
+        ListIterator it = (ListIterator)t;
+        if (it.m_node.m_prev) it.m_node.m_prev.m_next = it.m_node.m_next; 
+        else m_first = it.m_node.m_next;
+        if (it.m_node.m_next) it.m_node.m_next.m_prev = it.m_node.m_prev; 
+        else m_last = it.m_node.m_prev;
+        m_count--;
+    }
+
+    public void remove(Object object<b >: temp</b>) {
+        Iterator it = find(object);
+        if (it != null) remove(it);
+    }
+
+    private Node m_first;
+    private Node m_last;
+    int m_count;
+}
+</pre><p >
+Let's see using the above:</p>
+<pre >
+class Main {
+    public static main(String[] args) {
+        List list = new List;
+        list.add(new Integer(1));
+        Iterator it = list.find(new Integer(1));
+        if (it != null) list.remove(it);
+    }
+}
+</pre><p >
+By analysing the method <code >main</code> using the annotations, we can infer the following:</p>
+<pre >
+public static main(String[] args) {
+    List list = new List;                      //list is temp
+    list.add(new Integer(1));                  //new Integer(1) is stored
+    Iterator iter = list.find(new Integer(1)); //new Integer(1) is temp
+    if (iter != null) list.remove(it);         //iter is temp
+}
+</pre><p >
+We can see that objects <code >list</code>, <code >new Integer(1)</code>(the one used in <code >find</code>) and <code >iter</code> can be safely deleted after execution of main.</p>
+<p >I think with a little more work on this, garbage collection could be made much more effective (and in many programs, eliminated completely).</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Tue, 02/07/2006 - 11:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14514"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14514" class="active">Refcounting</a></h3>
+ <div class="content"><p >That's basically reference counting, with additional programmer annotations that tell the compiler "Don't refcount this" (the temp annotation).  At least, I <i >hope</i> it's refcounting, because otherwise you can run into big problems.  What happens if you put an object into two different containers?</p>
+<p >I also don't understand some of the defaults you're using.  When you create an object within a function as "new Node", is it assumed to be stack allocated?  What happens with the assignment to m_last then?  Increment the reference count?  What happens if you have cycles?  Who owns objects that are returned from functions? (Obviously not the callee, but the caller might not be collection, and may do arbitrary things to the reference like passing it to multiple functions.)</p>
+<p >Anyway, I don't really see the point, because this system is:
+<ul >
+<li >Unsafe.  If a programmer forgets a temp or stored annotation, they end up with a dangling pointer</li>
+<li >Inflexible.  If you look at large Java projects (say, Netbeans or Eclipse), most objects are nothing more than a collection of references to other objects that manage their behavior.  Yet they're not <i >containers</i> of those other objects, more like clients of their services.  For example, a ClassPath in Netbeans is used in all sorts of places, from resolving imports to suggesting autocompletions to flagging type errors to compiling the project.  This is very different from how C++ programs work, and I doubt that IntelliJ/Netbeans/Eclipse <i >could</i> have been written in C++.  Look how Microsoft had to rewrite portions of Visual Studio in C# to get some of the features that were cropping up in Java IDEs.</li>
+<li >Slow.  This'll probably surprise you, but <a href="http://www-128.ibm.com/developerworks/java/library/j-jtp09275.html">Java allocation is faster than C++</a>.</li>
+</ul>
+<p >I'd encourage you to try and pursue this - who knows, maybe you'll find something - but IMHO garbage collection's the best approach out there for memory management, and garbage-collection + orthogonal persistence + formalized concurrency calculi like CSP are the best approach for general resource management.</p></div>
+ <div class="links">By <a href="user/1377" title="View user profile.">Jonathan Tang</a> at Fri, 02/10/2006 - 00:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14765"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14765" class="active">It is not reference counting.</a></h3>
+ <div class="content"><p >What happens with this system it is that the compiler does the checks at compile time, instead of run time.</p>
+<p >If you put an object in two different containers, the object's lifetime is equal to the longest lifetime between the two containers.</p>
+<p >"new Node" is presumably allocated on the heap, but the compiler finds out that it does not "escape" beyond a certain block of code, so it can be safely deleted after this block of code is executed.</p>
+<p >There is no problem with cycles, since cyclic objects also have a lifetime.</p>
+<p >No one owns an object that is returned from a function. What I presented is a solution to improve garbage collection by doing optimizations based on code flow.</p>
+<p >If a reference is passed to arbitrary functions, then the parameters of those functions are also annotated, thus making the compiler aware of how they use their data.</p>
+<p >The system is not unsafe, because the annotations were only for comprehension. The compiler will insert those annotations.</p>
+<p >I know that Java allocation is faster than in C++, since Java allocation is linear. But C++ wins due to many objects allocated on the stack.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Thu, 02/16/2006 - 07:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14768"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14768" class="active">If you put an object in two</a></h3>
+ <div class="content"><blockquote ><p >If you put an object in two different containers, the object's lifetime is equal to the longest lifetime between the two containers.</p></blockquote>
+<p >How do you determine a container's lifetime? Does making the container (or its reference) a global result in its lifetime being that of the process?</p>
+<p >Will the programmer be able to implement their own containers? As I understand your proposal, certain common collection operations (e.g: remove an object, empty a collection, etc.) will require the collection to somehow delete objects (e.g: those that are no longer in the collection). Without access to manual memory management (to delete when appropriate, etc.), I don't see how you'll be able to support cyclic objects as you'll need to treat reference as containment and thus might not be able to infer lifetimes (a &lt; b &lt; a). If collections cannot delete things when necessary, I don't see how you can avoid a space leaks in common patterns such as using a queue to store units of work for threads in a pool.</p></div>
+ <div class="links">By <a href="user/101" title="View user profile.">Thomas Sutton</a> at Thu, 02/16/2006 - 13:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-19790"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-19790" class="active">It&#039;s not possible to</a></h3>
+ <div class="content"><p >It's not possible to determine all things statically, but a great deal of things can be done about it that are not touched now.</p>
+<p >How do programmers manage manual memory management in their mind? they abstract the program as a sequence of operations without loops, and thus they are able to understand when something should be deleted.</p>
+<p >The same thing could be done by a compiler, if the compiler was fed with the appropriate information.</p>
+<p >My opinion is that whatever the human brain can detect in a program, a compiler can also detect. The problem lies that no one has sat down yet and defined the set of information a compiler needs so as that it can do the same work as the human brain.</p>
+<p >Before you say that the human brain is inherently more powerful than a CPU, I will say that when I am trying to understand when I should delete something in a C++ program, I do not use all the information at hand, but only certain things in a program that make sense to the problem I have to deal with. In other words, I use the proper abstractions. If those abstractions are fed to a compiler, the compiler could do the same job I do, but without the distractions (i.e. with 100% success instead of 90%+).</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Tue, 07/18/2006 - 07:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-19794"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-19794" class="active">But what if the abstractions</a></h3>
+ <div class="content"><p >But what if the abstractions that you typically use in your reasoning  typically ignore certain details which in boundary cases become very important? Then the compiler too will only cover that same 90%. How would we represent these abstractions in the compiler and how do we convince ourselves that the abstractions are sound? We can't just use a fixed logic, because then there would always be useful statements that can't be encoded in that logic. The alternative to a sound logic doesn't seem like a good idea to me, because a compiler that makes tranformations based upon assumptions that we can't show to be true is a compiler that'd I want to be very careful when using.</p></div>
+ <div class="links">By <a href="user/1325" title="View user profile.">Carter T Schonwald</a> at Tue, 07/18/2006 - 13:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-19800"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-19800" class="active">Not all cases can be</a></h3>
+ <div class="content"><p >Not all cases can be covered, of course. In very complex algorithms, the confusion of the programmer will be transferred to the compiler. The difference with using an automated tool to do the check is that if there is at least one contradiction, the tool will find it, no matter how complex the algorithm is...whereas we humans we may not be so lucky. </p>
+<p >The reason we humans cover the 90% and not the 100% is that we get distracted from external things, we forget, our emotions get in the way etc. A compiler would not have such problems. For example, I can easily assume that a variable X never gets value 0 in a program, but two weeks later I can come back and write 'X := 0'...or another programmer may come in and write that for me.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Tue, 07/18/2006 - 14:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-19802"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-19802" class="active">I&#039;m not quite following</a></h3>
+ <div class="content"><p >I'm not quite following where the statement regarding emotions comes into play....</p></div>
+ <div class="links">By <a href="user/1325" title="View user profile.">Carter T Schonwald</a> at Tue, 07/18/2006 - 15:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:275px;">
+<a id="comment-19886"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-19886" class="active">Think about what can distract you when you are &quot;programming&quot;.</a></h3>
+ <div class="content"><p >There are many things that can distract a person who's designing/programming/debugging. It's easy for humans to lose focus; machines have the advantage in this domain.</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Wed, 07/19/2006 - 09:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:200px;">
+<a id="comment-19804"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-19804" class="active">
+It&#039;s not possible to</a></h3>
+ <div class="content"><blockquote ><p >
+It's not possible to determine all things statically, but a great deal of things can be done about it that are not touched now.
+</p></blockquote>
+<p >I agree. There are so many avenues that haven't be explored in programming languages, and programming environments for that matter.</p>
+<blockquote ><p >
+How do programmers manage manual memory management in their mind? they abstract the program as a sequence of operations without loops, and thus they are able to understand when something should be deleted.
+</p></blockquote>
+<p >I suspect it's a bit more complicated than that. It's my belief that the haulting problem afflicts humans as much as computers and that the same way we work around it can be applied to program analysis. Obviously the times where even we can't figure it out statically will likely be impossible for the computer, as well, but getting a compiler to utilize a fraction of our ability could yield a large boost in lowering memory usage for a GCed language.</p></div>
+ <div class="links">By <a href="user/3034" title="View user profile.">Curtis W</a> at Tue, 07/18/2006 - 15:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-19879"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-19879" class="active">profiling memory use</a></h3>
+ <div class="content"><p >Curtis W: <i >...but getting a compiler to utilize a fraction of our ability could yield a large boost in lowering memory usage for a GCed language.</i></p>
+<p >To lower high water memory usage for a language with gc, I think one focus should be standardized profiling in a language, showing both source of use and patterns of growth.</p>
+<p >This leverages a human mind's ability to process patterns by simply making them visible.  Then a coder can reason about causes and experiment <i >scientifically</i> by making changes and observing results.</p>
+<p >Visibility is key to getting the mind into play.  Highly expressive languages make it easy to request unintended effects like excessive memory use.  Good profiling and debugging tools should make it easy to observe effects, so a coder can compare actual to expected results.</p></div>
+ <div class="links">By <a href="user/2390" title="View user profile.">Rys David McCusker</a> at Wed, 07/19/2006 - 03:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:225px;">
+<a id="comment-19887"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-19887" class="active">Abstractions...</a></h3>
+ <div class="content"><p >One of the things that help me decide where I can safely delete an object is the "linearity" abstraction: I draw a line where I put all significant milestones in the lifetime of an object, including its birth (start of line) and its death (end of line). Then I try to fold this line in one of the program's loops. I guess something similar can work for a compiler. </p>
+<p >Has there ever been a study about what abstractions programmers use in their minds?</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Wed, 07/19/2006 - 09:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:250px;">
+<a id="comment-19907"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-19907" class="active">linear types</a></h3>
+ <div class="content"><blockquote ><p >One of the things that help me decide where I can safely delete an object is the "linearity" abstraction: I draw a line where I put all significant milestones in the lifetime of an object, including its birth (start of line) and its death (end of line). Then I try to fold this line in one of the program's loops. I guess something similar can work for a compiler.</blockquote>
+Sounds like linear types to me, which are definitely useful for automatic memory management and regions, etc.</p></div>
+ <div class="links">By <a href="user/3038" title="View user profile.">Steven Woodhouse</a> at Wed, 07/19/2006 - 16:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14356"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14356" class="active">Boehm GC</a></h3>
+ <div class="content"><p >The Boehm GC can be made less conservative by giving it type information in C++ apps, typically with the help of the compiler. I think there are smart pointers you can use that let the collector know to only scan those values, but I don't recall the details.</p>
+<p >Anyway, it's certainly possible, and these days nothing stops you using G++ or LLVM and creating your own C++ compiler modified however you wish  :)</p></div>
+ <div class="links">By <a href="user/2660" title="View user profile.">Mike Hearn</a> at Sun, 02/05/2006 - 16:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14366"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14366" class="active">C++ Runtime Data</a></h3>
+ <div class="content"><p >Something to look at here might be item #9 of Paul Wilson's <a href="">OOPS Group Publications</a> at the University of Texas: "Portable Runtime Type Description for Conventional Compilers." An implementation is apparently available via FTP, but it's not obvious from where.</p>
+<p >Note that item #9 is related to item #14, "Real-Time Non-Copying Garbage Collection." This is definitely real; it's used in the <a href="http://www.rscheme.org/rs/">RScheme</a> system.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sun, 02/05/2006 - 19:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14253"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14253" class="active">some random comments</a></h3>
+ <div class="content"><p >some random comments</p>
+<p >can you get aspects for c++?  i would have thought so.  they seem like a possible solution to the problem of extending base classes, based on my limited experience with java (especially if the extensions are orthogonal to the original classes, so really it's more like multiple inheritance from a bunch of base classes).</p>
+<p >lazy evaluation seems a rather extreme solution to uninitialized variables - couldn't the compiler just warn instead?!</p>
+<p >lenient evaluation *is* eager evaluation, isn't it?</p>
+<p >arrays are preferable to lists?  doesn't that mean imperative counters?  have you considered lists as an alternative to checking array bounds via dependent types?  maybe there's some kind of hybrid implementation that gives close-to-array efficiency for simple cases?  [later - list comprehensions only give you map, not fold, afaik]</p>
+<p >type inference doesn't scale for modules - have you looked at ml?</p></div>
+ <div class="links">By <a href="user/1016" title="View user profile.">andrew cooke</a> at Fri, 02/03/2006 - 02:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14265"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14265" class="active">Type inference and scaling.</a></h3>
+ <div class="content"><blockquote ><p >type inference doesn't scale for modules - have you looked at ml?</p></blockquote>
+<p >Since Tim is obviously reading this forum it would be interesting to hear a clarification of that statement, "Type inference doesn't scale". The slide in question seems to mix that statement along with some "scary" error messages - which is of course a valid observation, but in my humble opinion not the same <a href="http://www.cs.uu.nl/~bastiaan/research.html">problem</a> as "type inference doesn't scale".</p></div>
+ <div class="links">By <a href="user/2050" title="View user profile.">Peter A Jonsson</a> at Fri, 02/03/2006 - 09:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14270"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14270" class="active">two more things.</a></h3>
+ <div class="content"><p >two more things.</p>
+<p >first, i read elsewhere a talk by another games programmer claiming that the majority of time was spent in searching (A* tree search).  anyone know where/how that fits with the numbers here?</p>
+<p >second, a day later, i don't remember any reference to queues.  it seems like they might help with the "interacting objects" problem.  both in the future (erlang, lightweight thread per object?) and now (allowing you to "straighten out" the inter-dependencies so that single threading doesn't go round in loops between closely coupled objects).</p>
+<p >i would certainly look at erlang and ml, rather than haskell, if thinking about high performance multi-threaded applications.  seems to me that you want a strongly typed erlang, basically (how close is alice to that?)</p></div>
+ <div class="links">By <a href="user/1016" title="View user profile.">andrew cooke</a> at Fri, 02/03/2006 - 13:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14274"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14274" class="active">A* search, message-passing</a></h3>
+ <div class="content"><blockquote ><p >first, i read elsewhere a talk by another games programmer claiming that the majority of time was spent in searching (A* tree search). anyone know where/how that fits with the numbers here?</p></blockquote>
+<p >I think there's basically no way that claim could be true for a modern game if he was referring to A* search specifically, even for something like an RTS that does a crap load of path-finding.</p>
+<p >If you take an extremely broad definition of 'search' that encompasses everything from frustum culling to collision detection to A* search and other AI-related activities, then it would have at least a chance of being true.</p>
+<blockquote ><p >second, a day later, i don't remember any reference to queues. it seems like they might help with the "interacting objects" problem. both in the future (erlang, lightweight thread per object?) and now (allowing you to "straighten out" the inter-dependencies so that single threading doesn't go round in loops between closely coupled objects).</p></blockquote>
+<p >He mentions message-passing in there. Tim's definitely familiar with Erlang-style concurrency.</p></div>
+ <div class="links">By <a href="user/1250" title="View user profile.">Per Vognsen</a> at Fri, 02/03/2006 - 13:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14764"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14764" class="active">I would think that the games</a></h3>
+ <div class="content"><p >I would think that the games programer talking about A* search meant games as in chess.</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Thu, 02/16/2006 - 06:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-20021"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-20021" class="active">We were using A* for path</a></h3>
+ <div class="content"><p >We were using A* for path finding in RTS (Real-Time Strategy) games 8+ years ago. For the unintiated RTS games involve building bases, creating units and getting them to fight each other. Click on unit or units click on the other end of the map and they figure out how to get there.</p></div>
+ <div class="links">By <a href="user/2071" title="View user profile.">Daniel Slaney</a> at Mon, 07/24/2006 - 14:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-20078"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-20078" class="active">Oh, thats intressting, but</a></h3>
+ <div class="content"><p >Oh, thats intressting, but even if you did use A* i doubt that your games spent more than half there time doing it, as was claimed above. By the way can you tell which games?</p></div>
+ <div class="links">By <a href="user/2160" title="View user profile.">Felicia Li Svilling</a> at Wed, 07/26/2006 - 20:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-20080"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-20080" class="active">I can easily see any game</a></h3>
+ <div class="content"><p >I can easily see any game targetting hardware from, say, 1996-2000 in which hundreds of units are finding paths across large maps on a regular basis spending half its time doing pathfinding. The RTS genre's traditionally gone easy on the graphics for much this reason, where possible getting improvements in look from better artwork.</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Wed, 07/26/2006 - 23:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-20085"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-20085" class="active">Yep</a></h3>
+ <div class="content"><p >During that time period at least (I don't know about now) tweaking A* to get acceptable performance was a fairly common topic in game development resources that I looked at.  Generally using A* to obtain an optimal path simply took too much time for real-time games where you don't want the computer (or the user's unit) to grind to a halt for a second or two, so they'd reduce the quality of the path to get acceptable response times.  You didn't even need more than one unit back then--computing a single path over a complicated map could take more than the few hundred milliseconds that you had available, and that would be enough to make the game unplayable.</p>
+<p >Pretty much any real-time game that involved moving stuff around a map had to deal with these problems, for example games like Baldur's Gate and Fallout (real time RPG's), Warcraft and Command &amp; Conquer (RTS's).  All had generally abysmal path finding quality.</p></div>
+ <div class="links">By <a href="user/50" title="View user profile.">Kory Markevich</a> at Thu, 07/27/2006 - 17:32 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-20107"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-20107" class="active">20-30% in our case if memory</a></h3>
+ <div class="content"><p >20-30% in our case if memory serves me correctly. We did have to precompile maps (thereby precluding dynamic maps), and make the algorithm incremental to achieve that though. The was also a fudge to get units moving before the search was completed.</p>
+<p >Haven't worked on an RTS in years, last time I heard Epsilon-Admissible Iterative-Deepening A* was the next big thing but this could be out of date especially now that dynamic maps are being tried.</p></div>
+ <div class="links">By <a href="user/2071" title="View user profile.">Daniel Slaney</a> at Fri, 07/28/2006 - 10:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14272"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14272" class="active">lenient = non-strict + eager</a></h3>
+ <div class="content"><p >After reading the <a href='http://lambda-the-ultimate.org/node/1277#comment-14211'>mentioned</a> paper I think that lenient is not an evaluation strategy, but a pair of (non-strict) semantics and (eager) evaluation. Similar to lazy evaluation (which implies, AFAIK, non-strict semantics). Other non-lazy evaluation strategies which satisfy non-strict semantics are: speculative and optimistic.</p>
+<p >Anyone here knows about a good paper talking about the relationship between all these evaluation strategies?</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Fri, 02/03/2006 - 13:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14278"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14278" class="active">No, but CPS is a good bet</a></h3>
+ <div class="content"><p >Unless you are asking just about some fact-sheet (this strategy scores 5 for expressivity, etc.).<br >
+My worst concern is that most of these terms are abused and never standardized in the first place - lazy of one researcher may well mean non-strict of another.
+<p >
+As a side note, it would be interesting to see how various evaluation strategies interact with various delimited continuation operators...</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Fri, 02/03/2006 - 15:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14296"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14296" class="active">Full comparison</a></h3>
+ <div class="content"><p >No, I really want to understand what are the real differences behind those, because we have much research in optimistic evaluation and I have no idea if the results are valid to lenient evaluation.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Fri, 02/03/2006 - 19:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14390"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14390" class="active">Just curious</a></h3>
+ <div class="content"><blockquote ><p >
+because we have much research in optimistic evaluation
+</p></blockquote>
+<p >Do you mean the CS community as a whole, or some proprietary research?</p>
+<p >The reason I ask is I am very interested in (business) process semantics, and in some use cases they require something that feels like optimistic evaluation.</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Mon, 02/06/2006 - 13:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14402"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14402" class="active">We, the people...</a></h3>
+ <div class="content"><p >The CS community has lots of it, I have zero. Actually I have a bit more than zero, but in PLT and type systems not implementation strategies.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Mon, 02/06/2006 - 18:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14501"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14501" class="active">Oops, CPS is a bad bet</a></h3>
+ <div class="content"><p >It just occurred to me that while CPS-transforming to lambda terms is appropriate to define call-by-value or call-by-name, but if one wants to express lenient evaluation strategy faithfully, then the target language must have some notion of concurrency. Which means, translating to pi calculus (or join calculus, m-calculus, etc.) is a better way to compare various evaluation strategies.</p>
+<p >On the other hand, "CPS" in some papers does not assume the target is lambda calculus, so I might have pretend I didn't mean that as well :-)</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Thu, 02/09/2006 - 12:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14281"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14281" class="active">Futures, maybe</a></h3>
+ <div class="content"><p >Although I cannot point you to any paper that mentions this explicitly, all three evaluation strategies can trivially be expressed with futures. For example, in Alice ML, the three forms of reduction for application can be employed as follows:</p>
+<p >strict:   <code >f(e)</code><br >
+lazy:     <code >f(lazy e)</code><br >
+lenient:  <code >f(spawn e)</code></p>
+<p >That is, the different forms of future directly correspond to the different evaluation strategies.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Fri, 02/03/2006 - 16:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-14295"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14295" class="active">Futures are great...</a></h3>
+ <div class="content"><p >but what about speculative and optimistic? IIUC you need compiler suport (or some sort of staged introspection) to decide if you should evaluate some parameters. Also what happens in the lenient case if <code >e</code> diverges but <code >f</code> neither use it nor diverge? Do we have to explicitly kill the divergent thread in the implementation of <code >f</code>?</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Fri, 02/03/2006 - 19:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-14297"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14297" class="active">Good questions</a></h3>
+ <div class="content"><p >Re speculative and optimistic: I'd say these are different because they rather are interesting on the level of implementation than semantics. The distinction is not a clear one, though, because it depends on the language. Lazy and lenient can both be considered implementation strategies for non-strictness, but they are semantically distinguishable in a language with side effects. In contrast, for speculative and optimistic evaluation observability usually is not desired, as far as I know.</p>
+<p >The case of <code >f(spawn e)</code> where <code >e</code> diverges but is unused will have the correct behaviour semantically, but it would indeed leave a junk thread running forever, unless you kill it explicitly. This of course might be undesirable operationally. But I consider it a rather pathological situation and would be surprised if it posed much of a problem in practice.</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Fri, 02/03/2006 - 19:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-14507"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14507" class="active">Garbage-collecting threads?</a></h3>
+ <div class="content"><blockquote ><p >
+The case of f(spawn e) where e diverges but is unused will have the correct behaviour semantically, but it would indeed leave a junk thread running forever, unless you kill it explicitly.
+</p></blockquote>
+<p >Isn't it possible to collect junk threads in PLs without (undeclared) side-effects? By junk thread I would define a thread of the future that is garbage itself (unreachable from root set) - in absence of side-effect this thread can do nothing but consume resources and return the result that will be ignored, so it is semantically just to kill it.</p>
+<blockquote ><p >
+But I consider it a rather pathological situation and would be surprised if it posed much of a problem in practice.
+</p></blockquote>
+<p >I suspect there are a lot of use cases - parallelOr being the simplest (granted, in this simplest case GC is not the best option performance-wise).</p>
+<p >[on edit: ha, so it was not a deja vu: I already <a href="http://lambda-the-ultimate.org/node/641">asked</a> about something like that in the past... I have to return and rethink that...]</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Thu, 02/09/2006 - 15:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14508"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14508" class="active">Isn&#039;t it possible to</a></h3>
+ <div class="content"><blockquote ><p >
+Isn't it possible to collect junk threads in PLs without (undeclared) side-effects? By junk thread I would define a thread of the future that is garbage itself (unreachable from root set) - in absence of side-effect this thread can do nothing but consume resources and return the result that will be ignored, so it is semantically just to kill it.
+</p></blockquote>
+<p >Maybe not the exact same scenario, but interesting nonetheless: <a href="http://home.pipeline.com/~hbaker1/Futures.html">The Incremental Garbage Collection of Processes</a>...</p>
+<blockquote ><p >We discuss an approach to a problem that arises in this context: futures which were thought to be relevant when they were created become irrelevant through being ignored in the body of the expression where they were bound. The problem of irrelevant processes also appears in multiprocessing problem-solving systems which start several processors working on the same problem but with different methods, and return with the solution which finishes first. This parallel method strategy has the drawback that the processes which are investigating the losing methods must be identified, stopped, and reassigned to more useful tasks.</p>
+<p >The solution we propose is that of garbage collection. We propose that the goal structure of the solution plan be explicitly represented in memory as part of the graph memory (like Lisp's heap) so that a garbage collection algorithm can discover which processes are performing useful work, and which can be recycled for a new task.</p>
+<p >An incremental algorithm for the unified garbage collection of storage and processes is described.</p></blockquote></div>
+ <div class="links">By <a href="user/1296" title="View user profile.">Greg Buchholz</a> at Thu, 02/09/2006 - 16:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-14512"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14512" class="active">In principle, yes</a></h3>
+ <div class="content"><p ><cite ><br >
+Isn't it possible to collect junk threads in PLs without (undeclared) side-effects?<br >
+</cite></p>
+<p >In principle, yes. Although I would expect most threads to not be free of side-effects, even in pure languages. In any case, you'd need an effect system or monadic type system to find out.</p>
+<p >OTOH, Alice can, in some situations, collect threads that are blocked for eternity - e.g. when they wait for a future that is not reachable by any runnable thread (normal garbage collection actually does that almost for free).</p>
+<p ><cite ><br >
+I suspect there are a lot of use cases - parallelOr being the simplest (granted, in this simplest case GC is not the best option performance-wise).<br >
+</cite></p>
+<p >In general, sure. I was referring to the particular situation of using threads to emulate lenient function calls - I don't think you normally would want to apply a function that does not use its argument to an argument whose evaluation diverges (unless you plan to do real lazy programming).</p></div>
+ <div class="links">By <a href="user/1569" title="View user profile.">Andreas Rossberg</a> at Thu, 02/09/2006 - 22:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14502"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14502" class="active">The difference lies in application</a></h3>
+ <div class="content"><p ><a href="http://citeseer.ist.psu.edu/sangiorgi99interpreting.html">Interpreting Functions as Pi-Calculus Processes: A Tutorial</a></p>
+<p >The paper gives encodings of CBV, CBN, and parallel CBV into pi calculus. See section 7 for a variant of encoding that differentiates evaluation strategies only by the translation of application (though for some reason this section ignores parallel CBV :-( ).</p></div>
+ <div class="links">By <a href="user/1071" title="View user profile.">Andris Birkmanis</a> at Thu, 02/09/2006 - 12:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14300"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14300" class="active">Why virtual classes?</a></h3>
+ <div class="content"><p ><i > How is that different from just adding new fields to class Actor? If all classes extending Actor will need those new fields, then it makes sense to add the field to class Actor. </i></p>
+<p >In a one-developer world, you would just add the new functionality to your base class.  But in the case of Unreal Engine 3, we maintain and distribute a large software framework used by a hundred or so other developers.</p>
+<p >We're continually adding new features to the framework, so if an external developer adds a new member function to our base class's source in their local codebase, then they'll need to merge their changes into all subsequent versions of our framework, and we release frequently - every week or two.</p>
+<p >In this case, a virtual class solution that enables a team to extend an entire class hierarchy in a framework, without modifying the framework's source, would be very valuable.</p>
+<p >Obviously there are lots of workarounds available (see the slides) - adding extra data components, dynamically casting them to the expected type, etc.  But they're quite error-prone.</p>
+<p ><i > by the time a game gets to the flat profile, does it usually have sufficient performance? </i></p>
+<p >When all commercially-practical code optimizations have been exausted, further optimizations have to come from the game's content: reducing the number of visible objects, enemies, etc.  At that point, it's just a performance vs quality tradeoff, as opposed to performance vs cost.</p>
+<p ><i > Arrays are preferable to lists? doesn't that mean imperative counters? </i></p>
+<p >Comprehensions and folds are fine substitutes for imperative iteration.</p>
+<p ><i > Type inference doesn't scale </i></p>
+<p >My 1-line example produced an incomprehensible error message in HUGS, but it was easy enough to see what was wrong with that code.  Given a multi-hundred like Haskell program with fairly complex typing, it can be combinatorially more difficult to figure out what's wrong, given such an error message.  This property doesn't seem at all tenable in a mainstream programming language.</p>
+<p >Note that I'm only arguing against type inference: inferring x::Numeric in "f x = x+1".  Type propagation, deriving the typing x::Numeric from "x = 7", is not problematic.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 02/03/2006 - 20:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14311"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14311" class="active">On Virtual Types</a></h3>
+ <div class="content"><p >Note that notions of virtual types/classes are addressed very well in <a href="http://lambda-the-ultimate.org/node/view/926">Scalable Component Abstractions</a> and <a href="http://lambda-the-ultimate.org/node/924">On the (un)reality of virtual types</a>. You'll have to scroll down a bit on the latter to find the reference.</p>
+<p ><b >Update:</b> I should have pointed out that one upshot of the above is that Scala and O'Caml lend themselves particularly nicely to maintaining groups of classes that are extended independently of each other.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 02/03/2006 - 22:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14326"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14326" class="active">Nested Inheritance</a></h3>
+ <div class="content"><p >I think Nystrom, Chong and Myers's OOPSLA 2004 paper <a href="http://www.cs.cornell.edu/andru/papers/ncm04.pdf">Scalable Extensibility via Nested Inheritance</a> is also worth mentioning here (it's been <a href="http://lambda-the-ultimate.org/node/441">mentioned</a> before, but didn't get the attention I thought it deserved). </p>
+<p >It allows you to subclass (implying subtyping) a group of classes, so that, just like when you override virtual methods, references to the overridden classes in the original group of classes now refer to the overridden versions.</p>
+<p >A key difference with virtual classes and the like, is that nested inheritance works at the class-level, not the object-level: a class is an attribute of the enclosing <i >class</i>, not of an instance of this class. This made it easier to prove the soundness of their approach. (And arguably, it also might make their language extension easier to use than full-blown virtual classes.. that's just wild speculation, though..)</p>
+<p >However, when the nested inheritance paper was written, the soundness of gbeta's and Caesar's virtual classes-approach hadn't been proven. This has changed recently (at POPL 2006, to be exact :-)): <a href="http://www.st.informatik.tu-darmstadt.de/database/publications/data/popl06-virtualclasses.pdf?id=139">A Calculus of Virtual Classes</a> by Ernst, Ostermann and Cook looks very interesting, but I haven't had a chance to study it yet. (I skimmed it briefly and they discuss the nested inheritance paper in their related work. At first glance, they seem to have some valid points about how nested inheritance actually <i >isn't</i> easier to use than their approach...)</p>
+<p >As far as I can tell from your slides, both approaches (especially nested inheritance) seem to be pretty close to what you're looking for. </p></div>
+ <div class="links">By <a href="user/1826" title="View user profile.">Adriaan Moors</a> at Sat, 02/04/2006 - 10:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14313"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14313" class="active">responses</a></h3>
+ <div class="content"><p ><i >My 1-line example produced an incomprehensible error message in HUGS, but it was easy enough to see what was wrong with that code. Given a multi-hundred like Haskell program with fairly complex typing, it can be combinatorially more difficult to figure out what's wrong, given such an error message. This property doesn't seem at all tenable in a mainstream programming language.</i></p>
+<p >Incomprehensible? Such an error is easy to read for any programmer who has been using Haskell for a little while. It's telling you that there's no instance of Num for strings, so f can't be applied to them. When you look at the definition of f, that makes perfect sense, since it adds the components of the pair that you pass it. As an alternative to looking at the source for f, you can simply ask hugs or ghci to give you the inferred type. I don't see how the error is any more or less confusing than the one you're getting in C. Here's what GHC gives:<br >
+<code ><br >
+test.hs:2:7:<br >
+    No instance for (Num [Char])<br >
+      arising from the literal `3' at test.hs:2:7<br >
+    Probable fix: add an instance declaration for (Num [Char])<br >
+    In the first argument of `f', namely `(3, "4")'<br >
+    In the definition of `a': a = f (3, "4")<br >
+</code></p>
+<p >Lazy evaluation isn't really all that costly -- it's more the case that most programmers are used to thinking in strict languages, and expect the lazy language to behave similarly with regard to performance. I think it's commonly forgotten that there are two ways to optimize a Haskell program: make it stricter, or make it lazier. Lots of people forget the second one. It's actually not so hard to get decent performance from lazy code if you're used to thinking in terms of demand. Sure, the compiler could also be a lot better in terms of the code that it produces, but compilers for strict languages have been around a lot longer than for lazy languages, and it's an easier problem there in the first place. I don't think it's a fundamental problem with non-strict semantics, and the benefits of non-strict semantics in terms of compositionality of programs are so incredibly huge, that it's worth a closer look. :) Laziness only when explicitly specified will defeat the whole usefulness of it in the first place, because strict functions will be all over the place and will prevent the gain in compositionality that laziness gives you.</p>
+<p >There is a right place for strictness, but it's actually rather small compared to the cases when laziness wins out. You want strictness when reducing large data structures into small ones in a way which uses all  of the large structure (i.e. not a search). I'd claim that in all other cases, laziness is actually preferable or equivalent to strictness in terms of performance. Strict higher order functions can be provided to deal with cases where you really want the strictness: see foldl' (note the prime) in Data.List as a good example.</p>
+<p >If you want to know why lists are so popular in Haskell, ask why loops are so popular in C. :) The reason is mostly the same. Due to laziness, lists, along with the usual higher order functions are essentially reified loops which can be transformed all at once. In the absence of laziness, yes, arrays may be preferable. It's laziness that allows you to think of data structures like control structures.</p>
+<p >Here's a nice (perhaps too small) example of where laziness improves compositionality. I could give much larger ones, and <a href="http://www.md.chalmers.se/~rjmh/Papers/whyfp.html">Why Functional Programming Matters</a> gives lots -- from numerical computation to game AI.</p>
+<p >Consider writing a function which checks if a particular string x occurs as a substring of another string y. A natural way to break this problem up is to check if x is a prefix of any of the tails of y. In an imperative language, you end up writing a couple of nested loops, with early breaks to proceed to the next tail as soon as it becomes obvious that x doesn't occur there. In Haskell, we can write: </p>
+<p >isSubstringOf x y = any (isPrefixOf x) (tails y)</p>
+<p >If Haskell was strict, this would be a very stupid way to write this function. Computing all the tails of y, then checking every single one of them to see if x is a prefix, then summarising that to see if any of the tests returned true is asymptotically much worse, and usually quite impractical. With lazy evaluation, the above code is essentially the same as the nested C loops with the early break out tests. We can successfully reuse existing tools like 'any', 'isPrefixOf' and 'tails', whereas if the language was strict, we'd be back to square one.</p>
+<p >Another odd thing is that you complain about the syntax. The syntax of Haskell is actually one of the things which I like most about it. I suppose this is a matter of taste, but could you be more specific here? I think the syntax is really clean and easy on the eyes.</p>
+<p >I'm still not really sure what you mean about type inference not scaling. Perhaps it doesn't scale to certain extensions of the type system (higher rank types / GADTs / existential types), but when combined with a relatively small number of programmer annotations, it's incredibly nice. Most Haskell programmers write type signatures on important top-level bindings anyway, as a form of documentation, to aid in thought about how to write the function, and to improve error messages. I still wouldn't want to lose type inference altogether though, because it would be a horrible pain to get anything done. You really don't want to explicitly type everything, and it's very often nice to be able to omit type signatures when they're unwieldy, or you're just writing something quick.</p>
+<p > - Cale</p></div>
+ <div class="links">By <a href="user/1990" title="View user profile.">Cale Gibbard</a> at Fri, 02/03/2006 - 22:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14325"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14325" class="active">Incomprihensible error messages</a></h3>
+ <div class="content"><blockquote ><p >Incomprehensible? Such an error is easy to read for any programmer who has been using Haskell for a little while. </p></blockquote>
+<p >I am going to side with Tim on this one. It is incomprihensible, and more research into type error reporting is needed. Bastian Heeren's <a href="http://www.cs.uu.nl/~bastiaan/phdthesis/">thesis</a> has a lot of interesting information on the subject, if you were to skip all chapters but one I would recommend atleast skimming Chapter 12 of it.</p></div>
+ <div class="links">By <a href="user/2050" title="View user profile.">Peter A Jonsson</a> at Sat, 02/04/2006 - 08:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14388"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14388" class="active">Lazy evaluation vs. Streams</a></h3>
+ <div class="content"><blockquote ><p >If Haskell was strict, this would be a very stupid way to write this function.</p></blockquote>
+<p >Isn't it a property of lists in Haskell having two uses: (algebraic) lists and (co-algebraic) streams? In a strict language with streams you can write similar code and have similar results.</p>
+<p >I'm not sold on non-strictness as a default for improving compositionality, IMHO all you need is a way to declare codata in you language.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Mon, 02/06/2006 - 12:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14321"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14321" class="active">The C++ traits pattern</a></h3>
+ <div class="content"><p >Re: virtual classes, have you looked at the C++ template traits pattern?</p>
+<p >I know templates get a lot of flack for their syntactic ugliness, but this is one problem they can really solve quite well.</p>
+<p >Basically you make everything a template, and inherit from a traits class passed in as one of the template parameters. I can then instantiate an Actor&lt;MyCustomData&gt;, which can inherit custom methods, fields, etc. There is a lot of knowledge in the C++ community about how to deal with whole familes of relations between such constructs, for instance how to implement things like:</p>
+<pre >
+	Collision&lt;CustomCollisionData&gt; Actor&lt;CustomActorData&gt;::DetectCollision();
+</pre><p >
+and have the code be able to query the CustomActorData traits to automatically determine the appropriate type for CustomCollisionData.</p>
+<p >Modern C++ Design, by Andrei Alexandrescu, is pretty much the definitive text on this stuff: check out http://erdani.org/ </p></div>
+ <div class="links">By <a href="user/2718" title="View user profile.">shawnhargreaves</a> at Sat, 02/04/2006 - 03:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14337"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14337" class="active">What about the verbosity problem?</a></h3>
+ <div class="content"><p >Paul Graham's article about what makes hackers prefer some programming languages over others makes the interesting point that programmers are lazy -- concise syntax is highly desireable. I think this is part of why I enjoy coding in Python but hate coding in Java. Tim's idea of adding <em >more</em> annotations seems like it would make this problem even worse. I've been thinking over compromises but I'm curious if anyone else has thought about this.</p></div>
+ <div class="links">By <a href="user/2513" title="View user profile.">dataangel</a> at Sat, 02/04/2006 - 23:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14338"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14338" class="active">The verbosity &quot;problem&quot;...</a></h3>
+ <div class="content"><p >One way to address the verbosity problem is simply to change your point of view. In a language with a sufficiently expressive type system, it no longer makes sense to think of these annotations as being redundant verbosity. Instead people tend to think of them as part of the program itself. This is one of the things that people mean by "<a href="http://www.google.com/search?q=typeful%20programming">typeful programming</a>".</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Sun, 02/05/2006 - 00:06 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14352"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14352" class="active">I disagree: verbosity is a</a></h3>
+ <div class="content"><p >I disagree: verbosity is a problem, it reduce readability.<br >
+But with local type inferencing, you can have static typing and nearly the same readability as with dynamic typing.<br >
+Sure, the 'type inference' remove a little bit of the safety of static typing, but not so much IMHO.</p></div>
+ <div class="links">By <a href="user/1458" title="View user profile.">renox</a> at Sun, 02/05/2006 - 15:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-14495"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14495" class="active"> Tim&#039;s idea of adding more</a></h3>
+ <div class="content"><p ><i > Tim's idea of adding more annotations seems like it would make this problem even worse. </i> </p>
+<p >I'm a huge fan of concise syntax.</p>
+<p >I'm not such a fan of syntax that's so concise that it hides potential problems.  For example, "a[i]" in Java looks like you're just reading an element from an array, but actually translates into something like: "if a is NULL, throw an exception; if i&lt;0 or i&gt;a.length then throw an exception, otherwise read the element from the array".</p>
+<p >So the goal of further type annotations would be to introduce more explicitness in type declarations in exchange for making other parts of the program clearer by virtual of eliminating all of the hidden things that can go wrong with them.</p>
+<p >Obviously, this isn't what you want for, e.g. a Python-like scripting language, where coders want to write simple code with minimum effort.  But for the sort of code we write -- hundreds of thousands of lines of game and engine code -- the explicitness and extra compile-time checking would be a net productivity improvement in the lifecycle of writing, extending, debugging, testing, and shipping complex software.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Thu, 02/09/2006 - 03:57 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-14498"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14498" class="active">which constraints must the new language fullfill?</a></h3>
+ <div class="content"><p >The last days i thought about your talk. you want a new language that's better suited for your task. Which constraints do you have?<br >
+(a good bridge to c++ ?)</p>
+<p >what do you think of:</p>
+<p >ocaml / F#</p>
+<p >Alice</p>
+<p >Mlton with CML</p>
+<p >and last:</p>
+<p >Titanium </p>
+<p >Titanium is an explicitly parallel dialect of Java developed at UC Berkeley to support high-performance scientific computing on large-scale multiprocessors, including massively parallel supercomputers and distributed-memory clusters with one or more processors per node. Other language goals include safety, portability, and support for building complex data structures.</p>
+<p >The main additions to Java are:</p>
+<p >    * Explicitly parallel SPMD control model<br >
+    * Flexible and efficient multi-dimensional arrays<br >
+    * Built-in types for representing multi-dimensional points, rectangles and general domains<br >
+    * Unordered loop iteration to allow aggressive optimization<br >
+    * User-defined immutable classes (often called "lightweight" or "value" classes)<br >
+    * Zone-based memory management (in addition to standard Java garbage collection)<br >
+    * Augmented type system for expressing or inferring locality &amp; sharing properties of distributed data structures<br >
+    * Compile-time prevention of deadlocks on barrier synchronization<br >
+    * Library of useful parallel synchronization operations and collectives<br >
+    * Operator-overloading<br >
+    * Templates (parameterized classes)<br >
+    * Cross-language application support </p></div>
+ <div class="links">By <a href="user/1562" title="View user profile.">HeikoWengler</a> at Thu, 02/09/2006 - 08:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-14500"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-14500" class="active">What we don&#039;t need/want is another Java</a></h3>
+ <div class="content"><p >What we don't need/want is another Java or any bastardization of Java, what we need is a new language(s) with a less ad-hoc, formalized &amp; expressive type system, a language which is fundamentally purely functional as it's basis/core not the other way round. As Tim mentions most numerical computations in game engines are purely functional anyways and there may only be a few places where state-full computation maybe necessary.</p>
+<p >We do not need/want any kind of C++ templates, we can have parametric and ad-hoc polymorphism on one side and a proper macro system for metaprogramming on the other side (if necessary).</p>
+<p >I think what we really need to be doing is pay attention to languages like Epigram because of it's dependent type system and languages like Alice ML for all the useful/necessary stuff it brings to large-scale massively concurrent/parallel applications. I think some kind of new dialect and/or hybrid of Epigram, Alice ML, and abit of haskell would be the way to go.</p></div>
+ <div class="links">By <a href="user/2728" title="View user profile.">snk_kid</a> at Thu, 02/09/2006 - 11:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-19783"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1277#comment-19783" class="active">Not everybody agrees</a></h3>
+ <div class="content"><p >It is interesting to me that folks deep in the bowels of game development are happy doing what appears to me to be <a href="http://article.gmane.org/gmane.games.devel.sweng/5845">banging their heads against rocks</a>. (I'm not meaning to pick on anybody, this is just email I stumbled across.)</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Mon, 07/17/2006 - 21:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

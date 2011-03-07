@@ -1,0 +1,9 @@
+http://lambda-the-ultimate.org/node/256
+http://lambda-the-ultimate.org/node/256#comment-1913
+1048832
+Generics for the masses
+Re: There must be a better way
+<p>This sounds promising.  I'd love to see any references you have on this approach.  For example, is "self" context-independent or does it need to be qualified when nested several levels deep in definitions where its meaning is ambiguous? (Or am I misunderstanding?)
+</p><p>That monad example will fail to typecheck because, though "&gt;&gt;=" is overloaded, "print 1 &gt;&gt;= _" is of type "(t-&gt;IO t)-&gt;IO t", and is incompatible with the argument of type "t-&gt;Maybe String".
+</p><p>The other issue with replacing typeclasses with overloading and implicit parameters is illustrated by the monad "return" operation.  "return" is of type "t-&gt;M t", so there is no way to overload it for different monads.  If one needs to operate on monads generically, one stills has to bundle all of the operations for each monad into a data structure, in order to pass it around (either explicitly or implicitly).  A record or typle would do just fine.  This improves expressiveness: whereas there is no way in Haskell to operate on a typeclass instance as a first-class value or to have multiple instances of the same typeclass, explicit typeclasses make this possible.  Cayenne (<a href="http://www.cs.chalmers.se/~augustss/cayenne/">http://www.cs.chalmers.se/~augustss/cayenne/</a>) is a Haskell-style language that supports this.
+</p><p>This highlights the strange multi-faceted role of typeclasses as a means of overloading by type, supporting implicit parameters, and bundling up of related overloaded things into data structures.</p>

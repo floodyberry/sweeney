@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2089
+http://lambda-the-ultimate.org/node/2089#comment-25813
+1050665
+Behaviour Diffing
+Behavior diffing
+<p>For simple programs that are recursive in nature (e.g. compilers), I wrote a hierarchical logging library to generate a log of program activity as an text file with varying levels of indentation, and use a standard diff tool to compare them.
+</p><p>This is an area where development tools could provide a lot of value.  Determining when the execution two versions of a program diverge is an extremely labor-intensive task to carry out manually for complex programs.</p>

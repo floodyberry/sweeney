@@ -1,0 +1,22 @@
+http://www.digitalmars.com/d/archives/30.html#N339
+[D] Macros
+[blockquote]Okay, why is it that everybody thinks the C preprocessor is terrible and needs to be avoided?[/blockquote]
+Because it's terrible and needs to be avoided, of course!
+
+[blockquote]C++ only has it for compatability; Java and C# and D don't have one.  I just don't get this one.[/blockquote]
+
+Historically (beginning with C), macro preprocessors have served as a kludge to compensate for a lack of language power and optimizer ability.  Macros were good an necessary in the C days, because you could often come pretty close to C++ style template programming if you were clever enough, using macros for casts and other tricks.  You could also use them to construct optimized code (i.e. by defining the body of a loop in a macro, and unrolling the loop 100 times with the macro).
+
+With a modern language, these kludges should not be necessary.  If there is any particular case where you feel you could express a program more cleanly by using macros, then I recommend looking at that as a language or optimizer flaw to be fixed, and not a need for macros.
+
+Unreal (the game) is probably a good production-code example.  It's around 250,000 lines of code and uses macros for the following:
+
+1. To expose metaclass information (i.e. class names, default constructors that a serializer can call) -- like MFC's techniques.  All of this code would be unnecessary if the language supported classes as first-class objects (i.e. you can pass around a classref* which "represent" the class and exposes its static functions), static virtual functions, and static constructors.
+2. To comment out large blocks of code.  Would be unnecessary if /*...*/ comments could be nested.
+3. To implement debug-specific code.  This is actually unnecessary, a bad old habbit.  We would be just as well off having a global constant debug=0 or 1, and having if(debug) {...} instead of #if debug.
+4. To implement platform-specific headers.  Only necessary because headers are necessary.
+5. To perform template-style tricks.  If the language has a great facility for type dependency (whether like C++ templates, or more general like Haskell), all of these things would be unnecessary.  Even C++ templates aren't complete enough, i.e. there are no template typedefs (true type synonyms), and most production compilers have bizarre template bugs limiting what you can do.
+
+I'm 100% sure the Unreal code would be simpler and cleaner if the language supported the above and all preprocessor support were eliminated.
+
+-Tim

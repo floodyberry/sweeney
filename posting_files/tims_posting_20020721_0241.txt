@@ -1,0 +1,17 @@
+http://groups.google.com/group/microsoft.public.dotnet.languages.csharp/browse_thread/thread/241b54e0f32c699c/bb91adbcf84cfa05?lnk=st&rnum=56&hl=en#bb91adbcf84cfa05
+[microsoft.public.dotnet.languages.csharp] C# for game development?
+Does Microsoft take the possibility of using C# for game development seriously?  It seems like it could be considered either as a gameplay scripting language or as a full-blown development language once DirectX9 ships with full .NET support.
+
+The language seems very capable in most regards and has many attributes of an excellent game scripting language, but it's garbage collection pauses seem to be a showstopper flaw.  In prototype code that does an amount of realtime object creation that is reasonable for a current generation game, i.e. around 100 object allocations per frame at 60 fps, I'm seeing pauses of 2-3 seconds that occur once every 5-10 minutes.
+
+Is this a feature or a bug?
+
+Obviously one can't ship an action game that hits a 5 second pause every 5-10 minutes!
+
+Note that in this scenario the amortized time going to garbage collection (under 3% of execution time) is totally acceptable.  What's unacceptable is that it all happens at once and makes the application appear to be locked up.  In a realtime app such as a game that attempts to run at 60 fps, it is necessary to establish a realtime expectation on garbage collection overhead (not a hard guarantee, but an expectation that we can count on being broken only very infrequently), such as "the garbage collector will never use more than 1 msec within any 10 msec period of time".
+
+Also, out of curiosity, is this the same issue that causes the Visual C++ IDE to lock up for 5 seconds every 5-10 minutes?  (I was assuming this was related to the non-Microsoft Perforce source control integration we use, but after experimenting with C# I wonder if this is an unavoidable aspect of managed code).
+
+The .NET framework is awesome and I really hope this isn't a fundamental flaw of managed .NET code.
+
+-Tim 

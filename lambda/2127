@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Syntax Solicited for Imperative-flavored Concurrent Language with Keywords | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2127" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Syntax Solicited for Imperative-flavored Concurrent Language with Keywords</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+Who would be willing to suggest a syntax to go with the semantics I allude to
+here?<br >
+<br >
+Since the language I am hinting at here (thinking to flesh a definition
+out, once someone else has drafted a syntax)
+does not try for referential transparency, and therefore
+retains sort of an imperative flavor,
+I assign the langauge the working title,
+<i >Imperatrix Mundi</i>.&nbsp;
+If someone wants to suggest another name, maybe I'd
+favor adopting such suggested name instead.<br >
+
+<br >
+I think it could be interesting
+(for me with help and suggestions from you readers)
+to flesh out a language of this sort, even though for some
+years I have been thinking a referentially
+transparent (RT) language would be
+the ultimate way to go.&nbsp; I suggest Imperatrix Mundi as an intermediate step
+in a possible evolution toward an eventual RT language for
+general computer
+programming purposes that don't require blindingly fast performance
+nor specialization to an unusual application area.<br >
+<br >
+For talking about
+the message passing
+in this language, I borrow the terms
+"bird" and "nest" from ToonTalk, but with some semantic differences, chief among
+them being that whereas in ToonTalk, bird/nest channels guarantee that the
+messages read off the nest come in the same order as they were handed to the
+bird, in this language I say that the order of the messages is not guaranteed to
+be preserved.<br >
+<br >
+This language does not try for referential transparency.&nbsp; However, it must
+meet a weaker requirement, that the values
+(or references or meanings) denoted by the
+occurrences of a given identifier in a
+given context could be exchanged with each other without changing the semantics
+of the segment of code occupying the context.&nbsp; This should happen because
+of don't-care nondeterminism.&nbsp; For example, suppose a &lt;- b
+is a command meaning to
+send a message denoted by b via a bird denoted by a, and the
+code says a &lt;- b; a &lt;- c.&nbsp; What this would mean
+is that the message stream sent along 'a' is some random merge
+of a1 with a2; a1 &lt;- b; a2 &lt;-
+c.&nbsp; The bird, 'a', would get the messages b and c, and whoever is reading
+the nest at the other end could get b before c or c before b.<br >
+
+<br >
+A segment of code consists of a bag of commands (or statements if you prefer to think of them that way); the order of
+the commands cannot affect the meaning of the segment.<br >
+<br >
+List of semantic constructs that need syntactic expression:<br >
+<br >
+<ul >
+  <li >
+    The usual complement of literals that a language would have.<br >
+  </li>
+  <li >
+    Manifest a bird/nest pair out of thin air.
+  </li>
+  <li >
+    Compose a message from a word to
+    function as a verb, and from
+    a list of keyword/argument pairs.&nbsp;
+    For example, {bletch foo: 2; bar: 3;} could mean a
+    message with verb <i >bletch</i> and keywords <i >foo</i> and
+    <i >bar</i> associated to values 2 and 3
+    respectively.&nbsp;
+    {bletch bar: 3; foo: 2;} would be the same message,
+    because the order of the
+    keywords does not matter.&nbsp; {bletch bar: 2; foo: 3;} would be a
+    different message, because the association of the arguments to their
+    respective keywords does matter.
+  </li>
+  <li >
+    Send a message via a bird, and optionally capture a result (which would be a
+    nest).&nbsp; Failing to capture the result should change the semantics of
+    the message in a way detectible by the process that eventually receives the
+    message from the nest associated to the bird
+    (argue against this distinction if you think it's a bad idea).<br >
+  </li>
+  <li >
+    Send a message to any value, and capture a result.&nbsp; For example 2 + 2
+    could be interpreted as a message {+ : 2} (where the naked colon indicates
+    an empty keyword) being sent to the value 2, and the result should be 4.<br >
+
+  </li>
+  <li >
+    Associate a nest to a process that is an instance of a class, so that the
+    process will interpret the stream of messages arriving on the nest.
+  </li>
+  <li >
+    Instantiate a process from a class by sending the class a message and
+    capturing the resulting new process.
+  </li>
+  <li >
+    Define a class with methods.&nbsp; Each method should have a header that can
+    match messages based on their verbs and keywords.&nbsp; Maybe it should be
+    possible to make some keywords optional in the sense that the method would
+    be invoked even if the
+    optional keywords are not supplied in the message.&nbsp; The class
+    definition should also provide for message patterns for creating an
+    instance from the class (class methods).&nbsp; There may need to be a
+    definition of parameters that would be given values in the instances
+    (instance variables).<br >
+  </li>
+  <li >
+    Refer to a value to be taken from a nest.
+  </li>
+  <li >
+    Compose a list of values.
+  </li>
+  <li >
+    Quote functions for passing to map functions, etc.
+  </li>
+  <li >Quote code for conditional execution.</li>
+  <li >
+    Disappear the current process, but capture
+    the residue of the nest it has
+    been interpreting (e. g., to pass the
+    residual nest as an argument in some
+    message).<br >
+  </li>
+</ul> </div>
+ <div class="links">By <a href="user/1669" title="View user profile.">Jack Waugh</a> at 2007-03-15 20:12 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1220" title="New language for kids: Scratch - Logo meets Squeak Smalltalk?">previous forum topic</a> | <a href="node/2138" title="Tracing in DrScheme">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2127" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 584 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2127" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2127" />
+<a id="comment-26600"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2127#comment-26600" class="active">Avian symbols</a></h3>
+ <div class="content"><p >OK so for a bird taking off you can do:</p>
+<pre >
+/p'\      ^p'^       ^,o'/      --,o'--
+</pre><p >For a small bird on a branch:</p>
+<pre >
+&amp;
+</pre><p >For a big nest:</p>
+<pre >
+(%%%)
+</pre><p >A small nest:</p>
+<pre >
+@
+</pre><p >Hope that helps.<br >
+;-)</p></div>
+ <div class="links">By <a href="user/3493" title="View user profile.">Denis Bredelet -jido</a> at Thu, 2007-03-15 21:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-26620"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2127#comment-26620" class="active">Imperatrix Ornothologica</a></h3>
+ <div class="content"><p ><a >http://www.toontalk.com/english/computer.htm</a></p>
+<p >Wow.  ToonTalk appears to be a serious product to teach concurrent constraint programming, to children, by means of the following metaphors:</p>
+<blockquote ><ul >
+computation :: city<br >
+actor or process or object :: house<br >
+methods :: robots<br >
+method preconditions :: contents of thought bubble<br >
+method actions :: actions taught to robot<br >
+tuples or messages or vectors :: boxes<br >
+actor spawning 	:: loaded trucks<br >
+actor termination :: bombs<br >
+channel transmit capabilities :: birds<br >
+channel receive capabilities :: nests
+</ul>
+<p >Another way to understand the computational model of ToonTalk is to consider what you can train robots to do:</p>
+<ul >
+send a message by giving a box or pad to a bird,<br >
+spawn a new agent by dropping a box and a team of robots into a truck,<br >
+perform simple primitive operations (e.g. +, -, *) by dropping a pad on a pad<br >
+terminate an agent by setting off a bomb
+</ul></blockquote>
+<p >Again, wow.  That's one hell of a metaphor there!</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 2007-03-16 02:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-26640"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2127#comment-26640" class="active">fundamental assumptions</a></h3>
+ <div class="content"><p >I'm not sure that you need any special syntax at all. Have you considered simply using a basic, generally applicable syntax with few or no keywords to start, and adding syntax only if it brings real value to the language? It makes sense to validate the utility of your semantics by actually making use of them before worrying about syntactical issues. </p>
+<p >I'm not making the argument that syntax isn't important, so you can just put it off until later. I'm rather making the point that syntax is far too important to guess at before your semantics are nailed down and well-tested. Perhaps I've misunderstood and you already have a working implementation.</p></div>
+ <div class="links">By <a href="user/3251" title="View user profile.">John Nowak</a> at Fri, 2007-03-16 06:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-26686"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2127#comment-26686" class="active">basic, generally applicable syntax</a></h3>
+ <div class="content"><p ><i >Have you considered simply using a basic, generally applicable syntax with few or no keywords to start</i> . . . Do you mean such as for example, S-expressions as in Lisp?</p>
+<p >(send (via a-bird) (message the-verb (key1 arg1) (key2 arg2)))</p></div>
+ <div class="links">By <a href="user/1669" title="View user profile.">Jack Waugh</a> at Fri, 2007-03-16 15:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-26753"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2127#comment-26753" class="active">well...</a></h3>
+ <div class="content"><p >Yes, that's what I had in mind. :-)</p></div>
+ <div class="links">By <a href="user/3251" title="View user profile.">John Nowak</a> at Sat, 2007-03-17 09:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-26697"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2127#comment-26697" class="active">Terms</a></h3>
+ <div class="content"><p >Perhaps the "bird", "nest" metaphor is too distracting.  We can as well speak of communication "channels" each of which has two ends (which can be referred to with identifiers), the "teller" and the "asker".  The inventors of the Janus language used those terms, "teller" and "asker".</p></div>
+ <div class="links">By <a href="user/1669" title="View user profile.">Jack Waugh</a> at Fri, 2007-03-16 19:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-26726"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2127#comment-26726" class="active">occam and occam-pi</a></h3>
+ <div class="content"><p >Have you looked at the syntax of <a href="http://en.wikipedia.org/wiki/Occam_programming_language">occam</a>, and it successor <a href="http://www.cs.kent.ac.uk/projects/ofa/kroc/">occam-pi</a>? Both are imperative languages that utilize message-passing concurrency. Granted, I'm not a huge fan of the ALL CAPS KEYWORDS, which seem a bit dated these days. But other than that, the syntax is very clean and easy to use.</p></div>
+ <div class="links">By <a href="user/1670" title="View user profile.">Allan McInnes</a> at Sat, 2007-03-17 01:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2007/02/18" title="Previous month">«</a> March 2007  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2007/3/1" title="1 post">1</a></td>
+  <td class="day-link"><a href="archive/2007/3/2" title="1 post">2</a></td>
+  <td class="day-link"><a href="archive/2007/3/3" title="1 post">3</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2007/3/4" title="1 post">4</a></td>
+  <td class="day-link"><a href="archive/2007/3/5" title="1 post">5</a></td>
+  <td class="day-link"><a href="archive/2007/3/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2007/3/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2007/3/8" title="3 posts">8</a></td>
+  <td class="day-link"><a href="archive/2007/3/9" title="2 posts">9</a></td>
+  <td class="day-link"><a href="archive/2007/3/10" title="4 posts">10</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2007/3/12" title="6 posts">12</a></td>
+  <td class="day-link"><a href="archive/2007/3/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2007/3/14" title="2 posts">14</a></td>
+  <td class="day-link"><a href="archive/2007/3/15" title="4 posts">15</a></td>
+  <td class="day-link"><a href="archive/2007/3/16" title="2 posts">16</a></td>
+  <td class="day-link"><a href="archive/2007/3/17" title="1 post">17</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-today">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+ </tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2131" title="8 comments">Virgil: Objects on the Head of a Pin</a></li><li><a href="node/1220" title="1 comment">New language for kids: Scratch - Logo meets Squeak Smalltalk?</a></li><li><a href="node/2127" title="7 comments" class="active">Syntax Solicited for Imperative-flavored Concurrent Language with Keywords</a></li><li><a href="node/2138" title="1 comment">Tracing in DrScheme</a></li><li><a href="node/2129" title="3 comments">Subject headings</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2138" title="1 comment">Tracing in DrScheme</a></li><li><a href="node/2131" title="8 comments">Virgil: Objects on the Head of a Pin</a></li><li><a href="node/2130">Washington DC-  FringeDC Haskell/Scheme Presentation March 24th</a></li><li><a href="node/2129" title="3 comments">Subject headings</a></li><li><a href="node/2127" title="7 comments" class="active">Syntax Solicited for Imperative-flavored Concurrent Language with Keywords</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

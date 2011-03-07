@@ -1,0 +1,5 @@
+http://groups.google.com/group/sci.math/browse_thread/thread/58729270ff7f42b8/08912ad257c1492e?lnk=st&rnum=18&hl=en#08912ad257c1492e
+[sci.math] Re: Ordering a Power Set
+[blockquote]This question arises from economics, but I'll give you the question first, the context later: Suppose we have a set of n objects, and a binary relation S that is a linear ordering, ie irreflexive, asymmetric, complete, transitive.  Is there any way to use this relation to induce some soft of ordering on the power set of our set of objects?[/blockquote]
+
+Yes: Associate each (finite) set with a sorted array containing exactly those elements in that set, and use the lexocographic (dictionary) order of those arrays. It will also be a linear order with a minimum element (the empty array) but no maximum element. 

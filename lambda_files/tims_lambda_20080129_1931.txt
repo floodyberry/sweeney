@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/2638
+http://lambda-the-ultimate.org/node/2638#comment-39688
+1051214
+The YNot Project
+Steps to Practicality
+<p>So, what's the roadmap here?  Surely we can't expect real programmers to write code using Coq syntax.  Do we define a nice mainstream-friendly language syntax, a translation into Coq for typechecking, and then a translation into some runtime form that is sound if the program successfully typechecked?
+</p><p>This special syntax for things with effects sucks and is counter to mainstream practice and intuition, e.g. "IO Int" and "Int-&gt;IO Int" versus "Int" and "Int-&gt;Int".  We should implicitly wrap all computations in monads, e.g. have Int-&gt;Int compile to Int-&gt;M(Int) for a context-dependent monad M.  And have "let x=a in bx" compile to "a &gt;== \x-&gt;bx".  Then, the syntax is regular for all kinds of effects, including none.  You can use recursive monads as described in the "mdo" paper to separate out the total part of the language (the identity monad without recursion), the partial part (the recursive identity monad), and the various effectful parts -- exceptions, state threads, IO.
+</p><p>Also, it's untidy to force programmers to generate proofs of stuff and pass them to functions in addition to ordinary parameters, such as calling a function and passing it an integer and a proof that the integer is between 0 and n.  Better to have a more expressive type system with proper subtyping, e.g. have the type of natural numbers less than n as a subtype of integers.</p>

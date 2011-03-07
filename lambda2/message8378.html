@@ -1,0 +1,331 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Closures and mutability</b></font><br>
+<font color="white" size="-1">started 8/18/2003; 12:20:45 PM - last post 8/23/2003; 4:47:42 PM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Closures and mutability <a name="8378">&nbsp;</a><a href='#8378' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/18/2003; 12:20:45 PM (reads: 2086, responses: 9)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a8378"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://blogs.gotdotnet.com/emeijer/PermaLink.aspx/efe79830-c3b8-46a0-a69e-9705cd74701e">Closures and mutability</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			Erik Meijer posted a nice discussion of these subjects on his weblog.<p>
+I don't endorse the practice of giving links to PL related sites without mentioning LtU, but I'll let it slide this time, Erik <img src="http://static.userland.com/shortcuts/images/qbullets/sidesmiley.gif"><p><br>
+			<font size="-2"><b>Posted to <a href='general.html'>general</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 8/18/03; 12:22:01 PM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#8378'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Closures and mutability <a name="8383">&nbsp;</a><a href='#8383' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/18/2003; 6:43:39 PM (reads: 956, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I absolutely agree with Erik, though I wouldn't have seen it this way without having implemented closures every possible wrong way and finally come around to this way of thinking.<p>
+
+It's quite a change from the C mindset and its simple "data structures &lt;-> blocks of memory" view of the world, but there is great value to forcing all variables in a language to be constant, and expose mutability purely through typed references, solely through the new_ref, read_ref, and write_ref constructs.
+<p></p>
+<p><a href='#8383'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Vesa Karvonen</a> - Re: Closures and mutability <a name="8395">&nbsp;</a><a href='#8395' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/19/2003; 7:55:04 AM (reads: 898, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<I>there is great value to forcing all variables in a language to be constant, and expose mutability purely through typed references, solely through the new_ref, read_ref, and write_ref constructs. </I><p>
+
+Could you elaborate on that great value?<p>
+
+As far as I understand it, when you introduce side-effects (mutable reference cells) you basically introduce assignment (and vice versa). So, from that point of view, if you introduce the other, you might just as well introduce both.<p>
+
+Also, as far as I understand it, the code required to implement automatic boxing to allow mutable bindings, is <I>very</I> simple.  Furthermore, a compiler for a language that has mutable reference cells and allows assignments to bindings, can perform the exact same optimizations on programs that never mutate bindings as a compiler for a language that has mutable reference cells but immutable bindings.<p>
+
+(Proof: After automatic boxing, the language manipulated by both of the compilers is the exact same language that does not allow assignments to bindings.)<p>
+
+<p></p>
+<p><a href='#8395'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Closures and mutability <a name="8399">&nbsp;</a><a href='#8399' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/19/2003; 1:01:15 PM (reads: 840, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+The advantage is conceptual.  As you mention, you can always losslessly translate from one representation to the other using boxing.  The value I've found in encapsulating all mutability entirely in ref&lt;t>/new_ref/read_ref/write_ref is that it's much easier to combine imperative programming and functional programming into a single framework, and to analyze it using modern type theories.<p>
+
+In the "everything is implicitly mutable unless you declare it constant" view, you have the following subtype relationships:<p>
+
+- int is not a subtype of object.
+- int is not a subtype of const int.
+- const int is not a subtype of int.
+- const int is a subtype of const object.<p>
+
+- is {int,const string} a subtype of const {int,object}?
+- the answer is not obvious.   <p>
+
+In the explicit-references view, you have:<p>
+
+- int is a subtype of object.
+- int is not a subtype of ref&lt;int>.
+- int is not a subtype of ref&lt;object>.
+- ref&lt;int> is not a subtype of ref&lt;object>.<p>
+
+- is ref&lt;{ref&lt;int>,string}> a subtype of {ref&lt;int>,ref&lt;object>}?
+- obviously not.<p>
+
+The type relationships are clearer in the explicit-references view: all basic data types have the obvious subtyping relationships to each other; but all reference types are disjoint from each other and all other types.<p>
+
+In the everything-is-mutable-by-default view, the relationships are obscured.  It becomes quite hard, when looking at two complex data structures containing a mix of constant and mutable fields, to see what sort of structural subtype relationship exists between them.
+<p></p>
+<p><a href='#8399'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Vesa Karvonen</a> - Re: Closures and mutability <a name="8400">&nbsp;</a><a href='#8400' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/19/2003; 2:10:58 PM (reads: 831, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<I>The advantage is conceptual.</I><p>
+
+So, if I understand your point correctly, you are basically saying that you prefer explicit manual annotation of imperative code, because it makes it easier for a programmer to reason about the code. If this is the case, then I understand your point, but I do not completely agree with it.<p>
+
+Personally, I prefer languages that generally do not require the programmer to manually introduce annotations, because I dislike verbosity. I find that the less code I have to write, the smaller the chance is that I make an error.<p>
+
+As far as I can see (please someone prove me wrong if I am), in this particular case, a compiler or a static analyzer can infer the information completely (because assignment to lexical bindings is a simple syntactic property).<p>
+
+Personally, I'd like to see IDEs that can automatically (and effortlessly from the programmer's POV) display all the inferred type and effect information of any expression. The point is that programmers would not have to manually annotate their code to make it more readable (?), because the IDE would compute and display those annotations automatically (at the programmers' discretion).
+<p></p>
+<p><a href='#8400'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Closures and mutability <a name="8404">&nbsp;</a><a href='#8404' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/19/2003; 7:26:30 PM (reads: 796, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Good points.  The ideal const/mutable distinction really depends on the typical programming language you're working in.<p>
+
+C, C++, Java, Python, and C# exist in a nice local optima where you can write and modify imperative code very productively without putting a lot of thought into mutable vs constant values.  For this style of language, I wouldn't advocate Erik Meijer's approach, because it adds verbosity in order to make distinctions that typical code seldom requires.<p>
+
+Once you generalize your language's feature set a bit, constant vs mutable issues become much more central.  The key areas are:<p>
+
+- If a language supports structural subtyping, then the lack of a subtype relationship between int/object and int / const int become very painful.  This isn't noticed in the above languages because their type systems (i.e. C structs, C++/Java classes) are purely nominal.<p>
+
+- If a language supports dependent types, then ad-hoc mutability interacts very poorly.  Consider something like {t:type:=int; x:t:=7; t:=string;}.  In general, this is why features like C++ templates and the upcoming C# generics are purely static.  In a fully general dependent-typed language like Cayenne with a clear separation between functional and imperative types, you don't need templates/generics as a feature, because you can simply write a function that takes some type parameters, that returns a function or data type as a result.<p>
+
+- If you want a language with a clean functional subset, in order to take advantage of compile-time term evaluation (important once you have dependent types), implicit parallelism, or lazy evaluation, then it's vital for your language to be able to distinguish (both for types and values) imperative code from functional code, and to default to functional for common constructs.<p>
+
+- In the presence of type deduction, type systems that think in terms of variables being const or mutable behave strangely, because for each term you need to decide whether you mean the actual term, or the implicitly reference-read-coerced version of it, and these end up in a tangled set of interdependencies.  When every reference-read is explicit, and every "mutable term" is instead a constant term of reference type, there is no ambiguity.
+<p></p>
+<p><a href='#8404'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Vesa Karvonen</a> - Re: Closures and mutability <a name="8405">&nbsp;</a><a href='#8405' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/20/2003; 12:54:45 AM (reads: 788, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Tim Sweeney: <I>C, C++, Java, Python, and C# exist in a nice local optima where you can write and modify imperative code very productively without putting a lot of thought into mutable vs constant values.</I><p>
+
+When I said that <I>I prefer languages that generally do not require the programmer to manually introduce annotations</I>, I was thinking more along the lines of Scheme or an ML dialect that would have mutable bindings (and would do it by using the boxing transformation). (In fact, most of the languages you mention (C, C++, Java and C#) require a huge amount of annotations (maybe 20%-50% of the size of the parse tree in <I>worst case</I> situations).)<p>
+
+Tim Sweeney: <I>When every reference-read is explicit, and every "mutable term" is instead a constant term of reference type, there is no ambiguity.</I><p>
+
+I just want to clarify that there is technically no ambiquity. The ambiquity that you are referring to exists only in the mind of the programmer. A compiler or a static analyzer can statically find all assignments to lexical bindings and then transform the definitions of the related bindings (let name = expr ==> let name = ref expr) and transform each reference (read/write) to those bindings. Furthermore, the transformation can be done without any information about the structure of the values of those bindings. Ordinary type checking can then proceed in exactly the same way as in a language that does not allow assignments to bindings.<p>
+
+<p></p>
+<p><a href='#8405'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Vesa Karvonen</a> - Re: Closures and mutability <a name="8427">&nbsp;</a><a href='#8427' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/21/2003; 4:28:18 PM (reads: 678, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Thinking about exception specifications made me realize the real reason why I don't like to manually annotate imperative code.<p>
+
+The reason is that such annotations really do not provide me with any useful static property that wouldn't already follow otherwise in those languages and type systems (e.g. Ocaml). Even if I would manually annotate every piece of imperative code, it wouldn't guarantee equational reasoning for me nor to the compiler (in any greater detail than without the explicit manual annotations). Instead, having to manually provide such minute details just distracts me from the more abstract properties of the code.<p>
+
+On the other hand, I would really like to be able to specify that some procedure only has certain side-effects. In most cases, I would like to be able to specify that a particular procedure has no side-effects that could be observed by any caller.<p>
+
+For example, I would like to be able to write higher-order procedures, that are specified so that all the procedures passed to them as parameters are required to have no side-effects (that can be observed by the caller).<p>
+
+By default, I would like that the compiler would automatically infer a conservative estimate of the side-effects.<p>
+
+A type/effect system like this would allow me to specify "functional barriers" in my code. Whenever a procedure is inferred to not have any side-effects that could be programmatically detected by any caller, that procedure would be safe for equational reasoning, even if it uses assignments or side-effects during the computation it performs.<p>
+
+Let me express all this once more. The point is that I think that requiring programmers to annotate every imperative expression is the wrong idea, because it is tedious and simply does not provide any (otherwise unavailable) useful static properties. The right idea is to allow programmers to annotate (to specify) when something is (required to be) free of side-effects, because it is a useful static property that can not generally be just assumed - it has to be specified.
+<p></p>
+<p><a href='#8427'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Paul Snively</a> - Re: Closures and mutability <a name="8441">&nbsp;</a><a href='#8441' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/22/2003; 10:47:32 PM (reads: 616, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I wonder in what ways the thinking of the various people who seem to have strongly-held opinions on the subject might be/have been influenced by &lt;<a href="http://www.erights.org/elang/kernel/auditors">http://www.erights.org/elang/kernel/auditors</a>>? In particular, Tim, have you given any thought to how auditors, and capability security in general, might be applied in future versions of UnrealScript?
+<p></p>
+<p><a href='#8441'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Closures and mutability <a name="8444">&nbsp;</a><a href='#8444' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">8/23/2003; 4:47:42 PM (reads: 587, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Vesa:<p>
+
+In the new language I've been building, there are two main areas where annotations are needed, compared to traditional C-family languages: that a variable is mutable (really that it's a reference to a mutable heap-allocated cell of a particular type), and that a function may have side effects (including heap writing and IO operations).<p>
+
+This is all set up such that, given a piece of simple source code mixing imperative and functional features, it would be relatively straightforward to translate it to either C (where everything is imperative) or Haskell + IO + ST (where everything is functional except the behind-the-scenes work performed by IO).<p>
+
+This works well in my context, but the typical programming style ends up being quite different than in C-family languages.  I definitely wouldn't advocate this just as an extension to C.  But it can be attractive as you try to merge functional, imperative, and higher-level type system concepts.<p>
+
+Paul:<p>
+
+Given something like C#, Java, or UnrealScript as a starting point, this protocol/auditors approach is a natural and attractive direction.<p>
+
+I actually spent a year of occasional late nights and weekends implementing something along these lines.  It seemed really elegant at the time.  There were all kinds of attributes you could apply to variables and functions to control their scope and interactions.  For one example, there were "visitor references" to objects (as opposed to ordinary references) where you could access variables and functions through the reference, but couldn't capture it or assign it to a non-local variable.  There were all kinds of access overrides allow things like inner classes whose variables could be accessed by outer subclasses but not the external environment in general.<p>
+
+As its complexity grew, though, it started to feel very arbitrary.  I was also learning about type theory: dependent types, monads, the Curry-Howard isomorphism, and so on, and was starting to feel that these problems could be solved in a more general way.  So I started over and have been proceeding on the basis of a dependent-typed functional language with an imperative superset, with various combinations of nominal and structural typing supporting open- and closed-world programming.  Highfalutin features aside, though, it's pretty similar in syntax to the C/Pascal family, as opposed to the LISP or ML/Haskell families.<p>
+
+But that's been such a big metaproject that I haven't gotten around to implementing any advanced scoping and security constructs. :-)<p>
+
+General opinions:<p>
+
+- I would like to see issues like "is this variable mutable" addressed at the type system level, independent of security.<p>
+
+- I want any language-level security features to be statically verifyable, not relying on runtime checks. The one exception to this is computing resources (stack size, heap allocations, infinite loops) which unfortunately require a bunch of twiddle factors, because type-based verification of resource bounds is currently intractable for real-world programs.<p>
+
+- I would only hope for language-level security in languages based on intermediate code, run with either JIT or a VM, with something like a bytecode verifier or proof carrying code checker standing between the code and the machine.<p>
+
+- I like the idea of code signing as an optional, security-enabling feature.  For example, I would like to be able to release several (Java-style) packages which work independently, but are granted special access privelages with respect to each other.<p>
+
+- I am becoming a big fan of region typing (the ability to have multiple heaps, and segregate access to heaps), as a way of enabling patterns like purely functional functions which can use a local heap internally, but are still guaranteed to have no observable side-effects; and big complex imperative functions which can be executed in parallel because they're guaranteed to be operating on different heaps. (Example: two game levels running on a game server.)<p>
+
+- I think type system based security guarantees can solve all problems with distributed untrusted code.<p>
+
+The question of distributed mutable objects is a different matter.  Two observations: Implementing this, even naively and arbitrarily (as Unreal does for game objects), can lead to a really expressive and powerful way of programming.  But doing this in a theoretically sound and fully general way seems much tricker, bringing up problems such as transactioning and distributed garbage collection.  I can't envision what a general solution to this problem would look like, but it's certainly a great topic for active R&amp;D.
+<p></p>
+<p><a href='#8444'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

@@ -1,0 +1,10 @@
+http://lambda-the-ultimate.org/node/2785
+http://lambda-the-ultimate.org/node/2785#comment-41451
+1051361
+ Species: making analytic functors practical for functional programming
+Confusing
+<p>The paper is written with frustrating vagueness, especially in its basic definitions.
+</p><p>The authors define a species as a certain kind of functor.  But then they define species by means of vague analogy to data structures without stating clearly what the functor is.  For example, we see the species 0 of "structures that can't be instantiated".  What functor is this?  The functor from finite sets to the empty set?  Then we see the species epsilon, "a set with membership but no order on the elements".  Aren't species supposed to be functors?  If so, what's the functor?  What does it mean for a species to be a set?
+</p><p>The definition of composition equates (F o G) with F(G[A]).  What's A?  What does it mean to equate a species to a structure?  Or does the author mean (F o G)[A] = F(G[A])?  What do the graphs with nodes and lines have to do with the underlying functors?
+</p><p>What does it mean to restrict a species to a cardinality n?  Its functor maps finite sets to finite sets, so are we talking about restricting the cardinality of the sets in the functor's domain?  Or its range?  If the later, is the resulting functor partial?
+</p><p>The paper gets clearer later on (e.g. the definition of molecular species).  But by then most of the non-expert audience is lost, which is unfortunate given the impressive breadth of the field that the paper covers and the translation into a generic-programming style implementation in Haskell at the end.</p>

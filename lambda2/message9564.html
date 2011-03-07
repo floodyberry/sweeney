@@ -1,0 +1,240 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Longhorn Markup Language (code-named "XAML") Overview</b></font><br>
+<font color="white" size="-1">started 10/28/2003; 5:48:42 AM - last post 11/1/2003; 11:56:07 AM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Longhorn Markup Language (code-named "XAML") Overview <a name="9564">&nbsp;</a><a href='#9564' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">10/28/2003; 5:48:42 AM (reads: 12536, responses: 8)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a9564"></a><table border="0" cellspacing="10" width="400">
+   <tr>
+      <td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://longhorn.msdn.microsoft.com/?//longhorn.msdn.microsoft.com/lhsdk/core/overviews/about%20xaml.aspx">Longhorn Markup Language (code-named "XAML") Overview</a></b></td>
+      </tr>
+   <tr>
+      <td align="left" valign="top">
+         <small>(via Isaac, in the <a href='message9545.html'>discussion group</a>)</small><p>
+Yet another example of XML used as a foundation for a declarative DSL. As you know, I this is something we should keep our eyes on.<p>
+When will we create the tools to make building such languages easier? Parsing isn't the issue. Handling the semantics is.<p>
+Patrick has some interesting links about <a href='message9545.html#9551'>interpreted, dynamic GUIs</a>.<p><br>
+         <font size="-2"><b>Posted to <a href='xml.html'>xml</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 10/28/03; 5:50:09 AM</b><br>
+         </font><br>
+         <font size="-2">  </font>
+         </td>
+      <td valign="top" align="right" width="15%">
+
+         </td>
+      </tr>
+   </table>
+<p>
+<p></p>
+<p><a href='#9564'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Longhorn Markup Language (code-named <a name="9573">&nbsp;</a><a href='#9573' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">10/28/2003; 2:13:54 PM (reads: 645, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+C# is a wonderful programming language with support for meta-data attributes and reflection, great features for associating properties with UI controls.  Yet instead of exploiting this, they define a new dialect of XML, a very programmer-unfriendly language that maps poorly onto the C#/.NET type system.<p>
+
+Worse, to do any actual event handling, they actually embed C# into XML, resulting in code like their example:<p>
+
+&lt;Canvas ID="root"
+xmlns="http://schemas.microsoft.com/2003/xaml"
+xmlns:def="Definition">
+&lt;Button ID="button1" Click="Clicked"&gt;Click Me!&lt;/Button&gt;
+&lt;def:Code&gt;
+&lt;![CDATA void Clicked(object sender, ClickEventArgs args)
+      {
+      button1.Content = "Hello World";
+      }
+]]&gt;
+&lt;/def:Code&gt;
+&lt;/Canvas&gt;<p>
+
+How horrid.
+<p></p>
+<p><a href='#9573'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Sjoerd Visscher</a> - Re: Longhorn Markup Language (code-named <a name="9575">&nbsp;</a><a href='#9575' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">10/28/2003; 3:08:28 PM (reads: 629, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+You don't have to put the code inside the XAML file. Watch this weeks episode of MSDN TV:
+<a href="http://msdn.microsoft.com/msdntv/episode.aspx?xml=episodes/en/20031028LHORNDB/manifest.xml">http://msdn.microsoft.com/msdntv/episode.aspx?xml=episodes/en/20031028LHORNDB/manifest.xml</a>
+<p></p>
+<p><a href='#9575'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Longhorn Markup Language (code-named <a name="9577">&nbsp;</a><a href='#9577' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">10/28/2003; 3:51:13 PM (reads: 630, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+C# is a general purpose programming language. XAML is a DSL for describing GUI elements. I don't see why they should be combined.<p>
+You may want to use XAML without having to learn C#.<p>
+The approach seems reasonable. But  the resulting language, XMAL,  may be horrid. I didn't study it enough to be able to tell at this point if that's the case.<p>
+I am certain the integration with C# and assorted tools will be announced RSN...
+<p></p>
+<p><a href='#9577'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Longhorn Markup Language (code-named "XAML") Overview <a name="9578">&nbsp;</a><a href='#9578' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">10/28/2003; 4:05:40 PM (reads: 614, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+More information can be found in this <a href="http://msdn.microsoft.com/longhorn/default.aspx?pull=/msdnmag/issues/04/01/DevelopingAppsforLonghorn/default.aspx">exposition</a>.
+<p></p>
+<p><a href='#9578'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Patrick Logan</a> - Re: Longhorn Markup Language (code-named <a name="9586">&nbsp;</a><a href='#9586' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">10/28/2003; 10:43:29 PM (reads: 594, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I found <a href="http://longhorn.msdn.microsoft.com/portal_nav.htm">some interesting information about Avalon here</a>.
+<p></p>
+<p><a href='#9586'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>bryan rasmussen</a> - Re: Longhorn Markup Language (code-named <a name="9593">&nbsp;</a><a href='#9593' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">10/29/2003; 4:25:20 AM (reads: 540, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+There's a big xml-dev thread on this, started with someone complaining that this was a rip-off of xul, but got interesting after that: <a href="http://lists.xml.org/archives/xml-dev/200310/msg00793.html"><a href="http://lists.xml.org/archives/xml-dev/200310/msg00793.html">http://lists.xml.org/archives/xml-dev/200310/msg00793.html</a></a><p>
+
+most common complaint seen there, is the need for css styling for these elements.
+This also seems related to the complaint, which is mine, that whether or not this has embedded c# it is one ugly markup language, I don't know what it is, microsoft has some really good xml people working for them, but they have this in-house style for a lot of markup that comes out of there that just bugs the hell out of me. <p>
+
+One thing I hate in a markup language is variations in capitalization, because of course xml is case-sensitive.<p>
+
+This can make writing xaml difficult unless one has an editor specifically adapted to writing it, it can also make writing scripts etc. for working with one's xaml files more of a chore, consider the following xpath:<p>
+
+//xa:Canvas[@ID="root"]/xa:Button[following-sibling::def:Code]<p>
+
+now extrapolate to when you want to work with camel-cased objects from an xslt, sax parser, some script using the dom. just a lot of chances for misspellings it seems to me.
+<p></p>
+<p><a href='#9593'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Longhorn Markup Language (code-named <a name="9606">&nbsp;</a><a href='#9606' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">10/29/2003; 1:06:25 PM (reads: 479, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Erik has some related <a href="http://blogs.gotdotnet.com/emeijer/PermaLink.aspx/f0bdf5c8-ec34-4dbb-b51e-6982a93be2e5">examples</a>.
+<p></p>
+<p><a href='#9606'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Re: Longhorn Markup Language (code-named <a name="9644">&nbsp;</a><a href='#9644' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">11/1/2003; 11:56:07 AM (reads: 307, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+At least now we know what partial classes are for.
+<p></p>
+<p><a href='#9644'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

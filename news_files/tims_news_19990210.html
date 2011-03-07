@@ -1,0 +1,63 @@
+<h4>Latest News</h4>
+
+<p>Progress on Unreal 221 and Unreal Tournament continues.&nbsp; We are making changes and
+improvements at such a fast pace that it has been hard/impossible to stabilize the code
+for the 3-5 days required to fully test a new patch.&nbsp; I apologize for the earlier
+false start we had with 221.</p>
+
+<h4>What we've been programming</h4>
+
+<p>I've been juggling work on the installer, OpenGL, and some core UnrealScript
+improvements.&nbsp; The installer is coming together, and is complete in terms of
+installing the retail game and patches, but more work remains to be done on uninstallation
+issues, and improved support for installing/distributing mods.&nbsp; Some of the latest
+UnrealScript improvements include a command-line script compiler, which can be used from
+any programmer's editor (or Visual C++) with standard output of error messages;
+UnrealScript execution optimizations; and support for dynamic strings.</p>
+
+<p>UnrealScript's string support has been pretty solid all along, as a result of using
+BASIC style functions (Left, Right, Mid, InStr, Chr, Asc...) instead of C's error-prone
+string handling functions (strcpy, strcat, strcmp, sprintf).&nbsp; The one annoying
+limitation, which has been the source of some bugs in the past, is that strings were fixed
+length.&nbsp; 221 supports dynamically sized strings with no practical size limitation
+(just available memory).&nbsp; This makes it easier to write text-processing routines,
+which the new in-game server browser is really stressing.</p>
+
+<p>Steve Polge has been improving the AI and the flexibility of the game code. &nbsp;
+Because Unreal Tournament's gameplay can be far more complex than Unreal 1's (from a bot's
+perspective) as a result of team play and Capture The Flag, Steve has been teaching the
+bots a lot of new techniques for coordinating together and better understanding the
+environments.&nbsp; It's sooo cool watching Cliff and Myscha playing CTF with a few bots
+on their teams.</p>
+
+<p>Jack Porter is hammering away on the new user interface code and the in-game server
+browser.&nbsp; In the past, first-person action games haven't been known for having good
+user interfaces.&nbsp; We're hoping to change that, and go for the quality level of an EA
+Sports interface.&nbsp; Sticking to our general-purpose roots, Jack isn't just creating
+user-interface code for Unreal Tournament, he's creating a flexible, object-oriented UI
+framework which will be very suitable for licensees and mod makers.</p>
+
+<p>Brandon Reinhart is working hard, implementing a lot of the Unreal Tournament game
+code, the single-player progression, stats tracking, and much more.&nbsp; The stats
+tracking is going to be a very cool feature for Internet play; perhaps I can convince
+Brandon to write a note about it here.</p>
+
+<p>Erik de Neve, who created Unreal's algorithmic fire and water effects and optimized
+much of the rendering code, is working on a next-generation project that will make its
+debut in Unreal 2.</p>
+
+<h4>Linux Notes</h4>
+
+<p>We now have a command-line (windowless, console based) script compiler and server for
+Unreal, which has minimal dependencies on Windows.&nbsp; This is a first step towards a
+Linux port, and it also runs very well under Wine, with minimal overhead.&nbsp; This might
+be a good interim solution for Linux server administrators, before the full port is done.
+&nbsp; I just noticed in GameSpy that the top server on the list is titled &quot;CHiX
+Unreal NT Server (220) PORT UNREAL TO LINUX&quot;.&nbsp; Hint taken. :)</p>
+
+<p>We actually have the Unreal 221 Core source compiling under EGCS 2.90.29, C++ templates
+and all.&nbsp; Getting the thing linking and running successfully will require a lot more
+work, which we won't be able to focus on until UT ships, but the experience thus far has
+been very positive.</p>
+
+<p>-Tim Sweeney</p>

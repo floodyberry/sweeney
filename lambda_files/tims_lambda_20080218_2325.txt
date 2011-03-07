@@ -1,0 +1,7 @@
+http://lambda-the-ultimate.org/node/2677
+http://lambda-the-ultimate.org/node/2677#comment-40217
+1051253
+Uniform naming
+Dereferencing operators
+<p>If all dereferencing-like operators are made postfix as in Pascal, then you can write: structure[index].field^.ptr^.  This is clearly superior to to the messy combination of prefix and infix path operators in C++ that lead to ugly expressions like *((*a)-&gt;b[c].e)-&gt;f.  That half of your proposal has much merit.
+</p><p>But, merging all such operations into a single symbol would have undesirable consequences.  For example, in C++/Java/C#, a.b looks up b in the scope of a, while a[b] looks up b in the current scope.  If you combined syntax, then the scope in which "b" is found in "a/b" would depend on whether a is a class or array.  Context-dependent scoping would add undesirable complexity.</p>

@@ -1,0 +1,8 @@
+http://lambda-the-ultimate.org/node/1201
+http://lambda-the-ultimate.org/node/1201#comment-12966
+1049777
+Duck typing vs Structural Subtyping
+The essence of duck typing
+<p>I take duck typing to mean the strategy of applying runtime coercions to make values fit into the types required by operations.  For example, some languages let you add the string "1" to the integer 2 to yield the integer 3.  In C++, you can add the integer 1 to the floating-point value 2.0 to yield the floating-point value 3.0.  Duck typing includes the strategy of loosely typing records/objects so that two such types are deemed equal if they contain the same set of field names and the fields are of coercible types.  This is similar to the structural subtyping principle.
+</p><p>There's nothing fundamentally unsound or dangerous about structural subtyping.  You can reason about them in the same way as you can reason about tuples: tuples map indices to values of some index-dependent type, while structural records map names to values of some name-dependent type.  But of course there's no abstraction there!
+</p><p>To gain compile-time security from type abstraction you definitely want a mechanism to augument structural typing.  Nominal typing and partially opaque types are all well-understood solutions to this problem.</p>

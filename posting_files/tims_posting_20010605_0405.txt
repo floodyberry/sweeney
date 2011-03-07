@@ -1,0 +1,78 @@
+http://www.seas.upenn.edu/~sweirich/types/archive/1999-2003/msg00690.html
+[TYPES] Better vector math using dependent types
+I finally found the solution to a type theory problem that's been bugging me for years.  It's a twist on the "function parameters are covariant" problem, in the special case of mathematical objects like vector spaces and matrices.
+ 
+Here I will use functions from natural numbers (or an upper-bounded subset of natural numbers) to real numbers to represent vectors.  You can think of such functions as fixed-length arrays of real numbers, or of floating point numbers -- I will be lax with the terminology.
+ 
+[bold]The Problem[/bold]
+ 
+When determining whether one function type (or array type, or vector type) is a subtype of another, type systems treat the function parameter type contravariantly.  Conceptually, this isn't what one wants with mathematical objects like vectors.
+ 
+I will use fixed-length arrays as an example below and assume classic array typing rules.  However, you could see the same issue in C++ by declaring a class vec2d {float x,y;} and a class vec3D: public vec2D {float z;}, and a subclass vec4D containing yet another component.
+ 
+Example of the problem in C-style pseudocode:
+
+[code]void Use3DVector(float[3] my3DVector) {
+    ...do something here
+}
+void Example() {
+    // Declare a 2D vector and a 4D vector.
+    my2DVector b={1,2};
+    my4DVector a={1,2,3,4};
+ 
+    // Use the 4D vector. This succeeds because it's typesafe:
+    // a 4D vector has all the components of a 3D vector and more.
+    Use3DVector(my4DVector);
+ 
+    // Use the 2D vector. This fails because it's not typesafe: a 2D
+    // vector doesn't have certain components that a 3D vector has.
+    Use3DVector(my2DVector);
+}[/code]
+ 
+In other words, traditional type systems inherently use these subtyping relationships
+ 
+[code].. <: float[4] <: float[3] <: float[2] <: float[1][/code]
+ 
+This is the opposite of how mathematicians look at vector spaces.  They see 1D space as a subspace of 2D space; 2D space as a subspace of 3D space, etc:
+ 
+[code]float[1] <: float[2] <: float[3] <: ..[/code]
+ 
+[bold]The Solution[/bold]
+ 
+Define a new type "zero" which is a subtype of "float".  Type "zero" has only one instance, the value "0".  By definition of subtyping, all zeros are floats, but not all floats are zeros.  This is sound.
+ 
+Since "zero" has only one instance, variables of type "zero" don't need to be stored; they take up no runtime storage.  Since they take up no storage, you can store infinitely many of them in a fixed-sized data structure.  I exploit this to represent vectors as infinite-length arrays consisting of a finite number of reals, followed by an infinite number of zeros.
+ 
+Now, instead of looking at vectors in the Java style (float[0], float[1], etc.), we view them with dependent types, like:
+
+[code]ForAll(i nat).if i<3 then float else zero // a 3d vector
+ForAll(i nat).if i<1 then float else zero // a 1d vector[/code]
+ 
+Or concepually, you can think of vectors as the examples below, where "..." stands for "followed by infinitely many zeros":
+ 
+[code]{float,float,float,zero...}
+{float,zero...}[/code]
+ 
+If you define a generic type constructor vec(i) in the style above, you'll find that it's exactly what mathematicians want:
+ 
+[code]vec(1) <: vec(2) <: vec(3) <: ...[/code]
+ 
+You can verify this by looking at the "ForAll" expressions above, verifying that for every possible input value "i", the corresponding subtyping rules hold.  For example: {real,zero...} <: {real,real,zero...} because (looking at the first elements) real<:real, and (second elements) zero<:real, and (subsequent elements) zero<:zero, etc.
+ 
+[bold]Other Benefits[/bold]
+ 
+You can then derive types from constants, i.e. {2,1,0} has the type of a 2D vector because the third component is 0, whose exact type is zero rather than the more general float.
+ 
+You can also type strangely-shaped vector spaces like {float,zero,float,zero...} -- the space of vectors with only X and Z components.
+ 
+In languages supporting dependent types and pattern matching, many mathematical rules automatically fall out of the results.  For example, transforming a vector by a matrix which has one column of zeros yields a vector with the corresponding component set to zero -- not just at runtime, but in the type system as well, as long as the zeros are statically known.
+ 
+[bold]Summary and Future Work[/bold]
+ 
+By changing our representation of vectors from fixed-length arrays of reals, to infinite-sized arrays containing finitely many reals and infinitely many zeros, vectors now obey the subtype=subspace rules mathematicians want, rather than the covariant subtyping of traditional fixed-length arrays and records.
+ 
+I am currently working on extending this approach to deal with the multivectors of Geometric (Clifford) Algebra.  There are many ways of doing this which don't involve any new type-theory constructs, but clearly nothing we can build out of ordinary dependent types will admit ordinary scalars, and the newly-defined vectors here, as elements of any more general multivector type.
+ 
+However, I've found a new construct, sort of a "dimensionality-indexed transparent product" that gives you multivectors compatible with traditional scalars, and the vectors defined here.  Better yet, it admits imaginary numbers, complex numbers, quaternions, and spinors of arbitrary dimensionality as subtypes; and it always knows the more specific derivable type of your result.  This is still somewhat sketchy but I'd be glad to share it if there is any interest.
+ 
+-Tim

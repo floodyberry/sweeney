@@ -1,0 +1,14 @@
+http://lambda-the-ultimate.org/classic/message6788.html
+http://lambda-the-ultimate.org/classic/message6788.html#6815
+0531076
+Don Box on C# generics vs. C++ generics
+Re: Don Box on C# generics vs. C++ generics
+<p>Type-safe genericity doesn't have to be terribly hard.  If you look at it from the C# or Java point of view, it's just a matter of disallowing any operations which aren't typesafe.  The problem with this simplistic approach is that it disallows many common things that programmers want to do, such as passing an array of integers to a function expecting an array of objects -- which at first glance seems reasonable because all integers are objects.  But the type of mutable integer cells is not a subtype of the type of mutable object cells, so such an "upcast" isn't safe.</p><p>
+
+So you have the following options:</p><p>
+
+- Keep the C#/Java style type system and disallow anything that's not statically sound.  Safe, but inconvenient.</p><p>
+
+- Allow such unsafe casts, and check for failure at runtime.  Convenient, but sometimes goes horribly wrong.</p><p>
+
+- Implement all of the language facilities you need to combine the best of both worlds, static safety and convenience.  This is more difficult than it first seems, especially when you try to implement such things with performance similar to C#/Java.  You need a type system and syntax that lets you express the (typewise) different concepts of "arrays of integers", "mutable arrays of integers", "arrays of mutable integers", "mutable arrays of integers", and all of their subtyping rules and fine structure.  This brings up the issues of structural vs nominal identity, etc.  You have to go way off the beaten C#/Java path to solve these problems.</p>

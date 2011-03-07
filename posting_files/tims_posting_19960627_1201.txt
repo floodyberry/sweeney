@@ -1,0 +1,13 @@
+http://groups.google.com/group/comp.graphics.algorithms/browse_thread/thread/c94bf8bdb6a7871e/3ad6fac445f3605e?lnk=st&rnum=84&hl=en#cdfc5b1b3e3008bc
+[comp.graphics.algorithms] Re: Shadow Volumes, BSP, and HSR
+[blockquote]If you have a 3-D BSP tree, and you walk it front-to-back, would it not be possible to compute a "shadow volume" for each polygon  and determine if the next polygon to be rendered is within it?  If it is entirely within the shadow volume, then it is NOT visible and does not have to be rendered.  If it is only partialy within  the SV then it can be *clipped* to the previous poly's SV,  and only have it's visible parts drawn.  That would make for  a "perfect" 3-D engine with *no overdraw*.  Right?[/blockquote]
+
+I coded this and the major problems are:
+
+1. The shadow volume BSP's become very lopsided, so processing an additional polygon becomes more of an O(n) operation than an O(log n) operation.
+
+2. You'll get cracks between adjacent polys unless you incorporate logic to build a seamless SVBS mesh (a slow and operation).
+
+3. Building the SVBSP requires taking the sqrt() of the difference of two numbers which is (A) slow, and (B) numerically unstable. Given the number of times you have to do this per frame, the speed and precision problems are killer.
+
+-Tim 

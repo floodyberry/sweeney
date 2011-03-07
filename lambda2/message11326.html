@@ -1,0 +1,124 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folder2.gif' height="14" width="17" border="0" alt="inactiveTopic"> <font color="white"><b>Python 'for' as Scheme 'let'</b></font><br>
+<font color="white" size="-1">started 2/23/2004; 1:32:39 AM - last post 2/23/2004; 2:00:23 PM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - Python 'for' as Scheme 'let' <a name="11326">&nbsp;</a><a href='#11326' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/23/2004; 1:32:39 AM (reads: 9993, responses: 2)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a11326"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://google.com/groups?selm=7eb8ac3e.0402131819.46d2bbb4%40posting.google.com">Python 'for' as Scheme 'let'</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			<font color="blue"><i>We show that the 'for' operator of Python quite unexpectedly
+can be represented by a 'let' form of Scheme.</i></font><p>
+Another cool example from Oleg. This time, not only a nice example of Scheme macros, but of shift/reset operators as well.<p>
+<font color="blue"><i>
+Allow me to draw the following diagram:
+<p>
+list-comprehensions === monads === shift/reset === range
+<p>
+The first two are truly equivalences: in Haskell, a list comprehension
+is just another form of the 'do' notation in the case of a List monad.
+Filinski showed that shift/reset can be used to implement monads in
+the general way. My 'range' is based on shift-and-reset. <p>
+There is a difference however. If we avoid nested loops, then my
+shift/reset (called bshift/breset) are the same as shift/reset. Alas,
+regular shift/reset cannot nest. There are multi-level shift/reset,
+but they are difficult to use -- and hard to encapsulate in a macro
+such as 'range' because the macro needs to know on which level it
+operates. My bshift/breset are different. bshift/breset with different
+labels are unaware of each other.
+<p>
+BTW, other control operators, e.g., those by Matthias Felleisen, do
+not have the indifference property. The operator 'cupto' has -- but to
+some extent. Several cupto operators have to be used in a stack-wise
+fashion. Mines don't have to.</i></font><p><br>
+			<font size="-2"><b>Posted to <a href='functional.html'>functional</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 2/23/04; 1:35:53 AM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#11326'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Python 'for' as Scheme 'let' <a name="11330">&nbsp;</a><a href='#11330' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/23/2004; 1:46:08 PM (reads: 395, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+I've been trying to sort out these similarities too.  There is also a notion of a Monad with a "cut" operator similar to the Prolog cut operation discarding prior choice points; something along these lines may be valuable in modelling a array monad analogy to the "break" command in C for loops.  (The "continue" command is already modelled by the array monad's zero.)<p>
+
+The presence of operations with side effects in things like list comprehensions complicates their interpretation as monads.  One approach I find promising is to model all imperative operations in a program literally as IO monads, and to have a syntactic translation of things like for loops or list comprehensions whose contents have side effects into a simple composition of the Array or Maybe monad with the IO monad.  Obviously this translation will only work for a predetermined set of monads (because not every monad can be composed with IO so as to yield a true monad as a result), but it would be nice to be able to model all imperative constructs and looping constructs with a mainstream-style syntax (as opposed to Haskell syntax) with the monad translation being automatic.<p>
+
+Note that in a suitable type system, you can construct a "TypeMonad" whose map functor takes the (exact) image of a supplied function over a supplied type, unit generates a singleton type containing just the supplied element, join is type union, and zero is the empty type.<p>
+
+The really neat thing is that comprehensions in the TypeMonad correspond to constructing new types elementwise from existing types, i.e. for(a:at,b:bt)[a,b] is the type of pairs containing elements from the types at and bt.  And in the IdentityMonad, comprehensions correspond to lets: for(a:x,b:y)a+b is just x+y.  So, many of the leading edge syntactic constructs in languages can be represented as comprehensions over a suitable monad.
+<p></p>
+<p><a href='#11330'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: Python 'for' as Scheme 'let' <a name="11331">&nbsp;</a><a href='#11331' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">2/23/2004; 2:00:23 PM (reads: 386, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Pardon the spam, but here are some more notes:<p>
+
+The TypeMonad described above also can be extended with a new "meet" operating (taking typewise intersection) and "infinity" object ("the type of all types" if it exists and is nonparadoxical in a given type system) as its idempotnent.  This structure can then be seen as a lattice or a topos or a model of set theory depending on what you want from it. However, TypeMonad can't be sensibly composed with IO, because elements in a set are inherently ordered, in contrast to elements of a list of array.<p>
+
+Finally, there is a concept of a monad with a fixed-point operation (see <a href="http://www.cse.ogi.edu/PacSoft/projects/rmb/mdoTalk.pdf">http://www.cse.ogi.edu/PacSoft/projects/rmb/mdoTalk.pdf</a>), which leads to the interesting possibility of accessing the previous results of a list comprehension while constructing subsequent elements.
+<p></p>
+<p><a href='#11331'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

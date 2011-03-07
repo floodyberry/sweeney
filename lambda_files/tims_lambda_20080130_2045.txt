@@ -1,0 +1,6 @@
+http://lambda-the-ultimate.org/node/2643
+http://lambda-the-ultimate.org/node/2643#comment-39723
+1051219
+Arc is released
+ASCII Only?
+<p>I can sympathize with that decision, as it avoids bloating a language specification with the mess that is Unicode.  For example, the specification of "valid unicode string" is too complex to express in most type systems, whereas a valid ASCII string is simply an array of ASCII characters.  There's also the question of encoding: Do you expand all characters to 32 bits using UTC-32?  Even then you still have to deal with combining characters, etc, so that one UTC-32 element doesn't coincide exactly with one character.  Or do you use a UTF-8 style encoding, where the notion of 'character' is ill-defined, since a character may require multiple UTF-8 elements.  Even if those problems didn't exist, Unicode doesn't define a mapping to glyphs, so yet another layer of translation is required to manipulate or display them.</p>

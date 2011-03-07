@@ -1,0 +1,14 @@
+http://lambda-the-ultimate.org/classic/message6554.html
+http://lambda-the-ultimate.org/classic/message6554.html#6595
+0530842
+Selectors Make Analysis of case-lambda Too Hard
+Re: Selectors Make Analysis of case-lambda Too Hard
+<p>In a type system with intersection types and contravariant subtyping of function argument types, you get case-lambda style functionality automatically.  In that setting, you have results like:</p><p>
+
+add0=lambda().0
+add1=lambda(x).x
+add2=lambda(x,y).x+y</p><p>
+
+intersection(add0,add1,add2)=a function that takes 0, 1, or 2 arguments and adds them.</p><p>
+
+However, I've found implementing intersection types and full contravariance very tricky, so this isn't an economical solution if all you want is case-lambda.</p>

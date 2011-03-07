@@ -1,0 +1,71 @@
+http://groups.google.com/group/rec.games.programmer/browse_thread/thread/f21a48a0d579a2f1/a343491c78dc4deb?lnk=st&rnum=83&hl=en#a343491c78dc4deb
+[rec.games.programmer] Re: Fractal Cloud Generation
+[blockquote]Has anybody got information on how to generate realistic, fractal clouds for computer graphics? I would be interested in any algorithm or literature on this subject.[/blockquote]
+
+Here is some code I snipped from the game I'm programming.
+
+[code]
+//
+// Make a random tiled 2D fractal texture of size US*VS.
+// Dest is an array of US*VS floats whose values range from 0.0 to 1.0.
+//
+void MakeTiledFractal(FLOAT *Dest, int Size)
+{
+	void *MemTop = GMem.Get(0); // this is a simple memory pool
+
+	// Make sure Size is a power of two:
+	if( Size&(Size-1) ) appError("Size not power of two");
+
+	// Make wraparound table
+	INT* WrapU = (INT*)GMem.GetFast((Size+1)*sizeof(INT)); // snag some memory
+	INT* WrapV = (INT*)GMem.GetFast((Size+1)*sizeof(INT));
+	for( int i=0; i<Size; i++)
+	{
+		WrapU[i]=i;
+		WrapV[i]=i*Size;
+	}
+	WrapU[Size] = WrapV[Size] = 0;
+
+	// Init random index
+	int iRand = 0;
+
+	// Init base
+	Dest[0] = 0.6 * 0.5;
+
+	FLOAT Range = 0.6 * 0.5;
+	int Speed   = Size;
+
+	// Descend through mesh
+	for( Speed=Size/2; Speed; (Speed /= 2, Range *= 0.5) )
+	{
+		FLOAT *Dest0 = &Dest[0];
+		FLOAT *Dest1 = &Dest[Speed*Size];
+		for( int v=Speed; v<Size; v+=Speed+Speed )
+		{
+			FLOAT *Dest2 = &Dest[WrapV[v+Speed]];
+			for( int u=Speed; u<Size; u+=Speed+Speed )
+			{
+				FLOAT Base = 
+					(
+					+	Dest0[      u-Speed ]
+					+	Dest0[WrapU[u+Speed]]
+					+	Dest2[      u-Speed ]
+					+	Dest2[WrapU[u+Speed]]
+					) * 0.25;
+
+		        // GRandoms->Random(seed) is just a random number
+		        // from 0.0 to 1.0.
+				Dest1[u-Speed] = Base + Range * 
+					(-1.0 + 2.0 * GRandoms->Random(iRand+0));
+				Dest0[u      ] = Base + Range * 
+					(-1.0 + 2.0 * GRandoms->Random(iRand+1));
+				Dest1[u      ] = Base + Range * 
+					(-1.0 + 2.0 * GRandoms->Random(iRand+2));
+				iRand += 3;
+			}
+			Dest0 += (Speed + Speed) * Size;
+			Dest1 += (Speed + Speed) * Size;
+		}
+	}
+	GMem.Release(MemTop);
+}[/code]

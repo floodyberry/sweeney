@@ -1,0 +1,9 @@
+http://groups.google.com/group/comp.graphics.algorithms/browse_thread/thread/c94bf8bdb6a7871e/3ad6fac445f3605e?lnk=st&rnum=84&hl=en#3ad6fac445f3605e
+[comp.graphics.algorithms] Re: Shadow Volumes, BSP, and HSR
+[blockquote][blockquote]3. Building the SVBSP requires taking the sqrt() of the difference of two numbers which is (A) slow, and (B) numerically unstable. Given the number of times you have to do this per frame, the speed and precision problems are killer.[/blockquote] Where exactly do you need to take the sqrt?[/blockquote]
+
+To generate a BSP which I could clip world polygons by, I built a solid 3D BSP by forming a set of partitioning planes for each visible polygon.  Each partitioning plane contained the viewpoint and the line comprising the polygon's side.  You just do this for all polygons in the world, in front-to-back order, until the screen is completely solid.  To build those planes from a point and a line, I took a cross product, and normalized it.  (In retrospect, I think this would have worked without the normalization - DOH!)  :)  The numerical instability came from sliver polygons, where most of the precision was lost during the cross product.  This problem could have probably been overcome, as well as cracking, and optimization, but my view volume renderer was abyssimally slow in complex areas compared to simpler methods, so I didn't spend much time before moving on to other methods.
+
+Regarding convolving the world with a sphere in order to simplify collision, that's a great idea.  You could also convolve the world with a cube and end up with all-polygon geometry.
+
+-Tim 

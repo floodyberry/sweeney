@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>The YNot Project | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2638" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>The YNot Project</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p ><a href="http://www.eecs.harvard.edu/~greg/ynot.html">The YNot Project</a></p>
+<blockquote ><p >
+The goal of the Ynot project is to make programming with dependent types practical for a modern programming language.  In particular, we are extending the Coq proof assistant to make it possible to write higher-order, imperative and concurrent programs (in the style of Haskell) through a shallow embedding of Hoare Type Theory (HTT).  HTT provides a clean separation between pure and effectful computations, makes it possible to formally specify and reason about effects, and is fully compositional.
+</p></blockquote>
+<p >This was actually commented on <a href="http://lambda-the-ultimate.org/node/2551#comment-38515">here</a>, by Greg Morrisett himself. Conceptually, this seems like it's related to Adam Chlipala's <a href="http://lambda-the-ultimate.org/node/2146">A Certified Type-Preserving Compiler from Lambda Calculus to Assembly Language</a>. See, in particular, slides 23-24 of <a href="http://adam.chlipala.net/papers/CtpcPLDI07/CtpcINRIA.pdf">this presentation</a> (PDF). More generally, computation and reflection seem to be gaining recognition as important features for the practical use of such powerful tools as Coq; see also <a href="http://research.microsoft.com/research/downloads/Details/6658d5cc-9965-4e6f-9fe1-b3d94e6b8346/Details.aspx">SSREFLECT tactics for Coq</a> and their accompanying paper <a href="http://www.lix.polytechnique.fr/~assia/Publi/ssrdoc.pdf">A Small Scale Reflection Extension for the Coq system</a> (PDF).</p>
+<p >It's also interesting to observe that the work appears to depend on the "Program" keyword in the forthcoming Coq 8.2, the work behind which is known as "Russell," as referred to in <a href="http://lambda-the-ultimate.org/node/2626">this thread</a>. Russell's main page in the meantime is <a href="http://www.lri.fr/~sozeau/research/russell.fr.html">here</a>. Again, the point is to simplify programming with dependent types in Coq.</p> </div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at 2008-01-29 02:14 | <a href="taxonomy/term/11">Functional</a> | <a href="taxonomy/term/8">Implementation</a> | <a href="taxonomy/term/29">Semantics</a> | <a href="taxonomy/term/21">Type Theory</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2638" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 3689 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2638" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2638" />
+<a id="comment-39688"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39688" class="active">Steps to Practicality</a></h3>
+ <div class="content"><p >So, what's the roadmap here?  Surely we can't expect real programmers to write code using Coq syntax.  Do we define a nice mainstream-friendly language syntax, a translation into Coq for typechecking, and then a translation into some runtime form that is sound if the program successfully typechecked?</p>
+<p >This special syntax for things with effects sucks and is counter to mainstream practice and intuition, e.g. "IO Int" and "Int-&gt;IO Int" versus "Int" and "Int-&gt;Int".  We should implicitly wrap all computations in monads, e.g. have Int-&gt;Int compile to Int-&gt;M(Int) for a context-dependent monad M.  And have "let x=a in bx" compile to "a &gt;== \x-&gt;bx".  Then, the syntax is regular for all kinds of effects, including none.  You can use recursive monads as described in the "mdo" paper to separate out the total part of the language (the identity monad without recursion), the partial part (the recursive identity monad), and the various effectful parts -- exceptions, state threads, IO.</p>
+<p >Also, it's untidy to force programmers to generate proofs of stuff and pass them to functions in addition to ordinary parameters, such as calling a function and passing it an integer and a proof that the integer is between 0 and n.  Better to have a more expressive type system with proper subtyping, e.g. have the type of natural numbers less than n as a subtype of integers.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Tue, 2008-01-29 19:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39690"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39690" class="active">Re: tricking programmers into using it</a></h3>
+ <div class="content"><p >It does seem likely to me that if you come at the functionality from the "you are writing proofs" angle, people will avoid it because of the connotations for "proof". On the other hand, if you just say "oh, hey, we have finer-grained types now" people might be a lot more interested. Even if in the end it was basically the same thing? Like, saying the compiler's type checker proves things for you "for free" is great, but saying you have to write proofs is just scary even though people are used to writing types.</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Tue, 2008-01-29 21:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39807"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39807" class="active">Need to learn how to use existing type systems first</a></h3>
+ <div class="content"><p >I think even very good programmers could still use training in how to get the best use of type systems in languages like C++.</p>
+<p >Last week I encountered a bug in a large C++ app that boiled down to uncanonicalised URLs. I suspect (but to be fair, don't know for sure) that the URLs were being passed around as strings and not represented using some kind of URL type/class. If the string had been casted to a URL type as early as possible, simple object orientation would have been sufficient to prevent the bug from happening.</p>
+<p >Dependent types are an idea that feels intuitively right to me, but I wonder how many bugs in practice could be avoided by clever (or not so clever) usage of the standard C++ type system. Can people show me examples of real-world bugs that could be prevented by something like YNot but not C++ classes and templates?</p></div>
+ <div class="links">By <a href="user/2660" title="View user profile.">Mike Hearn</a> at Fri, 2008-02-01 21:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39809"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39809" class="active">The type of mistake you</a></h3>
+ <div class="content"><p >The type of mistake you describe is very common. I think it is much more fundamental than not utilizing the type system (though it is that, too, of course). It is a lack of understanding of the value of abstraction in software design (ADTs in this case). </p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Fri, 2008-02-01 22:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39812"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39812" class="active">But...</a></h3>
+ <div class="content"><blockquote ><p >Need to learn how to use existing type systems first</p></blockquote>
+<p >But industrial practice is typically 10 to 20 years behind the forefront of research.  By the time dependent types are broadly available, the average coder may just be about competent with first order polymorphic types.</p>
+<blockquote ><p >Can people show me examples of real-world bugs that could be prevented by something like YNot but not C++ classes and templates?</p></blockquote>
+<p >First, let me say that talking about C++ templates is remarkably tricky.  Every time somebody says "you can't do this" somebody hacks up a giant ball of really clever cruft that does "do this." :-)</p>
+<p >Anyway, you talked about the URL encoding routine. Certainly having a URL type with carefully guarded factory and conversion routines goes a long way towards eliminating URL related bugs.  I can't argue with that.  But when you build those conversions you have no proof that your URLs are in in fact complying with the properties you desire.  Instead you have to rely on testing or hand-derived-proofs.</p>
+<p >You used the phrase "real world" and that's a loaded phrase.  In my experience everybody lives in their own little "real world." It could be that within some domains the kinds of proofs offered by C++ are in fact sufficient from a practical/economic/security stand point.  In other domains, better proofs might be necessary.  Is the URL type in the former or the later?  That's not a question with a simple answer.</p></div>
+ <div class="links">By <a href="user/4902" title="View user profile.">James Iry</a> at Fri, 2008-02-01 22:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39814"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39814" class="active">The Challenge...</a></h3>
+ <div class="content"><p >...it seems to me, is to take that which can be done today (C++ template metaprogramming, "typeful" programming in ML or Haskell), add a dash of that which can't be done today, and make it not only not excruciating to do, but actually easy and, in a decade or so, as obvious as object-orientation is today (i.e. "How else would you do it?")</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 2008-02-01 23:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-39823"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39823" class="active">On the other hand, if you</a></h3>
+ <div class="content"><blockquote >On the other hand, if you just say "oh, hey, we have finer-grained types now" people might be a lot more interested. Even if in the end it was basically the same thing?</blockquote>
+
+<p >I agree. The idea of passing proofs around in your code looks a lot like a well-founded design-by-contract system of sorts. Whenever a function's specification requires a certain input, you must show that you are respecting the contract when you use it, and whenever a function's specification requires a certain output, you must show that the function respects that contract when you write it. It sounds less "threatening" to me stated like it's design by contract that is verified at compile time.</p></div>
+ <div class="links">By <a href="user/3201" title="View user profile.">Jake McArthur</a> at Sat, 2008-02-02 17:56 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-39824"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39824" class="active">I don&#039;t see it</a></h3>
+ <div class="content"><p >Trying to sell a programmer "oh, we have finer grained types" might get people more interested up front, but it won't take long before the programmer tries to pass a value to a function that's "obviously" a subtype of the parameter type, and if the compiler complains to him about it I think the interest will quickly wane.</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Sat, 2008-02-02 20:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-39825"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39825" class="active">Obviously</a></h3>
+ <div class="content"><p >I think an important measure of "obviousness" is whether there's a decision procedure for proving that the subtype is, in fact, a subtype. I think you're right that having to manually discharge too many proof obligations won't fly. But manually proving a handful of more interesting ones might not be so bad.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sat, 2008-02-02 20:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-39828"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39828" class="active">Still don&#039;t see it</a></h3>
+ <div class="content"><p >The reason I put "obviously" in quotes is that I think there are plenty of things that the programmer will find obvious that aren't obvious by a definition like yours[*].  Many of them will probably even be true.</p>
+<p >Compare the versions of merge sort in <a href="http://www.cs.nott.ac.uk/~txa/publ/ydtm.pdf">Why Dependent Types Matter</a>.  I can assert that mergeSort preserves length trivially with lightweight type annotations - it's apparently considerably more work to prove those assertions in Epigram.  Also note that paper indicates that it's easier to rework your definitions to be amenable to proof - I don't know how much worse off you'd be if you just wrote down the algorithm and tried to prove that property.</p>
+<p >Or <a href="http://www.eecs.harvard.edu/~greg/msr_cambridge_july_2007.ppt">this presentation</a> discusses (p25) a compiler implementation in Coq:</p>
+<blockquote ><p >
+4,000 line compiler:<br >
+7,000 lines of lemmas and theorems includes interpreters/models of C and PPC code much is re-usable in other contexts<br >
+17,000 lines of proof scripts though with right tactics, could at least cut in half. and keep in mind, this is a very deep property.
+</p></blockquote>
+<p >Given that the number of lines of proof is over double the number of lines of assertions to be proved, we either have more than a handful of things requiring manual intervention or the ones that do require proof are difficult.  EDIT:  And 2:1 is being very generous here, since the programmer probably only cared about a few hundred or so of those theorem lines - the others being supporting lemmas.</p>
+<p >The main argument would seem to be, though, that even if there were just a small number of hard things to prove, what is the advantage of forcing the programmer to prove them over just advising him that they aren't yet proven?</p>
+<p >[*] I think the quantifiers need care - for any provable subtype relation there is a decision procedure that proves it.</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Sat, 2008-02-02 21:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-39829"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39829" class="active">Nothing&#039;s stopping you from</a></h3>
+ <div class="content"><p >Nothing's stopping you from underspecifying in your types! I guess there's some value in keeping "well-typed enough to run" separate from "actually does what the spec says" - that is "this code can be well-typed" vs "this code has the types asked for".</p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Sat, 2008-02-02 21:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-39830"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39830" class="active">I realize nothing&#039;s</a></h3>
+ <div class="content"><p >I realize nothing's *stopping* me from underspecifying my types - I just don't want the fear of an impending deathmatch with type checker to *drive* me to underspecify them.  And I agree with your second sentence, and think care should be taken to make sure "well-typed enough to run" is only very lightly typed (Edit Read:decidable)</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Sat, 2008-02-02 21:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-39832"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39832" class="active">Clarification</a></h3>
+ <div class="content"><p >I have to imagine that I wasn't clear: if there's a decision procedure for something, then either the user of Coq has to use it, or Coq itself has to apply it automatically somewhere along the line for it to be compelling. That is, I was just using a slightly tongue-in-cheek formulation to observe that there's much more of the process of certifying software that you want to have certified in Coq.</p>
+<p >The presentation that you quoted is, of course, referring to the <a href="http://pauillac.inria.fr/~xleroy/compcert/">CompCert</a> project. This is a different endeavor than "just" programming with dependent types! This involves proving the semantic equivalence of all source code/object code pairs for a C-like language, which is why Greg Morrisett rightly calls it a "deep property" in the presentation. Leroy uses co-inductive big-step operational semantics and achieves this excellent result, but I'm interested in comparing-and-contrasting with Adam Chlipala's work on dependently-typed abstract syntax and denotational semantics; see his slides <a href="http://adam.chlipala.net/papers/CtpcPLDI07/CtpcPLDI07Talk.pdf">here</a>, particularly slide 15, which contains a certified CPS transformation in ~250 lines, and slide 20, which gives some statistics similar to the ones you quoted. It's worth pointing out, however, that CompCert treats a very C-like, realistic language, while so far, Chlipala's work has been confined to a relatively simple lambda language.</p>
+<p >In both cases, of course, what one would hope to arrive at would be a collection of libraries of reusable components, highly automated, with which compiler developers could implement new languages using Coq. From that perspective, Chlipala's efforts to provide generic tools and rely on Coq's own metalogic to make most traditional sorts of proofs (e.g. of progress and preservation, necessary in operational semantics) unnecessary seem quite welcome, as do tools such as U Penn's <a href="http://www.cis.upenn.edu/~plclub/popl08-tutorial/code/metatheory_lib.html">Metatheory library</a> and Microsoft's <a href="http://www.s1on1.com/main/index.cgi/000000A/http/research.microsoft.com/research/downloads/download.aspx?FUID=6658d5cc-9965-4e6f-9fe1-b3d94e6b8346">SSREFLECT</a> tactics.</p>
+<p >But all of this is relative to certifying compilers developed in Coq, which isn't necessarily the same thing as making dependently-typed programming palatable to more programmers. That I really wouldn't expect to happen within Coq, but perhaps the tools I've mentioned will help someone design and implement a language, extracted from Coq, that will succeed at that goal.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Sat, 2008-02-02 22:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-39827"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39827" class="active">A lot can be done with a</a></h3>
+ <div class="content"><p >A lot can be done with a good IDE and tactics, and I imagine a lot of programmers will be willing to let the small fry pass given a lightweight way to say "fill it in for me" if it'll get some of the more complex cases easily too. </p></div>
+ <div class="links">By <a href="user/1621" title="View user profile.">Philippa Cowderoy</a> at Sat, 2008-02-02 21:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39691"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39691" class="active">Sounds mostly good to me</a></h3>
+ <div class="content"><p >I for one like the idea of more heavily integrating Monads into the language.  Having pure functions expressed in the same syntax as monadic computations seems important because it makes adding a simple effect to a pure function much easier.  However, I don't think you want to hide it from the type system.  Improve the syntax of monadic types, yes, but the programmer needs to be able to distinguish f :: Int -&gt; Int from f :: Int -&gt; IO Int.</p>
+<p >I also agree with your comment about proof passing and subtyping, though I'm quite skeptical of requiring programmers to prove those properties at all.  I think something along the lines of <a href="http://lambda-the-ultimate.org/node/1537">Sage</a> will lead to a good practice of tightly specifying types by not annoying users of the corresponding values with a bunch of proof obligations.  </p>
+<p >(Also, I don't see how Coq would fit well as a typechecker in this situation.  Are you going to automatically insert tactics?  Expose tactics to the programmer?)</p></div>
+ <div class="links">By <a href="user/3546" title="View user profile.">Matt M</a> at Tue, 2008-01-29 21:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39692"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39692" class="active">Good Question!</a></h3>
+ <div class="content"><p >I had a very similar reaction: programming in Coq is one thing; using Coq to develop a certified compiler something else.</p>
+<p >Or is it? I have to admit to being somewhat surprised by the modest reaction to <a href="http://lambda-the-ultimate.org/node/2582">Theorem proving support in programming language semantics</a>. It's a very interesting exercise in reflection and extraction, i.e. you can play, on a small scale, with the language within Coq, and then extract an interpreter to play with outside of Coq. In principle, there's no reason that the interpreter couldn't be a compiler. So it seems to me that if Ynot is sufficiently modular, you could program in Coq/Ynot if you wanted and extract the end-result code to Scheme, OCaml, or Haskell; or you could extract just the semantics and code gen <i >&agrave; la</i> CompCert or Adam Chlipala's certified compiler, put a parser on it, and have a "different" language. That's obviously an oversimplification&mdash;the devil being in the details, and all that&mdash;but I don't think it's an outrageous goal.</p>
+<p >At least, it's no more outrageous than pushing to develop a certified compiler for a realistic, modern programming language within a proof assistant is. :-)</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Tue, 2008-01-29 21:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39693"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39693" class="active">Better than you think</a></h3>
+ <div class="content"><p >Some things are better than you might think.  In particular, with the Russell extensions to<br >
+Coq, the proofs aren't actually constructed "in-line", but rather broken out as things that<br >
+you construct separate from the code.  (You have the option of building explicit proofs<br >
+in-line, but we almost never do this.)  Additionally, you can code and register tactics<br >
+that attempt to discharge the verification conditions automatically.  Finally, Matthieu<br >
+Sozeau is adding some really nice additional features, including support for type-<br >
+classes, that should make the code even easier to read &amp; write.  </p>
+<p >I agree that some better external syntax would be nice, but you have to be careful here:<br >
+We need a strong separation between "pure" and "impure" in large part to ensure that<br >
+when we construct proofs, they are meaningful *and* they can be erased after type-<br >
+checking.  (In contrast, languages such as Sage must rely upon other techniques to<br >
+try to ensure that the "effects" that might happen within specifications are benign.<br >
+Similarly, with attempts to embed this sort of thing in Haskell, such as Cayenne,<br >
+you run into a fundamental unsoundness since you can use exceptions or divergence<br >
+to build proofs of "False".)   </p>
+<p >Having said all of this, I don't think that the syntactic structure here is at all ideal<br >
+and that there's much room for improvement.  But at this point, we want to make sure<br >
+that we can actually write real code that uses effects, and prove deep properties<br >
+about them.  </p>
+<p >We do have some really neat code -- my favorite is Avi Shinnar's implementation of<br >
+dependent hash-tables (where the value's type associated with a key is dependent<br >
+on the key).  He even has higher-order functions (e.g., iterators) that can<br >
+be passed effectful computations, and yet you can still reason about the<br >
+possible effects.  The interface only tells you that all of the key*value pairs<br >
+will be presented to your function, but not what order.  This gives you the<br >
+freedom to change the implementation of the abstraction (e.g., to anything<br >
+that implements a finite map), but also gives you enough reasoning power that<br >
+if you want to do something like map a function over the hash-table that<br >
+inserts each key*value pair into another (initially empty) hash-table, then<br >
+you can conclude at the end that they both implement the same finite-map.</p>
+<p >Other examples at this point include things like memoizing (dependent) functions<br >
+(where the types ensure that the memoization is equivalent to re-computing)<br >
+and parsing combinators, where the types tell you what grammar the parser<br >
+will accept.  </p>
+<p >So anyway yes, we have a long way to go before this is ready for the real<br >
+world (Unreal indeed), but Coq (really Russell) has provided a good environment<br >
+to quickly prototype the ideas.  </p></div>
+ <div class="links">By <a href="user/2979" title="View user profile.">Greg Morrisett</a> at Tue, 2008-01-29 22:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-39704"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2638#comment-39704" class="active">Subtyping</a></h3>
+ <div class="content"><p ><cite >Also, it's untidy to force programmers to generate proofs of stuff and pass them to functions in addition to ordinary parameters, such as calling a function and passing it an integer and a proof that the integer is between 0 and n. Better to have a more expressive type system with proper subtyping, e.g. have the type of natural numbers less than n as a subtype of integers.<br >
+</cite></p>
+<p >That's precisely what Russell allows in Coq. You write the programs as if there were no proofs involved and it does all the proof passing.</p></div>
+ <div class="links">By <a href="user/3124" title="View user profile.">Matthieu Sozeau</a> at Wed, 2008-01-30 14:28 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="
+http://wiki.squeak.org/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2008/01/15" title="Previous month">«</a> February 2008  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2008/2/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2008/2/2" title="1 post">2</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/2/3" title="3 posts">3</a></td>
+  <td class="day-link"><a href="archive/2008/2/4" title="2 posts">4</a></td>
+  <td class="day-link"><a href="archive/2008/2/5" title="3 posts">5</a></td>
+  <td class="day-link"><a href="archive/2008/2/6" title="5 posts">6</a></td>
+  <td class="day-link"><a href="archive/2008/2/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2008/2/8" title="1 post">8</a></td>
+  <td class="day-normal">9</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2008/2/10" title="1 post">10</a></td>
+  <td class="day-link"><a href="archive/2008/2/11" title="1 post">11</a></td>
+  <td class="day-normal">12</td>
+  <td class="day-link"><a href="archive/2008/2/13" title="4 posts">13</a></td>
+  <td class="day-link"><a href="archive/2008/2/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2008/2/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2273" title="56 comments">&quot;Practical&quot; advantages of lazy evaluation </a></li><li><a href="node/2666" title="4 comments">Qis of the Future</a></li><li><a href="node/2673" title="17 comments">Recursive Algorithms that cannot be expresses with Tail-Recursion?</a></li><li><a href="node/2674" title="5 comments">PL Related Blogs</a></li><li><a href="node/2665" title="5 comments">10 Years of Purely Functional Data Structures</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2674" title="5 comments">PL Related Blogs</a></li><li><a href="node/2673" title="17 comments">Recursive Algorithms that cannot be expresses with Tail-Recursion?</a></li><li><a href="node/2672" title="2 comments">Java the language vs. Java the ecosystem</a></li><li><a href="node/2670" title="4 comments">MACLISP Manual Comes To The Web</a></li><li><a href="node/2669" title="1 comment">Sake = Rake for Smalltalk</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

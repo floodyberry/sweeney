@@ -1,0 +1,13 @@
+http://groups.google.com/group/fa.haskell/browse_thread/thread/7f445301cdb6dd7d/862a881f061dda89?lnk=st&rnum=34&hl=en#862a881f061dda89
+[fa.haskell] Re: Typesafe MRef with a regular monad
+Conjecture: It's impossible to implement RefMonad directly in Haskell without making use of built-in ST or IO functionality and without unsafe or potentially diverging code (such as unsafeCoerce).
+
+Any takers?
+
+If this is true or suspected to be true, any thoughts on whether a structure besides Monad could encapsulate safe references in Haskell without core language changes? My intuition is that no such structure exists in Haskell with power and flexibility equivalant to RefMonad (support for references of arbitrary types not limited by their context.)
+
+If this is generally thought to be impossible in Haskell, what sort of language extensions would be needed to make this work safely, meaning without unsafe coercions?  This seems like a hairy problem.  Yet it gets to the core question of whether Haskell's monads can really implement imperative features (such as references) in a purely functional way, or are just a means of sequentializing those imperative constructs that are built into the runtime.
+
+Any solutions I can think of require a dependent-typed heap structure, and that all references be parameterized by the heap in which they exist.
+
+-Tim 

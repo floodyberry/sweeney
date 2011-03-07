@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Return of the Global Variables? | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1206" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a> &raquo; <a href="forum">forums</a> &raquo; <a href="forum/1">LtU Forum</a></div><h2>Return of the Global Variables?</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+This is bugging the heck out of me, so I wondered if anybody else complained about this before and I found <a href="http://blog.lab49.com/?p=172">somebody</a>.<p><p>
+For the last two hours, under the heading of <i>object-oriented, encapsulated code without global variables</i>, I have been reading spaghetti code. Every class method I look at involves a few private instance variables whose lifetimes are as long as the object itself. Ok, the scope is limited to the class methods only, but for a class of a certain size, how is this any different from global variables?
+<p><p>
+PS: No, they are not static member fields. In general, I have nothing against singletons.
+ </div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at 12/30/2005 - 23:42 | <a href="taxonomy/term/1">LtU Forum</a> | <a href="node/1548" title="Linear Types vs. Uniqueness Typing">previous forum topic</a> | <a href="node/1514" title="Buried Treasure - No Fluff Just Stuff">next forum topic</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1206" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 3921 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1206" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1206" />
+<a id="comment-13011"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13011" class="active">Same hack, new name</a></h3>
+ <div class="content"><p >Right, public static variables in a class have all of the same semantics as global variables.  It was an interesting tradeoff that the Java designers decided to allow static public variables in classes, but not global variables in packages - because they're essentially the same thing.</p>
+<p >It's a good practice to avoid the unnecessary use of global variables and static public class member variables, though they are often hard to avoid.  The Unreal codebase has a number of global variables, including a particularly onerous one named UglyHackFlags.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Sat, 12/31/2005 - 00:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13027"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13027" class="active">Just making them private doesn&#039;t help, though</a></h3>
+ <div class="content"><p >Because a public getter and setter for a private class variable is little better.</p></div>
+ <div class="links">By <a href="user/2010" title="View user profile.">johnwcowan</a> at Sat, 12/31/2005 - 08:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-13025"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13025" class="active">Fluid scoping instead of assignments</a></h3>
+ <div class="content"><p >Doesn't fluid (dynamic) scoping (and the related with-foo lisp idiom) help alleviate the problem by exposing a more controlled interface to global variables? For example, in the filehandle example, dynamic scoping would help us guarantee that the handle won't suddenly change to something else (especially that it won't be closed) -- except in the dynamic scope of a function that explicitly changes it.</p>
+<p >[EDIT: I guess assignment is a better word than side-effect when trying to contrast with fluid scoping]</p></div>
+ <div class="links">By <a href="user/1486" title="View user profile.">pkhuong</a> at Sat, 12/31/2005 - 05:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13112"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13112" class="active">Fluid scoping instead of assignments</a></h3>
+ <div class="content"><p>The primary evil of global variables is unexpected side-effects and dynamic scoping removes that evil. It effectively turns them into arguments that get implicitly passed to all functions. It also has one extra advantage.</p>
+
+<p>Consider a pretty-printer implemented with the visitor patter. You need to store the indentation level in the visitor object, this basically makes it an evil global variable and requires that you write lots of error-prone code to make sure side-effects are undone - even in the presence of exceptions and functions with multiple return points. You basically end up rolling your own dynamic scope. One alternative is to make your visitor infrastructure capable of passing extra paramerts but then your visitor's all messed up and more paramters are going to result in a lot of stack twiddling, especially as they would have to be passed by value.</p>
+
+<p>The same goes for anything else involving callbacks where some state has to be passed <i>through</i> the callback.</p>
+
+<p>It's a pity that more languages don't support it.</p>
+</div>
+ <div class="links">By <a href="user/2620" title="View user profile.">fergal</a> at Tue, 01/03/2006 - 20:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-18183"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-18183" class="active">How does this help ?</a></h3>
+ <div class="content"><p >I've read a little bit about dynamic scoping and I found the concept somewhat difficult/dangerous. Could you explain how it actually helps with safety ?</p></div>
+ <div class="links">By <a href="user/1802" title="View user profile.">David Teller</a> at Tue, 06/06/2006 - 16:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-18243"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-18243" class="active">Dynamic scoping is less evil</a></h3>
+ <div class="content"><p >I don't speak for fergal, but in a nutshell, dynamic scoping definitely has some evilness itself, but it is certainly less evil than state (as typically used by a "typical" programmer).  If dynamic scoping can replace a use of state, then that is almost certainly a win.  If dynamic scoping itself can also be gotten rid of, all the better.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Wed, 06/07/2006 - 21:07 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-13030"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13030" class="active">Limited collaboration</a></h3>
+ <div class="content"><p >There are of course trivial examples of long lived "objects" outside of your program you might be connected with e.g. databases. So instead of acting like Sysiphus or fighting against Hydra I would vote for better techniques of distributing responsibilities and monitoring. Your suggestion to localize effects are of course part of the answer because you delegate responsibility for creation and destruction of an object to a certain distinct code block. But an onion-like program cannot perform communication well. Another technique I like, allthough the realization might not be radical enough or could be refined, are friend classes in C++ where collaborations are determined by the owner of an attribute. So why not extend the concept of locality to a certain group of classes where each class determines the boundarys of sharing it's own attributes ( or a group of them ) with others? This would imply something like delegation-contracts. Public variables would really be public only for the purpose of visibility by 3rd-party module/package authors. </p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Sat, 12/31/2005 - 10:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-18224"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-18224" class="active">Like Eiffel&#039;s feature { X } ?</a></h3>
+ <div class="content"><p >Eiffel has something akin to a more refined friend declaration. You can specify what classes can see what features. A friend a la C++ can see all private data.</p>
+<p >Section 5. <a href="http://www.objs.com/x3h7/eiffel.htm">here</a> is a good grounding.</p>
+<p >Not a great fan of Eiffel but I always like this aspect of it. I think there's problems with derived classes changing visibility though.</p></div>
+ <div class="links">By <a href="user/2071" title="View user profile.">Daniel Slaney</a> at Wed, 06/07/2006 - 12:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-13031"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13031" class="active">Globals are not so bad</a></h3>
+ <div class="content"><p >Global variables are not so bad. For instance in most of the languages Classes are globals.</p>
+<p >However it's sometimes difficult to reuse a library that is storing some states into global variables, since often it means that you cannot use it in multithread for example.</p>
+<p >Restricting the global access to a given class (using private) is then a good thing since if you want to remove the global state you'll hopefully only have this class to modify.</p></div>
+ <div class="links">By <a href="user/1436" title="View user profile.">Nicolas Cannasse</a> at Sat, 12/31/2005 - 10:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13035"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13035" class="active">Classes vs variables</a></h3>
+ <div class="content"><p >A global <b >variable</b> (a mutable storage cell) holds state that may be read and written from anywhere and is used to pass state implicitly.  Properly sequencing accesses to a global variable is usually very important.</p>
+<p >Usually a class is a declaration (comparable to a constant) that may be read from anywhere, but is not (usually) written to and is not used for passing state implicitly.  There is (usually) no need to sequence accesses to a class.</p></div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Sat, 12/31/2005 - 13:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-13053"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13053" class="active">Too many exceptions means it&#039;s not much of a rule.</a></h3>
+ <div class="content"><p >Your comment that classes are read-only and are thus more like constants is true only in a few OO languages. It's true in Java, for instance, but not in Ruby or Python (or Smalltalk or Self, from what I understand).</p>
+<p >Also, it doesn't take into account stateful effects on classes. Many classes have static fields with getters and setters (or constant fields which point to objects with getters and setters of their own), in which case a class isn't just a single global variable. It's actually an entry point to a whole universe of global state.</p>
+<p >Finally, even in Java there's a very strong need to sequence accesses to a class in a wide variety of cases. Consider for instance the subtleties involved in class initialization. Just a couple of weeks ago I spent a lot of time tracking down a race condition involving a complex web of static initialization blocks in a Java application.</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Sun, 01/01/2006 - 01:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-13058"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13058" class="active">Class declarations</a></h3>
+ <div class="content"><blockquote>Your comment that classes are read-only and are thus more like constants is true only in a few OO languages. It's true in Java, for instance, but not in Ruby or Python (or Smalltalk or Self, from what I understand).</blockquote>
+
+<p>Well, this depends on what you mean by read-only.  What I mean is that a class declaration specifies the components (methods, variables, etc...) of a class and the set of components usually won't change after the declaration.  This is the case in basically all statically typed OO languages (ignoring AOP extensions).  As you say, changing the set of components of a class is possible in some (dynamically checked) languages, but even then it is
+recommended practise to make class declarations complete and avoid mutating classes (adding and removing methods, for instance) after the fact, because such mutations can be very confusing.  And, this is why I said "usually" more than once.</p>
+
+<p>The rest of what you say is irrelevant in this respect.  Many OO languages allow you to have (global) variables at class scope and it should not be news to anyone that it can cause problems just like global variables.</p>
+</div>
+ <div class="links">By <a href="user/2285" title="View user profile.">Vesa Karvonen</a> at Sun, 01/01/2006 - 11:15 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-13042"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13042" class="active">Statics: Friend or Foe</a></h3>
+ <div class="content"><p >The comments below are ones I previously used in a <a href="http://beust.com/weblog/archives/000174.html">related discussion</a>.</p>
+<p >"*Stateful* Singletons" are evil; they are just Object Oriented global variables. "Stateless Singletons" which are just used to avoid creating multiple instances of an Object with no instance variables, is fine.</p>
+<p > Statics values do have a purpose: they often afford short-term convenience, but at the cost of loosing re-usability and re-composability. Once you use a static you restrict yourself to only having a single instance of that item or whatever else depends on it.</p>
+<p >Fortunately in Java statics really aren't global to the JVM but only to the ClassLoader so you can work around this problem by using multiple class-loaders. It would be better however if you didn't have to. Inversion of Control or Environmental Acquisition systems are the solution (Java even has one built in the java.beancontext package but it is a bit verbose and easier solutions are available).</p>
+<p >The software industry has long hoped to establish a level of software re-use through componentization, much like the electronics and other industries. Unfortunately software components haven't succeeded as expected. The reason for this failure is the simple static or global variable. Only in software do individual components have a “magical” connection to this shared pool of global or static information or services. In all other fields, components, be it CPU or carburetor, only have access to what they’re explicitly connected to. Because of this limitation they are guaranteed to be re-usable and re-composable. I can use a given CPU in a computer or a DVD player and I can put two tail pipes on a car if I want. Software on the other hand has all sorts of artificial restrictions. Try to instantiate two instances of your favourite ORB (because you want to be configured with different hostnames of socket layers on different networks for example), or database driver or logging package. Even having one part of your application use a different System.out than the other can be a problem. Software components which rely on globals being one way or another are potentially excluding other software from running (especially another instance of themselves). Globals/Statics are holding back the entire software industry (or rather, the people who use them are); and that’s why I classify them as “evil”. </p></div>
+ <div class="links">By <a href="user/549" title="View user profile.">Kevin Greer</a> at Sat, 12/31/2005 - 16:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13046"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13046" class="active">Real world globals</a></h3>
+ <div class="content"><p >While I mostly agree with your comments, I think it's important to realize that even "real world" objects in other engineering disciplines do suffer from the equivalent of "global variables" that components are not explicitly wired to, and "magical" connections to shared "information". Two examples of this kind of thing are the radiative and convective thermal environment of a system, and the electromagnetic environment of a system. <br ><br >Now, in many cases, these things are not really an issue. But in some designs electromagnetic coupling between different components is a major concern, and design for electromagnetic compatibility becomes a major focus of design efforts.  In other cases, thermal interference between components is an issue, and it becomes necessary to add extra thermal control elements, such as insulation or thermal straps, to maintain the correct thermal environment. In both of these example situations, it isn't feasible to just plug components together and go. In fact, my own experience is that these implicit interfaces between components and subsystems are a significant contributor to the difficulties of design and integration for "real" systems (such as spacecraft).<br ><br >In other disciplines, these problems are managed through careful analysis during the design phase. In the software world we have two rational options: we can, like other disciplines, perform careful analysis (using various formalisms); or, since we are dealing with purely artificial constructs, we can eliminate the globals and make our lives much easier. Sadly, the default choice seems to be a third option: use globals, and skip the careful analysis. That, at least IMHO, is why component-based software has run into problems.</p></div>
+ <div class="links">By <a href="user/1670" title="View user profile.">Allan McInnes</a> at Sat, 12/31/2005 - 18:50 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13054"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13054" class="active">Agreed.</a></h3>
+ <div class="content"><p >Incidentally, this is <em >exactly</em> the problem that Odersky and Zenger <a href="http://lambda-the-ultimate.org/node/view/926">try to address</a>. I've said it before, and I guess I'll just keep saying it: I think this paper presents a very compelling approach that works today in Scala, and they make it very clear what language features enable this pattern. I definitely urge you to take a look.</p>
+<p >(And yeah I realize this isn't the problem the original post was trying to get at...)</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Sun, 01/01/2006 - 01:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13097"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13097" class="active">Singletons should be an advanced topic</a></h3>
+ <div class="content"><p >Aggred, Stateful Singletons are evil.   They required for some complex situations where you need to have just one (generally when you have real hardware that you need strict access control on within your program).   However I think the GoF made a big mistake when they put them in their book.   (Though in their defense, they seem aware of all the problems, they just didn't tell you strongly enough in the book that you shouldn't use them if there is any other choice)</p>
+<p >There is a time and place for global variables.   There is a time and a place for singletons.    In the real world those times and places are rare.   I've debugged many programs just by removing instance() and making the program compile.</p></div>
+ <div class="links">By <a href="user/2287" title="View user profile.">Henry Miller</a> at Tue, 01/03/2006 - 15:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-13105"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13105" class="active">The Problem With Singletons</a></h3>
+ <div class="content"><p >is that writing a class which declares, <i >a priori</i>, "there shall be only one!", is almost always a violation of separation of concerns.</p>
+<p >The <b >correct</b> (IMHO!) way to implement a singleton is to write your class (or other datatype) as normal; then use an external "SingletonHolder" or "InstanceManager" to manage the single (or <i >n</i> if you prefer) instances of the class.  </p>
+<p >The Singleton pattern, as is currently specified, requires one to modify the class in question if one wants to change the number of allowable instances in a program.  With an external instance manager; all you need to do is change the configuration of the instance manager.</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Tue, 01/03/2006 - 18:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-13107"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13107" class="active">Excessive separations</a></h3>
+ <div class="content"><p >Since a class is already an object factory that knows how to instantiate objects I do not understand why do you think it needs additional management classes to manage multiplicities? The requirement of creating exactly n instances ( with n&gt;1 ) seems there for pure theoretical reasons and I beg for non-trivial use cases. At least for me your suggestion looks like bloat and overdesign I know from Java projects where colleagues and me tried to figure out the responsibilities of all the clunky Manager-, Helper-, Holder- etc. stuff. </p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Tue, 01/03/2006 - 18:55 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-13109"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13109" class="active">Another approach...</a></h3>
+ <div class="content"><p >Instantiation strategies (singletons, object pooling, ...) also fall very neatly into the domain of metaclasses. See, for example, <a href="http://lambda-the-ultimate.org/node/view/749">this paper</a> (which, now that I remember it, definitely belongs in a top list for 2005)...</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Tue, 01/03/2006 - 20:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-13128"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13128" class="active">Thanks Matt, for linking this</a></h3>
+ <div class="content"><p >Thanks Matt, for linking this. I will take a look at the paper. As for Python metaclasses that are mentioned by segphault too, Python classes reference metaclasses that customize them explicitely i.e. they accept metaclass manipulation. This is satisfying since instantiation still remains in the responsibility of the class and interfaces need not to be changed so that the code remains DRY - something I don't see with Scott Johnstons SingletonManager instances that duplictate access points for instance access/creation. Nevertheless I'm not much worried about his decoupling solution since the feared codebloat as it is present in much Java designs is obviously not there - on the contrary. Its a fair tradeoff. I should have known LtU readers better.</p>
+<p >Kay</p></div>
+ <div class="links">By <a href="user/2128" title="View user profile.">Kay Schluehr</a> at Wed, 01/04/2006 - 10:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-13110"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13110" class="active">Let me clarify a bit</a></h3>
+ <div class="content"><p >I don't mean for every class Foo that you want to make a singleton; you need a FooManager class.</p>
+<p >Instead, have a pre-existing class, SingletonManager, which is global--and which will only bind to one instance of something else.  By using generics/templates; this can be done without any obnoxious casting (one reason in support of the Singleton pattern in Java is that the get_impl() method can return the correct type, rather than Object).  </p>
+<p >Often time, the <i >real</i> problem you want to solve is NOT preventing users from creating two instances of class Foo; it's to make sure that (within some context), there is exactly one Foo which is the "official" Foo.  In a properly designed class (i.e. one that isn't oozing with static non-final/const members), having additional instances of the class generally aren't harmful--the issue is ensuring unique or synchronized access to some external resource. </p>
+<p >When a class is used to manage/synchronize access to some external resource, in many cases the IDEAL solution is for the external resource to provide its own syncronization.  That isn't always an option, of course.</p>
+<p >More sophisticated instance managers can provide more interesting semantics.  For example--in the context of logfiles; you could have a method which returns the current Logger associated with a given system logfile (say, /var/log/myApp.log), creating a new Logger if one doesn't already exist.  If Logger is a Singleton; no other Logger instances (pointing to different logfiles) can exist; but if Logger is a non-Singleton class whose instances are managed by an instance manager; it becomes far more useful.</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Tue, 01/03/2006 - 20:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13283"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13283" class="active">Have you ever worked with electronics?</a></h3>
+ <div class="content"><p >Virtually every electrical component of your car is connected to the common ground a.k.a the battery's negative terminal. On older cars, that common ground is accessible globally via the car's frame. </p>
+<p >Or consider wireless routers. Every comptuter is my house is connected to the same global resouce, the router. There is only one true router, and all communication to the outside world goes through it.</p></div>
+ <div class="links">By <a href="user/2403" title="View user profile.">Jonathan Allen</a> at Wed, 01/11/2006 - 21:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-13285"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13285" class="active">Both of which are examples of</a></h3>
+ <div class="content"><p >Both of which are examples of particular singleton objects, not grounds (as a class) or routers (as a class). This is the core of the argument against singleton classes and for factories, wrappers, etc. which enforce singleton-ism where appropriate.</p>
+<p >Surely a "ground" class is more general, more readily reusable and has less unnecessary complexity than a "singleton ground" class (assuming the difference is the "singleton" bit rather than some hidden details in the "ground" part, which would invalidate the example anyway). Why waste time duplicating functionality (singleton-ism) where it is not needed and <b >reducing</b> reusability?</p></div>
+ <div class="links">By <a href="user/101" title="View user profile.">Thomas Sutton</a> at Thu, 01/12/2006 - 00:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-13404"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13404" class="active">As any good EE knows</a></h3>
+ <div class="content"><p >...there can be multiple grounds in a circuit, and not all are alike.  Analog ground, digital ground, safety ground, etc.  Even though the impedance of a huge hunk of metal (or a circuit board layer) is low, it is not zero; detectable difference in potential may exist at different points in a circuit region called "ground".</p>
+<p >A proper and thorough discussion of this is outside the scope of LtU (and my technical ability); but be rest assured, "ground" is frequently not a singleton.</p></div>
+ <div class="links">By <a href="user/176" title="View user profile.">Scott Johnson</a> at Fri, 01/13/2006 - 17:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-13403"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13403" class="active">Shortsighted.</a></h3>
+ <div class="content"><p >Good luck reusing your RouterSingleton in a bridge device or a computer with multiple network cards.</p></div>
+ <div class="links">By <a href="user/1358" title="View user profile.">Ewan</a> at Fri, 01/13/2006 - 16:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-13048"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13048" class="active">I think I couldn&#039;t explain myself well</a></h3>
+ <div class="content">I do agree with the points above, although my main complaint is different. Yes, static public fields are globals, and stateful singletons are evil.<p><p>
+My problem is with <b>non-static, private instance variables</b> and <b>(especially non-const) private methods</b>.<p><p>
+Imagine a class with 6 public methods, 6 private helper methods and 6 instance variables. Some of these instance variables are objects themselves, and probably quite large.<p><p>
+This looks innocent at the first glance, but what we have here is a miniature program with 12 functions and 6 global variables.<p><p>
+The situation is not exactly as bad as 12 functions and 6 global variables in the non-OO world where the functions could access any global, and here they are limited to the private instance variables.<p><p>
+However, that's of little help. If these 12 functions are in the same file, I could pretty easily figure out which globals they have access to and come up with the list of 6.<p><p>
+Then the problem becomes figuring out exactly which function touches exactly which globals, which is as hard as the OO case.<p><p>
+If you were to refactor the non-OO version, you would decouple many of the functions from the globals by passing the required state as arguments. In the end, perhaps only a few of them would still have a dependency on globals.<p><p>
+But, why shouldn't this be done for the OO case as well? At the very least, why aren't the private methods always static so that the public methods have to pass the state explicitly?<p><p>
+Every public method still has full access to (*this), and I wish I could think of a way to express that it doesn't access all of (*this), but I can't.<p><p>
+It's just so easy to tack on a new private instance variable and a few new methods when the class needs to do something more, especially as the original author who knows that the original 12 methods will have nothing to do with the new instance variable. However, as a reader of the code, you now see 13+ methods that can access 7 instance variables.<p><p>
+
+
+</div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at Sat, 12/31/2005 - 19:41 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13050"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13050" class="active">Intresting...</a></h3>
+ <div class="content"><p>I have been struggling with the same exact issues you raise.  In fact I was going to comment earlier about this, but after reading comments by others, I thought I was the one who misunderstood! :)</p>
+<p>For the past several weeks I've been thinking about how inside of a class, member variables are essentially global variables regardless of their access modifiers.  I was thinking about how, when working with a class, you have to keep all of these details in your head.  This isn't as big of a problem as the global variables of yore, but yet, OOP is like spaghetti code in its own way.  The situation is much better now, because instead of having one large platter of spaghetti you have several smaller plates of spaghetti.  Some are very small and quite manageable, others are larger and much more difficult to reason about.</p>
+<p>I concluded that a class should only contain private member variables for what it absolutely must.  Everything else should be passed from method to method, much like in procedural or functional programming.  For me these thoughts were interesting thoughts, and a good idea in general, but they were just thoughts: until last week.  You see, last week I had to add some functionality to a class that somebody else wrote.  Of course I knew that changing the behavior of the existing methods was a bad idea, so I was careful to not change anything.  So, I went ahead and wrote my code, using some of the private methods of the class in my new code.  I made a major mistake.  I didn't write a unit test.  The next day a bug showed up: I got the sequence wrong.  Unit test!  Oh, I should have written a test case!  Just to make sure.  But it was such a small change, and it was so very simple.  (I know, bad excuses!  Bad Ben, bad!  Doh!)  The problem was the methods were mucking around with the private member variables.  It got me thinking: now, unit testing should have caught the error, right?  But that doesn't mean the problem just goes away.  If unit testing fixes everthing, then we don't need to avoid gloabal variables or anything.  "Just write a unit test!"  If you have to get the sequence of method calls just right (even thought it isn't obvious that the methods need to be sequenced) isn't that telling something about the design?  But there was nothing wrong with the design as far as OOP goes.  Yet, it leaves me with a bad taste in my mouth.  I can hear everybody saying: Unit Test!  But in a way, private member variables are not very amiable to testing, are they?  Passing arguments into methods instead of using private member variables just seems like a better idea to me (if you can help it) as it just seems safer and more amiable to unit testing.</p></div>
+ <div class="links">By <a href="user/2068" title="View user profile.">Benjamin D. Cutler</a> at Sat, 12/31/2005 - 21:42 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-13051"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13051" class="active">Re: Unit tests</a></h3>
+ <div class="content"><blockquote>But in a way, private member variables are not very amiable to testing, are they?</blockquote>
+No, they are not, and that's <a href="http://www.artima.com/forums/flat.jsp?forum=226&thread=51132">another can of worms</a>.<p><p>
+The problem is caused by encapsulation, which is not unique to OO. However, non-static private methods additionally require a whole object to be constructed in order to be tested. This could be ok, but sometimes, these objects establish connections to databases, etc. so the <b>unit</b>ness of unit tests becomes <a href="http://www.artima.com/forums/flat.jsp?forum=106&thread=126923">questionable</a>. Now you have to create a mock object if you like to decouple your unit tests from the database, etc. etc.
+<P><p>
+Happy New Year everybody.
+ 
+</div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at Sat, 12/31/2005 - 22:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-18268"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-18268" class="active">Avoid nonenforced method ordering</a></h3>
+ <div class="content"><p >It looks like to me that the problem was that the code imposed a defined order to call private methods. Yes, instance variables allow this sort of bad design, but it's bad design nontheless. In my experience, when instance variables are semantically germane to the class' responsibilities they don't pose a problem.</p></div>
+ <div class="links">By <a href="user/2600" title="View user profile.">Rafael</a> at Thu, 06/08/2006 - 00:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13102"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13102" class="active">Every public method still has</a></h3>
+ <div class="content"><i>Every public method still has full access to (*this), and I wish I could think of a way to express that it doesn't access all of (*this), but I can't.</i>
+<p>
+What's wrong with the standard-OO tools, derivation, composition, maybe MI or mixins? Isn't that exactly what they do?
+<p>
+<i>... At the very least, why aren't the private methods always static so that the public methods have to pass the state explicitly?</i>
+<p>
+Funny, I always thought the other way round: why make private static methods at all? I mean, if it's a static method, it doesn't depend on the internals of the class and is predestined for reuse, so why hide it? Chances are, you'll be hiding away a useful tool method...</div>
+ <div class="links">By <a href="user/2297" title="View user profile.">Niki Estner</a> at Tue, 01/03/2006 - 17:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-13114"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13114" class="active">What&#039;s wrong with the standar</a></h3>
+ <div class="content"><blockquote>What's wrong with the standard-OO tools, derivation, composition, maybe MI or mixins? Isn't that exactly what they do?</blockquote>
+I don't think they were meant to use for this problem. A very hypothetical example: 6 instance vars, 6 public methods, each of which access a different set of two of the instance vars. The declarative baggage that proves this won't be worth it, and I'd rather read the code to find that out.
+<blockquote>
+I mean, if it's a static method, it doesn't depend on the internals of the class and is predestined for reuse, so why hide it? Chances are, you'll be hiding away a useful tool method...
+</blockquote>
+That is a deliverable problem. Since all that is promised is in the public interface, I've never promised that such a utility method would be available. Thus, people shouldn't be using it, even though it's perfectly safe and re-usable since I might change my implementation details and it could be gone the next day.<p><p>
+If there's a reasonable demand, surely we can promote that method to the public interface. My problem is not with what is public or private, though. It's about limiting the portion of the object's state that a method has access to. I can't do anything to limit the public methods, but I can limit the private methods.</div>
+ <div class="links">By <a href="user/1491" title="View user profile.">Koray Can</a> at Tue, 01/03/2006 - 21:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-13120"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13120" class="active">My problem is not with what i</a></h3>
+ <div class="content"><blockquote ><p ><i >My problem is not with what is public or private, though. It's about limiting the portion of the object's state that a method has access to. I can't do anything to limit the public methods, but I can limit the private methods.</i></p></blockquote>
+<p >It would seem that what you really want is decent fine grained control of what state variables can be accessed by any given method/function/procedure, and that certainly is available in the right languages. In Java, using <a href="http://www.cs.iastate.edu/~leavens/JML//index.shtml">JML</a> annotations and tools, you can declare, at the top of each method (public or private), which instance variables are <a href="http://www.cs.iastate.edu/~leavens/JML/jmlrefman/jmlrefman_9.html#SEC102">assignable, or accessible</a> from within the method (and even which other methods are callable from within the given method), and have checks that such restrictions are followed (as unit tests, or runtime checks, or even static checks with ESC/Java2). A language like SPARKAda provides similar  functionality (though not with quite the same OO mentality) via global in out and derives annotations to provide control over what state variables are accessed or changed, and what inputs/other state variables any changes are derived from. SPARKAda even goes so far as to refuse a function or procedure access to any state variables unless you specifically grant it in a global annotation.</p></div>
+ <div class="links">By <a href="user/2373" title="View user profile.">Leland McInnes</a> at Wed, 01/04/2006 - 04:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-18286"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-18286" class="active">Coupling and State</a></h3>
+ <div class="content"><p >Koray, you and Benjamin raise some interesting observations, and something that has always bothered me about mainstream OO languages.  It seems to me that it's far too easy to basically get yourself in a sphagetti mess of coupling and state because it's so easy to just throw another instance variable and another random method into a class.</p></div>
+ <div class="links">By <a href="user/2246" title="View user profile.">Dave Lopez</a> at Thu, 06/08/2006 - 07:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-13049"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13049" class="active">They Never Left</a></h3>
+ <div class="content"><p >Maybe I'm not understanding the other posts here. But I think some people misunderstood the original post.<br >
+Unfortunatly, I can't seem to load blog.lab49.com, so maybe I am missing something in that reference.</p>
+<p >I understood Koray Can's complaint to be about instance variables that are utilized in many methods.  This is not surprising to me and just points out that 1) no matter the language, it comes down to the programmer and good design; 2) 00 code benefits a lot from applied Functional principles.<br >
+If you have a bloated object, with many methods accessing the same member variable, you can run into the same old problems caused by global variables.  I don't think globals are inherently bad.  Proper naming (possibly with hungarian notation to indicate purpose, not data type) and proper functionalization of behavior can make good use of "global within an instance" variables.<br >
+To me, oo is about clean scoping and controlled access.  Functionalism are about more readable code and maybe fewer lines.  But just because you have the power specify scope doesn't mean you will do it well.</p></div>
+ <div class="links">By <a href="user/2178" title="View user profile.">daryabeygi</a> at Sat, 12/31/2005 - 19:52 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-13420"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-13420" class="active">I understood that as his mean</a></h3>
+ <div class="content"><p >I understood that as his meaning as well.</p>
+<p >It sounds like the classes have some very obvious "code smells" that can be used to direct refactoring to improve the design.</p>
+<p >1) Groups of methods that use only a subset of the instance variables.  It sounds like the methods and variables they use should be in a separate class.</p>
+<p >2) If the use of instance variables becomes as confusing as system-wide global variables, then the class is much, much too big.  It should be split into multiple, collaborating classes. Other smells, such as the one above, will indicate where to split the big class.</p>
+<p >So, yes, instance variables are like global variables in a way.  The way to avoid the problems inherent in global variables when doing OO programming is by divide and conquer.  Just as a global variable is not a problem in a small program, so an instance variable is not a problem in a small class.</p></div>
+ <div class="links">By <a href="user/1104" title="View user profile.">nat</a> at Sat, 01/14/2006 - 09:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-18221"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1206#comment-18221" class="active">Functional Objects</a></h3>
+ <div class="content"><p >I guess Matthias Felleisen's "Functional Objects" presentation  is relevant here:</p>
+<p ><a href="http://www.ccs.neu.edu/home/matthias/Presentations/ecoop2004.pdf">Slides of the presentation</a> [pdf]</p>
+<p ><a href="http://lambda-the-ultimate.org/node/70">LtU discussion</a></p></div>
+ <div class="links">By <a href="user/1388" title="View user profile.">Alex Drahon</a> at Wed, 06/07/2006 - 10:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

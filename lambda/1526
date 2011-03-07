@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>The Weird World of Bi-Directional Programming | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F1526" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>The Weird World of Bi-Directional Programming</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >Benjamin C. Pierce. <a href="http://www.cis.upenn.edu/~bcpierce/papers/lenses-etapsslides.pdf">The Weird World of Bi-Directional Programming</a>, March 2006. ETAPS invited talk.<p >
+This nice set of slides (related to <a href="http://www.seas.upenn.edu/~harmony/">Harmony</a>) begins with a detailed exploration of the design space for lenses (the bi-directional constructs), which is quite fun even if you aren't interested in the the rest of the presentation.<p >
+It's hard to convey to people what language design is about. I think these slides are a nice example. The process includes exploring various use cases, trying to come up with reasonable semantics, and specifying these decisions formally.<p >
+Don't worry: Types are part of the story, as well...</p> </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 05/31/2006 - 20:36 | <a href="taxonomy/term/24">DSL</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/1526" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2734 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="1526" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="1526" />
+<a id="comment-17774"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17774" class="active">Excellent presentation</a></h3>
+ <div class="content"><p >Agreed, it's such an excellent presentation that it has me interested in a subject from which I would have otherwise run away screaming.</p>
+<p >There are a great many cases where it is valuable to be able to statically express and verify algorithms that are bijective or fit elsewhere in Pierce's "Lens Bestiary".</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Wed, 05/31/2006 - 23:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-17776"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17776" class="active">Applications</a></h3>
+ <div class="content"><p >I haven't found many examples of PLs taking advantage of bijective functions. I thought it would come in handy in many situations -- for instance, projecting a data structure onto a UI view, and then updating the data structure back through the view lens (or a series of lenses).</p>
+<p >But yeah, it's a very well-done presentation.</p></div>
+ <div class="links">By <a href="user/1445" title="View user profile.">Steven Hugg</a> at Wed, 05/31/2006 - 23:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-17777"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17777" class="active">logic programming</a></h3>
+ <div class="content"><p >Bijective AKA invertible functions can be used in logic programming to get smaller search spaces.</p>
+<p >E.g. in <a href="http://kanren.sourceforge.net/">KANREN</a>:</p>
+<blockquote ><p >
+  <a href="http://cvs.sourceforge.net/viewcvs.py/kanren/kanren/examples/pure-bin-arithm.scm"><br >
+examples/pure-bin-arithm.scm</a><br >
+    Pure, declarative, and constructive binary arithmetics: Addition, multiplication, division with the remainder as sound and complete, pure, declarative relations that can be used in any mode and that recursively enumerate their domains. The relations define arithmetics over base-2 non-negative numerals of arbitrary size. If z is instantiated but x and y are not, (++o x y z) delivers all non-negative numbers that add to z and (**o x y z) computes all factorizations of z.
+</p></blockquote>
+<p >There have been some UIs based on constraint systems; I'm not sure about pure-logic-based systems.</p></div>
+ <div class="links">By <a href="user/1195" title="View user profile.">dbfaken</a> at Wed, 05/31/2006 - 23:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-17814"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17814" class="active">constraint systems</a></h3>
+ <div class="content"><p >I thought bijective functions smelled like constraint programming -- I guess because you can search for the inverse of a function via unification.</p>
+<p >What makes this interesting to me is how many things in the computing world "pretend" to be bijective, when this is not explicitly declared in the programming language -- data conversion, compression/decompression, data persistence, UI forms, etc. I wonder if we'll see programming languages that explicitly declare this relationship. But I suppose it's non-trivial to derive a LZW decompressor from a compressor? :)</p></div>
+ <div class="links">By <a href="user/1445" title="View user profile.">Steven Hugg</a> at Thu, 06/01/2006 - 14:46 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-18418"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-18418" class="active">How to derive an LZW decompressor from a compressor</a></h3>
+ <div class="content"><p >Check out <a href="http://www.cs.ru.nl/A.vanWeelden/bi-arrows/">There and Back Again, Arrows for Invertible Programming</a> where you define the operation in one direction and get the reverse almost for free.<br ><br >
+The free version of the paper is available somewhere, though I don't remember where I found it.</p></div>
+ <div class="links">By <a href="user/1177" title="View user profile.">shapr</a> at Fri, 06/09/2006 - 00:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-18425"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-18425" class="active">There and Back Again paper</a></h3>
+ <div class="content"><p >Good old <a href="http://citeseer.ist.psu.edu/745681.html">CiteSeer</a> has it.</p></div>
+ <div class="links">By <a href="user/1445" title="View user profile.">Steven Hugg</a> at Fri, 06/09/2006 - 01:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-17798"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17798" class="active">A while ago I made a</a></h3>
+ <div class="content"><p ><cite >I thought it would come in handy in many situations -- for instance, projecting a data structure onto a UI view, and then updating the data structure back through the view lens (or a series of lenses).</cite></p>
+<p >A while ago I made a combinator library / DSL embedded in Haskell for specifying forms (Settings/Options/Prefs dialogs), which handles this view updating through "reference values" similar to lenses. Instead of composing the view side (UI) and the model side (data structure) using one combinator, I tried to separate these two sides. (This worked nice for  product-like data structures and got a little murky for structures containing disjoint sums.) More info on the <a href="http://www.sandr.dds.nl/FunctionalForms">FunctionalForms website</a>, and apologies for the self-plug.</p></div>
+ <div class="links">By <a href="user/1526" title="View user profile.">sandr</a> at Thu, 06/01/2006 - 10:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-17783"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17783" class="active">link</a></h3>
+ <div class="content"><p >the <a href="http://www.seas.upenn.edu/~harmony/">Harmony</a> link in the topic appears to be missing a href.</p></div>
+ <div class="links">By <a href="user/2268" title="View user profile.">nml</a> at Thu, 06/01/2006 - 04:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-17791"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17791" class="active">Fixed. Thanks.</a></h3>
+ <div class="content"><p >Fixed. Thanks.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Thu, 06/01/2006 - 08:45 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-17786"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17786" class="active">Someone care to explain what was that all about?</a></h3>
+ <div class="content"><p >I understood very little. Someone care to explain what was that all about? or give some links to introductions etc?</p></div>
+ <div class="links">By <a href="user/1623" title="View user profile.">Achilleas Margaritis</a> at Thu, 06/01/2006 - 08:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-18208"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-18208" class="active">Maybe not the best introduction, but something:</a></h3>
+ <div class="content"><p ><a href="http://www.cis.upenn.edu/~bcpierce/papers/lenses.pdf"><em >A Language for Bi-Directional Tree Transformations</em></a>, which I ran across in 2003.  It covers similar material to the slides, but in the form of a paper; so, it's less bright and graphical, but it also doesn't gloss over the more involved parts the way a presentation has to.</p></div>
+ <div class="links">By <a href="user/1798" title="View user profile.">Jed Davis</a> at Wed, 06/07/2006 - 00:24 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-17793"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17793" class="active">An over-simplified view, from a long time LtU lurker</a></h3>
+ <div class="content"><p >Could the problem Pierce addresses, in many cases, be cleared up by applying the model-view-controller (MVC) pattern?  He seems to be coping with the difficulty of applying the degenerated MV(no C) pattern: the "view" covertly usurps "controller" responsibilities -- the model must maintain consistency by any means necessary.</p>
+<p >Imagine a car with no gas pedal or brake pedal; instead, the driver grabs the speedometer needle and torques it this way or that. It falls to subtle, powerful, and expensive engineering to keep the car's speed in perfect accord with the position of the needle. Buckle up!</p>
+<p >I modestly suggest that the client ("target") be presented with a view and a controller.  With the controller, he updates the model ("source").  In due course, the model updates his view.  Bada bang, bada bing.</p></div>
+ <div class="links">By <a href="user/3054" title="View user profile.">George Kangas</a> at Thu, 06/01/2006 - 09:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-17797"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17797" class="active">terminology</a></h3>
+ <div class="content"><p >In database-speak, "why can't we do it with triggers?" Yeah we can.</p></div>
+ <div class="links">By <a href="user/2277" title="View user profile.">Vladimir Slepnev</a> at Thu, 06/01/2006 - 09:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-17802"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17802" class="active">triggers or MVC?</a></h3>
+ <div class="content"><p >I'm not sure I understand how database triggers or MVC can solve the problem Pierce presents.</p>
+<p >Let's say we have a list (or a table) containing [social security, name, age, gpa].  If we project out social security and age, we are left with [name, gpa] (perhaps for display purpose).  Now the user wishes to change the GPA for "John."  There may be 10 different "John," we no longer have the social security number to tell us exactly which John.</p>
+<p >How can we make sure the rigt "John" gets the gpa update?  Do we keep the social security information, even though the user projected it out?  What if we only have one John (bijective), clearly in that situation the solution is trivial.</p>
+<p >We can write a trigger or provide a controller to handle this specific instance of GPA updates, but is there a general solution that requires no user intervention?  If there is not general solution, is there a subset of scenarios in which the computer can figure out the 'right thing to do' without forcing the user to do work?</p>
+<p >I have to admit that I went through Pierce's slides a while ago when they were mentioned on Wadler's blog, and I missed some of the more technical parts.  I hope to be corrected.</p></div>
+ <div class="links">By <a href="user/1800" title="View user profile.">falcon</a> at Thu, 06/01/2006 - 12:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-17811"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17811" class="active">generality</a></h3>
+ <div class="content"><p >Of course MVC (or triggers) isn't a general solution. It needs lots of special-case logic.</p>
+<p >There are general solutions for certain subsets of scenarios. Oracle's "updateable views" form one such tractable subset.</p>
+<p >The question is whether a general solution is desirable at all. The only practical way to create general reversible transforms is by composing smaller reversible transforms in guaranteed-correct ways. This severely limits the kind of transforms we can build.</p>
+<p >Let's consider another topic: real numbers, and bijective functions from R to R. Is there a "general way" to build computable bijective functions from smaller building blocks? Does it allow us to build, say, <b >f(x) = x<sup >5</sup></b>? Or are we better off working out inverse functions by hand?</p></div>
+ <div class="links">By <a href="user/2277" title="View user profile.">Vladimir Slepnev</a> at Thu, 06/01/2006 - 13:59 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-17826"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17826" class="active">My understanding</a></h3>
+ <div class="content"><p >I believe the point of the presentation was to come up with a <em >rigorous</em> way to derive the controller operations based on the model and the view. Right now you essentially have to construct a controller in an <em >ad hoc</em> fashion, based on what "seems right". The work the Pierce is doing seems to be aimed at allowing you to <em >derive</em> a controller that has particular properties with respect to the model and view. At least, that is what I got from the presentation (I may be completely off-base though - I only skimmed the slides).</p></div>
+ <div class="links">By <a href="user/1670" title="View user profile.">Allan McInnes</a> at Thu, 06/01/2006 - 16:33 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-17892"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17892" class="active">The Simple Solution</a></h3>
+ <div class="content"><p >I think you are mostly right, to me MVC and triggers look like the simple solutions of slide 12.</p></div>
+ <div class="links">By <a href="user/751" title="View user profile.">Florian Hars</a> at Fri, 06/02/2006 - 06:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-17838"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-17838" class="active">This is what happens...</a></h3>
+ <div class="content"><p >when you apply category theory to programming. :) Seriously, what are the significant differences between a lens and a functor-cofunctor pair?</p></div>
+ <div class="links">By <a href="user/1875" title="View user profile.">Nathaniel Dean</a> at Thu, 06/01/2006 - 18:36 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-18084"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/1526#comment-18084" class="active">I think you mean morphisms</a></h3>
+ <div class="content"><p >I think you mean morphisms rather than functor/cofunctor?</p></div>
+ <div class="links">By <a href="user/993" title="View user profile.">Ashley Yakeley</a> at Mon, 06/05/2006 - 06:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/hawiki/RecentChanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2006/07/15" title="Previous month">«</a> August 2006  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2006/8/1" title="3 posts">1</a></td>
+  <td class="day-link"><a href="archive/2006/8/2" title="3 posts">2</a></td>
+  <td class="day-link"><a href="archive/2006/8/3" title="5 posts">3</a></td>
+  <td class="day-link"><a href="archive/2006/8/4" title="2 posts">4</a></td>
+  <td class="day-normal">5</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/6" title="1 post">6</a></td>
+  <td class="day-link"><a href="archive/2006/8/7" title="2 posts">7</a></td>
+  <td class="day-link"><a href="archive/2006/8/8" title="4 posts">8</a></td>
+  <td class="day-link"><a href="archive/2006/8/9" title="3 posts">9</a></td>
+  <td class="day-normal">10</td>
+  <td class="day-normal">11</td>
+  <td class="day-link"><a href="archive/2006/8/12" title="1 post">12</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2006/8/13" title="3 posts">13</a></td>
+  <td class="day-link"><a href="archive/2006/8/14" title="1 post">14</a></td>
+  <td class="day-today"><a href="archive/2006/8/15" title="1 post">15</a></td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+  <td class="day-future">29</td>
+  <td class="day-future">30</td>
+  <td class="day-future">31</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/1677">help with [Barendregt &amp; Barendsen, 1994]</a></li><li><a href="node/1676" title="4 comments">DSLs and AOP</a></li><li><a href="node/1673" title="4 comments">How to make a *truly* better alternative to C++</a></li><li><a href="node/1672" title="10 comments">Programming Languages in the Markup World</a></li><li><a href="node/1671" title="7 comments">Lambda Calculus In Java</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

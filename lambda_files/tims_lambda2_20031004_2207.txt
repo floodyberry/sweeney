@@ -1,0 +1,22 @@
+http://lambda-the-ultimate.org/classic/message8936.html
+http://lambda-the-ultimate.org/classic/message8936.html#8960
+0533224
+CLR Exception Model
+Re: CLR Exception Model
+<p>Daniel,</p><p>
+
+Totally agreed.  Type unions especially are an extremely valuable language feature, and aren't too hard to implement.  It's amazing how frequently C++/Java/C# programmers create a subclass hierarchy when what they really want to define is a disjoint union, or a type union.</p><p>
+
+Regarding the distinction between imperative functions and pure functions: programming with local exceptions and local heaps can be done inside a pure function, and the typechecker can assure that no imperative effects can escape out of that pure function.  The Haskell State monad provides a good example of how this can be implemented (though there are other ways, and I use an approach that looks more like Pascal/Java/C# syntactically).</p><p>
+
+The exception handling details are straightforward (i.e. a pure function must be statically provable to catch all possible exceptions its body is capable of throwing before it exits).</p><p>
+
+The heap details are more complex, and sometimes end up limiting what the compiler can recognize as being locally imperative within a pure function.  The most general solution is region typing, but its syntactic overhead is big, so right now I feel OK about accepting the pure/imperative dichotomy and the limitations that go with it.</p><p>
+
+In general, the set of exceptions throwable by a function, and its heap accessibility (pure or imperative) are things one wants to parameterize over.</p><p>
+
+For example, you want to be able to write a 'map' function that is pure when its input function is pure, but imperative when its input function is imperative.</p><p>
+
+This has a nice solution if you embrace the most general subtyping relationship possible (f:a-&gt;b &lt;: g:c-&gt;d iff b&lt;:d and c&lt;:a and f's set of effects (heap accessibility, set of throwable exceptions) is a subset of g's set of effects.  In addition to being able to declare exceptions as "throws(int|string)", you can say "throws(int|f.exceptions)" to say that you can throw integers or any exceptions throwable by f.</p><p>
+
+Do you think that capability would solve the problems you've pointed out with the pure/impure dichotomy?  I haven't run into those myself (yet), but in my work so far I've had somewhat simplistic boundaries between functional and imperative code.</p>

@@ -1,0 +1,222 @@
+<html><head><title>LtU Classic Archives</title></head><body><h1 class='title'><a href='http://lambda-the-ultimate.org/'>Lambda the Ultimate</a></h1><table><tr><td><table><tr><td>
+<table bgcolor="navy" cellpadding="5" cellspacing="0" border="0" width="100%"><tr>
+<td>
+<img src='folderopen2.gif' height="14" width="17" border="0" alt="activeTopic"> <font color="white"><b>The view from the left</b></font><br>
+<font color="white" size="-1">started 5/31/2004; 8:09:16 AM - last post 6/17/2004; 6:52:41 PM</font>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> - The view from the left <a name="12556">&nbsp;</a><a href='#12556' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">5/31/2004; 8:09:16 AM (reads: 14259, responses: 5)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+<a name="a12556"></a><table border="0" cellspacing="10" width="400">
+	<tr>
+		<td colspan="2" align="left" valign="top" width="85%" bgcolor="#E6E6E6"><b><a href="http://www.dur.ac.uk/c.t.mcbride/view.ps">The view from the left</a></b></td>
+		</tr>
+	<tr>
+		<td align="left" valign="top">
+			<small>The view from the left (JFP Vol. 14 No. 1), by Conor McBride and James McKinna.</small><p>
+Another version of the paper ("as we originally wrote it") is <a href="http://www.dur.ac.uk/c.t.mcbride/view-Dec6.ps">here</a>.<P>
+Heard of <a href="http://www.dur.ac.uk/CARG/epigram/">Epigram</a>? Read this for the background.<p>
+The main theme is dependent types; the main programming technique, pattern matching.<p>
+The name of the paper is, of course, a pun. It seems PL guys can't resist this sort of humor...<p>
+<small>
+It seems there's an error on page 2. In the second definition of elem, the [] case should return false, not true.</small><p><br>
+			<font size="-2"><b>Posted to <a href='functional.html'>functional</a> by <a href='http://lambda-the-ultimate.org/'>Ehud Lamm</a> on 5/31/04; 8:10:21 AM</b><br>
+			</font><br>
+			<font size="-2">  </font>
+			</td>
+		<td valign="top" align="right" width="15%">
+			
+			</td>
+		</tr>
+	</table>
+<p>
+<p></p>
+<p><a href='#12556'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Jim Apple</a> - Re: The view from the left <a name="12579">&nbsp;</a><a href='#12579' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">6/2/2004; 1:46:32 PM (reads: 257, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Fishing for Frank . . .<p>
+
+Dependent types seem very useful. Why exactly did you give up thinking they are the "bees knees"?<p>
+
+If the answer is "There are better things that have yet to trickle into PLT", then, in the meantime, isn't utilizing dependent types better than not? I mean, at least until you finish Arrow? :-)
+<p></p>
+<p><a href='#12579'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: The view from the left <a name="12585">&nbsp;</a><a href='#12585' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">6/3/2004; 11:47:07 AM (reads: 220, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Jim: <em>Dependent types seem very useful. Why exactly did you give up thinking they are the "bees knees"?</em><p>
+
+Did I write that in an old topic? The one where I argued with Tim about this? I thought I had explained the reason there. It's because dependent type systems rely on a notion of equality between types, when actually what is more important is when (and how) two types are isomorphic. Isomorphic types can be regarded as abstract data structures which are behaviorally equivalent but with possibly different implementations and (depending on how you look at it, and how you define behavioral equivalence) perhaps even different interfaces. The ability to deal effectively with such types is important in practice, of course, since we want to be able to program modularly, in a way which doesn't depend on how an abstract datatype is implemented. When you use dependent types, though, you are always programming to an implementation rather than a `contract'.<p>
+
+<em>in the meantime, isn't utilizing dependent types better than not?</em><p>
+
+Yes and no. I've modified my viewpoint somewhat. I think dependent types have their place. For example, there are situations where you <em>want</em> to program to an implementation, and make your programs more monolithic; then dependent types are great. But I think those situations occur less often then situations where you want to program defensively and keep your options open about how you're going to implement something.<p>
+
+My beef with dependent types is rather along the lines of the old trope that when all you have is a hammer, everything looks like a nail. In CS, whenever someone sees a problem which can't be solved with a conventional type system, they reach for dependent types. Using dependent types, you can often solve the problem at one level, but few people seem to realize what the cost is in terms of modularity, and that there are (or, ought to be) other ways of solving the problem, which don't depend on type equality and don't incur that cost.<p>
+
+So my view is basically: having dependent types is better than not having them, but I don't think they solve the problems everyone seems to think they solve; we need something additional. And that is what I want to address in Arrow. Eventually, I hope to add some form of dependent types to Arrow, but I don't expect people to program with them directly; rather they'll play the role of normal forms for types.
+<p></p>
+<p><a href='#12585'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: The view from the left <a name="12667">&nbsp;</a><a href='#12667' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">6/12/2004; 1:58:07 PM (reads: 62, responses: 1)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Frank, is there a known way of expressing non-trivial type isomorphisms in programming languages, where the compiler can either auto-derive the isomorphism itself, or let the user express it in such a way that the compiler can verify its validity?  This seems like a necessity for what you're looking to do with Arrow.<p>
+
+Do you have any concrete examples of writing programs "up to isomorphism"?  For example, a monad's unit is only determinable from the monad's functor up to unique isomorphism.  For example, with the Haskell list monad, three potential units are (x::t)->[] and (x::t)->(x::[]) and (x::t)->(x::x::[]).  Can you program with lists in a way that is generic with respect to list unit?  Does the trivial case of [] tell us anything new about list programming?  Does the fact that "double-consed" lists can't be exactly typed in most languages prevent this approach from working?<p>
+
+Some concrete examples would be very valuable.
+<p></p>
+<p><a href='#12667'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Frank Atanassow</a> - Re: The view from the left <a name="12677">&nbsp;</a><a href='#12677' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">6/14/2004; 10:08:23 AM (reads: 53, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Tim: <em>Frank, is there a known way of expressing non-trivial type isomorphisms in programming languages, where the compiler can either auto-derive the isomorphism itself, or let the user express it in such a way that the compiler can verify its validity? This seems like a necessity for what you're looking to do with Arrow.</em><p>
+
+I'm not sure what you mean by `non-trivial'. If I were to guess, I'd imagine you regard isos like the product associativity and commutativity isos, and the currying iso as trivial, while something like the iso between cartesian and polar coordinate representations is non-trivial. If that is the case, then I have to disappoint you since Arrow only treats the trivial ones, the ones which arise from the type structure itself.<p>
+
+To say it a bit more precisely, Arrow only treats isos which can be expressed as an `equation' on type schemes. The cartesian-polar one is not of this form, since it depends on arithmetic properties of the values involved.<p>
+
+<em>Do you have any concrete examples of writing programs "up to isomorphism"?</em><p>
+
+I don't have any source code, but I have several applications in mind. One is to do with type-safe embeddings of formal languages. In my previous two papers I talked about a type-safe XML embedding and the latest one motivates using type isos to simplify this. The problem is essentially that when you translate a grammar to a type, you must make a choice about how to parse strings accepted by the grammar, since the values of the type represent parse trees not just strings. However different choices of how to parse the strings lead to isomorphic types. For example, if I have a grammar:<p>
+
+<pre>P ::= A B C</pre><p>
+
+I can translate <code>P</code> in a number of ways:<p>
+
+<pre>(A,B,C)
+((A,B),C)
+(A,(B,C))
+data P = P (A,B,C)
+data P = P A B C
+</pre><p>
+
+etc. These are all isomorphic. In Arrow you can write one piece of code which can process any/all of them. You can think of that feature as symmetric subtyping. Arrow also supports the more conventional, asymmetric form of subtyping. So, if you want, you can also write code which processes all of the above plus, for example:<p>
+
+<pre>data P = P A B C Line Column</pre><p>
+
+There are many other examples which have nothing (on the surface) to do with formal languages and parsing, for example so-called extensible datatypes, differentiation and (I think) something like first-class polymorphism. More generally, treating types up to isomorphism lets you separate the representation of a datatype from its `interface' or `shape', so it's good for software engineering in general. And (I have yet to prove this but) you get all this with decidable type inference; no type annotations needed, ever, unless you explicitly use a facility that requires non-trivial type equality like dependent types.<p>
+
+Right now things are going extremely well, so if you give me another month I think I will have actual source code (in the core language) to show you, as I hope to get a paper done in time for POPL. (Wishful thinking, but...)<p>
+
+<em>For example, a monad's unit is only determinable from the monad's functor up to unique isomorphism. For example, with the Haskell list monad, three potential units are (x::t)->[] and (x::t)->(x::[]) and (x::t)->(x::x::[]).</em><p>
+
+I guess I don't understand you. None of these is the unit for what I understand as the list monad. The list monad's unit is a polymorphic function of type forall a. a -> [a], and it's defined as x -> x:[] (in Haskell syntax). Other functions typeable at instances of this type, like forall a. [a] -> [[a]], are not the unit for the list monad, but rather a different monad, if any.<p>
+
+In any case, I don't quite know how inductive datatypes will work yet, but I don't think Arrow will try to guess at how to turn a particular functor into a monads.<p>
+
+<em>Can you program with lists in a way that is generic with respect to list unit? Does the trivial case of [] tell us anything new about list programming? Does the fact that "double-consed" lists can't be exactly typed in most languages prevent this approach from working?</em><p>
+
+Again, I don't understand what you mean... and what is a `double-consed' list?<p>
+
+What I can tell you is that you will be able to write code which works for both cons and snoc lists, for example.<p>
+
+Actually I think there will be a sequence datatype, corresponding to the Kleene star. This will have the structure of a monad, and it will be built-in, and probably all inductive datatypes will factor through it.
+<p></p>
+<p><a href='#12677'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid navy; border-top: none;">
+<tr bgcolor="skyblue">
+<td>
+<table width="100%" cellpadding="3" cellspacing="0"><tr>
+<td>
+<a href='http://lambda-the-ultimate.org/'>Tim Sweeney</a> - Re: The view from the left <a name="12709">&nbsp;</a><a href='#12709' ><img src='leftArrow.gif' height="9" width="11" border="0" alt="blueArrow"></a><br>
+<font size="-1">6/17/2004; 6:52:41 PM (reads: 20, responses: 0)</font>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr><td>
+<table width="100%" cellpadding="3" cellspacing="0" style="border-top: 1px solid navy;"><tr><td>
+Frank,<p>
+
+Thanks for the info!  And pardon my butchering of Haskell syntax in those examples.  What I really meant is that from the array functor (in Haskell and elsewhere), one can derive several different monads, each with a different unit:<p>
+
+<pre>unit :: t-&gt;[t]
+unit1 x = [x] -- The ordinary unit
+unit2 x = [] -- A trivial unit
+unit3 x = x:(x:[]) -- The "double consed" unit</pre><p>
+
+And these different monads, except the trivial one, are isomorphic.  So in order to deal with types "up to isomorphism", it seems like one has to be able to deal with functors "up to natural isomorphism", and so on.  Sounds tricky, but valuable.
+<p></p>
+<p><a href='#12709'><img src='skull.gif' height="18" width="22" border="0"></a></p>
+</td></tr></table>
+</td></tr>
+</table><p>
+
+</td></tr>
+</table><p>
+
+
+<p>
+</td>
+</tr>
+</table></body></html>

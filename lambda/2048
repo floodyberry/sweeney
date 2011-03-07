@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Patrick Logan on Software Transaction Memory | Lambda the Ultimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://lambda-the-ultimate.org/" />
+<style type="text/css" media="all">@import "misc/drupal.css";</style> <link rel="SHORTCUT ICON" href="favicon.ico"> <link rel="stylesheet" type="text/css" href="themes/chameleon/common.css" />
+<style type="text/css" media="all">@import "themes/chameleon/ltu/style.css";</style></head><body>
+ <div id="header">  <h1 class="site-name title"><a href="">Lambda the Ultimate</a></h1>  <img src="themes/chameleon/ltu/tagline.png" alt="The Programming Languages Weblog" /><div id="search-form" style="text-align:right;"><form action="search" method="post">  <input class="form-text" type="text" size="15" value="" name="edit[keys]" id="edit-keys" />&nbsp;  <input class="form-submit" type="submit" value="Search" />&nbsp;</form></div>
+</div>
+ <table id="content">
+  <tr>
+   <td id="sidebar-left"><div class="block block-block" id="block-block-1">
+ <h2 class="title"></h2>
+ <div class="content"><b>
+<div style="text-align:right">
+<p>
+<a href="/rss.xml"><img src="/misc/xml.gif" border=0 /></a><p>
+<a href="/">Home</a><p>
+<a href="/node/view/34">Feedback</a><p>
+<a href="/node/view/40">FAQ</a><p>
+<a href="node/view/492">Getting Started</a><p>
+<a href="/forum/1">Discussions</a><p>
+<a href="/forum/2">Site operation discussions</a><p>
+<a href="/tracker">Recent Posts</a><p>
+<a href="/node/add/forum/1">(new topic)</a><p>
+<a href="/node/view/49">Departments</a><p>
+<a href="/node/view/2">Courses</a><p>
+<a href="/node/view/4">Research Papers</a><p>
+<a href="/node/view/3">Design Docs</a><p>
+<a href="/node/view/5">Quotations</a><p>
+<a href="/node/view/7">Genealogical Diagrams</a><p>
+<a href="/classic/lambda-archive1.html">Archives</a>
+</div>
+</b>
+<hr style="border-width:0 0 1px 0" />
+</div>
+</div>
+<div class="block block-user" id="block-user-0">
+ <h2 class="title">User login</h2>
+ <div class="content"><form action="user/login?destination=node%2F2048" method="post">
+<div class="user-login-block">
+<div class="form-item">
+ <label for="edit-name">Username:</label><br />
+ <input type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password:</label><br />
+ <input type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="" />
+</div>
+<input type="submit" class="form-submit" name="op" value="Log in"  />
+</div>
+
+</form>
+<div class="item-list"><ul><li><a href="user/register" title="Create a new user account.">Create new account</a></li><li><a href="user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div></div>
+</div>
+<div class="block block-user" id="block-user-1">
+ <h2 class="title">Navigation</h2>
+ <div class="content"><div class="menu">
+<ul>
+<li class="leaf"><a href="tracker">recent posts</a></li>
+
+</ul>
+</div></div>
+</div>
+</td>
+   <td id="main">
+<div class="breadcrumb"><a href="">Home</a></div><h2>Patrick Logan on Software Transaction Memory</h2>
+<!-- begin content -->
+<div class="node">
+ <div class="content">
+<p >A detailed <a href="http://patricklogan.blogspot.com/2007/02/misguided-road-not-to-be-travelled.html">blog post</a> on STM - and why it is a Bad Thing.</p> </div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at 2007-02-08 16:08 | <a href="taxonomy/term/16">Parallel/Distributed</a> | <a href="http://www.technorati.com/search/lambda-the-ultimate.org/node/2048" title="Technorati search of other blogs commenting on this post.">other blogs</a> | 2406 reads</div>
+</div>
+<a id="comment"></a>
+<form method="post" action="comment"><div>
+<h2 class="title">Comment viewing options</h2><div><div class="form-item">
+ <select name="mode"> <option value="1">Flat list - collapsed</option>
+ <option value="2">Flat list - expanded</option>
+ <option value="3">Threaded list - collapsed</option>
+ <option value="4" selected="selected">Threaded list - expanded</option>
+</select>
+<select name="order"> <option value="1">Date - newest first</option>
+ <option value="2" selected="selected">Date - oldest first</option>
+</select>
+<select name="comments_per_page"> <option value="10">10 comments per page</option> <option value="30">30 comments per page</option> <option value="50">50 comments per page</option> <option value="70">70 comments per page</option> <option value="90">90 comments per page</option> <option value="150">150 comments per page</option> <option value="200" selected="selected">200 comments per page</option></select>
+<input type="hidden" name="threshold" value="0" />
+ <input type="submit" class="form-submit" name="op" value="Save settings"  />
+
+ <div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div>
+</div>
+</div><input type="hidden" name="edit[nid]" value="2048" />
+</div></form><form method="post" action="comment"><div>
+<input type="hidden" name="edit[nid]" value="2048" />
+<a id="comment-25062"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25062" class="active">contains no actual arguments</a></h3>
+ <div class="content"><p >I didn't see any serious arguments in that post. It was just the repeated assertion, in inflammatory language, that STM is bad. It implies the false dichotomy that things have to be shared-everything or shared-nothing. It implies that the reason some people like it is because it's "shiney" without mentioning the reduced complexity of the programming model, or the fact that transactions have been used quite successfully in DBMSs for decades. All in all not something I would expect to see on the LtU homepage.</p></div>
+ <div class="links">By <a href="user/2398" title="View user profile.">marshall</a> at Thu, 2007-02-08 16:39 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25069"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25069" class="active">Ditto</a></h3>
+ <div class="content"><p >I was extremely disappointed. Patrick, who I know to be a serious thinker about programming language issues, blithely suggests that everyone should simply rewrite their systems in Erlang or some other shared-nothing message-passing language, nevermind the prohibitive costs of doing so for any real-world production system. He also handwaves the issue of transaction composability away as "academic," which is particularly odd considering the real world effort to <a href="http://www.springframework.org/docs/reference/transaction.html#transaction-strategies">make transactions composable</a>. Complaining that STM takes you "too far away from the domain" while recommending a shared-nothing message-passing rewrite is also pretty rich, IMHO.</p>
+<p >I also suspect that Patrick hasn't read <a href="http://lambda-the-ultimate.org/node/1277">The Next Mainstream Programming Languages</a>, where I think Tim makes a very persuasive case that:</p>
+<ul >
+<li >Large-scale stateful software isn't going to go away, particularly when it already exists and is shipping.
+<li >Preemptive threads and monitors don't scale.
+<li >Imperative programming is the wrong default.
+<li >There are multiple viable approaches to effects in otherwise pure languages (monads, effect types...)
+<li >Slide 50: "Claim: Transactions are the only plausible solution to concurrent mutable state," where the alternatives considered on slide 49 are "referentially-transparent functions, message-passing concurrency, or continue using the sequential, single-threaded approach."
+</ul>
+<p >Now, it's possible that Tim's analysis doesn't apply to many domains other than games. But I don't see that argument being made effectively.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Thu, 2007-02-08 17:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25103"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25103" class="active">STM makes me nervous</a></h3>
+ <div class="content"><p >I happen to agree completely with Patrick's observations. I have some reasonable experience in writing transactional systems (the JTA implementation for Weblogic, among others) and I'll attempt to state my concerns without actually having worked with an STM implementation. I'm sure someone will correct me if my concerns are misplaced or if I'm wrong.</p>
+<p >STM is an optimistic transaction model suited for low levels of interference between threads of control. You can easily add a whole lot of overhead by introducing an innocuous looking method (that happens to touch a lot of state or merely increases the contention window) inside the atomic block. Unlike db transactions, STM has no timeout and may suffer mysterious slowdowns until the transaction goes through after many retries. At worst, it could livelock, if the window of contention and and the retry frequency are big enough. STM works for Haskell because mutation is very limited in the language; I very much doubt STM will be a good solution in the hands of a C#/Java programmer.</p>
+<p >Second, there are many areas that don't come under the purview of STM (file activity, screen updates, real db transactions with different tx semantics). They don't work under an arbitrary retry model, unlike in a locking case where you know you own the critical section.</p>
+<p >There seem to be a number of inconsistencies in Tim Sweeney's preferences. "large scale stateful software isn't going away" and "imperative programming is the wrong default" are contradictory, or at least sounds like an impasse. Performance is crucial to him, yet he's willing to live with a 4X slowdown for STM. </p>
+<p >In any case, I think threads with shared-memory semantics are a huge disaster, and Erlang isn't the only *kind* of solution around (functional, shared-nothing).</p>
+<p >It is possible to create (and I'm working on it) a message passing system that supports a gazillion tasks, non-interference between tasks, asynchronous message passing, uses collocation effectively if it is there, has user-level scheduling (what does the kernel know about your application's scheduling preferences anyway?).</p>
+<p >It can be fast (blindingly fast if you talk to the Occam folks), composable (CSP, Occam), able to naturally take advantage of multiple cores and processors, and eliminate the unnecessary distinction (at compile time) between collocated and distributed systems. Finally, it can be intuitive to a normal programmer (someone who is still confused by monads, or lack of mutability) by retrofitting all the other concepts onto a traditional language and preserving referential integrity under aliasing.</p>
+<p >I think the Actor/CSP model is a far better way of dealing with concurrency, but the implementations available so far (other than Erlang) haven't been able to demonstrate the full potential of the model.</p></div>
+ <div class="links">By <a href="user/145" title="View user profile.">Sriram Srinivasan</a> at Fri, 2007-02-09 01:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-25105"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25105" class="active">STM nervousness</a></h3>
+ <div class="content"><p >STM makes me nervous too, but raw shared-state concurrency is terrifying, so that's an improvement!  Here are some thoughts:</p>
+<blockquote ><p >"large scale stateful software isn't going away" and "imperative programming is the wrong default" are contradictory</p></blockquote>
+<p >My current analysis of the sort of code that's required in a game is that purely functional programming (plus Haskell-style ST non-imperative local state) is sufficiently expressive for around 70% of the code we write, which accounts for 95% of our performance profile.  Thus I see functional programming as the right default.</p>
+<p >The other 30% of our code (which accounts for 5% of performance) is necessarily so stateful that purely functional programming and message-passing concurrency are implausible.  Thus I see imperative programming, in some form or another, as remaining an essential tool for some systems present in modern software.</p>
+<blockquote ><p >Performance is crucial to him, yet he's willing to live with a 4X slowdown for STM</p></blockquote>
+<p >Without STM, the only tractable way to manage this code is to single-thread it.  I'm not nearly smart enough to write race-free, deadlock-free code that scales to 10,000 freely-interacting objects from 1000 C++ classes maintained by tens of programmers in different locations.</p>
+<p >With STM, I can continue writing software at full productivity, and it makes 5% of my performance profile become 4X slower.  I break even at 4 threads, and come out ahead after that.  So, eventually, STM wins over single-threading.</p>
+<p >How do the message-passing guys implement robust interactions between independent objects with mutable state, like the classic "bank transfer" example that justifies transactions in databases?  You end up writing an endless set of ad hoc transaction-like message exchanges for each interaction that may occur in the system.  Thus my argument that STM is the only productivity-preserving concurrency solution for the kind of problems we encounter in complex object-oriented systems that truly necessitate state, such as games.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 2007-02-09 01:48 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-25121"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25121" class="active">message passing and transactions</a></h3>
+ <div class="content"><blockquote ><p >
+The other 30% of our code (which accounts for 5% of performance) is necessarily so stateful that purely functional programming and message-passing concurrency are implausible
+</p></blockquote>
+<p >Can you help me understand why message passing concurrency is implausible for your domain? Isn't the Opengl API itself a wrapper over a message passing architecture?</p>
+<p >In the server/middleware space that I'm more conversant with, there are a large number of examples where mutability, concurrency and message passing are standard patterns. The Tuxedo transaction monitor has just a few primitives (tp_send, tp_enqueue etc.) and uses OS processes for isolation. It works for Visa and Amazon. </p>
+<p >The Singularity OS is built on a foundation of message passing and isolated processes, where each process is written in a mutable style; there is no shortage of concurrency or mutability. (Incidentally, Tim Harris who co-wrote the STM-Haskell paper works on Singularity as well)</p>
+<blockquote ><p >
+How do the message-passing guys implement robust interactions between independent objects with mutable state, like the classic "bank transfer" example that justifies transactions in database
+</p></blockquote>
+<p >The term "message passing" includes occam-style messaging to MQSeries-style queued messaging, and robustness is a factor in both spaces and dealt with differently. </p>
+<p >The bank transfer kind of example is easily handled by enqueuing a "transfer" message to a known teller object (this is service oriented architecture). An online store handles an order by enqueuing a message to the store to reduce the inventory. In such cases, each message send itself is an ACID transaction and an auditable action, so the act of transferring money may involve several DB transactions. I would hazard that more than 95% of transactions in the enterprise world are not between databases, but between a db and a messaging system.</p>
+<p >Another example of a high performance message passing architecture is <a href="http://www.eecs.harvard.edu/~mdw/proj/seda/">SEDA</a>, with explicit support for scheduling between stages.</p>
+<p >Coming back to LtU, the languages for writing such systems are woefully backward. I am working on a pet project to attempt to fix it in a familiar imperative setting, which I hope to demo in a couple of months. I have learnt much from the Erlang effort. I like Erlang not so much for its language but because of its systemic features (the supervisor hierarchy, failure mechanisms, lightweight isolated processes, etc.)</p></div>
+ <div class="links">By <a href="user/145" title="View user profile.">Sriram Srinivasan</a> at Fri, 2007-02-09 10:58 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-25137"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25137" class="active">Hear, Hear</a></h3>
+ <div class="content"><blockquote ><em >
+Coming back to LtU, the languages for writing such systems are woefully backward. I am working on a pet project to attempt to fix it in a familiar imperative setting, which I hope to demo in a couple of months. I have learnt much from the Erlang effort. I like Erlang not so much for its language but because of its systemic features (the supervisor hierarchy, failure mechanisms, lightweight isolated processes, etc.)
+</em></blockquote>
+I could not agree more. Looking forward to that.</div>
+ <div class="links">By <a href="user/332" title="View user profile.">Patrick Logan</a> at Fri, 2007-02-09 15:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-25151"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25151" class="active">Can you help me understand</a></h3>
+ <div class="content"><blockquote ><p >Can you help me understand why message passing concurrency is implausible for your domain? Isn't the Opengl API itself a wrapper over a message passing architecture?</p></blockquote>
+<p >Consider a game like Grand Theft Auto, where 10,000 or more objects move around and interact independently.  Here, the objects are things like people, cars, weapons, props, etc.  Each object has attributes that change over time, such as position, damage, relationships with other objects (who's carrying what), etc.  At any point, any set of objects can potentially interact with each other in a stateful way, for example I can get in a car, drive it around, and run into a mailbox, damaging it.</p>
+<p >Many of these interactions require atomic updates of groups of objects.  For example, to fire a weapon, I need to first determine whether I'm carrying the weapon, whether the weapon has any ammunition, and then I need to create a bullet object.  If a weapon has one bullet and two people tried to fire it simultaneously, non-atomic updates might lead both players to conclude that they can fire the weapon, so two bullets are created, and the gun is left with -1 bullets, an inconsistent state.</p>
+<p >Basically, all of the atomicity arguments that have been applied to databases (e.g. the bank-transfer example) directly map onto the game example.</p>
+<p >Therefore, you need some way to guarantee atomicity.  Candidates:</p>
+<ul >
+<li >We do this today (on 3-core CPUs) by simply single-threading this kind of code.
+<li >You could implement this using message passing, but you'd be writing and debugging your own ad-hoc transactional protocol for each of the tens of thousands of updates and state transitions present in the program.
+<li >If our game were sufficiently simple, we could multi-thread it by carefully locking and synchronizing the objects at the appropriate point, but as software complexity scales up, the analysis of whether the program might eventually deadlock is intractable.
+</ul>
+<p >So, in this case, transactional memory is the most natural productive solution to this problem.  Keep in mind, we live in a comparatively simple world, since we always targeting a single multi-core CPU with shared coherent memory, and aren't concerned with databases, distributed computing, or fault-tolerance.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 2007-02-09 18:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-25153"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25153" class="active">ad-hoc protocols</a></h3>
+ <div class="content"><p ><i >"but you'd be writing and debugging your own ad-hoc transactional protocol for each of the tens of thousands of updates and state transitions present in the program"</i></p>
+<p >This seems to be simply a language user interface problem. If passing a message looks just like a function call, then designing an ad-hoc message passing protocol is no different than designing a function or object interface for these things (which you are already doing).<br >
+"Sending a message" (as it is called) to an object already looks like a function call in OOPLs. There's no reason sending a message to a channel/process/actor can't also look like a function call.</p></div>
+ <div class="links">By <a href="user/1560" title="View user profile.">James McCartney</a> at Fri, 2007-02-09 19:17 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:175px;">
+<a id="comment-25156"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25156" class="active">Bloat</a></h3>
+ <div class="content"><p >The problem with implementing ad-hoc transactions using message-passing is that it bloats the code tremendously.  In the single-threaded world or the STM world, you say "if(Ammo&gt;0) {Ammo--; FireBullet();}".  That would bloat up into tens of lines of asynchronous code to ask the recipient if he has ammunition, to reserve that ammunition, to finalize the interaction by effecting the ammo reduction, handle failure asynchronously, etc.  Such code needs far more thought and testing than the STM version.</p>
+<p >A solution that imposes an order-of-magnitude code bloat, productivity decrease, etc, is unattractive.</p></div>
+ <div class="links">By <a href="user/97" title="View user profile.">Tim Sweeney</a> at Fri, 2007-02-09 20:21 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:150px;">
+<a id="comment-25157"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25157" class="active">You could implement this</a></h3>
+ <div class="content"><p ><i >You could implement this using message passing, but you'd be writing and debugging your own ad-hoc transactional protocol for each of the tens of thousands of updates and state transitions present in the program.</i></p>
+<p >You said that critical point so clearly and distinctly! I'm very impressed.</p>
+<p >The necessity for atomic updates is an application-specific thing. Given variables a and b, whether two otherwise sequential updates to them must be transactional depends on the semantics of the update within the application. It cannot be inferred, because the information only exists in the programmer's head. For the software to treat the updates atomically, it must be explicitly informed of the need.</p>
+<p >Thus the smallest possible amount of information the programmer must give the application is that the updates have to happen together. In other words:<br >
+<code ><br >
+atomic {<br >
+  update a;<br >
+  update b;<br >
+}<br >
+</code></p>
+<p >represents a <b >floor</b> on the amount of annotation. There can be no solution to atomicity that is any more concise than this. (The specific syntax is of course irrelevant; <code >begin; ... commit;</code> is equivalent.)</p>
+<p >So that code has to exist somewhere. It will either 1) exist in client code, or it will 2) exist in the message-handler implementation of the "ad-hoc transactional protocol" mentioned above. Note that 1 is a proper subset of 2, and that the additional overhead of 2 is substantial, and must be paid again with each additional atomic update requirement.</p>
+<p >Having used a variety of distributed computing techniques, including DCE, RMI, pub/sub, and raw TCP, I am convinced of the superiority of message passing, particularly pub/sub message passing. It is a great solution to the problems of shared-everything, as well as a great abstraction in its own right. However it is not a solution to atomic updates. The solution to the problem of atomic updates is transactions.</p></div>
+ <div class="links">By <a href="user/2398" title="View user profile.">marshall</a> at Fri, 2007-02-09 20:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-25106"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25106" class="active">Lock-freedom</a></h3>
+ <div class="content"><p >STM is based on Fraser's <a href="http://www.cl.cam.ac.uk/~kaf24/lockfree.html">work</a> on lock-free algorithms.  Has the Haskell STM lost those properties?  If not, then lock-free algorithms cannot suffer from (global) dead-lock or live-lock.</p></div>
+ <div class="links">By <a href="user/1510" title="View user profile.">Derek Elkins</a> at Fri, 2007-02-09 01:49 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-25116"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25116" class="active">Not all STM is lock-free</a></h3>
+ <div class="content"><p >Well, not all STM is lock-free - many different transaction mechanisms have been proposed.</p>
+<p >But "lock-free" is one of those nice problem hiding euphemisms.</p>
+<p >Deadlocks are replaced by cyclic conflicts in "lock-free" transactional mechanisms. The deadlock resolution that many "locking" systems have, including locking transactional systems like Oracle, is replaced by conflict resolution.</p>
+<p >I say "replaced" in a very liberal way, they're conceptually very similar and can produce very similar problems in naive implementations :-)</p></div>
+ <div class="links">By <a href="user/3792" title="View user profile.">Conor Stokes</a> at Fri, 2007-02-09 05:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-25108"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25108" class="active">Re: working on it</a></h3>
+ <div class="content"><p >Do tell?</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Fri, 2007-02-09 02:11 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25118"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25118" class="active">I&#039;ve read Tim&#039;s case...</a></h3>
+ <div class="content"><p >... and I have issues with some of those points based on personal experience. So, answering those points in order...</p>
+<p >* Large stateful software is indeed here to stay... although, I tend to think single-owner state is still a good idea (even if it can be passed between owners). </p>
+<p >Microsoft's Singularity project allows single owner state to be passed around and even passed across channels (a messaging mechanism).</p>
+<p >* Preemptive threads and monitors don't scale... and neither do transactions. Anyone who's worked on a high performance online transaction server will tell you that while the transactions are there for their contractual consistency (a legal requirement in much financial software), not because they scale well. </p>
+<p >Quite often you end up funneling data back to a single points because it's the only way to get the transactions occurring reliably at a decent speed. I'm talking about a custom in-memory database (check pointed) not an IO limited disk monster.</p>
+<p >Tim's case of 10000 entities with few overlapping updates feels a bit contrived when you're talking about "mainstream" programming languages, or even games. For example, how to correlate large amounts of information about 10000 entities into a single place concurrently? What if the information needs to be worked on as it's being provided? Transactions scale poorly in such cases. </p>
+<p >* Imperative programming being the wrong default... I tend to agree with it, but I don't think it should be dogmatic :-)</p>
+<p >* No argument there.</p>
+<p >* Well, I have supporting evidence otherwise. I've implemented highly parallel systems (scaling to 32 processors rather easily) that contain thousands of entities with mutable state all being correlated against real time events and providing real time information updates. </p>
+<p >How did I do it? Well, most of it was done with lock-less message passing and by using user mode context switches in certain cases (implemented transparently). Transactions never would've met some of requirements of some of the response times required.</p>
+<p >These systems weren't trivial either, they were large scale device management systems that often had to handle the interactions of multiple devices at once. </p>
+<p >The best solution to use is purely dependent on your design and architecture. If you come up with your design and architecture with message passing in mind, it's just as viable. I believe this applies to games as well in my experience with them.</p>
+<p >The solution to use should probably be decided on a case by case basis. Each has it's merits and flaws.</p></div>
+ <div class="links">By <a href="user/3792" title="View user profile.">Conor Stokes</a> at Fri, 2007-02-09 06:40 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25072"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25072" class="active">Agreed</a></h3>
+ <div class="content"><p >Also, why is the under-the-covers complexity of STM bad, when the under-the-covers complexity of garbage collection is good?</p></div>
+ <div class="links">By <a href="user/2015" title="View user profile.">fanf</a> at Thu, 2007-02-08 18:09 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25129"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25129" class="active">Because garbage collection</a></h3>
+ <div class="content"><p >Because garbage collection is usually a bad idea. Seriously it is. No Seriously. In the vast majority of cases the ownership of memory is clearly defined and best dealt with by the compiler or programmer. In the few cases where garbage collection is useful a hell of a lot of implementations fail to actually collect it.</p>
+<p >Basically, using garbage collection should be the programmers choice (it's supposed to be their job after all). The same seems true of STM. Widespread application of a technique to all areas as if it were a silver bullet is always foolish.</p></div>
+ <div class="links">By <a href="user/3408" title="View user profile.">Zombywuf</a> at Fri, 2007-02-09 14:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25073"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25073" class="active">Maybe the seeds of some arguments?</a></h3>
+ <div class="content"><p >The post seemed to claim that there are some issues with transactions (not detailed, maybe starvation or contention?) which will at the very least damage composability, and that STM doesn't address distributed systems at all.</p>
+<p >I didn't see anything to back up these claims - as far as I can tell you could rewrite everything in terms of garbage collection: "dynamic memory is a bad idea, garbage collection moves memory management into the system but doesn't explain how it will solve any of the problems and I think it won't, garbage collection won't work in distributed systems"</p>
+<p >Perhaps these arguments have more force against STM, and LtU seems like a fine place to ask for them to be worked out (homepage vs. forum is debatable, but not worth debating). Summing it up, I'd say Patrick Logan raised some reasonable questions, but didn't provide answers.</p>
+<p >So, can anyone point to theoretical limits, classes of programs current STM implementations handle poorly, composable reasoning strategies for correctness and progress of programs under other concurrency strategies, etc.</p></div>
+ <div class="links">By <a href="user/2755" title="View user profile.">Brandon Moore</a> at Thu, 2007-02-08 18:18 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25078"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25078" class="active">Point, where art thou?</a></h3>
+ <div class="content"><blockquote ><p >I'd say Patrick Logan raised some reasonable questions, but didn't provide answers.</p></blockquote>
+<p >It's more like hinted that reasonable questions exist but failed to show them. Right now the post is so heavily edited that it looks worse than a wiki page on thread mode during a flame war.<br >
+I read the post twice in this current incarnation (i.e. with the comments mixed in the original text in unpredictable ways) and I'm unable to find anything other than "STM is bad, mmmkay?". There are valid questions to be raised wrt STM, for example they fail to provide process isolation (e.g. I would like to ensure that only a group of process access a bunch of STM vars, so if starvation occurs only this subsystem needs to be crashed and restarted).<br >
+Just saying that STM is wrong and everything should be done in with message passing is bizarre. There are other concurrent models (e.g. Oz's dataflow variables) so where is the argument showing that message passing is better for most domains? This feels like Smalltalk advocates or pure FP aficionados that believe in one hammer to rule them all.<br >
+I'm sorry Patrick but sometimes message passing is the wrong tool (while I believe that it's the most useful default model).</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Thu, 2007-02-08 19:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25077"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25077" class="active">DBMS transactions do not scale</a></h3>
+ <div class="content"><p >Are there any transactional systems out there that are not the usual shared memory or superfast interconnect giants?</p>
+<p >Distributed transactions are probably the hardest research problem in database theory, practically not solved in large scale.</p>
+<p >Transactions can scale, given enough information about them - whether they commute etc., but that would probably lead to integrating a theorem prover in the language, something more radical than using message passing. It's an interesting paradigm though.</p></div>
+ <div class="links">By <a href="user/3467" title="View user profile.">Scott Graves</a> at Thu, 2007-02-08 19:05 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-25068"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25068" class="active">STM replaces locks &amp; semaphores, not MapReduce</a></h3>
+ <div class="content"><p >Many problems can be parallelized easily by splitting the data up and streaming it through many processors. And in these cases, you definitely want to use MapReduce, nested data parallelism, or some other kind of parallel 'map' abstraction.</p>
+<p >Unfortunately, not all problems are so easy to parallelize.  Witness Tim Sweeny's example from the Unreal Engine: 10,000 game-world entities spread across many cores, all being updated in parallel. There's no easy way to do this with any variant of 'map', because the entities in the game world interact in arbitrary ways, and affect each other's state.</p>
+<p >Now, you could solve this problem with semaphores and locks, but you'd go insane.  And this is where STM offers a huge win: It takes all the nightmarish complexity of use fine-grained locks, and replaces it with a simple transaction model, complete with automatic restarts and strong guarantees against deadlock.</p>
+<p >I can't think of any reason to loath STM so strongly unless you are absolutely sure that you'll never encounter a problem which requires shared state, and which resists the other tools in your toolbox.</p></div>
+ <div class="links">By <a href="user/2175" title="View user profile.">emk</a> at Thu, 2007-02-08 17:37 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-25074"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25074" class="active">Might have a point...</a></h3>
+ <div class="content"><p >Lots of dodgy assertions and straw-man--bashing, but there are some lucid moments.  This sentence intrigued me:</p>
+<blockquote ><p >And if some group is going to retrofit transactional memory into some significant Java or C# system, well, they would be far better off investing that time into a simpler, shared-nothing rewrite into a language like Erlang, a simpler language like Smalltalk, or even a better shared-nothing coordination mechanism like Javaspaces.</p></blockquote>
+<p >Does he have a point?  Might industry invest resources in STM that would be better invested in the Erlang model?</p></div>
+ <div class="links">By <a href="user/2028" title="View user profile.">Peter McArthur</a> at Thu, 2007-02-08 18:31 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25080"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25080" class="active">How to fix a broken toolbox.</a></h3>
+ <div class="content"><blockquote ><p >Does he have a point? Might industry invest resources in STM that would be better invested in the Erlang model?</p></blockquote>
+<p >Who knows? Both Java and C# provide almost none of the guarantees one has using STM in Haskell or message-passing in Erlang. He's comparing between kludging STM in an existing imperative language against rewriting millions of lines of code in an obscure language (I like Smalltalk and Erlang but they're unknown to most of the industry) or start using a tuplespace mechanism to solve all concurrent problems. It's an apples and rhinos comparison. A much better comparison would be: kludge STM and light-weight, isolated, processes with message passing in both languages and see what would be easier (hint: <a href='http://jcp.org/en/jsr/detail?id=121'>isolation in Java is far away from being lightweight</a>). Or else let's compare between rewriting to Haskell with STM vs Erlang with message passing (assuming that both have the man-centuries necessary to create the libraries and tools available in Java or C#).<br >
+Also how would Smalltalk automagically solve concurrency issues. AFAICS most Smalltalk implementations today use the shared-memory, threads and locks as it's basic concurrent solution.</p></div>
+ <div class="links">By <a href="user/852" title="View user profile.">Daniel Yokomizo</a> at Thu, 2007-02-08 19:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25085"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25085" class="active">Java + Haskell = Quark?</a></h3>
+ <div class="content"><p >I don't know enough about STM or Quark, but would it be easy to port STM to Quark so you could get access to the Java libraries via something very Haskell-ian?</p></div>
+ <div class="links">By <a href="user/2292" title="View user profile.">raould</a> at Thu, 2007-02-08 20:20 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25090"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25090" class="active">It looks like there might be</a></h3>
+ <div class="content"><p >It looks like there might be <a href="http://libcmt.sourceforge.net/index.php?page=CSharp_API">an implementation of STM (LibCMT) for C#</a>. C# has a form of software isolated processes (through the use of AppDomains), though they're not fully-fledged as yet. They can be used to model the kind of isolation for transactional memory I believe you're referring to.</p>
+<p ><a href="http://u.pereslavl.ru/~vadim/MCSharp">MC#</a> and <a href="http://research.microsoft.com/comega/">Cω</a> use message-passing concurrency, in slightly different forms, although they're not strictly C# (MC# compiles to C#, so they can be integrated at some level). They are similar enough to C# that the effort involved in porting existing concurrent C# code would be entirely due to the switch to message-passing.</p>
+<p >It would be an interesting experiment to take an existing piece of concurrent C# code and adapt it to both the LibCMT library and MC#, to get a feel for which is the shorter trip.</p></div>
+ <div class="links">By <a href="user/2875" title="View user profile.">Wolf Logan</a> at Thu, 2007-02-08 21:03 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-25076"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25076" class="active">Not much concrete info, but still interesting</a></h3>
+ <div class="content"><p >I've seen lots of cheerleading about STM, but not much practical experience to back it up.  Patrick is bright enough that I don't immediately dismiss his opinions as aimless ranting :)</p></div>
+ <div class="links">By <a href="user/655" title="View user profile.">James Hague</a> at Thu, 2007-02-08 19:04 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25082"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25082" class="active">Uses of STM?</a></h3>
+ <div class="content"><p >Who is using/has used STM for real work these days? In what language?</p>
+<p >Erlang, while obscure, does have somewhat demanding real-life applications.</p>
+<p >Has the situation changed from eg. <a href="http://lambda-the-ultimate.org/node/1247">Haskell vs. Erlang, reloaded</a>?</p></div>
+ <div class="links">By <a href="user/3467" title="View user profile.">Scott Graves</a> at Thu, 2007-02-08 20:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-25081"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25081" class="active">Tonight make it magnificent</a></h3>
+ <div class="content"><p >I didn't initially notice that the post in question seems to be a reaction, at least in part, to this <a href="http://acmqueue.com/modules.php?name=Content&amp;pa=showpage&amp;pid=444">ACM Queue</a> article (at least, I think it is; I have a hard time telling what's really going on on that blog page.)<br >
+Among other things, the above article "illustrates how an <code >atomic</code> statement could be introduced and used in an object-oriented language such as Java."  I think Guillaume Germain captured one of the concerns about this possibility quite well:</p>
+<blockquote ><p >
+I can see misguided programmers starting to sprinkle their code with 'atomic' statements ("just in case"), a bit like one would do with 'yield' statements in a non-preemptive concurrent system.
+</p></blockquote>
+<p >I can see how this prospect could generate a certain amount of trepidation.  The problem, though, is not with STM itself, and in that respect, Patrick errs when he says things like "this is a really bad feature that could screw up a lot of software for years to come".  Refactoring for factuality, I think he means something more like "I'm concerned that this is an all-too-seductive feature that could screw up a lot of software for years to come".  In that, he could be right, but it actually has nothing to do with the technical merits of STM.</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Thu, 2007-02-08 19:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25083"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25083" class="active">I don&#039;t see the concern</a></h3>
+ <div class="content"><p >Essentially that argument reduces to "some people might not use it right" which I must point out is nonfalsifiable (ahead of the fact anyway) and can be said of anything. For example, has it been our experience that misguided programmers have started sprinkling their Java code with <code >synchronized</code> blocks, just in case? I haven't seen that happening; the problem I've mostly seen is underuse of <code >synchronized</code> causing race conditions. (Please don't take this as an endorsement of Java shared-state concurrency.)</p></div>
+ <div class="links">By <a href="user/2398" title="View user profile.">marshall</a> at Thu, 2007-02-08 20:08 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25087"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25087" class="active">Predicting feature quality</a></h3>
+ <div class="content"><blockquote ><p >
+Essentially that argument reduces to "some people might not use it right" which I must point out is nonfalsifiable (ahead of the fact anyway) and can be said of anything.
+</p></blockquote>
+<p >I almost agree, except I suppose that there must be some class of features which would actually be a bad idea to add to a language such as Java &mdash; for example, how about raw memory pointers?  I think there are some plausible criteria for recognizing certain kinds of bad features in advance &mdash; for example, features which violate safety properties.  However, in this case, an argument of that nature hasn't actually been made, afaict.</p>
+<p >But many decisions in PL design are based largely on the goals and convictions of the designer.  If Patrick were designing a PL, presumably he'd leave out STM, and then the question could be decided in the marketplace, which is probably where such decisions ultimately belong (because there doesn't seem to be any other reliable way to decide them).</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Thu, 2007-02-08 20:35 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25095"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25095" class="active">Yes!</a></h3>
+ <div class="content"><blockquote ><p >For example, has it been our experience that misguided programmers have started sprinkling their Java code with synchronized blocks, just in case?</p></blockquote>
+<p >For the record, <strong >Yes</strong>, this has most definitely been the case. I have seen exactly this phenomenon all over the codebase of at least one large (top 50) e-commerce site. When subtle synchronization and race condition bugs occur (e.g., users click the same effectful link several times in quick succession, session data gets messed up, something bad happens...), I've seen <code >synchronized</code> markers employed like pixie dust until the problem seems to go away. I wish I were kidding when I say that virtually no one understands how this software really works or why synchronization occurs where it does.</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Thu, 2007-02-08 22:02 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25110"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25110" class="active">Essentially that argument</a></h3>
+ <div class="content"><p ><i >Essentially that argument reduces to "some people might not use it right" which I must point out is nonfalsifiable (ahead of the fact anyway)</i></p>
+<p >Not completely non-falsifiable. The C# designers regretted adding the convenient "lock { }" statement to the language for just this reason: it gave people a false sense of security, and harmed performance.</p></div>
+ <div class="links">By <a href="user/2352" title="View user profile.">naasking</a> at Fri, 2007-02-09 03:13 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-25098"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25098" class="active">A sympathetic take</a></h3>
+ <div class="content"><p >Though I agree with those who found Patrick's post difficult to follow and possibly overly provocative (though it <i >is</i> a personal blog post... ;-) ), I found myself in sympathy with the overall feeling.</p>
+<p >I have nothing against research into STM, of course, and can imagine some scenarios where it would be a nice tool to have if used lightly and tastefully, but there seems to be a danger that it might be becoming the latest panacea.  Such "silver bullets" discourage people from trying known good solutions where they are available (such as message passing) and instead simply enable existing pathologies for a bit longer. (Or simply convince people that the problems will be gone Real Soon Now.)</p>
+<p >If we follow the "we already use transactional DBs" meme to its logical conclusion, essentially what STM is doing is cutting out the middle-man and embedding the database into your app, but without the persistence.</p>
+<p >As anyone who has worked with a transactional DB with highly contended data knows, transaction support in the DB gives you some things for free, but makes other kinds of headaches.  Retry support after a rollback, for example, and subtle deadlock conditions can create unacceptable performance and reliability hits.</p>
+<p >This doesn't mean I want to get rid of transactions, of course, but it makes me much less optimistic that adding more of them liberally to my system will make my life easier for large apps.</p>
+<p >If we add STM as a tool high in the CTM hierarchy of statefulness, where we take it for granted that we are not using any more state than we really need to to solve our problem elegantly, I'm much less worried, of course.</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Thu, 2007-02-08 23:16 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25099"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25099" class="active">On the comment of being the</a></h3>
+ <div class="content"><p >On the comment of being the latest panacea, I have to argue that such thinking might make progress a bit stagnant wouldn't it?  Researching something thoroughly until it's proven to not work well seems a better idea then just go with something that's proven.  I'm not sure if that was your intent in that comment but it seems to be the result.</p></div>
+ <div class="links">By <a href="user/3762" title="View user profile.">orbitz</a> at Thu, 2007-02-08 23:27 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25112"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25112" class="active">Eat your dinner before you reach for dessert</a></h3>
+ <div class="content"><blockquote ><p >
+I have to argue that such thinking might make progress a bit stagnant wouldn't it? Researching something thoroughly until it's proven to not work well seems a better idea then just go with something that's proven.
+</p></blockquote>
+<p >Given that there are a whole bunch of great ideas on how to reduce state and improve concurrency that we have <i >already</i> that have yet to gain wide acceptance and implementation in industry, I can't say I'm all that worried I might be stifling innovation by critiquing an idea whose major appeal is that it looks just like the same rickety old techniques most people are familiar with.</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Fri, 2007-02-09 03:44 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-25122"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25122" class="active">What?</a></h3>
+ <div class="content"><blockquote ><p >...an idea whose major appeal is that it looks just like the same rickety old techniques most people are familiar with.</p></blockquote>
+<p >How is that even slightly true? STM, as far as I can tell, doesn't look anything like conventional techniques for thread communication.</p>
+<p >The main appeal of STM is not really that it looks like anything else, but that it gives you very real guarantees about the composability of working components. You can take two transactions which work well on their own, and compose them in a number of ways into new transactions, the semantics of which have nice properties. The most obvious way is sequentially, and you get a guarantee that the result of the transaction, supposing that it commits, is independent of the behaviour of all other threads -- even if things happen in another thread in between the two transactions you've composed, they can't impact the result.</p>
+<p >You can also compose them such that if the first fails to commit at first, and decides to retry, then the second is tried instead (and if it retries, then the whole transaction retries). This allows you to wait for any of a number of resources to become available, and to do different things depending on which it was. The inner transactions don't need to be prepared specially for being composed in this manner.</p>
+<p >You also get all this composability even in the face of exceptions. A subtransaction which wants to fail by throwing an exception doesn't need to care about what changes the transactions it might eventually be part of might have made in case they don't catch it (and be left half-committed). It just throws the exception, and that causes the transactions it's a part of to behave as if none of the things they've done had ever happened and rethrow the exception until it's caught.</p>
+<p >Incidentally, this behaviour can be used to cause transactions to throw an exception when they otherwise would have retried. x `orElse` (throw ...).</p>
+<p >The trouble with many of the other systems, including most of the message passing systems, is that in order to compose components that work separately, one either ends up rewriting them, or sticking a layer of indirection in front of them, or worse yet, setting up some system of locks. Or, you design some transactional system from the start in terms of your messages. It would be easy to put STM to work in a combined solution there (STM transactions as messages), but the other way around is trickier to get right.</p>
+<p >But what I'd really like to point out, more than all of this, is that STM is not really about the operational behaviour of the system. All it does is provide a language for saying things that you need to be able to say with regard to thread communication. "These things happen together, or not at all.", "If this doesn't work, then try this instead.", and so on. It's the right level of abstraction because it leaves the compiler and library writers room to implement things in more and more clever ways, getting more performance, while keeping the semantics (in the sense of the overall effect of the program) fixed. </p>
+<p >This is very much the same as garbage collection. Early garbage collectors were not great at what they did, but they provided the machinery for the right abstraction for working with memory. The early implementations of STM are not great, but they're not nearly as clever as they could be at managing the resource they've been given -- they're the somewhat obvious implementations so that we can see what programming using STM is like. Specifically, the decision as to when to retry a transaction, and which transactions in the system are likely to run into contention issues can probably be done in a much more clever way, though the current approach is not as bad as it could be. If it turns out that we like STM (and personally, I really do think we will), then the lower level implementation can improve without us having to rewrite our programs, much like garbage collectors did.</p>
+<p >Another unrelated and small remark that I'd like to point out is that message passing is the sharing of state. It's just a particular form of threads communicating their state to one another. When one thread sends another a message, it is creating a data dependency between its local state and that other thread's local state. Systems which can't do this are not really expressing concurrency, just parallelism. I point this out only because it grates on my ears a bit when people expound the virtues of "no shared state", and then talk about systems where threads share state with one another (albeit in a responsible and selective fashion). I know that people are using "shared state" to refer to one particular model of thread communication, but that should not lead one to the idea that other models share no state between threads. On the flip side of the same coin, calling STM "shared state" would be somewhat degrading, because while it could be used in that way, it would be an unduly awkward way of achieving that effect, and one would get none of the benefits of using transactions. Similarly, one could use message passing where threads continuously communicated all changes in any parts of local state which might be relevant, but it would be an awkward misuse of the system.</p></div>
+ <div class="links">By <a href="user/1990" title="View user profile.">Cale Gibbard</a> at Fri, 2007-02-09 12:00 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-25130"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25130" class="active">Shared Context</a></h3>
+ <div class="content"><blockquote ><p >
+How is that even slightly true? STM, as far as I can tell, doesn't look anything like conventional techniques for thread communication.
+</p></blockquote>
+<p >The familiar thing is transactional databases, which are quite commonly, though not always with conscious awareness, used as big multi-process global variables.</p>
+<blockquote ><p >
+I point this out only because it grates on my ears a bit when people expound the virtues of "no shared state", and then talk about systems where threads share state with one another (albeit in a responsible and selective fashion).
+</p></blockquote>
+<p >Many of us here take for granted a theory of statefulness that is not binary, but rather hierarchical, following <a href="http://www.info.ucl.ac.be/~pvr/book.html">CTM</a>. For us, shared state refers to a particular slot in that hierarchy.  In this scheme, message passing is less stateful than full state-sharing.</p></div>
+ <div class="links">By <a href="user/4" title="View user profile.">Marc Hamann</a> at Fri, 2007-02-09 14:53 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:125px;">
+<a id="comment-25135"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25135" class="active">CTM and Transactions on Cells</a></h3>
+ <div class="content"><p >This may be a naive question, in that I don't know a lot of the details about STM.... but....   Isn't there a correlation between STM and the CTM  section 8.5.4 on Transactions - Implementing transactions on cells?</p></div>
+ <div class="links">By <a href="user/3" title="View user profile.">Chris Rathman</a> at Fri, 2007-02-09 15:26 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-25136"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25136" class="active">Dey turk ma jugh!</a></h3>
+ <div class="content"><blockquote ><p >
+But what I'd really like to point out, more than all of this, is that STM is not really about the operational behaviour of the system. All it does is provide a language for saying things that you need to be able to say with regard to thread communication. "These things happen together, or not at all.", "If this doesn't work, then try this instead.", and so on. It's the right level of abstraction because it leaves the compiler and library writers room to implement things in more and more clever ways, getting more performance, while keeping the semantics (in the sense of the overall effect of the program) fixed.</p>
+<p >This is very much the same as garbage collection.
+</p></blockquote>
+<p >Aha.  Which helps explain the reaction, too.  On the purely pragmatic front, it's reasonable to be skeptical that compilers are going to do a good job of implementing a new high-level abstraction, until their success is well proven, and the appropriate use cases well understood.</p>
+<p >There are also all the factors surrounding what happens when something that used to be hard becomes easier.  Concurrency is a bit different from garbage collection, though.  When garbage collection works well, which is often, programmers don't really have to reason about memory management much (or even understand it!)  That seems unlikely to be the case for concurrency: it's still going to be necessary to reason about it, even if the way concurrency requirements are expressed becomes more high-level.  So the concern that programmers will misuse the feature due to lack of understanding of the underlying issues seems to have more of a basis in this case, than in the case of garbage collection.</p>
+<p >(This just helps me understand why STM might have provoked a negative reaction, I'm not agreeing with the reaction.)</p></div>
+ <div class="links">By <a href="user/2" title="View user profile.">Anton van Straaten</a> at Fri, 2007-02-09 15:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25100"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25100" class="active">Optimistic concurrency control is the big question mark</a></h3>
+ <div class="content"><p >I've written (with some other students) and implementation of STM for Ocaml. The implementation was dirt simple; it took less than five hundred lines of code to implement it, and that includes extras like first-class transactions and optimizations to eliminate overhead in the first-order case. So I don't believe that it's a very complex model. </p>
+<p >However, the giant question mark for me is the automatic rollback and retry. Being optimistic and rolling back on failure is <em >extremely</em> efficient when it works, but when it doesn't it can be very expensive. I just don't know how to predict the performance of an STM program, and I worry about debugging programs that fail to meet performance targets, because they may fail to hit targets nondeterministically. </p>
+<p >And Maurice Herlihy (the guy who has mostly been pushing the idea) has never been quiet about this being the big research question behind STM. </p></div>
+ <div class="links">By <a href="user/1111" title="View user profile.">neelk</a> at Thu, 2007-02-08 23:51 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25101"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25101" class="active">If we add STM as a tool high</a></h3>
+ <div class="content"><blockquote ><p >If we add STM as a tool high in the CTM hierarchy of statefulness, where we take it for granted that we are not using any more state than we really need to to solve our problem elegantly, I'm much less worried, of course.</p></blockquote>
+<p >I guess this is my perspective on the whole thing, which makes me see this as something of a mountain out of a molehill. I realize that STM and, for example, Mnesia, aren't precisely the same thing, but as compared to message passing, they're certainly more similar than different. So arguing for Erlang rather than STM seems a little short-sighted, when the Erlang community has already acknowledged the need for sharing at this level, and has in fact embraced and bragged about it! I'd refer back to PVR's <a href="http://lambda-the-ultimate.org/node/1805">Convergence</a> paper.</p>
+<p >The only thing I really have to say about the original blog post is that yes, Patrick is someone whose opinions I take seriously and yes, the current format of the post (99% comments by now?) makes it virtually impossible to tell what it originally said...</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Thu, 2007-02-08 23:54 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25114"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25114" class="active">Em, peek. Is it safe?</a></h3>
+ <div class="content"><blockquote >
+<em >
+I realize that STM and, for example, Mnesia, aren't precisely the same thing, but as compared to message passing, they're certainly more similar than different. So arguing for Erlang rather than STM seems a little short-sighted, when the Erlang community has already acknowledged the need for sharing at this level, and has in fact embraced and bragged about it!
+</em>
+</blockquote>
+The difference being that programming in Mnesia, even the "in memory" variety, is still deliberately a "database" thing. Most everything should be in Erlang.
+<p >
+Many of the Erlang processes might be very well be "database-like" stateful things, with the Erlang message queue and pattern matching essentially acting like a transaction processing monitor. No mnesia needed.
+</p><p >
+I can sympathize with game development. I've been a developer for digital electronics simulators where 80% is just objects and 20% is highly tuned C. I would imagine that not the average game developer even gets involved in that highly tuned part on a daily basis.
+</p><p >
+So it's not you I am worried for. It's the average game developer, the average financial systems developer, the average business systems developer. While the mechanism per se worries me, it's the increasing fascination with it that bothers me most.
+</p><p >
+Wow. I throw barbs like this out fairly often, shooting from the hip if you will, to see what comes back. I had no anticipation for this much feedback one way or the other. Very enlightening. I should have known it would be from the LtU crowd!</p></div>
+ <div class="links">By <a href="user/332" title="View user profile.">Patrick Logan</a> at Fri, 2007-02-09 04:12 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-25125"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25125" class="active">I had no anticipation for</a></h3>
+ <div class="content"><p ><i >I had no anticipation for this much feedback</i><P ><br >
+You should post here more often... :-)<p >
+For those new to LtU: Patrick was a regular contributor in the early days of LtU, and I regularly try to persuade him to come back...</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Fri, 2007-02-09 12:43 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-25134"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25134" class="active">I Wish</a></h3>
+ <div class="content"><p >I barely have time for my half-baked ideas on my own blog! Then I hit on something controversial like this and the firehose reminds me... </p></div>
+ <div class="links">By <a href="user/332" title="View user profile.">Patrick Logan</a> at Fri, 2007-02-09 15:23 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-25148"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25148" class="active">a bit more...</a></h3>
+ <div class="content"><p >Nice to see you on LtU again!</p>
+<p >Upon further reflection, I do have pretty big doubts about STM for Java/C#/etc. programmers... I had only encountered STM in the Haskell setting, and never really imagined that anyone would try to apply it in a mainstream language without radical changes to the host language.</p>
+<p >It seems to me that, with the possibility of rollback and retry, STM requires a change to our understanding of side effects at least as radical as a switch to pure FP. Perhaps in the end the programming model won't have to change as much as switching to Haskell, for example, but I think that the <em >understanding</em> of side effects will have to change. Obviously the nice fit between Haskell and STM is well understood, but the other side of that coin is that this is a potentially huge hurdle for languages like Java. </p>
+<p >Does anyone have a pointer to work on bringing STM to one of these mainstream languages, particularly solutions to IO operations and other side effects? Will we have to overhaul the entire JDK, for example? Even so, won't programmers need to understand that prompting a user for input needs to be "committed" before the program actually waits for that input?</p></div>
+ <div class="links">By <a href="user/431" title="View user profile.">Matt Hellige</a> at Fri, 2007-02-09 18:29 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:50px;">
+<a id="comment-25123"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25123" class="active">Comments</a></h3>
+ <div class="content"><blockquote ><p >the current format of the post (99% comments by now?) makes it virtually impossible to tell what it originally said...</p></blockquote>
+<p >Yeah, I was personally a bit annoyed by the fact that he duplicated and interspersed my response into the original post along with his replies. Replying in a comment would have been better form, I think. *hint*</p></div>
+ <div class="links">By <a href="user/1990" title="View user profile.">Cale Gibbard</a> at Fri, 2007-02-09 12:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:75px;">
+<a id="comment-25127"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25127" class="active">While his point is</a></h3>
+ <div class="content"><p >While his point is interesting, he must be an Outlook user: comments are before the article, etc.</p>
+<p >The result is quite obscure, bleh.</p></div>
+ <div class="links">By <a href="user/1458" title="View user profile.">renox</a> at Fri, 2007-02-09 13:47 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:100px;">
+<a id="comment-25133"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25133" class="active">Outlook User?</a></h3>
+ <div class="content"><p >No. Just busy and sloppy.</p></div>
+ <div class="links">By <a href="user/332" title="View user profile.">Patrick Logan</a> at Fri, 2007-02-09 15:19 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<a id="comment-25115"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25115" class="active">No Sense</a></h3>
+ <div class="content"><p >And no, I can't make heads or tails out of the original blog post anymore either.</p></div>
+ <div class="links">By <a href="user/332" title="View user profile.">Patrick Logan</a> at Fri, 2007-02-09 04:14 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<a id="comment-25138"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25138" class="active">Why Not Both?</a></h3>
+ <div class="content"><p >In my day job working on databases I use transactions AND message-passing all the time.  Transactions need to be kept small and fast or else performance and locking problems start affecting performance - and they aren't easily predictable because different users accessing a common store (database) with different requirements can interact in obscure ways.</p>
+<p >The answer (in my experience) is to reduce shared state to an absolute minimum, use transactions with their Undo, Retry or Leave facilities to handle clean updates to global state and then message passing (via that state) for the top level processes.</p>
+<p >It seems to be that the real crux of this argument is that STM in an imperative language like Java would be a <i >terrible</i> idea, but <b >not</b> in a language like Haskell in which the state that STM co-ordinates is both minimised and compartmentalised.</p></div>
+ <div class="links">By <a href="user/39" title="View user profile.">David B. Wildgoose</a> at Fri, 2007-02-09 16:10 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25139"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25139" class="active">Good Point, IMHO</a></h3>
+ <div class="content"><p >Thoughout this thread, I've been mulling over how the issues Patrick raised over STM, and what I believe to be the more reasonable responses to them, relate to <a href="http://lambda-the-ultimate.org/node/1446">Functional Relational Programming: Out of the Tarpit</a>, which I still need to make time to go over in more detail.</p></div>
+ <div class="links">By <a href="user/289" title="View user profile.">Paul Snively</a> at Fri, 2007-02-09 16:22 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+<div style="margin-left:25px;">
+<a id="comment-25141"></a>
+<div class="comment">
+ <h3 class="title"><a href="node/2048#comment-25141" class="active">I think you nail it in your</a></h3>
+ <div class="content"><p >I think you nail it in your last paragraph.</p></div>
+ <div class="links">By <a href="user/1" title="View user profile.">Ehud Lamm</a> at Fri, 2007-02-09 16:38 | <a href="user/login">login</a> or <a href="user/register">register</a> to post comments</div>
+</div>
+</div>
+</div></form>
+<!-- end content -->
+ <div id="footer"><hr style="border-width: 0pt 0pt 1px;" />
+Logs:
+          <a href="http://wmf.editthispage.com/">Hack The Planet</a>
+          ; <a href="http://www.javalobby.org">JavaLobby</a>
+          ; <a href="http://www.pythonware.com/daily">Daily Python-URL</a>
+ ; <a href="http://thedailywtf.com/default.aspx">Daily WTF</a>
+ ; <a href="http://phplens.com/phpeverywhere/">PHP everywhere</a> ; <a href="/node/view/13">(more)</a><br>
+Wikis:
+         <a href="http://c2.com/cgi/wiki?RecentChanges">WikiWiki</a>
+         ; <a href="http://erlang.sics.se/wiki.html">Erlang</a>
+; <a href="http://ww.telent.net/cliki/Recent%20Changes">Common Lisp</a>
+
+
+         ; <a href="http://www.haskell.org/haskellwiki/Special:Recentchanges">Haskell</a>
+         ; <a href="http://minnow.cc.gatech.edu/squeak/recent">Squeak</a>
+         ; <a href="http://purl.org/thecliff/tcl/wiki">Tcl</a> ; <a href="http://www.program-transformation.org/Transform/WebChanges">Program Transformation</a>
+<img src="http://sac.appsolutions.com/hitme?id=ltu&a=hit">
+</div>
+   </td>
+   <td id="sidebar-right"><div class="block block-archive" id="block-archive-0">
+ <h2 class="title">Browse archives</h2>
+ <div class="content">
+<!-- calendar -->
+<div class="calendar"><table summary="A calendar to browse the archives.">
+ <caption><a href="archive/2007/01/09" title="Previous month">«</a> February 2007  </caption>
+ <tr class="header-week">
+ <th abbr="Sunday">Su</th>
+ <th abbr="Monday">Mo</th>
+ <th abbr="Tuesday">Tu</th>
+ <th abbr="Wednesday">We</th>
+ <th abbr="Thursday">Th</th>
+ <th abbr="Friday">Fr</th>
+ <th abbr="Saturday">Sa</th>
+</tr>
+ <tr class="row-week"><td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+  <td class="day-link"><a href="archive/2007/2/1" title="1 post">1</a></td>
+  <td class="day-link"><a href="archive/2007/2/2" title="5 posts">2</a></td>
+  <td class="day-link"><a href="archive/2007/2/3" title="3 posts">3</a></td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-link"><a href="archive/2007/2/4" title="1 post">4</a></td>
+  <td class="day-link"><a href="archive/2007/2/5" title="2 posts">5</a></td>
+  <td class="day-link"><a href="archive/2007/2/6" title="7 posts">6</a></td>
+  <td class="day-link"><a href="archive/2007/2/7" title="3 posts">7</a></td>
+  <td class="day-link"><a href="archive/2007/2/8" title="3 posts">8</a></td>
+  <td class="day-today"><a href="archive/2007/2/9" title="3 posts">9</a></td>
+  <td class="day-future">10</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">11</td>
+  <td class="day-future">12</td>
+  <td class="day-future">13</td>
+  <td class="day-future">14</td>
+  <td class="day-future">15</td>
+  <td class="day-future">16</td>
+  <td class="day-future">17</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">18</td>
+  <td class="day-future">19</td>
+  <td class="day-future">20</td>
+  <td class="day-future">21</td>
+  <td class="day-future">22</td>
+  <td class="day-future">23</td>
+  <td class="day-future">24</td>
+ </tr>
+ <tr class="row-week">
+  <td class="day-future">25</td>
+  <td class="day-future">26</td>
+  <td class="day-future">27</td>
+  <td class="day-future">28</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+<td class="day-blank">&nbsp;</td>
+</tr>
+</table></div>
+
+</div>
+</div>
+<div class="block block-forum" id="block-forum-0">
+ <h2 class="title">Active forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2053" title="6 comments">Better language tools</a></li><li><a href="node/1973" title="54 comments">Why people don&#039;t use functional programming?</a></li><li><a href="node/2051" title="1 comment">Seeking suggestions on how to unify the environment, free variables, and current activation record for closures</a></li><li><a href="node/2050" title="3 comments">SMP Erlang vs. Haskell vs. ML</a></li><li><a href="node/2052">A relational language extension for Python</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+<div class="block block-forum" id="block-forum-1">
+ <h2 class="title">New forum topics</h2>
+ <div class="content"><div class="item-list"><ul><li><a href="node/2053" title="6 comments">Better language tools</a></li><li><a href="node/2052">A relational language extension for Python</a></li><li><a href="node/2051" title="1 comment">Seeking suggestions on how to unify the environment, free variables, and current activation record for closures</a></li><li><a href="node/2050" title="3 comments">SMP Erlang vs. Haskell vs. ML</a></li><li><a href="node/2047" title="1 comment">Compile time garbage collection</a></li></ul></div><div class="more-link"><a href="forum" title="Read the latest forum topics.">more</a></div></div>
+</div>
+</td>
+  </tr>
+ </table>
+ </body>
+</html>

@@ -1,0 +1,5 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/ff99b1cafea2b7c7/84b0270c7031cbf6?lnk=st&rnum=12&hl=en#84b0270c7031cbf6
+[comp.lang.functional] Re: Computing alpha-equality in pure lambda calculus
+Klaus,
+
+Structural equality of unevaluated lambda terms is solveable in the pure lambda calculus.  One easy way to implement this is to store terms using de Bruijn indices (Google for it) and to compare their representations for structural equality.  If comparing for equivalance is a big goal of a system you're building, check out Luca Cardelli's "Explicit Substitutiuons" paper for a nice term evaluation and representation scheme that does not rely on names. 

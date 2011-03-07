@@ -1,0 +1,21 @@
+http://lambda-the-ultimate.org/classic/message5989.html
+http://lambda-the-ultimate.org/classic/message5989.html#6005
+0530277
+Call-by-name is dual to call-by-value
+Re: Call-by-name is dual to call-by-value
+<p>Paul,</p><p>
+
+When I get some time I'll try to submit something on UnrealScript.  Here's the quick summary.</p><p>
+
+Plusses:
+- Using the Java principles as a starting point has worked well (no global variables and functions, a distinction between object types and simple types, etc).
+- The game-oriented extensions (state scoping, simulated multithreading with latent functions) have significantly improved the process of writing gameplay code.
+- Shipping the editor &amp; compiler with the game have helped mod authoring significantly.  Lots of people actually learned to program with UnrealScript, which is neat.
+- The script metadata that's exposed to C++ greatly simplified the implementation of the user interface, networking code, import/export code, and many other things.</p><p>
+
+Minuses:
+- Performance is a problem sometimes (10-20X slower than C++), but the language structure is not very amenable to writing a simple assembly code generator.
+- The widespread sharing of object data between UnrealScript and C++ has caused complications in keeping the definitions synchronized and makes porting harder.
+- "Pause between level changes and garbage collect everything" doesn't scale.</p><p>
+
+You can't really write a BNF grammar for UnrealScript, since the parser depends on the metadata generated from previously parsed code for disambiguiation - similar to C++, but in retrospect a bad idea.  If you'd like to see the compiler source though I'd be glad to email it.  Besides shedding light on the language grammar it also serves as an example of how to build an 8000-line single-pass recursive descent lexer and parser for a modern language, and why this is not the best way to do things. :-)</p>

@@ -1,0 +1,11 @@
+http://lambda-the-ultimate.org/node/1588
+http://lambda-the-ultimate.org/node/1588#comment-19187
+1050164
+Securing the .NET Programming Model
+Holes
+<p></p><blockquote><div>Would that not mean that components written in other languages could provide "holes", allowing attacks against C# components? (Assuming that the other languages do not provide stronger guarantees than C#.)</div></blockquote><p>
+</p><p>I think that could be avoided completely with small refinements to the CLR.  For example, if the CLR supported a genuine bool type and enforced that it only contained true and false (and not other byte values like 67), then other languages could interoperate with C# without breaking the abstraction property in C#.
+</p><blockquote><div>This is news to me! Wasn't .NET supposed to be the panacea for all our untrusted vs trusted code headaches? Did this dream die?</div></blockquote><p>
+</p><p>The behavior that Kennedy et all have pointed out are not security holes in the traditional sense, e.g. of what Internet Explorer is littered with.  These findings offer no way to overwrite random memory, corrupt the stack, hijack a computer, etc.
+</p><p>Rather, they just show that certain ideal properties of the C# language don't hold in the CLR, and suggest ways to improve this.  For example, there exist bool values v where v!=true &amp;&amp; v!=false.
+</p><p>I only wish the rest of the industry (and of Microsoft!) were as open and respectable about identifying limitations and potential security issues and working publically to study and address them.</p>

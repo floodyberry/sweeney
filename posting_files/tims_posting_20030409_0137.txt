@@ -1,0 +1,7 @@
+http://groups.google.com/group/comp.lang.functional/browse_thread/thread/b806094d06064b9f/8efe7924f7a4b961?lnk=st&rnum=42&hl=en#8efe7924f7a4b961
+[comp.lang.functional] Re: Why isn't Haskell mainstream?---A newbie's view
+To be realistic, there isn't lots of example code available in Haskell for mainstream tasks like file I/O, networking, and user interface programming because Haskell isn't a good language for doing these kinds of things.  It's far easier to perform such tasks in imperative object-oriented languages like C++, Java, C#, and Python, so that's what people do.  In Haskell, you have to resort to monads which lead to explicit plumbing of state that is far more difficult to understand than the sequential imperative model.
+
+Most of the example code for Haskell deals with sorting, searching, functional parsers, lambda evaluators, and other similar functional recursive algorithms because Haskell is a great language for doing that sort of thing, clearly more natural than mainstream languages like C++ and Java.
+
+So programmers flock to mainstream languages for performing primarily mainstream tasks, and to functional-recursive languages for performing primarily functional-recursive tasks, and the example code for all of these languages just tends to reflect what the languages are best at. 
